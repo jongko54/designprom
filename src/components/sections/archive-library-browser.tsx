@@ -11,6 +11,7 @@ type ArchiveLibraryBrowserProps = {
 };
 
 const categoryOrder = [
+  "Beauty Commerce",
   "K-Beauty",
   "Ecommerce",
   "Graphic Design",
@@ -113,7 +114,7 @@ export function ArchiveLibraryBrowser({ items }: ArchiveLibraryBrowserProps) {
             aria-label="Search archive"
             className="search-input"
             onChange={(event) => setSearch(event.target.value)}
-            placeholder="Search k-beauty, ecommerce, studio portfolio, creative tech, creator archive..."
+            placeholder="Search beauty commerce, k-beauty, ecommerce, studio portfolio, creative tech..."
             type="search"
             value={search}
           />

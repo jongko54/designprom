@@ -404,6 +404,30 @@ export const stitchCaptureAssets = {
   "gymshark-launch-commerce": createStitchCaptureAsset(
     "gymshark-launch-commerce",
     "Gymshark-inspired Stitch export for the high-energy launch commerce homepage"
+  ),
+  "latam-kbeauty-clubfront": createStitchCaptureAsset(
+    "latam-kbeauty-clubfront",
+    "Hori-inspired Stitch export for the ritual-led K-beauty clubfront homepage"
+  ),
+  "natura-botanical-ritual-shop": createStitchCaptureAsset(
+    "natura-botanical-ritual-shop",
+    "Natura-inspired Stitch export for the botanical ritual commerce homepage"
+  ),
+  "boticario-gift-fragrance-grid": createStitchCaptureAsset(
+    "boticario-gift-fragrance-grid",
+    "O Boticario-inspired Stitch export for the fragrance gift commerce homepage"
+  ),
+  "yanbal-consultant-beauty-club": createStitchCaptureAsset(
+    "yanbal-consultant-beauty-club",
+    "Karita Koreana-inspired Stitch export for the conversion-led K-beauty storefront"
+  ),
+  "neo-tokyo-night-drive-portfolio": createStitchCaptureAsset(
+    "neo-tokyo-night-drive-portfolio",
+    "Neo Tokyo-inspired Stitch export for the cinematic art direction portfolio"
+  ),
+  "shibuya-replicant-archive": createStitchCaptureAsset(
+    "shibuya-replicant-archive",
+    "Blade Runner and Shibuya-inspired Stitch export for the noir art direction archive"
   )
 } as const;
 
@@ -2973,6 +2997,306 @@ export const promptArchive: PromptArchiveEntry[] = [
       {
         title: "Commerce Close",
         caption: "A lower conversion section where CTA repetition and product proof stay controlled.",
+        meta: "close",
+        size: "tall"
+      }
+    ]
+  },
+  {
+    slug: "latam-kbeauty-clubfront-case",
+    title: "Hori Ritual K-Beauty Clubfront",
+    summary:
+      "A ritual-led Latin K-beauty homepage prompt built around a skin quiz, step-by-step routines, and soft clinical education.",
+    brief:
+      "Create a Spanish-language K-beauty homepage where ritual education, personalized routines, and calm trust cues need to guide shoppers into curated conversion.",
+    useCase: "K-beauty ecommerce",
+    portfolioCategory: "Beauty Commerce",
+    previewTone: "warm",
+    coverImage: stitchCaptureAssets["latam-kbeauty-clubfront"],
+    categorySlugs: [
+      "warm-global-hospitality",
+      "creator-velocity",
+      "premium-gradient-atmosphere"
+    ],
+    stitchExampleSlugs: ["latam-kbeauty-clubfront"],
+    prompt:
+      "Design a polished Spanish-language K-beauty storefront with a ritual-led hero, integrated skin quiz, tiered routine builder, soft clinical education, calm before-and-after proof, and curated Korean beauty merchandising. Keep the page guided, premium, and easy to trust.",
+    remixPrompt:
+      "Rework the same homepage for a faster conversion path. Keep the ritual hero and skin quiz, but bring the routine builder, bundle add-all modules, and proof rails earlier in the first two sections.",
+    curatorNote:
+      "This direction works when K-beauty needs to feel expert-guided and ritual-driven instead of loud marketplace-heavy.",
+    outputFocus: [
+      "A ritual hero with one clear quiz or guided-entry path",
+      "Step-based routine modules that feel curated rather than crowded",
+      "Calm proof surfaces with before-after or customer trust cues"
+    ],
+    outputs: [
+      {
+        title: "Ritual Hero",
+        caption: "A guided opener where skin quiz, routine language, and K-beauty trust feel calm and premium.",
+        meta: "hero",
+        size: "wide",
+        image: stitchCaptureAssets["latam-kbeauty-clubfront"]
+      },
+      {
+        title: "Routine Builder",
+        caption: "A structured middle layer for 5-step, 7-step, or 9-step routines with add-all logic.",
+        meta: "quiz",
+        size: "square"
+      },
+      {
+        title: "Proof Close",
+        caption: "A closing section that brings before-after trust, quotes, and shoppable routines together.",
+        meta: "close",
+        size: "tall"
+      }
+    ]
+  },
+  {
+    slug: "natura-botanical-ritual-shop-case",
+    title: "Natura Botanical Ritual Shop",
+    summary:
+      "A Brazilian beauty commerce prompt built around botanical storytelling, ritual-led navigation, and refill-aware gifting.",
+    brief:
+      "Design a beauty homepage inspired by Natura where ritual categories, gifting, and sustainability cues need to feel warm, premium, and immediately shoppable.",
+    useCase: "Beauty commerce",
+    portfolioCategory: "Beauty Commerce",
+    previewTone: "warm",
+    coverImage: stitchCaptureAssets["natura-botanical-ritual-shop"],
+    categorySlugs: [
+      "warm-global-hospitality",
+      "editorial-grid-2d",
+      "premium-gradient-atmosphere"
+    ],
+    stitchExampleSlugs: ["natura-botanical-ritual-shop"],
+    prompt:
+      "Create a Brazilian beauty ecommerce homepage inspired by Natura with botanical ritual storytelling, refill and sustainability cues, gift-focused merchandising, earthy color fields, and category rails that move from perfumery to body care to skincare. Keep the page warm, editorial, and ritual-led.",
+    remixPrompt:
+      "Adapt the same homepage for a seasonal gifting moment. Keep the botanical warmth, but push gift kits, category highlights, and refill logic higher in the first two sections.",
+    curatorNote:
+      "The page should feel like a ritual and gifting ecosystem, not just a beauty catalog with sustainability badges tacked on.",
+    outputFocus: [
+      "A ritual-led hero with earthy warmth and gift intent",
+      "Category rails that feel botanical and shoppable",
+      "Refill and sustainability cues integrated into the merchandising logic"
+    ],
+    outputs: [
+      {
+        title: "Ritual Hero",
+        caption: "A warm Brazilian beauty opener with gift kits, fragrance storytelling, and botanical framing.",
+        meta: "hero",
+        size: "wide",
+        image: stitchCaptureAssets["natura-botanical-ritual-shop"]
+      },
+      {
+        title: "Category Rituals",
+        caption: "A middle section where body care, perfume, and skincare move through a clear ritual order.",
+        meta: "ritual",
+        size: "square"
+      },
+      {
+        title: "Refill Close",
+        caption: "A closing zone where refills, gifts, and brand trust stay premium and helpful.",
+        meta: "close",
+        size: "tall"
+      }
+    ]
+  },
+  {
+    slug: "boticario-gift-fragrance-grid-case",
+    title: "Boticario Gift Fragrance Grid",
+    summary:
+      "A fragrance-first Brazilian beauty homepage prompt that mixes gifting urgency, loyalty cues, and clean shoppable density.",
+    brief:
+      "Create a beauty commerce homepage inspired by O Boticario where gift kits, fragrance campaigns, and fast add-to-bag modules need to feel premium but highly commercial.",
+    useCase: "Beauty commerce",
+    portfolioCategory: "Beauty Commerce",
+    previewTone: "gradient",
+    coverImage: stitchCaptureAssets["boticario-gift-fragrance-grid"],
+    categorySlugs: [
+      "warm-global-hospitality",
+      "premium-gradient-atmosphere",
+      "modern-art-modular"
+    ],
+    stitchExampleSlugs: ["boticario-gift-fragrance-grid"],
+    prompt:
+      "Design a Brazilian beauty homepage inspired by O Boticário with fragrance-first gifting modules, campaign gift kits, loyalty club cues, bright merchandising, and rapid add-to-bag product tiles. Balance premium fragrance mood with high-conversion retail structure.",
+    remixPrompt:
+      "Reframe the same homepage for Mother's Day or gifting season. Keep the fragrance-led mood, but increase kit visibility, occasion labels, and repeated shop actions through the first scroll.",
+    curatorNote:
+      "The right version feels giftable and high-conversion at the same time, with fragrance mood carrying the premium layer.",
+    outputFocus: [
+      "A gift-led fragrance hero with immediate occasion cues",
+      "Product tiles that convert quickly without looking cheap",
+      "Loyalty and pickup cues embedded into the merchandising flow"
+    ],
+    outputs: [
+      {
+        title: "Gift Hero",
+        caption: "A fragrance and gifting opener where occasion, campaign, and conversion line up in one screen.",
+        meta: "hero",
+        size: "wide",
+        image: stitchCaptureAssets["boticario-gift-fragrance-grid"]
+      },
+      {
+        title: "Gift Kit Grid",
+        caption: "A dense commerce field for kits, perfumes, and flash add-to-bag actions.",
+        meta: "grid",
+        size: "square"
+      },
+      {
+        title: "Loyalty Close",
+        caption: "A lower module where loyalty, pickup, and product proof stay readable under gifting pressure.",
+        meta: "close",
+        size: "tall"
+      }
+    ]
+  },
+  {
+    slug: "yanbal-consultant-beauty-club-case",
+    title: "Karita Koreana Conversion Storefront",
+    summary:
+      "A direct-conversion K-beauty homepage prompt built around routine-sequence navigation, local trust signals, and WhatsApp guidance.",
+    brief:
+      "Design a Mexican K-beauty storefront where payment trust, shipping speed, reviews, and skin-test guidance must all appear early in the shopping flow.",
+    useCase: "Beauty commerce",
+    portfolioCategory: "Beauty Commerce",
+    previewTone: "creator",
+    coverImage: stitchCaptureAssets["yanbal-consultant-beauty-club"],
+    categorySlugs: [
+      "warm-global-hospitality",
+      "creator-velocity",
+      "premium-gradient-atmosphere"
+    ],
+    stitchExampleSlugs: ["yanbal-consultant-beauty-club"],
+    prompt:
+      "Create a high-conversion Mexican K-beauty shop with a step-by-step routine menu, strong review proof, local payment and shipping trust, WhatsApp-led personalized guidance, and product rails for new arrivals, skin-type browsing, and daily essentials. Keep the page bright, fast, and mobile-native.",
+    remixPrompt:
+      "Adapt the same homepage for a bigger campaign month. Keep the routine menu and local trust stack, but increase product urgency, review visibility, and skin-test entry points above the fold.",
+    curatorNote:
+      "The strength here is local trust. The page should feel unmistakably built for Mexican conversion habits, not just imported K-beauty aesthetics.",
+    outputFocus: [
+      "A first screen that makes local trust markers impossible to miss",
+      "Routine-sequence navigation that behaves like the shopping backbone",
+      "WhatsApp and review proof integrated into the conversion path"
+    ],
+    outputs: [
+      {
+        title: "Trust Hero",
+        caption: "A bright first screen where shipping speed, payment trust, and K-beauty guidance appear immediately.",
+        meta: "hero",
+        size: "wide",
+        image: stitchCaptureAssets["yanbal-consultant-beauty-club"]
+      },
+      {
+        title: "Routine Menu",
+        caption: "A clear step-by-step navigation rail for routine shopping, essentials, and new arrivals.",
+        meta: "catalog",
+        size: "square"
+      },
+      {
+        title: "WhatsApp Close",
+        caption: "A lower section where reviews, skin tests, and WhatsApp support close the gap to purchase.",
+        meta: "close",
+        size: "tall"
+      }
+    ]
+  },
+  {
+    slug: "neo-tokyo-night-drive-portfolio-case",
+    title: "Neo Tokyo Night Drive Portfolio",
+    summary:
+      "A cinematic art direction portfolio prompt that mixes Neo Tokyo signage, rain-soaked light, and high-contrast nightlife pacing.",
+    brief:
+      "Create an art direction portfolio that feels like a futuristic Tokyo night drive: neon signage, reflective black surfaces, bilingual wayfinding, and cinematic project reveals.",
+    useCase: "Art direction portfolio",
+    portfolioCategory: "Art Direction",
+    previewTone: "motion",
+    coverImage: stitchCaptureAssets["neo-tokyo-night-drive-portfolio"],
+    categorySlugs: [
+      "immersive-3d",
+      "kinetic-type-signal",
+      "brutalist-contrast"
+    ],
+    stitchExampleSlugs: ["neo-tokyo-night-drive-portfolio"],
+    prompt:
+      "Design a cinematic art direction portfolio with Neo Tokyo and Blade Runner energy: rain-soaked black surfaces, cyan and magenta neon haze, bilingual transit-inspired typography, reflective chrome cues, animated project billboards, and a high-contrast scroll rhythm. Make the page feel like a premium midnight city drive rather than a generic cyberpunk collage.",
+    remixPrompt:
+      "Rework the same portfolio for a more minimal fashion-image direction. Keep the Neo Tokyo night mood and bilingual signage, but reduce the number of neon accents and give the project imagery more dominance.",
+    curatorNote:
+      "The mood should feel cinematic and transportive, but the portfolio still needs a clean project hierarchy and legible navigation.",
+    outputFocus: [
+      "A neon city-drive hero with cinematic restraint",
+      "Project billboards and signage that guide the scroll rhythm",
+      "Reflective black surfaces that support, not overwhelm, the work"
+    ],
+    outputs: [
+      {
+        title: "Night Drive Hero",
+        caption: "A hero scene with neon billboards, transit-like labels, and a strong cinematic project opener.",
+        meta: "hero",
+        size: "wide",
+        image: stitchCaptureAssets["neo-tokyo-night-drive-portfolio"]
+      },
+      {
+        title: "Project Signage",
+        caption: "A mid-scroll project rail where animated titles behave like city signage and wayfinding.",
+        meta: "signage",
+        size: "square"
+      },
+      {
+        title: "Midnight Close",
+        caption: "A lower section where contact, credits, and portfolio detail stay sharp inside the neon atmosphere.",
+        meta: "close",
+        size: "tall"
+      }
+    ]
+  },
+  {
+    slug: "shibuya-replicant-archive-case",
+    title: "Shibuya Replicant Archive",
+    summary:
+      "A darker Neo Tokyo art direction page tuned toward Blade Runner fog, holographic overlays, and noir archive pacing.",
+    brief:
+      "Build an art direction archive that feels like a late-night Shibuya control room with layered glass, holographic labels, and cinematic portfolio sequencing.",
+    useCase: "Art direction portfolio",
+    portfolioCategory: "Art Direction",
+    previewTone: "spatial",
+    coverImage: stitchCaptureAssets["shibuya-replicant-archive"],
+    categorySlugs: [
+      "motion-first-canvas",
+      "premium-gradient-atmosphere",
+      "brutalist-contrast"
+    ],
+    stitchExampleSlugs: ["shibuya-replicant-archive"],
+    prompt:
+      "Create a noir art direction archive with Blade Runner and Shibuya station energy: smoked-glass panels, holographic labels, amber and cyan signal lights, dense but readable metadata, and cinematic scroll reveals over a rain-dark interface. Keep the composition luxurious and legible, not noisy or game-like.",
+    remixPrompt:
+      "Adapt the same archive for a music or title-sequence portfolio. Keep the smoked-glass noir system, but make motion cues and chapter markers more aggressive while preserving legibility.",
+    curatorNote:
+      "This page should feel like a future-noir archive system, with atmosphere doing real compositional work instead of just adding neon.",
+    outputFocus: [
+      "A noir archive opener with holographic wayfinding",
+      "Dense metadata that still reads clearly through glass layers",
+      "Signal-light accents and cinematic reveals that hold a premium mood"
+    ],
+    outputs: [
+      {
+        title: "Replicant Opener",
+        caption: "A dark first screen where fog, signal lights, and glass labels establish the archive logic immediately.",
+        meta: "hero",
+        size: "wide",
+        image: stitchCaptureAssets["shibuya-replicant-archive"]
+      },
+      {
+        title: "Signal Grid",
+        caption: "A dense archival wall of projects, labels, and motion chapters under a neon-noir system.",
+        meta: "grid",
+        size: "square"
+      },
+      {
+        title: "Archive Close",
+        caption: "A final section where credits, contact, and project lineage remain luxurious and exact.",
         meta: "close",
         size: "tall"
       }

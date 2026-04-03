@@ -1032,6 +1032,132 @@
     "title": "Velocity Drop - Activewear Homepage"
   },
   {
+    "brand": "Hori",
+    "contentType": "image/png",
+    "fileName": "latam-kbeauty-clubfront.png",
+    "generatedAt": "2026-04-03T05:47:21.493Z",
+    "htmlUrl": "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ8Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpbCiVodG1sX2Q1MjIwYmJlOTE1MTQ1ZTM4NDQxZjNmNGEzMGJlMGRhEgsSBxCCisPc0AkYAZIBJAoKcHJvamVjdF9pZBIWQhQxMTk4NDI1MDk2MzcyNzEzNjY4NA&filename=&opi=96797242",
+    "imageUrl": "https://lh3.googleusercontent.com/aida/ADBb0uj4CGyNlPrqg7kqiWKF0poRKMi9Z7kdAtGsz07wC6yzZ5LANWfei3NkYpjdKRfuQKgVYwRwhUo2_bvWZI-wATtamK7utxeNIkwFv6Hu1fcK7O45Wt-NDM0X4c_n7D17i1NeFVoreWXUgx-z5sHnMqt6-kQz1dD_uTX6X81eEIb68bXCWseoViW6htSiirc6eDumski-TofXZYmM49Q-4xQiuqN92leJJnPr3Z-b9F-7xlH3aoWsWzGxjto",
+    "notes": [
+      "I've designed a premium Spanish-language K-beauty storefront for Zen-Clinical, focusing on a serene, ritual-led experience that builds trust through education and visual proof.\n\n**Key Features:**\n*   **Ritual-Led Hero:** Establishes a calm, clinical yet Zen tone from the moment a user arrives.\n*   **Skin Quiz Integration:** A prominent, inviting call-to-action (\"¿Tu Piel Tiene Sed?\") to guide users toward personalized care.\n*   **Tiered Routine Builder:** Educates users on the core K-beauty \"10-step\" philosophy with soft icons and clear Spanish descriptions.\n*   **Clinical Education (\"Ciencia con Suavidad\"):** Balances product curation with soft scientific proof and ingredient callouts like Hyaluronic Acid and CICA.\n*   **Curated Merchandising:** Showcases best-sellers with pricing in Euros and star ratings to build social proof.\n*   **Before-and-After Proof:** Provides visual reassurance through authentic transformations, keeping the \"Digital Sanctuary\" aesthetic.\n\nThe design uses the **Seda y Savia** design system, featuring soft sage greens, creams, and elegant serif typography to maintain a premium, editorial feel.\n\nWould you like to design the skin quiz interface next, or perhaps create a detailed product page for one of the serums?"
+    ],
+    "prompt": "Design a polished Spanish-language K-beauty storefront with a ritual-led hero, integrated skin quiz, tiered routine builder, soft clinical education, calm before-and-after proof, and curated Korean beauty merchandising. Keep the page guided, premium, and easy to trust.",
+    "projectId": "11984250963727136684",
+    "screenId": "bb570ea523dc4e4a91b9ef238f326759",
+    "slug": "latam-kbeauty-clubfront",
+    "suggestions": [
+      "Design the skin quiz flow",
+      "Create a product detail page for a serum",
+      "Expand the routine builder section"
+    ],
+    "title": "Página Principal - Zen-Clinical"
+  },
+  {
+    "brand": "Natura",
+    "contentType": "image/png",
+    "fileName": "natura-botanical-ritual-shop.png",
+    "generatedAt": "2026-04-03T05:36:53.594Z",
+    "htmlUrl": "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ7Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpaCiVodG1sXzY2Mjc1NWZjMDA4YjQyZjVhYTdlNjYzYmE1MWIzNDgxEgsSBxCCisPc0AkYAZIBIwoKcHJvamVjdF9pZBIVQhM3NzgyNzUwNjQ5NTc0OTY2NjM2&filename=&opi=96797242",
+    "imageUrl": "https://lh3.googleusercontent.com/aida/ADBb0uhGrXH7vpoINVZ8dCX1uzE2D6lYg_HN1MWuKnDc261XOHHgrVZ7SgDZZX57fX5nmd-I8FQREhifujeE9kttpuhFkCL-YUJqqrtXQbIqhaW1fv27P5F8ItQ9rSUJOjnqhwEu1t7XmZfTpM63npuxsIXbQ8jyB4OCcuUtSXPuebi41KEbW61zkQW0e6yYA3qrbfHvVZ-qsLe4Elcb8aOkJbsWhCWp7GkHpyhNfASV7r-x9FPvCWV9UV0OMVo",
+    "notes": [
+      "I've created a new design system and a homepage for your Brazilian beauty brand, **Botanique Brasil**. \n\nThe design is deeply rooted in Natura's botanical and sustainable aesthetic, featuring earthy tones, warm editorial storytelling, and specialized sections for rituals, refillable products, and gifting.\n\n### Key Elements of the Design:\n*   **Botanical Editorial Style:** A hero section that emphasizes the \"Rituals of Living Light\" with rich, natural imagery.\n*   **Design System:** I've established the \"Botanique Brasil\" system, using a palette of terracotta, deep greens, and warm ochre to create a natural, premium feel.\n*   **Category Journey:** Clear navigation and dedicated content blocks for Perfumery, Body Care, and Skincare.\n*   **Sustainability & Refills:** A focused \"Refill & Rejuvenate\" section highlights the brand's ecological commitment.\n*   **Gift-Focused Merchandising:** \"The Art of Gifting\" showcases curated sets, perfect for the ritual-led experience.\n\nHow does this editorial direction feel for the brand? Would you like to explore a specific product page or perhaps adjust the color fields?"
+    ],
+    "prompt": "Create a Brazilian beauty ecommerce homepage inspired by Natura with botanical ritual storytelling, refill and sustainability cues, gift-focused merchandising, earthy color fields, and category rails that move from perfumery to body care to skincare. Keep the page warm, editorial, and ritual-led.",
+    "projectId": "7782750649574966636",
+    "screenId": "01c97d4b97f24343aff0f96940340b61",
+    "slug": "natura-botanical-ritual-shop",
+    "suggestions": [
+      "Create a product detail page for a ritual set",
+      "Design a sustainability and refill guide page",
+      "Try a darker, more lush green color palette for the Body Care section"
+    ],
+    "title": "Botanique Brasil | Homepage Editorial"
+  },
+  {
+    "brand": "O Boticario",
+    "contentType": "image/png",
+    "fileName": "boticario-gift-fragrance-grid.png",
+    "generatedAt": "2026-04-03T05:38:56.262Z",
+    "htmlUrl": "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ7Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpaCiVodG1sX2YyODlhZTk3NTA4MjQ1YTNhMmEyMjcyZWRhMzk4YmUyEgsSBxCCisPc0AkYAZIBIwoKcHJvamVjdF9pZBIVQhM3NzgyNzUwNjQ5NTc0OTY2NjM2&filename=&opi=96797242",
+    "imageUrl": "https://lh3.googleusercontent.com/aida/ADBb0ugJo2xcRj2lIBVjSEI05WU1Y-e7aoDddM1dEoXg2qE6RYhrZTYzTWHuQVbFO7sx_FmXWvh4xE3FQaNVQg2GbALuGUCFP_1cXOvNKV9wWpSsVewbcXpSWQ8oSSwflKmE5Ehl1zEp1x7jG52mVakpk_cpxsMBiHJv1Z8mBH87UDL-izlVuWS-4hQ-Kc7762pEH8a2o5WcgTbM9SSdbiNYBD0amQeFIQk4_9t4NCyThP6cLMuvJyJ4aQVE89s",
+    "notes": [
+      "I've designed the **Essência Brasil** homepage, heavily inspired by the vibrant and fragrance-focused style of O Boticário. \n\nThis design features:\n- **Fragrance-First Hero:** A sun-drenched campaign for a signature Brazilian perfume.\n- **The Art of Gifting:** A dedicated module for campaign gift kits with beautiful, festive packaging.\n- **High-Conversion Retail:** Rapid 'Quick Add' product tiles for top fragrance favorites with clear pricing and ratings.\n- **Clube Viva Loyalty:** A premium card-style section highlighting the exclusive benefits of the loyalty program.\n- **Bright Merchandising:** High-contrast promotional banners to drive discovery and seasonal campaigns.\n\nI've also set up a custom design system that captures that premium, warm, and sensory brand identity. You can see the new homepage and the design system on the canvas now.\n\nLet me know if you'd like to adjust the color palette or perhaps explore a specific category like Skincare or the checkout flow!"
+    ],
+    "prompt": "Design a Brazilian beauty homepage inspired by O Boticário with fragrance-first gifting modules, campaign gift kits, loyalty club cues, bright merchandising, and rapid add-to-bag product tiles. Balance premium fragrance mood with high-conversion retail structure.",
+    "projectId": "7782750649574966636",
+    "screenId": "624849149c504fc8ad86af1cb9116382",
+    "slug": "boticario-gift-fragrance-grid",
+    "suggestions": [
+      "Design a specific product detail page for a fragrance kit",
+      "Create a mobile version of this homepage",
+      "Add a sustainability 'Recicle' program section"
+    ],
+    "title": "Essência Brasil | Homepage Home"
+  },
+  {
+    "brand": "Karita Koreana",
+    "contentType": "image/png",
+    "fileName": "yanbal-consultant-beauty-club.png",
+    "generatedAt": "2026-04-03T05:49:20.906Z",
+    "htmlUrl": "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ8Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpbCiVodG1sXzg3NjIyZWQzZmIyNjQwYjQ4Mjk0YjE5YWM1MWUwMmQzEgsSBxCCisPc0AkYAZIBJAoKcHJvamVjdF9pZBIWQhQxMTk4NDI1MDk2MzcyNzEzNjY4NA&filename=&opi=96797242",
+    "imageUrl": "https://lh3.googleusercontent.com/aida/ADBb0ujIdWweabTx2kK0J7CSWxv2dUM8KKGiY2cEe_fuXR-dVLTHPorkEIM4RGMEx-5zacNTNzIc9JrT4SYXKtsKbn4uf65LqIjNtO-VH90Cqm0J0lIWVt1_Eh0347GB6UazzmNN10o3RE08GU0Drv-WtkU4p88AIFF_zshQOlDQ3WJJvZwbbq_uQEvt1UICGOCJorhgr0aKZTE7bKCnk07tyFSsr1YCr089CxaauaIN8hph9Ut8_YBRy_YPl34",
+    "notes": [
+      "I've designed the new homepage for **Zen-Clinical México**, focusing on a high-conversion, mobile-native experience that balances K-beauty sophistication with Mexican local needs.\n\nKey features added:\n- **WhatsApp Guidance**: A prominent hero CTA and sticky button to offer personalized skin consultations, a key trust builder in the Mexican market.\n- **Mexican Trust Signals**: Integrated OXXO Pay, Mercado Pago, and clear local shipping information to reduce checkout friction.\n- **Routine-Based Browsing**: A visual, step-by-step routine menu (Limpiador, Tónico, etc.) that simplifies the complex 10-step K-beauty process for new users.\n- **Localized Product Rails**: Curated sections for 'Novedades', 'Tipo de Piel', and 'Esenciales Diarios' with pricing in MXN and strong social proof.\n\nThe new design is now visible on the canvas. How does this layout look to you? Would you like to adjust the routine steps or add more detailed product cards?"
+    ],
+    "prompt": "Create a high-conversion Mexican K-beauty shop with a step-by-step routine menu, strong review proof, local payment and shipping trust, WhatsApp-led personalized guidance, and product rails for new arrivals, skin-type browsing, and daily essentials. Keep the page bright, fast, and mobile-native.",
+    "projectId": "11984250963727136684",
+    "screenId": "4601c43ea63748a290527f25caf8dcfb",
+    "slug": "yanbal-consultant-beauty-club",
+    "suggestions": [
+      "Add a Routine Quiz page",
+      "Design the product detail page with detailed reviews",
+      "Create a mobile-only version of this homepage"
+    ],
+    "title": "Inicio - Zen-Clinical México"
+  },
+  {
+    "brand": "Neo Tokyo / Blade Runner",
+    "contentType": "image/png",
+    "fileName": "neo-tokyo-night-drive-portfolio.png",
+    "generatedAt": "2026-04-03T05:43:29.832Z",
+    "htmlUrl": "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ7Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpaCiVodG1sX2Q4YWM2YTg3Y2E3NDQ0Mzk5OWNhNDA2NWExM2FlYTg1EgsSBxCCisPc0AkYAZIBIwoKcHJvamVjdF9pZBIVQhM3NzgyNzUwNjQ5NTc0OTY2NjM2&filename=&opi=96797242",
+    "imageUrl": "https://lh3.googleusercontent.com/aida/ADBb0uiErPeKndbgG9EZgwRHJ6HVtMHhJtC7PWrtjr5h4fcYPw52QDBWPrSAFZVFmdE5uQPXWzAy5SgiKQEot50viul32VUite8ijOx-kKR55DXjjqTW8MoBDKm0ukIVmLeu6WhEQ6u9ugh_hskxMHKeSBCcPNgs3vl8w5ivKzh4LydDEc8FqyzxCwfHal5LojsB1rGewJqy0eMXWYvcfC90zRq5vGxccw4V95lW6kv4RXnbNRPof345MUPvxQQ",
+    "notes": [
+      "I've finished the initial concept for 'The Electric Curator.' \n\nThis cinematic portfolio captures that high-octane Neo Tokyo energy through a combination of rain-slicked black backgrounds, electric cyan and magenta neon accents, and bilingual (English/Japanese) transit-inspired typography. \n\nThe experience starts with a massive, atmospheric billboard and transitions into a series of project cards designed to feel like digital screens on a midnight city drive.\n\nI've also set up a custom design system to maintain this specific 'Blade Runner' aesthetic across any future screens. How does this direction feel to you?"
+    ],
+    "prompt": "Design a cinematic art direction portfolio with Neo Tokyo and Blade Runner energy: rain-soaked black surfaces, cyan and magenta neon haze, bilingual transit-inspired typography, reflective chrome cues, animated project billboards, and a high-contrast scroll rhythm. Make the page feel like a premium midnight city drive rather than a generic cyberpunk collage.",
+    "projectId": "7782750649574966636",
+    "screenId": "353cfb4f6323430d88e5dd0371136ac3",
+    "slug": "neo-tokyo-night-drive-portfolio",
+    "suggestions": [
+      "Add a project detail page with technical data overlays",
+      "Create a contact page with a 'Mission Control' theme",
+      "Try a more chrome-heavy look for the project cards"
+    ],
+    "title": "The Electric Curator | Homepage Archive"
+  },
+  {
+    "brand": "Shibuya / Blade Runner",
+    "contentType": "image/png",
+    "fileName": "shibuya-replicant-archive.png",
+    "generatedAt": "2026-04-03T05:44:55.915Z",
+    "htmlUrl": "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ7Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpaCiVodG1sX2YxOGM5MjA5NjhhNTQ1OGE4OGM5M2MwZDEyMzQ3ZDhkEgsSBxCCisPc0AkYAZIBIwoKcHJvamVjdF9pZBIVQhM3NzgyNzUwNjQ5NTc0OTY2NjM2&filename=&opi=96797242",
+    "imageUrl": "https://lh3.googleusercontent.com/aida/ADBb0uiRwL2sasVWPOm_WfJuVIW8OkxcjzKWUSmxYZK2v89ZICTj5szNF_-QqQ61uhCCxXWE5KnHPtg637JfKoSyatM6Jafjw892MLTylTWT3r0fBTtFIE6Rb-FKCjiYQq3HNJWCWBI5AzSq8quVCXouoqLxMybhJuraP71YsB-d_r2t_YUzHu9wpUW9E4a6bVYmy_9kfDLDaZpWaIHfjcmaHpRKgTAqHLC7MjnC20JMS_ImEr7OD0rIwgHSDA",
+    "notes": [
+      "I've crafted a \"Noir Art Direction Archive\" for SHIBUYA_STATION, inspired by the cinematic, rain-slicked aesthetic of Neo-Tokyo. \n\n### Design Strategy:\n*   **Atmosphere & Palette:** A \"rain-dark\" interface using deep charcoals and blacks with high-contrast Cyan (#00F3FF) and Amber (#FFBF00) signal lights. \n*   **Smoked Glass:** I've used heavy backdrop-blurs and thin, glowing borders to create the \"smoked-glass\" panels you requested, keeping the metadata dense but highly legible.\n*   **Typography:** The terminal-style layout uses Space Grotesk and tabular numbers for that technical-editorial feel—sophisticated, not cluttered.\n*   **Cinematic Reveals:** The composition is designed for smooth, scroll-based reveals, highlighting the \"Visual Studies\" collection of art direction.\n\nI've added both the **Design System** and the **Art Direction Archive** to your canvas. How does this look to you?"
+    ],
+    "prompt": "Create a noir art direction archive with Blade Runner and Shibuya station energy: smoked-glass panels, holographic labels, amber and cyan signal lights, dense but readable metadata, and cinematic scroll reveals over a rain-dark interface. Keep the composition luxurious and legible, not noisy or game-like.",
+    "projectId": "7782750649574966636",
+    "screenId": "7e44a50b749846a18dc4c0f6898e532b",
+    "slug": "shibuya-replicant-archive",
+    "suggestions": [
+      "Add a Protocol Details view",
+      "Change the amber to a neon magenta",
+      "Add more interactive holographic elements"
+    ],
+    "title": "SHIBUYA_ARCHIVE | Art Direction"
+  },
+  {
     "brand": "Designprom / Home",
     "contentType": "image/png",
     "fileName": "ai-design-guide-science-hero.png",

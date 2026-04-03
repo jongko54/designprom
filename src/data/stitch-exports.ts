@@ -525,6 +525,66 @@ const exportRegistry: Record<string, StitchExportScreen[]> = {
       "The middle crop keeps new-in products fast, dense, and obviously shoppable.",
       "The close repeats action without letting the page collapse into noise."
     ]
+  ),
+  "latam-kbeauty-clubfront": buildExportScreens(
+    stitchCaptureAssets["latam-kbeauty-clubfront"],
+    "Hori Ritual K-Beauty Clubfront",
+    ["Club hero", "Routine shelf", "Trust close"],
+    [
+      "The opener should feel ritual-led, premium, and guided instead of discount-heavy.",
+      "The middle crop should make quiz and step-based routine logic obvious in one glance.",
+      "The close should keep proof and shoppable trust calm and instructive."
+    ]
+  ),
+  "natura-botanical-ritual-shop": buildExportScreens(
+    stitchCaptureAssets["natura-botanical-ritual-shop"],
+    "Natura Botanical Ritual Shop",
+    ["Ritual hero", "Category flow", "Refill close"],
+    [
+      "The first frame should feel earthy, ritual-led, and gift-aware.",
+      "The middle crop keeps beauty categories moving in a warm editorial sequence.",
+      "The close integrates refill and brand trust into the same premium retail system."
+    ]
+  ),
+  "boticario-gift-fragrance-grid": buildExportScreens(
+    stitchCaptureAssets["boticario-gift-fragrance-grid"],
+    "Boticario Gift Fragrance Grid",
+    ["Gift hero", "Kit wall", "Loyalty close"],
+    [
+      "The opener needs to balance fragrance mood with obvious gift intent.",
+      "The middle crop should keep kits, tiles, and fast add-to-bag moments clean and bright.",
+      "The close should make loyalty and pickup cues feel helpful, not cluttered."
+    ]
+  ),
+  "yanbal-consultant-beauty-club": buildExportScreens(
+    stitchCaptureAssets["yanbal-consultant-beauty-club"],
+    "Karita Koreana Conversion Storefront",
+    ["Consultant hero", "Catalog shelf", "Support close"],
+    [
+      "The opener should make local trust and payment assurance visible immediately.",
+      "The middle crop should keep routine-sequence browsing and product rails fast and obvious.",
+      "The close should turn WhatsApp support and review proof into a clean purchase handoff."
+    ]
+  ),
+  "neo-tokyo-night-drive-portfolio": buildExportScreens(
+    stitchCaptureAssets["neo-tokyo-night-drive-portfolio"],
+    "Neo Tokyo Night Drive Portfolio",
+    ["Night hero", "Billboard rail", "Midnight close"],
+    [
+      "The opener should establish neon city atmosphere and project hierarchy in one frame.",
+      "The middle crop should feel like animated billboards guiding the portfolio scroll.",
+      "The close keeps credits and contact sharp inside the cinematic night mood."
+    ]
+  ),
+  "shibuya-replicant-archive": buildExportScreens(
+    stitchCaptureAssets["shibuya-replicant-archive"],
+    "Shibuya Replicant Archive",
+    ["Replicant opener", "Signal wall", "Archive close"],
+    [
+      "The opening frame should read like a premium future-noir archive system.",
+      "The middle crop keeps dense metadata and holographic labels readable through glass layers.",
+      "The close should stay luxurious and exact instead of drifting into game UI."
+    ]
   )
 };
 

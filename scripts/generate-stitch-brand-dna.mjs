@@ -384,6 +384,48 @@ const samples = [
       "Design a high-energy activewear ecommerce homepage with a campaign-led hero, launch collection callouts, rapid new-in product grids, fit and color metadata, and strong repeated shop CTAs. Make it feel like a release event with commerce built directly into the first scroll."
   },
   {
+    slug: "latam-kbeauty-clubfront",
+    brand: "Hori",
+    title: "Hori Ritual K-Beauty Clubfront",
+    prompt:
+      "Design a polished Spanish-language K-beauty storefront with a ritual-led hero, integrated skin quiz, tiered routine builder, soft clinical education, calm before-and-after proof, and curated Korean beauty merchandising. Keep the page guided, premium, and easy to trust."
+  },
+  {
+    slug: "natura-botanical-ritual-shop",
+    brand: "Natura",
+    title: "Natura Botanical Ritual Shop",
+    prompt:
+      "Create a Brazilian beauty ecommerce homepage inspired by Natura with botanical ritual storytelling, refill and sustainability cues, gift-focused merchandising, earthy color fields, and category rails that move from perfumery to body care to skincare. Keep the page warm, editorial, and ritual-led."
+  },
+  {
+    slug: "boticario-gift-fragrance-grid",
+    brand: "O Boticario",
+    title: "Boticario Gift Fragrance Grid",
+    prompt:
+      "Design a Brazilian beauty homepage inspired by O Boticário with fragrance-first gifting modules, campaign gift kits, loyalty club cues, bright merchandising, and rapid add-to-bag product tiles. Balance premium fragrance mood with high-conversion retail structure."
+  },
+  {
+    slug: "yanbal-consultant-beauty-club",
+    brand: "Karita Koreana",
+    title: "Karita Koreana Conversion Storefront",
+    prompt:
+      "Create a high-conversion Mexican K-beauty shop with a step-by-step routine menu, strong review proof, local payment and shipping trust, WhatsApp-led personalized guidance, and product rails for new arrivals, skin-type browsing, and daily essentials. Keep the page bright, fast, and mobile-native."
+  },
+  {
+    slug: "neo-tokyo-night-drive-portfolio",
+    brand: "Neo Tokyo / Blade Runner",
+    title: "Neo Tokyo Night Drive Portfolio",
+    prompt:
+      "Design a cinematic art direction portfolio with Neo Tokyo and Blade Runner energy: rain-soaked black surfaces, cyan and magenta neon haze, bilingual transit-inspired typography, reflective chrome cues, animated project billboards, and a high-contrast scroll rhythm. Make the page feel like a premium midnight city drive rather than a generic cyberpunk collage."
+  },
+  {
+    slug: "shibuya-replicant-archive",
+    brand: "Shibuya / Blade Runner",
+    title: "Shibuya Replicant Archive",
+    prompt:
+      "Create a noir art direction archive with Blade Runner and Shibuya station energy: smoked-glass panels, holographic labels, amber and cyan signal lights, dense but readable metadata, and cinematic scroll reveals over a rain-dark interface. Keep the composition luxurious and legible, not noisy or game-like."
+  },
+  {
     slug: "ai-design-guide-science-hero",
     brand: "Designprom / Home",
     title: "AI Design Guide Hero",
