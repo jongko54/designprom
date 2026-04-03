@@ -1,0 +1,26 @@
+{
+  "name": "designprom",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "stitch:generate-brand-dna": "node scripts/generate-stitch-brand-dna.mjs",
+    "stitch:render-manifest": "node scripts/render-stitch-manifest.mjs"
+  },
+  "dependencies": {
+    "@google/stitch-sdk": "^0.0.3",
+    "next": "^16.2.1",
+    "playwright-core": "^1.59.1",
+    "react": "^19.2.4",
+    "react-dom": "^19.2.4",
+    "simple-icons": "^16.14.0"
+  },
+  "devDependencies": {
+    "@types/node": "^24.6.1",
+    "@types/react": "^19.2.2",
+    "@types/react-dom": "^19.2.2",
+    "typescript": "^5.9.3"
+  }
+}

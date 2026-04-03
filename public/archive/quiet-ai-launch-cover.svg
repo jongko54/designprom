@@ -1,0 +1,33 @@
+<svg width="1440" height="960" viewBox="0 0 1440 960" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1440" height="960" fill="#FAF9F9"/>
+  <g opacity="0.08">
+    <path d="M0 120H1440" stroke="#000000"/>
+    <path d="M0 240H1440" stroke="#000000"/>
+    <path d="M0 360H1440" stroke="#000000"/>
+    <path d="M0 480H1440" stroke="#000000"/>
+    <path d="M0 600H1440" stroke="#000000"/>
+    <path d="M0 720H1440" stroke="#000000"/>
+    <path d="M0 840H1440" stroke="#000000"/>
+    <path d="M180 0V960" stroke="#000000"/>
+    <path d="M540 0V960" stroke="#000000"/>
+    <path d="M900 0V960" stroke="#000000"/>
+    <path d="M1260 0V960" stroke="#000000"/>
+  </g>
+  <rect x="76" y="76" width="1288" height="74" fill="#E3E2E2"/>
+  <text x="110" y="121" fill="#000000" font-size="24" font-family="Arial, sans-serif" letter-spacing="3">QUIET AI LAUNCH / SAMPLE BOARD</text>
+  <rect x="76" y="194" width="772" height="548" fill="#FFFFFF"/>
+  <rect x="884" y="194" width="480" height="254" fill="#2C59BA" fill-opacity="0.14"/>
+  <rect x="884" y="476" width="480" height="266" fill="#F5F3F3"/>
+  <text x="124" y="330" fill="#000000" font-size="108" font-weight="700" font-family="Arial, sans-serif">Quiet</text>
+  <text x="124" y="432" fill="#000000" font-size="108" font-weight="700" font-family="Arial, sans-serif">product</text>
+  <text x="124" y="534" fill="#000000" font-size="108" font-weight="700" font-family="Arial, sans-serif">systems</text>
+  <text x="124" y="626" fill="#5F5859" font-size="30" font-family="Arial, sans-serif">AI workspace / monochrome archive / cobalt proof lens</text>
+  <rect x="124" y="668" width="240" height="56" fill="#000000"/>
+  <text x="164" y="704" fill="#FFFFFF" font-size="24" font-family="Arial, sans-serif" letter-spacing="2">START FREE</text>
+  <text x="924" y="252" fill="#000000" font-size="26" font-family="Arial, sans-serif" letter-spacing="3">PROOF BLOCK</text>
+  <rect x="924" y="286" width="400" height="118" fill="#FFFFFF" fill-opacity="0.82"/>
+  <rect x="924" y="510" width="184" height="180" fill="#FFFFFF"/>
+  <rect x="1140" y="510" width="184" height="84" fill="#000000"/>
+  <rect x="1140" y="606" width="184" height="84" fill="#E3E2E2"/>
+  <text x="924" y="844" fill="#5F5859" font-size="22" font-family="Arial, sans-serif" letter-spacing="2">CLEAR HIERARCHY / TONAL LAYERING / NO NOISE</text>
+</svg>

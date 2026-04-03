@@ -1,0 +1,26 @@
+<svg width="1440" height="960" viewBox="0 0 1440 960" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1440" height="960" fill="#FAF9F9"/>
+  <g opacity="0.1">
+    <path d="M80 152H1360" stroke="#000000"/>
+    <path d="M80 360H1360" stroke="#000000"/>
+    <path d="M80 568H1360" stroke="#000000"/>
+    <path d="M80 776H1360" stroke="#000000"/>
+    <path d="M400 152V888" stroke="#000000"/>
+    <path d="M720 152V888" stroke="#000000"/>
+    <path d="M1040 152V888" stroke="#000000"/>
+  </g>
+  <rect x="80" y="72" width="1280" height="68" fill="#E3E2E2"/>
+  <text x="116" y="116" fill="#000000" font-size="22" font-family="Arial, sans-serif" letter-spacing="4">ENTERPRISE PROOF STACK / SAMPLE BOARD</text>
+  <rect x="80" y="184" width="600" height="296" fill="#FFFFFF"/>
+  <rect x="720" y="184" width="640" height="296" fill="#F5F3F3"/>
+  <rect x="80" y="520" width="280" height="368" fill="#FFFFFF"/>
+  <rect x="400" y="520" width="280" height="368" fill="#000000"/>
+  <rect x="720" y="520" width="640" height="368" fill="#FFFFFF"/>
+  <text x="116" y="296" fill="#000000" font-size="92" font-weight="700" font-family="Arial, sans-serif">Enterprise</text>
+  <text x="116" y="388" fill="#000000" font-size="92" font-weight="700" font-family="Arial, sans-serif">proof</text>
+  <text x="760" y="260" fill="#000000" font-size="24" font-family="Arial, sans-serif" letter-spacing="3">SYSTEM OVERVIEW</text>
+  <rect x="760" y="304" width="560" height="20" fill="#FFFFFF"/>
+  <rect x="760" y="344" width="490" height="20" fill="#FFFFFF"/>
+  <rect x="760" y="384" width="530" height="20" fill="#FFFFFF"/>
+  <text x="760" y="926" fill="#5F5859" font-size="22" font-family="Arial, sans-serif" letter-spacing="2">MODULAR PROOF / STRICT GRID / TECHNICAL CLARITY</text>
+</svg>
