@@ -4885,3 +4885,65 @@ select {
     animation: none;
   }
 }
+
+.tool-guide-shell {
+  background: linear-gradient(180deg, #fffdf8 0%, #f4efe9 100%);
+}
+
+.tool-guide-hero {
+  display: grid;
+  grid-template-columns: minmax(320px, 0.92fr) minmax(0, 1.08fr);
+  gap: 20px;
+}
+
+.tool-guide-copy,
+.tool-guide-preview {
+  display: grid;
+  gap: 16px;
+}
+
+.tool-guide-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.tool-guide-fit-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.tool-guide-recipe-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.tool-guide-recipe-card {
+  align-content: start;
+}
+
+.tool-guide-list {
+  display: grid;
+  gap: 10px;
+  margin: 0;
+  padding-left: 18px;
+}
+
+.tool-guide-list li {
+  line-height: 1.62;
+}
+
+.tool-guide-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.tool-guide-link {
+  text-decoration: none;
+}
+
+@media (max-width: 1100px) {
+  .tool-guide-hero,
+  .tool-guide-grid,
+  .tool-guide-fit-grid,
+  .tool-guide-recipe-grid {
+    grid-template-columns: 1fr;
+  }
+}

@@ -435,6 +435,8 @@ export const navItems = [
   { href: "/", label: "Home" },
   { href: "/dna", label: "Brand DNA" },
   { href: "/analysis", label: "Template Analysis" },
+  { href: "/alembic", label: "Alembic" },
+  { href: "/photogradient", label: "Photogradient" },
   { href: "/builder", label: "Prompt Builder" },
   { href: "/archive", label: "Archive" }
 ] as const;
