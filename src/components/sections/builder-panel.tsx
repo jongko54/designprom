@@ -10,7 +10,6 @@ import { PreviewSurface } from "@/components/ui/preview-surface";
 import { SemanticPreviewBoard } from "@/components/ui/semantic-preview-board";
 import {
   builderOptions,
-  builderThemes,
   builderPresets,
   featuredDna,
   getArchiveBySlug,
@@ -55,7 +54,6 @@ export function BuilderPanel({
 }: BuilderPanelProps) {
   const searchParams = useSearchParams();
   const defaultPreset = builderPresets[0];
-  const [activePreset, setActivePreset] = useState(defaultPreset.slug);
   const [pageType, setPageType] = useState(defaultPreset.pageType);
   const [tone, setTone] = useState(defaultPreset.tone);
   const [medium, setMedium] = useState(defaultPreset.medium);
@@ -83,18 +81,12 @@ export function BuilderPanel({
   const selectedStyle =
     styleCategories.find((entry) => entry.slug === styleSlug) ??
     styleCategories[0];
-  const selectedPreset =
-    builderPresets.find((preset) => preset.slug === activePreset) ?? builderPresets[0];
-  const selectedTheme = builderThemes.find((theme) => theme.slug === activePreset);
   const isSeededFromLink =
     Boolean(searchParams.get("dna")) ||
     Boolean(searchParams.get("style")) ||
     Boolean(searchParams.get("pageType"));
   const builderSourceLabel =
-    selectedTheme?.title ??
-    ((activePreset === "custom-link" || isSeededFromLink)
-      ? "Brand DNA example"
-      : selectedPreset.title);
+    isSeededFromLink ? "Brand DNA example" : defaultPreset.title;
   const dnaDirection = selectedDna.referenceBrand
     ? `${selectedDna.referenceBrand}-like`
     : selectedDna.title.toLowerCase();
@@ -145,8 +137,6 @@ export function BuilderPanel({
     }
 
     startTransition(() => {
-      setActivePreset("custom-link");
-
       if (dna && featuredDna.some((entry) => entry.slug === dna)) {
         setDnaSlug(dna);
       }
@@ -336,20 +326,6 @@ export function BuilderPanel({
     });
   }
 
-  function applyTheme(
-    theme: (typeof builderThemes)[number]
-  ) {
-    onClearExternalPrompt?.();
-    setActivePreset(theme.slug);
-    setPageType(theme.pageType);
-    setTone(theme.tone);
-    setMedium(theme.medium);
-    setMotionLevel(theme.motionLevel);
-    setColorDirection(theme.colorDirection);
-    setDnaSlug(theme.dnaSlug);
-    setStyleSlug(theme.styleSlug);
-  }
-
   async function handlePaletteFileChange(event: ChangeEvent<HTMLInputElement>) {
     const file = event.target.files?.[0];
 
@@ -492,48 +468,6 @@ export function BuilderPanel({
             <span>{builderSourceLabel}</span>
             <span>{pageType}</span>
             <span>{tone}</span>
-          </div>
-        </article>
-        <article className="collection-card builder-theme-shell">
-          <div className="micro-row">
-            <span>Alembic theme gallery</span>
-            <span>preview-first preset rail</span>
-          </div>
-          <p>
-            Start from a visual theme card instead of a blank builder state. Each
-            theme rewires the current DNA, style, motion, and color stack.
-          </p>
-          <div className="builder-theme-grid">
-            {builderThemes.map((theme) => (
-              <article className="builder-theme-card" key={theme.slug}>
-                <PreviewSurface
-                  image={theme.captureImage}
-                  label={theme.title}
-                  meta={theme.cue}
-                  size="card"
-                  tone={theme.previewTone}
-                />
-                <div className="builder-theme-copy">
-                  <div className="micro-row">
-                    <span>{theme.pageType}</span>
-                    <span>{theme.tone}</span>
-                  </div>
-                  <h3>{theme.title}</h3>
-                  <p>{theme.summary}</p>
-                </div>
-                <button
-                  className={
-                    theme.slug === activePreset
-                      ? "filter-chip active button-reset"
-                      : "filter-chip button-reset"
-                  }
-                  onClick={() => applyTheme(theme)}
-                  type="button"
-                >
-                  {theme.slug === activePreset ? "Applied" : "Apply theme"}
-                </button>
-              </article>
-            ))}
           </div>
         </article>
         <article className="collection-card builder-palette-shell">
