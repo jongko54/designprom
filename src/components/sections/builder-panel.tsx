@@ -418,6 +418,66 @@ export function BuilderPanel({
   return (
     <section className="builder-shell builder-archive-shell" id="builder-panel">
       <div className="builder-controls archive-builder-controls">
+        <BuilderChoice
+          label="Page type"
+          onSelect={setPageType}
+          options={builderOptions.pageTypes}
+          selected={pageType}
+        />
+        <BuilderChoice
+          label="Tone"
+          onSelect={setTone}
+          options={builderOptions.tones}
+          selected={tone}
+        />
+        <BuilderChoice
+          label="Medium"
+          onSelect={setMedium}
+          options={builderOptions.mediums}
+          selected={medium}
+        />
+        <BuilderChoice
+          label="Motion"
+          onSelect={setMotionLevel}
+          options={builderOptions.motionLevels}
+          selected={motionLevel}
+        />
+        <BuilderChoice
+          label="Color direction"
+          onSelect={setColorDirection}
+          options={builderOptions.colorDirections}
+          selected={colorDirection}
+        />
+        <BuilderChoice
+          label="Rough draft model"
+          onSelect={setHordeModel}
+          options={builderOptions.hordeModels}
+          selected={hordeModel}
+        />
+        <BuilderChoice
+          label="Rough draft size"
+          onSelect={setHordeSize}
+          options={builderOptions.hordeSizes}
+          selected={hordeSize}
+        />
+        <BuilderChoice
+          label="DNA base"
+          onSelect={setDnaSlug}
+          options={featuredDna.map((item) => item.slug)}
+          renderLabel={(value) =>
+            featuredDna.find((item) => item.slug === value)?.title ?? value
+          }
+          selected={dnaSlug}
+        />
+        <BuilderChoice
+          label="Style layer"
+          onSelect={setStyleSlug}
+          options={styleCategories.map((item) => item.slug)}
+          renderLabel={(value) =>
+            styleCategories.find((item) => item.slug === value)?.title ?? value
+          }
+          selected={styleSlug}
+        />
         <article className="builder-brief-card">
           <div className="micro-row">
             <span>Archive builder</span>
@@ -554,66 +614,6 @@ export function BuilderPanel({
             </div>
           </div>
         </article>
-        <BuilderChoice
-          label="Page type"
-          onSelect={setPageType}
-          options={builderOptions.pageTypes}
-          selected={pageType}
-        />
-        <BuilderChoice
-          label="Tone"
-          onSelect={setTone}
-          options={builderOptions.tones}
-          selected={tone}
-        />
-        <BuilderChoice
-          label="Medium"
-          onSelect={setMedium}
-          options={builderOptions.mediums}
-          selected={medium}
-        />
-        <BuilderChoice
-          label="Motion"
-          onSelect={setMotionLevel}
-          options={builderOptions.motionLevels}
-          selected={motionLevel}
-        />
-        <BuilderChoice
-          label="Color direction"
-          onSelect={setColorDirection}
-          options={builderOptions.colorDirections}
-          selected={colorDirection}
-        />
-        <BuilderChoice
-          label="Rough draft model"
-          onSelect={setHordeModel}
-          options={builderOptions.hordeModels}
-          selected={hordeModel}
-        />
-        <BuilderChoice
-          label="Rough draft size"
-          onSelect={setHordeSize}
-          options={builderOptions.hordeSizes}
-          selected={hordeSize}
-        />
-        <BuilderChoice
-          label="DNA base"
-          onSelect={setDnaSlug}
-          options={featuredDna.map((item) => item.slug)}
-          renderLabel={(value) =>
-            featuredDna.find((item) => item.slug === value)?.title ?? value
-          }
-          selected={dnaSlug}
-        />
-        <BuilderChoice
-          label="Style layer"
-          onSelect={setStyleSlug}
-          options={styleCategories.map((item) => item.slug)}
-          renderLabel={(value) =>
-            styleCategories.find((item) => item.slug === value)?.title ?? value
-          }
-          selected={styleSlug}
-        />
       </div>
       <div className="builder-stage">
         <article className="builder-output builder-dossier">
