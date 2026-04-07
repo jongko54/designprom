@@ -28,6 +28,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <script
+          async
+          crossOrigin="anonymous"
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3907699207711762"
+        />
+      </head>
       <body className={`${display.variable} ${body.variable}`}>
         {children}
         <Analytics />
