@@ -19,9 +19,7 @@ export function SiteHeader() {
         ))}
       </nav>
       <div className="header-meta-block">
-        <span className="header-meta">
-          brand dna / template analysis / stitch outputs
-        </span>
+        <span className="header-meta">brand dna / archive / stitch outputs</span>
         <Link className="tertiary-link" href="/builder">
           Open prompt builder
         </Link>

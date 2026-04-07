@@ -314,6 +314,20 @@ const samples = [
       "Create a Cargo-inspired fashion portfolio template with a lookbook feel, tall image sequencing, sparse captions, runway-like pacing, and a polished editorial homepage."
   },
   {
+    slug: "cargo-luxury-runway-house",
+    brand: "Cargo / Fashion",
+    title: "Luxury Runway House",
+    prompt:
+      "Design a luxury fashion house portfolio with full-bleed runway stills, black-and-ivory surfaces, serif chapter headings, elegant collection rails, backstage credits, and quiet editorial pacing. The site should feel like a premium runway dossier rather than a store."
+  },
+  {
+    slug: "cargo-streetwear-drop-journal",
+    brand: "Cargo / Fashion",
+    title: "Streetwear Drop Journal",
+    prompt:
+      "Create a fashion drop microsite for a streetwear label with bold sans headlines, stacked campaign posters, release countdown cues, oversized look stills, editorial product captions, and sharp black-and-signal-orange pacing. Keep it image-led, urgent, and premium without turning into raw ecommerce."
+  },
+  {
     slug: "cargo-art-direction-moodboard",
     brand: "Cargo / Art Direction",
     title: "Art Direction Moodboard Template",

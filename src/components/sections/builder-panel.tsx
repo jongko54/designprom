@@ -1,20 +1,23 @@
 "use client";
 
-import { useEffect, startTransition, useState } from "react";
+import { type ChangeEvent, useEffect, useRef, startTransition, useState } from "react";
 import Link from "next/link";
 import { useSearchParams } from "next/navigation";
 
 import { CopyButton } from "@/components/ui/copy-button";
+import { PublishActions } from "@/components/ui/publish-actions";
 import { PreviewSurface } from "@/components/ui/preview-surface";
 import { SemanticPreviewBoard } from "@/components/ui/semantic-preview-board";
 import {
   builderOptions,
+  builderThemes,
   builderPresets,
   featuredDna,
   getArchiveBySlug,
   styleCategories
 } from "@/data/site";
 import { getArchiveStitchExports } from "@/data/stitch-exports";
+import { extractPaletteFromFile } from "@/lib/palette-extractor";
 import { resolveBuilderSemanticPreview } from "@/lib/prompt-semantic-preview";
 import { saveRoughDraft } from "@/lib/rough-draft-archive";
 
@@ -36,6 +39,16 @@ type BuilderPanelProps = {
   onClearExternalPrompt?: () => void;
 };
 
+type PaletteState = {
+  applied: boolean;
+  colors: string[];
+  description: string;
+  error?: string;
+  imageUrl?: string;
+  loading: boolean;
+  name?: string;
+};
+
 export function BuilderPanel({
   externalPrompt = "",
   onClearExternalPrompt
@@ -52,10 +65,18 @@ export function BuilderPanel({
   const [styleSlug, setStyleSlug] = useState(defaultPreset.styleSlug);
   const [hordeModel, setHordeModel] = useState(builderOptions.hordeModels[0]);
   const [hordeSize, setHordeSize] = useState(builderOptions.hordeSizes[0]);
+  const [paletteState, setPaletteState] = useState<PaletteState>({
+    applied: false,
+    colors: [],
+    description: "",
+    loading: false
+  });
   const [hordeDraft, setHordeDraft] = useState<HordeDraftState>({
     done: false,
     loading: false
   });
+  const fileInputRef = useRef<HTMLInputElement | null>(null);
+  const objectUrlRef = useRef<string | null>(null);
 
   const selectedDna =
     featuredDna.find((entry) => entry.slug === dnaSlug) ?? featuredDna[0];
@@ -64,22 +85,29 @@ export function BuilderPanel({
     styleCategories[0];
   const selectedPreset =
     builderPresets.find((preset) => preset.slug === activePreset) ?? builderPresets[0];
+  const selectedTheme = builderThemes.find((theme) => theme.slug === activePreset);
   const isSeededFromLink =
     Boolean(searchParams.get("dna")) ||
     Boolean(searchParams.get("style")) ||
     Boolean(searchParams.get("pageType"));
   const builderSourceLabel =
-    activePreset === "custom-link" || isSeededFromLink
+    selectedTheme?.title ??
+    ((activePreset === "custom-link" || isSeededFromLink)
       ? "Brand DNA example"
-      : selectedPreset.title;
+      : selectedPreset.title);
   const dnaDirection = selectedDna.referenceBrand
     ? `${selectedDna.referenceBrand}-like`
     : selectedDna.title.toLowerCase();
+  const paletteClause =
+    paletteState.applied && paletteState.description
+      ? ` Use a reference-derived palette with ${paletteState.description}.`
+      : "";
   const composedPrompt = `Create a ${tone.toLowerCase()} ${pageType.toLowerCase()} page with ${dnaDirection} direction, ${selectedStyle.title.toLowerCase()} styling, ${colorDirection.toLowerCase()} color, and ${motionLevel.toLowerCase()} motion. Keep the hierarchy clean, the sections measured, and the CTA obvious.`;
   const customPrompt = externalPrompt.trim();
-  const generatedPrompt = customPrompt || composedPrompt;
+  const generatedPrompt = `${customPrompt || composedPrompt}${paletteClause}`.trim();
+  const displayedColorDirection = paletteState.applied ? "Reference palette" : colorDirection;
   const semanticPreview = resolveBuilderSemanticPreview({
-    colorDirection,
+    colorDirection: displayedColorDirection,
     dna: selectedDna,
     medium,
     motionLevel,
@@ -155,6 +183,14 @@ export function BuilderPanel({
       loading: false
     });
   }, [generatedPrompt]);
+
+  useEffect(() => {
+    return () => {
+      if (objectUrlRef.current) {
+        URL.revokeObjectURL(objectUrlRef.current);
+      }
+    };
+  }, []);
 
   useEffect(() => {
     if (!hordeDraft.jobId || hordeDraft.done || hordeDraft.error) {
@@ -300,6 +336,85 @@ export function BuilderPanel({
     });
   }
 
+  function applyTheme(
+    theme: (typeof builderThemes)[number]
+  ) {
+    onClearExternalPrompt?.();
+    setActivePreset(theme.slug);
+    setPageType(theme.pageType);
+    setTone(theme.tone);
+    setMedium(theme.medium);
+    setMotionLevel(theme.motionLevel);
+    setColorDirection(theme.colorDirection);
+    setDnaSlug(theme.dnaSlug);
+    setStyleSlug(theme.styleSlug);
+  }
+
+  async function handlePaletteFileChange(event: ChangeEvent<HTMLInputElement>) {
+    const file = event.target.files?.[0];
+
+    if (!file) {
+      return;
+    }
+
+    setPaletteState({
+      applied: false,
+      colors: [],
+      description: "",
+      loading: true,
+      name: file.name
+    });
+
+    if (objectUrlRef.current) {
+      URL.revokeObjectURL(objectUrlRef.current);
+    }
+
+    const nextObjectUrl = URL.createObjectURL(file);
+    objectUrlRef.current = nextObjectUrl;
+
+    try {
+      const extracted = await extractPaletteFromFile(file);
+
+      setPaletteState({
+        applied: true,
+        colors: extracted.colors,
+        description: extracted.description,
+        imageUrl: nextObjectUrl,
+        loading: false,
+        name: file.name
+      });
+    } catch (error) {
+      setPaletteState({
+        applied: false,
+        colors: [],
+        description: "",
+        error:
+          error instanceof Error
+            ? error.message
+            : "Could not extract a palette from that image.",
+        imageUrl: nextObjectUrl,
+        loading: false,
+        name: file.name
+      });
+    } finally {
+      event.target.value = "";
+    }
+  }
+
+  function handleClearPalette() {
+    if (objectUrlRef.current) {
+      URL.revokeObjectURL(objectUrlRef.current);
+      objectUrlRef.current = null;
+    }
+
+    setPaletteState({
+      applied: false,
+      colors: [],
+      description: "",
+      loading: false
+    });
+  }
+
   return (
     <section className="builder-shell builder-archive-shell" id="builder-panel">
       <div className="builder-controls archive-builder-controls">
@@ -317,6 +432,126 @@ export function BuilderPanel({
             <span>{builderSourceLabel}</span>
             <span>{pageType}</span>
             <span>{tone}</span>
+          </div>
+        </article>
+        <article className="collection-card builder-theme-shell">
+          <div className="micro-row">
+            <span>Alembic theme gallery</span>
+            <span>preview-first preset rail</span>
+          </div>
+          <p>
+            Start from a visual theme card instead of a blank builder state. Each
+            theme rewires the current DNA, style, motion, and color stack.
+          </p>
+          <div className="builder-theme-grid">
+            {builderThemes.map((theme) => (
+              <article className="builder-theme-card" key={theme.slug}>
+                <PreviewSurface
+                  image={theme.captureImage}
+                  label={theme.title}
+                  meta={theme.cue}
+                  size="card"
+                  tone={theme.previewTone}
+                />
+                <div className="builder-theme-copy">
+                  <div className="micro-row">
+                    <span>{theme.pageType}</span>
+                    <span>{theme.tone}</span>
+                  </div>
+                  <h3>{theme.title}</h3>
+                  <p>{theme.summary}</p>
+                </div>
+                <button
+                  className={
+                    theme.slug === activePreset
+                      ? "filter-chip active button-reset"
+                      : "filter-chip button-reset"
+                  }
+                  onClick={() => applyTheme(theme)}
+                  type="button"
+                >
+                  {theme.slug === activePreset ? "Applied" : "Apply theme"}
+                </button>
+              </article>
+            ))}
+          </div>
+        </article>
+        <article className="collection-card builder-palette-shell">
+          <div className="micro-row">
+            <span>Photogradient palette extractor</span>
+            <span>reference image to color tokens</span>
+          </div>
+          <p>
+            Upload a reference image and turn it into palette language the builder
+            can immediately add to the generated prompt.
+          </p>
+          <input
+            accept="image/*"
+            className="sr-only"
+            onChange={handlePaletteFileChange}
+            ref={fileInputRef}
+            type="file"
+          />
+          <div className="card-actions">
+            <button
+              className="primary-button button-reset"
+              onClick={() => fileInputRef.current?.click()}
+              type="button"
+            >
+              {paletteState.loading ? "Extracting palette..." : "Upload reference image"}
+            </button>
+            {paletteState.imageUrl ? (
+              <button
+                className="ghost-button button-reset"
+                onClick={handleClearPalette}
+                type="button"
+              >
+                Remove palette
+              </button>
+            ) : null}
+          </div>
+          <div className="builder-palette-grid">
+            <div className="builder-palette-preview">
+              {paletteState.imageUrl ? (
+                <img
+                  alt={paletteState.name ?? "Uploaded reference"}
+                  className="builder-palette-image"
+                  src={paletteState.imageUrl}
+                />
+              ) : (
+                <div className="builder-palette-placeholder">
+                  <p>
+                    Drop in a poster, product photo, or site screenshot. The
+                    builder will extract anchor colors and use them as prompt
+                    language.
+                  </p>
+                </div>
+              )}
+            </div>
+            <div className="builder-palette-output">
+              <div className="builder-palette-swatches">
+                {paletteState.colors.length ? (
+                  paletteState.colors.map((color) => (
+                    <div className="builder-palette-swatch" key={color}>
+                      <span style={{ backgroundColor: color }} />
+                      <strong>{color}</strong>
+                    </div>
+                  ))
+                ) : (
+                  <div className="builder-palette-empty">
+                    <span>No extracted colors yet</span>
+                  </div>
+                )}
+              </div>
+              <div className="archive-prompt">
+                <span>Palette note</span>
+                <p>
+                  {paletteState.error
+                    ? paletteState.error
+                    : paletteState.description || "Extracted palette language will appear here."}
+                </p>
+              </div>
+            </div>
           </div>
         </article>
         <BuilderChoice
@@ -408,7 +643,7 @@ export function BuilderPanel({
             <span>{selectedDna.referenceBrand ?? selectedDna.title}</span>
             <span>{selectedStyle.title}</span>
             <span>{motionLevel}</span>
-            <span>{colorDirection}</span>
+            <span>{displayedColorDirection}</span>
           </div>
           <div className="card-actions">
             <CopyButton
@@ -456,6 +691,12 @@ export function BuilderPanel({
                 <p>{note.value}</p>
               </div>
             ))}
+            {paletteState.applied ? (
+              <div>
+                <span>Palette</span>
+                <p>{paletteState.description}</p>
+              </div>
+            ) : null}
           </div>
           {matchedArchive ? (
             <div className="builder-reference-shell">
@@ -539,6 +780,40 @@ export function BuilderPanel({
                 </p>
               </div>
             </div>
+            {hordeDraft.imageUrl ? (
+              <PublishActions
+                assets={[
+                  {
+                    content: `${generatedPrompt}\n`,
+                    filename: "prompt.txt",
+                    kind: "text"
+                  },
+                  {
+                    filename: "manifest.json",
+                    kind: "json",
+                    value: {
+                      colorDirection: displayedColorDirection,
+                      dna: selectedDna.title,
+                      model: hordeDraft.model ?? hordeModel,
+                      motionLevel,
+                      pageType,
+                      prompt: generatedPrompt,
+                      size: hordeSize,
+                      style: selectedStyle.title,
+                      tone
+                    }
+                  },
+                  {
+                    filename: "rough-draft.png",
+                    kind: "url",
+                    url: hordeDraft.imageUrl
+                  }
+                ]}
+                shareText={`${selectedDna.title} / ${pageType} / ${tone}`}
+                shareTitle={`${selectedDna.title} ${pageType} rough draft`}
+                zipName={`${selectedDna.title}-${pageType}-rough-draft`}
+              />
+            ) : null}
           </div>
         </article>
       </div>

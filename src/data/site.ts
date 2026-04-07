@@ -116,6 +116,22 @@ export type BuilderPreset = {
   styleSlug: string;
 };
 
+export type BuilderTheme = {
+  slug: string;
+  title: string;
+  summary: string;
+  cue: string;
+  pageType: string;
+  tone: string;
+  medium: string;
+  motionLevel: string;
+  colorDirection: string;
+  dnaSlug: string;
+  styleSlug: string;
+  previewTone: PreviewTone;
+  captureImage?: ArchiveImageAsset;
+};
+
 export type BrandDnaGalleryEntry = {
   slug: string;
   title: string;
@@ -365,6 +381,14 @@ export const stitchCaptureAssets = {
     "cargo-fashion-lookbook",
     "Cargo-inspired Stitch export for the fashion lookbook portfolio"
   ),
+  "cargo-luxury-runway-house": createStitchCaptureAsset(
+    "cargo-luxury-runway-house",
+    "Cargo-inspired Stitch export for the luxury runway house portfolio"
+  ),
+  "cargo-streetwear-drop-journal": createStitchCaptureAsset(
+    "cargo-streetwear-drop-journal",
+    "Cargo-inspired Stitch export for the streetwear drop journal portfolio"
+  ),
   "cargo-art-direction-moodboard": createStitchCaptureAsset(
     "cargo-art-direction-moodboard",
     "Cargo-inspired Stitch export for the art direction moodboard portfolio"
@@ -435,8 +459,6 @@ export const navItems = [
   { href: "/", label: "Home" },
   { href: "/dna", label: "Brand DNA" },
   { href: "/analysis", label: "Template Analysis" },
-  { href: "/alembic", label: "Alembic" },
-  { href: "/photogradient", label: "Photogradient" },
   { href: "/builder", label: "Prompt Builder" },
   { href: "/archive", label: "Archive" }
 ] as const;
@@ -2517,6 +2539,98 @@ export const promptArchive: PromptArchiveEntry[] = [
     ]
   },
   {
+    slug: "luxury-runway-house-template",
+    title: "Luxury Runway House Template",
+    summary:
+      "A couture-facing fashion prompt with quiet runway image pull, serif chapter pacing, and premium backstage detail.",
+    brief:
+      "Design a fashion house portfolio that feels like a runway dossier: image-first, chapter-led, and premium enough for couture collections, atelier notes, and seasonal drops.",
+    useCase: "Fashion portfolio",
+    portfolioCategory: "Fashion",
+    previewTone: "mono",
+    coverImage: stitchCaptureAssets["cargo-luxury-runway-house"],
+    categorySlugs: ["calm-precision-ui", "editorial-grid-2d", "premium-gradient-atmosphere"],
+    stitchExampleSlugs: ["cargo-luxury-runway-house"],
+    prompt:
+      "Create a luxury fashion house portfolio with full-bleed runway stills, black-and-ivory surfaces, serif chapter headings, elegant collection rails, backstage credits, and quiet editorial pacing. The site should feel like a premium runway dossier rather than a store.",
+    remixPrompt:
+      "Rework the same fashion house portfolio for a more seasonal campaign focus. Keep the couture restraint, but make the chapter labels, collection navigation, and hero transitions slightly more dramatic.",
+    curatorNote:
+      "This only works when the image scale feels expensive and the text is treated like chapter furniture, not interface chrome.",
+    outputFocus: [
+      "A couture hero with immediate runway image pull",
+      "Collection chapters that pace the scroll like a show sequence",
+      "Backstage notes and credits that feel elegant instead of dense"
+    ],
+    outputs: [
+      {
+        title: "Runway Hero",
+        caption: "A large first frame where one runway still, one collection name, and one precise seasonal cue do the work.",
+        meta: "hero",
+        size: "wide",
+        image: stitchCaptureAssets["cargo-luxury-runway-house"]
+      },
+      {
+        title: "Collection Chapter",
+        caption: "A mid-scroll chapter layout with collection rails, quiet season labels, and editorial spacing.",
+        meta: "chapter",
+        size: "tall"
+      },
+      {
+        title: "Atelier Close",
+        caption: "A concluding screen where atelier notes, credits, and contact remain premium and sparse.",
+        meta: "close",
+        size: "square"
+      }
+    ]
+  },
+  {
+    slug: "streetwear-drop-journal-template",
+    title: "Streetwear Drop Journal Template",
+    summary:
+      "A fashion drop prompt with poster stacks, release cues, and a fast editorial rhythm for campaigns and capsules.",
+    brief:
+      "Build a streetwear campaign microsite that stages drop moments, collection imagery, and release information without collapsing into generic storefront UI.",
+    useCase: "Fashion campaign microsite",
+    portfolioCategory: "Fashion",
+    previewTone: "creator",
+    coverImage: stitchCaptureAssets["cargo-streetwear-drop-journal"],
+    categorySlugs: ["creator-velocity", "kinetic-type-signal", "modern-art-modular"],
+    stitchExampleSlugs: ["cargo-streetwear-drop-journal"],
+    prompt:
+      "Create a fashion drop microsite for a streetwear label with bold sans headlines, stacked campaign posters, release countdown cues, oversized look stills, editorial product captions, and sharp black-and-signal-orange pacing. Keep it image-led, urgent, and premium without turning into raw ecommerce.",
+    remixPrompt:
+      "Adapt the same streetwear microsite for a more collectible archive mood. Keep the drop urgency, but add more project indexing, edition labels, and quieter product framing.",
+    curatorNote:
+      "The energy needs to feel immediate, but the typography and image stack still have to stay controlled enough to feel designed rather than loud.",
+    outputFocus: [
+      "A launch hero with immediate drop tension",
+      "Poster and look still sequencing that scans fast",
+      "Release information that feels premium instead of merch-heavy"
+    ],
+    outputs: [
+      {
+        title: "Drop Hero",
+        caption: "A first frame where countdown logic, campaign stills, and a sharp collection title all land at once.",
+        meta: "hero",
+        size: "wide",
+        image: stitchCaptureAssets["cargo-streetwear-drop-journal"]
+      },
+      {
+        title: "Poster Stack",
+        caption: "A poster-led module where release chapters, look stills, and editorial product notes stay readable.",
+        meta: "posters",
+        size: "square"
+      },
+      {
+        title: "Release Close",
+        caption: "A lower section that combines capsule metadata, availability, and contact without drifting into store chrome.",
+        meta: "close",
+        size: "tall"
+      }
+    ]
+  },
+  {
     slug: "art-direction-moodboard-template",
     title: "Art Direction Moodboard Template",
     summary:
@@ -3468,6 +3582,129 @@ export const builderPresets: BuilderPreset[] = [
   }
 ];
 
+export const builderThemes: BuilderTheme[] = [
+  {
+    slug: "frosted-keynote",
+    title: "Frosted Keynote",
+    summary: "Quiet product reveal with glass depth, calm type, and premium restraint.",
+    cue: "Alembic-style theme card for keynote-grade product storytelling.",
+    pageType: "Landing",
+    tone: "Quiet premium",
+    medium: "2D",
+    motionLevel: "Subtle",
+    colorDirection: "Monochrome",
+    dnaSlug: "calm-precision-ui",
+    styleSlug: "glass-lens-interface",
+    previewTone: "calm",
+    captureImage: stitchCaptureAssets["apple-assistant-os-preview"]
+  },
+  {
+    slug: "terminal-editorial",
+    title: "Terminal Editorial",
+    summary: "Hard-edged mono layout for docs, product notes, and system writing.",
+    cue: "Turns Alembic's text-first discipline into a docs-led web surface.",
+    pageType: "Docs",
+    tone: "Technical",
+    medium: "2D",
+    motionLevel: "Still",
+    colorDirection: "Monochrome",
+    dnaSlug: "enterprise-grid-system",
+    styleSlug: "minimal-monochrome",
+    previewTone: "mono",
+    captureImage: stitchCaptureAssets["ibm-docs-marketing-hybrid"]
+  },
+  {
+    slug: "community-canvas",
+    title: "Community Canvas",
+    summary: "Utility rails, pane density, and collaborative visual fluency.",
+    cue: "A theme card for product-tool interfaces with live workspace energy.",
+    pageType: "Dashboard",
+    tone: "Technical",
+    medium: "2D",
+    motionLevel: "Moderate",
+    colorDirection: "Cool",
+    dnaSlug: "collaborative-canvas-system",
+    styleSlug: "glass-lens-interface",
+    previewTone: "grid",
+    captureImage: stitchCaptureAssets["figma-plugin-directory"]
+  },
+  {
+    slug: "warm-stay-story",
+    title: "Warm Stay Story",
+    summary: "Hospitality-led discovery flow with practical trust modules.",
+    cue: "A friendly visual system that starts from atmosphere before conversion.",
+    pageType: "Landing",
+    tone: "Friendly",
+    medium: "Photo-led",
+    motionLevel: "Subtle",
+    colorDirection: "Warm",
+    dnaSlug: "warm-global-hospitality",
+    styleSlug: "modern-art-modular",
+    previewTone: "warm",
+    captureImage: stitchCaptureAssets["airbnb-neighborhood-guide"]
+  },
+  {
+    slug: "runway-house",
+    title: "Runway House",
+    summary: "Luxury runway pacing with quiet serif chapters and image-led couture structure.",
+    cue: "Use when the page should feel like a fashion house dossier, not a retail homepage.",
+    pageType: "Portfolio",
+    tone: "Gallery-like",
+    medium: "Photo-led",
+    motionLevel: "Subtle",
+    colorDirection: "Monochrome",
+    dnaSlug: "calm-precision-ui",
+    styleSlug: "editorial-grid-2d",
+    previewTone: "mono",
+    captureImage: stitchCaptureAssets["cargo-luxury-runway-house"]
+  },
+  {
+    slug: "streetwear-journal",
+    title: "Streetwear Journal",
+    summary: "Drop-led campaign pacing with poster stacks, countdowns, and premium urgency.",
+    cue: "Use when the page needs fashion energy with campaign motion, not generic ecommerce chrome.",
+    pageType: "Microsite",
+    tone: "Playful",
+    medium: "Photo-led",
+    motionLevel: "Expressive",
+    colorDirection: "Gallery contrast",
+    dnaSlug: "creator-velocity",
+    styleSlug: "kinetic-type-signal",
+    previewTone: "creator",
+    captureImage: stitchCaptureAssets["cargo-streetwear-drop-journal"]
+  },
+  {
+    slug: "kinetic-drop",
+    title: "Kinetic Drop",
+    summary: "High-immediacy campaign layout with bold text and social pacing.",
+    cue: "Use when the page should feel like a launch, not a brochure.",
+    pageType: "Campaign",
+    tone: "Playful",
+    medium: "Animation",
+    motionLevel: "Expressive",
+    colorDirection: "Gallery contrast",
+    dnaSlug: "creator-velocity",
+    styleSlug: "kinetic-type-signal",
+    previewTone: "creator",
+    captureImage: stitchCaptureAssets["tiktok-music-countdown"]
+  },
+  {
+    slug: "bauhaus-lab",
+    title: "Bauhaus Lab",
+    summary: "Primary colors, sculptural blocks, and exhibition-scale 3D pacing.",
+    cue: "A more experimental theme card for art-tech and modern archive pages.",
+    pageType: "Microsite",
+    tone: "Experimental",
+    medium: "3D",
+    motionLevel: "Cinematic",
+    colorDirection: "Primary colors",
+    dnaSlug: "collaborative-canvas-system",
+    styleSlug: "bauhaus-color-block-3d",
+    previewTone: "spatial",
+    captureImage: stitchCaptureAssets["google-ai-lab-microsite"]
+  }
+];
+
 export const brandDnaGalleryExamples: BrandDnaGalleryEntry[] = [
   {
     slug: "apple-launch",
@@ -3682,6 +3919,10 @@ export function getCollectionBySlug(slug: string) {
 
 export function getArchiveBySlug(slug: string) {
   return promptArchive.find((entry) => entry.slug === slug);
+}
+
+export function getArchiveEntries() {
+  return promptArchive;
 }
 
 export function getArchiveCategories(entry: PromptArchiveEntry) {

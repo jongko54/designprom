@@ -426,6 +426,26 @@ const exportRegistry: Record<string, StitchExportScreen[]> = {
       "The close resolves into a project detail without losing elegance."
     ]
   ),
+  "cargo-luxury-runway-house": buildExportScreens(
+    stitchCaptureAssets["cargo-luxury-runway-house"],
+    "Luxury Runway House",
+    ["Runway opener", "Collection gallery", "Atelier close"],
+    [
+      "The opening frame should feel like a luxury runway dossier with precise restraint.",
+      "The middle crop needs to keep multiple looks, chapter labels, and credits elegant and calm.",
+      "The close should land on atelier detail and contact without losing the fashion-house mood."
+    ]
+  ),
+  "cargo-streetwear-drop-journal": buildExportScreens(
+    stitchCaptureAssets["cargo-streetwear-drop-journal"],
+    "Streetwear Drop Journal",
+    ["Drop hero", "Poster stack", "Release close"],
+    [
+      "The first frame should feel like a premium streetwear drop with immediate campaign energy.",
+      "The middle crop should balance poster stacking, look stills, and release cues without chaos.",
+      "The close should keep product captions, time pressure, and archive notes sharp and legible."
+    ]
+  ),
   "cargo-art-direction-moodboard": buildExportScreens(
     stitchCaptureAssets["cargo-art-direction-moodboard"],
     "Art Direction Moodboard Template",

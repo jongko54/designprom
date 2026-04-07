@@ -3,6 +3,7 @@
 import { useDeferredValue, useEffect, useState } from "react";
 
 import { ImageLightbox } from "@/components/ui/image-lightbox";
+import { PublishActions } from "@/components/ui/publish-actions";
 import { resolvePromptSemanticPreview } from "@/lib/prompt-semantic-preview";
 
 type PromptMotionHeroProps = {
@@ -214,6 +215,20 @@ export function PromptMotionHero({ onApplyPrompt }: PromptMotionHeroProps) {
   const normalizedPrompt = draftPrompt.trim();
   const submittedNormalizedPrompt = submittedPrompt.trim();
   const isDirty = normalizedPrompt !== submittedNormalizedPrompt;
+  const publishImageUrl = renderState.jobId
+    ? `/api/horde/generate/${renderState.jobId}/image`
+    : undefined;
+  const publishHtml = buildPromptPreviewHtml({
+    brand: visual.brand,
+    imageUrl: publishImageUrl
+      ? `${typeof window !== "undefined" ? window.location.origin : ""}${publishImageUrl}`
+      : undefined,
+    pageType: visual.pageType,
+    prompt: submittedPrompt || normalizedPrompt,
+    scenes: visual.scenes,
+    tone: visual.tone,
+    vibe: visual.vibe
+  });
 
   useEffect(() => {
     if (!renderState.jobId || renderState.status !== "loading") {
@@ -396,12 +411,9 @@ export function PromptMotionHero({ onApplyPrompt }: PromptMotionHeroProps) {
 
   function handleDownloadCode() {
     const fileStem = slugifyFileName(submittedPrompt || visual.headline || "prompt-preview");
-    const imageUrl = renderState.jobId
-      ? `${window.location.origin}/api/horde/generate/${renderState.jobId}/image`
-      : undefined;
     const html = buildPromptPreviewHtml({
       brand: visual.brand,
-      imageUrl,
+      imageUrl: publishImageUrl ? `${window.location.origin}${publishImageUrl}` : undefined,
       pageType: visual.pageType,
       prompt: submittedPrompt || normalizedPrompt,
       scenes: visual.scenes,
@@ -556,6 +568,48 @@ export function PromptMotionHero({ onApplyPrompt }: PromptMotionHeroProps) {
                   </a>
                 ) : null}
               </div>
+              <PublishActions
+                assets={[
+                  {
+                    content: `${submittedPrompt || normalizedPrompt}\n`,
+                    filename: "prompt.txt",
+                    kind: "text"
+                  },
+                  {
+                    content: publishHtml,
+                    filename: "preview.html",
+                    kind: "text"
+                  },
+                  {
+                    filename: "manifest.json",
+                    kind: "json",
+                    value: {
+                      brand: visual.brand,
+                      model: renderState.model ?? HERO_MODEL,
+                      pageType: visual.pageType,
+                      prompt: submittedPrompt || normalizedPrompt,
+                      scenes: visual.scenes,
+                      seed: renderState.seed,
+                      tone: visual.tone,
+                      vibe: visual.vibe
+                    }
+                  },
+                  ...(publishImageUrl
+                    ? [
+                        {
+                          filename: `${slugifyFileName(
+                            submittedPrompt || visual.headline || "prompt-preview"
+                          )}.png`,
+                          kind: "url" as const,
+                          url: publishImageUrl
+                        }
+                      ]
+                    : [])
+                ]}
+                shareText={submittedPrompt || normalizedPrompt}
+                shareTitle={`${visual.brand} ${visual.pageType} prompt preview`}
+                zipName={`${visual.brand}-${visual.pageType}-preview`}
+              />
             </div>
           ) : renderState.status === "error" ? (
             <div className="prompt-motion-generated-shell is-error">

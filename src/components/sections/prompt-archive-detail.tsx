@@ -4,6 +4,7 @@ import { ArchiveEntryCard } from "@/components/cards/archive-entry-card";
 import { CategoryCard } from "@/components/cards/category-card";
 import { ResultWall } from "@/components/sections/result-wall";
 import { CopyButton } from "@/components/ui/copy-button";
+import { PublishActions } from "@/components/ui/publish-actions";
 import { PreviewSurface } from "@/components/ui/preview-surface";
 import { getArchiveStitchExports, getStitchExports } from "@/data/stitch-exports";
 import {
@@ -43,6 +44,55 @@ export function PromptArchiveDetail({ entry }: PromptArchiveDetailProps) {
       candidate.categorySlugs.some((slug) => entry.categorySlugs.includes(slug))
     )
     .slice(0, 2);
+  const publishImageAssets = Array.from(
+    new Map(
+      [
+        {
+          filename: `${entry.slug}-cover${entry.coverImage.src.endsWith(".svg") ? ".svg" : ".png"}`,
+          kind: "url" as const,
+          url: entry.coverImage.src
+        },
+        ...entry.outputs
+          .filter((output) => output.image)
+          .map((output, index) => ({
+            filename: `${entry.slug}-output-${index + 1}${output.image?.src.endsWith(".svg") ? ".svg" : ".png"}`,
+            kind: "url" as const,
+            url: output.image!.src
+          })),
+        ...stitchCaptures.map((screen, index) => ({
+          filename: `${entry.slug}-stitch-${index + 1}${screen.image.src.endsWith(".svg") ? ".svg" : ".png"}`,
+          kind: "url" as const,
+          url: screen.image.src
+        }))
+      ].map((asset) => [asset.url, asset])
+    ).values()
+  );
+  const publishAssets = [
+    {
+      content: `${entry.prompt}\n`,
+      filename: "prompt.txt",
+      kind: "text" as const
+    },
+    {
+      content: `${entry.remixPrompt}\n`,
+      filename: "remix-prompt.txt",
+      kind: "text" as const
+    },
+    {
+      filename: "manifest.json",
+      kind: "json" as const,
+      value: {
+        categories: categories.map((category) => category.title),
+        outputFocus: entry.outputFocus,
+        slug: entry.slug,
+        stitchExampleSlugs: entry.stitchExampleSlugs,
+        summary: entry.summary,
+        title: entry.title,
+        useCase: entry.useCase
+      }
+    },
+    ...publishImageAssets
+  ];
 
   return (
     <>
@@ -130,6 +180,16 @@ export function PromptArchiveDetail({ entry }: PromptArchiveDetailProps) {
                   <p>{stitchCaptures.length} linked output screens attached to this case file.</p>
                 </div>
               ) : null}
+              <div>
+                <span>Publishing</span>
+                <p>Download this case as a ZIP package or share the current case file link.</p>
+              </div>
+              <PublishActions
+                assets={publishAssets}
+                shareText={`${entry.title} / ${entry.useCase}`}
+                shareTitle={entry.title}
+                zipName={entry.title}
+              />
             </div>
           </article>
         </div>
