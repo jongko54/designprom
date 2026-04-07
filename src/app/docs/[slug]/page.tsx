@@ -1,9 +1,11 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 
 import { SiteHeader } from "@/components/layout/site-header";
 import { PageHero } from "@/components/sections/page-hero";
 import { docsLibrary } from "@/data/docs";
+import { buildMetadata } from "@/lib/seo";
 
 type DocPageProps = {
   params: Promise<{ slug: string }>;
@@ -11,6 +13,18 @@ type DocPageProps = {
 
 export function generateStaticParams() {
   return docsLibrary.map((doc) => ({ slug: doc.slug }));
+}
+
+export async function generateMetadata({ params }: DocPageProps): Promise<Metadata> {
+  const { slug } = await params;
+  const doc = docsLibrary.find((entry) => entry.slug === slug);
+
+  return buildMetadata({
+    title: doc?.title ?? "Internal doc",
+    description: doc?.description ?? "Internal project document.",
+    noIndex: true,
+    path: `/docs/${slug}`
+  });
 }
 
 export default async function DocDetailPage({ params }: DocPageProps) {

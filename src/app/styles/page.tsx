@@ -1,3 +1,5 @@
+import type { Metadata } from "next";
+
 import { SiteHeader } from "@/components/layout/site-header";
 import { CompareStrip } from "@/components/sections/compare-strip";
 import { ExperimentalShowcase } from "@/components/sections/experimental-showcase";
@@ -5,6 +7,20 @@ import { LibraryBrowser } from "@/components/sections/library-browser";
 import { PageHero } from "@/components/sections/page-hero";
 import { ResultWall } from "@/components/sections/result-wall";
 import { buildCompareResultWall, styleCategories } from "@/data/site";
+import { buildMetadata } from "@/lib/seo";
+
+export const metadata: Metadata = buildMetadata({
+  title: "Visual style prompts for 3D, Bauhaus, editorial, motion, and glass UI",
+  description:
+    "Compare style systems for AI design prompts across 3D, Bauhaus color, editorial grids, kinetic type, monochrome UI, and glass interfaces.",
+  keywords: [
+    "3d website prompt",
+    "bauhaus website prompt",
+    "editorial website prompt",
+    "style prompt examples"
+  ],
+  path: "/styles"
+});
 
 export default function StylesPage() {
   return (

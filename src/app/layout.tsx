@@ -3,6 +3,8 @@ import { Inter, Space_Grotesk } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 
+import { absoluteUrl, siteConfig } from "@/lib/seo";
+
 import "./globals.css";
 
 const display = Space_Grotesk({
@@ -16,9 +18,28 @@ const body = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "designprom",
-  description:
-    "An editorial archive of website prompt systems with example outputs, brand DNA, and Stitch-ready prompt directions."
+  metadataBase: new URL(siteConfig.url),
+  title: {
+    default: "designprom",
+    template: "%s | designprom"
+  },
+  description: siteConfig.description,
+  applicationName: siteConfig.name,
+  alternates: {
+    canonical: absoluteUrl("/")
+  },
+  openGraph: {
+    description: siteConfig.description,
+    siteName: siteConfig.name,
+    title: siteConfig.name,
+    type: "website",
+    url: absoluteUrl("/")
+  },
+  twitter: {
+    card: "summary_large_image",
+    description: siteConfig.description,
+    title: siteConfig.name
+  }
 };
 
 export default function RootLayout({

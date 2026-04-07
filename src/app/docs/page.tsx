@@ -1,8 +1,18 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 
 import { SiteHeader } from "@/components/layout/site-header";
 import { PageHero } from "@/components/sections/page-hero";
 import { docsLibrary } from "@/data/docs";
+import { buildMetadata } from "@/lib/seo";
+
+export const metadata: Metadata = buildMetadata({
+  title: "Internal docs",
+  description:
+    "Planning and repository documents for the designprom project.",
+  noIndex: true,
+  path: "/docs"
+});
 
 export default function DocsPage() {
   return (
