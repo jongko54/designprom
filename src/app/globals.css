@@ -4501,11 +4501,32 @@ select {
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(340px, 0.88fr);
   gap: 18px;
+  align-items: start;
 }
 
 .builder-dossier,
 .builder-preview-shell {
   background: var(--surface-container-lowest);
+}
+
+.builder-dossier {
+  align-self: start;
+  gap: 12px;
+  padding: 18px;
+}
+
+.builder-dossier .archive-prompt {
+  gap: 0;
+  padding-top: 0;
+  border-top: 0;
+}
+
+.builder-dossier .archive-prompt p {
+  max-width: 100%;
+}
+
+.builder-dossier .card-actions {
+  margin-top: 0;
 }
 
 .builder-brief-card {

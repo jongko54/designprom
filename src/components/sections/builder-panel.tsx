@@ -618,7 +618,7 @@ export function BuilderPanel({
       <div className="builder-stage">
         <article className="builder-output builder-dossier">
           <div className="micro-row">
-            <span>Generated Stitch prompt</span>
+            <span>Generated prompt</span>
             <span>
               {customPrompt ? "Custom prompt mode" : `${pageType} / ${medium}`}
             </span>
@@ -627,7 +627,6 @@ export function BuilderPanel({
             {customPrompt ? "Custom Prompt Override" : `${selectedDna.title} x ${selectedStyle.title}`}
           </h2>
           <div className="archive-prompt">
-            <span>Generated prompt</span>
             <p>{generatedPrompt}</p>
           </div>
           {customPrompt ? (
