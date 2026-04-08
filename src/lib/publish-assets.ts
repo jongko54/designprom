@@ -1,4 +1,5 @@
 import {
+  type BrandDnaGalleryEntry,
   type PromptArchiveEntry,
   type StitchExamplePage,
   getCategoryHref,
@@ -110,6 +111,50 @@ export function buildStitchExamplePublishAssets(
         title: example.title,
         tone: example.tone,
         useCase: example.useCase
+      }
+    },
+    ...(example.captureImage
+      ? [
+          {
+            filename: `${example.slug}${imageExtension(example.captureImage.src)}`,
+            kind: "url" as const,
+            url: example.captureImage.src
+          }
+        ]
+      : [])
+  ];
+}
+
+export function buildBrandGalleryPublishAssets(
+  example: BrandDnaGalleryEntry
+): PublishAsset[] {
+  return [
+    {
+      content: `${example.stitchPrompt}\n`,
+      filename: "stitch-prompt.txt",
+      kind: "text"
+    },
+    {
+      content: `${example.summary}\n${example.templateHint}\n`,
+      filename: "notes.txt",
+      kind: "text"
+    },
+    {
+      filename: "manifest.json",
+      kind: "json",
+      value: {
+        brandName: example.brandName,
+        colorDirection: example.colorDirection,
+        dnaSlug: example.dnaSlug,
+        medium: example.medium,
+        motionLevel: example.motionLevel,
+        pageType: example.pageType,
+        slug: example.slug,
+        styleSlug: example.styleSlug,
+        summary: example.summary,
+        templateHint: example.templateHint,
+        title: example.title,
+        tone: example.tone
       }
     },
     ...(example.captureImage

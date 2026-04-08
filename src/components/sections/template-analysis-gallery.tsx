@@ -2,6 +2,7 @@ import Link from "next/link";
 
 import { ArchiveEntryCard } from "@/components/cards/archive-entry-card";
 import { CopyButton } from "@/components/ui/copy-button";
+import { PublishActions } from "@/components/ui/publish-actions";
 import { PreviewSurface } from "@/components/ui/preview-surface";
 import { getArchiveStitchExports } from "@/data/stitch-exports";
 import {
@@ -12,6 +13,11 @@ import {
   promptArchive,
   styleCategories
 } from "@/data/site";
+import {
+  buildArchivePublishAssets,
+  buildBrandGalleryPublishAssets,
+  buildStitchExamplePublishAssets
+} from "@/lib/publish-assets";
 
 type ResearchCase = {
   slug: string;
@@ -137,6 +143,7 @@ function ResearchStudyCard({ study }: { study: ResearchCase }) {
       ...entry.outputFocus.map((cue) => cue.split(" ").slice(0, 2).join(" "))
     ])
   ).slice(0, 5);
+  const publishAssets = buildArchivePublishAssets(entry);
 
   return (
     <article className="analysis-study-card">
@@ -238,6 +245,14 @@ function ResearchStudyCard({ study }: { study: ResearchCase }) {
               Open case file
             </Link>
           </div>
+          <PublishActions
+            assets={publishAssets}
+            className="publish-actions compact"
+            shareText={`${entry.title} / ${entry.useCase}`}
+            shareTitle={entry.title}
+            shareUrl={`/archive/${entry.slug}`}
+            zipName={entry.title}
+          />
         </section>
       </div>
     </article>
@@ -263,6 +278,8 @@ function CompanySystemCard({
   )}&motionLevel=${encodeURIComponent(
     example.motionLevel
   )}&colorDirection=${encodeURIComponent(example.colorDirection)}`;
+  const publishAssets = buildBrandGalleryPublishAssets(example);
+  const categoryHref = getCategoryHref(presetDna);
 
   return (
     <article className="builder-preset-card template-analysis-card" key={example.slug}>
@@ -297,6 +314,14 @@ function CompanySystemCard({
           Use in Builder
         </Link>
       </div>
+      <PublishActions
+        assets={publishAssets}
+        className="publish-actions compact"
+        shareText={`${example.title} / ${example.pageType}`}
+        shareTitle={example.title}
+        shareUrl={categoryHref}
+        zipName={example.title}
+      />
     </article>
   );
 }
