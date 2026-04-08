@@ -5,7 +5,7 @@ import {
   getCategoryHref,
   getStitchExampleOwner
 } from "@/data/site";
-import { getArchiveStitchExports } from "@/data/stitch-exports";
+import { getArchiveStitchExports, getStitchExports } from "@/data/stitch-exports";
 
 export type PublishAsset =
   | {
@@ -28,19 +28,47 @@ function imageExtension(src: string) {
   return src.endsWith(".svg") ? ".svg" : ".png";
 }
 
-function buildStitchArtifactAssets(slugs: string[]): PublishAsset[] {
-  return slugs.flatMap((slug) => [
+function buildSingleStitchArtifactAssets(slug: string): PublishAsset[] {
+  return [
     {
-      filename: `${slug}.html`,
+      filename: "stitch-export/index.html",
       kind: "url" as const,
       url: `/stitch-exports/html/${slug}.html`
     },
     {
-      filename: `${slug}.json`,
+      filename: "stitch-export/stitch-export.json",
       kind: "url" as const,
       url: `/stitch-exports/meta/${slug}.json`
     }
-  ]);
+  ];
+}
+
+function buildArchiveStitchArtifactAssets(slugs: string[]): PublishAsset[] {
+  return slugs.flatMap((slug) => {
+    const previewImage = getStitchExports(slug)[0]?.image;
+
+    return [
+      {
+        filename: `archive-case/stitch-exports/${slug}/index.html`,
+        kind: "url" as const,
+        url: `/stitch-exports/html/${slug}.html`
+      },
+      {
+        filename: `archive-case/stitch-exports/${slug}/stitch-export.json`,
+        kind: "url" as const,
+        url: `/stitch-exports/meta/${slug}.json`
+      },
+      ...(previewImage
+        ? [
+            {
+              filename: `archive-case/stitch-exports/${slug}/preview${imageExtension(previewImage.src)}`,
+              kind: "url" as const,
+              url: previewImage.src
+            }
+          ]
+        : [])
+    ];
+  });
 }
 
 export function buildArchivePublishAssets(entry: PromptArchiveEntry): PublishAsset[] {
@@ -49,19 +77,19 @@ export function buildArchivePublishAssets(entry: PromptArchiveEntry): PublishAss
     new Map(
       [
         {
-          filename: `${entry.slug}-cover${imageExtension(entry.coverImage.src)}`,
+          filename: `archive-case/preview${imageExtension(entry.coverImage.src)}`,
           kind: "url" as const,
           url: entry.coverImage.src
         },
         ...entry.outputs
           .filter((output) => output.image)
           .map((output, index) => ({
-            filename: `${entry.slug}-output-${index + 1}${imageExtension(output.image!.src)}`,
+            filename: `archive-case/outputs/output-${index + 1}${imageExtension(output.image!.src)}`,
             kind: "url" as const,
             url: output.image!.src
           })),
         ...stitchCaptures.map((screen, index) => ({
-          filename: `${entry.slug}-stitch-${index + 1}${imageExtension(screen.image.src)}`,
+          filename: `archive-case/screens/screen-${index + 1}${imageExtension(screen.image.src)}`,
           kind: "url" as const,
           url: screen.image.src
         }))
@@ -72,16 +100,16 @@ export function buildArchivePublishAssets(entry: PromptArchiveEntry): PublishAss
   return [
     {
       content: `${entry.prompt}\n`,
-      filename: "prompt.txt",
+      filename: "archive-case/prompt.txt",
       kind: "text"
     },
     {
       content: `${entry.remixPrompt}\n`,
-      filename: "remix-prompt.txt",
+      filename: "archive-case/remix-prompt.txt",
       kind: "text"
     },
     {
-      filename: "manifest.json",
+      filename: "archive-case/archive-case.json",
       kind: "json",
       value: {
         categories: entry.categorySlugs,
@@ -94,7 +122,7 @@ export function buildArchivePublishAssets(entry: PromptArchiveEntry): PublishAss
       }
     },
     ...publishImageAssets,
-    ...buildStitchArtifactAssets(entry.stitchExampleSlugs)
+    ...buildArchiveStitchArtifactAssets(entry.stitchExampleSlugs)
   ];
 }
 
@@ -106,16 +134,16 @@ export function buildStitchExamplePublishAssets(
   const assets: PublishAsset[] = [
     {
       content: `${example.stitchPrompt}\n`,
-      filename: "stitch-prompt.txt",
+      filename: "stitch-export/prompt.txt",
       kind: "text" as const
     },
     {
       content: `${example.outputNotes.join("\n")}\n`,
-      filename: "output-notes.txt",
+      filename: "stitch-export/output-notes.txt",
       kind: "text" as const
     },
     {
-      filename: "manifest.json",
+      filename: "stitch-export/designprom-notes.json",
       kind: "json" as const,
       value: {
         brandDnaHref: ownerHref,
@@ -131,7 +159,7 @@ export function buildStitchExamplePublishAssets(
     ...(example.captureImage
       ? [
           {
-            filename: `${example.slug}${imageExtension(example.captureImage.src)}`,
+            filename: `stitch-export/preview${imageExtension(example.captureImage.src)}`,
             kind: "url" as const,
             url: example.captureImage.src
           }
@@ -139,7 +167,7 @@ export function buildStitchExamplePublishAssets(
       : [])
   ];
 
-  return [...assets, ...buildStitchArtifactAssets([example.slug])];
+  return [...assets, ...buildSingleStitchArtifactAssets(example.slug)];
 }
 
 export function buildBrandGalleryPublishAssets(
@@ -148,16 +176,16 @@ export function buildBrandGalleryPublishAssets(
   const assets: PublishAsset[] = [
     {
       content: `${example.stitchPrompt}\n`,
-      filename: "stitch-prompt.txt",
+      filename: "stitch-export/prompt.txt",
       kind: "text" as const
     },
     {
       content: `${example.summary}\n${example.templateHint}\n`,
-      filename: "notes.txt",
+      filename: "stitch-export/output-notes.txt",
       kind: "text" as const
     },
     {
-      filename: "manifest.json",
+      filename: "stitch-export/designprom-notes.json",
       kind: "json" as const,
       value: {
         brandName: example.brandName,
@@ -177,7 +205,7 @@ export function buildBrandGalleryPublishAssets(
     ...(example.captureImage
       ? [
           {
-            filename: `${example.slug}${imageExtension(example.captureImage.src)}`,
+            filename: `stitch-export/preview${imageExtension(example.captureImage.src)}`,
             kind: "url" as const,
             url: example.captureImage.src
           }
@@ -185,5 +213,5 @@ export function buildBrandGalleryPublishAssets(
       : [])
   ];
 
-  return [...assets, ...buildStitchArtifactAssets([example.slug])];
+  return [...assets, ...buildSingleStitchArtifactAssets(example.slug)];
 }
