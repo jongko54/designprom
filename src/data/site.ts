@@ -457,6 +457,7 @@ export const stitchCaptureAssets = {
 
 export const navItems = [
   { href: "/", label: "Home" },
+  { href: "/dna", label: "Brand DNA" },
   { href: "/preview", label: "Preview" },
   { href: "/analysis", label: "Template Analysis" },
   { href: "/builder", label: "Prompt Builder" }
