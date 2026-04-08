@@ -9,6 +9,11 @@ export const siteConfig = {
   url: (process.env.NEXT_PUBLIC_SITE_URL || fallbackSiteUrl).replace(/\/$/, "")
 };
 
+export type SeoFaqItem = {
+  answer: string;
+  question: string;
+};
+
 export function absoluteUrl(path = "/") {
   return new URL(path, `${siteConfig.url}/`).toString();
 }
@@ -68,5 +73,45 @@ export function buildMetadata({
       images: openGraphImages?.map((image) => image.url),
       title
     }
+  };
+}
+
+export function buildFaqSchema(items: SeoFaqItem[]) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: items.map((item) => ({
+      "@type": "Question",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: item.answer
+      },
+      name: item.question
+    }))
+  };
+}
+
+export function buildBreadcrumbSchema(
+  items: Array<{ name: string; path: string }>
+) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: items.map((item, index) => ({
+      "@type": "ListItem",
+      item: absoluteUrl(item.path),
+      name: item.name,
+      position: index + 1
+    }))
+  };
+}
+
+export function buildWebsiteSchema() {
+  return {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    description: siteConfig.description,
+    name: siteConfig.name,
+    url: siteConfig.url
   };
 }

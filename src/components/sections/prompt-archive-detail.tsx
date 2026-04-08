@@ -2,7 +2,9 @@ import Link from "next/link";
 
 import { ArchiveEntryCard } from "@/components/cards/archive-entry-card";
 import { CategoryCard } from "@/components/cards/category-card";
+import { FaqSection } from "@/components/sections/faq-section";
 import { ResultWall } from "@/components/sections/result-wall";
+import { SearchContentSection } from "@/components/sections/search-content-section";
 import { CopyButton } from "@/components/ui/copy-button";
 import { PublishActions } from "@/components/ui/publish-actions";
 import { PreviewSurface } from "@/components/ui/preview-surface";
@@ -92,6 +94,20 @@ export function PromptArchiveDetail({ entry }: PromptArchiveDetailProps) {
       }
     },
     ...publishImageAssets
+  ];
+  const faqItems = [
+    {
+      question: `What should this ${entry.useCase.toLowerCase()} prompt get right first?`,
+      answer: `Start with ${entry.outputFocus.slice(0, 3).join(", ").toLowerCase()}. If those parts are clear, the first draft usually lands close to the intended direction.`
+    },
+    {
+      question: `How do I remix ${entry.title} without losing the core direction?`,
+      answer: `Keep the core section rhythm and hierarchy, then rewrite the subject matter, audience, and call to action. The remix prompt in this case file is the safest place to start.`
+    },
+    {
+      question: `Where should I go after reading this prompt example?`,
+      answer: `Open the builder to rewrite the prompt for your own project, or open the related Brand DNA pages to borrow a more specific interface language.`
+    }
   ];
 
   return (
@@ -226,6 +242,31 @@ export function PromptArchiveDetail({ entry }: PromptArchiveDetailProps) {
         </div>
       </section>
 
+      <SearchContentSection
+        eyebrow="How to use this prompt"
+        intro={`This case file is meant to rank for searches around ${entry.useCase.toLowerCase()}, ${entry.portfolioCategory.toLowerCase()} prompts, and reusable website prompt examples. Treat it as a working reference rather than a one-line prompt snippet.`}
+        links={[
+          {
+            href: "/builder",
+            label: "Rewrite this in the builder",
+            description:
+              "Use the prompt builder to adapt this case for your own offer, audience, and page structure."
+          },
+          {
+            href: "/dna",
+            label: "Open Brand DNA directions",
+            description:
+              "Move into company-style UI directions if you want the same brief translated into Apple-like, Figma-like, or Airbnb-like language."
+          }
+        ]}
+        points={[
+          `Use the original prompt when you need a first draft for ${entry.useCase.toLowerCase()} work.`,
+          `Use the remix prompt when you want the same layout logic but a different brand tone or audience fit.`,
+          `Check the output checklist before generating so the first pass emphasizes ${entry.outputFocus.slice(0, 2).join(" and ").toLowerCase()}.`
+        ]}
+        title={`${entry.title} as a reusable AI website prompt example`}
+      />
+
       {stitchCaptures.length ? (
         <section className="content-section">
           <div className="section-heading">
@@ -343,6 +384,12 @@ export function PromptArchiveDetail({ entry }: PromptArchiveDetailProps) {
           </div>
         </section>
       ) : null}
+
+      <FaqSection
+        eyebrow="Case file FAQ"
+        items={faqItems}
+        title={`Questions people ask about the ${entry.title} prompt`}
+      />
     </>
   );
 }
