@@ -1,14 +1,14 @@
 :root {
-  --bg: #faf9f9;
-  --surface: #faf9f9;
-  --surface-strong: #f5f3f3;
-  --surface-container-low: #f5f3f3;
+  --bg: #fcfcfb;
+  --surface: #fcfcfb;
+  --surface-strong: #f7f6f4;
+  --surface-container-low: #f8f7f5;
   --surface-container-lowest: #ffffff;
-  --surface-container-highest: #e3e2e2;
-  --surface-dim: #efeded;
+  --surface-container-highest: #f1efec;
+  --surface-dim: #f4f1ee;
   --text: #000000;
   --muted: #5f5859;
-  --line: rgba(126, 117, 118, 0.15);
+  --line: rgba(126, 117, 118, 0.09);
   --outline: #7e7576;
   --accent: #8c1800;
   --accent-soft: rgba(140, 24, 0, 0.08);
@@ -16,7 +16,7 @@
   --primary: #000000;
   --primary-container: #1b1b1b;
   --secondary: #2c59ba;
-  --shadow: 0 10px 40px rgba(0, 0, 0, 0.06);
+  --shadow: 0 8px 24px rgba(0, 0, 0, 0.04);
   --radius-xl: 0px;
   --radius-lg: 0px;
   --radius-md: 0px;
@@ -35,16 +35,16 @@ body {
   margin: 0;
   color: var(--text);
   font-family: var(--font-body), sans-serif;
-  background: linear-gradient(180deg, #ffffff 0%, var(--surface) 22%, #f6f4f4 100%);
+  background: linear-gradient(180deg, #ffffff 0%, var(--surface) 28%, #f7f5f2 100%);
 }
 
 body::before {
   position: fixed;
   inset: 0;
   background-image:
-    linear-gradient(rgba(0, 0, 0, 0.035) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(0, 0, 0, 0.035) 1px, transparent 1px);
-  background-size: 40px 40px;
+    linear-gradient(rgba(0, 0, 0, 0.018) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 0, 0, 0.018) 1px, transparent 1px);
+  background-size: 56px 56px;
   mask-image: linear-gradient(180deg, rgba(0, 0, 0, 0.78), transparent 100%);
   pointer-events: none;
   content: "";
@@ -1638,13 +1638,14 @@ select {
 .content-section,
 .footer-cta,
 .builder-shell {
-  background: var(--surface-container-low);
+  background: linear-gradient(180deg, #ffffff 0%, var(--surface-container-low) 100%);
 }
 
 .top-bar {
   padding: 18px 24px;
   margin-bottom: 28px;
-  background: var(--surface-container-highest);
+  background: rgba(255, 255, 255, 0.88);
+  box-shadow: inset 0 -1px 0 rgba(16, 16, 16, 0.05);
 }
 
 .brand-mark {
@@ -2556,8 +2557,8 @@ select {
   width: min(1240px, calc(100vw - 24px));
   max-height: calc(100vh - 24px);
   overflow: hidden;
-  background: #f4f0ef;
-  box-shadow: 0 24px 64px rgba(0, 0, 0, 0.28);
+  background: #fbfaf8;
+  box-shadow: 0 24px 64px rgba(0, 0, 0, 0.16);
 }
 
 .lightbox-website-chrome {
@@ -2567,8 +2568,8 @@ select {
   gap: 16px;
   min-height: 64px;
   padding: 16px 18px;
-  background: #e7e0dd;
-  border-bottom: 1px solid rgba(16, 16, 16, 0.08);
+  background: #ffffff;
+  border-bottom: 1px solid rgba(16, 16, 16, 0.06);
 }
 
 .lightbox-dots {
@@ -2579,7 +2580,7 @@ select {
 .lightbox-dots span {
   width: 10px;
   height: 10px;
-  background: rgba(16, 16, 16, 0.22);
+  background: rgba(16, 16, 16, 0.16);
 }
 
 .lightbox-website-meta {
@@ -2973,7 +2974,8 @@ select {
   display: grid;
   gap: 14px;
   padding: 20px 24px;
-  background: var(--surface-container-low);
+  background: #ffffff;
+  box-shadow: inset 0 -1px 0 rgba(16, 16, 16, 0.05);
 }
 
 .preview-search-field {
@@ -3012,9 +3014,9 @@ select {
 }
 
 .preview-filter-row button {
-  border: 0;
+  border: 1px solid rgba(16, 16, 16, 0.06);
   padding: 10px 14px;
-  background: var(--surface-container-highest);
+  background: #ffffff;
   color: var(--text);
   font: inherit;
   cursor: pointer;
@@ -3022,7 +3024,8 @@ select {
 
 .preview-filter-row button.is-active {
   background: var(--text);
-  color: var(--surface-container-lowest);
+  color: #ffffff;
+  border-color: var(--text);
 }
 
 .preview-browser-meta {
@@ -3039,6 +3042,9 @@ select {
 .preview-thumbnail-card {
   display: grid;
   gap: 10px;
+  padding: 10px;
+  background: rgba(255, 255, 255, 0.8);
+  box-shadow: inset 0 0 0 1px rgba(16, 16, 16, 0.05);
 }
 
 .preview-thumbnail-browser,
@@ -3054,17 +3060,19 @@ select {
   gap: 10px;
   min-height: 36px;
   padding: 0 10px;
-  background: var(--surface-container-highest);
+  background: #ffffff;
   color: var(--muted);
   font-size: 0.68rem;
   letter-spacing: 0.1em;
   text-transform: uppercase;
+  box-shadow: inset 0 0 0 1px rgba(16, 16, 16, 0.06);
 }
 
 .preview-thumbnail-stage {
   aspect-ratio: 4 / 5;
   overflow: hidden;
-  background: var(--surface-container-lowest);
+  background: #ffffff;
+  box-shadow: inset 0 0 0 1px rgba(16, 16, 16, 0.06);
 }
 
 .preview-thumbnail-stage .lightbox-trigger {
@@ -3084,7 +3092,7 @@ select {
 }
 
 .preview-thumbnail-browser:hover .preview-thumbnail-image {
-  transform: scale(1.02);
+  transform: scale(1.015);
 }
 
 .preview-thumbnail-lightbox-image {
@@ -3139,7 +3147,8 @@ select {
   display: grid;
   gap: 8px;
   padding: 24px;
-  background: var(--surface-container-low);
+  background: #ffffff;
+  box-shadow: inset 0 0 0 1px rgba(16, 16, 16, 0.05);
 }
 
 .preview-browser-empty p,
