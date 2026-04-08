@@ -1,0 +1,21 @@
+{
+  "brand": "Airbnb",
+  "contentType": "image/png",
+  "fileName": "airbnb-host-onboarding.png",
+  "generatedAt": "2026-04-02T01:43:26.733Z",
+  "htmlUrl": "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ8Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpbCiVodG1sX2EyNTZlZTY1YTcwNjQyMmZiNjM3M2ZhY2RiMDg3ZWVjEgsSBxCCisPc0AkYAZIBJAoKcHJvamVjdF9pZBIWQhQxNTE0MTM2NDkwMzg3Mzk0NjczOA&filename=&opi=96797242",
+  "imageUrl": "https://lh3.googleusercontent.com/aida/ADBb0ugk3Gn5HRM6Bg7fEuPcVODE9bmYvDOwB7Z-7Bhauugf2HCNcPTbP3eK7xeegG4i1jVDXzGdvgLx2mP5V6Mohixqf7DuUA3NIRaH93cW0GTn2yXW31_T3QH1Hn3NFpfcdPZmPNqh1brj6QIISYKevODv69yaTBzXwn3KRCwy60bVUe5Ud68kcjGaVnI_Rbg4fPsUfgI3C5Ju-B-eIz__XlYJZCT1sS0hAf7oferHgufu8__o8p-ALI4vfYSD",
+  "notes": [
+    "I've designed the host onboarding page for you. It features a friendly and human design with rounded cards, step-by-step guidance, and warm photography. The layout is optimized to make the onboarding process feel effortless and reassuring for new hosts."
+  ],
+  "prompt": "Design a host onboarding page in an Airbnb-like design language with friendly rounded cards, practical step-by-step guidance, soft glassy focus panels, warm photography, and reassuring typography. Keep the page helpful, human, and conversion-friendly.",
+  "projectId": "15141364903873946738",
+  "screenId": "90b4e602e72f485fbb38779a1889cace",
+  "slug": "airbnb-host-onboarding",
+  "suggestions": [
+    "Add a screen for room details step",
+    "Change the primary color to blue",
+    "Make it more modern and minimal"
+  ],
+  "title": "Host Onboarding Page"
+}

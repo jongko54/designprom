@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary-fixed": "#e1e0ff",
+                        "on-tertiary": "#ffffff",
+                        "error-container": "#ffdad6",
+                        "primary-fixed-dim": "#c1c1ff",
+                        "surface-variant": "#e2e2e4",
+                        "on-secondary-fixed": "#1c1b1b",
+                        "inverse-on-surface": "#f0f0f2",
+                        "surface-dim": "#d9dadc",
+                        "on-primary-fixed-variant": "#2e2bc2",
+                        "on-background": "#1a1c1d",
+                        "primary-container": "#5d5fef",
+                        "on-tertiary-fixed-variant": "#334282",
+                        "surface": "#f9f9fb",
+                        "on-primary-container": "#faf7ff",
+                        "surface-tint": "#4849da",
+                        "secondary": "#5f5e5e",
+                        "secondary-fixed-dim": "#c8c6c5",
+                        "on-surface-variant": "#464555",
+                        "surface-bright": "#f9f9fb",
+                        "on-surface": "#1a1c1d",
+                        "tertiary": "#465596",
+                        "surface-container": "#eeeef0",
+                        "tertiary-fixed-dim": "#b8c4ff",
+                        "secondary-container": "#e2dfde",
+                        "on-secondary": "#ffffff",
+                        "secondary-fixed": "#e5e2e1",
+                        "outline": "#767586",
+                        "surface-container-highest": "#e2e2e4",
+                        "inverse-primary": "#c1c1ff",
+                        "inverse-surface": "#2f3132",
+                        "on-primary": "#ffffff",
+                        "on-tertiary-fixed": "#001354",
+                        "on-secondary-container": "#636262",
+                        "outline-variant": "#c7c4d7",
+                        "surface-container-low": "#f3f3f5",
+                        "surface-container-lowest": "#ffffff",
+                        "on-tertiary-container": "#f9f7ff",
+                        "surface-container-high": "#e8e8ea",
+                        "on-error": "#ffffff",
+                        "on-primary-fixed": "#07006c",
+                        "background": "#f9f9fb",
+                        "primary": "#4343d5",
+                        "on-error-container": "#93000a",
+                        "tertiary-container": "#5f6eb1",
+                        "on-secondary-fixed-variant": "#474746",
+                        "tertiary-fixed": "#dde1ff",
+                        "error": "#ba1a1a"
+                    },
+                    fontFamily: {
+                        "headline": ["Inter"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .luminous-ribbon {
+            background: linear-gradient(90deg, #4343d5 0%, #5d5fef 100%);
+        }
+        .asymmetric-tension {
+            letter-spacing: -0.04em;
+            line-height: 0.9;
+        }
+        .glass-header {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(20px);
+        }
+    </style>
+</head>
+<body class="bg-surface font-body text-on-surface selection:bg-primary-fixed">
+<nav class="fixed top-0 w-full z-50 glass-header">
+<div class="flex justify-between items-center px-10 py-6 max-w-screen-2xl mx-auto w-full">
+<span class="text-lg font-semibold tracking-tighter text-zinc-900 dark:text-zinc-100">StudioSuite</span>
+<div class="hidden md:flex gap-12 items-center font-['Inter'] tracking-tight text-sm font-medium">
+<a class="text-zinc-900 dark:text-zinc-100 font-bold border-b border-zinc-900 dark:border-zinc-100 pb-1" href="#capture">Capture</a>
+<a class="text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors" href="#edit">Edit</a>
+<a class="text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors" href="#publish">Publish</a>
+</div>
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-zinc-900" data-icon="account_circle">account_circle</span>
+</div>
+</div>
+</nav>
+<main class="relative">
+<div class="fixed right-[10%] top-0 w-1 h-screen luminous-ribbon opacity-20 z-0"></div>
+<section class="min-h-screen flex flex-col justify-center px-10 md:px-24 pt-32 pb-24 relative overflow-hidden" id="capture">
+<div class="max-w-screen-2xl mx-auto w-full grid grid-cols-1 md:grid-cols-12 gap-10 items-end">
+<div class="md:col-span-5 z-10">
+<span class="label-medium text-[0.75rem] font-bold tracking-[0.2em] uppercase text-primary mb-8 block">Section 01</span>
+<h1 class="text-7xl md:text-8xl asymmetric-tension font-bold text-on-surface mb-10">
+                        The Raw Material.
+                    </h1>
+<p class="text-lg text-secondary max-w-md leading-relaxed mb-8">
+                        Uncompressed potential. Every bit of data, every photon of light, preserved in its purest form. This is where the vision begins.
+                    </p>
+<a class="group flex items-center gap-2 text-primary font-medium" href="#">
+                        Learn More 
+                        <span class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform" data-icon="arrow_forward">arrow_forward</span>
+</a>
+</div>
+<div class="md:col-span-7 relative">
+<div class="aspect-[4/5] bg-surface-container-high rounded-lg overflow-hidden shadow-2xl">
+<img class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-1000" data-alt="Professional high-end cinema camera sensor close-up with soft purple and blue studio lighting reflecting on the lens glass" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAe_XnT1c4xk_ErLRUQqzOl8NUjwsJqhuyFY2hJcMuyEdTO5SlSRZARtVN852gYQ7Fpyl4uk4_VUzUua6L2Hkwur0JoCxsBp-VDnTqVvahNfL6_--x6gBYT3_SgEya0oLFFSsBfUX9thyEEMn5M2EHhaouujf5azBTvsRGF2ZFAfxy-C1hA_7liBC8fr-ePMzHqq1wbtdI9XDDQPcPk1EbJunDIUOI7VQwdH7e4rDf9LjvJ2cCX69Ws94xhPlAZzvqMS3etQrH-czA"/>
+</div>
+<div class="absolute -bottom-12 -left-12 w-48 h-1 luminous-ribbon z-20"></div>
+</div>
+</div>
+</section>
+<section class="min-h-screen bg-surface-container-low flex flex-col justify-center px-10 md:px-24 py-24 relative" id="edit">
+<div class="max-w-screen-2xl mx-auto w-full">
+<div class="flex flex-col md:flex-row gap-20 items-center">
+<div class="w-full md:w-1/2 order-2 md:order-1">
+<div class="aspect-video bg-surface-container-lowest rounded-lg overflow-hidden shadow-xl relative">
+<img class="w-full h-full object-cover" data-alt="Sleek minimalist software interface showing a complex timeline with smooth purple waveform data on a dark grey screen" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC35MoT7ZqeuQOeAzGZiVQNybLIJaYweRm2HtzuzHT2qvEucrqv-QUO9pdtuoix9Ds6IOD3SDDOvPlg0_M8ptI38vYsBWK0Xxb5gNBeKEQd7s1PcbFnHH5o2TLB8FYRZXm5vxn20kTxh85qgiBH5FxGdpBhfKu7VH0GkSHA-dmq_5Z6ezBXZsyNXIT5sjdGstDs-AfOL_lZHPKSdxskvUAwk8Ds93IBb69Vfz-z7J0JwX5rWo3YnfkQ9FpHqpcn1t3hpNHdif-dsFc"/>
+<div class="absolute inset-0 bg-gradient-to-tr from-primary/10 to-transparent pointer-events-none"></div>
+</div>
+</div>
+<div class="w-full md:w-1/2 order-1 md:order-2">
+<span class="label-medium text-[0.75rem] font-bold tracking-[0.2em] uppercase text-primary mb-8 block">Section 02</span>
+<h2 class="text-7xl asymmetric-tension font-bold text-on-surface mb-10">
+                            The Flow of Creation.
+                        </h2>
+<div class="w-24 h-1 luminous-ribbon mb-10"></div>
+<p class="text-lg text-secondary leading-relaxed mb-8">
+                            A workspace that disappears. Our interface is designed to foster a state of flow, connecting your intent directly to the canvas without friction.
+                        </p>
+<a class="group flex items-center gap-2 text-primary font-medium" href="#">
+                            Learn More 
+                            <span class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform" data-icon="arrow_forward">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+</section>
+<section class="min-h-screen flex flex-col justify-center px-10 md:px-24 py-24 relative overflow-hidden" id="publish">
+<div class="max-w-screen-2xl mx-auto w-full">
+<div class="mb-24 text-center md:text-left">
+<span class="label-medium text-[0.75rem] font-bold tracking-[0.2em] uppercase text-primary mb-8 block">Section 03</span>
+<h2 class="text-7xl md:text-9xl asymmetric-tension font-bold text-on-surface">
+                        The Final Act.
+                    </h2>
+</div>
+<div class="relative group">
+<div class="aspect-[21/9] bg-surface-container-high rounded-lg overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" data-alt="Wide cinematic shot of a modern gallery space with high ceilings and minimalist white walls showcasing large digital displays" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBW-vGQyPgxCnZFHjKSHY2kE_DBeGGGiynzw2-rgXQjkYYmPIh8yzIKpG8FYm5yePsg7O_85TjGpnRJI57YxxVnfuj524lK5oyabb8cx8oGQpFKAEQZGvXlBfq6RlKSjkAKaI9GG5EfyPnD-7sotL1Nlvpt1iQUzh6NeVybYQQl7z5ob5Ps3DK0jSt-Bn1rzJZYMgNnibCcc7aqa6nnLiygXf1ycxW-IUaKDRVPVHufx2sUjCohR2N-80XYPFI5PClJcre3kYsChqU"/>
+</div>
+<div class="absolute inset-0 flex items-center justify-center">
+<div class="bg-surface-container-lowest/80 backdrop-blur-xl p-12 rounded-lg max-w-lg text-center shadow-2xl translate-y-12">
+<p class="text-on-surface text-lg mb-6 leading-relaxed">
+                                Seamless delivery to any platform. StudioSuite handles the technical complexity of compression and standards, leaving only the beauty of your work.
+                            </p>
+<a class="group inline-flex items-center gap-2 text-primary font-medium" href="#">
+                                Learn More 
+                                <span class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform" data-icon="arrow_forward">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<footer class="bg-zinc-50 dark:bg-zinc-900 w-full py-12 border-t border-zinc-200/20">
+<div class="flex flex-col md:flex-row justify-between items-center px-10 max-w-screen-2xl mx-auto w-full">
+<div class="font-['Inter'] text-xs tracking-widest uppercase text-zinc-400 dark:text-zinc-500 mb-6 md:mb-0">
+                © 2024 StudioSuite. All rights reserved.
+            </div>
+<div class="flex gap-10 font-['Inter'] text-xs tracking-widest uppercase">
+<a class="text-zinc-400 dark:text-zinc-500 hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors duration-200" href="#">Privacy</a>
+<a class="text-zinc-400 dark:text-zinc-500 hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors duration-200" href="#">Terms</a>
+<a class="text-zinc-400 dark:text-zinc-500 hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors duration-200" href="#">Support</a>
+</div>
+</div>
+</footer>
+<div class="fixed bottom-10 right-10 z-50 pointer-events-none opacity-50 hidden lg:block">
+<div class="rotate-90 origin-right flex items-center gap-4">
+<span class="text-[10px] tracking-[0.5em] uppercase font-bold text-outline">Editorial Feature 2024</span>
+<div class="w-24 h-[1px] bg-outline-variant"></div>
+</div>
+</div>
+</body></html>

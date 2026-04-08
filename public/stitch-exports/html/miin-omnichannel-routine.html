@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;family=Noto+Serif:ital,wght@0,400;0,700;1,400&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "secondary-fixed": "#d6e7d5",
+                        "error": "#ba1a1a",
+                        "on-surface": "#1a1c1b",
+                        "on-error-container": "#93000a",
+                        "secondary-container": "#d3e4d2",
+                        "surface-variant": "#e2e3e1",
+                        "on-error": "#ffffff",
+                        "surface-dim": "#dadad8",
+                        "surface-bright": "#f9f9f7",
+                        "on-primary-container": "#e2e9ff",
+                        "tertiary-container": "#7e6266",
+                        "primary-fixed": "#d7e2ff",
+                        "surface-container-highest": "#e2e3e1",
+                        "on-primary": "#ffffff",
+                        "inverse-surface": "#2f3130",
+                        "secondary-fixed-dim": "#bacbb9",
+                        "on-primary-fixed-variant": "#3c475d",
+                        "outline": "#747872",
+                        "on-secondary": "#ffffff",
+                        "on-tertiary-fixed": "#2a1619",
+                        "surface-tint": "#545e76",
+                        "on-secondary-fixed": "#111f13",
+                        "tertiary-fixed-dim": "#e1bec2",
+                        "on-tertiary-container": "#ffe3e6",
+                        "primary-container": "#5e6981",
+                        "background": "#f9f9f7",
+                        "inverse-on-surface": "#f1f1ef",
+                        "surface-container-high": "#e8e8e6",
+                        "on-tertiary-fixed-variant": "#594044",
+                        "secondary": "#536254",
+                        "on-secondary-fixed-variant": "#3b4a3d",
+                        "on-tertiary": "#ffffff",
+                        "surface-container-low": "#f4f4f2",
+                        "surface-container": "#eeeeec",
+                        "inverse-primary": "#bbc6e2",
+                        "on-primary-fixed": "#101b30",
+                        "on-secondary-container": "#576758",
+                        "outline-variant": "#c3c8c1",
+                        "primary": "#465168",
+                        "tertiary-fixed": "#fedade",
+                        "surface-container-lowest": "#ffffff",
+                        "primary-fixed-dim": "#bbc6e2",
+                        "on-background": "#1a1c1b",
+                        "tertiary": "#644a4e",
+                        "on-surface-variant": "#434843",
+                        "surface": "#f9f9f7",
+                        "error-container": "#ffdad6"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "fontFamily": {
+                        "headline": ["Noto Serif"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    }
+                },
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+        .clinical-gradient {
+            background: linear-gradient(135deg, #465168 0%, #5e6981 100%);
+        }
+        .glass-nav {
+            background-color: rgba(249, 249, 247, 0.85);
+            backdrop-filter: blur(20px);
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body selection:bg-secondary-fixed">
+<!-- Top Navigation Bar -->
+<nav class="fixed top-0 w-full z-50 glass-nav shadow-[0px_0px_40px_rgba(70,81,104,0.08)]">
+<div class="flex justify-between items-center px-8 py-6 w-full max-w-[1440px] mx-auto">
+<div class="flex items-center gap-12">
+<span class="text-2xl font-headline tracking-tighter text-primary">L'Atelier de Beauté</span>
+<div class="hidden md:flex gap-8 items-center">
+<a class="text-primary/70 hover:text-primary transition-colors duration-300 font-label text-sm tracking-wide" href="#">Clinique</a>
+<a class="text-primary/70 hover:text-primary transition-colors duration-300 font-label text-sm tracking-wide" href="#">Education</a>
+<a class="text-primary/70 hover:text-primary transition-colors duration-300 font-label text-sm tracking-wide" href="#">Shop</a>
+<a class="text-primary/70 hover:text-primary transition-colors duration-300 font-label text-sm tracking-wide" href="#">Journal</a>
+</div>
+</div>
+<div class="flex items-center gap-6">
+<div class="hidden lg:flex items-center bg-surface-container rounded-full px-4 py-2 border-b-2 border-transparent focus-within:border-primary transition-all duration-300">
+<span class="material-symbols-outlined text-primary/50 text-xl">search</span>
+<input class="bg-transparent border-none focus:ring-0 text-sm font-label w-48 placeholder:text-primary/30" placeholder="Search rituals..." type="text"/>
+</div>
+<button class="material-symbols-outlined text-primary hover:opacity-80 ease-out duration-500">shopping_bag</button>
+<button class="material-symbols-outlined text-primary hover:opacity-80 ease-out duration-500">person</button>
+</div>
+</div>
+<div class="bg-gradient-to-b from-[#eeeeec] to-transparent h-px w-full"></div>
+</nav>
+<main class="pt-24 overflow-x-hidden">
+<!-- Hero Section: The Clinical Atelier -->
+<section class="relative min-h-[921px] flex items-center px-8 md:px-20 py-20">
+<div class="max-w-[1440px] mx-auto w-full grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+<div class="lg:col-span-6 z-10">
+<span class="font-label text-xs uppercase tracking-[0.2em] text-secondary mb-4 block">Prescriptive K-Beauty</span>
+<h1 class="font-headline text-5xl md:text-7xl leading-[1.1] text-primary mb-8 tracking-tight">The Science of <br/><span class="italic font-normal">Effortless Glow</span></h1>
+<p class="text-on-surface-variant text-lg max-w-md mb-10 leading-relaxed">Where Seoul's clinical innovation meets the refined standards of European dermatology. A ritual curated for the modern minimalist.</p>
+<div class="flex items-center gap-6">
+<button class="clinical-gradient text-on-primary px-8 py-4 rounded-md font-label text-sm tracking-wider uppercase shadow-xl hover:opacity-90 transition-all">Begin Assessment</button>
+<button class="text-primary border-b-2 border-secondary-fixed-dim pb-1 font-label text-sm tracking-wider uppercase hover:text-secondary transition-colors">Explore The Shop</button>
+</div>
+</div>
+<div class="lg:col-span-6 relative h-[600px] lg:h-[800px] w-full">
+<div class="absolute inset-0 bg-surface-container-low rounded-xl overflow-hidden shadow-2xl transform lg:translate-x-12">
+<img class="w-full h-full object-cover grayscale-[20%] sepia-[10%] contrast-[1.05]" data-alt="Minimalist aesthetic skincare bottle on a marble surface with soft natural sunlight and long shadows in a clean European studio setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBa6clp3Dxy3EjQBjuj1Vp3PtJgW4b69nqRWxoD1OdU-ODjRekJ9PeiWcGI2gGKSwcKjnBnnvmNu_wdHZO5kVSrd0qo681x8HoX_MZs3gBRtN46c81kKjhxB6IvPjd6wKeiFw0ncNPQnIYvT5NfE4yB4xgCISULUDtz_24QTvTLxa0dzdtBoC1pw8asiAYuqhi2YiYN3BrnYCWHnfMULQVqTmx5BniHsW-PBTn6CBUp3SqIHjrqhcu0rFu7WEWqcSWhQpQKWSg1MmM"/>
+</div>
+<div class="absolute -bottom-10 -left-10 bg-surface-container-lowest p-8 rounded-lg shadow-xl max-w-xs hidden md:block">
+<span class="font-headline text-2xl text-primary block mb-2 italic">The Essence of Hanbang</span>
+<p class="text-xs text-on-surface-variant leading-relaxed">Traditional Korean herbs meeting EU-compliant pharmaceutical standards for the ultimate skin barrier protection.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Trust Block: Compliance & Standards -->
+<section class="bg-surface-container-low py-16">
+<div class="max-w-[1440px] mx-auto px-8 grid grid-cols-2 md:grid-cols-4 gap-8">
+<div class="flex flex-col items-center text-center">
+<span class="material-symbols-outlined text-secondary text-3xl mb-4">verified_user</span>
+<h4 class="font-label text-[0.6875rem] uppercase tracking-widest text-primary mb-1">EU-Safe Certified</h4>
+<p class="text-[0.625rem] text-primary/60">Strict 1,300+ ban-list adherence</p>
+</div>
+<div class="flex flex-col items-center text-center">
+<span class="material-symbols-outlined text-secondary text-3xl mb-4">clinical_notes</span>
+<h4 class="font-label text-[0.6875rem] uppercase tracking-widest text-primary mb-1">Dermatologist Tested</h4>
+<p class="text-[0.625rem] text-primary/60">Tested on sensitive European skin</p>
+</div>
+<div class="flex flex-col items-center text-center">
+<span class="material-symbols-outlined text-secondary text-3xl mb-4">spa</span>
+<h4 class="font-label text-[0.6875rem] uppercase tracking-widest text-primary mb-1">Hanbang Wisdom</h4>
+<p class="text-[0.625rem] text-primary/60">Traditional fermented botanical focus</p>
+</div>
+<div class="flex flex-col items-center text-center">
+<span class="material-symbols-outlined text-secondary text-3xl mb-4">eco</span>
+<h4 class="font-label text-[0.6875rem] uppercase tracking-widest text-primary mb-1">Ethical Sourcing</h4>
+<p class="text-[0.625rem] text-primary/60">Cruelty-free &amp; eco-conscious packaging</p>
+</div>
+</div>
+</section>
+<!-- Curated Discovery: Asymmetric Bento Grid -->
+<section class="px-8 py-24 max-w-[1440px] mx-auto">
+<div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-4">
+<div>
+<span class="font-label text-xs uppercase tracking-widest text-secondary block mb-2">Curated Selection</span>
+<h2 class="font-headline text-4xl text-primary">The Preservation List</h2>
+</div>
+<a class="font-label text-sm border-b-2 border-secondary-fixed pb-1" href="#">View Entire Clinique</a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-8">
+<!-- Large Card -->
+<div class="md:col-span-7 bg-surface-container rounded-xl p-10 flex flex-col justify-between group cursor-pointer hover:bg-surface-container-high transition-all duration-500">
+<div class="flex justify-between items-start">
+<div class="space-y-2">
+<span class="bg-secondary-container text-on-secondary-container px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider">Bestseller</span>
+<h3 class="font-headline text-3xl text-primary mt-4">Radiance Ferment <br/>Double Essence</h3>
+<p class="text-on-surface-variant max-w-xs mt-4">A lightweight bi-phase treatment utilizing Galactomyces to resurface and illuminate.</p>
+</div>
+<div class="w-48 h-64 overflow-hidden rounded-lg">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="Elegant glass skincare bottle with golden liquid, reflecting soft studio lighting, showcasing high-end minimalist design" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC8aDvIqCnm8EW0c2CN-gGP2aVlI88WhPdAwTtbhpvvaWG4SxD8hXYiRsKcnqzqcrO_Vo2XDkoRrWxkuhmmsAly_k3e2u4_4J4vnFh_358Fnpe0GgOfvUZ3EHVNMuAROHP8rTXkOu5SLadrue7x-C5dktFKwqMZeVs66UlWJqr6Evi-WacZRQWePBlmxeCGYzcc2i-cZ9xnbgb2SmEDPvocu2wZO8Nazd59iclrs5QElKxpzEzN1a2X3NF3ch0w8_0w_P2XdtinKs0"/>
+</div>
+</div>
+<div class="mt-8 flex items-center justify-between">
+<span class="font-headline text-2xl text-primary">€78,00</span>
+<button class="bg-primary text-on-primary w-12 h-12 rounded-full flex items-center justify-center hover:bg-primary-container transition-colors">
+<span class="material-symbols-outlined">add</span>
+</button>
+</div>
+</div>
+<!-- Vertical Cards -->
+<div class="md:col-span-5 grid grid-cols-1 gap-8">
+<div class="bg-surface-container-low rounded-xl p-8 flex items-center gap-6 group cursor-pointer">
+<div class="w-32 h-32 flex-shrink-0 overflow-hidden rounded-lg">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="Tube of luxury moisturizing cream against a soft neutral background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCVYYkoM7wmX3PRNG0PsaWcqjR_E7275DBgUcXI1ToxBQKhbmBNjnQnAKImKnERDj7JaNjXU7LA4Yu98e_yu37hBzkkSzSZ8rfbZE7gwmBJmXOXAySPAluSxZD9qfLp-jjB-GhCJMmmT-cwt1JapoqFf4o3IDslQXrv1wdyBxM1jYh3JAiSnHtLOX9qNxX0TPnbxgnAsGcpBPhw7zWBQwYczdwDqej7bGoij5z798_5roCRa7HK5RQWVcN06V6f__iJ2WV8rEreWcw"/>
+</div>
+<div>
+<span class="font-label text-[10px] uppercase tracking-widest text-secondary">Repair</span>
+<h4 class="font-headline text-xl text-primary mt-1">Barrier Balm</h4>
+<p class="font-headline text-lg text-primary mt-2">€45,00</p>
+</div>
+</div>
+<div class="bg-surface-container-low rounded-xl p-8 flex items-center gap-6 group cursor-pointer">
+<div class="w-32 h-32 flex-shrink-0 overflow-hidden rounded-lg">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="Small amber glass vial of facial oil with a dropper" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCyscHYQOODg7lYIoJZULX6F4UThzQg2L-Iez0X_4zA-2iLx8wthdUVS3bMss53uK2EpSC2NjwLLQAKLTHPoxa91Q0i9eKS7Fx3z_NK702hRzDEH6W1uBiU_b_iEbc0AY045qe2S5E49T1fBH07nTHOsFkBdQdvPv5SKzF5e5E8nSYWPAnONMh4csjZukRl-nheUsT2aTwgbw-mSNbYHVSNRdRxf8h1p093wygkaouMEK9VuR9QDFH4KriHfa9iZC6JLsHm-TUJWnM"/>
+</div>
+<div>
+<span class="font-label text-[10px] uppercase tracking-widest text-secondary">Protect</span>
+<h4 class="font-headline text-xl text-primary mt-1">Vascular Oil</h4>
+<p class="font-headline text-lg text-primary mt-2">€52,00</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Education: The Routine Room -->
+<section class="bg-surface-container-highest/30 py-24 px-8 overflow-hidden">
+<div class="max-w-[1440px] mx-auto">
+<div class="grid lg:grid-cols-2 gap-20 items-center">
+<div class="relative">
+<div class="grid grid-cols-2 gap-4">
+<div class="space-y-4 pt-12">
+<img class="w-full h-64 object-cover rounded-lg" data-alt="Close-up of a person applying clear liquid serum to their face in soft focus" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA4hOVoSJ6-a-25G4xCy9ZHNXoc6aVHN1If-p0eJojw6rtAyEWrxEBkxwgfCP9X13twbRBTI_MWsEm4wDXVgv4-HKbVQ1-0ZbMb2HPMdg1WDtI1yTzO_1gL4XdzehTP2zyjbSCeKc6bAMIqVrrUL9kG8k6Of30Cem1J1agZjvo4yp-rvxHCHcLBCHZUOwLU4ddVTbMdBdCTRKcpoSBZQUnum2qidC9yhmAX48ufdlEJ-t3_0Uwps0QVjOuU2FvgYlrI-g4r9iGv7ws"/>
+<img class="w-full h-80 object-cover rounded-lg" data-alt="Skincare texture macro shot of a white cream being spread" src="https://lh3.googleusercontent.com/aida-public/AB6AXuABUo8xwn7m_uf6dXdlHDzp_8xHSl21LHQb_E_wSGjnuk56l8Kr2lfCAJKy8ED2JesZzWJSxuJlleLV7QmNz6kfCR2Ln2jzzwt4gIpqb26kgpUXS5sxDCS8VsTaRIXxy6ixDSPEe76_vcVytLUJpkYiFjFRrQ2sW1Gd68t2XNFQfooN2NBKi0_fpzlUAM-RhEHlcqx3tFmaNWoJhNv04uGtkf43qxc10heex7y0IhdBLsLvaiGxQIf3HmbAbEBus48hp79LRA7RFvs"/>
+</div>
+<div class="space-y-4">
+<img class="w-full h-96 object-cover rounded-lg" data-alt="Top down view of various skincare bottles on a tray with fresh eucalyptus leaves" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD5FPoAgVfKaduxbfRDgkK34yCjukS7rVwPFeUGuZ3_GIiveo0rB1xdeArJksr5STLXw9FYK29mT2kKcIEj75YLRELNzW5fL2Q6cJKIaUehRo4uI0N4R8yM8vRsilOihg4amV_KxZz3Txr_4YOfaw1-efuANnDtCFnDAivS8x9ouaw3lUvrw0iTQd9a7gEQzFyUjLvID8e3xhW-ldW8IJDlBgDUX9v_hn9N-In_rs8ylYXTGU8V9O35mpG3PPDyH0vE32C3QI44RpI"/>
+</div>
+</div>
+<div class="absolute -top-10 -right-10 w-40 h-40 border-[20px] border-surface-container rounded-full hidden xl:block"></div>
+</div>
+<div>
+<span class="font-label text-xs uppercase tracking-widest text-secondary block mb-4">Interactive Education</span>
+<h2 class="font-headline text-5xl text-primary leading-tight mb-8">The Routine Room: <br/><span class="italic font-normal">Layering Mastery</span></h2>
+<p class="text-on-surface-variant text-lg mb-10 leading-relaxed">Understanding K-beauty layering doesn't have to be complex. We've decoded the 10-step method into three focused pathways tailored for the European climate and lifestyle.</p>
+<div class="space-y-8">
+<div class="flex items-start gap-6 border-b border-outline-variant/30 pb-6 group cursor-pointer">
+<span class="font-headline text-3xl text-secondary/30 group-hover:text-secondary transition-colors">01.</span>
+<div>
+<h4 class="font-headline text-xl text-primary">The Morning Vitality Ritual</h4>
+<p class="text-sm text-on-surface-variant mt-2">Hydration, protection, and antioxidant anchoring for city dwellers.</p>
+</div>
+</div>
+<div class="flex items-start gap-6 border-b border-outline-variant/30 pb-6 group cursor-pointer">
+<span class="font-headline text-3xl text-secondary/30 group-hover:text-secondary transition-colors">02.</span>
+<div>
+<h4 class="font-headline text-xl text-primary">The Evening Repair Sanctuary</h4>
+<p class="text-sm text-on-surface-variant mt-2">Deep cleansing and cellular support for overnight rejuvenation.</p>
+</div>
+</div>
+<div class="flex items-start gap-6 group cursor-pointer">
+<span class="font-headline text-3xl text-secondary/30 group-hover:text-secondary transition-colors">03.</span>
+<div>
+<h4 class="font-headline text-xl text-primary">The Seasonal Pivot Guide</h4>
+<p class="text-sm text-on-surface-variant mt-2">Adjusting your moisture barrier for the transitioning European seasons.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Community & Workshop: Prescription Cards -->
+<section class="px-8 py-24 max-w-[1440px] mx-auto">
+<div class="grid md:grid-cols-2 gap-8">
+<div class="bg-surface-container-lowest border-t-4 border-secondary p-12 shadow-sm flex flex-col justify-between h-[450px]">
+<div>
+<span class="material-symbols-outlined text-secondary text-4xl mb-6">medical_services</span>
+<h3 class="font-headline text-3xl text-primary mb-4">Virtual Skin <br/>Consultations</h3>
+<p class="text-on-surface-variant leading-relaxed mb-8">Speak with our Paris-based dermatologists to receive a bespoke Korean skincare prescription tailored to your concerns.</p>
+</div>
+<button class="w-full py-4 bg-surface-container-highest text-primary font-label text-sm uppercase tracking-widest hover:bg-secondary hover:text-on-secondary transition-all">Book 15min Session</button>
+</div>
+<div class="bg-surface-container-lowest border-t-4 border-tertiary-fixed p-12 shadow-sm flex flex-col justify-between h-[450px]">
+<div>
+<span class="material-symbols-outlined text-tertiary text-4xl mb-6">school</span>
+<h3 class="font-headline text-3xl text-primary mb-4">Masterclass: <br/>Fermentation 101</h3>
+<p class="text-on-surface-variant leading-relaxed mb-8">Join our upcoming digital workshop to learn the chemistry behind fermented ingredients and their impact on longevity.</p>
+</div>
+<button class="w-full py-4 bg-surface-container-highest text-primary font-label text-sm uppercase tracking-widest hover:bg-primary hover:text-on-primary transition-all">Reserve Spot</button>
+</div>
+</div>
+</section>
+<!-- Ingredient Glossary Teaser -->
+<section class="mb-24 px-8 max-w-[1440px] mx-auto">
+<div class="bg-primary px-12 py-20 rounded-xl relative overflow-hidden flex flex-col md:flex-row items-center justify-between gap-12">
+<div class="absolute top-0 right-0 w-1/2 h-full opacity-10 pointer-events-none">
+<span class="text-[20rem] font-headline italic -mr-20 text-on-primary select-none">Aa</span>
+</div>
+<div class="z-10 md:max-w-xl text-center md:text-left">
+<h2 class="font-headline text-4xl text-on-primary mb-6">The Ingredient Glossary</h2>
+<p class="text-on-primary-container text-lg mb-8 leading-relaxed">From Centella Asiatica to Snail Mucin, we demystify every clinical active and botanical extract in our formulary.</p>
+<div class="flex flex-wrap gap-3 justify-center md:justify-start">
+<span class="bg-secondary-container/20 text-on-primary-container border border-on-primary-container/20 px-4 py-1.5 rounded-full text-xs font-label uppercase tracking-widest">Niacinamide</span>
+<span class="bg-secondary-container/20 text-on-primary-container border border-on-primary-container/20 px-4 py-1.5 rounded-full text-xs font-label uppercase tracking-widest">Bakuchiol</span>
+<span class="bg-secondary-container/20 text-on-primary-container border border-on-primary-container/20 px-4 py-1.5 rounded-full text-xs font-label uppercase tracking-widest">Mugwort</span>
+<span class="bg-secondary-container/20 text-on-primary-container border border-on-primary-container/20 px-4 py-1.5 rounded-full text-xs font-label uppercase tracking-widest">Peptides</span>
+</div>
+</div>
+<div class="z-10">
+<button class="bg-surface-container-lowest text-primary px-10 py-5 rounded-md font-label text-sm uppercase tracking-widest hover:bg-secondary-fixed transition-colors">Launch Glossary</button>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-low w-full mt-24">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12 px-12 py-20 max-w-[1440px] mx-auto">
+<div class="col-span-1 md:col-span-1">
+<span class="font-headline text-2xl text-primary mb-6 block">L'Atelier de Beauté</span>
+<p class="text-primary/60 text-xs leading-relaxed max-w-xs">A clinical sanctuary dedicated to the intersection of traditional Korean botany and European dermatological precision.</p>
+<div class="flex gap-4 mt-8">
+<button class="material-symbols-outlined text-primary/40 hover:text-primary transition-colors">public</button>
+<button class="material-symbols-outlined text-primary/40 hover:text-primary transition-colors">camera</button>
+<button class="material-symbols-outlined text-primary/40 hover:text-primary transition-colors">mail</button>
+</div>
+</div>
+<div>
+<h5 class="font-label text-[0.6875rem] uppercase tracking-widest text-primary font-bold mb-6">Discovery</h5>
+<ul class="space-y-4">
+<li><a class="text-primary/60 hover:text-secondary text-[0.6875rem] uppercase tracking-widest transition-colors duration-300" href="#">Shop All</a></li>
+<li><a class="text-primary/60 hover:text-secondary text-[0.6875rem] uppercase tracking-widest transition-colors duration-300" href="#">The Routine Room</a></li>
+<li><a class="text-primary/60 hover:text-secondary text-[0.6875rem] uppercase tracking-widest transition-colors duration-300" href="#">Bestsellers</a></li>
+<li><a class="text-primary/60 hover:text-secondary text-[0.6875rem] uppercase tracking-widest transition-colors duration-300" href="#">New Arrivals</a></li>
+</ul>
+</div>
+<div>
+<h5 class="font-label text-[0.6875rem] uppercase tracking-widest text-primary font-bold mb-6">Trust &amp; Care</h5>
+<ul class="space-y-4">
+<li><a class="text-primary/60 hover:text-secondary text-[0.6875rem] uppercase tracking-widest transition-colors duration-300" href="#">Sustainability Commitment</a></li>
+<li><a class="text-primary/60 hover:text-secondary text-[0.6875rem] uppercase tracking-widest transition-colors duration-300" href="#">EU Safety Standards</a></li>
+<li><a class="text-primary/60 hover:text-secondary text-[0.6875rem] uppercase tracking-widest transition-colors duration-300" href="#">Ingredient Glossary</a></li>
+<li><a class="text-primary/60 hover:text-secondary text-[0.6875rem] uppercase tracking-widest transition-colors duration-300" href="#">Shipping &amp; Returns</a></li>
+</ul>
+</div>
+<div>
+<h5 class="font-label text-[0.6875rem] uppercase tracking-widest text-primary font-bold mb-6">Newsletter</h5>
+<p class="text-[0.625rem] text-primary/60 mb-4 tracking-wider uppercase">Subscribe for the Journal</p>
+<div class="flex border-b border-primary/20 pb-2">
+<input class="bg-transparent border-none focus:ring-0 text-[0.6875rem] tracking-widest w-full placeholder:text-primary/30" placeholder="email@example.com" type="email"/>
+<button class="material-symbols-outlined text-primary">arrow_forward</button>
+</div>
+</div>
+</div>
+<div class="max-w-[1440px] mx-auto px-12 py-8 border-t border-primary/5 text-center md:text-left">
+<span class="font-label text-[0.625rem] uppercase tracking-[0.2em] text-primary/40 leading-relaxed">
+                © 2024 L'Atelier de Beauté. EU-Compliance Certified. Formulated in Seoul, Curated in Paris. <br class="md:hidden"/>
+<a class="hover:text-primary transition-colors ml-0 md:ml-4" href="#">Privacy Policy</a>
+</span>
+</div>
+</footer>
+</body></html>

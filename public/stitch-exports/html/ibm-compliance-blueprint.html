@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>The Compliance Blueprint: EU AI Act &amp; Model Governance</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              colors: {
+                "surface-dim": "#dbdad9",
+                "primary-fixed-dim": "#c6d3ff",
+                "tertiary": "#615b77",
+                "secondary-fixed": "#e4e2e6",
+                "on-primary": "#f8f7ff",
+                "primary-fixed": "#dae2ff",
+                "secondary-container": "#e4e2e6",
+                "on-secondary-fixed": "#3f3f43",
+                "on-secondary-fixed-variant": "#5b5b5f",
+                "on-surface-variant": "#5f5f5f",
+                "tertiary-fixed-dim": "#d5cdee",
+                "surface-variant": "#e4e2e2",
+                "surface-container": "#f0eded",
+                "error-container": "#fe8983",
+                "error": "#9f403d",
+                "on-tertiary-fixed": "#3f3a54",
+                "tertiary-fixed": "#e3dbfd",
+                "on-surface": "#323233",
+                "inverse-primary": "#5b8cff",
+                "surface-container-high": "#eae8e7",
+                "on-tertiary": "#fcf7ff",
+                "tertiary-container": "#e3dbfd",
+                "on-secondary-container": "#515155",
+                "background": "#fcf9f8",
+                "on-tertiary-fixed-variant": "#5b5672",
+                "outline": "#7b7a7a",
+                "secondary-fixed-dim": "#d5d4d8",
+                "outline-variant": "#b3b2b1",
+                "on-error": "#fff7f6",
+                "surface-container-highest": "#e4e2e2",
+                "surface": "#fcf9f8",
+                "on-background": "#323233",
+                "surface-tint": "#0056d2",
+                "primary-dim": "#004bb9",
+                "surface-bright": "#fcf9f8",
+                "inverse-surface": "#0e0e0e",
+                "on-secondary": "#faf8fc",
+                "surface-container-low": "#f6f3f2",
+                "error-dim": "#4e0309",
+                "secondary": "#5f5f62",
+                "primary": "#0056d2",
+                "primary-container": "#dae2ff",
+                "on-primary-fixed-variant": "#0053cc",
+                "on-tertiary-container": "#524c68",
+                "on-primary-container": "#004ab7",
+                "on-primary-fixed": "#003991",
+                "inverse-on-surface": "#9e9c9c",
+                "tertiary-dim": "#55506b",
+                "surface-container-lowest": "#ffffff",
+                "secondary-dim": "#535356",
+                "on-error-container": "#752121"
+              },
+              fontFamily: {
+                "headline": ["Inter"],
+                "body": ["Inter"],
+                "label": ["Inter"]
+              },
+              borderRadius: {"DEFAULT": "0px", "lg": "0px", "xl": "0px", "full": "9999px"},
+            },
+          },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+            font-size: 20px;
+        }
+        body { font-family: 'Inter', sans-serif; }
+        /* Precision grid for the dossier look */
+        .blueprint-bg {
+            background-image: radial-gradient(#dbdad9 0.5px, transparent 0.5px);
+            background-size: 16px 16px;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface antialiased overflow-x-hidden">
+<!-- TopNavBar Component -->
+<header class="bg-slate-50 dark:bg-slate-900 flex justify-between items-center px-6 py-3 w-full border-b border-slate-200 dark:border-slate-800 font-['Inter'] tracking-tight antialiased text-sm font-medium sticky top-0 z-50">
+<div class="flex items-center gap-8">
+<span class="text-lg font-bold tracking-tighter text-slate-900 dark:text-white uppercase">Compliance Blueprint</span>
+<nav class="hidden md:flex items-center gap-6">
+<a class="text-blue-700 dark:text-blue-400 border-b-2 border-blue-700 dark:border-blue-400 pb-1" href="#">Dashboard</a>
+<a class="text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white transition-colors duration-150" href="#">Workspaces</a>
+<a class="text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white transition-colors duration-150" href="#">Reports</a>
+<a class="text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white transition-colors duration-150" href="#">Archive</a>
+</nav>
+</div>
+<div class="flex items-center gap-4">
+<button class="px-4 py-1.5 border border-slate-300 dark:border-slate-700 hover:bg-slate-100 dark:hover:bg-slate-800 transition-all text-xs font-semibold uppercase tracking-wider">Export Dossier</button>
+<button class="bg-primary hover:bg-primary-dim text-on-primary px-4 py-1.5 transition-all text-xs font-semibold uppercase tracking-wider">New Audit</button>
+<div class="flex gap-2 ml-2">
+<span class="material-symbols-outlined text-slate-500 cursor-pointer p-1 hover:bg-slate-100">notifications</span>
+<span class="material-symbols-outlined text-slate-500 cursor-pointer p-1 hover:bg-slate-100">settings</span>
+</div>
+<img alt="Lead Auditor Profile" class="w-8 h-8 object-cover grayscale border border-slate-300" data-alt="Professional corporate headshot of a lead auditor in a sharp suit with neutral lighting and gray background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBz6kXFLEiRrLNlyfaz3D7VuFpveZcLPM3QO1VKLt5Xfd4YsoVu2hvAe2SlPcDry4CuI1IeRtu5DsK49XQNZcCqu9v-Tiu_eUnpm1TS3Tg6LbQVxKlZdvGNEYKI6zDZhtsQH0yjh6-MrP8u8XF_p6O-mnoiumt1hhaVg3ISukVGUapcE66DLIr4pG_TNlIExhqSnRNlcaxHXRNGaiW-U3Ndxl9MJ8lPjZuFvhTKBDjITvaxU2aEZWUL05EPeR_GJjF6PrXwo5a93nw"/>
+</div>
+</header>
+<div class="flex">
+<!-- SideNavBar Component -->
+<aside class="hidden md:flex flex-col h-[calc(100vh-53px)] w-64 bg-slate-100 dark:bg-slate-950 border-r border-slate-200 dark:border-slate-800 sticky top-[53px]">
+<div class="p-6 border-b border-slate-200 dark:border-slate-800">
+<div class="flex items-center gap-3 mb-1">
+<span class="material-symbols-outlined text-blue-700">policy</span>
+<span class="font-['Inter'] text-xs font-semibold uppercase tracking-widest text-on-surface">Governance Library</span>
+</div>
+<p class="text-[10px] text-on-surface-variant font-medium">V2.4 Active Oversight</p>
+</div>
+<nav class="flex-1 overflow-y-auto pt-4">
+<div class="flex items-center bg-white dark:bg-slate-900 text-blue-700 dark:text-blue-400 border-l-4 border-blue-700 dark:border-blue-500 ml-0 cursor-pointer transition-all duration-75 px-4 py-3">
+<span class="material-symbols-outlined mr-3">gavel</span>
+<span class="font-['Inter'] text-xs font-semibold uppercase tracking-widest">EU AI Act</span>
+</div>
+<div class="flex items-center text-slate-600 dark:text-slate-400 px-4 py-3 hover:bg-slate-200 dark:hover:bg-slate-800 cursor-pointer transition-all duration-75">
+<span class="material-symbols-outlined mr-3">security</span>
+<span class="font-['Inter'] text-xs font-semibold uppercase tracking-widest">NIST Framework</span>
+</div>
+<div class="flex items-center text-slate-600 dark:text-slate-400 px-4 py-3 hover:bg-slate-200 dark:hover:bg-slate-800 cursor-pointer transition-all duration-75">
+<span class="material-symbols-outlined mr-3">verified</span>
+<span class="font-['Inter'] text-xs font-semibold uppercase tracking-widest">ISO/IEC 42001</span>
+</div>
+<div class="flex items-center text-slate-600 dark:text-slate-400 px-4 py-3 hover:bg-slate-200 dark:hover:bg-slate-800 cursor-pointer transition-all duration-75">
+<span class="material-symbols-outlined mr-3">analytics</span>
+<span class="font-['Inter'] text-xs font-semibold uppercase tracking-widest">Risk Assessment</span>
+</div>
+<div class="flex items-center text-slate-600 dark:text-slate-400 px-4 py-3 hover:bg-slate-200 dark:hover:bg-slate-800 cursor-pointer transition-all duration-75">
+<span class="material-symbols-outlined mr-3">database</span>
+<span class="font-['Inter'] text-xs font-semibold uppercase tracking-widest">Data Governance</span>
+</div>
+<div class="flex items-center text-slate-600 dark:text-slate-400 px-4 py-3 hover:bg-slate-200 dark:hover:bg-slate-800 cursor-pointer transition-all duration-75">
+<span class="material-symbols-outlined mr-3">memory</span>
+<span class="font-['Inter'] text-xs font-semibold uppercase tracking-widest">Model Inventory</span>
+</div>
+</nav>
+<div class="p-4 border-t border-slate-200 dark:border-slate-800">
+<button class="w-full bg-slate-900 text-white py-2 text-xs font-bold uppercase tracking-tighter mb-4">Scan New Model</button>
+<div class="flex items-center text-slate-500 hover:text-blue-600 py-1 cursor-pointer transition-opacity">
+<span class="material-symbols-outlined text-sm mr-2">description</span>
+<span class="text-[10px] font-semibold uppercase tracking-widest">Documentation</span>
+</div>
+<div class="flex items-center text-slate-500 hover:text-blue-600 py-1 cursor-pointer transition-opacity">
+<span class="material-symbols-outlined text-sm mr-2">help</span>
+<span class="text-[10px] font-semibold uppercase tracking-widest">Support</span>
+</div>
+</div>
+</aside>
+<!-- Main Content -->
+<main class="flex-1 min-h-screen blueprint-bg">
+<div class="max-w-7xl mx-auto px-8 py-12">
+<!-- Page Title & Authority Bar -->
+<div class="mb-12 border-l-8 border-primary pl-6">
+<p class="text-xs font-bold text-primary tracking-[0.3em] uppercase mb-2">Technical Dossier // Phase: Audit Active</p>
+<h1 class="text-4xl font-extrabold tracking-tight text-on-surface leading-none mb-4">The Compliance Blueprint: <span class="font-light">EU AI Act &amp; Model Governance</span></h1>
+<div class="flex gap-4 items-center">
+<span class="bg-surface-container text-on-surface text-[10px] font-black px-2 py-0.5 tracking-tighter">REF: IBM-SPEC-2024-X1</span>
+<span class="text-on-surface-variant text-[10px] font-medium uppercase tracking-widest">Authored by Machined Dossier Systems</span>
+</div>
+</div>
+<!-- Bento Grid Layout -->
+<div class="grid grid-cols-12 gap-8">
+<!-- 1. Technical Summary Card (High-Level Overview) -->
+<div class="col-span-12 lg:col-span-4 flex flex-col gap-8">
+<section class="bg-surface-container-lowest border border-outline-variant p-6 h-full flex flex-col justify-between">
+<div>
+<div class="flex justify-between items-start mb-6">
+<h3 class="font-black text-xs uppercase tracking-widest">Health Index</h3>
+<span class="text-primary material-symbols-outlined">analytics</span>
+</div>
+<div class="mb-8">
+<div class="text-5xl font-black text-on-surface tracking-tighter mb-1">98%</div>
+<div class="h-1.5 w-full bg-surface-container">
+<div class="h-full bg-primary" style="width: 98%"></div>
+</div>
+<p class="text-[10px] mt-2 font-bold text-primary uppercase">Compliance Score: Optimal</p>
+</div>
+<div class="space-y-4">
+<div class="bg-surface-container-low p-4">
+<p class="text-[10px] font-bold text-on-surface-variant uppercase mb-1">Classification</p>
+<p class="text-sm font-bold text-error uppercase">High-Risk (Annex III)</p>
+</div>
+<div class="bg-surface-container-low p-4">
+<p class="text-[10px] font-bold text-on-surface-variant uppercase mb-1">System Status</p>
+<div class="flex items-center gap-2">
+<div class="w-2 h-2 rounded-full bg-primary"></div>
+<p class="text-sm font-bold uppercase">Locked / Audited</p>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-8 pt-4 border-t border-outline-variant">
+<p class="text-[10px] leading-relaxed text-secondary">A finalized evaluation of the "Project Orion" foundation model against the February 2024 EU AI Act mandate.</p>
+</div>
+</section>
+</div>
+<!-- 2. Architecture Blueprint Diagram -->
+<div class="col-span-12 lg:col-span-8">
+<section class="bg-surface-container-lowest border border-outline-variant p-6 overflow-hidden relative">
+<div class="absolute top-0 right-0 w-32 h-32 opacity-5 pointer-events-none">
+<span class="material-symbols-outlined text-[128px]">schema</span>
+</div>
+<h3 class="font-black text-xs uppercase tracking-widest mb-8">Governance Stack Architecture</h3>
+<div class="grid grid-cols-4 gap-4 h-64 relative">
+<!-- Horizontal Flow Line -->
+<div class="absolute top-1/2 left-0 w-full h-[1px] bg-outline-variant -translate-y-1/2 z-0"></div>
+<!-- Column 1: Data -->
+<div class="flex flex-col items-center justify-between z-10">
+<div class="bg-white border-2 border-primary w-24 h-24 flex flex-col items-center justify-center p-2 text-center">
+<span class="material-symbols-outlined text-primary mb-1">database</span>
+<span class="text-[10px] font-bold uppercase tracking-tight">Data Origin</span>
+</div>
+<div class="h-12 w-[1px] bg-primary"></div>
+<div class="bg-surface-container-high w-full p-2 text-[9px] font-bold uppercase text-center border border-outline-variant">Toxicity Filtering</div>
+</div>
+<!-- Column 2: Model -->
+<div class="flex flex-col items-center justify-between z-10">
+<div class="bg-white border-2 border-primary w-24 h-24 flex flex-col items-center justify-center p-2 text-center">
+<span class="material-symbols-outlined text-primary mb-1">memory</span>
+<span class="text-[10px] font-bold uppercase tracking-tight">Model Core</span>
+</div>
+<div class="h-12 w-[1px] bg-primary"></div>
+<div class="bg-surface-container-high w-full p-2 text-[9px] font-bold uppercase text-center border border-outline-variant">Bias Mitigation</div>
+</div>
+<!-- Column 3: Output -->
+<div class="flex flex-col items-center justify-between z-10">
+<div class="bg-white border-2 border-primary w-24 h-24 flex flex-col items-center justify-center p-2 text-center">
+<span class="material-symbols-outlined text-primary mb-1">output</span>
+<span class="text-[10px] font-bold uppercase tracking-tight">System Output</span>
+</div>
+<div class="h-12 w-[1px] bg-primary"></div>
+<div class="bg-surface-container-high w-full p-2 text-[9px] font-bold uppercase text-center border border-outline-variant">Watermarking</div>
+</div>
+<!-- Column 4: Oversight -->
+<div class="flex flex-col items-center justify-between z-10">
+<div class="bg-primary text-on-primary w-24 h-24 flex flex-col items-center justify-center p-2 text-center shadow-lg">
+<span class="material-symbols-outlined mb-1">visibility</span>
+<span class="text-[10px] font-bold uppercase tracking-tight">Human Proxy</span>
+</div>
+<div class="h-12 w-[1px] bg-primary"></div>
+<div class="bg-surface-container-high w-full p-2 text-[9px] font-bold uppercase text-center border border-outline-variant">Audit Logging</div>
+</div>
+</div>
+</section>
+</div>
+<!-- 3. Regulatory Policy Rails -->
+<div class="col-span-12">
+<section class="bg-surface-container-low border border-outline-variant p-6">
+<h3 class="font-black text-xs uppercase tracking-widest mb-8 flex items-center gap-2">
+<span class="w-4 h-[1px] bg-primary"></span>
+                                Regulatory Policy Mapping // Requirement vs Control
+                            </h3>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-0">
+<!-- Item 1 -->
+<div class="border border-outline-variant p-6 bg-white relative">
+<div class="absolute left-0 top-0 bottom-0 w-1 bg-primary"></div>
+<h4 class="text-xs font-black uppercase text-primary mb-4">Art. 13: Transparency</h4>
+<div class="space-y-4">
+<div class="pb-4 border-b border-surface-container">
+<p class="text-[10px] font-bold text-secondary uppercase mb-1">Act Requirement</p>
+<p class="text-xs leading-relaxed">Instructions for use must include specifications on performance and limitations.</p>
+</div>
+<div>
+<p class="text-[10px] font-bold text-primary uppercase mb-1">Internal Control</p>
+<p class="text-xs leading-relaxed font-semibold italic">Automated Model Cards (v4.2) embedded in API metadata.</p>
+</div>
+</div>
+</div>
+<!-- Item 2 -->
+<div class="border border-outline-variant p-6 bg-white relative md:border-l-0">
+<div class="absolute left-0 top-0 bottom-0 w-1 bg-primary"></div>
+<h4 class="text-xs font-black uppercase text-primary mb-4">Art. 15: Cybersecurity</h4>
+<div class="space-y-4">
+<div class="pb-4 border-b border-surface-container">
+<p class="text-[10px] font-bold text-secondary uppercase mb-1">Act Requirement</p>
+<p class="text-xs leading-relaxed">Resilience against model evasion, data poisoning, and adversarial attacks.</p>
+</div>
+<div>
+<p class="text-[10px] font-bold text-primary uppercase mb-1">Internal Control</p>
+<p class="text-xs leading-relaxed font-semibold italic">Red Teaming Protocol SIGMA-9: Bi-weekly penetration testing.</p>
+</div>
+</div>
+</div>
+<!-- Item 3 -->
+<div class="border border-outline-variant p-6 bg-white relative md:border-l-0">
+<div class="absolute left-0 top-0 bottom-0 w-1 bg-primary"></div>
+<h4 class="text-xs font-black uppercase text-primary mb-4">Art. 10: Data Governance</h4>
+<div class="space-y-4">
+<div class="pb-4 border-b border-surface-container">
+<p class="text-[10px] font-bold text-secondary uppercase mb-1">Act Requirement</p>
+<p class="text-xs leading-relaxed">Datasets must be representative, free of errors, and complete.</p>
+</div>
+<div>
+<p class="text-[10px] font-bold text-primary uppercase mb-1">Internal Control</p>
+<p class="text-xs leading-relaxed font-semibold italic">Lineage Tracking &amp; Synthetic Data augmentation audits.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+</div>
+<!-- 4. Active Audit Table -->
+<div class="col-span-12 lg:col-span-9">
+<section class="bg-surface-container-lowest border border-outline-variant">
+<div class="p-6 border-b border-outline-variant flex justify-between items-center">
+<h3 class="font-black text-xs uppercase tracking-widest">Live Model Evaluation Log</h3>
+<div class="flex gap-2">
+<span class="bg-surface-container text-on-surface-variant text-[9px] font-bold px-2 py-1 uppercase">Live Stream</span>
+<span class="bg-primary text-on-primary text-[9px] font-bold px-2 py-1 uppercase">Encrypted</span>
+</div>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-container-low border-b border-outline-variant">
+<th class="p-4 text-[10px] font-black uppercase text-secondary">Timestamp</th>
+<th class="p-4 text-[10px] font-black uppercase text-secondary">Model ID</th>
+<th class="p-4 text-[10px] font-black uppercase text-secondary">Metric: Accuracy</th>
+<th class="p-4 text-[10px] font-black uppercase text-secondary">Metric: Drift</th>
+<th class="p-4 text-[10px] font-black uppercase text-secondary">Metric: Toxicity</th>
+<th class="p-4 text-[10px] font-black uppercase text-secondary">Status</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-surface-container">
+<tr class="hover:bg-surface-container-low transition-colors">
+<td class="p-4 text-xs font-medium font-mono">2024-05-12 14:22</td>
+<td class="p-4 text-xs font-bold">ORION-7B-V2</td>
+<td class="p-4 text-xs">94.2%</td>
+<td class="p-4 text-xs text-primary font-bold">&lt; 0.01%</td>
+<td class="p-4 text-xs">0.00%</td>
+<td class="p-4"><span class="bg-primary-container text-on-primary-container text-[9px] font-black px-2 py-0.5 uppercase tracking-tighter">PASS</span></td>
+</tr>
+<tr class="hover:bg-surface-container-low transition-colors">
+<td class="p-4 text-xs font-medium font-mono">2024-05-12 13:58</td>
+<td class="p-4 text-xs font-bold">ORION-7B-V2</td>
+<td class="p-4 text-xs">94.8%</td>
+<td class="p-4 text-xs text-primary font-bold">&lt; 0.01%</td>
+<td class="p-4 text-xs">0.02%</td>
+<td class="p-4"><span class="bg-primary-container text-on-primary-container text-[9px] font-black px-2 py-0.5 uppercase tracking-tighter">PASS</span></td>
+</tr>
+<tr class="hover:bg-surface-container-low transition-colors">
+<td class="p-4 text-xs font-medium font-mono">2024-05-12 13:10</td>
+<td class="p-4 text-xs font-bold">ORION-7B-V1</td>
+<td class="p-4 text-xs">88.1%</td>
+<td class="p-4 text-xs text-error font-bold">1.22%</td>
+<td class="p-4 text-xs">0.45%</td>
+<td class="p-4"><span class="bg-error-container text-on-error-container text-[9px] font-black px-2 py-0.5 uppercase tracking-tighter">REJECTED</span></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+</div>
+<!-- 5. Proof of Compliance Section (Dossier Blocks) -->
+<div class="col-span-12 lg:col-span-3 space-y-4">
+<h3 class="font-black text-xs uppercase tracking-widest mb-4">Certified Dossiers</h3>
+<div class="bg-white border border-outline-variant p-4 relative overflow-hidden">
+<div class="flex justify-between items-start mb-4">
+<p class="text-[9px] font-black text-secondary tracking-widest">DOC-AI-902</p>
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">verified</span>
+</div>
+<h4 class="text-xs font-bold uppercase mb-2">Technical File Alpha</h4>
+<p class="text-[10px] text-secondary leading-tight mb-4">Validation of Article 11 technical documentation requirements for public disclosure.</p>
+<div class="text-[9px] font-bold text-on-surface-variant italic border-t border-surface-container pt-2">STAMPED: 12-MAY-2024</div>
+</div>
+<div class="bg-white border border-outline-variant p-4 relative overflow-hidden">
+<div class="flex justify-between items-start mb-4">
+<p class="text-[9px] font-black text-secondary tracking-widest">DOC-AI-914</p>
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">verified</span>
+</div>
+<h4 class="text-xs font-bold uppercase mb-2">Risk Management Plan</h4>
+<p class="text-[10px] text-secondary leading-tight mb-4">Systematic identification and mitigation of known high-risk scenarios.</p>
+<div class="text-[9px] font-bold text-on-surface-variant italic border-t border-surface-container pt-2">STAMPED: 10-MAY-2024</div>
+</div>
+<div class="bg-surface-container-low border border-outline-variant p-4 relative opacity-50 grayscale">
+<div class="flex justify-between items-start mb-4">
+<p class="text-[9px] font-black text-secondary tracking-widest">DOC-AI-401</p>
+<span class="material-symbols-outlined text-secondary">pending</span>
+</div>
+<h4 class="text-xs font-bold uppercase mb-2">Conformity Assessment</h4>
+<p class="text-[10px] text-secondary leading-tight mb-4">Third-party external verification status for market placement.</p>
+<div class="text-[9px] font-bold text-on-surface-variant italic border-t border-surface-container pt-2">STATUS: PENDING</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+</div>
+<!-- Footer Component -->
+<footer class="bg-slate-100 dark:bg-slate-950 border-t border-slate-200 dark:border-slate-800 flex flex-col md:flex-row justify-between items-center px-8 py-12 gap-4 font-['Inter'] text-[10px] leading-relaxed uppercase tracking-tighter">
+<div class="flex flex-col gap-1">
+<span class="text-slate-400 font-black text-xs">Machined Dossier Systems</span>
+<span class="text-slate-500">© 2024 Machined Dossier Systems. All rights reserved. Regulatory Compliance Guaranteed.</span>
+</div>
+<nav class="flex gap-6">
+<a class="text-slate-500 hover:text-blue-600 transition-opacity" href="#">Legal Terms</a>
+<a class="text-slate-500 hover:text-blue-600 transition-opacity" href="#">Privacy Policy</a>
+<a class="text-slate-500 hover:text-blue-600 transition-opacity" href="#">Audit Trail</a>
+<a class="text-slate-500 hover:text-blue-600 transition-opacity underline font-bold" href="#">SOC2 Compliance</a>
+<a class="text-slate-500 hover:text-blue-600 transition-opacity" href="#">API Status</a>
+</nav>
+</footer>
+</body></html>

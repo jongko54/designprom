@@ -1,0 +1,21 @@
+{
+  "brand": "Figma",
+  "contentType": "image/png",
+  "fileName": "figma-community-marketplace.png",
+  "generatedAt": "2026-04-02T01:39:00.628Z",
+  "htmlUrl": "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ8Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpbCiVodG1sX2I5MzAyZTNjODcyNzRjMzI4ZjBjMWJmMzFiMzY3YTAxEgsSBxCCisPc0AkYAZIBJAoKcHJvamVjdF9pZBIWQhQxNTE0MTM2NDkwMzg3Mzk0NjczOA&filename=&opi=96797242",
+  "imageUrl": "https://lh3.googleusercontent.com/aida/ADBb0uhAWKhCvYJj6jTlBNNmfSbU4gX_SpyAf0vVsTOyT5XFT-nss1ce8-bMUnzNOsQrexKIMU6WWodgRKmOlc-7Er54XoQZZVqgRu_OOAVqD66Xk0T4EgxsBDNSz0e8jxFZikneU3D2gD-jQcwdwg7klI-u18un6tJkSHRR607U_fiNEawP4q66Eg6q9OVBkRTx8fzP7NBM29LuzPZLEYRmO-0N4wyCsnyBhdO7iLzJTJ00GiWAl5Or1Y_CTKus",
+  "notes": [
+    "I've completed the design for your Figma-inspired community marketplace. \n\nThe layout features:\n- **Dense, Legible File Cards:** High-fidelity previews with rich metadata and subtle, vibrant accents (vivid purple, blue, and green) to differentiate categories.\n- **Layered Utility Filters:** A persistent sidebar and global navigation to make the vast collection of assets easily browsable.\n- **Product-Native Workspace:** A clean, neutral palette (#F5F5F5) and a refined grid structure that feels like an extension of the working surface.\n\nYou'll also find the **Canvas & Grid** design system on the canvas, which captures this specific aesthetic for future screens."
+  ],
+  "prompt": "Create a Figma-inspired community marketplace page with dense but legible file cards, layered utility filters, a visible working-surface rhythm, and subtle colorful file accents. Keep the page product-native, browsable, and highly functional.",
+  "projectId": "15141364903873946738",
+  "screenId": "92e0455a6b6f43a1846947137bcfc4df",
+  "slug": "figma-community-marketplace",
+  "suggestions": [
+    "Design a detailed file preview page",
+    "Create a creator profile screen",
+    "Build a checkout flow for paid assets"
+  ],
+  "title": "Community Marketplace"
+}

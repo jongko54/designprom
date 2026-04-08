@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "surface-bright": "#f9f9fb",
+              "error-container": "#fe8983",
+              "inverse-primary": "#6995fd",
+              "surface-tint": "#2559bd",
+              "surface-variant": "#dde3e9",
+              "secondary-fixed": "#e5e2e1",
+              "on-primary-fixed": "#003a8f",
+              "primary-fixed-dim": "#c5d4ff",
+              "on-surface-variant": "#596065",
+              "tertiary": "#605c78",
+              "tertiary-fixed-dim": "#d4cdee",
+              "on-secondary-fixed-variant": "#5c5b5b",
+              "error": "#9f403d",
+              "on-secondary-fixed": "#403f3f",
+              "on-primary": "#f8f7ff",
+              "surface-container-high": "#e4e9ee",
+              "surface-container": "#ebeef2",
+              "secondary-dim": "#545353",
+              "on-primary-fixed-variant": "#2056ba",
+              "surface-container-highest": "#dde3e9",
+              "background": "#f9f9fb",
+              "surface": "#f9f9fb",
+              "surface-dim": "#d3dbe2",
+              "primary-fixed": "#dae2ff",
+              "on-tertiary-fixed-variant": "#5b5672",
+              "on-error-container": "#752121",
+              "on-error": "#fff7f6",
+              "tertiary-container": "#e3dbfd",
+              "surface-container-low": "#f2f4f6",
+              "tertiary-dim": "#54506b",
+              "outline-variant": "#acb3b8",
+              "on-surface": "#2d3338",
+              "inverse-surface": "#0c0e10",
+              "error-dim": "#4e0309",
+              "on-tertiary": "#fcf7ff",
+              "secondary": "#605f5f",
+              "tertiary-fixed": "#e3dbfd",
+              "secondary-container": "#e5e2e1",
+              "primary-container": "#dae2ff",
+              "on-tertiary-fixed": "#3e3a54",
+              "secondary-fixed-dim": "#d6d4d3",
+              "on-secondary-container": "#525151",
+              "inverse-on-surface": "#9c9d9f",
+              "primary": "#2559bd",
+              "on-background": "#2d3338",
+              "on-primary-container": "#0d4cb0",
+              "surface-container-lowest": "#ffffff",
+              "outline": "#757c81",
+              "primary-dim": "#0f4db0",
+              "on-tertiary-container": "#514d68",
+              "on-secondary": "#fbf8f8"
+            },
+            fontFamily: {
+              "headline": ["Inter"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f9f9fb;
+            color: #2d3338;
+        }
+        .glass-nav {
+            background-color: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(20px);
+        }
+    </style>
+</head>
+<body class="bg-surface selection:bg-primary-container selection:text-on-primary-container">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 glass-nav shadow-[0_20px_40px_rgba(45,51,56,0.06)]">
+<div class="flex justify-between items-center max-w-7xl mx-auto px-8 py-4">
+<div class="text-xl font-bold tracking-tighter text-slate-900 dark:text-white">
+                Aether Intelligence
+            </div>
+<div class="hidden md:flex items-center gap-8">
+<a class="font-sans tracking-tight text-sm font-medium text-blue-600 dark:text-blue-400 font-semibold hover:text-blue-600 dark:hover:text-blue-300 transition-colors duration-300" href="#">Platform</a>
+<a class="font-sans tracking-tight text-sm font-medium text-slate-500 dark:text-slate-400 hover:text-blue-600 dark:hover:text-blue-300 transition-colors duration-300" href="#">Solutions</a>
+<a class="font-sans tracking-tight text-sm font-medium text-slate-500 dark:text-slate-400 hover:text-blue-600 dark:hover:text-blue-300 transition-colors duration-300" href="#">Case Studies</a>
+<a class="font-sans tracking-tight text-sm font-medium text-slate-500 dark:text-slate-400 hover:text-blue-600 dark:hover:text-blue-300 transition-colors duration-300" href="#">Pricing</a>
+</div>
+<button class="bg-gradient-to-br from-primary to-primary-dim text-on-primary px-6 py-2.5 rounded-xl text-sm font-medium hover:scale-95 transition-transform duration-300">
+                Get Started
+            </button>
+</div>
+</nav>
+<main class="pt-32">
+<!-- Hero Section -->
+<section class="max-w-7xl mx-auto px-8 py-24 text-center">
+<div class="inline-flex items-center gap-2 px-3 py-1 bg-surface-container-low rounded-full mb-8">
+<span class="text-[10px] uppercase tracking-[0.05em] font-semibold text-primary">Version 2.0 Launch</span>
+</div>
+<h1 class="text-6xl md:text-8xl font-extrabold tracking-[-0.04em] text-on-background mb-8 leading-[1.05]">
+                The Silent <br/> Intelligence.
+            </h1>
+<p class="max-w-2xl mx-auto text-xl text-on-surface-variant leading-relaxed mb-12">
+                Aether operates in the background of your infrastructure, refining logic and optimizing workflows without making a sound. The future of AI isn't noisy—it's invisible.
+            </p>
+<div class="flex justify-center items-center gap-6">
+<button class="bg-gradient-to-br from-primary to-primary-dim text-on-primary px-10 py-4 rounded-xl text-lg font-semibold shadow-[0_20px_40px_rgba(37,89,189,0.2)] hover:scale-95 transition-transform duration-300">
+                    Request Early Access
+                </button>
+<button class="text-on-surface font-medium hover:text-primary transition-colors duration-300 flex items-center gap-2">
+                    Read the Whitepaper
+                    <span class="material-symbols-outlined text-[20px]">arrow_forward</span>
+</button>
+</div>
+</section>
+<!-- Product Visual Canvas -->
+<section class="max-w-7xl mx-auto px-8 pb-32">
+<div class="relative bg-surface-container-low rounded-[2rem] p-4 overflow-hidden shadow-[0_40px_80px_rgba(0,0,0,0.03)]">
+<div class="aspect-video w-full rounded-[1.5rem] bg-surface-container-lowest overflow-hidden">
+<img class="w-full h-full object-cover mix-blend-multiply opacity-80" data-alt="Abstract 3D rendering of soft white waves with subtle blue lighting, representing fluid invisible intelligence and minimal technology" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD97_JcuCyqvpMBxQEGBV3OPnRbKVt8XQnEW6Sr5RP-5FZ7ivK4Xjwst8xX5rIQ-6G1dJhNvhQWplF8YLfugOIljdWFVFQJeSbyyy6bziGdligdiGnhMuiGdaei4YuewmjfrqdjEEEUdZPru8nn3LlVoPnmqRnOlEaHHlRBnkCNjnTMlOaMIU8lr50M8EWk5-FQYy-f6QBGSXuW7NmFWpkNYzBRMlx6N5v4-1A1NgQE7F6XK8v6XS1PpYEpJgyqdewn_A-sZOF5pFM"/>
+</div>
+<!-- Float Details -->
+<div class="absolute bottom-12 left-12 p-8 bg-surface-container-lowest/80 backdrop-blur-xl rounded-xl shadow-xl max-w-sm">
+<div class="text-[10px] uppercase tracking-widest font-bold text-primary mb-2">Architectural Integrity</div>
+<p class="text-sm text-on-surface-variant leading-relaxed">
+                        Aether integrates directly into the kernel level, ensuring zero-latency inference and absolute data privacy.
+                    </p>
+</div>
+</div>
+</section>
+<!-- Bento Philosophy Grid -->
+<section class="bg-surface-container-low py-32">
+<div class="max-w-7xl mx-auto px-8">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-8">
+<!-- Column 1 -->
+<div class="md:col-span-8 bg-surface-container-lowest p-12 rounded-xl flex flex-col justify-between min-h-[400px]">
+<div>
+<span class="material-symbols-outlined text-primary text-4xl mb-6">layers</span>
+<h3 class="text-3xl font-bold tracking-tight mb-4 text-on-background">Non-Intrusive Integration</h3>
+<p class="text-on-surface-variant text-lg leading-relaxed max-w-md">
+                                Most AI tools demand your attention. Aether demands your trust. It works within your existing tools, providing insights only when they are absolute.
+                            </p>
+</div>
+<div class="flex gap-4 items-center">
+<span class="text-xs font-bold text-outline uppercase tracking-widest">Supports:</span>
+<div class="flex gap-3">
+<span class="px-3 py-1 bg-surface-container-high rounded text-[10px] font-bold">AWS</span>
+<span class="px-3 py-1 bg-surface-container-high rounded text-[10px] font-bold">AZURE</span>
+<span class="px-3 py-1 bg-surface-container-high rounded text-[10px] font-bold">GCP</span>
+</div>
+</div>
+</div>
+<!-- Column 2 -->
+<div class="md:col-span-4 bg-gradient-to-br from-primary to-primary-dim p-12 rounded-xl text-on-primary flex flex-col justify-center">
+<h3 class="text-5xl font-black tracking-tighter mb-6">99.9%</h3>
+<p class="text-on-primary/80 font-medium leading-relaxed">
+                            Reduction in manual data categorization through our proprietary Silent-Sorting algorithm.
+                        </p>
+</div>
+<!-- Column 3 -->
+<div class="md:col-span-4 bg-surface-container-lowest p-12 rounded-xl border border-outline-variant/10">
+<span class="material-symbols-outlined text-primary text-3xl mb-4" data-weight="fill">shield_with_heart</span>
+<h4 class="text-xl font-bold mb-2">Absolute Privacy</h4>
+<p class="text-sm text-on-surface-variant leading-relaxed">
+                            Data never leaves your local environment. We process locally, and learn globally.
+                        </p>
+</div>
+<!-- Column 4 -->
+<div class="md:col-span-8 bg-surface-container-lowest p-12 rounded-xl border border-outline-variant/10 flex items-center gap-12">
+<div class="flex-1">
+<h4 class="text-xl font-bold mb-2">Editorial Precision</h4>
+<p class="text-sm text-on-surface-variant leading-relaxed">
+                                Our output isn't just data; it's narrative. Reports are formatted with high-end typography and clear hierarchy for immediate decision-making.
+                            </p>
+</div>
+<div class="w-1/3 h-24 bg-surface-container rounded-xl overflow-hidden relative">
+<img class="w-full h-full object-cover opacity-50" data-alt="Microscopic view of high-end circuit patterns with clean geometric lines in soft blue and white colors" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAkY6Kgdf0vlVOYx9SJaqFw1OeVVBewcZ6Gdu7_qHbJaO6nMAVAWsR5U3jaBcLJbPAUSrtzxVqa40iQeTt9zLGhf8Y0-1YvRfOwAw9jWI_oYQy9Th0knJkUmdoi9VIbvGMEIpANJe1PmGAuxYCIDw3Rc_oC5Uk4n7AioiSvgxwx_jqApejV_ysJ39XHIih2l8yAYsKxcM1h_Rh2pjOB-liOkRWgaRzGS75zHQ7ODMQggJMQSpz9o54QX3LKOglPVpxyzLjmTv7ckLg"/>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- High-Contrast Quote -->
+<section class="max-w-7xl mx-auto px-8 py-32 text-center">
+<h2 class="text-4xl md:text-5xl font-bold tracking-tight text-on-background max-w-4xl mx-auto leading-tight italic">
+                "The most profound technologies are those that disappear. They weave themselves into the fabric of everyday life until they are indistinguishable from it."
+            </h2>
+<div class="mt-12 text-on-surface-variant">
+<p class="font-bold text-on-background">— Mark Weiser</p>
+<p class="text-sm uppercase tracking-widest mt-1">Founding Philosophy</p>
+</div>
+</section>
+<!-- Footer CTA -->
+<section class="max-w-5xl mx-auto px-8 pb-32">
+<div class="bg-surface-container-high rounded-[2.5rem] p-24 text-center">
+<h3 class="text-4xl font-bold tracking-tight mb-8">Ready for the quiet revolution?</h3>
+<div class="flex flex-col md:flex-row justify-center gap-4">
+<button class="bg-primary text-on-primary px-8 py-4 rounded-xl font-bold">Join the waitlist</button>
+<button class="bg-surface-container-lowest text-on-surface px-8 py-4 rounded-xl font-bold">Speak to our team</button>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-slate-50 dark:bg-slate-950 py-12">
+<div class="flex flex-col md:flex-row justify-between items-center max-w-7xl mx-auto px-8">
+<div class="flex flex-col gap-4 mb-8 md:mb-0">
+<div class="text-lg font-bold text-slate-900 dark:text-white">Aether Intelligence</div>
+<p class="text-[10px] uppercase tracking-[0.05em] font-medium text-slate-500 max-w-xs leading-loose">
+                    Defining the next generation of autonomous background logic for enterprise infrastructure.
+                </p>
+</div>
+<div class="flex flex-col items-end gap-6">
+<div class="flex gap-8">
+<a class="text-[10px] uppercase tracking-[0.05em] font-medium text-slate-500 hover:text-blue-600 transition-colors" href="#">Privacy Policy</a>
+<a class="text-[10px] uppercase tracking-[0.05em] font-medium text-slate-500 hover:text-blue-600 transition-colors" href="#">Terms of Service</a>
+<a class="text-[10px] uppercase tracking-[0.05em] font-medium text-slate-500 hover:text-blue-600 transition-colors" href="#">Security</a>
+<a class="text-[10px] uppercase tracking-[0.05em] font-medium text-slate-500 hover:text-blue-600 transition-colors" href="#">Status</a>
+</div>
+<div class="text-[10px] uppercase tracking-[0.05em] font-medium text-slate-500">
+                    © 2024 Aether Intelligence. All rights reserved.
+                </div>
+</div>
+</div>
+</footer>
+</body></html>

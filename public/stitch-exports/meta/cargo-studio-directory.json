@@ -1,0 +1,21 @@
+{
+  "brand": "Cargo / Studio",
+  "contentType": "image/png",
+  "fileName": "cargo-studio-directory.png",
+  "generatedAt": "2026-04-02T04:25:38.222Z",
+  "htmlUrl": "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ8Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpbCiVodG1sXzViYWU4M2U3OWMwNjQ0MDI5NmJmMWIzMTZiZDVhOWI5EgsSBxCCisPc0AkYAZIBJAoKcHJvamVjdF9pZBIWQhQxNDMwODYzMzI0MDkyMDM4NTAwNQ&filename=&opi=96797242",
+  "imageUrl": "https://lh3.googleusercontent.com/aida/ADBb0ugpHHFq1HR2iUAYQ0R9JEKBMjFJ4Y8mks58w-Gu4ARZKMETxpOypMyhx-23ZKhetTj87j06wOaLz_Pce4ktz_qRQTjtp-vi9M9K45IdQfFWuj2PcWtNCZjcZ995DHKOQNF7RlXB6WCgSr1gVlB-80BJ3IqKd3m5I-lRtT03OnfrRNeUd_WtCbUHH9padwh9zDuakPZ6zmzDguzn8cPvHsfRxhKW7aKvUtcXeJHAAaYUgCDoOEWvFxJH7nA",
+  "notes": [
+    "I've created a new design system and four core screens for your Cargo-inspired studio portfolio. \n\nThe **Project Directory** is the heart of the site, showcasing work through a minimal grid and service filters. The **Works Index** provides a more structured, list-based view of the studio's entire history, while the **Case Study** for 'Vanguard Records' shows how to present a project with a calm, immersive flow. I've also included a **Studio Info** page that balances atmospheric photography with a clean, typographic 'About' section and services list. \n\nThe entire site is unified by a restrained, premium aesthetic that prioritizes high-quality typography and strategic negative space.\n\nWould you like to adjust any of the layouts or explore a different color palette?"
+  ],
+  "prompt": "Design a Cargo-inspired studio portfolio template with a selected project directory, service filters, structured lists, restrained premium type, and a calm case-study path.",
+  "projectId": "14308633240920385005",
+  "screenId": "4f105c8ad17d421b8740473ef2e8e6d2",
+  "slug": "cargo-studio-directory",
+  "suggestions": [
+    "Add a 'Services' page in a three-column grid",
+    "Change the color scheme to a darker, midnight-blue palette",
+    "Update the project directory with masonry-style thumbnails"
+  ],
+  "title": "Project Directory"
+}

@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Nomad Together - Italy Summer '24</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,600;0,700;0,800;1,700&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary-container": "#f97426",
+                        "secondary-fixed-dim": "#a3e2c0",
+                        "on-background": "#323331",
+                        "on-primary-fixed-variant": "#471900",
+                        "surface-container-highest": "#e4e2df",
+                        "primary-fixed": "#f97426",
+                        "error-dim": "#791903",
+                        "tertiary-dim": "#63511b",
+                        "on-tertiary-fixed": "#4d3e07",
+                        "on-secondary-fixed-variant": "#29664c",
+                        "surface": "#fcf9f7",
+                        "surface-dim": "#dbdad7",
+                        "on-tertiary": "#fff8ee",
+                        "error": "#a73b21",
+                        "primary-dim": "#8e3900",
+                        "on-tertiary-fixed-variant": "#6c5a22",
+                        "on-error-container": "#6e1400",
+                        "secondary-fixed": "#b1f0ce",
+                        "inverse-surface": "#0e0e0d",
+                        "secondary": "#2d6a4f",
+                        "inverse-primary": "#f97426",
+                        "on-secondary": "#e6ffee",
+                        "surface-container": "#f0edeb",
+                        "surface-tint": "#a14100",
+                        "on-surface-variant": "#5f5f5d",
+                        "tertiary": "#6f5d26",
+                        "primary": "#a14100",
+                        "on-secondary-fixed": "#014931",
+                        "background": "#fcf9f7",
+                        "tertiary-fixed": "#fae19b",
+                        "inverse-on-surface": "#9e9d9b",
+                        "on-secondary-container": "#1d5c42",
+                        "surface-container-high": "#eae8e5",
+                        "error-container": "#fd795a",
+                        "secondary-dim": "#1f5e44",
+                        "surface-variant": "#e4e2df",
+                        "surface-container-lowest": "#ffffff",
+                        "on-tertiary-container": "#615019",
+                        "on-error": "#fff7f6",
+                        "outline-variant": "#b3b2af",
+                        "on-primary-container": "#371200",
+                        "on-primary-fixed": "#000000",
+                        "primary-fixed-dim": "#e86818",
+                        "outline": "#7b7b78",
+                        "surface-bright": "#fcf9f7",
+                        "secondary-container": "#b1f0ce",
+                        "surface-container-low": "#f6f3f1",
+                        "on-surface": "#323331",
+                        "tertiary-fixed-dim": "#ebd28f",
+                        "tertiary-container": "#fae19b",
+                        "on-primary": "#fff7f5"
+                    },
+                    fontFamily: {
+                        "headline": ["Plus Jakarta Sans"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .presence-glow {
+            box-shadow: 0 0 0 2px #ffffff, 0 0 0 4px #b1f0ce;
+        }
+    </style>
+</head>
+<body class="bg-background font-body text-on-surface selection:bg-primary-container/30">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-white/70 dark:bg-zinc-900/70 backdrop-blur-md shadow-sm shadow-zinc-200/50 dark:shadow-none">
+<div class="flex justify-between items-center h-16 px-6 max-w-full mx-auto">
+<div class="flex items-center gap-8">
+<span class="text-xl font-bold text-zinc-800 dark:text-zinc-100 italic font-headline">Nomad Together</span>
+<div class="hidden md:flex items-center gap-6">
+<a class="text-orange-700 dark:text-orange-500 border-b-2 border-orange-600 pb-1 font-headline font-semibold text-sm tracking-tight" href="#">Trips</a>
+<a class="text-zinc-500 dark:text-zinc-400 hover:text-zinc-800 dark:hover:text-zinc-200 font-headline font-semibold text-sm tracking-tight transition-colors duration-200" href="#">Explore</a>
+<a class="text-zinc-500 dark:text-zinc-400 hover:text-zinc-800 dark:hover:text-zinc-200 font-headline font-semibold text-sm tracking-tight transition-colors duration-200" href="#">Saved</a>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<div class="flex items-center -space-x-2 mr-4">
+<img class="w-8 h-8 rounded-full border-2 border-white presence-glow" data-alt="Portrait of Sarah, a young woman with a friendly smile, warm studio lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCOq9GBQhy3ZKTO9j2gl2tjv2ZUGHhVLjyeEV57VG5JfZUSsSefI8mSMGFvmapIXCh5MXBaVr9RV_F3KnBrdhzn5iR3OnmSA9Z5bkHPDl7fkv1Wi0Nyq__J70X2b5pr5e9p5dLWi_0y5syHrMizsKwaXnUTHzHhRXoLIONaX1bYdkrcWqY5zhAJentb6u1UykdZq8I53L1mi4GKCU1CoEt8rN4RN3rGGBvaPWtw-zHI4S7zyWw_rqQiM6pbUPz7N-CUp9c0YPirD1w"/>
+<img class="w-8 h-8 rounded-full border-2 border-white" data-alt="Portrait of Alex, a man with a beard looking thoughtfully at the camera, soft natural light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA9uOpAuT0ME2qoe8Y-z1zkTu4LCZvN8gowMhabVaVq_g8aA07uIkmCX9CCLDgnriww0GVwASMZ-KNGI8DV8lnAZznnRh7uUUng9MKdStFt12p3WBtikGLkdL8ujZPbqlAC8mXluzczYtnRWyTqlUMqwzAzE-o9Rnk_t5p24NA6_2naQX3BoraHNbCvtYdKWz5v8r59YwONAvgTDRG9mWVxjTtWONHxc8SzeERiOfrhBTDbUmjyxBzFIuFbiMv07SZr0RytFHPPyqQ"/>
+<div class="w-8 h-8 rounded-full bg-surface-container-highest border-2 border-white flex items-center justify-center text-[10px] font-bold">+4</div>
+</div>
+<button class="material-symbols-outlined text-zinc-600 dark:text-zinc-400 p-2 hover:bg-zinc-50 dark:hover:bg-zinc-800 rounded-full transition-colors active:scale-95">notifications</button>
+<button class="material-symbols-outlined text-zinc-600 dark:text-zinc-400 p-2 hover:bg-zinc-50 dark:hover:bg-zinc-800 rounded-full transition-colors active:scale-95">group</button>
+<button class="bg-primary text-on-primary px-4 py-2 rounded-xl text-sm font-semibold hover:opacity-90 active:scale-95 transition-all">Share</button>
+</div>
+</div>
+</nav>
+<!-- SideNavBar -->
+<aside class="h-screen w-64 fixed left-0 top-0 bg-[#f6f3f1] dark:bg-zinc-900 z-40 hidden lg:block">
+<div class="flex flex-col h-full gap-2 p-4 pt-20">
+<div class="px-4 mb-6">
+<h2 class="font-headline font-bold text-lg text-zinc-800 dark:text-zinc-100">Italy Summer '24</h2>
+<p class="text-xs text-zinc-500 font-medium">6 Members Active</p>
+</div>
+<nav class="flex flex-col gap-1">
+<a class="flex items-center gap-3 bg-white dark:bg-zinc-800 text-orange-700 dark:text-orange-400 rounded-xl shadow-sm px-4 py-3 font-medium text-sm active:translate-x-1 transition-all" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">event_note</span>
+<span>Itinerary</span>
+</a>
+<a class="flex items-center gap-3 text-zinc-600 dark:text-zinc-400 px-4 py-3 font-medium text-sm hover:bg-orange-50 dark:hover:bg-orange-900/20 rounded-xl active:translate-x-1 transition-all" href="#">
+<span class="material-symbols-outlined">favorite</span>
+<span>Wishlist</span>
+</a>
+<a class="flex items-center gap-3 text-zinc-600 dark:text-zinc-400 px-4 py-3 font-medium text-sm hover:bg-orange-50 dark:hover:bg-orange-900/20 rounded-xl active:translate-x-1 transition-all" href="#">
+<span class="material-symbols-outlined">payments</span>
+<span>Budget</span>
+</a>
+<a class="flex items-center gap-3 text-zinc-600 dark:text-zinc-400 px-4 py-3 font-medium text-sm hover:bg-orange-50 dark:hover:bg-orange-900/20 rounded-xl active:translate-x-1 transition-all" href="#">
+<span class="material-symbols-outlined">description</span>
+<span>Documents</span>
+</a>
+<a class="flex items-center gap-3 text-zinc-600 dark:text-zinc-400 px-4 py-3 font-medium text-sm hover:bg-orange-50 dark:hover:bg-orange-900/20 rounded-xl active:translate-x-1 transition-all" href="#">
+<span class="material-symbols-outlined">forum</span>
+<span>Chat</span>
+</a>
+</nav>
+<div class="mt-auto p-4 bg-primary-container/10 rounded-2xl border border-primary-container/20">
+<p class="text-xs font-bold text-primary mb-2 uppercase tracking-wider">Group Task</p>
+<p class="text-sm text-on-surface mb-3 leading-relaxed">Need 2 more votes for the Amalfi stay.</p>
+<button class="w-full bg-primary text-white py-2 rounded-lg text-sm font-bold shadow-sm hover:brightness-110 active:scale-95 transition-all">Invite Friends</button>
+</div>
+</div>
+</aside>
+<!-- Main Content Area -->
+<main class="pt-16 lg:pl-64 min-h-screen">
+<div class="max-w-[1600px] mx-auto p-6 grid grid-cols-1 xl:grid-cols-12 gap-8">
+<!-- Left Panel: Itinerary -->
+<section class="xl:col-span-7 space-y-8">
+<header class="flex items-end justify-between mb-2">
+<div>
+<span class="text-primary font-bold tracking-widest text-xs uppercase">The Grand Tour</span>
+<h1 class="text-4xl font-headline font-extrabold text-on-surface mt-1">Daily Itinerary</h1>
+</div>
+<div class="flex items-center gap-2 bg-surface-container-low px-4 py-2 rounded-full border border-outline-variant/10">
+<span class="w-2 h-2 bg-secondary rounded-full"></span>
+<span class="text-xs font-medium text-on-surface-variant">Sarah is editing Day 3</span>
+</div>
+</header>
+<!-- Day Card -->
+<div class="bg-surface-container-low rounded-3xl p-6 relative">
+<div class="flex items-center justify-between mb-6">
+<div class="flex items-baseline gap-3">
+<span class="text-4xl font-headline font-extrabold text-primary-dim opacity-40">01</span>
+<h3 class="text-xl font-headline font-bold">Rome: The Eternal City</h3>
+<span class="text-sm text-on-surface-variant font-medium">June 14, 2024</span>
+</div>
+<button class="material-symbols-outlined text-on-surface-variant hover:bg-surface-container-high p-2 rounded-full transition-colors">more_horiz</button>
+</div>
+<div class="space-y-4">
+<!-- Activity Item -->
+<div class="bg-surface-container-lowest p-5 rounded-2xl flex gap-4 shadow-sm">
+<div class="w-12 h-12 bg-secondary-container rounded-xl flex items-center justify-center text-on-secondary-container shrink-0">
+<span class="material-symbols-outlined">museum</span>
+</div>
+<div class="flex-1">
+<div class="flex justify-between items-start">
+<h4 class="font-bold text-on-surface">Colosseum &amp; Roman Forum Tour</h4>
+<span class="text-xs font-bold text-secondary bg-secondary/10 px-2 py-1 rounded-md uppercase">Confirmed</span>
+</div>
+<p class="text-sm text-on-surface-variant mt-1">Guided walk through ancient ruins. Meeting at Arch of Constantine.</p>
+<div class="flex items-center gap-4 mt-3">
+<span class="flex items-center gap-1 text-xs font-medium text-on-surface-variant">
+<span class="material-symbols-outlined text-sm">schedule</span> 09:30 AM
+                                    </span>
+<span class="flex items-center gap-1 text-xs font-medium text-on-surface-variant">
+<span class="material-symbols-outlined text-sm">payments</span> €45.00
+                                    </span>
+</div>
+</div>
+</div>
+<!-- Transport Item -->
+<div class="bg-surface-container-lowest p-5 rounded-2xl flex gap-4 shadow-sm border-l-4 border-primary">
+<div class="w-12 h-12 bg-primary-container/10 rounded-xl flex items-center justify-center text-primary shrink-0">
+<span class="material-symbols-outlined">train</span>
+</div>
+<div class="flex-1">
+<h4 class="font-bold text-on-surface">Frecciarossa Train to Naples</h4>
+<p class="text-sm text-on-surface-variant mt-1">Departing Roma Termini, Platform 9.</p>
+<div class="flex items-center gap-4 mt-3">
+<span class="flex items-center gap-1 text-xs font-medium text-on-surface-variant">
+<span class="material-symbols-outlined text-sm">schedule</span> 04:15 PM
+                                    </span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Day Card (Active) -->
+<div class="bg-surface-container-low rounded-3xl p-6 relative border-2 border-secondary-container">
+<div class="absolute -top-3 -right-3">
+<div class="flex items-center gap-2 bg-secondary-container px-3 py-1 rounded-full shadow-md animate-pulse">
+<img class="w-5 h-5 rounded-full" data-alt="Small thumbnail of Sarah smiling" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB-CHfy2mqPWMD15gC0IHOnSBpNFQeGCX-5Auu_xRJBhAkNDgrpPXoh0ZaUsh41v9qHPjFZ8OJq7f5gfJRQ335Ez5W6FjikQVsPK0d4b0x8fk6lFz7PNgNL2KBBJ33G-NLiWmvafwp4VRWLqReOp_kuWbbBCy_4tdSqp-Awvj26ZfD11mKb_QMqH59CJupK8E3VJEknHAlLlAfP-fw98GCjujLBOODWr6sb_PlIk2gl1DDgpW8XJphSV1eI2McNTbKzYYi30NEq3-0"/>
+<span class="text-[10px] font-bold text-on-secondary-container">SARAH IS TYPING...</span>
+</div>
+</div>
+<div class="flex items-center justify-between mb-6">
+<div class="flex items-baseline gap-3">
+<span class="text-4xl font-headline font-extrabold text-primary-dim opacity-40">02</span>
+<h3 class="text-xl font-headline font-bold">Amalfi Coastal Drive</h3>
+<span class="text-sm text-on-surface-variant font-medium">June 15, 2024</span>
+</div>
+</div>
+<div class="space-y-4">
+<!-- Stay Item -->
+<div class="bg-surface-container-lowest p-5 rounded-2xl flex gap-4 shadow-sm">
+<div class="w-12 h-12 bg-tertiary-container/30 rounded-xl flex items-center justify-center text-tertiary shrink-0">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">hotel</span>
+</div>
+<div class="flex-1">
+<div class="flex justify-between items-start">
+<h4 class="font-bold text-on-surface">Villa Margherita Check-in</h4>
+<span class="text-xs font-bold text-tertiary bg-tertiary/10 px-2 py-1 rounded-md uppercase">Suggested</span>
+</div>
+<p class="text-sm text-on-surface-variant mt-1">Clifftop boutique hotel with lemon grove views.</p>
+<div class="flex items-center gap-3 mt-3">
+<div class="flex -space-x-1">
+<img class="w-6 h-6 rounded-full border border-white" data-alt="Alex profile thumbnail" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBVOKiHVLfG_TU7KPU4XyNL1ipuC5Mkpzt3YRdeMQFnLVuu54uxsoIh__du7lK7Cvfcz70vJY066dqu33DYQmg_-3nDocaRWckYMrhiVeEeAVRZHEK2dXmF7L-qJS_TeH_K-ymHoJbBTYfgEXOQ0xQMrs2qVrGoUbruKZnRzzK6UFVHAEjBQou89T_efnLjoAEqip65C3WlLT1vG-PrxAkAn__L_dVk0NOfiYSsHovwpDCxEILKrtF3aTwthd2x_2vPCH2xn6w5GHI"/>
+<img class="w-6 h-6 rounded-full border border-white" data-alt="Maya profile thumbnail" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBKSskIel0YIMerpI71hd5Eo6GN7aJfxqlPR4ZAR0nDXbaVBo-gzEJvjjKIDQ2ugqrHSavJXFFgM-yv1IIMz9IocZshW7uVOjV98HSRoO2CDZHRDiGZS4mgSJkq9aIyFWxZ6Jh3qyg4HOqjctwcqS5-Uh_DkgCgVrY-hZVmafDf2OvSC93fIBLiHH3ZeYAybVScZRfHRjoaB19hBv3BuF85wDLUYw_U2Y_LCCwkQPqyvqxQiJN7mk16vfqhq3CCOA0j6EeEeVMG8Rg"/>
+</div>
+<span class="text-xs font-medium text-on-surface-variant">Alex and Maya liked this</span>
+</div>
+</div>
+</div>
+<!-- Empty State Slot -->
+<button class="w-full border-2 border-dashed border-outline-variant/30 py-6 rounded-2xl flex flex-col items-center justify-center gap-2 text-on-surface-variant hover:bg-white transition-all group">
+<span class="material-symbols-outlined text-3xl group-hover:scale-110 duration-200">add_circle</span>
+<span class="text-sm font-bold">Add Activity or Stay</span>
+</button>
+</div>
+</div>
+</section>
+<!-- Right Panel: Wishlist -->
+<section class="xl:col-span-5">
+<div class="sticky top-24 space-y-6">
+<div class="flex items-center justify-between">
+<h2 class="text-2xl font-headline font-bold text-on-surface">Shared Wishlist</h2>
+<button class="text-primary font-bold text-sm flex items-center gap-1 hover:underline">
+                            View All <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+</div>
+<!-- Airbnb Style Cards -->
+<div class="grid grid-cols-1 gap-6">
+<!-- Card 1 -->
+<div class="bg-surface-container-lowest rounded-[2rem] overflow-hidden shadow-sm group">
+<div class="relative h-64 overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="Stunning white villa with blue shutters on an Amalfi cliff overlooking the turquoise Mediterranean sea at sunset" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBXNn4AUl6sOP4loROcfzU9NExcgcY9DgI1ibbfqEM0VU8evpIbYMuBtg3AuYpki-3Qhaq34w2gl9vpOzmHgwWiUsmH5l7xZktm4B2gzwI2qO2vVIq-IXcQLsX_LTAQEQphp2zTzIxQZw5xH87rbIZWEZdl02lo2Tnn_BvlTmN2l0OWtOAmYL3BtZsQz0EViHfgkbgkSNZN9A3mmIA1hYCixsbkjEMcbuygdyPK85JmY5D6gb0fIjh1h7rMPaSQ39p1qFWKBZAK1HQ"/>
+<button class="absolute top-4 right-4 w-10 h-10 bg-white/90 backdrop-blur rounded-full flex items-center justify-center text-error shadow-lg active:scale-90 transition-all">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">favorite</span>
+</button>
+<div class="absolute bottom-4 left-4 bg-white/95 backdrop-blur px-3 py-1 rounded-full text-xs font-bold shadow-sm">
+                                    4.9 ★ (128 reviews)
+                                </div>
+</div>
+<div class="p-6">
+<div class="flex justify-between items-start mb-2">
+<div>
+<h3 class="font-headline font-bold text-lg">Cliffside Retreat in Positano</h3>
+<p class="text-sm text-on-surface-variant">Entire villa • 4 bedrooms</p>
+</div>
+<p class="text-xl font-bold text-primary">€420<span class="text-xs text-on-surface-variant font-normal">/night</span></p>
+</div>
+<div class="flex items-center gap-4 mt-6 pt-4 border-t border-surface-container">
+<button class="flex-1 bg-primary text-white py-2.5 rounded-xl text-sm font-bold shadow-md hover:shadow-lg transition-all active:scale-95">Vote for This</button>
+<button class="flex items-center gap-2 px-4 py-2.5 bg-surface-container-low rounded-xl text-sm font-bold text-on-surface hover:bg-surface-container-high transition-all">
+<span class="material-symbols-outlined text-lg">forum</span>
+<span>Discuss</span>
+</button>
+</div>
+<div class="mt-4 flex items-center gap-2">
+<div class="flex -space-x-1">
+<img class="w-6 h-6 rounded-full border border-white" data-alt="Portrait of James, a young man laughing" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA7AshaQuNzhQkDEZN7FVNWdy3q_js0dcU_0k30JUfaTTnx5K6-T8YCe0SmsA1YAnv4LykU6lFB4GfB1WFnCqhL3Kt5dJN_cGPo3btRf1QW42Ul0LOY24s8gaXO8oXaGMmPOlxU2PMDx8i-BUX60c4PfdQHjXLjX-3O8yMp4akBCzA0ECa7bg5sUXTPGhTLYwRL56oj8Kr7L7SBlj8MAbMGG1sq5NvgBlGwdxXCwLlGug-Dn0Ah8PZ-SjyehCrajgBXuGsFJ29moTE"/>
+</div>
+<p class="text-[11px] text-on-surface-variant italic">"Alex: This balcony view is non-negotiable!"</p>
+</div>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="bg-surface-container-lowest rounded-[2rem] overflow-hidden shadow-sm group">
+<div class="relative h-64 overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="Rustic Italian farmhouse with terra cotta roof surrounded by lush green cypress trees and rolling hills in Tuscany" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBwsu1aUcyThSgHy0t-DtdRxszn6AsfhH8pnaH-nrRGSmVpUbG2TTUt2tOkNPBURuJFPSGVbvJFlc_NPvJDaNrGk9KzoFH1Bvr4XsaipAbsHdhQmRr74b4lBOxAe4pz_SXwbySE1KcgYEp2pkL-kzzJOUpRERxXPUdDDdFX7THDDJT9TNEEYeZJkAIEtJLupkd1e34affdfWkA1EN4bn2DCbUYYGQ50u7ZUFiAyisEIiNna008tWujAz_xhnmFdXYIVfYLQthouMeE"/>
+<button class="absolute top-4 right-4 w-10 h-10 bg-white/20 backdrop-blur rounded-full flex items-center justify-center text-white shadow-lg active:scale-90 transition-all border border-white/30">
+<span class="material-symbols-outlined">favorite</span>
+</button>
+<div class="absolute bottom-4 left-4 bg-white/95 backdrop-blur px-3 py-1 rounded-full text-xs font-bold shadow-sm">
+                                    4.7 ★ (84 reviews)
+                                </div>
+</div>
+<div class="p-6">
+<div class="flex justify-between items-start mb-2">
+<div>
+<h3 class="font-headline font-bold text-lg">Authentic Tuscan Farmhouse</h3>
+<p class="text-sm text-on-surface-variant">Farm stay • 6 bedrooms</p>
+</div>
+<p class="text-xl font-bold text-primary">€280<span class="text-xs text-on-surface-variant font-normal">/night</span></p>
+</div>
+<div class="flex items-center gap-4 mt-6 pt-4 border-t border-surface-container">
+<button class="flex-1 bg-surface-container-highest text-on-surface py-2.5 rounded-xl text-sm font-bold transition-all active:scale-95">Add Vote</button>
+<button class="flex items-center gap-2 px-4 py-2.5 bg-surface-container-low rounded-xl text-sm font-bold text-on-surface hover:bg-surface-container-high transition-all">
+<span class="material-symbols-outlined text-lg">forum</span>
+<span>Discuss</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-[#fcf9f7] dark:bg-zinc-950 w-full py-12 mt-20 relative overflow-hidden">
+<div class="absolute inset-0 bg-zinc-100 dark:bg-zinc-900 h-px w-full top-0 opacity-30"></div>
+<div class="flex flex-col items-center gap-6 px-8 max-w-7xl mx-auto relative">
+<div class="flex flex-wrap justify-center gap-8 md:gap-12">
+<a class="font-['Inter'] text-xs uppercase tracking-widest text-zinc-500 hover:text-orange-700 dark:text-zinc-400 hover:underline decoration-orange-300 underline-offset-4 duration-300 opacity-80 hover:opacity-100" href="#">Travel Tips</a>
+<a class="font-['Inter'] text-xs uppercase tracking-widest text-zinc-500 hover:text-orange-700 dark:text-zinc-400 hover:underline decoration-orange-300 underline-offset-4 duration-300 opacity-80 hover:opacity-100" href="#">Privacy Policy</a>
+<a class="font-['Inter'] text-xs uppercase tracking-widest text-zinc-500 hover:text-orange-700 dark:text-zinc-400 hover:underline decoration-orange-300 underline-offset-4 duration-300 opacity-80 hover:opacity-100" href="#">Support</a>
+<a class="font-['Inter'] text-xs uppercase tracking-widest text-zinc-500 hover:text-orange-700 dark:text-zinc-400 hover:underline decoration-orange-300 underline-offset-4 duration-300 opacity-80 hover:opacity-100" href="#">Safety Guide</a>
+</div>
+<div class="text-center">
+<p class="font-['Inter'] text-xs uppercase tracking-widest text-zinc-400">© 2024 Nomad Together. Journey responsibly.</p>
+</div>
+</div>
+</footer>
+<!-- Mobile Navigation -->
+<div class="md:hidden fixed bottom-6 left-6 right-6 z-50">
+<div class="bg-white/90 backdrop-blur-xl rounded-2xl shadow-2xl flex justify-around items-center h-16 border border-white/20 px-2">
+<button class="flex flex-col items-center gap-1 text-orange-700">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">explore</span>
+<span class="text-[10px] font-bold">Explore</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-zinc-400">
+<span class="material-symbols-outlined">event_note</span>
+<span class="text-[10px] font-bold">Trip</span>
+</button>
+<button class="w-12 h-12 bg-primary text-white rounded-full flex items-center justify-center -translate-y-4 shadow-lg shadow-primary/40">
+<span class="material-symbols-outlined">add</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-zinc-400">
+<span class="material-symbols-outlined">favorite</span>
+<span class="text-[10px] font-bold">Saved</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-zinc-400">
+<span class="material-symbols-outlined">person</span>
+<span class="text-[10px] font-bold">Profile</span>
+</button>
+</div>
+</div>
+</body></html>

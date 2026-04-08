@@ -1,0 +1,22 @@
+{
+  "brand": "Cargo / Fashion",
+  "contentType": "image/png",
+  "fileName": "cargo-luxury-runway-house.png",
+  "generatedAt": "2026-04-07T06:09:45.277Z",
+  "htmlUrl": "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ7Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpaCiVodG1sXzU2ODExN2Q2ZDU2MzQ0NWU4MGNkOTE3N2NmYmNkMzEyEgsSBxCCisPc0AkYAZIBIwoKcHJvamVjdF9pZBIVQhMxMzM5MDExOTAxNzU1OTQ3MjQ5&filename=&opi=96797242",
+  "imageUrl": "https://lh3.googleusercontent.com/aida/ADBb0ujMXWdUtBxvBOVbx67bGh6KYvmd4btWOktn7a2mtRzzcdXDJ5tYqrhG2DUMOJnsjCf3UQVw0s4jUJdL9jxVjSmmdMojSR8b6HRGBxPPgiS0qsWnV-E1N_EKt0RyyBXOM-2nMHptVbfOXxkWzRZ0Tk_k7rujBlDovnX8xxWLIsy-2yqVm9M795RHKZWq2eGKibwV5Mm4X1CuXPCMCgi3x4cud_77UCf7J3VarWH-3Xm-8KFXiCpUJiqAcD4",
+  "notes": [
+    "I've designed the luxury fashion house portfolio website with an editorial, 'runway dossier' aesthetic. The homepage features:\n\n- A high-contrast, black-and-ivory color scheme with elegant serif typography.\n- A minimalist navigation bar and refined footer for a quiet, high-end feel.\n- A hero section with a full-bleed, striking runway portrait.\n- Sequential 'chapters' for different collections, using serif headings and negative space to create editorial pacing.\n- Minimalist 'collection rails' for runway stills and detail shots.\n- A dedicated 'Backstage Credits' section to emphasize the craftsmanship behind the house.\n\nDoes this capture the quiet, premium feel you were looking for, or should we refine any of the sections?"
+  ],
+  "prompt": "Design a luxury fashion house portfolio with full-bleed runway stills, black-and-ivory surfaces, serif chapter headings, elegant collection rails, backstage credits, and quiet editorial pacing. The site should feel like a premium runway dossier rather than a store.",
+  "projectId": "1339011901755947249",
+  "screenId": "18b89615c47f49b6bddfbb28dccecb76",
+  "slug": "cargo-luxury-runway-house",
+  "suggestions": [
+    "Create a collection gallery screen for 'Chapter I'",
+    "Design an 'Archives' screen with a chronological layout",
+    "Refine the typography for the chapter headings",
+    "Add more horizontal scrolling rails for runway stills"
+  ],
+  "title": "The Runway Dossier - Home"
+}

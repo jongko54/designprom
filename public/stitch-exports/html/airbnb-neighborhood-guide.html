@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>The Curated Wanderer | Editorial Discovery</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Plus+Jakarta+Sans:wght@700;800&amp;display=swap" rel="stylesheet"/>
+<!-- Icons -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary-container": "#f68b6f",
+              "on-primary-fixed-variant": "#611a07",
+              "error-container": "#fa746f",
+              "tertiary-fixed-dim": "#e9c484",
+              "secondary-dim": "#535673",
+              "secondary-container": "#dfe0ff",
+              "surface-container-high": "#f2efd2",
+              "tertiary-container": "#f8d291",
+              "on-surface-variant": "#66664c",
+              "surface-container-lowest": "#ffffff",
+              "on-error": "#ffffff",
+              "on-primary-container": "#541101",
+              "on-tertiary-fixed": "#4b3401",
+              "on-secondary": "#ffffff",
+              "inverse-on-surface": "#9f9d8d",
+              "surface-container": "#f7f5da",
+              "outline-variant": "#bcbb9c",
+              "on-secondary-fixed": "#3a3d58",
+              "inverse-surface": "#0f0f05",
+              "on-surface": "#393922",
+              "primary-dim": "#923e28",
+              "background": "#fffbff",
+              "surface-tint": "#a24a33",
+              "surface": "#fffbff",
+              "on-error-container": "#6e0a12",
+              "on-secondary-fixed-variant": "#575a76",
+              "on-background": "#393922",
+              "tertiary": "#7c602a",
+              "surface-dim": "#e6e4c3",
+              "on-primary": "#ffffff",
+              "surface-container-highest": "#eceac9",
+              "primary-fixed": "#f68b6f",
+              "on-secondary-container": "#4d506c",
+              "outline": "#838266",
+              "on-tertiary-container": "#604613",
+              "secondary": "#60627f",
+              "on-primary-fixed": "#200300",
+              "error-dim": "#67040d",
+              "surface-bright": "#fffbff",
+              "tertiary-fixed": "#f8d291",
+              "primary-fixed-dim": "#e67f63",
+              "primary": "#a24a33",
+              "error": "#af3d3b",
+              "on-tertiary": "#ffffff",
+              "secondary-fixed": "#dfe0ff",
+              "tertiary-dim": "#6f541f",
+              "surface-variant": "#eceac9",
+              "on-tertiary-fixed-variant": "#6b501c",
+              "secondary-fixed-dim": "#d0d2f4",
+              "inverse-primary": "#f68b6f",
+              "surface-container-low": "#fdfae2"
+            },
+            fontFamily: {
+              "headline": ["Plus Jakarta Sans"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+      body {
+        font-family: 'Inter', sans-serif;
+        background-color: #fffbff;
+        color: #393922;
+      }
+      .editorial-text {
+        font-family: 'Plus Jakarta Sans', sans-serif;
+      }
+    </style>
+</head>
+<body class="bg-surface overflow-x-hidden">
+<!-- TopNavBar Implementation from JSON -->
+<header class="fixed top-0 w-full z-50 bg-white/80 dark:bg-stone-900/80 backdrop-blur-xl shadow-[0_12px_32px_rgba(57,57,34,0.06)]">
+<nav class="flex justify-between items-center px-12 h-20 w-full mx-auto max-w-screen-2xl">
+<div class="text-2xl font-bold tracking-tighter text-[#a24a33] dark:text-[#f68b6f]">The Curated Wanderer</div>
+<div class="hidden md:flex gap-10 font-['Plus_Jakarta_Sans'] font-medium text-sm tracking-tight">
+<a class="text-[#a24a33] dark:text-[#f68b6f] font-bold border-b-2 border-[#a24a33] dark:border-[#f68b6f] pb-1" href="#">Stay</a>
+<a class="text-[#66664c] dark:text-stone-400 hover:text-[#a24a33] dark:hover:text-[#f68b6f] transition-all" href="#">Experience</a>
+<a class="text-[#66664c] dark:text-stone-400 hover:text-[#a24a33] dark:hover:text-[#f68b6f] transition-all" href="#">Online</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="p-2 hover:bg-stone-100/50 dark:hover:bg-stone-800/50 rounded-full transition-colors active:scale-95 duration-200 ease-out">
+<span class="material-symbols-outlined text-on-surface-variant">language</span>
+</button>
+<button class="flex items-center gap-2 p-2 px-4 bg-surface-container-high rounded-full hover:bg-stone-100 dark:hover:bg-stone-800 transition-colors active:scale-95 duration-200 ease-out">
+<span class="material-symbols-outlined text-on-surface-variant">account_circle</span>
+<span class="text-xs font-semibold uppercase tracking-widest text-on-surface-variant">Menu</span>
+</button>
+</div>
+</nav>
+</header>
+<main class="pt-20">
+<!-- Hero Section: Editorial Travel Rhythm -->
+<section class="relative px-6 md:px-12 pt-12 pb-24">
+<div class="max-w-screen-2xl mx-auto">
+<div class="flex flex-col lg:flex-row gap-12 items-end">
+<div class="w-full lg:w-3/5">
+<span class="text-primary font-bold tracking-[0.2em] uppercase text-xs mb-4 block">Neighborhood Guide</span>
+<h1 class="text-5xl md:text-7xl lg:text-8xl editorial-text font-extrabold text-on-surface tracking-tighter leading-[0.95]">
+                            Living in the <br/>
+<span class="bg-gradient-to-r from-primary to-primary-container bg-clip-text text-transparent italic">Golden Rhythm</span>
+</h1>
+<p class="mt-8 text-lg md:text-xl text-on-surface-variant max-w-xl font-body leading-relaxed">
+                            Beyond the postcards lies a layer of the city known only to those who wander. We’ve curated the sounds, scents, and secret paths of our favorite boroughs.
+                        </p>
+<div class="mt-10 flex flex-wrap gap-4">
+<button class="px-8 py-4 rounded-full bg-gradient-to-br from-primary to-primary-container text-on-primary font-bold text-sm shadow-xl active:scale-95 transition-transform">
+                                Explore Local Gems
+                            </button>
+<button class="px-8 py-4 rounded-full bg-surface-container-high text-on-surface font-bold text-sm hover:bg-surface-variant transition-colors">
+                                View Interactive Map
+                            </button>
+</div>
+</div>
+<div class="w-full lg:w-2/5 group">
+<div class="aspect-[4/5] rounded-xl overflow-hidden shadow-2xl relative">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Sun-drenched cobblestone alleyway in a historic European neighborhood with blooming bougainvillea and warm evening golden light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBxPlKfIrJw7Nut8XLiw1QYBMzLBX7YpvBaRsvu5c-aYdSJGcz4S2cepmzgpYLzhZoxOZUGzlQvW30hpnbI3rYtfGztpwnytObXtfTjxuF2c6mTxJBBzwRdgQd65z-2IYMlVPUgyJyVGrkhEjcHHnqzObuwvZeeQnZteqHLt3zpcNb5asxRS9WkdLFrNQolyC97oazcQYNOTEwClPJJ8ktwrBmREi_nENTK8SAdpdiF1s-ojKKOlNLwpzrp__FNgFIbrZLLIlCqKU4"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
+<div class="absolute bottom-8 left-8 right-8 p-6 bg-surface-bright/80 backdrop-blur-xl rounded-lg shadow-lg">
+<span class="text-[10px] font-bold text-primary tracking-widest uppercase">Spotlight</span>
+<h3 class="text-xl font-bold editorial-text text-on-surface">The Alchemist's Quarter</h3>
+<div class="flex items-center gap-2 mt-2">
+<span class="material-symbols-outlined text-primary-fixed-dim text-sm">location_on</span>
+<span class="text-xs font-medium text-on-surface-variant">Porto, Portugal</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Search & Filter Bar (The "Human-Centric" UI) -->
+<section class="px-6 md:px-12 py-8 bg-surface-container-low">
+<div class="max-w-screen-2xl mx-auto flex flex-col md:flex-row gap-6 items-center justify-between">
+<div class="flex items-center gap-2 overflow-x-auto pb-4 md:pb-0 w-full md:w-auto no-scrollbar">
+<button class="whitespace-nowrap px-6 py-2.5 bg-primary text-on-primary rounded-full text-sm font-semibold transition-all">All Stories</button>
+<button class="whitespace-nowrap px-6 py-2.5 bg-surface-variant text-on-surface-variant rounded-full text-sm font-semibold hover:bg-surface-container-highest transition-all">Artisan Cafes</button>
+<button class="whitespace-nowrap px-6 py-2.5 bg-surface-variant text-on-surface-variant rounded-full text-sm font-semibold hover:bg-surface-container-highest transition-all">Hidden Parks</button>
+<button class="whitespace-nowrap px-6 py-2.5 bg-surface-variant text-on-surface-variant rounded-full text-sm font-semibold hover:bg-surface-container-highest transition-all">Night Markets</button>
+<button class="whitespace-nowrap px-6 py-2.5 bg-surface-variant text-on-surface-variant rounded-full text-sm font-semibold hover:bg-surface-container-highest transition-all">Architecture</button>
+</div>
+<div class="relative w-full md:w-72 group">
+<input class="w-full bg-surface-container-lowest border-none rounded-full py-3 px-6 text-sm focus:ring-2 focus:ring-primary/40 text-on-surface-variant shadow-sm transition-all" placeholder="Search neighborhoods..." type="text"/>
+<span class="material-symbols-outlined absolute right-4 top-1/2 -translate-y-1/2 text-on-surface-variant opacity-50 group-focus-within:opacity-100">search</span>
+</div>
+</div>
+</section>
+<!-- Neighborhood Bento Grid: Discover Hidden Gems -->
+<section class="px-6 md:px-12 py-24">
+<div class="max-w-screen-2xl mx-auto">
+<div class="flex items-center justify-between mb-12">
+<h2 class="text-4xl md:text-5xl editorial-text font-bold tracking-tight">Discover Hidden Gems</h2>
+<a class="text-primary font-bold text-sm border-b-2 border-primary/20 hover:border-primary transition-all" href="#">See the whole map</a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-4 md:grid-rows-2 gap-8 h-auto md:h-[800px]">
+<!-- Large Feature -->
+<div class="md:col-span-2 md:row-span-2 rounded-lg bg-surface-container-lowest overflow-hidden group relative flex flex-col">
+<div class="h-full relative overflow-hidden">
+<img class="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110" data-alt="Cinque Terre coastal village with colorful houses on a cliffside during sunset, warm ocean mist and soft lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAkkSLOO3muN1ezhj0kAv92qsuP2V7mL7FBZj6nV56VHrzXi42K-CvN8pc_abU8BrQq4LRbXDF8ypTx_SS4FUBdBxali-Jd2uQf9UNxMq2ziZXFZCNdKez3h2CpEQLO9SU9-rlf9ArwciY6EVyT3aCQoYdL7tRU1FRzz6_iIMCToMNGgV3EnngTmS1nvDC_nm6fNllqLLMG1tXtsIkNzo623q4pW2Pj75evMUbOwpT6abPd0L5Mjs7HVhdYZ5LXdh9VTdsQrG6UEBk"/>
+<div class="absolute inset-0 bg-gradient-to-t from-on-surface/80 via-transparent to-transparent"></div>
+</div>
+<div class="absolute bottom-0 p-10 text-white">
+<span class="px-3 py-1 rounded-full bg-primary-container text-on-primary-container text-[10px] font-bold uppercase tracking-widest mb-4 inline-block">Curated Peak</span>
+<h3 class="text-4xl editorial-text font-extrabold mb-4">The Painted Coast</h3>
+<p class="text-white/80 max-w-md text-base leading-relaxed mb-6">Explore the vertical villages where every sunrise paints a different story on the limestone walls.</p>
+<div class="flex items-center gap-6">
+<div class="flex -space-x-3">
+<div class="w-10 h-10 rounded-full border-2 border-white bg-stone-300" data-alt="portrait of a local guide smiling"></div>
+<div class="w-10 h-10 rounded-full border-2 border-white bg-stone-400" data-alt="portrait of a local chef"></div>
+<div class="w-10 h-10 rounded-full border-2 border-white bg-stone-200" data-alt="portrait of a travel blogger"></div>
+</div>
+<span class="text-xs font-medium">12 Local Guides Active</span>
+</div>
+</div>
+</div>
+<!-- Medium Feature -->
+<div class="md:col-span-2 md:row-span-1 rounded-lg bg-surface-container-low overflow-hidden group flex flex-col md:flex-row shadow-sm">
+<div class="w-full md:w-1/2 overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Parisian cafe front with red awnings and small round tables on a quiet morning sidewalk with soft natural light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB-9uQCc8df4xtZcnoVME3jubuy9uuddQpyVPKfbqXyS-4a_JWbBpsKRnichrN2NCD0uoM8yq5vgSQ5G0TX5UIcujqJlXLi2iloPprzDZL6u3sDl4kPQoDxDR3JM1qWwu_1k99TFoNE1hqtnmCFgREL_2OLg9bDN49DF3U6RkUxgQdgVdkXJ-aYcueL33D-GRRKHDmC0y91TtfNjDWebzq0gv1uyTHEJ6lk3_ar-gHmEDgaEZaM-FfR9vnsV6Ukx3oA5mQMNQFy94E"/>
+</div>
+<div class="w-full md:w-1/2 p-8 flex flex-col justify-center">
+<span class="text-primary font-bold text-[10px] tracking-widest uppercase mb-2">Editor's Pick</span>
+<h3 class="text-2xl font-bold editorial-text mb-3">Marais Mornings</h3>
+<p class="text-on-surface-variant text-sm leading-relaxed mb-6">The scent of fresh butter and the sound of morning markets in the 4th.</p>
+<button class="w-fit text-xs font-bold uppercase tracking-widest border-b border-primary text-primary hover:text-primary-dim transition-colors">Read Article</button>
+</div>
+</div>
+<!-- Small Features -->
+<div class="rounded-lg bg-surface-container-high overflow-hidden group shadow-sm flex flex-col">
+<div class="h-48 overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Red traditional phone booth and red double decker bus in London with gray buildings in soft focus" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAKzT7kbW66hNNQ8XHjovljvbCIbdwErAA8qJTYW3-d6Jj-vEJgXnIWHBWsew9YZv_xVOlUNsYKm92CFce1sIADELYvlMtg_JjErICFbCGigvU3q6YcQV4iERSFl1-LMOgMMkIibQcKLX79QqYddHbQbbqsz-RXopiZIgb_qFThkyXsx61tpLAWigXzcPG_ku-tELMv74YEr4WASjcMHbq6Oq_G8hOsaMhdEOUiqe3YhJzcBQo3W7cSVzij7zJrOXiTRAKwn0WpfEE"/>
+</div>
+<div class="p-6">
+<h4 class="font-bold editorial-text text-lg">Brick Lane Vinyl</h4>
+<span class="text-[11px] font-medium text-on-surface-variant/70 block mt-1">London, UK</span>
+</div>
+</div>
+<div class="rounded-lg bg-surface-container-high overflow-hidden group shadow-sm flex flex-col">
+<div class="h-48 overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Interior of a modern cocktail bar with dimly lit warm orange tones and brass fixtures" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDKAS5XLyEsTMzG2rKh5y9DtnDbcmv7_DEqP5aUQ5iqfw4cNYYNGkSfqh3OoOTrF6g5nTtHS3cpb5oTF873_AwqL09t-iQlNzz3D0wkTuuq50BkBbLG__U_CcOjBeJew-7BEpWV0ykIyfoxkGQa5DG7ebV6961krXpQ0Gc09LjcP7koZmnsjEQ3hg4jLrGFJ4CfMJmmBHmx2R1iaGeeOal62fqd0SD9DNq9Hbz0q_frWHRXM7v0hHgZur3uXp5L_lNmhJ-ySxNJAmA"/>
+</div>
+<div class="p-6">
+<h4 class="font-bold editorial-text text-lg">Speakeasy Solitude</h4>
+<span class="text-[11px] font-medium text-on-surface-variant/70 block mt-1">New York, USA</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Neighborhood Map Cues Section -->
+<section class="px-6 md:px-12 py-16 bg-surface-container-low">
+<div class="max-w-screen-2xl mx-auto flex flex-col lg:flex-row items-center gap-16">
+<div class="w-full lg:w-1/2">
+<h2 class="text-4xl md:text-6xl editorial-text font-bold tracking-tight mb-8">Follow the <br/>Local Pulse</h2>
+<p class="text-lg text-on-surface-variant leading-relaxed mb-10">
+                        Our interactive neighborhood map highlights real-time gatherings, pop-up galleries, and where the locals are heading tonight. Stay in the loop with curated beats.
+                    </p>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+<div class="p-6 bg-surface-container-lowest rounded-lg shadow-sm border border-outline-variant/10">
+<span class="material-symbols-outlined text-primary-fixed-dim text-3xl mb-4">explore</span>
+<h4 class="font-bold editorial-text mb-2">Live Discoveries</h4>
+<p class="text-sm text-on-surface-variant">See what's trending in your current borough right now.</p>
+</div>
+<div class="p-6 bg-surface-container-lowest rounded-lg shadow-sm border border-outline-variant/10">
+<span class="material-symbols-outlined text-primary-fixed-dim text-3xl mb-4" style="font-variation-settings: 'FILL' 1;">favorite</span>
+<h4 class="font-bold editorial-text mb-2">Wanderer Favorites</h4>
+<p class="text-sm text-on-surface-variant">Hand-picked selections from our community of nomads.</p>
+</div>
+</div>
+</div>
+<div class="w-full lg:w-1/2">
+<div class="aspect-square bg-surface-dim rounded-xl shadow-inner relative overflow-hidden border-8 border-surface-container-high">
+<!-- Abstract Map Visual -->
+<img class="absolute inset-0 w-full h-full object-cover opacity-40 grayscale" data-alt="Abstract aerial view of city street map layout with minimal design and soft beige tones" data-location="Lisbon" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDymvQHDfuheL5wrPzHrE08TuyNJH_jwfwo80Piaam6c49D6CDndXLgo2_0vG_78SSaa60pTYN29g2pcBrzz1v80fwprwSnBxwwUQjBYlXRJj9LFU_DkpsNx0oyTCrEO4XkrXYXNl6nXyOy7tDkHGfQZez_INQRwL5bPoagpQ3-KokCK4QpZUMs2i8vxuPVr2aOo7_qyn0RJrLomZHxD_LamtCE0IC9b4WSEpNZMpmWwVqKawLC8JlTOJYlFHEdN7uMj7_xuLuBIbo"/>
+<!-- Map Pins -->
+<div class="absolute top-1/4 left-1/3">
+<div class="relative flex items-center justify-center">
+<div class="absolute w-12 h-12 bg-primary/20 rounded-full animate-ping"></div>
+<div class="w-8 h-8 bg-primary rounded-full shadow-lg flex items-center justify-center text-white">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">restaurant</span>
+</div>
+</div>
+</div>
+<div class="absolute bottom-1/3 right-1/4">
+<div class="w-8 h-8 bg-on-tertiary-container rounded-full shadow-lg flex items-center justify-center text-white">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">local_cafe</span>
+</div>
+</div>
+<div class="absolute top-1/2 right-1/2 translate-x-1/2 translate-y-1/2">
+<div class="w-8 h-8 bg-primary-container rounded-full shadow-lg flex items-center justify-center text-white">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">park</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Traveler Guides Carousel -->
+<section class="px-6 md:px-12 py-24">
+<div class="max-w-screen-2xl mx-auto">
+<div class="mb-16">
+<span class="text-primary font-bold tracking-[0.2em] uppercase text-xs mb-4 block">Personal Narrative</span>
+<h2 class="text-4xl md:text-5xl editorial-text font-bold tracking-tight">Traveler Chronicles</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+<!-- Guide Card 1 -->
+<div class="group cursor-pointer">
+<div class="aspect-[3/4] rounded-lg overflow-hidden mb-8 shadow-md">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="Young man standing on a beach cliff overlooking the ocean at sunset with wind-blown hair and warm mood" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCNkRoX3_4WA6jOFT3Svo2fO7JVhY_pr65_6WnFcWwALv2Qa81O25_jCTwUma2OU8NH3d-Vyu8dow9JrRfAXrDlkd8FMG9PueRqNXEhUGZG8YTZbxNTAHNPL28wXz4NFCWwNRGpQsJkpcVT4NuTGAcb2qpe6bTFRH5MN9zTwO-lNKObxEhSfzylQGrpvVnlb4kq2Okq44E9ySniK6IecudBpFred5x_8yb2_-gubxkxN2DuXvtVrhC_lWn-roopVSMPS9ufpyKehSg"/>
+</div>
+<div class="space-y-4">
+<span class="text-xs font-bold text-on-surface-variant uppercase tracking-widest">Story by Elias Thorne</span>
+<h3 class="text-2xl font-bold editorial-text group-hover:text-primary transition-colors">Chasing the Azure Hour in Marseille</h3>
+<p class="text-on-surface-variant text-sm leading-relaxed">How a missed train led to the most beautiful seaside dinner of my life...</p>
+<div class="flex items-center gap-4 pt-4 border-t border-outline-variant/20">
+<span class="text-[10px] font-bold uppercase text-on-surface-variant">5 Min Read</span>
+<span class="w-1 h-1 rounded-full bg-outline"></span>
+<span class="text-[10px] font-bold uppercase text-on-surface-variant">Photography Collection</span>
+</div>
+</div>
+</div>
+<!-- Guide Card 2 -->
+<div class="group cursor-pointer translate-y-0 md:translate-y-12">
+<div class="aspect-[3/4] rounded-lg overflow-hidden mb-8 shadow-md">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="Vibrant street scene in Tokyo with neon signs reflecting on wet asphalt after rain at twilight" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBShAL7r86JvtS5aowiMBGj_nFb0K5UIjX2TBJIglTExtvw4Lt7BgZIbn_41owvILJ8YtSlOZCvIO54Isjh9rPeBu8BDPNYDAU9QbanfXN2mWAE_MV5fknL_ClcAJGLk_bQIGtaCcP1xbfFjbaaifi_RBlkhvRc8QgEWUJIFwf59EAelkQ_-TCpTGsi7eMsPJXBNu1tpTqmUfE1S_fv_m3_68tOpSM3IYgU6nscgdYjYFpBoi6SK2sv6P7qN7aVgK3vRo7U0eU6PdA"/>
+</div>
+<div class="space-y-4">
+<span class="text-xs font-bold text-on-surface-variant uppercase tracking-widest">Story by Sarah Chen</span>
+<h3 class="text-2xl font-bold editorial-text group-hover:text-primary transition-colors">The Silence of Shimokitazawa</h3>
+<p class="text-on-surface-variant text-sm leading-relaxed">Finding peace among the vintage records and thrift stores of Tokyo's coolest borough.</p>
+<div class="flex items-center gap-4 pt-4 border-t border-outline-variant/20">
+<span class="text-[10px] font-bold uppercase text-on-surface-variant">8 Min Read</span>
+<span class="w-1 h-1 rounded-full bg-outline"></span>
+<span class="text-[10px] font-bold uppercase text-on-surface-variant">Video Tour Included</span>
+</div>
+</div>
+</div>
+<!-- Guide Card 3 -->
+<div class="group cursor-pointer">
+<div class="aspect-[3/4] rounded-lg overflow-hidden mb-8 shadow-md">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="Close up of ornate mosaic tiles in Morocco with vibrant blue and yellow patterns and soft shadow" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDpnu1mQq60fMQWQhHAWIHVjyad-owlWyJ6Ff8OZh-2MP2QDFect34b7xvZWaOWXsF_oH04lFqcRDH-tdtW6OOnVpecf7VN5lvG1vhW5whkyEZgp4elHSfitcdHhvXBAebNjvPL8Da8TkXt_PrYI3wZ5miqIT6kjO_0tx91TThfrXOWkqKyuXCQ-oz39X9OOTYhHcToldUr6Ob6Qt1VaRLUHpmxJiKPUzVgjutM3vyI8GTlDB9lE5Pox0FCJXJXf8efHQ9H8njIA_Y"/>
+</div>
+<div class="space-y-4">
+<span class="text-xs font-bold text-on-surface-variant uppercase tracking-widest">Story by Marcus Welby</span>
+<h3 class="text-2xl font-bold editorial-text group-hover:text-primary transition-colors">Marrakesh: A Geometry of Soul</h3>
+<p class="text-on-surface-variant text-sm leading-relaxed">Understanding the architectural rhythm of the medina's hidden courtyards.</p>
+<div class="flex items-center gap-4 pt-4 border-t border-outline-variant/20">
+<span class="text-[10px] font-bold uppercase text-on-surface-variant">6 Min Read</span>
+<span class="w-1 h-1 rounded-full bg-outline"></span>
+<span class="text-[10px] font-bold uppercase text-on-surface-variant">Culture Map</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Local Favorites Section -->
+<section class="px-6 md:px-12 py-24 bg-surface-container-high rounded-xl mx-4 md:mx-12 my-24 overflow-hidden relative">
+<div class="max-w-screen-2xl mx-auto relative z-10">
+<div class="text-center mb-16">
+<h2 class="text-4xl md:text-6xl editorial-text font-bold tracking-tight mb-4">Local Favorites</h2>
+<p class="text-on-surface-variant max-w-lg mx-auto">Voted by our community, loved by the neighborhoods themselves.</p>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+<div class="p-8 bg-surface-container-lowest rounded-lg flex flex-col items-center text-center hover:shadow-lg transition-all duration-300">
+<span class="material-symbols-outlined text-primary text-4xl mb-4">bakery_dining</span>
+<h4 class="font-bold editorial-text">Artisan Sourdough</h4>
+<span class="text-xs text-on-surface-variant mt-2">Mormors Bageri</span>
+</div>
+<div class="p-8 bg-surface-container-lowest rounded-lg flex flex-col items-center text-center hover:shadow-lg transition-all duration-300">
+<span class="material-symbols-outlined text-primary text-4xl mb-4">local_florist</span>
+<h4 class="font-bold editorial-text">Secret Garden</h4>
+<span class="text-xs text-on-surface-variant mt-2">The Ivy Courtyard</span>
+</div>
+<div class="p-8 bg-surface-container-lowest rounded-lg flex flex-col items-center text-center hover:shadow-lg transition-all duration-300">
+<span class="material-symbols-outlined text-primary text-4xl mb-4">palette</span>
+<h4 class="font-bold editorial-text">Indie Gallery</h4>
+<span class="text-xs text-on-surface-variant mt-2">Studio 44</span>
+</div>
+<div class="p-8 bg-surface-container-lowest rounded-lg flex flex-col items-center text-center hover:shadow-lg transition-all duration-300">
+<span class="material-symbols-outlined text-primary text-4xl mb-4">self_care</span>
+<h4 class="font-bold editorial-text">Ritual Baths</h4>
+<span class="text-xs text-on-surface-variant mt-2">Old City Thermal</span>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer Implementation from JSON -->
+<footer class="w-full py-16 px-12 bg-[#fdfae2] dark:bg-stone-950 border-t border-[#bcbb9c]/20">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 max-w-screen-2xl mx-auto font-['Inter'] text-sm leading-relaxed">
+<div class="space-y-6">
+<div class="font-['Plus_Jakarta_Sans'] font-extrabold text-[#393922] dark:text-stone-100 text-2xl tracking-tighter">The Curated Wanderer</div>
+<p class="text-[#66664c] dark:text-stone-400">Your editorial guide to traveling with soul. We find the stories others miss.</p>
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-[#a24a33]">public</span>
+<span class="material-symbols-outlined text-[#a24a33]">camera</span>
+<span class="material-symbols-outlined text-[#a24a33]">mail</span>
+</div>
+</div>
+<div class="flex flex-col gap-4">
+<h4 class="font-bold text-[#a24a33] uppercase text-[10px] tracking-widest mb-2">Explore</h4>
+<a class="text-[#66664c] dark:text-stone-400 hover:text-[#a24a33] dark:hover:text-[#f68b6f] hover:underline decoration-2 underline-offset-4 transition-all" href="#">Neighborhoods</a>
+<a class="text-[#66664c] dark:text-stone-400 hover:text-[#a24a33] dark:hover:text-[#f68b6f] hover:underline decoration-2 underline-offset-4 transition-all" href="#">Sitemap</a>
+<a class="text-[#66664c] dark:text-stone-400 hover:text-[#a24a33] dark:hover:text-[#f68b6f] hover:underline decoration-2 underline-offset-4 transition-all" href="#">Experiences</a>
+</div>
+<div class="flex flex-col gap-4">
+<h4 class="font-bold text-[#a24a33] uppercase text-[10px] tracking-widest mb-2">Company</h4>
+<a class="text-[#66664c] dark:text-stone-400 hover:text-[#a24a33] dark:hover:text-[#f68b6f] hover:underline decoration-2 underline-offset-4 transition-all" href="#">About Us</a>
+<a class="text-[#66664c] dark:text-stone-400 hover:text-[#a24a33] dark:hover:text-[#f68b6f] hover:underline decoration-2 underline-offset-4 transition-all" href="#">Terms</a>
+<a class="text-[#66664c] dark:text-stone-400 hover:text-[#a24a33] dark:hover:text-[#f68b6f] hover:underline decoration-2 underline-offset-4 transition-all" href="#">Privacy</a>
+</div>
+<div class="flex flex-col gap-6">
+<h4 class="font-bold text-[#a24a33] uppercase text-[10px] tracking-widest mb-2">Letter from the Editor</h4>
+<div class="p-6 bg-surface-container rounded-lg italic text-[#66664c]">
+                    "Travel is the only thing you buy that makes you richer."
+                </div>
+</div>
+</div>
+<div class="mt-16 pt-8 border-t border-[#bcbb9c]/10 text-center text-[#66664c] dark:text-stone-400 text-xs">
+            © 2024 The Curated Wanderer. All rights reserved. Travel with soul.
+        </div>
+</footer>
+</body></html>

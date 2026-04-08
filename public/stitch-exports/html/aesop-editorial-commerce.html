@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400&amp;family=Manrope:wght@300;400;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "background": "#fafaf5",
+                    "surface-variant": "#dee4da",
+                    "on-primary-fixed-variant": "#5c5b5b",
+                    "on-secondary-container": "#515252",
+                    "primary-container": "#e4e2e1",
+                    "surface-tint": "#5f5e5e",
+                    "on-secondary": "#faf8f8",
+                    "error-dim": "#4e0309",
+                    "inverse-primary": "#ffffff",
+                    "on-primary-container": "#525151",
+                    "surface-container-high": "#e5eae0",
+                    "on-primary-fixed": "#3f3f3f",
+                    "on-error": "#fff7f6",
+                    "outline-variant": "#aeb4aa",
+                    "tertiary-fixed": "#d0ecff",
+                    "secondary-dim": "#525353",
+                    "error": "#9f403d",
+                    "tertiary": "#486272",
+                    "secondary-container": "#e3e2e2",
+                    "on-secondary-fixed-variant": "#5b5b5c",
+                    "on-tertiary-fixed-variant": "#486272",
+                    "primary-fixed-dim": "#d6d4d3",
+                    "inverse-on-surface": "#9c9d99",
+                    "on-surface-variant": "#5b6159",
+                    "on-primary": "#faf7f6",
+                    "secondary": "#5e5f5f",
+                    "on-background": "#2e342d",
+                    "on-tertiary-fixed": "#2c4655",
+                    "on-tertiary": "#f4faff",
+                    "surface-container-highest": "#dee4da",
+                    "on-surface": "#2e342d",
+                    "outline": "#767c74",
+                    "surface-container": "#ecefe7",
+                    "surface-dim": "#d5dcd0",
+                    "tertiary-container": "#d0ecff",
+                    "surface": "#fafaf5",
+                    "primary-fixed": "#e4e2e1",
+                    "primary": "#5f5e5e",
+                    "tertiary-fixed-dim": "#c2def0",
+                    "tertiary-dim": "#3c5666",
+                    "error-container": "#fe8983",
+                    "secondary-fixed-dim": "#d5d4d4",
+                    "surface-container-lowest": "#ffffff",
+                    "on-error-container": "#752121"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "fontFamily": {
+                    "headline": ["Noto Serif"],
+                    "body": ["Manrope"],
+                    "label": ["Manrope"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-nav {
+            background-color: rgba(250, 250, 245, 0.8);
+            backdrop-filter: blur(20px);
+        }
+        body { font-family: 'Manrope', sans-serif; background-color: #fafaf5; color: #2C2C2C; }
+        h1, h2, h3, .font-serif { font-family: 'Noto Serif', serif; }
+    </style>
+</head>
+<body class="bg-background text-on-surface">
+<!-- Top Navigation -->
+<nav class="fixed top-0 w-full z-50 bg-[#fafaf5]/80 dark:bg-[#2C2C2C]/80 backdrop-blur-md">
+<div class="flex justify-between items-center px-12 py-6 w-full max-w-screen-2xl mx-auto">
+<div class="text-2xl font-serif tracking-widest text-[#2C2C2C] dark:text-[#fafaf5]">THE SILENT CURATOR</div>
+<div class="hidden md:flex gap-10 items-center">
+<a class="text-on-surface border-b border-[#2C2C2C]/20 pb-1 font-label text-sm tracking-[0.05rem] uppercase" href="#">The Edit</a>
+<a class="text-[#5f5e5e] dark:text-[#aeb4aa] hover:text-[#2C2C2C] transition-colors duration-300 ease-out font-label text-sm tracking-[0.05rem] uppercase" href="#">Curation</a>
+<a class="text-[#5f5e5e] dark:text-[#aeb4aa] hover:text-[#2C2C2C] transition-colors duration-300 ease-out font-label text-sm tracking-[0.05rem] uppercase" href="#">The Journal</a>
+<a class="text-[#5f5e5e] dark:text-[#aeb4aa] hover:text-[#2C2C2C] transition-colors duration-300 ease-out font-label text-sm tracking-[0.05rem] uppercase" href="#">Our Ethos</a>
+</div>
+<div class="flex items-center gap-6">
+<button class="material-symbols-outlined text-on-surface" data-icon="shopping_bag">shopping_bag</button>
+<button class="material-symbols-outlined text-on-surface" data-icon="person">person</button>
+</div>
+</div>
+</nav>
+<!-- Hero Section: The Digital Atelier -->
+<header class="relative h-screen w-full flex items-center justify-center overflow-hidden bg-background">
+<div class="absolute inset-0 z-0">
+<img alt="artistic glass bottle" class="w-full h-full object-cover opacity-90 scale-105" data-alt="Close-up of a minimalist clear glass cosmetic bottle reflecting soft morning light on a warm stone surface with elegant shadows" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDsNDiIXGHlwPD_BdSZP0gANGcBaYvbbV_q_Q3K3tPZyL4QSd3uOSMmA_k9A_YTKkmZzT-v3et4pf3w5hBNazjqG6pVSVA5Lr3yBa521Kd8c8y8cbRfDgDT2JR75EemZQUNu417r0gZN3NguZOX-j7wQabVlDIEsUfHxFlRBclS6nxgWFWZ4Hnnopv_pQXRbfIcPUoi_CKka8edcJBkYpq_54Jq_Ah7hnOOHRcWUzMXQVqPQqExfPG3K3lWeZvx6zMr_vVgzDX8zb4"/>
+</div>
+<div class="relative z-10 text-center px-6 max-w-4xl">
+<h1 class="text-5xl md:text-7xl font-serif mb-8 leading-tight tracking-tight text-on-surface">The Curation of Light</h1>
+<p class="font-body text-lg md:text-xl text-on-surface-variant max-w-2xl mx-auto mb-12 leading-relaxed italic">
+                A study in sensory discipline and molecular precision. Skincare as a ritual of clarity.
+            </p>
+<div class="flex justify-center">
+<button class="bg-primary text-on-primary px-10 py-4 font-label text-sm tracking-widest uppercase transition-all duration-300 hover:bg-primary-dim">
+                    Explore The Edit
+                </button>
+</div>
+</div>
+</header>
+<!-- Curation Section -->
+<section class="py-32 px-12 max-w-screen-2xl mx-auto bg-background">
+<div class="mb-24 text-center md:text-left">
+<h2 class="text-3xl md:text-4xl font-serif mb-4">Curation</h2>
+<div class="h-px w-24 bg-outline-variant/30 mb-8 mx-auto md:mx-0"></div>
+<p class="font-body text-on-surface-variant max-w-md">Our intentional selection for the season, focusing on barrier restoration and architectural glow.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-20">
+<!-- Product 1 -->
+<div class="group">
+<div class="bg-surface-container-low aspect-[4/5] mb-10 overflow-hidden flex items-center justify-center">
+<img alt="product 1" class="w-3/4 h-3/4 object-contain transition-transform duration-700 group-hover:scale-105" data-alt="Minimalist frosted glass serum bottle against a neutral bone-colored background with soft diagonal shadows" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAwz5T_WsLBjfiimxh965i-F990hOpGy4in7mwbguZ1zAT4_7QLkfB7tIP0NrilsxYc3NCvo8YrGB2scPibKrFJGgcXDUTM7hWsCxUaM25K3hbK6IZ_ZNITOsMT-IsgdWG8rNrpP-RyXm8O4gPgPwWTF4kHXmXvTiAxuc7aB_HnMuRlNoVXx8h8dFoAOwgdMnxf_goMy4SBCDozasmolyG3StNyv-FWPA5PacKzvocs8RsRezpqt4AqmvWFlAnZghowoLhKOr7CJhI"/>
+</div>
+<div class="flex flex-col items-center md:items-start space-y-3">
+<span class="font-label text-xs tracking-[0.1em] text-on-surface-variant uppercase">Serum 01</span>
+<h3 class="text-xl font-serif">Molecular Radiance</h3>
+<p class="font-body text-sm text-on-surface-variant italic">Notes: Vetiver, Cold-pressed Sea Buckthorn</p>
+<span class="font-label text-sm pt-2">$124.00</span>
+<button class="mt-4 border border-outline-variant/20 px-6 py-2 text-xs uppercase tracking-widest hover:bg-surface-container-highest transition-colors">Add to Curation</button>
+</div>
+</div>
+<!-- Product 2 (Asymmetric Shift) -->
+<div class="group md:mt-24">
+<div class="bg-surface-container-low aspect-[4/5] mb-10 overflow-hidden flex items-center justify-center">
+<img alt="product 2" class="w-3/4 h-3/4 object-contain transition-transform duration-700 group-hover:scale-105" data-alt="Elegant matte white ceramic jar for skincare cream resting on a slab of rough grey stone" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA8rGAoiiIfbgTY5iK2292dAIE2VZOhATw7RoWxwN8662QgI7llJs8J68EpJwF7rE9VhKjnZXy9cLFWiedmMppqdZRt3-JCGkNwoi9sdan4Mqu3onbqkxwv9wzY13lYCxySXmKQVOzfOfmTUvtXX-sdOOThfC_zTBuS9N-tOXeqK-ZYNmZMiM9MAtqCegeWkq_HK5db5sW2al3N2Z4CZ_1XImtoMVympUAuKXReJMMJHtfyO33MJuzIh6ggTda1su12dPdsFhCn_Dw"/>
+</div>
+<div class="flex flex-col items-center md:items-start space-y-3">
+<span class="font-label text-xs tracking-[0.1em] text-on-surface-variant uppercase">Balm 04</span>
+<h3 class="text-xl font-serif">Structure &amp; Relief</h3>
+<p class="font-body text-sm text-on-surface-variant italic">Notes: Sandalwood, Zinc, Pressed Oat</p>
+<span class="font-label text-sm pt-2">$98.00</span>
+<button class="mt-4 border border-outline-variant/20 px-6 py-2 text-xs uppercase tracking-widest hover:bg-surface-container-highest transition-colors">Add to Curation</button>
+</div>
+</div>
+<!-- Product 3 -->
+<div class="group">
+<div class="bg-surface-container-low aspect-[4/5] mb-10 overflow-hidden flex items-center justify-center">
+<img alt="product 3" class="w-3/4 h-3/4 object-contain transition-transform duration-700 group-hover:scale-105" data-alt="Sleek dark glass dropper bottle in a high-end minimalist setting with soft rim lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDn_Yl1uaahz2H1Ts60Q9eaJHnPsC7DfD7wGAYU60v3xmmRtpUy-1TylGUJyF8FpSikibs5t61cVIU5kz2KIt1D80YW-s6kqen6ukNVBlL7ua0S37sypyuXzYktU0G9bbz0EZInry_VHTYwNNtV3Lx26hugDqpOriyfPB8pvJf4rjGWoQPEi4ngvzVmj0DW0KLfY42S2MVl2X5rBRmC09Y-cJo6MbtzAVoDPbLNHlNQ-Cs7nLK2jYERCGH0Tj4uEGVZmNUuyYYzMsM"/>
+</div>
+<div class="flex flex-col items-center md:items-start space-y-3">
+<span class="font-label text-xs tracking-[0.1em] text-on-surface-variant uppercase">Oil 07</span>
+<h3 class="text-xl font-serif">Nocturnal Recovery</h3>
+<p class="font-body text-sm text-on-surface-variant italic">Notes: Midnight Jasmine, Blue Tansy</p>
+<span class="font-label text-sm pt-2">$145.00</span>
+<button class="mt-4 border border-outline-variant/20 px-6 py-2 text-xs uppercase tracking-widest hover:bg-surface-container-highest transition-colors">Add to Curation</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Sensory Affinities: Bento Grid -->
+<section class="py-32 bg-surface-container-low">
+<div class="max-w-screen-2xl mx-auto px-12">
+<div class="mb-20">
+<h2 class="text-3xl font-serif mb-4">Sensory Affinities</h2>
+<p class="font-body text-on-surface-variant">The metadata of experience. Selecting by texture and resonance.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-4 gap-4">
+<!-- Large Feature -->
+<div class="md:col-span-2 md:row-span-2 bg-surface p-12 flex flex-col justify-between border border-outline-variant/10">
+<div>
+<span class="font-label text-xs tracking-[0.2em] uppercase text-on-surface-variant">Primary Texture</span>
+<h3 class="text-4xl font-serif mt-6 mb-4 italic">Velvet Finish</h3>
+<p class="font-body text-on-surface-variant max-w-sm">A weightless, matte embrace that blurs the boundary between product and skin. Perfect for the transition into dusk.</p>
+</div>
+<div class="flex gap-2 mt-8">
+<span class="px-4 py-2 bg-surface-container-highest font-label text-[10px] tracking-widest uppercase">Diffuse</span>
+<span class="px-4 py-2 bg-surface-container-highest font-label text-[10px] tracking-widest uppercase">Matte</span>
+</div>
+</div>
+<!-- Small Cell 1 -->
+<div class="bg-surface-container-high p-8 flex flex-col justify-center border border-outline-variant/10">
+<span class="material-symbols-outlined text-4xl mb-4 text-primary" data-icon="ac_unit">ac_unit</span>
+<h4 class="font-serif text-lg">Cooling</h4>
+<p class="font-body text-xs text-on-surface-variant mt-2">Thermal relief for stressed barriers.</p>
+</div>
+<!-- Small Cell 2 -->
+<div class="bg-surface p-8 flex flex-col justify-center border border-outline-variant/10">
+<span class="material-symbols-outlined text-4xl mb-4 text-primary" data-icon="forest">forest</span>
+<h4 class="font-serif text-lg">Earthy</h4>
+<p class="font-body text-xs text-on-surface-variant mt-2">Notes of rain-drenched cedar and moss.</p>
+</div>
+<!-- Wide Cell -->
+<div class="md:col-span-2 bg-white/40 p-12 backdrop-blur-sm border border-outline-variant/10 flex items-center justify-between">
+<div class="max-w-xs">
+<h4 class="font-serif text-2xl mb-2">Molecular Weight</h4>
+<p class="font-body text-sm text-on-surface-variant">Precisely engineered for deep follicular absorption without surface residue.</p>
+</div>
+<span class="font-label text-4xl text-outline-variant/30 font-light">0.05μ</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Cultural Navigation: The Slow Journal -->
+<section class="py-32 px-12 max-w-screen-2xl mx-auto">
+<div class="flex flex-col md:flex-row items-end justify-between mb-20 gap-8">
+<div class="max-w-xl">
+<h2 class="text-4xl md:text-5xl font-serif mb-6 leading-tight">Cultural Navigation</h2>
+<p class="font-body text-lg text-on-surface-variant italic">Intersections of design, dermatology, and the art of living slowly.</p>
+</div>
+<a class="font-label text-sm tracking-widest uppercase border-b border-primary/40 pb-1" href="#">View All Entries</a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-24">
+<article class="space-y-8">
+<div class="aspect-video overflow-hidden">
+<img alt="journal entry 1" class="w-full h-full object-cover transition-transform duration-1000 hover:scale-105" data-alt="Interior of a minimalist concrete art gallery with soft natural light coming from a skylight" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCZPa5qJMQJ-2j6yN76TK-3RRksywg6OebOUkX4f4PvuRf6FVCQgo5_HPRag2ZmcTQMs4VPOPpTDcfjod-Fi5b0sAbTqYS8XLS6kwpfj6DaJIM4gqVElsUdxmSSZ9dtouNcMtUm6bnW3P09iSvBPkGUwzam-1IouKGnngJXbE_EPLeIzaAGuVi1-37huEFW-KOGjNXf66u6FJ8Q1JeOKisavCfyfpKaTcYAjG4Fovvd8t2_Gu43XJ-56rd02U_ALXpv7QwJ23ZIWB0"/>
+</div>
+<div class="space-y-4">
+<span class="font-label text-xs tracking-widest uppercase text-outline-variant">Vol. 12 — Architecture</span>
+<h3 class="text-3xl font-serif">The Geometry of a Morning Ritual</h3>
+<p class="font-body text-on-surface-variant leading-relaxed">Exploring how physical space influences biological repair. A conversation with architect Lena Vossen on the utility of silence.</p>
+<button class="font-label text-xs tracking-widest uppercase text-primary">Read Entry</button>
+</div>
+</article>
+<article class="space-y-8">
+<div class="aspect-video overflow-hidden">
+<img alt="journal entry 2" class="w-full h-full object-cover transition-transform duration-1000 hover:scale-105" data-alt="Close-up of a stack of linen papers with elegant typography next to a dried flower stem" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC5-vP1C4BUGABd4VgNWcGKdqvCBKzBALfmwQ_e_hjfvfFadNGce3mFUcaQ827wNHDg2WRu7GbV11e-1qLpelBV_c4ACL1ZQBDKuqmXh7QsKB4xlkamMR9prJQTa9E5cxRVWlZhBjpiwUbffVHPuFhNZWEOp6up2urT-eYNj4DGj2rQvU0DmV_E-MSgMkFTKtQwCQNy1fecGujTBGOwAD1JX_v2WJViYx7_qasF2sKZK7JyYIpbjr7CfSGQ57UY13r57xARe3fTdgk"/>
+</div>
+<div class="space-y-4">
+<span class="font-label text-xs tracking-widest uppercase text-outline-variant">Vol. 13 — Ingredients</span>
+<h3 class="text-3xl font-serif">The Provenance of Scent</h3>
+<p class="font-body text-on-surface-variant leading-relaxed">Tracking our wild-harvested vetiver from the sun-bleached plains of Haiti to our laboratory in the Swiss Alps.</p>
+<button class="font-label text-xs tracking-widest uppercase text-primary">Read Entry</button>
+</div>
+</article>
+</div>
+</section>
+<!-- Curator's Note -->
+<section class="bg-surface-container-lowest py-24 mb-12">
+<div class="max-w-3xl mx-auto px-6 text-center border-y border-outline-variant/10 py-16">
+<span class="font-label text-xs tracking-[0.2em] uppercase text-on-surface-variant block mb-6">Curator's Note</span>
+<p class="text-2xl font-serif italic text-on-surface leading-relaxed">
+                "We believe that the skin is a canvas of one's biography. To curate it is not to erase its history, but to honor its architecture with the finest molecular tools available."
+            </p>
+<span class="font-label text-sm tracking-widest uppercase mt-8 block">— Dr. Elias Thorne, Founder</span>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-[#f3f4ee] dark:bg-[#1a1a1a] w-full mt-auto">
+<div class="flex flex-col md:flex-row justify-between items-start md:items-center px-12 py-16 w-full">
+<div class="mb-8 md:mb-0">
+<div class="text-lg font-serif italic text-[#2C2C2C] dark:text-[#fafaf5] mb-4">THE SILENT CURATOR</div>
+<p class="font-label text-[10px] tracking-[0.1em] text-[#5f5e5e] dark:text-[#dee4da]">© 2024 THE SILENT CURATOR. ALL RIGHTS RESERVED.</p>
+</div>
+<div class="grid grid-cols-2 md:flex gap-x-12 gap-y-4">
+<a class="font-label text-xs tracking-widest uppercase text-[#5f5e5e] dark:text-[#aeb4aa] hover:text-[#2C2C2C] dark:hover:text-[#fafaf5] transition-colors" href="#">Sustainability Commitment</a>
+<a class="font-label text-xs tracking-widest uppercase text-[#5f5e5e] dark:text-[#aeb4aa] hover:text-[#2C2C2C] dark:hover:text-[#fafaf5] transition-colors" href="#">Ingredient Glossary</a>
+<a class="font-label text-xs tracking-widest uppercase text-[#5f5e5e] dark:text-[#aeb4aa] hover:text-[#2C2C2C] dark:hover:text-[#fafaf5] transition-colors" href="#">Shipping &amp; Returns</a>
+<a class="font-label text-xs tracking-widest uppercase text-[#5f5e5e] dark:text-[#aeb4aa] hover:text-[#2C2C2C] dark:hover:text-[#fafaf5] transition-colors" href="#">Contact</a>
+</div>
+</div>
+</footer>
+</body></html>

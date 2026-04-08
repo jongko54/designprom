@@ -1,0 +1,21 @@
+{
+  "brand": "Figma",
+  "contentType": "image/png",
+  "fileName": "figma-plugin-directory.png",
+  "generatedAt": "2026-04-02T10:58:50.049Z",
+  "htmlUrl": "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ7Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpaCiVodG1sXzFmNTMxMzhkNjQzOTQ2ZjRhZjBjOTRmMTJjYTg0NGIwEgsSBxCCisPc0AkYAZIBIwoKcHJvamVjdF9pZBIVQhM3MTQzMjg5MDExNTU3MTA0ODY0&filename=&opi=96797242",
+  "imageUrl": "https://lh3.googleusercontent.com/aida/ADBb0ughvuJftwdHeA9dClvnal2BLQKyFp6BGfiQ0-YyzbamjuHOQDrT-Oyg0aak1hzuBXEjEty3p7cmRYX_qGWR4gpyLaHPByniHtVG37xbX2ZzzzuEjOS90k2v4_A8TmkxlzNkouMe7fMnlKNtMZnCv5_UYgJq4gug4VKOMF6mlRFS8EiLTr-5L_0BgcccvxA7GLvBw0Rw2lIXVKehOyHJHKOJEc119fbeEYxbSl_5aRIk_1jGcwrFXHcPYw",
+  "notes": [
+    "I've designed a Figma-inspired plugin directory that captures the essence of a high-performance tool surface. \n\n### Design Strategy:\n*   **The Workspace Feel:** I used a triple-layered layout with a slim tool rail, a functional navigation sidebar, and a dense content grid to mirror the structure of a design application. \n*   **Vibrant Accents:** The plugin icons and UI elements feature vibrant, colorful pops against a clean, light-gray palette, giving it that characteristic 'Figma' energy.\n*   **Dense Information:** The plugin cards and navigation items are designed with high information density in mind, using Inter at tight letter-spacing for maximum clarity in a compact space.\n\nThe updated screen is now live on the canvas. Ready for any adjustments!"
+  ],
+  "prompt": "Design a Figma-inspired plugin directory with a left tool rail, dense plugin cards, category chips, install panels, and active workspace framing. Make the page feel like a working product surface with colorful plugin accents.",
+  "projectId": "7143289011557104864",
+  "screenId": "f01cf18cf65f4735b1d4cf515391290e",
+  "slug": "figma-plugin-directory",
+  "suggestions": [
+    "Add a plugin detail view drawer",
+    "Try a dark mode version of this directory",
+    "Add a 'My Installed Plugins' section with usage stats"
+  ],
+  "title": "Plugin Directory - Figma Inspired"
+}

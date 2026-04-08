@@ -1,0 +1,21 @@
+{
+  "brand": "TikTok",
+  "contentType": "image/png",
+  "fileName": "tiktok-fandom-arena.png",
+  "generatedAt": "2026-04-02T11:17:22.737Z",
+  "htmlUrl": "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ7Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpaCiVodG1sX2U0NmJiNDk5ZjA2OTQ3NjliMzJmZDFlYmM0OTJhOWU1EgsSBxCCisPc0AkYAZIBIwoKcHJvamVjdF9pZBIVQhM3MTQzMjg5MDExNTU3MTA0ODY0&filename=&opi=96797242",
+  "imageUrl": "https://lh3.googleusercontent.com/aida/ADBb0ujEVST9alw0XRryB_8zToD9Lhsg2GeSa-1EhQYWaDQXRiGM-RpHNJp1zFDpuZBoOfPW-4hqYHfrS_xP9P8hV7FhFWEYd4OmA0f8iK11C58Nmjilev3Wzjd0yTQC70fLycrbr0wzWDn3l_dUDnW9vRaV3Mz56zu-_-04pVK22QyBDRDuaWX6SMiJsJSLFJTTmlnfaD-zmisLoYR89ql4N_iIX6vqfR38vWtUUV3RG1UeSOy16WU9XjV7gjU",
+  "notes": [
+    "I've designed the 'Fandom Flux: Discovery Hub' for you! This screen captures that high-energy, social-native feel with live reaction cards, creator mashup modules, and a playful, TikTok-inspired challenge section. I've used a vibrant dark theme with neon purple and pink accents, and high-contrast labels for that rapid-scan hierarchy you asked for. \n\nI've also created the 'Fandom Flux' design system to keep this look consistent as we build out more of the hub. What do you think?"
+  ],
+  "prompt": "Design a TikTok-like fandom hub page with live reaction cards, creator mashups, challenge modules, rapid scan hierarchy, and playful participation prompts. Keep the energy high and social-native.",
+  "projectId": "7143289011557104864",
+  "screenId": "94d35a787552458a986b6855e9ad3d46",
+  "slug": "tiktok-fandom-arena",
+  "suggestions": [
+    "Add a mobile version of this screen",
+    "Design a creator profile page in this style",
+    "Add more social interaction features like a chat drawer"
+  ],
+  "title": "Fandom Flux: Discovery Hub"
+}

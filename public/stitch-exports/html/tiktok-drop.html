@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>VIBE_STREAM | THE NEXT WAVE</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "outline-variant": "#484848",
+              "inverse-primary": "#006b67",
+              "inverse-surface": "#f9f9f9",
+              "surface": "#0e0e0e",
+              "tertiary-container": "#e6f600",
+              "surface-container": "#191919",
+              "surface-container-high": "#1f1f1f",
+              "tertiary-fixed": "#ecfc00",
+              "surface-variant": "#262626",
+              "on-error": "#490006",
+              "on-tertiary-fixed": "#464c00",
+              "surface-tint": "#5ffff7",
+              "tertiary-fixed-dim": "#deed00",
+              "on-secondary-fixed-variant": "#a40030",
+              "on-error-container": "#ffa8a3",
+              "error-dim": "#d7383b",
+              "on-secondary-fixed": "#6f001e",
+              "surface-container-low": "#131313",
+              "on-tertiary-fixed-variant": "#626a00",
+              "secondary-container": "#be0039",
+              "primary-container": "#06f3eb",
+              "inverse-on-surface": "#555555",
+              "secondary-dim": "#e80048",
+              "outline": "#757575",
+              "on-surface": "#ffffff",
+              "primary": "#5ffff7",
+              "surface-container-highest": "#262626",
+              "on-secondary-container": "#fff6f5",
+              "secondary-fixed-dim": "#ffaeb3",
+              "secondary-fixed": "#ffc2c5",
+              "primary-fixed-dim": "#00e6df",
+              "on-primary": "#00605c",
+              "error-container": "#9f0519",
+              "on-tertiary-container": "#555b00",
+              "error": "#ff716c",
+              "surface-bright": "#2c2c2c",
+              "on-primary-container": "#005653",
+              "primary-fixed": "#16f6ee",
+              "background": "#0e0e0e",
+              "on-primary-fixed": "#004441",
+              "on-primary-fixed-variant": "#00635f",
+              "tertiary-dim": "#deed00",
+              "on-surface-variant": "#ababab",
+              "tertiary": "#f9ffb1",
+              "primary-dim": "#00e6df",
+              "surface-dim": "#0e0e0e",
+              "secondary": "#ff6f7e",
+              "on-tertiary": "#5d6400",
+              "on-background": "#ffffff",
+              "on-secondary": "#490010",
+              "surface-container-lowest": "#000000"
+            },
+            fontFamily: {
+              "headline": ["Plus Jakarta Sans"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-panel {
+            background: rgba(38, 38, 38, 0.6);
+            backdrop-filter: blur(20px);
+        }
+        .kinetic-gradient {
+            background: linear-gradient(135deg, #5ffff7 0%, #06f3eb 100%);
+        }
+        ::-webkit-scrollbar { width: 4px; }
+        ::-webkit-scrollbar-track { background: #0e0e0e; }
+        ::-webkit-scrollbar-thumb { background: #484848; border-radius: 10px; }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body overflow-x-hidden selection:bg-primary selection:text-on-primary">
+<!-- Top Navigation -->
+<nav class="fixed top-0 w-full z-50 bg-black/60 backdrop-blur-xl flex justify-between items-center px-6 py-4 w-full shadow-[0_0_20px_rgba(0,242,234,0.15)]">
+<div class="text-2xl font-black text-white italic font-headline uppercase tracking-tighter">VIBE_STREAM</div>
+<div class="hidden md:flex items-center gap-8 font-headline font-extrabold uppercase tracking-tighter">
+<a class="text-[#00F2EA] border-b-2 border-[#00F2EA] hover:scale-95 transition-transform duration-200" href="#">HOME</a>
+<a class="text-neutral-400 hover:scale-95 transition-transform duration-200 hover:text-white" href="#">EXPLORE</a>
+<a class="text-neutral-400 hover:scale-95 transition-transform duration-200 hover:text-white" href="#">TRENDING</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="material-symbols-outlined text-white hover:scale-95 transition-transform">search</button>
+<button class="material-symbols-outlined text-white hover:scale-95 transition-transform">notifications</button>
+<button class="bg-[#00F2EA] text-on-primary-container px-6 py-1.5 rounded-full font-headline font-extrabold text-sm uppercase tracking-wider hover:scale-95 transition-all">Join</button>
+</div>
+</nav>
+<main>
+<!-- Vertical Video Hero Section -->
+<section class="relative h-screen w-full flex flex-col justify-end items-start p-6 md:p-12 overflow-hidden">
+<!-- Background "Video" Placeholder -->
+<div class="absolute inset-0 z-0">
+<img alt="Cinematic close-up of a dancer in neon lighting with motion blur and smoke effects" class="w-full h-full object-cover" data-alt="cinematic vertical portrait of a street dancer in a dark studio illuminated by neon cyan and magenta lights with soft motion blur" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDBKMHxloNYp6CcHpSh7te6z5bkhFt1U--vVqj4k4ms1An_tPeoVverTo7nOagq5clYMY1Yf1YSSZUE7oKdrTB--6zh_Nsm8y_KNJty65s27ixmmwOBUqNnfcujzvr2mCturmYLEyFOvv8vtKoVFKS7RUrTT1vlNNq5P6r0HhAUHuqI4Alfy05uuKTzUJ1bNc5Axecv_zieRVQq4H0mh2SoYTAIwl77LM_316LhXzQBW3DiS-RL1O4ZFXiavIOjXH5IOGLBz5tY1GI"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-80"></div>
+<div class="absolute inset-0 bg-black/20"></div>
+</div>
+<!-- Content Overlay -->
+<div class="relative z-10 w-full max-w-4xl space-y-4">
+<div class="flex items-center gap-2 mb-4">
+<span class="bg-secondary px-3 py-1 rounded-full text-[10px] font-extrabold uppercase tracking-[0.2em] text-white">Live Now</span>
+<span class="text-tertiary text-xs font-medium uppercase tracking-widest bg-black/40 px-3 py-1 rounded-full backdrop-blur-sm">24.5k Viewing</span>
+</div>
+<h1 class="font-headline font-extrabold text-6xl md:text-9xl leading-[0.85] tracking-tighter uppercase text-white drop-shadow-2xl">
+                    THE NEXT <br/> <span class="text-primary">WAVE</span> IS <br/> HERE
+                </h1>
+<div class="flex flex-wrap gap-4 mt-8">
+<button class="kinetic-gradient text-on-primary-container px-10 py-5 rounded-full font-headline font-extrabold text-lg uppercase tracking-wider hover:scale-95 transition-all shadow-[0_0_30px_rgba(95,255,247,0.4)]">
+                        Drop In
+                    </button>
+<button class="glass-panel border border-white/10 text-white px-10 py-5 rounded-full font-headline font-extrabold text-lg uppercase tracking-wider hover:scale-95 transition-all">
+                        View Feed
+                    </button>
+</div>
+</div>
+<!-- Social Floating Stickers / UI Pieces -->
+<div class="absolute right-6 bottom-32 flex flex-col items-center gap-6 z-20">
+<div class="flex flex-col items-center gap-1 group cursor-pointer">
+<div class="w-14 h-14 rounded-full border-2 border-primary p-0.5 overflow-hidden transition-transform group-hover:scale-110">
+<img alt="Creator profile" class="w-full h-full object-cover rounded-full" data-alt="vibrant portrait of a young male creator with stylized hair and artistic jewelry against a saturated orange background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDmto53U76StSk3VN4rmd1F9Aix289HfLylWAUcjzEPWwW1l7NWLX45FbqHTwNYzCG1IBElCv1iZuu63Yzz34W_3Pj7ETQf_lX-wQGmVuj-1UYNeqAhRirmXZlwpBOG-859IJYXPhs1CWQJRbUcgINIaFXshX7p2yJZaOtipB4oLzRJkjhjbShmxCjwr_epX_hrVtV7EnhiBRVLMUHwW_Nefkrsy4rrciYtkZj_IEgnYLCJE-3e5dCd7RhK7TMK1uXhKaq08aowuVw"/>
+</div>
+<span class="text-[10px] font-bold text-primary">FOLLOW</span>
+</div>
+<div class="flex flex-col items-center gap-1 group cursor-pointer">
+<span class="material-symbols-outlined text-4xl text-white group-hover:text-secondary transition-colors" data-weight="fill">favorite</span>
+<span class="text-xs font-bold text-white">2.4M</span>
+</div>
+<div class="flex flex-col items-center gap-1 group cursor-pointer">
+<span class="material-symbols-outlined text-4xl text-white group-hover:text-primary transition-colors" data-weight="fill">chat_bubble</span>
+<span class="text-xs font-bold text-white">45k</span>
+</div>
+<div class="flex flex-col items-center gap-1 group cursor-pointer">
+<span class="material-symbols-outlined text-4xl text-white group-hover:text-tertiary transition-colors" data-weight="fill">share</span>
+<span class="text-xs font-bold text-white">12k</span>
+</div>
+</div>
+<!-- Progress Bar Simulation -->
+<div class="absolute bottom-4 left-6 right-6 h-1 bg-white/20 rounded-full overflow-hidden">
+<div class="h-full bg-primary w-2/3"></div>
+</div>
+</section>
+<!-- Dynamic Feed Grid -->
+<section class="bg-surface-container-low py-20 px-6">
+<div class="max-w-7xl mx-auto">
+<div class="flex justify-between items-end mb-12">
+<div>
+<h2 class="font-headline font-extrabold text-4xl uppercase tracking-tight text-white">Trending Vibes</h2>
+<p class="text-on-surface-variant font-body text-lg mt-2">The pulse of the creator economy.</p>
+</div>
+<button class="text-primary font-headline font-bold uppercase tracking-widest text-sm hover:underline">Explore All</button>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+<!-- Feed Item 1 (Tall) -->
+<div class="md:col-span-2 md:row-span-2 group relative rounded-lg overflow-hidden bg-surface-container h-[600px]">
+<img alt="Skater aesthetic" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="dynamic shot of a skateboarder mid-air during sunset at a brutalist concrete skatepark with long dramatic shadows" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAiGrMaVISC_SnbsDpi5UYHER6gfnVtRTB8iSp-1Bgv9X7cRwfMetEfsV9_AyS3iBxPx6B6kaM-H61aG_egwaXVNfGqJPASdeG88wU81xsN9TBN5ctSUiudFWNuwDHNws_6C0QipXFvOgJ69dR2go2sF4kD_jcIP86AEAJX7zVTAb5uCFFC3_RXSSN-ojkcrne0-OnzdyPl7qisyo7WhiJ2Qb5ez0S5N8kPVPOpMAPkbIb0H3Wlq44LVYr6Rl7Sb-UHtOPyFQvYRK8"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
+<div class="absolute bottom-6 left-6 right-6">
+<div class="flex items-center gap-3 mb-3">
+<div class="w-10 h-10 rounded-full border-2 border-tertiary">
+<img alt="Creator avatar" class="w-full h-full object-cover rounded-full" data-alt="portrait of a young female creator with colorful hair and artistic makeup looking directly at the camera" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAvSUMf5EX3OqBvTCXO5Ikxzw6gUCExoKG5mQs-bv0PTj417UBZ-fR7Mgfubg_FA-qxiKiNxPQXejgl2eStrEO474btXHOBNeQGNAoeLuIxYkORfvhYOYvo_keFd4bcUf4nYks0urmOeWCIeRpfyOel4aL5iEY9-JCZZd0wB5i4DDCt-hpVat__1j8btwc6Mu3KxagUcFJQ3LVwyAzkdp0QQLwFMZ1djku469FUouIDgEicylETVOVE1WpQFKFJkftTbHPKpNoQM7k"/>
+</div>
+<span class="font-headline font-bold text-white">@skate_vibe</span>
+</div>
+<h3 class="text-2xl font-headline font-extrabold text-white leading-tight">CHASING THE GOLDEN HOUR GRAVITY</h3>
+</div>
+</div>
+<!-- Feed Item 2 -->
+<div class="group relative rounded-lg overflow-hidden bg-surface-container h-[288px]">
+<img alt="Music production" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="close-up of high-end music production equipment with glowing level meters and colorful cables in a dim studio" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC2ZxqDEUzM9k5zfPfpvRShc34uOA-VVlmsoR0F1ffCrZXjsaBe19x9WEZHlzWsL6n6w_O-1qZ9iPzGi_AEAQ5d6Y6HGPVTg0n9jtXvCr6UACzgfXRxxYV41ywjaNXqbHbpKyLxupEgJTX3P8UvM4OCQPVAPs1QQ1IpSf1dpDsD5eMf5_xXWPQnwyVN5BXgqC5kaTCLTxL0XzmBn7paILw_nyXEF9XxnDbjO4OeLiFWLHcG9X5Ug1-LUsBd8-Bv0R3ucDTnjrNeLy4"/>
+<div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+<span class="material-symbols-outlined text-white text-5xl">play_circle</span>
+</div>
+</div>
+<!-- Feed Item 3 -->
+<div class="group relative rounded-lg overflow-hidden bg-surface-container h-[288px]">
+<img alt="Retro tech" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="aesthetic arrangement of retro electronics including vintage gaming consoles and colorful neon controllers" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBxbFJT4U6mKZPtAUfKbL_EH3ZvoiiUq0o4anrY1Ath-9f8pfy56QRwm8UkgDAznPaY5SOw3RpEFx-jLTy8hLAxQmZQav71qJm6XF7rX5D3oP5dguFGzPFpXrZ9a0190LFfouX55Z7wHw8xqWtDJ1O-wYHTiTPNQNDVpMqvGbH1fR3c9Ri3Qq3Vr5v1Czg-DOgFjWoyHDMCtmZjE43tsUm7g6hh4xqRyJK1HgBZhGWwQipWdu26IpDQULyBp8635tyPXhz94phNsU8"/>
+<div class="absolute top-4 right-4 bg-primary-container text-on-primary-container px-2 py-1 rounded-sm font-headline font-black text-[10px] uppercase">New Drop</div>
+</div>
+<!-- Feed Item 4 (Wide) -->
+<div class="md:col-span-2 group relative rounded-lg overflow-hidden bg-surface-container h-[288px]">
+<img alt="Fashion layout" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="overhead shot of avant-garde streetwear pieces laid out on a clean light grey surface with harsh studio lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD7VCSM0EBeCI3F0f8snwpD5dFKQqXZC_rG_e3jHBSLgWpNwW8eLWOp8xVbpYYjkw2t2JvRpdPv9RdByfQ2JzewakLhjzofNDI34hrUk_OTqHkuWk7Ef37O419lYKSuEqGAjQJ_26p-UE0xHiuHC3Orb8sS1XSeEXA5ae9SCuGmYpdBeACBfTp2SBnLZily5Eh1fc5UFEC2l3lKu8UPb4ccme9aDZglVOj3fmNZXwOG4pzv36Bj6fkwnkwIdfcHMtcGx4j0hvWezi8"/>
+<div class="absolute inset-0 bg-gradient-to-r from-secondary/60 to-transparent flex items-center p-8">
+<h3 class="text-3xl font-headline font-black text-white italic uppercase leading-none">Style<br/>Hack #042</h3>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Top Creators Bento -->
+<section class="bg-surface py-24 px-6 relative overflow-hidden">
+<!-- Background Accent -->
+<div class="absolute top-0 right-0 w-96 h-96 bg-primary/5 rounded-full blur-[120px]"></div>
+<div class="max-w-7xl mx-auto relative z-10">
+<div class="text-center mb-16">
+<span class="text-tertiary font-headline font-black text-sm tracking-[0.3em] uppercase">Elite Circle</span>
+<h2 class="text-5xl md:text-7xl font-headline font-extrabold uppercase tracking-tighter text-white mt-4">TOP CREATORS</h2>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-5 gap-8">
+<!-- Creator 1 -->
+<div class="flex flex-col items-center group cursor-pointer">
+<div class="relative mb-4">
+<div class="absolute inset-0 bg-gradient-to-tr from-primary via-secondary to-tertiary rounded-full -m-1 animate-pulse"></div>
+<div class="w-32 h-32 rounded-full border-4 border-surface overflow-hidden relative">
+<img alt="Creator" class="w-full h-full object-cover" data-alt="portrait of a young creative man with glasses and a thoughtful expression against a minimalist grey background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBOScTWK0DjzYOkeELIYwX8Gktpcqz1oTO_b8MY29HOgPtsah-xKHgkd23Hd4koK4bZQZrMgttTi9ED4wWJTwXvWaPNlb6z_flxnVwd2P-hKAECUf0N1i30rZVSGfMOQQ8uJPFVC0Q6bnDoiCRNOcArKBFc7zX009y1E3bcIQGzaZ6CXd-fKsb4vkQntH-ywpV7a00pd_vToyz6oWxHtffnBHrCHD0eKdnvkTu-fmvPlo6-1jQfueTP2nvZ4hvuGT6g9zPeKQXrUng"/>
+</div>
+</div>
+<h4 class="font-headline font-extrabold text-white text-lg tracking-tight uppercase">MARCUS_V</h4>
+<span class="text-on-surface-variant text-xs font-bold uppercase tracking-widest">Motion Dev</span>
+</div>
+<!-- Creator 2 -->
+<div class="flex flex-col items-center group cursor-pointer">
+<div class="relative mb-4">
+<div class="w-32 h-32 rounded-full border-2 border-outline-variant p-1 overflow-hidden transition-all group-hover:border-primary">
+<img alt="Creator" class="w-full h-full object-cover rounded-full" data-alt="close-up portrait of a woman with vibrant blue eyeshadow and a bold red lip in a fashion editorial style" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAiuGW67LChel2HPLL2iTNMfTVAn-C0llnhvur333DxMbmRFODPMqjHq7mCTWzwmnWTsvO8sj5fdKNJo8Jg5Rrrzbe3isrpEPSoyZsms3QfD4ohRd5BxqblpKJjM8tHi6lD7-luRLOyKmRr2lH89WvWZIVywY0caxc18R7ULNgSI9eokYUste178lrLlmWYIr1JJhWbkU97zi9tzmXtNULR_Tsvi6MBHAUhAWwkdCP4MJHkj0V2HcT6zzLKJadU6MenLlKCTKCIchI"/>
+</div>
+</div>
+<h4 class="font-headline font-extrabold text-white text-lg tracking-tight uppercase">LUNA_GLITCH</h4>
+<span class="text-on-surface-variant text-xs font-bold uppercase tracking-widest">Visual Art</span>
+</div>
+<!-- Creator 3 -->
+<div class="flex flex-col items-center group cursor-pointer">
+<div class="relative mb-4">
+<div class="w-32 h-32 rounded-full border-2 border-outline-variant p-1 overflow-hidden transition-all group-hover:border-secondary">
+<img alt="Creator" class="w-full h-full object-cover rounded-full" data-alt="rugged portrait of an outdoor photographer with a beanie and camera gear in a misty mountain setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA5Pp0AJQXaO47ugGfbJXmyHwZKLJtspi9q-wuXnhjBFqWwk18nWvKkGoOBZHxnWLRUdKWyfv_RxCVk-ga_zyUlTCjtFrr0T5wark_wVbL9hCMxeynLw85XjKFdCP10hvWTBZx9tjHE9G7a330Nrc17Zn8LmkpjKP3lWG1tB7IGQzj8n4Mnd7nBk7m93avLvI9F__kgrZ2OJxNAN2Ysav4frljVLXRwXE86gmGZpyZRHICK-nGKkBVAv0boNKUNHHBMd9vyQWXsfHg"/>
+</div>
+</div>
+<h4 class="font-headline font-extrabold text-white text-lg tracking-tight uppercase">NOMAD_EYE</h4>
+<span class="text-on-surface-variant text-xs font-bold uppercase tracking-widest">Adventure</span>
+</div>
+<!-- Creator 4 -->
+<div class="flex flex-col items-center group cursor-pointer">
+<div class="relative mb-4">
+<div class="w-32 h-32 rounded-full border-2 border-outline-variant p-1 overflow-hidden transition-all group-hover:border-tertiary">
+<img alt="Creator" class="w-full h-full object-cover rounded-full" data-alt="candid portrait of a young woman laughing in a vibrant city street with colorful shop signs in the background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAyR4J3pQ81izsRlo4aDrIJf_gWq7PSoOv2LybMuXgrApW6jplsMssF5i80fIPLQ4kqQmk3gtYMni5CI3MuD3fLK_p6xRNdyeFelnbMAaODjRrbHofPm_Uktp7DuAd562HA94mxZJlyZbcya25wGaxazctI0tbbzA8wf168RDT0WGO72InYc74U3vjareJ6sKWzG_P98LLMJxaEgxtBHetkqhJXPVSVTdF10n119iGXR5r7MCtUYnUGb0sy65kNkDpy2fKd4-0wHIk"/>
+</div>
+</div>
+<h4 class="font-headline font-extrabold text-white text-lg tracking-tight uppercase">CITY_SOUL</h4>
+<span class="text-on-surface-variant text-xs font-bold uppercase tracking-widest">Street Life</span>
+</div>
+<!-- Creator 5 -->
+<div class="flex flex-col items-center group cursor-pointer">
+<div class="relative mb-4">
+<div class="w-32 h-32 rounded-full border-2 border-outline-variant p-1 overflow-hidden transition-all group-hover:border-primary">
+<img alt="Creator" class="w-full h-full object-cover rounded-full" data-alt="professional portrait of a music producer in a modern studio with acoustic panels and warm ambient light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBKqwmZoK0oS5_fL74jNVQ_Vo3gFmopZko0D7EWgiFwzv8PhWaqpAkPrMCMPojMH7fzXJhNhqDpCrakdY7PThXcnRJAQXCjp0tVHELh-07RVu5QPqs4bH62EmtNiDg5R6k4rgnn3XvmwwujUnoufS3LOo5GISlTzGfsl7c_RXlfSt2UPpToVmbzxSb7Sa68k_lYHLtQbeHq-i0kpBXNT_Q0EDpzcbgR35wiqtXYpD0-A59C938C-SekEMdpe3PCHm9mj3HMj9DW6Yw"/>
+</div>
+</div>
+<h4 class="font-headline font-extrabold text-white text-lg tracking-tight uppercase">BEAT_LAB</h4>
+<span class="text-on-surface-variant text-xs font-bold uppercase tracking-widest">Audio Tech</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Kinetic CTA Section -->
+<section class="relative py-32 bg-primary overflow-hidden">
+<div class="absolute inset-0 overflow-hidden pointer-events-none">
+<div class="text-[20vw] font-headline font-black text-on-primary/10 uppercase tracking-tighter whitespace-nowrap -rotate-6 translate-y-10">
+                    JOIN THE MOVEMENT • JOIN THE MOVEMENT • JOIN THE MOVEMENT
+                </div>
+</div>
+<div class="max-w-4xl mx-auto px-6 text-center relative z-10">
+<h2 class="text-6xl md:text-8xl font-headline font-black text-on-primary leading-none uppercase tracking-tighter mb-8">
+                    YOUR VIBE <br/> IS READY.
+                </h2>
+<p class="text-on-primary font-body text-xl md:text-2xl mb-12 max-w-2xl mx-auto font-medium">
+                    The next generation of creators is here. Don't just watch the wave—be the wave.
+                </p>
+<div class="flex flex-col md:flex-row gap-4 justify-center items-center">
+<button class="bg-surface text-white px-12 py-6 rounded-full font-headline font-extrabold text-xl uppercase tracking-wider hover:scale-105 active:scale-95 transition-all w-full md:w-auto">
+                        CREATE NOW
+                    </button>
+<button class="bg-transparent border-2 border-on-primary text-on-primary px-12 py-6 rounded-full font-headline font-extrabold text-xl uppercase tracking-wider hover:bg-on-primary hover:text-primary transition-all w-full md:w-auto">
+                        LEARN MORE
+                    </button>
+</div>
+</div>
+</section>
+<!-- Social Proof Sticker Layout -->
+<section class="bg-surface py-20 overflow-hidden">
+<div class="flex flex-wrap gap-8 justify-center items-center opacity-50 grayscale hover:grayscale-0 transition-all duration-500">
+<span class="text-4xl md:text-6xl font-headline font-black uppercase text-outline-variant tracking-tighter">NIKE_STYLE</span>
+<span class="text-4xl md:text-6xl font-headline font-black uppercase text-outline-variant tracking-tighter italic">VOGUE_VIBE</span>
+<span class="text-4xl md:text-6xl font-headline font-black uppercase text-outline-variant tracking-tighter">RED_BULL_PULSE</span>
+<span class="text-4xl md:text-6xl font-headline font-black uppercase text-outline-variant tracking-tighter">ADIDAS_DRIP</span>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-[#0e0e0e] w-full py-12 px-6 border-t border-white/5">
+<div class="flex flex-col md:flex-row justify-between items-center gap-8 w-full max-w-7xl mx-auto">
+<div class="text-lg font-bold text-white uppercase tracking-tighter font-headline italic">VIBE_STREAM</div>
+<div class="flex gap-8 text-[#00F2EA] font-['Inter'] text-xs font-medium uppercase tracking-widest">
+<a class="text-neutral-500 hover:text-[#00F2EA] transition-colors" href="#">Terms</a>
+<a class="text-neutral-500 hover:text-[#00F2EA] transition-colors" href="#">Privacy</a>
+<a class="text-neutral-500 hover:text-[#00F2EA] transition-colors" href="#">Careers</a>
+<a class="text-neutral-500 hover:text-[#00F2EA] transition-colors" href="#">Press</a>
+</div>
+<div class="text-[#00F2EA] font-['Inter'] text-xs font-medium uppercase tracking-widest text-neutral-500">
+                © 2024 KINETIC OVERLAY
+            </div>
+</div>
+</footer>
+<!-- Mobile Bottom Navigation -->
+<nav class="md:hidden fixed bottom-0 left-0 right-0 glass-panel border-t border-white/5 flex justify-around items-center py-3 z-50">
+<button class="flex flex-col items-center gap-1 text-[#00F2EA]">
+<span class="material-symbols-outlined text-2xl" data-weight="fill">home</span>
+<span class="text-[10px] font-bold uppercase tracking-tighter">Home</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-neutral-400">
+<span class="material-symbols-outlined text-2xl">explore</span>
+<span class="text-[10px] font-bold uppercase tracking-tighter">Explore</span>
+</button>
+<button class="flex flex-col items-center gap-1 -mt-8">
+<div class="w-14 h-14 kinetic-gradient rounded-full flex items-center justify-center shadow-[0_0_20px_rgba(95,255,247,0.5)] border-4 border-surface">
+<span class="material-symbols-outlined text-black text-3xl font-black">add</span>
+</div>
+</button>
+<button class="flex flex-col items-center gap-1 text-neutral-400">
+<span class="material-symbols-outlined text-2xl">inbox</span>
+<span class="text-[10px] font-bold uppercase tracking-tighter">Inbox</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-neutral-400">
+<span class="material-symbols-outlined text-2xl">person</span>
+<span class="text-[10px] font-bold uppercase tracking-tighter">Profile</span>
+</button>
+</nav>
+</body></html>

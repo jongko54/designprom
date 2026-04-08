@@ -1,0 +1,22 @@
+{
+  "brand": "Cargo / Art Direction",
+  "contentType": "image/png",
+  "fileName": "cargo-art-direction-moodboard.png",
+  "generatedAt": "2026-04-02T04:34:20.683Z",
+  "htmlUrl": "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ8Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpbCiVodG1sX2IyNzAwMDY5MTdlYjRhOWQ5MGE5MmQ5M2MzZGEzOWNiEgsSBxCCisPc0AkYAZIBJAoKcHJvamVjdF9pZBIWQhQxMzg2NjI0OTQ0Nzg0NDE0ODg5NQ&filename=&opi=96797242",
+  "imageUrl": "https://lh3.googleusercontent.com/aida/ADBb0uglZxCgOUzCclk4o2_70Jcx8Gwq9J_XPlbUuM1NNBBA3we3oEjW0GshW1kkxXCAYHaqRofL3Lupz4W1xqH9UU6LswdjP5K--gpwwOAW-w-Ooqrwwp1wzUkaKeOYUWDdPmVxuK32I3YtszaKi4oHQrEPiFuC-rVgwYENvVb-wGCsf4ZRfLukasyg35msvUBC6_aI6m2q4K0Wu_n1_qlaiRKi1Qg4wDwKlOf_HdU-eJ5FO9jQYnyznOLWcNS0",
+  "notes": [
+    "I've created a Cargo-inspired art direction portfolio template for you. This set of screens captures a sophisticated and meticulously structured aesthetic:\n\n- **The Curator's Grid Design System:** Established a monochromatic base with high-contrast serif headlines and clean sans-serif/mono metadata to give your work a gallery-like presence.\n- **Homepage (The Hero Entry):** A high-impact opening that uses a large hero image and bold, minimalist typography to set the tone.\n- **Project Index (Moodboard Grid):** An expressive, asymmetrical layout with varied image aspect ratios and subtle metadata revealing on hover, creating a sense of discovery.\n- **Project Detail (The Deep Dive):** A detailed view that balances large-scale imagery with editorial-style text blocks and metadata for a comprehensive presentation of each project.\n- **Archive (The Controlled List):** A functional and highly structured contrast to the more visual screens, providing a clean list of all your work for easy navigation.\n\nHow do these concepts align with your vision? Would you like to refine the typography or explore different grid layouts?"
+  ],
+  "prompt": "Design a Cargo-like art direction portfolio template with moodboard-style project grouping, mixed-media covers, strong image hierarchy, and a controlled but expressive archive layout.",
+  "projectId": "13866249447844148895",
+  "screenId": "666c6c8fd4434f0a93232b0592d6af6e",
+  "slug": "cargo-art-direction-moodboard",
+  "suggestions": [
+    "Refine the homepage hero layout",
+    "Try a different color palette for the design system",
+    "Add a contact page to the set",
+    "Adjust the typography in the archive list"
+  ],
+  "title": "Homepage: The Hero Entry"
+}

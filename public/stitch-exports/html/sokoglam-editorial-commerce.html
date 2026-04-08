@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>AESTHETIQUE | Premium K-Beauty Editorial</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400&amp;family=Manrope:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-surface": "#1b1c1c",
+                        "on-tertiary-fixed-variant": "#484743",
+                        "inverse-primary": "#ffb4a6",
+                        "surface": "#fcf9f8",
+                        "tertiary-fixed-dim": "#c9c6c1",
+                        "on-tertiary": "#ffffff",
+                        "secondary": "#675c53",
+                        "tertiary": "#5d5c57",
+                        "surface-dim": "#dcd9d9",
+                        "error-container": "#ffdad6",
+                        "on-primary-fixed": "#3a0a04",
+                        "on-primary": "#ffffff",
+                        "background": "#fcf9f8",
+                        "on-tertiary-container": "#fffbff",
+                        "inverse-surface": "#303030",
+                        "surface-container-highest": "#e4e2e1",
+                        "outline-variant": "#dac1bd",
+                        "secondary-fixed": "#efe0d4",
+                        "on-secondary": "#ffffff",
+                        "inverse-on-surface": "#f3f0f0",
+                        "surface-container-low": "#f6f3f2",
+                        "surface-container-lowest": "#ffffff",
+                        "on-primary-fixed-variant": "#723429",
+                        "primary-container": "#aa6053",
+                        "on-secondary-fixed-variant": "#4f453c",
+                        "surface-bright": "#fcf9f8",
+                        "on-surface-variant": "#544340",
+                        "secondary-container": "#ecddd1",
+                        "on-error-container": "#93000a",
+                        "on-error": "#ffffff",
+                        "primary": "#8d493d",
+                        "on-tertiary-fixed": "#1c1c18",
+                        "surface-container-high": "#eae7e7",
+                        "on-secondary-fixed": "#221a13",
+                        "surface-container": "#f0eded",
+                        "error": "#ba1a1a",
+                        "on-primary-container": "#fffbff",
+                        "tertiary-fixed": "#e6e2dc",
+                        "primary-fixed": "#ffdad4",
+                        "surface-tint": "#8f4b3f",
+                        "outline": "#87726f",
+                        "on-background": "#1b1c1c",
+                        "on-secondary-container": "#6b6157",
+                        "tertiary-container": "#767470",
+                        "surface-variant": "#e4e2e1",
+                        "secondary-fixed-dim": "#d2c4b8",
+                        "primary-fixed-dim": "#ffb4a6"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Noto Serif"],
+                        "body": ["Manrope"],
+                        "label": ["Manrope"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        body { font-family: 'Manrope', sans-serif; background-color: #fcf9f8; color: #1b1c1c; }
+        .font-serif { font-family: 'Noto Serif', serif; }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24; }
+        .glass-nav { backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); }
+        .primary-gradient { background: linear-gradient(135deg, #8d493d 0%, #aa6053 100%); }
+    </style>
+</head>
+<body class="bg-background text-on-surface">
+<!-- TopNavBar -->
+<nav class="fixed top-0 z-50 w-full bg-stone-50/80 dark:bg-stone-950/80 backdrop-blur-md shadow-sm shadow-stone-200/20 dark:shadow-none">
+<div class="flex justify-between items-center w-full px-8 py-4 max-w-screen-2xl mx-auto">
+<div class="flex items-center gap-12">
+<a class="text-2xl font-serif tracking-tighter text-[#1b1c1c] dark:text-stone-100" href="#">AESTHETIQUE</a>
+<div class="hidden md:flex gap-8 items-center">
+<a class="text-[#1b1c1c] dark:text-stone-400 font-medium hover:text-[#8d493d] transition-colors duration-300" href="#">Curation</a>
+<a class="text-[#1b1c1c] dark:text-stone-400 font-medium hover:text-[#8d493d] transition-colors duration-300" href="#">Routines</a>
+<a class="text-[#1b1c1c] dark:text-stone-400 font-medium hover:text-[#8d493d] transition-colors duration-300" href="#">Shop All</a>
+<a class="text-[#1b1c1c] dark:text-stone-400 font-medium hover:text-[#8d493d] transition-colors duration-300" href="#">Journal</a>
+</div>
+</div>
+<div class="flex items-center gap-6">
+<div class="hidden lg:flex items-center bg-surface-container-low px-4 py-2 rounded-full border border-outline-variant/20">
+<span class="material-symbols-outlined text-on-surface-variant text-sm">search</span>
+<input class="bg-transparent border-none focus:ring-0 text-sm w-40 placeholder:text-on-surface-variant/50" placeholder="Search rituals..." type="text"/>
+</div>
+<div class="flex items-center gap-4">
+<button class="text-on-surface hover:text-primary transition-colors">
+<span class="material-symbols-outlined">shopping_bag</span>
+</button>
+<button class="text-on-surface hover:text-primary transition-colors">
+<span class="material-symbols-outlined">person</span>
+</button>
+</div>
+</div>
+</div>
+</nav>
+<main class="pt-20">
+<!-- Hero Section -->
+<section class="relative w-full h-[870px] overflow-hidden flex items-center px-12 md:px-24">
+<div class="absolute inset-0 z-0">
+<img class="w-full h-full object-cover" data-alt="Minimalist aesthetic product display on a stone plinth with warm sunlight shadows and soft beige silk fabric" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAXAc7ctLBRub8VEyaMQ2t8jPtGLH2S7eEDlD0nhZa5zZx_WGjQCDjgt43qLLiPEe9Z8rY5qXx4C5eRhSKcL1MyGM08Xszdi0AM7L8TIOcU3orbM760ujyPdvqYcQ7cyNGXaHg8P6Ox8OCN3GxZWEKOMmuA3GL2dbKjpE19CrkfYeY9GFaKWd8pfsfZb5geYP5cRsQqx7LxYgAaFWP5qEAqbHOG4qQLMQUd2c18UxkqFTvZKn3dbVzVY9rvWKtxGusZH2Tnp8r2vT0"/>
+<div class="absolute inset-0 bg-gradient-to-r from-surface/40 via-transparent to-transparent"></div>
+</div>
+<div class="relative z-10 max-w-2xl">
+<span class="uppercase tracking-widest text-xs font-semibold text-primary mb-4 block">The Art of Ritual</span>
+<h1 class="text-5xl md:text-7xl font-serif leading-tight text-on-surface mb-8">Intentional Beauty <br/>Curated for You</h1>
+<p class="text-lg text-on-surface-variant mb-10 max-w-lg leading-relaxed">
+                    Moving beyond the marketplace. We bridge the gap between Seoul’s finest laboratories and your personal vanity through expert curation.
+                </p>
+<div class="flex gap-4">
+<button class="primary-gradient text-on-primary px-8 py-4 rounded-full font-semibold text-sm hover:opacity-90 transition-opacity">
+                        Explore Curation
+                    </button>
+<button class="bg-transparent border border-outline-variant/30 text-on-surface px-8 py-4 rounded-full font-semibold text-sm hover:bg-surface-container-high transition-colors">
+                        Our Philosophy
+                    </button>
+</div>
+</div>
+</section>
+<!-- Expert Selection Section -->
+<section class="py-32 bg-surface">
+<div class="max-w-screen-2xl mx-auto px-12 grid grid-cols-1 md:grid-cols-2 gap-24 items-center">
+<div class="relative">
+<div class="aspect-[4/5] rounded-xl overflow-hidden shadow-xl shadow-on-surface/5">
+<img class="w-full h-full object-cover" data-alt="Close-up portrait of a Korean skincare expert with glass skin and professional attire in a bright minimal studio" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAsscxlcGZ3z4Fo52XTAULLsNfaHmyHzRE4LFgURsBPXYYrPXkDIqMDZHaiScAqBbXrYhg8gEU5H0avouqchzuJD94PNIqTxRKWnKeZPsWsQG-e1jdMIHJwX8YPVCrpcCrOgwA0msXsiLKxbpet6__eIa02CAwO-4FzgDtoTne3rdKIkR6N5DwI45J7I3d0E4q9FzLz11KqfjbZMEY5Me32DYrVQnMQkpH6sEP96wmnTYInI9BwG7sPle_N6MaM3NhEfi-yXiU-jjo"/>
+</div>
+<div class="absolute -bottom-8 -right-8 bg-surface-container-lowest p-8 rounded-xl shadow-lg max-w-xs border border-outline-variant/10">
+<span class="material-symbols-outlined text-primary text-4xl mb-4">format_quote</span>
+<p class="font-serif italic text-on-surface text-lg leading-relaxed mb-4">
+                            "True glow comes from nourishment, not just exfoliation. This month, we focus on the barrier."
+                        </p>
+<p class="text-xs uppercase tracking-widest font-bold text-on-surface-variant">Dr. Ji-Hye Park, Dermatologist</p>
+</div>
+</div>
+<div class="flex flex-col justify-center">
+<h2 class="text-4xl font-serif mb-6">The Expert Pick</h2>
+<p class="text-on-surface-variant leading-relaxed text-lg mb-10">
+                        Every month, our in-house dermatologists select one product that defines the season. No sponsors, just science-backed results.
+                    </p>
+<div class="bg-surface-container-low p-8 rounded-xl flex gap-8 items-center border border-outline-variant/10">
+<img class="w-24 h-24 object-cover rounded-lg" data-alt="Minimalist white glass bottle of premium facial serum on a soft textured cream surface" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCs2_9g36ChKontA0ZLMo_jtUVAlFIjKmkrG2ytWbcMQxiCD4MJwE0pFUV4Jwd2rV4Rg7snD547JMnIlWZtNS3FJLtzc_rlOLUkKw1jX8Ek7AWMjr5qpVmjDqb4QgQw9iRR_z08a37nDhAPy1OjveU84lRPXgGGcSQwu5XaTbJezySBK6PKYfUeWTRQiTgvhPZ_yb18gJBhkTvt_4vpT2sR4kFJu8_H2aaSH-zXZGYfpyiUez2K7nbUjp6Q-J2R1oveoTdlA7_7OBY"/>
+<div>
+<h4 class="font-serif text-xl mb-1">Mugwort Relief Essence</h4>
+<p class="text-sm text-on-surface-variant mb-4">The ultimate solution for sensitive skin.</p>
+<a class="text-primary font-bold text-sm underline underline-offset-4 decoration-primary/30" href="#">Learn why it's a pick →</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Routine Education (3-Step) -->
+<section class="py-24 bg-surface-container-low">
+<div class="max-w-screen-2xl mx-auto px-12">
+<div class="text-center max-w-2xl mx-auto mb-20">
+<h2 class="text-3xl font-serif mb-4">The Three Pillars</h2>
+<p class="text-on-surface-variant">The K-Beauty philosophy doesn't need to be complex. We've distilled it into three essential steps for high-performing skin.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Step 1 -->
+<div class="group cursor-pointer">
+<div class="aspect-square rounded-xl overflow-hidden mb-6 relative">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Clear water splashing against a glass bottle, symbolizing fresh skin cleansing ritual" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBhKALD2qEzDNpTT_rw_t7vrPXm4CWKotJ1SuuzLyjfcAkmLYiG47JTg3OEMpXtJHxkMCKQbNHOWPTJ5aFb4frVZ0tyA5e3PWeXZP6ZQG3UrB_Z12DrtmK0VIqG1JyqE7wQGfbxBDZoES_NqTtSdtUSa1SAqjIkQhENNqRCqeAHR4ehKqFlxRFAUR3almZon8ljAWfdnfPaHqfo2a-BbapxK8hMWm92tQkqO4koWwh5cEnr4YPobhTE_MHMHOqmy6RFg06dRmKnpoM"/>
+<div class="absolute top-4 left-4 bg-surface-container-lowest/90 backdrop-blur px-4 py-1 rounded-full text-xs font-bold tracking-widest text-primary">01 CLEANSE</div>
+</div>
+<h3 class="font-serif text-2xl mb-2">The Double Wash</h3>
+<p class="text-on-surface-variant text-sm mb-6 leading-relaxed">Remove impurities without stripping the natural oils that protect your barrier.</p>
+<button class="text-on-surface font-semibold text-xs flex items-center gap-2 group-hover:text-primary transition-colors">
+                            VIEW CLEANERS <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+</div>
+<!-- Step 2 -->
+<div class="group cursor-pointer">
+<div class="aspect-square rounded-xl overflow-hidden mb-6 relative">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Rich amber liquid essence in a dropper bottle with soft golden light diffusion" src="https://lh3.googleusercontent.com/aida-public/AB6AXuASZkpOajO1r94kPtlzfU5UXhGPuP53bkRsvD-ZiXCIJWNcNb3qwGd-TbOy1A4s1vLRoddVdTDQRuecKnX293LkGiFtCn8TOKtD-08H1HA1BRvOp8Bzlb0zNP-UpIjT9NYfsghHXGrVePNZUrMxYEc5rF7gaMc9tPLWCW7fG_QODNLJFfQbCjVCHXZ6joD2Q44M6CEVXS3ZKv_QbPfTm245QHzEcRgVIF38UKMvO9tO1nYQRSf3C3sPvSPInk3Syfxpxg9oXSC-peo"/>
+<div class="absolute top-4 left-4 bg-surface-container-lowest/90 backdrop-blur px-4 py-1 rounded-full text-xs font-bold tracking-widest text-primary">02 TREAT</div>
+</div>
+<h3 class="font-serif text-2xl mb-2">The Targeted Core</h3>
+<p class="text-on-surface-variant text-sm mb-6 leading-relaxed">Essences and serums packed with actives to address your specific skin concerns.</p>
+<button class="text-on-surface font-semibold text-xs flex items-center gap-2 group-hover:text-primary transition-colors">
+                            VIEW SERUMS <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+</div>
+<!-- Step 3 -->
+<div class="group cursor-pointer">
+<div class="aspect-square rounded-xl overflow-hidden mb-6 relative">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Thick white cream texture on a spatula with soft aesthetic lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAp4dV53_o6raHN3Ps3qZ4cXOl0YyqECUF4G8GuebX7lz-RzHfEKTr8XhZPXbU5Up8gnO2Jvkb1gj5s_DLfYTLc45m8UhsSmDEBefWICUZfreAeQJryo8bo-yZiu3gA2C1P5Ho-E8ZWz9Y7SpUEdlCqYGfMwkBvDoOg-BekTbKNd6kB0LsSuDQEI058sl9AB7OLdd5uYVuMPQ7tD62vX415oUwAD1mBBYBZOeERuv5qam5kP8YVyznzCzQBN-1-6GHUn4D-YtTevkg"/>
+<div class="absolute top-4 left-4 bg-surface-container-lowest/90 backdrop-blur px-4 py-1 rounded-full text-xs font-bold tracking-widest text-primary">03 HYDRATE</div>
+</div>
+<h3 class="font-serif text-2xl mb-2">The Moisture Lock</h3>
+<p class="text-on-surface-variant text-sm mb-6 leading-relaxed">Seal in nutrients and maintain a plump, glowing finish all day long.</p>
+<button class="text-on-surface font-semibold text-xs flex items-center gap-2 group-hover:text-primary transition-colors">
+                            VIEW MOISTURIZERS <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Curated Collection Grid -->
+<section class="py-32 bg-surface">
+<div class="max-w-screen-2xl mx-auto px-12">
+<div class="flex justify-between items-end mb-16">
+<div>
+<h2 class="text-4xl font-serif mb-4">Top-Tier Essentials</h2>
+<p class="text-on-surface-variant">The most loved formulas in our collection.</p>
+</div>
+<a class="text-sm font-bold border-b border-on-surface pb-1" href="#">Shop The Full Curated Grid</a>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12">
+<!-- Product 1 -->
+<div class="flex flex-col">
+<div class="aspect-[3/4] bg-surface-container-low rounded-xl overflow-hidden mb-6 relative">
+<img class="w-full h-full object-cover" data-alt="Premium skincare glass jar with minimalist label against a warm beige background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCr9j69TTiadz9MegnYLij3BZ6iIjwIR-LUIatuLM4bHzV7C_XSueO4zzxujnXzdxu4NPZN_Q4Wzvr6qDuQlQrwfBMsZAx_je1tIl58LF6LAQPIPBcjBjJthLAGlVb2fcwFNisF2V8o06VZsmmXXsxMEk-02nSNUeV5pF_BzjUxJd-fy0s9FBO8HJ23h45MmpCPhPccEjJFfEa0b-VgWHBkCP1ey5dFvCVVGOVWdOanFXAJiHAdwGdR7H4k5HV4JYPji2QC4ySG208"/>
+<button class="absolute bottom-4 right-4 w-12 h-12 rounded-full bg-surface-container-lowest/90 flex items-center justify-center shadow-lg hover:bg-primary hover:text-white transition-colors">
+<span class="material-symbols-outlined">add</span>
+</button>
+</div>
+<div class="flex items-center gap-1 mb-2 text-primary">
+<span class="material-symbols-outlined text-xs" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="text-[10px] font-bold tracking-tighter uppercase">Loved by 1.2k+ enthusiasts</span>
+</div>
+<h3 class="font-serif text-lg mb-1">Ceramide Barrier Cream</h3>
+<p class="text-primary font-bold text-sm">$42.00</p>
+</div>
+<!-- Product 2 (Asymmetric offset) -->
+<div class="flex flex-col lg:translate-y-12">
+<div class="aspect-[3/4] bg-surface-container-low rounded-xl overflow-hidden mb-6 relative">
+<img class="w-full h-full object-cover" data-alt="Tall clear bottle with botanical particles floating inside, soft warm editorial lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBpt_20Z4NMAUsDLAnWkUFnHa_z65rq_G_SGZ76XvbeSjMudwMFo8jDLU5R0zj5Wrp6itJoM87EuAHxQ6GNbZdF_umxOK_bImjC8YheRP2tWh4geOqb5Q8nE45IovT7eoifnIcSpqAPlqE7oV_HUCq7RL4tp60iFFGbhkNzu3aq-7cBEGqJachEtnWhBnQQ-CQ_iztOpKM-rAywMhpmLqyQnFNqbxYJYC4qyD3il9afXEN3NM-S_QkGoHcLRYW9FiCp2tIn48nWskA"/>
+<button class="absolute bottom-4 right-4 w-12 h-12 rounded-full bg-surface-container-lowest/90 flex items-center justify-center shadow-lg hover:bg-primary hover:text-white transition-colors">
+<span class="material-symbols-outlined">add</span>
+</button>
+</div>
+<div class="flex items-center gap-1 mb-2 text-primary">
+<span class="material-symbols-outlined text-xs" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="text-[10px] font-bold tracking-tighter uppercase">500+ skin enthusiasts</span>
+</div>
+<h3 class="font-serif text-lg mb-1">Fermented Rice Toner</h3>
+<p class="text-primary font-bold text-sm">$38.00</p>
+</div>
+<!-- Product 3 -->
+<div class="flex flex-col">
+<div class="aspect-[3/4] bg-surface-container-low rounded-xl overflow-hidden mb-6 relative">
+<img class="w-full h-full object-cover" data-alt="Minimalist skincare tube on a curved plaster background with deep shadow play" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDpmVtaoV5LNEm09ttJQVSB4uVfvcdhfuosSo4jx_gRPpuvzAdmrI4GTQ6EIXMcKN9r9uUQpMNq9j6zzPxtt712jXUTgtoAEzmx9BAKv43E6ZBA9hQLhxEO6AxiHlyNNNZrnyfNjpVuIi3issIU-nDY4JSqlZ9zNzj3wYDEUUVkcNUqJk91ueTYVBCPZxEXa8KdJAWa_ISLGrxsUaSyAflMhRZ7MNID360gZU31et1QETJ6pv3xl7WCXoNybTRaAlQUCD4hsKvmU8Y"/>
+<button class="absolute bottom-4 right-4 w-12 h-12 rounded-full bg-surface-container-lowest/90 flex items-center justify-center shadow-lg hover:bg-primary hover:text-white transition-colors">
+<span class="material-symbols-outlined">add</span>
+</button>
+</div>
+<div class="flex items-center gap-1 mb-2 text-primary">
+<span class="material-symbols-outlined text-xs" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="text-[10px] font-bold tracking-tighter uppercase">Cult favorite since 2021</span>
+</div>
+<h3 class="font-serif text-lg mb-1">Gentle Enzyme Cleanser</h3>
+<p class="text-primary font-bold text-sm">$29.00</p>
+</div>
+<!-- Product 4 (Asymmetric offset) -->
+<div class="flex flex-col lg:translate-y-12">
+<div class="aspect-[3/4] bg-surface-container-low rounded-xl overflow-hidden mb-6 relative">
+<img class="w-full h-full object-cover" data-alt="Dropper bottle with pinkish serum and soft focus flower in background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAmVYNcsktR38wQbL9FQ-olFqoMkvPsGyG7igEy_ZtilLr5i7Y9I0pCVSAWA2sIGP8g4uIh4NDEzTeIDNnKZpuHjQZGJk5IeqeVg0A4HvLC40pB3u4H_6uLdr8rhOlPb7RfLibfc-LY-eWu_PAzBPw-h0H0Mr_iCSvQJdKGl5drgZuXfqrlpQ4kFGE5REHXNvUws_FLeHggUZMfkkzgSOzLTMVKA_zpOkBbypddSb3HSOfdUM3k2BQN8TxpmOoXxQq3KDdXZ5AcVU4"/>
+<button class="absolute bottom-4 right-4 w-12 h-12 rounded-full bg-surface-container-lowest/90 flex items-center justify-center shadow-lg hover:bg-primary hover:text-white transition-colors">
+<span class="material-symbols-outlined">add</span>
+</button>
+</div>
+<div class="flex items-center gap-1 mb-2 text-primary">
+<span class="material-symbols-outlined text-xs" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="text-[10px] font-bold tracking-tighter uppercase">Highly rated for redness</span>
+</div>
+<h3 class="font-serif text-lg mb-1">Calamine Recovery Ampoule</h3>
+<p class="text-primary font-bold text-sm">$46.00</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Community Proof -->
+<section class="py-32 bg-surface-container-lowest overflow-hidden">
+<div class="max-w-screen-2xl mx-auto px-12">
+<div class="flex flex-col md:flex-row items-center gap-16">
+<div class="w-full md:w-1/3">
+<h2 class="text-4xl font-serif mb-6">Real Skin, <br/>Real Rituals.</h2>
+<p class="text-on-surface-variant leading-relaxed mb-8">
+                            Join over 20,000 skin enthusiasts who have simplified their routine with Aesthetique.
+                        </p>
+<button class="text-on-surface font-bold text-sm underline underline-offset-8">Join the Community</button>
+</div>
+<div class="w-full md:w-2/3 flex gap-8">
+<div class="flex-1 bg-surface-container-low p-8 rounded-xl">
+<div class="w-12 h-12 rounded-full overflow-hidden mb-6">
+<img class="w-full h-full object-cover" data-alt="User testimonial profile photo of a smiling woman with healthy natural skin" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAmuwv_4Bk0ztnPtt-x-ZDH2a5XhSrVT55_zPqEmt3Ix4IjYHf_TyrPdeLLMr2U4N5tXDqbVb26SZ_mMOHgAFv5e44LZWlWtCpp4P8sBW_ewETThx_OYYIZ7gUED9ZEnyAVF18GKddI0Wu_r9jkkC9yWm4njanY8g8yyjOdsOaS7-ixd3zOphFmVu7itSeOwh5cjnV3LsQDAkoXxXlY76EIftog5dNb_kDAAgj7s56Rc1emuzviV_-Gca4KvEWTUtMWFPR9tVDBlPY"/>
+</div>
+<p class="font-serif text-lg mb-6 italic">"My hyperpigmentation finally found its match. The curation here is unlike anything I've tried from big retailers."</p>
+<span class="text-xs font-bold text-on-surface uppercase tracking-widest">— Sarah M., Chicago</span>
+</div>
+<div class="flex-1 bg-surface-container-low p-8 rounded-xl hidden md:block">
+<div class="w-12 h-12 rounded-full overflow-hidden mb-6">
+<img class="w-full h-full object-cover" data-alt="Minimalist studio portrait of a young person with glowing skin" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDIZ1QIN-VpbBQbsZGcr9dc9taINsjK5YGSDY9MnrOoYK7wCLu6FCOvFCG4E4hkegBRnd-Y9O1Dp8qmb3zlOx2rfAh7QOPIDe0pluZy3ql3niASaulwIVwHJCRuw11-uiLE6mEg3NK9xVdjZ_Xdg2kjqQd7moPOujrfTuh0DpnStIxdAQj5vQYTf_dgtzHBYIYG2rcpWh8kQ00RS3nJkaH0w2kqIzJKy1HnsBU3U3mIrJqOKjeQrWs4-_2xnimRdEJ92dc4yrRQeNg"/>
+</div>
+<p class="font-serif text-lg mb-6 italic">"The editorial guides helped me understand what my skin actually needed. No more guessing games."</p>
+<span class="text-xs font-bold text-on-surface uppercase tracking-widest">— Julian T., Seattle</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Journal Snippet -->
+<section class="py-24 bg-surface">
+<div class="max-w-screen-2xl mx-auto px-12">
+<div class="bg-[#f0eded] rounded-2xl overflow-hidden flex flex-col lg:flex-row items-center">
+<div class="lg:w-1/2 h-[400px] lg:h-[600px] w-full">
+<img class="w-full h-full object-cover" data-alt="Overhead view of several skincare bottles arranged aesthetically on a rustic stone surface with plant leaves" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA529Ij4LpetSouRFf61752O7h-CBi6DIKOYl28c26acLRAkqU2SSc2-GSYmcCoc0PFoFwgDEPB2SsKbFwpQXmzfVvjNEX7rolB4s9S-fk-B_PHjxK00R_XZXN4OrpqUxTIHqmzNIcDJ_AeXm0gBd-iNLwZ4h4sjdKPkeqXLexf8Lwx-MMdPdAM2My66GmyhzSiv610FfYqIXDw1rit_jXvbeqYDtSl3U_xTGhiuvQI8Sm1wmlAyxnnZnrxmdUitE4Et6ZCu46-Vwg"/>
+</div>
+<div class="lg:w-1/2 p-12 lg:p-24">
+<span class="uppercase tracking-widest text-xs font-bold text-primary mb-4 block">The Journal / Vol 04</span>
+<h2 class="text-4xl font-serif mb-6 leading-tight">Beyond The Surface: The Science of Fermentation in Skincare</h2>
+<p class="text-on-surface-variant leading-relaxed text-lg mb-10">
+                            Discover why Korean beauty has pioneered the use of fermented ingredients for centuries and how they revolutionize ingredient absorption.
+                        </p>
+<a class="primary-gradient text-on-primary inline-block px-10 py-4 rounded-full font-semibold text-sm hover:opacity-90 transition-opacity" href="#">
+                            Read the Full Article
+                        </a>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-stone-100 dark:bg-stone-900 w-full mt-24">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12 w-full px-12 py-16 max-w-screen-2xl mx-auto">
+<div class="col-span-1 md:col-span-1">
+<a class="text-xl font-serif text-[#1b1c1c] dark:text-stone-200 block mb-6" href="#">AESTHETIQUE</a>
+<p class="text-stone-600 dark:text-stone-400 text-sm leading-relaxed">
+                    Bridging traditional K-beauty wisdom with modern clinical standards.
+                </p>
+</div>
+<div class="flex flex-col gap-4">
+<h4 class="font-serif text-[#1b1c1c] dark:text-stone-200 mb-2">Concierge</h4>
+<a class="text-stone-600 dark:text-stone-400 text-sm hover:underline underline-offset-4 decoration-[#8d493d]/30" href="#">Expert Consultations</a>
+<a class="text-stone-600 dark:text-stone-400 text-sm hover:underline underline-offset-4 decoration-[#8d493d]/30" href="#">Shipping &amp; Returns</a>
+<a class="text-stone-600 dark:text-stone-400 text-sm hover:underline underline-offset-4 decoration-[#8d493d]/30" href="#">Skin Quiz</a>
+</div>
+<div class="flex flex-col gap-4">
+<h4 class="font-serif text-[#1b1c1c] dark:text-stone-200 mb-2">Philosophy</h4>
+<a class="text-stone-600 dark:text-stone-400 text-sm hover:underline underline-offset-4 decoration-[#8d493d]/30" href="#">Sustainability</a>
+<a class="text-stone-600 dark:text-stone-400 text-sm hover:underline underline-offset-4 decoration-[#8d493d]/30" href="#">Privacy Policy</a>
+<a class="text-stone-600 dark:text-stone-400 text-sm hover:underline underline-offset-4 decoration-[#8d493d]/30" href="#">Terms of Service</a>
+</div>
+<div class="flex flex-col gap-4">
+<h4 class="font-serif text-[#1b1c1c] dark:text-stone-200 mb-2">Newsletter</h4>
+<p class="text-stone-600 dark:text-stone-400 text-xs mb-4">Join our editorial list for seasonal ritual guides.</p>
+<div class="flex border-b border-stone-300 py-2">
+<input class="bg-transparent border-none focus:ring-0 text-sm w-full p-0" placeholder="Email address" type="email"/>
+<button class="text-primary font-bold text-xs uppercase tracking-widest">Join</button>
+</div>
+</div>
+</div>
+<div class="w-full px-12 py-8 border-t border-stone-200 dark:border-stone-800 max-w-screen-2xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
+<p class="text-[10px] tracking-widest font-bold text-stone-500 uppercase">© 2024 AESTHETIQUE K-BEAUTY. ALL RIGHTS RESERVED.</p>
+<div class="flex gap-6">
+<span class="material-symbols-outlined text-stone-400 cursor-pointer hover:text-primary transition-colors">brand_awareness</span>
+<span class="material-symbols-outlined text-stone-400 cursor-pointer hover:text-primary transition-colors">public</span>
+</div>
+</div>
+</footer>
+</body></html>

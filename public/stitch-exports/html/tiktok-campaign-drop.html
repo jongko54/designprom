@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>KINETIC CREATOR | THINK FAST</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@700;800;900&amp;family=Inter:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "surface-tint": "#a1faff",
+              "outline": "#777575",
+              "on-error-container": "#ffa8a3",
+              "on-secondary-fixed-variant": "#a4002e",
+              "surface-container": "#1a1919",
+              "on-primary-container": "#00575b",
+              "tertiary-dim": "#ebebeb",
+              "primary": "#a1faff",
+              "on-surface-variant": "#adaaaa",
+              "secondary-dim": "#e51146",
+              "surface-container-low": "#141313",
+              "background": "#0e0e0e",
+              "error-container": "#9f0519",
+              "secondary-container": "#be0036",
+              "tertiary-fixed": "#ffffff",
+              "on-error": "#490006",
+              "surface": "#0e0e0e",
+              "secondary": "#ff6f7c",
+              "surface-bright": "#2d2c2c",
+              "on-secondary-container": "#fff6f5",
+              "surface-variant": "#262625",
+              "error": "#ff716c",
+              "surface-container-lowest": "#000000",
+              "on-secondary": "#49000f",
+              "on-tertiary-fixed-variant": "#6c6d6e",
+              "primary-container": "#00f4fe",
+              "on-primary-fixed": "#004346",
+              "inverse-surface": "#fcf8f8",
+              "on-background": "#ffffff",
+              "on-secondary-fixed": "#6f001c",
+              "surface-dim": "#0e0e0e",
+              "on-tertiary-fixed": "#4f5051",
+              "on-tertiary": "#5e5f60",
+              "on-primary": "#006165",
+              "inverse-primary": "#006a6e",
+              "primary-dim": "#00e5ee",
+              "on-primary-fixed-variant": "#006266",
+              "error-dim": "#d7383b",
+              "on-tertiary-container": "#555757",
+              "on-surface": "#ffffff",
+              "primary-fixed": "#00f4fe",
+              "secondary-fixed": "#ffc2c4",
+              "secondary-fixed-dim": "#ffaeb2",
+              "tertiary-fixed-dim": "#f0f1f1",
+              "primary-fixed-dim": "#00e5ee",
+              "inverse-on-surface": "#565554",
+              "tertiary": "#f9f9f9",
+              "tertiary-container": "#ebebeb",
+              "outline-variant": "#494847",
+              "surface-container-high": "#201f1f",
+              "surface-container-highest": "#262625"
+            },
+            fontFamily: {
+              "headline": ["Epilogue"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+          },
+        },
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+      .kinetic-text-shadow {
+        text-shadow: 0 0 20px rgba(161, 250, 255, 0.4);
+      }
+      .glass-card {
+        background: rgba(26, 25, 25, 0.6);
+        backdrop-filter: blur(12px);
+      }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body selection:bg-primary selection:text-on-primary-fixed overflow-x-hidden">
+<!-- Top Navigation Anchor -->
+<nav class="fixed top-0 w-full z-50 bg-transparent backdrop-blur-xl flex justify-between items-center px-6 py-4 w-full">
+<div class="text-2xl font-black italic tracking-tighter text-cyan-400 dark:text-cyan-400 font-headline uppercase">KINETIC</div>
+<div class="hidden md:flex gap-8 items-center font-headline tracking-tighter uppercase font-bold text-sm">
+<a class="text-cyan-400 border-b-2 border-cyan-400 hover:text-cyan-200 transition-colors duration-200" href="#">For You</a>
+<a class="text-white/70 hover:text-cyan-200 transition-colors duration-200" href="#">Following</a>
+<a class="text-white/70 hover:text-cyan-200 transition-colors duration-200" href="#">Explore</a>
+</div>
+<div class="flex gap-4 items-center">
+<span class="material-symbols-outlined text-cyan-400 cursor-pointer hover:scale-95 active:duration-150 transition-all">search</span>
+<span class="material-symbols-outlined text-cyan-400 cursor-pointer hover:scale-95 active:duration-150 transition-all">notifications</span>
+<div class="w-8 h-8 rounded-full bg-surface-container-high border border-primary/20 overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="close-up portrait of a trendy digital creator with neon lighting reflections on their face and edgy fashion" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCShoAD0h9J_BbpGBYzommSI6Zpe5qM45WcVYIzSB7NzvWErTWRgR8M6Y92l-y3FVvrnLkNuEdy1oSYxLFuRz0sILbWBagpOnhDys8IjUPhuGyJmhBFWwHZtXWYUbauWbHgsQmRUROgqe46kDNop1ruADHYCoz8mH7yduzpoodlbPwIV5PYGmD_tHWAmDeo18n6UslMQQmDXkFULQvpHVozTBK6U3tb689wdw5vukaqKz-F9vRt1FFzE6L385Yn3lEsXCm3mOPH5lph"/>
+</div>
+</div>
+</nav>
+<!-- Side Navigation Anchor (Hidden on Mobile) -->
+<aside class="hidden md:flex fixed left-0 top-1/2 -translate-y-1/2 rounded-r-xl py-8 bg-black/40 backdrop-blur-lg flex flex-col gap-8 px-4 items-center z-40 shadow-[0_20_40px_rgba(0,245,255,0.1)]">
+<div class="flex flex-col items-center gap-1 mb-4">
+<div class="w-10 h-10 rounded-full border-2 border-secondary p-0.5">
+<img class="w-full h-full rounded-full object-cover" data-alt="abstract profile avatar of a tech-savvy user with colorful geometric patterns" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDFgK5P4FsXkWG_-lyv5FvHTGXA8FRn16MDmV6Y2yVOvTl1b0hivW6jHcnjqroVZuaZ_yZgP4JJFeguInq6VhYJBHK0fYze9tV1Eyffdm32kqWwawLPSFtwgfolKMz8NQU6nkYq35r3QO-xgSbRiOZMumesjcpTlhtO6mfze7R4X_S8GNWfHCE80W8D1Ce5yg57hDjD8_mlhnFWCkrrZJCLWv4bHh-ng-Ps8VBC1rOb8bk7C9gVvrCK-pdShD2ZCPK15lwKTkjceIBn"/>
+</div>
+<span class="text-[8px] font-headline font-black text-secondary tracking-widest">LIVE</span>
+</div>
+<a class="text-cyan-400 scale-110 transition-all duration-200 hover:text-white" href="#"><span class="material-symbols-outlined">home</span></a>
+<a class="text-white/50 transition-all duration-200 hover:text-white" href="#"><span class="material-symbols-outlined">group</span></a>
+<a class="text-white/50 transition-all duration-200 hover:text-white" href="#"><span class="material-symbols-outlined">explore</span></a>
+<a class="text-white/50 transition-all duration-200 hover:text-white" href="#"><span class="material-symbols-outlined">sensors</span></a>
+</aside>
+<!-- Main Content Canvas -->
+<main class="w-full min-h-screen">
+<!-- Full-Screen Vertical Hero Section -->
+<section class="relative h-screen w-full flex items-center justify-center overflow-hidden bg-surface-container-lowest">
+<div class="absolute inset-0 z-0">
+<img class="w-full h-full object-cover opacity-60" data-alt="vibrant neon-lit urban street at night with fast motion blur of cars and city lights creating a high-energy atmosphere" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBJoxlVjOp6GDhJEgBkAxb4sAUxi-Vo3syxi_QRTUIqKt8M7AgbZkZNCKc4nGOsMnmMMuiQ_OALCjtUTp-CE7h-flCDL5ED5av9McTFdoA9C_7ve48XLWyXzPrZE_7KEj9Pbkj3aGzzN_74jmUB2Hze6NnMBu9sBfRP37SiR_LHDyZ4Hg-lvVa0bTICiNzdRdHXsK0fv1LFmT7iZzIX0ZPXcn-oHxxI_NTjPhtNnOkpaQdZRhz65og7wwrLUOmlzI2sAIb8LsKae-Ef"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-background/50"></div>
+</div>
+<!-- TikTok-style Engagement Bar -->
+<div class="absolute right-6 bottom-32 flex flex-col gap-6 items-center z-20">
+<div class="flex flex-col items-center group cursor-pointer">
+<div class="w-12 h-12 rounded-full bg-white/10 backdrop-blur-md flex items-center justify-center group-hover:bg-secondary transition-colors">
+<span class="material-symbols-outlined text-white" style="font-variation-settings: 'FILL' 1;">favorite</span>
+</div>
+<span class="text-[10px] font-bold mt-1 tracking-widest">842K</span>
+</div>
+<div class="flex flex-col items-center group cursor-pointer">
+<div class="w-12 h-12 rounded-full bg-white/10 backdrop-blur-md flex items-center justify-center group-hover:bg-primary transition-colors">
+<span class="material-symbols-outlined text-white" style="font-variation-settings: 'FILL' 1;">chat_bubble</span>
+</div>
+<span class="text-[10px] font-bold mt-1 tracking-widest">12.5K</span>
+</div>
+<div class="flex flex-col items-center group cursor-pointer">
+<div class="w-12 h-12 rounded-full bg-white/10 backdrop-blur-md flex items-center justify-center group-hover:bg-surface-bright transition-colors">
+<span class="material-symbols-outlined text-white" style="font-variation-settings: 'FILL' 1;">share</span>
+</div>
+<span class="text-[10px] font-bold mt-1 tracking-widest">SHARE</span>
+</div>
+</div>
+<!-- Hero Kinetic Typography -->
+<div class="relative z-10 w-full px-6 md:px-24 flex flex-col items-start gap-4">
+<div class="bg-error-dim text-white px-2 py-1 text-[10px] font-headline font-black tracking-widest flex items-center gap-2 mb-2">
+<span class="w-2 h-2 rounded-full bg-white animate-pulse"></span>
+                    ACTIVE CAMPAIGN
+                </div>
+<h1 class="font-headline text-[15vw] md:text-[8rem] leading-[0.85] font-black italic tracking-tighter uppercase kinetic-text-shadow max-w-4xl">
+                    THINK <span class="text-primary">FAST.</span><br/>
+                    CREATE <span class="text-secondary">FASTER.</span>
+</h1>
+<p class="font-body text-lg md:text-xl text-white/80 max-w-lg mt-6">
+                    The attention economy waits for no one. Master the velocity of high-retention storytelling.
+                </p>
+<div class="flex flex-wrap gap-4 mt-8">
+<button class="bg-gradient-to-r from-primary to-primary-container px-8 py-4 rounded-md text-on-primary-fixed font-headline font-black text-sm tracking-widest uppercase flex items-center gap-3 hover:scale-105 active:scale-95 transition-transform shadow-[0px_20px_40px_rgba(161,250,255,0.1)]">
+                        JOIN THE MOVEMENT
+                        <span class="material-symbols-outlined text-sm">bolt</span>
+</button>
+<button class="border border-outline-variant bg-transparent px-8 py-4 rounded-md text-white font-headline font-black text-sm tracking-widest uppercase hover:bg-surface-bright transition-colors">
+                        WATCH REEL
+                    </button>
+</div>
+</div>
+</section>
+<!-- The Creator Playbook Section (Bento Grid) -->
+<section class="py-24 px-6 md:px-12 bg-background relative overflow-hidden">
+<div class="mb-16 flex flex-col md:flex-row justify-between items-end gap-6">
+<div>
+<span class="text-secondary font-headline font-bold text-xs tracking-[0.3em] uppercase block mb-4">Phase 01</span>
+<h2 class="font-headline text-5xl md:text-7xl font-black italic tracking-tighter uppercase">THE CREATOR PLAYBOOK</h2>
+</div>
+<div class="text-right text-outline text-xs font-label uppercase tracking-widest">
+                    Scroll to analyze [02]
+                </div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-4 grid-rows-2 gap-4 h-auto md:h-[800px]">
+<!-- High-Impact Feature -->
+<div class="md:col-span-2 md:row-span-2 bg-surface-container-low rounded-xl relative group overflow-hidden border border-outline-variant/10">
+<img class="w-full h-full object-cover opacity-40 group-hover:scale-105 transition-transform duration-700" data-alt="professional content creator studio setup with high-end camera equipment, neon ring lights, and futuristic monitors in a dark room" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDHYd8-9I3QW4SqiZ8osHSr8DyOA96BIX_GyBjLEcNDcwy-2YjH1fZIh8q0dWRqHUlLKtuRleV2P8TKwg4LZ8xmco6c-A_rY8ggKsaUmei4qzuwSOXNPIg788G6PZmfJfF3-0jyyRtiQpSvVKL1mZ7LfABfZ0IQTNRrH1zLNdXX_l28A0h1PwxxQyco_Q5ZLSdXKxf6XoQ_Sksk70WaeSMm4-IvfH2rVvISynHenpRSpuQ4T7GvSLSm7bcbRHHhsRalCGa-ki4qxNil"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent"></div>
+<div class="absolute bottom-8 left-8 right-8">
+<span class="bg-primary text-on-primary-fixed text-[10px] font-black px-2 py-1 mb-4 inline-block">STRATEGY</span>
+<h3 class="font-headline text-3xl font-black uppercase mb-2">HYPER-PACED RETENTION</h3>
+<p class="text-white/60 text-sm max-w-sm">Every 3 seconds is a new hook. Learn the science of the visual scroll-stop.</p>
+</div>
+</div>
+<!-- Secondary Metric -->
+<div class="md:col-span-2 bg-surface-container rounded-xl p-8 flex flex-col justify-between border border-outline-variant/10">
+<div class="flex justify-between items-start">
+<span class="material-symbols-outlined text-primary text-4xl">trending_up</span>
+<span class="text-white/30 text-xs font-bold uppercase tracking-widest">Growth Engine</span>
+</div>
+<div>
+<div class="text-6xl font-headline font-black italic text-secondary">+240%</div>
+<div class="font-headline text-xl uppercase font-black">Average Reach Increase</div>
+</div>
+</div>
+<!-- Small Grid Items -->
+<div class="bg-surface-container-high rounded-xl p-6 flex flex-col justify-between border border-outline-variant/10">
+<span class="material-symbols-outlined text-primary">auto_awesome</span>
+<h4 class="font-headline font-bold uppercase text-xs tracking-widest">Visual Hooks</h4>
+</div>
+<div class="bg-surface-container-high rounded-xl p-6 flex flex-col justify-between border border-outline-variant/10">
+<span class="material-symbols-outlined text-primary">schedule</span>
+<h4 class="font-headline font-bold uppercase text-xs tracking-widest">Viral Timing</h4>
+</div>
+</div>
+</section>
+<!-- Dynamic Content Section -->
+<section class="bg-surface-container-lowest py-24 px-6">
+<div class="max-w-7xl mx-auto flex flex-col md:flex-row gap-12 items-center">
+<div class="w-full md:w-1/2">
+<div class="aspect-[9/16] bg-surface-container-high rounded-2xl overflow-hidden relative border border-white/5 shadow-2xl">
+<img class="w-full h-full object-cover" data-alt="a smartphone held in hand displaying a vibrant social media feed with energetic visual graphics and floating neon icons" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC1Z5jrvdo3h4SZ0FkmE1QpFy9HLHdLPuTQfa9XjA-LluG7xU0xu9843yGfuqpQJWVOZMJNQ038kIbfECtruSUo-DwBWWORwSRKIYEIdqlTQUIV36N_yJDAVoFuPpKaKne4-hQYeEUMzz86HjOKe2BumQAn5KcBzRk0EsNXu_-Sa12yZ-TtCNzJ4AeiPUyHHI1wBfHBAhzJVffBNN68Z8s0N-AFwRpTpk6v34W6fJcJA8MW8GYsiSRxtqgRlLP_rXzwZ9gZFa6ruW3L"/>
+<div class="absolute inset-0 flex items-center justify-center">
+<div class="w-20 h-20 rounded-full bg-primary/20 backdrop-blur-xl border border-primary flex items-center justify-center cursor-pointer hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-primary text-4xl" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+</div>
+</div>
+</div>
+</div>
+<div class="w-full md:w-1/2 space-y-8">
+<h2 class="font-headline text-5xl md:text-7xl font-black italic tracking-tighter uppercase leading-none">
+                        BREAK THE<br/><span class="text-primary">ALGORITHM.</span>
+</h2>
+<div class="space-y-6">
+<div class="bg-surface-container p-6 border-l-4 border-secondary">
+<h4 class="font-headline font-bold uppercase tracking-widest text-secondary text-sm mb-2">Instruction 01</h4>
+<p class="text-lg font-body text-white/90">Never start with a greeting. Start with the payoff.</p>
+</div>
+<div class="bg-surface-container p-6 border-l-4 border-primary">
+<h4 class="font-headline font-bold uppercase tracking-widest text-primary text-sm mb-2">Instruction 02</h4>
+<p class="text-lg font-body text-white/90">Use kinetic typography to mirror the rhythm of speech.</p>
+</div>
+</div>
+<button class="bg-white text-black px-10 py-5 rounded-md font-headline font-black text-sm tracking-[0.2em] uppercase hover:bg-primary transition-colors">
+                        DOWNLOAD FULL GUIDE
+                    </button>
+</div>
+</div>
+</section>
+<!-- CTA "Join the Movement" -->
+<section class="relative py-32 px-6 text-center overflow-hidden">
+<div class="absolute inset-0 z-0">
+<img class="w-full h-full object-cover opacity-20" data-alt="vibrant abstract gradient flowing from deep blue to neon cyan with grainy digital texture and energetic light streaks" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBgEy5qFW0Ra4_P5W4yxxe9JRgQSLNxgxwFPX32CyHGRKla7-mkE7M8t7uXfcTj4FWf-UuTdm88-ogZhwExsSiPS2GR_YKUuHPCeCvzPy79s9gwqTzRE1r1GRO-MZ0YokKZqmiWdCIHdXYAIf9945HVNWhFo3yU2GYp9N5c-5L0niHX56Z4LRb0UagazRUzmSBfAvyTCIrzeQOqb6MhDMmjni4PU5Si25CMtvhvvyzGQZnBxMjUbdqTIpStwQE5zxhfxEAlbwHznzoO"/>
+</div>
+<div class="relative z-10 max-w-3xl mx-auto">
+<h2 class="font-headline text-6xl md:text-8xl font-black italic tracking-tighter uppercase mb-8">ARE YOU<br/><span class="text-primary">READY?</span></h2>
+<div class="bg-surface-container-high p-1 rounded-xl flex flex-col md:flex-row gap-2 max-w-lg mx-auto border border-outline-variant/30">
+<input class="bg-transparent border-none focus:ring-0 text-white font-label tracking-widest text-sm flex-grow px-6 py-4 uppercase" placeholder="ENTER EMAIL ADDRESS" type="email"/>
+<button class="bg-primary text-on-primary-fixed px-8 py-4 rounded-lg font-headline font-black text-xs tracking-widest uppercase hover:bg-primary-container transition-colors">
+                        GET ACCESS
+                    </button>
+</div>
+<p class="text-[10px] font-label text-white/40 mt-6 tracking-[0.3em] uppercase">JOIN 50,000+ KINETIC CREATORS WORLDWIDE</p>
+</div>
+</section>
+</main>
+<!-- Footer Anchor -->
+<footer class="w-full py-6 mt-auto bg-zinc-950 border-t border-white/5 flex flex-col md:flex-row justify-between items-center px-8 gap-4">
+<div class="text-cyan-400 font-black font-headline tracking-tighter uppercase text-xl italic">KINETIC CREATOR</div>
+<div class="font-inter text-[10px] tracking-widest uppercase font-bold text-zinc-600">
+            © 2024 KINETIC CREATOR. ALL RIGHTS RESERVED.
+        </div>
+<div class="flex gap-6">
+<a class="text-zinc-600 hover:text-cyan-400 font-inter text-[10px] tracking-widest uppercase font-bold transition-all duration-200" href="#">Privacy</a>
+<a class="text-zinc-600 hover:text-cyan-400 font-inter text-[10px] tracking-widest uppercase font-bold transition-all duration-200" href="#">Terms</a>
+<a class="text-zinc-600 hover:text-cyan-400 font-inter text-[10px] tracking-widest uppercase font-bold transition-all duration-200" href="#">Safety</a>
+</div>
+</footer>
+<!-- Bottom Nav for Mobile Only -->
+<nav class="md:hidden fixed bottom-0 left-0 w-full bg-black/80 backdrop-blur-xl border-t border-white/5 grid grid-cols-4 py-4 px-2 z-50">
+<button class="flex flex-col items-center gap-1 text-cyan-400">
+<span class="material-symbols-outlined">home</span>
+<span class="text-[8px] font-bold tracking-widest uppercase">Home</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-white/50">
+<span class="material-symbols-outlined">explore</span>
+<span class="text-[8px] font-bold tracking-widest uppercase">Explore</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-white/50">
+<span class="material-symbols-outlined">add_box</span>
+<span class="text-[8px] font-bold tracking-widest uppercase">Create</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-white/50">
+<span class="material-symbols-outlined">person</span>
+<span class="text-[8px] font-bold tracking-widest uppercase">Profile</span>
+</button>
+</nav>
+<!-- Floating Action Button Contextual -->
+<button class="fixed bottom-24 right-6 md:bottom-12 md:right-12 w-16 h-16 rounded-full bg-secondary text-white flex items-center justify-center shadow-[0_20px_40px_rgba(255,111,124,0.3)] z-50 hover:scale-110 active:scale-95 transition-transform md:hidden">
+<span class="material-symbols-outlined text-3xl">bolt</span>
+</button>
+</body></html>

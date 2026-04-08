@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>MACHINED LOGIC | Executive Briefing</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+        body { font-family: 'Inter', sans-serif; }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "background": "#f9f9f9",
+                        "on-primary-container": "#0047c1",
+                        "on-tertiary": "#faf8ff",
+                        "on-surface-variant": "#5a6061",
+                        "outline": "#757c7d",
+                        "primary-fixed-dim": "#c8d3ff",
+                        "surface-dim": "#d4dbdd",
+                        "on-error": "#fff7f7",
+                        "on-primary": "#f8f7ff",
+                        "outline-variant": "#adb3b4",
+                        "surface-container": "#ebeeef",
+                        "primary-dim": "#0048c3",
+                        "error": "#9e3f4e",
+                        "on-secondary-container": "#525252",
+                        "on-background": "#2d3435",
+                        "on-error-container": "#782232",
+                        "primary-container": "#dbe1ff",
+                        "tertiary": "#465aa8",
+                        "secondary-fixed": "#e4e2e2",
+                        "inverse-surface": "#0c0f0f",
+                        "surface-container-highest": "#dde4e5",
+                        "error-container": "#ff8b9a",
+                        "tertiary-fixed-dim": "#8194e6",
+                        "secondary": "#5f5f5f",
+                        "surface-container-lowest": "#ffffff",
+                        "on-surface": "#2d3435",
+                        "on-primary-fixed": "#003799",
+                        "surface-bright": "#f9f9f9",
+                        "secondary-container": "#e4e2e2",
+                        "secondary-dim": "#535353",
+                        "tertiary-fixed": "#8ea1f5",
+                        "surface-container-low": "#f2f4f4",
+                        "inverse-primary": "#628aff",
+                        "on-tertiary-fixed": "#00041f",
+                        "on-secondary-fixed-variant": "#5b5b5b",
+                        "on-secondary-fixed": "#3f3f3f",
+                        "surface-container-high": "#e4e9ea",
+                        "on-secondary": "#fbf8f8",
+                        "tertiary-dim": "#3a4e9b",
+                        "primary-fixed": "#dbe1ff",
+                        "tertiary-container": "#8ea1f5",
+                        "error-dim": "#4f0116",
+                        "secondary-fixed-dim": "#d6d4d4",
+                        "surface-variant": "#dde4e5",
+                        "on-tertiary-container": "#021f6d",
+                        "primary": "#0052dd",
+                        "inverse-on-surface": "#9c9d9d",
+                        "on-tertiary-fixed-variant": "#112976",
+                        "surface": "#f9f9f9",
+                        "on-primary-fixed-variant": "#0050d6",
+                        "surface-tint": "#0052dd"
+                    },
+                    fontFamily: {
+                        "headline": ["Inter"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    },
+                    borderRadius: {"DEFAULT": "0px", "lg": "0px", "xl": "0px", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+</head>
+<body class="bg-background text-on-background selection:bg-primary-container">
+<!-- TopNavBar -->
+<header class="bg-white dark:bg-slate-950 flex justify-between items-center px-6 py-3 w-full docked full-width top-0 z-50 tonal-transition bg-slate-50 dark:bg-slate-900 border-b-0 flat no shadows">
+<div class="flex items-center gap-8">
+<span class="text-xl font-black tracking-tighter text-slate-900 dark:text-white uppercase">MACHINED LOGIC</span>
+<nav class="hidden md:flex gap-6">
+<a class="text-slate-500 dark:text-slate-400 hover:text-slate-900 font-sans tracking-tight uppercase font-bold text-sm transition-colors" href="#">Network</a>
+<a class="text-slate-500 dark:text-slate-400 hover:text-slate-900 font-sans tracking-tight uppercase font-bold text-sm transition-colors" href="#">Assets</a>
+<a class="text-slate-500 dark:text-slate-400 hover:text-slate-900 font-sans tracking-tight uppercase font-bold text-sm transition-colors" href="#">Compliance</a>
+</nav>
+</div>
+<div class="flex items-center gap-4">
+<button class="material-symbols-outlined text-on-surface-variant hover:bg-slate-100 p-2 transition-colors">settings</button>
+<button class="material-symbols-outlined text-on-surface-variant hover:bg-slate-100 p-2 transition-colors">notifications</button>
+<div class="w-8 h-8 bg-surface-container-highest border border-outline-variant flex items-center justify-center">
+<img alt="Executive Profile" class="w-full h-full object-cover" data-alt="Professional headshot of a senior executive in a dark suit against a neutral architectural background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCb_-JLJDMHXbxaeXx6RK5TrQ1JQc36t2y5OJE5vpcGxZ_80-j5fZgevgjOjrSW4N55Q6grsZRwraqqq3DQCb66OBtAjp5gTIpPiqiXoQKAFJnVUOkUK4YNF0N1gldkkqzZ03GPptFa56dqA8NdEv4bsK9FV1Ex352FnmwDKhL9uF3EJ5zqxl2e-bvv580ev5E812UtMKQaqWTzP4Hu3VOB_p1XGhoLbV25Ff97u8ty8aBZqoQsD1EPGgypqc3GU9i4HbWUg77jec0"/>
+</div>
+</div>
+</header>
+<div class="flex min-h-screen pt-14">
+<!-- SideNavBar -->
+<aside class="hidden lg:flex flex-col h-[calc(100vh-3.5rem)] w-64 docked left-0 0px-radius tonal-transition bg-slate-100 dark:bg-slate-800 border-r border-slate-200 dark:border-slate-800 sticky top-14">
+<div class="p-6">
+<div class="flex items-center gap-3 mb-6">
+<div class="w-10 h-10 bg-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-white" style="font-variation-settings: 'FILL' 1;">account_tree</span>
+</div>
+<div>
+<p class="font-sans uppercase text-[10px] font-semibold tracking-widest text-on-surface-variant">EXECUTIVE BRIEF</p>
+<p class="text-[10px] text-on-surface-variant opacity-70">v4.2.0 Stable</p>
+</div>
+</div>
+<button class="w-full bg-primary text-on-primary font-sans uppercase text-xs font-bold tracking-widest py-3 px-4 transition-all duration-200 ease-in-out hover:bg-primary-dim">
+                    GENERATE REPORT
+                </button>
+</div>
+<nav class="flex-grow">
+<a class="bg-white dark:bg-slate-950 text-[#0052dd] dark:text-blue-400 border-l-4 border-[#0052dd] px-4 py-3 flex items-center gap-3 font-sans uppercase text-xs font-semibold tracking-widest" href="#">
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+                    Overview
+                </a>
+<a class="text-slate-600 dark:text-slate-400 px-4 py-3 flex items-center gap-3 font-sans uppercase text-xs font-semibold tracking-widest hover:bg-slate-200 dark:hover:bg-slate-700 transition-all duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="account_tree">account_tree</span>
+                    Architecture
+                </a>
+<a class="text-slate-600 dark:text-slate-400 px-4 py-3 flex items-center gap-3 font-sans uppercase text-xs font-semibold tracking-widest hover:bg-slate-200 dark:hover:bg-slate-700 transition-all duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="speed">speed</span>
+                    Performance
+                </a>
+<a class="text-slate-600 dark:text-slate-400 px-4 py-3 flex items-center gap-3 font-sans uppercase text-xs font-semibold tracking-widest hover:bg-slate-200 dark:hover:bg-slate-700 transition-all duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="timeline">timeline</span>
+                    Roadmap
+                </a>
+</nav>
+<div class="mt-auto border-t border-slate-200 dark:border-slate-700 p-4">
+<a class="text-slate-500 px-4 py-2 flex items-center gap-3 font-sans uppercase text-[10px] font-semibold tracking-widest hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined text-sm" data-icon="description">description</span>
+                    Documentation
+                </a>
+<a class="text-slate-500 px-4 py-2 flex items-center gap-3 font-sans uppercase text-[10px] font-semibold tracking-widest hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined text-sm" data-icon="help_center">help_center</span>
+                    Support
+                </a>
+</div>
+</aside>
+<!-- Main Content -->
+<main class="flex-grow p-8 max-w-7xl mx-auto w-full">
+<!-- Header Section -->
+<div class="mb-12 border-l-8 border-primary pl-8 py-2">
+<p class="font-label text-on-surface-variant uppercase tracking-[0.2em] text-xs font-bold mb-2">Internal Strategic Document // confidential</p>
+<h1 class="font-headline text-5xl font-black tracking-tighter text-on-background leading-tight">
+                    Executive Briefing:<br/>Intelligent Automation Framework
+                </h1>
+<div class="flex gap-4 mt-6 items-center">
+<span class="px-3 py-1 bg-surface-container text-on-surface text-[10px] font-black tracking-widest uppercase">System Status: Optimal</span>
+<span class="px-3 py-1 bg-primary text-on-primary text-[10px] font-black tracking-widest uppercase">Deployment: Active</span>
+</div>
+</div>
+<!-- KPI Evidence Cards -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-0 mb-16 border border-outline-variant/20">
+<div class="bg-surface-container-lowest p-8 border-r border-outline-variant/20">
+<p class="font-label text-on-surface-variant uppercase tracking-widest text-[10px] font-bold mb-6">Operational Efficiency Gain</p>
+<div class="flex items-baseline gap-2">
+<span class="text-6xl font-black tracking-tighter text-primary">42.8</span>
+<span class="text-2xl font-bold text-on-surface-variant uppercase">%</span>
+</div>
+<div class="mt-8 flex items-center gap-2 text-on-surface-variant">
+<span class="material-symbols-outlined text-primary text-sm">trending_up</span>
+<span class="text-[10px] font-bold uppercase tracking-widest">+12.4% vs Previous Quarter</span>
+</div>
+</div>
+<div class="bg-surface-container-low p-8 border-r border-outline-variant/20">
+<p class="font-label text-on-surface-variant uppercase tracking-widest text-[10px] font-bold mb-6">System Uptime</p>
+<div class="flex items-baseline gap-2">
+<span class="text-6xl font-black tracking-tighter text-on-surface">99.99</span>
+<span class="text-2xl font-bold text-on-surface-variant uppercase">%</span>
+</div>
+<div class="mt-8 flex items-center gap-2 text-on-surface-variant">
+<span class="w-2 h-2 bg-[#0052dd] inline-block"></span>
+<span class="text-[10px] font-bold uppercase tracking-widest">Enterprise Grade Redundancy</span>
+</div>
+</div>
+<div class="bg-surface-container p-8">
+<p class="font-label text-on-surface-variant uppercase tracking-widest text-[10px] font-bold mb-6">Cost Reduction %</p>
+<div class="flex items-baseline gap-2">
+<span class="text-6xl font-black tracking-tighter text-on-surface">3.2</span>
+<span class="text-2xl font-bold text-on-surface-variant uppercase">M</span>
+</div>
+<div class="mt-8 flex items-center gap-2 text-on-surface-variant">
+<span class="material-symbols-outlined text-error text-sm">arrow_downward</span>
+<span class="text-[10px] font-bold uppercase tracking-widest">USD Annualized Savings</span>
+</div>
+</div>
+</div>
+<!-- Architecture Diagram Section -->
+<section class="mb-16">
+<div class="flex justify-between items-end mb-8">
+<h2 class="font-headline text-2xl font-bold tracking-tight uppercase">Architecture Summary</h2>
+<span class="text-on-surface-variant font-label text-[10px] font-bold uppercase tracking-widest">Logic Stack v4.0</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-4 gap-4">
+<div class="bg-white border-l-4 border-slate-300 p-6 flex flex-col justify-between h-48 hover:bg-slate-50 transition-colors">
+<div>
+<span class="material-symbols-outlined text-primary mb-4">dataset</span>
+<h3 class="font-bold text-sm uppercase tracking-wider">Data Ingest</h3>
+<p class="text-xs text-on-surface-variant mt-2">Unified stream processing from 150+ enterprise touchpoints.</p>
+</div>
+<span class="text-[10px] font-mono opacity-40">INPUT_STREAM_01</span>
+</div>
+<div class="bg-primary text-on-primary p-6 flex flex-col justify-between h-48">
+<div>
+<span class="material-symbols-outlined text-white mb-4">settings_suggest</span>
+<h3 class="font-bold text-sm uppercase tracking-wider">Logic Engine</h3>
+<p class="text-xs text-white/80 mt-2">Heuristic analysis and pattern matching at sub-millisecond latency.</p>
+</div>
+<span class="text-[10px] font-mono text-white/50">CORE_PROCESSOR_X</span>
+</div>
+<div class="bg-white border-l-4 border-slate-300 p-6 flex flex-col justify-between h-48 hover:bg-slate-50 transition-colors">
+<div>
+<span class="material-symbols-outlined text-primary mb-4">terminal</span>
+<h3 class="font-bold text-sm uppercase tracking-wider">Automation Layer</h3>
+<p class="text-xs text-on-surface-variant mt-2">Scripted task execution and robotic process orchestration.</p>
+</div>
+<span class="text-[10px] font-mono opacity-40">EXECUTION_HIVE</span>
+</div>
+<div class="bg-surface-container-highest p-6 flex flex-col justify-between h-48">
+<div>
+<span class="material-symbols-outlined text-on-surface-variant mb-4">router</span>
+<h3 class="font-bold text-sm uppercase tracking-wider">Edge Deployment</h3>
+<p class="text-xs text-on-surface-variant mt-2">Distributed nodes for localized decision making and resilience.</p>
+</div>
+<span class="text-[10px] font-mono opacity-40">EDGE_NODE_09</span>
+</div>
+</div>
+</section>
+<!-- Process Step Diagram -->
+<section class="mb-16 bg-surface-container-low p-10">
+<h2 class="font-headline text-xl font-black tracking-tight uppercase mb-12 flex items-center gap-4">
+<span class="w-8 h-1 bg-primary"></span>
+                    Workflow Lifecycle
+                </h2>
+<div class="relative">
+<!-- Connector Line -->
+<div class="absolute top-1/2 left-0 w-full h-[1px] bg-outline-variant/30 hidden md:block"></div>
+<div class="grid grid-cols-1 md:grid-cols-5 gap-8">
+<!-- Step 1 -->
+<div class="relative z-10 bg-surface-container-low">
+<div class="w-12 h-12 bg-white border border-outline-variant flex items-center justify-center font-black text-primary mb-6">01</div>
+<h4 class="font-bold text-xs uppercase tracking-widest mb-2">Identification</h4>
+<p class="text-[10px] leading-relaxed text-on-surface-variant">Sensor arrays identify pattern anomalies or scheduled triggers.</p>
+</div>
+<!-- Step 2 -->
+<div class="relative z-10 bg-surface-container-low">
+<div class="w-12 h-12 bg-white border border-outline-variant flex items-center justify-center font-black text-primary mb-6">02</div>
+<h4 class="font-bold text-xs uppercase tracking-widest mb-2">Validation</h4>
+<p class="text-[10px] leading-relaxed text-on-surface-variant">Cross-referencing against historical datasets and compliance rules.</p>
+</div>
+<!-- Step 3 -->
+<div class="relative z-10 bg-surface-container-low">
+<div class="w-12 h-12 bg-primary flex items-center justify-center font-black text-white mb-6">03</div>
+<h4 class="font-bold text-xs uppercase tracking-widest mb-2">Simulation</h4>
+<p class="text-[10px] leading-relaxed text-on-surface-variant">Predictive modeling of outcome scenarios before execution.</p>
+</div>
+<!-- Step 4 -->
+<div class="relative z-10 bg-surface-container-low">
+<div class="w-12 h-12 bg-white border border-outline-variant flex items-center justify-center font-black text-primary mb-6">04</div>
+<h4 class="font-bold text-xs uppercase tracking-widest mb-2">Resolution</h4>
+<p class="text-[10px] leading-relaxed text-on-surface-variant">Active automation cycles remediate the target condition.</p>
+</div>
+<!-- Step 5 -->
+<div class="relative z-10 bg-surface-container-low">
+<div class="w-12 h-12 bg-white border border-outline-variant flex items-center justify-center font-black text-primary mb-6">05</div>
+<h4 class="font-bold text-xs uppercase tracking-widest mb-2">Auditing</h4>
+<p class="text-[10px] leading-relaxed text-on-surface-variant">Immutable ledger logging for transparency and compliance.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Evidence Section (Asymmetric) -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 mb-16">
+<div class="lg:col-span-8 bg-white p-8 border border-outline-variant/10">
+<div class="flex justify-between items-start mb-10">
+<div>
+<h3 class="text-lg font-black uppercase tracking-tight">System Performance Curve</h3>
+<p class="text-[10px] text-on-surface-variant font-bold uppercase tracking-widest mt-1">Efficiency Scaling vs Node Density</p>
+</div>
+<div class="flex gap-4">
+<div class="flex items-center gap-2">
+<span class="w-3 h-3 bg-primary"></span>
+<span class="text-[8px] font-bold uppercase">Actual</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="w-3 h-3 bg-slate-300"></span>
+<span class="text-[8px] font-bold uppercase">Forecast</span>
+</div>
+</div>
+</div>
+<!-- Mock Chart Container -->
+<div class="h-64 relative flex items-end justify-between gap-2 border-b border-l border-outline-variant/40 pt-4 px-4 pb-0">
+<div class="w-full bg-slate-100 h-1/4 hover:bg-primary/20 transition-colors"></div>
+<div class="w-full bg-slate-100 h-1/3 hover:bg-primary/20 transition-colors"></div>
+<div class="w-full bg-slate-100 h-2/4 hover:bg-primary/20 transition-colors"></div>
+<div class="w-full bg-primary h-3/5"></div>
+<div class="w-full bg-primary h-4/5"></div>
+<div class="w-full bg-primary h-[90%]"></div>
+<div class="w-full bg-primary h-full"></div>
+</div>
+<div class="flex justify-between mt-4 text-[10px] font-mono opacity-50 uppercase">
+<span>Q1 2024</span>
+<span>Q2 2024</span>
+<span>Q3 2024</span>
+<span>Q4 2024</span>
+</div>
+</div>
+<div class="lg:col-span-4 flex flex-col gap-8">
+<div class="bg-surface-container-highest p-8 flex-grow">
+<h4 class="font-bold text-sm uppercase tracking-widest mb-6">Strategic Outlook</h4>
+<ul class="space-y-6">
+<li class="flex gap-4">
+<span class="text-primary font-black">/ 01</span>
+<p class="text-xs leading-relaxed text-on-surface-variant"><strong class="text-on-surface uppercase block mb-1">Scale Phase</strong> Expansion of Logic Engine into EMEA markets by Q3.</p>
+</li>
+<li class="flex gap-4">
+<span class="text-primary font-black">/ 02</span>
+<p class="text-xs leading-relaxed text-on-surface-variant"><strong class="text-on-surface uppercase block mb-1">Deep Learning</strong> Neural network training on unstructured legacy data silos.</p>
+</li>
+<li class="flex gap-4">
+<span class="text-primary font-black">/ 03</span>
+<p class="text-xs leading-relaxed text-on-surface-variant"><strong class="text-on-surface uppercase block mb-1">Zero Trust</strong> Full implementation of hardware-level cryptographic verification.</p>
+</li>
+</ul>
+</div>
+<img alt="Hardware Node" class="w-full grayscale opacity-80" data-alt="Macro photography of a server motherboard with blue indicator lights and complex circuitry in a dark datacenter environment" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC9XOvzTizkERgRb5PFAi_4fF7jgo7QbAh1WPFnrNtMfVhMxDLJbEaSGtCdk2ZVOJ3Wxh1VGtA49ixt2t3kkjx7ZJGuTLjqNoePLRR_ZvnCKwlMOwakp4zCfvpz6b1MW2SBWOn_SsGyrNyS4USVZc4ukh68FeLjmKuQoqquo_Bw87YjBpSZwDke1mi6wXvCFrxWnYmS8X43KpWoJmYhMTE8suvtgeZYWSQJMZ04UZ3ZMc2sMByBTKB7ek2ro8qgwXVyUtcDIJIJVUU"/>
+</div>
+</div>
+</main>
+</div>
+<!-- Footer -->
+<footer class="bg-white dark:bg-slate-950 flex justify-between items-center px-8 py-4 w-full docked bottom-0 border-t border-slate-200 dark:border-slate-800">
+<span class="font-sans text-[10px] uppercase tracking-widest text-slate-400">© 2024 MACHINED LOGIC. ALL RIGHTS RESERVED.</span>
+<div class="flex gap-8">
+<a class="font-sans text-[10px] uppercase tracking-widest text-slate-400 hover:text-[#0052dd] transition-colors opacity-80 hover:opacity-100" href="#">Privacy Policy</a>
+<a class="font-sans text-[10px] uppercase tracking-widest text-slate-400 hover:text-[#0052dd] transition-colors opacity-80 hover:opacity-100" href="#">Terms of Service</a>
+<a class="font-sans text-[10px] uppercase tracking-widest text-slate-400 hover:text-[#0052dd] transition-colors opacity-80 hover:opacity-100" href="#">Security Disclosure</a>
+</div>
+</footer>
+</body></html>

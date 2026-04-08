@@ -1,0 +1,21 @@
+{
+  "brand": "Google",
+  "contentType": "image/png",
+  "fileName": "google-ai-lab-microsite.png",
+  "generatedAt": "2026-04-02T02:21:21.032Z",
+  "htmlUrl": "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ7Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpaCiVodG1sX2E2NzNmMGIzMGI5ZjQ2NzliN2IxM2MwNGNhZjQzOWNmEgsSBxCCisPc0AkYAZIBIwoKcHJvamVjdF9pZBIVQhM1NTkxNjA3NzE5MDUwNDQ4NjQw&filename=&opi=96797242",
+  "imageUrl": "https://lh3.googleusercontent.com/aida/ADBb0ug8EwdQ71h8oGXhFMziYNF2NhfuUcsbGHath_Z67nrn10VFqeP3Yl8m9wCR_zJ0mePXO_lewcL7uJAal1IOzHbEIS107hZp4caEJ4dJh_QhbdReh44uBOqlYwomiRLuqUgzJyOKx9y4NoE1bIS-wDXZ1eyOtvppMLptQkiMFkZkOHVrU27Nlqxc2p2jGZndr9YubH-rDjBv4fFCpIjq5cpHKbLtCV5rSCDiiNwIMxoJffHnrnOePdwDsjc",
+  "notes": [
+    "I've designed the Kinetic Lab microsite for you! \n\nMy goal was to capture that 'Google-inspired' feel with a modern, experimental twist. I've created four screens:\n\n1.  **Home Page:** Features a bold hero section and a modular grid showcasing the lab's core research areas with 3D primary-color geometry.\n2.  **Research Demos Gallery:** A clean, searchable gallery of interactive AI experiments, each with its own color-coded identity.\n3.  **Project Detail (Apex-1):** A deep dive into a specific AI model, providing crisp product clarity and an interactive demo section.\n4.  **About Us:** Introduces the team and their philosophy through a series of modular storytelling sections.\n\nThe whole site uses the 'Primary Logic' design system I created, ensuring consistent use of clean typography, primary-color accents, and playful 3D forms. \n\nWhat do you think of this direction? We can easily adjust the colors, the 3D assets, or the level of detail on any of these screens."
+  ],
+  "prompt": "Design a Google-inspired AI lab microsite with primary-color geometry, modular storytelling, playful 3D forms, crisp product clarity, and an experimental research-demo tone that still feels usable.",
+  "projectId": "5591607719050448640",
+  "screenId": "6a563cf2577443d8856acd18358f7902",
+  "slug": "google-ai-lab-microsite",
+  "suggestions": [
+    "Change the blue sphere to a more complex 3D form on the home page.",
+    "Add a dark mode version of the microsite.",
+    "Make the project detail page more technical with more charts."
+  ],
+  "title": "Kinetic Lab - Home"
+}

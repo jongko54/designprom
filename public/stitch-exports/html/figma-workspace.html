@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Collaborative Canvas | Infinite Workspace</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        body { font-family: 'Inter', sans-serif; }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .canvas-grid {
+            background-image: radial-gradient(circle, #bfc7d4 1px, transparent 1px);
+            background-size: 24px 24px;
+        }
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(12px);
+        }
+    </style>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "tertiary": "#904900",
+              "on-primary": "#ffffff",
+              "secondary-fixed-dim": "#aac9f2",
+              "on-primary-fixed": "#001d36",
+              "on-tertiary": "#ffffff",
+              "secondary": "#426084",
+              "error-container": "#ffdad6",
+              "surface": "#f9f9f9",
+              "surface-container-high": "#e8e8e8",
+              "on-background": "#1a1c1c",
+              "surface-variant": "#e2e2e2",
+              "on-secondary-fixed": "#001d36",
+              "on-primary-container": "#fdfcff",
+              "inverse-on-surface": "#f1f1f1",
+              "outline-variant": "#bfc7d4",
+              "on-surface-variant": "#404752",
+              "on-tertiary-container": "#fffbff",
+              "surface-container-lowest": "#ffffff",
+              "inverse-primary": "#9fcaff",
+              "surface-dim": "#dadada",
+              "on-tertiary-fixed-variant": "#703700",
+              "secondary-fixed": "#d2e4ff",
+              "surface-container": "#eeeeee",
+              "on-secondary-container": "#3d5c7f",
+              "surface-tint": "#0061a5",
+              "on-secondary-fixed-variant": "#29496b",
+              "primary-container": "#0078c9",
+              "on-secondary": "#ffffff",
+              "on-error-container": "#93000a",
+              "primary-fixed-dim": "#9fcaff",
+              "inverse-surface": "#2f3131",
+              "primary": "#005ea1",
+              "background": "#f9f9f9",
+              "tertiary-container": "#b55d00",
+              "surface-bright": "#f9f9f9",
+              "tertiary-fixed": "#ffdcc5",
+              "on-surface": "#1a1c1c",
+              "on-error": "#ffffff",
+              "tertiary-fixed-dim": "#ffb783",
+              "on-tertiary-fixed": "#301400",
+              "primary-fixed": "#d2e4ff",
+              "outline": "#707883",
+              "on-primary-fixed-variant": "#00497e",
+              "surface-container-highest": "#e2e2e2",
+              "surface-container-low": "#f3f3f3",
+              "error": "#ba1a1a",
+              "secondary-container": "#b5d4fe"
+            },
+            fontFamily: {
+              "headline": ["Inter"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+          },
+        },
+      }
+    </script>
+</head>
+<body class="bg-surface text-on-surface select-none overflow-hidden h-screen w-screen">
+<!-- SideNavBar (The Rail) -->
+<aside class="fixed left-0 top-0 h-full z-40 flex flex-col py-4 items-center bg-[#eeeeee] dark:bg-slate-800 h-screen w-20 border-r-0 transition-all duration-150 ease-out font-Inter tracking-tight text-sm font-medium">
+<div class="mb-8">
+<div class="w-10 h-10 bg-primary-container rounded-lg flex items-center justify-center text-on-primary shadow-sm mb-2">
+<span class="material-symbols-outlined" data-icon="infinite">indeterminate_question_box</span>
+</div>
+<div class="hidden text-center text-xs text-on-surface-variant">V2</div>
+</div>
+<nav class="flex flex-col gap-4 flex-1">
+<button class="flex flex-col items-center p-2 text-[#404752] dark:text-slate-400 hover:text-[#1a1c1c] hover:bg-[#e2e2e2] dark:hover:bg-slate-700 transition-all duration-150 ease-out rounded-lg">
+<span class="material-symbols-outlined" data-icon="edit_square">edit_square</span>
+<span class="text-[10px] mt-1">Drafts</span>
+</button>
+<button class="flex flex-col items-center p-2 bg-white dark:bg-slate-700 text-[#005ea1] dark:text-blue-300 rounded-lg shadow-sm transition-all duration-150 ease-out">
+<span class="material-symbols-outlined" data-icon="folder_open" style="font-variation-settings: 'FILL' 1;">folder_open</span>
+<span class="text-[10px] mt-1">Projects</span>
+</button>
+<button class="flex flex-col items-center p-2 text-[#404752] dark:text-slate-400 hover:text-[#1a1c1c] hover:bg-[#e2e2e2] dark:hover:bg-slate-700 transition-all duration-150 ease-out rounded-lg">
+<span class="material-symbols-outlined" data-icon="groups">groups</span>
+<span class="text-[10px] mt-1">Team</span>
+</button>
+<button class="flex flex-col items-center p-2 text-[#404752] dark:text-slate-400 hover:text-[#1a1c1c] hover:bg-[#e2e2e2] dark:hover:bg-slate-700 transition-all duration-150 ease-out rounded-lg">
+<span class="material-symbols-outlined" data-icon="layers">layers</span>
+<span class="text-[10px] mt-1">Assets</span>
+</button>
+<button class="flex flex-col items-center p-2 text-[#404752] dark:text-slate-400 hover:text-[#1a1c1c] hover:bg-[#e2e2e2] dark:hover:bg-slate-700 transition-all duration-150 ease-out rounded-lg">
+<span class="material-symbols-outlined" data-icon="inventory_2">inventory_2</span>
+<span class="text-[10px] mt-1">Archive</span>
+</button>
+</nav>
+<div class="flex flex-col gap-4 mt-auto border-t border-outline-variant/20 pt-4">
+<button class="flex flex-col items-center p-2 text-[#404752] hover:text-[#1a1c1c] transition-all">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+</button>
+<button class="flex flex-col items-center p-2 text-[#404752] hover:text-[#1a1c1c] transition-all">
+<span class="material-symbols-outlined" data-icon="help_outline">help_outline</span>
+</button>
+<div class="w-10 h-10 rounded-full bg-surface-container-highest overflow-hidden border-2 border-white shadow-sm">
+<img alt="User Workspace Avatar" data-alt="professional male avatar with glasses and a friendly smile in a minimalist vector style" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCbWm2RfPdNV4nOcGy4uoIUobUFoCAppdFIiVaVRUxDBkqinrdi9QGYR7Mo-szQJFl-cKQgcLreqnYQ6Dl2arK6O39K1JwpyaaisfL4O0Bybo27ycPlZHO2doZYJ3mHYnoGUT5fcLujLQz0ptm3ERrLKv32xldJd0kwaCb8X2W6t088Wj0vTJT1ZlsYNOKkvdGLR0r1tR1FN1Zj0yiAU3yhncnz-kBKTKWrOpTrMD0aiOYBU1HBuTT9fYCaQXbEt1Pdtiq_hwFaX8Y"/>
+</div>
+</div>
+</aside>
+<!-- TopNavBar -->
+<header class="fixed top-0 right-0 left-20 z-50 flex items-center justify-between px-6 bg-[#ffffff]/80 dark:bg-slate-900/80 backdrop-blur-md h-14 font-Inter tracking-tighter text-sm shadow-sm dark:shadow-none">
+<div class="flex items-center gap-6">
+<div class="flex items-center gap-2">
+<span class="font-black text-[#1a1c1c] dark:text-slate-50 text-base">Collaborative Canvas</span>
+<span class="material-symbols-outlined text-outline text-lg" data-icon="expand_more">expand_more</span>
+</div>
+<nav class="flex items-center gap-4 ml-4">
+<button class="text-[#005ea1] border-b-2 border-[#005ea1] h-14 flex items-center px-2">File</button>
+<button class="text-[#404752] dark:text-slate-400 hover:text-[#1a1c1c] h-14 flex items-center px-2">Edit</button>
+<button class="text-[#404752] dark:text-slate-400 hover:text-[#1a1c1c] h-14 flex items-center px-2">View</button>
+<button class="text-[#404752] dark:text-slate-400 hover:text-[#1a1c1c] h-14 flex items-center px-2">Assets</button>
+</nav>
+</div>
+<div class="flex-1 max-w-md mx-8">
+<div class="bg-surface-container-low rounded-lg px-3 py-1.5 flex items-center gap-2 text-on-surface-variant">
+<span class="material-symbols-outlined text-sm" data-icon="search">search</span>
+<input class="bg-transparent border-none text-xs w-full focus:ring-0 placeholder-outline" placeholder="Search workspace..." type="text"/>
+<span class="text-[10px] border border-outline-variant rounded px-1">⌘K</span>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<div class="flex -space-x-2 mr-4">
+<img alt="Collaborator Avatars" class="w-8 h-8 rounded-full border-2 border-white" data-alt="female avatar with diverse features, vibrant color palette" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAI4oL7voG4PG3tN8cdR7MEam_9TuqvRs_XlY7dx9ZKw623pyJZzrsPyidQQh8gPqd3tBXcj7xoEvH3Dnth1P3YJorKPUEssjc21nmqNzRxjNn6gt6Jsx9-oueq3eXCXTyE4AZ9gKf-Ysj7K4tsweJlFmShsTkl9Sp9NXYt5HZRTU538BjpHdv77cvpHOL5qqMjsp-sQLAVH4-dgDgmfL4OUe5SwLoF3_RILNSFNTqMNrQslRBBZrvoeLAlNDEgRWZd08bmI8zDWDk"/>
+<img alt="Collaborator Avatars" class="w-8 h-8 rounded-full border-2 border-white" data-alt="male avatar with short hair, calm expression" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCH9tqGVJBhXkCaW7ZGnWLLO43gmVGjPTftECYNeDrEVzpwhsfnNLuGYdmVhvm5P21BHPto4izOUgWa0AZQsTdS9bZfOQbC6TLkIoiC8J3mdkGm4apWhWscJ-LlRR2Eg_efewjxVeFKxZnj1dXo9VLKSnpfOdtKy6HmgKnZfaSJvRLZnI7l0mR4zs3MPEX1736EPSleXl7xAAVnTe-4jY9dIlqk1pukr-BC3U6j78gNCEZlUafTRdzlcsuCTNfFEz7HZuG0dKzbYEc"/>
+<div class="w-8 h-8 rounded-full border-2 border-white bg-primary-container text-white flex items-center justify-center text-[10px] font-bold">+4</div>
+</div>
+<button class="bg-surface-container-highest text-on-surface px-4 py-1.5 rounded-lg font-medium hover:bg-surface-variant transition-colors flex items-center gap-2">
+<span class="material-symbols-outlined text-sm" data-icon="play_arrow" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+                Present
+            </button>
+<button class="bg-primary text-on-primary px-4 py-1.5 rounded-lg font-medium hover:bg-primary-container transition-all active:scale-95 flex items-center gap-2 shadow-sm">
+<span class="material-symbols-outlined text-sm" data-icon="ios_share">ios_share</span>
+                Share
+            </button>
+</div>
+</header>
+<!-- Main Workspace Area -->
+<main class="ml-20 mt-14 mb-8 h-[calc(100vh-5.5rem)] relative overflow-hidden canvas-grid bg-surface">
+<!-- Workspace Canvas (The Live Component) -->
+<div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+<!-- Collaborative Artboard -->
+<div class="w-[80%] h-[80%] bg-surface-container-lowest rounded-xl shadow-[0_12px_40px_rgba(26,28,28,0.06)] border border-outline-variant/10 relative overflow-hidden flex flex-col pointer-events-auto">
+<!-- Artboard Header -->
+<div class="h-10 border-b border-surface-container flex items-center justify-between px-4 bg-surface-container-low/30">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-sm text-primary" data-icon="description">description</span>
+<span class="text-xs font-semibold tracking-tight">Main_Product_Hero.canvas</span>
+</div>
+<div class="flex items-center gap-2 text-on-surface-variant">
+<span class="material-symbols-outlined text-sm" data-icon="zoom_in">zoom_in</span>
+<span class="text-[10px]">85%</span>
+</div>
+</div>
+<!-- Artboard Content (Bento Style Preview) -->
+<div class="p-8 grid grid-cols-12 grid-rows-6 gap-4 h-full">
+<!-- Large Hero -->
+<div class="col-span-8 row-span-4 bg-primary-fixed rounded-xl overflow-hidden relative group">
+<img alt="Hero Concept" class="w-full h-full object-cover mix-blend-overlay opacity-60" data-alt="ultra-modern abstract architectural detail with clean lines and soft blue and white color palette, minimal shadows" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAldRyw3hzhNi5YGh2LhavrhPcjT1vaXpsnFpcGOvqZ2sfz150xq8hFwBB_R33Y9Z0qPcznwvTCKkCRusZdR8oDVWUUAFade060xPmIa90X-zpsrcX3SJBwBuOjQD8hG37O76rIlHbxkbCnRbQWi1ctVI5qieKAmpdIknlA1ESSOlD_rdsRYVAxWHFclChuwPVtoxlpSfIt4fkGgucEo0Qg1otyHKY0vt2XASwXwOJ0zUbBfXn-kSCEQNKP3MKAAUe9nScEmu5pGWo"/>
+<div class="absolute inset-0 p-8 flex flex-col justify-end bg-gradient-to-t from-primary/60 to-transparent">
+<h1 class="text-4xl font-extrabold text-on-primary tracking-tighter mb-2">Design at the speed of thought.</h1>
+<p class="text-on-primary/80 max-w-md text-sm">Real-time collaboration for teams that value precision and speed over bureaucratic process.</p>
+</div>
+<!-- Live Cursor Mock -->
+<div class="absolute top-1/2 left-1/3 flex flex-col items-start">
+<div class="w-4 h-4 text-tertiary-container">
+<span class="material-symbols-outlined" data-icon="near_me" style="font-variation-settings: 'FILL' 1;">near_me</span>
+</div>
+<div class="bg-tertiary-container text-white text-[10px] px-2 py-0.5 rounded-full ml-2">Leo is editing</div>
+</div>
+</div>
+<!-- Secondary Tiles -->
+<div class="col-span-4 row-span-2 bg-secondary-container rounded-xl flex flex-col justify-center items-center text-center p-4">
+<span class="material-symbols-outlined text-3xl mb-2 text-on-secondary-container" data-icon="auto_awesome">auto_awesome</span>
+<h3 class="font-bold text-on-secondary-container">Magic Layouts</h3>
+<p class="text-[10px] text-on-secondary-container/70">AI-powered component spacing</p>
+</div>
+<div class="col-span-4 row-span-2 bg-surface-container-high rounded-xl p-4 flex flex-col justify-between">
+<div class="flex justify-between items-start">
+<span class="text-xs font-bold uppercase tracking-widest text-on-surface-variant">Asset Library</span>
+<span class="material-symbols-outlined text-sm" data-icon="more_horiz">more_horiz</span>
+</div>
+<div class="flex gap-2">
+<div class="w-10 h-10 rounded bg-white shadow-sm"></div>
+<div class="w-10 h-10 rounded bg-white shadow-sm"></div>
+<div class="w-10 h-10 rounded bg-white shadow-sm"></div>
+</div>
+</div>
+<div class="col-span-12 row-span-2 bg-surface-container rounded-xl flex items-center justify-between px-8">
+<div class="flex flex-col">
+<span class="text-lg font-bold">Collaborators</span>
+<span class="text-xs text-on-surface-variant">4 active now</span>
+</div>
+<div class="flex gap-4">
+<div class="flex flex-col items-center">
+<div class="w-10 h-10 rounded-full border-2 border-primary-container p-0.5">
+<img alt="User" class="rounded-full" data-alt="professional female avatar with curly hair and stylish glasses" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA61TIYQuJ1ZCDQUYjS54EofSHLiPfKVC3E-znJH9Bfey6BDhKpVBpMuHDlo6o8mkrrCXIVVaJRWu81rbGc5cC4y6QcUR1Tpyan_7HTx-5-JxPKprsZzCspMT-PFVR_w-xq5nJBw5bMnHrGYY0l1l_YS2To2yM7yIqqP9UXg_Ds03deliF3KBDNK7_FJCWWCivJiBH6DmRJgttc6pBlhvNSWy-PD9sA4E_p8YQB0wSV1YMrBAJqwD6ZcdcsQsEubWxN4oSO23gD8yc"/>
+</div>
+<span class="text-[9px] mt-1 font-medium">Sarah</span>
+</div>
+<!-- Cursor 2 -->
+<div class="absolute top-3/4 left-2/3 flex flex-col items-start pointer-events-none">
+<div class="w-4 h-4 text-primary">
+<span class="material-symbols-outlined" data-icon="near_me" style="font-variation-settings: 'FILL' 1;">near_me</span>
+</div>
+<div class="bg-primary text-white text-[10px] px-2 py-0.5 rounded-full ml-2 shadow-lg">Aria</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Floating Toolbars -->
+<div class="absolute bottom-12 left-1/2 -translate-x-1/2 glass-panel p-1.5 rounded-full shadow-[0_12px_40px_rgba(26,28,28,0.08)] border border-white flex items-center gap-1 z-30">
+<button class="p-2 hover:bg-surface-container rounded-full transition-colors">
+<span class="material-symbols-outlined text-on-surface-variant" data-icon="near_me">near_me</span>
+</button>
+<div class="w-[1px] h-4 bg-outline-variant/30 mx-1"></div>
+<button class="p-2 hover:bg-surface-container rounded-full transition-colors">
+<span class="material-symbols-outlined text-on-surface-variant" data-icon="layers">layers</span>
+</button>
+<button class="p-2 hover:bg-surface-container rounded-full transition-colors bg-primary-fixed text-primary shadow-inner">
+<span class="material-symbols-outlined" data-icon="rectangle" style="font-variation-settings: 'FILL' 1;">rectangle</span>
+</button>
+<button class="p-2 hover:bg-surface-container rounded-full transition-colors">
+<span class="material-symbols-outlined text-on-surface-variant" data-icon="text_fields">text_fields</span>
+</button>
+<button class="p-2 hover:bg-surface-container rounded-full transition-colors">
+<span class="material-symbols-outlined text-on-surface-variant" data-icon="image">image</span>
+</button>
+<div class="w-[1px] h-4 bg-outline-variant/30 mx-1"></div>
+<button class="p-2 hover:bg-surface-container rounded-full transition-colors">
+<span class="material-symbols-outlined text-on-surface-variant" data-icon="hand_gesture">hand_gesture</span>
+</button>
+<button class="p-2 hover:bg-surface-container rounded-full transition-colors">
+<span class="material-symbols-outlined text-on-surface-variant" data-icon="chat_bubble">chat_bubble</span>
+</button>
+</div>
+<!-- Floating Properties Pane -->
+<div class="absolute right-6 top-6 bottom-6 w-64 glass-panel rounded-xl border border-outline-variant/10 shadow-lg flex flex-col pointer-events-auto">
+<div class="p-4 border-b border-surface-container flex items-center justify-between">
+<span class="font-bold text-xs">Properties</span>
+<span class="material-symbols-outlined text-sm" data-icon="settings">settings</span>
+</div>
+<div class="p-4 flex flex-col gap-6 overflow-y-auto">
+<div class="space-y-3">
+<label class="text-[10px] uppercase tracking-widest text-on-surface-variant font-bold">Layout</label>
+<div class="grid grid-cols-2 gap-2">
+<div class="bg-surface-container-low p-2 rounded border border-outline-variant/10">
+<div class="text-[10px] text-on-surface-variant mb-1">X</div>
+<div class="text-xs font-mono">1440</div>
+</div>
+<div class="bg-surface-container-low p-2 rounded border border-outline-variant/10">
+<div class="text-[10px] text-on-surface-variant mb-1">Y</div>
+<div class="text-xs font-mono">800</div>
+</div>
+</div>
+</div>
+<div class="space-y-3">
+<label class="text-[10px] uppercase tracking-widest text-on-surface-variant font-bold">Fill</label>
+<div class="flex items-center gap-3 bg-surface-container-low p-2 rounded">
+<div class="w-6 h-6 rounded bg-primary shadow-sm"></div>
+<span class="text-xs font-mono">#005EA1</span>
+<span class="text-[10px] ml-auto text-on-surface-variant">100%</span>
+</div>
+</div>
+<div class="space-y-3">
+<label class="text-[10px] uppercase tracking-widest text-on-surface-variant font-bold">Constraints</label>
+<div class="flex justify-center p-4 bg-surface-container-low rounded">
+<span class="material-symbols-outlined text-on-surface-variant/40 text-4xl" data-icon="filter_center_focus">filter_center_focus</span>
+</div>
+</div>
+</div>
+<div class="mt-auto p-4 bg-surface-container-low/50 border-t border-surface-container">
+<button class="w-full bg-surface-container-highest py-2 rounded-lg text-xs font-bold flex items-center justify-center gap-2 hover:bg-surface-variant transition-colors">
+<span class="material-symbols-outlined text-sm" data-icon="add">add</span>
+                    New Property
+                </button>
+</div>
+</div>
+</main>
+<!-- Footer (Status Bar) -->
+<footer class="fixed bottom-0 right-0 left-20 h-8 bg-[#f3f3f3] dark:bg-slate-900 border-t border-[#bfc7d4]/20 font-Inter text-[11px] uppercase tracking-widest font-semibold flex items-center justify-between px-4 w-full z-50">
+<div class="flex items-center gap-4 text-[#404752] dark:text-slate-500">
+<div class="flex items-center gap-1.5 hover:text-[#1a1c1c] dark:hover:text-white transition-colors cursor-default">
+<span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+<span>v2.4.0 • System Ready</span>
+</div>
+<div class="w-[1px] h-3 bg-outline-variant/30"></div>
+<span class="hover:bg-white/50 dark:hover:bg-slate-800 px-2 rounded transition-colors cursor-default">Grid: 8px</span>
+<span class="hover:bg-white/50 dark:hover:bg-slate-800 px-2 rounded transition-colors cursor-default">Zoom: 100%</span>
+</div>
+<div class="flex items-center gap-4 text-[#404752] dark:text-slate-500">
+<div class="flex items-center gap-1 hover:text-[#1a1c1c] dark:hover:text-white transition-colors cursor-default">
+<span class="material-symbols-outlined text-[14px]" data-icon="cloud_done">cloud_done</span>
+<span>Cloud Sync</span>
+</div>
+<div class="w-[1px] h-3 bg-outline-variant/30"></div>
+<div class="flex items-center gap-1 hover:text-[#1a1c1c] dark:hover:text-white transition-colors cursor-default">
+<span class="material-symbols-outlined text-[14px]" data-icon="history">history</span>
+<span>Draft 14:20 PM</span>
+</div>
+</div>
+</footer>
+</body></html>

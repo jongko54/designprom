@@ -1,0 +1,21 @@
+{
+  "brand": "Karita Koreana",
+  "contentType": "image/png",
+  "fileName": "yanbal-consultant-beauty-club.png",
+  "generatedAt": "2026-04-03T05:49:20.906Z",
+  "htmlUrl": "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ8Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpbCiVodG1sXzg3NjIyZWQzZmIyNjQwYjQ4Mjk0YjE5YWM1MWUwMmQzEgsSBxCCisPc0AkYAZIBJAoKcHJvamVjdF9pZBIWQhQxMTk4NDI1MDk2MzcyNzEzNjY4NA&filename=&opi=96797242",
+  "imageUrl": "https://lh3.googleusercontent.com/aida/ADBb0ujIdWweabTx2kK0J7CSWxv2dUM8KKGiY2cEe_fuXR-dVLTHPorkEIM4RGMEx-5zacNTNzIc9JrT4SYXKtsKbn4uf65LqIjNtO-VH90Cqm0J0lIWVt1_Eh0347GB6UazzmNN10o3RE08GU0Drv-WtkU4p88AIFF_zshQOlDQ3WJJvZwbbq_uQEvt1UICGOCJorhgr0aKZTE7bKCnk07tyFSsr1YCr089CxaauaIN8hph9Ut8_YBRy_YPl34",
+  "notes": [
+    "I've designed the new homepage for **Zen-Clinical México**, focusing on a high-conversion, mobile-native experience that balances K-beauty sophistication with Mexican local needs.\n\nKey features added:\n- **WhatsApp Guidance**: A prominent hero CTA and sticky button to offer personalized skin consultations, a key trust builder in the Mexican market.\n- **Mexican Trust Signals**: Integrated OXXO Pay, Mercado Pago, and clear local shipping information to reduce checkout friction.\n- **Routine-Based Browsing**: A visual, step-by-step routine menu (Limpiador, Tónico, etc.) that simplifies the complex 10-step K-beauty process for new users.\n- **Localized Product Rails**: Curated sections for 'Novedades', 'Tipo de Piel', and 'Esenciales Diarios' with pricing in MXN and strong social proof.\n\nThe new design is now visible on the canvas. How does this layout look to you? Would you like to adjust the routine steps or add more detailed product cards?"
+  ],
+  "prompt": "Create a high-conversion Mexican K-beauty shop with a step-by-step routine menu, strong review proof, local payment and shipping trust, WhatsApp-led personalized guidance, and product rails for new arrivals, skin-type browsing, and daily essentials. Keep the page bright, fast, and mobile-native.",
+  "projectId": "11984250963727136684",
+  "screenId": "4601c43ea63748a290527f25caf8dcfb",
+  "slug": "yanbal-consultant-beauty-club",
+  "suggestions": [
+    "Add a Routine Quiz page",
+    "Design the product detail page with detailed reviews",
+    "Create a mobile-only version of this homepage"
+  ],
+  "title": "Inicio - Zen-Clinical México"
+}

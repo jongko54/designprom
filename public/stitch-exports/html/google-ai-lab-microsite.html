@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Kinetic Lab | Precision Play</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800&amp;family=Inter:wght@400;500;600&amp;family=Space+Grotesk:wght@400;500;700&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "surface": "#f5f6f7",
+              "outline": "#757778",
+              "tertiary": "#765600",
+              "on-primary-container": "#00214f",
+              "on-background": "#2c2f30",
+              "on-secondary-container": "#940004",
+              "on-secondary-fixed-variant": "#a4090a",
+              "on-surface": "#2c2f30",
+              "on-primary-fixed-variant": "#002a61",
+              "on-tertiary-fixed-variant": "#5f4500",
+              "on-tertiary-fixed": "#3a2900",
+              "secondary-fixed": "#ffc3bb",
+              "secondary-fixed-dim": "#ffb0a5",
+              "tertiary-container": "#fbbc05",
+              "on-surface-variant": "#595c5d",
+              "surface-container-highest": "#dadddf",
+              "error-container": "#fb5151",
+              "primary-dim": "#004ca5",
+              "inverse-on-surface": "#9b9d9e",
+              "on-tertiary": "#fff1db",
+              "inverse-primary": "#4d8efe",
+              "secondary-dim": "#a30709",
+              "primary-fixed": "#6d9fff",
+              "on-primary": "#f0f2ff",
+              "tertiary-fixed-dim": "#eaaf00",
+              "surface-container": "#e6e8ea",
+              "tertiary-dim": "#674b00",
+              "error-dim": "#9f0519",
+              "on-secondary": "#ffefed",
+              "surface-container-high": "#e0e3e4",
+              "surface-dim": "#d1d5d7",
+              "background": "#f5f6f7",
+              "inverse-surface": "#0c0f10",
+              "on-error-container": "#570008",
+              "surface-container-low": "#eff1f2",
+              "secondary-container": "#ffc3bb",
+              "outline-variant": "#abadae",
+              "surface-variant": "#dadddf",
+              "surface-container-lowest": "#ffffff",
+              "tertiary-fixed": "#fbbc05",
+              "secondary": "#b41a14",
+              "primary-container": "#6d9fff",
+              "on-primary-fixed": "#000000",
+              "surface-tint": "#0058bc",
+              "on-error": "#ffefee",
+              "primary": "#0058bc",
+              "primary-fixed-dim": "#5291ff",
+              "error": "#b31b25",
+              "surface-bright": "#f5f6f7",
+              "on-secondary-fixed": "#700002",
+              "on-tertiary-container": "#543c00"
+            },
+            fontFamily: {
+              "headline": ["Plus Jakarta Sans"],
+              "body": ["Inter"],
+              "label": ["Space Grotesk"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(24px);
+            -webkit-backdrop-filter: blur(24px);
+        }
+        .tonal-shift {
+            transition: background-color 0.3s ease;
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body selection:bg-primary-container selection:text-on-primary-container">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-slate-50/70 dark:bg-slate-900/70 backdrop-blur-xl">
+<div class="flex justify-between items-center max-w-7xl mx-auto px-8 h-20">
+<div class="flex items-center gap-12">
+<span class="text-xl font-bold tracking-tighter text-slate-900 dark:text-white">Kinetic Lab</span>
+<div class="hidden md:flex items-center gap-8 font-['Plus_Jakarta_Sans'] font-medium text-sm tracking-tight">
+<a class="text-blue-600 dark:text-blue-400 font-bold border-b-2 border-blue-600" href="#">Home</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white transition-colors" href="#">Research</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white transition-colors" href="#">Projects</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white transition-colors" href="#">About</a>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<button class="p-2 hover:bg-slate-200/50 dark:hover:bg-slate-800/50 transition-colors scale-95 active:scale-90 duration-200">
+<span class="material-symbols-outlined text-blue-600 dark:text-blue-400" data-icon="science">science</span>
+</button>
+<div class="w-10 h-10 rounded-full overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="Close up portrait of a professional researcher in a clean studio setting with soft lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBbujNEtQ3J49xqzN_1_hVNc6UPHnewpSU5fP_5X0UjpUj14dNpfqvuYdmPSV9IfVAUtVSpAyP1gw0O_RqVWhzWa-uJM-9ByHnaRep3b-fIoo7VMgDpl7Ia8onFnWNLPYMo6_CAdzCeo9mJgXOzQPJ2TQjVROvFLzNBAZpNP_2WSq9WyTha6O1-tMQBgljlehaCzHqQCTPTuCleLFDmnUPJ8KHlPgSIcQyq5WrhlE8p-0lf4TYzSIwTUSjD7JeDbqN65FCEB7hJCE0"/>
+</div>
+</div>
+</div>
+</nav>
+<main class="pt-20">
+<!-- Hero Section: Modular Grid + 3D Sphere -->
+<section class="relative min-h-[921px] flex items-center px-8 py-20 overflow-hidden">
+<div class="max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+<div class="lg:col-span-7 z-10">
+<span class="font-label text-sm uppercase tracking-widest text-primary mb-6 block">Experimental Intelligence v2.0</span>
+<h1 class="font-headline text-6xl md:text-8xl font-extrabold tracking-tighter text-on-surface leading-[0.9] mb-8">
+                        Kinetic Lab: Where <span class="text-primary italic">Experiments</span> Shape the Future.
+                    </h1>
+<p class="font-body text-xl text-on-surface-variant max-w-xl mb-10 leading-relaxed">
+                        We bridge the gap between abstract neural architectures and tactile human experience through rigorous modular research.
+                    </p>
+<div class="flex flex-wrap gap-4">
+<button class="bg-primary text-on-primary px-8 py-4 rounded-xl font-headline font-bold hover:bg-primary-dim transition-all shadow-lg shadow-primary/10">
+                            Explore Archives
+                        </button>
+<button class="bg-surface-container-high text-on-surface px-8 py-4 rounded-xl font-headline font-bold hover:bg-surface-container-highest transition-all">
+                            View Methodology
+                        </button>
+</div>
+</div>
+<div class="lg:col-span-5 relative">
+<!-- Asymmetric Hero Visual -->
+<div class="relative w-full aspect-square bg-surface-container-low rounded-[2rem] overflow-hidden rotate-3 shadow-2xl">
+<img class="w-full h-full object-cover opacity-90 mix-blend-multiply" data-alt="High resolution 3D render of a glowing blue glass sphere with complex internal refractive geometry floating in a dark laboratory space" src="https://lh3.googleusercontent.com/aida-public/AB6AXuARloe2O8HYQQS672kNjO1-iY-njtwPKU1MV4qEJ8mtcJuTaU0HoJSLvYT_ZySRkS8L7yBWX2vQ_LyX8KPQSlrlhpJxEyud3dtZaYyEKqA49FiRjRsRS7ADXj4KkVY59ZC3UBLv44Uty_nzJHVRzbUGy-_kMz37Yb0R7QcAYtotSmmi6xqTMEEKZdb1AAAAFU4yo-juOaCtj3Kxjlx8rhl3g4UMkBE9fXMtq5SHuO3wsnSPmreQ-FMU0WcmfB-xrOsRLEQsZnxVxR0"/>
+<div class="absolute inset-0 bg-gradient-to-tr from-primary/20 to-transparent"></div>
+</div>
+<!-- Floating technical label -->
+<div class="absolute -bottom-6 -left-6 glass-panel p-6 rounded-xl border border-outline-variant/15 shadow-xl">
+<span class="font-label text-[10px] uppercase tracking-tighter text-outline block mb-1">Core Architecture</span>
+<span class="font-headline font-bold text-lg text-primary tracking-tight">KINETIC-SPHERE.OBJ</span>
+</div>
+</div>
+</div>
+<!-- Background 3D Sphere Accent -->
+<div class="absolute -right-20 top-1/4 w-[500px] h-[500px] bg-primary/5 rounded-full blur-[100px] -z-10"></div>
+</section>
+<!-- Research Areas: Bento Grid -->
+<section class="bg-surface-container-low py-32 px-8">
+<div class="max-w-7xl mx-auto">
+<div class="flex flex-col md:flex-row justify-between items-end mb-20 gap-8">
+<div class="max-w-2xl">
+<h2 class="font-headline text-4xl md:text-5xl font-bold tracking-tight mb-4">Active Research Vectors</h2>
+<p class="font-body text-lg text-on-surface-variant">Our laboratory is partitioned into specialized clusters, each focused on a fundamental pillar of cognitive evolution.</p>
+</div>
+<div class="font-label text-sm font-bold text-primary flex items-center gap-2 mb-2">
+                        ALL VECTORS <span class="material-symbols-outlined text-sm" data-icon="arrow_forward">arrow_forward</span>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Card: NLP -->
+<div class="group bg-surface-container-lowest p-10 rounded-[2rem] flex flex-col justify-between min-h-[420px] shadow-sm hover:shadow-xl transition-all duration-500">
+<div>
+<div class="w-16 h-16 bg-tertiary-container rounded-2xl flex items-center justify-center mb-10 group-hover:rotate-12 transition-transform">
+<span class="material-symbols-outlined text-on-tertiary-container text-3xl" data-icon="autostop">autostop</span>
+</div>
+<h3 class="font-headline text-2xl font-bold mb-4">Natural Language Processing</h3>
+<p class="font-body text-on-surface-variant leading-relaxed">Decoding the nuances of semantic intent and synthetic linguistic generation.</p>
+</div>
+<div class="relative mt-8 h-32 overflow-hidden rounded-xl">
+<img class="w-full h-full object-cover" data-alt="Abstract 3D render of a glowing yellow torus shape with metallic texture reflecting laboratory lights" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBUI3xbG3Acta62FTnT7bVlFHI9S9GxQwSiG7uj_8_CuvrSSHLCli5I5mxitWfeL7P8FXHhu1RI3-1ov6loqlLKGlKJmzLeFqjorr6N6CU7G02tL-iJOdpsaOyWXCqfTI0XCyQjqqD2nuVu5BAm_71dfvusGVNU3M844Gt1uYtisrKvka459JfI3qF7OAC-08ZxLubnA1Z8aQ2neaxCpnKfYuB5EZzTVVQq8Km9Z9rZLZsrcJfJhzxDzJvgHricXSgrYoWeCCRqyFg"/>
+</div>
+</div>
+<!-- Card: Computer Vision -->
+<div class="group bg-surface-container-lowest p-10 rounded-[2rem] flex flex-col justify-between min-h-[420px] shadow-sm hover:shadow-xl transition-all duration-500 md:translate-y-12">
+<div>
+<div class="w-16 h-16 bg-primary-container rounded-2xl flex items-center justify-center mb-10 group-hover:-rotate-12 transition-transform">
+<span class="material-symbols-outlined text-on-primary-container text-3xl" data-icon="visibility">visibility</span>
+</div>
+<h3 class="font-headline text-2xl font-bold mb-4">Computer Vision</h3>
+<p class="font-body text-on-surface-variant leading-relaxed">Advancing perceptual systems that interpret the physical world with hyper-clarity.</p>
+</div>
+<div class="relative mt-8 h-32 overflow-hidden rounded-xl">
+<img class="w-full h-full object-cover" data-alt="Geometric composition of translucent green cubes stacked in an asymmetrical pattern with sharp directional lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDf6Ss5FjUnAeKJ1OHXuqz1M12sA9CAk1fDBozmlAxnrTGGTFsDHjY-w2uD04U1Y9-cAzZGcliSab4_jupHd2ABgycuzuBd8tilJMPlj2ByRqdj-eG8dnUODg3-4YVZG-0NlmG3LvJkZz58uMgzwZPNGj7JLkfAom7M5iArVApyRcvfrYxuFU-xGFJlqCWiKUprCOooGko5VoIyodt9Ysl9Qdgtv0mt_DbdX6SR1_gIIEkB85qZQ2TM0KmqsrhD8o8RSP7cY11Vffw"/>
+</div>
+</div>
+<!-- Card: Robotics -->
+<div class="group bg-surface-container-lowest p-10 rounded-[2rem] flex flex-col justify-between min-h-[420px] shadow-sm hover:shadow-xl transition-all duration-500">
+<div>
+<div class="w-16 h-16 bg-secondary-container rounded-2xl flex items-center justify-center mb-10 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-on-secondary-container text-3xl" data-icon="precision_manufacturing">precision_manufacturing</span>
+</div>
+<h3 class="font-headline text-2xl font-bold mb-4">Robotics</h3>
+<p class="font-body text-on-surface-variant leading-relaxed">Embodying intelligence through mechanical kinetics and tactile feedback loops.</p>
+</div>
+<div class="relative mt-8 h-32 overflow-hidden rounded-xl">
+<img class="w-full h-full object-cover" data-alt="Sleek 3D red pyramid with a matte finish resting on a mirrored surface under soft studio lights" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB3RqGRfTVWO4fsJnTF1nS6DqYgFWt8BRrU_jKoeWaiXgJYrBdYXyIwNhmzw9k0y2TEyehu2lfdsXvKd6SPSkePaqq_iPCGVFNlygWtLJ9vTGhQl3Y8XJd-yduOMRDnHXOJ3wmZdZxO-naFqEw3QOEogybLFenp2ewH8NXW9OfhOOFfZ77SNNGX493hEplts4pGUrzDBs3co76DmIH7TFwC10aMOHUM5HozyKWtOCcbup40xSVXT7BbtmktjTBS0_V1jeKafdTAiJg"/>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Modular Storytelling Section -->
+<section class="py-32 px-8 overflow-hidden">
+<div class="max-w-7xl mx-auto space-y-40">
+<!-- Story Block 1 -->
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+<div class="order-2 lg:order-1">
+<div class="relative h-[500px] w-full rounded-[3rem] overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Dramatic blue and purple data visualization representing global network connectivity with glowing light particles" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBCs2r4By1oyCb8VPZ15KgfzLTDqN5s4XYyLvPGUB4wAT0EqP41xpX4eGVnO3-5oIBeN-2YaiqRRFkycy4d6wv-EwZlgk2Zk173BfRrmK9qCzDjn4WV9jOt9eWpBz2QLMXmvjB4GQA0iVd1gEqzZZWmF84ZGVLEN7WHaACBCOMCV8PayQBgDS68N1FivnSepzps8fqYI5tvBlclBuA84sApeVgqgUPktJv6sFWiJLCKUBd9g6uRr88s16RmzRdGC4fC_s18zqqPVX4"/>
+<div class="absolute inset-0 glass-panel opacity-20"></div>
+</div>
+</div>
+<div class="order-1 lg:order-2">
+<span class="font-label text-sm uppercase tracking-widest text-primary mb-6 block">01 / The Mission</span>
+<h2 class="font-headline text-4xl md:text-5xl font-extrabold tracking-tight mb-8">Modular Thinking for a Multi-Layered World.</h2>
+<p class="font-body text-lg text-on-surface-variant leading-relaxed mb-8">
+                            We don't build monolithic solutions. We create modular experiments—atomic units of intelligence that can be reconfigured, tested, and deployed across diverse environments.
+                        </p>
+<ul class="space-y-4">
+<li class="flex items-start gap-4">
+<span class="material-symbols-outlined text-primary mt-1" data-icon="check_circle">check_circle</span>
+<span class="font-body font-medium">Decentralized model training protocols</span>
+</li>
+<li class="flex items-start gap-4">
+<span class="material-symbols-outlined text-primary mt-1" data-icon="check_circle">check_circle</span>
+<span class="font-body font-medium">Adaptive neural weight distribution</span>
+</li>
+</ul>
+</div>
+</div>
+<!-- Story Block 2 -->
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+<div class="order-1">
+<span class="font-label text-sm uppercase tracking-widest text-primary mb-6 block">02 / The Process</span>
+<h2 class="font-headline text-4xl md:text-5xl font-extrabold tracking-tight mb-8">Precision Play: The Lab's Creative Engine.</h2>
+<p class="font-body text-lg text-on-surface-variant leading-relaxed mb-8">
+                            Innovation requires the freedom to play and the discipline to measure. Every prototype in the Kinetic Lab undergoes a rigorous "Pressure Test" before moving to the integration phase.
+                        </p>
+<div class="grid grid-cols-2 gap-6">
+<div class="bg-surface-container-low p-6 rounded-2xl">
+<span class="font-headline text-3xl font-extrabold text-primary block mb-2">94%</span>
+<span class="font-label text-xs uppercase tracking-wider text-outline">Accuracy Delta</span>
+</div>
+<div class="bg-surface-container-low p-6 rounded-2xl">
+<span class="font-headline text-3xl font-extrabold text-primary block mb-2">12ms</span>
+<span class="font-label text-xs uppercase tracking-wider text-outline">Latent Response</span>
+</div>
+</div>
+</div>
+<div class="order-2 relative">
+<div class="relative h-[500px] w-full rounded-[3rem] overflow-hidden translate-x-12">
+<img class="w-full h-full object-cover" data-alt="Close up of high-tech circuit boards with glowing blue indicators in a futuristic data center" src="https://lh3.googleusercontent.com/aida-public/AB6AXuArC4ARVVMpis9tKEfJcldbh1y-9U4zgFMzK8DDdKX-OGArAWllzT4RzHoJqOB1s05C4FdoIVA7LczTftte8BJPs-PrlaaEB3D6UWc0hw-VEflp6zQq6f8hQHilhfXMZLh0uj-bnJcNVXzR1VlzqTr5B3H7NaR4LxbFgb57DtSPnIpSdLcYsEV8Ot8k6vdZfXbvi_Qt9jp0As9WH_3xBrA_rHxzZp1hhJii-USrBG55rz9iTAIrnQvNUJ_JvM6D-wW6kJ187cotqEo"/>
+<div class="absolute inset-0 bg-primary/10 mix-blend-overlay"></div>
+</div>
+<!-- Asymmetric overlapping accent -->
+<div class="absolute -top-10 -right-10 w-40 h-40 bg-tertiary rounded-full mix-blend-screen opacity-50 blur-3xl"></div>
+</div>
+</div>
+</div>
+</section>
+<!-- Newsletter / CTA -->
+<section class="px-8 pb-32">
+<div class="max-w-5xl mx-auto glass-panel border border-outline-variant/15 rounded-[3rem] p-12 md:p-20 text-center relative overflow-hidden">
+<div class="absolute top-0 right-0 w-64 h-64 bg-primary/5 rounded-full -translate-y-1/2 translate-x-1/2"></div>
+<div class="relative z-10">
+<h2 class="font-headline text-4xl md:text-6xl font-extrabold tracking-tighter mb-6">Join the Experiment.</h2>
+<p class="font-body text-lg text-on-surface-variant max-w-xl mx-auto mb-10">Get bi-weekly updates on our latest research findings and modular prototypes directly from the lab floor.</p>
+<form class="flex flex-col md:flex-row gap-4 max-w-md mx-auto">
+<input class="flex-1 bg-surface-container px-6 py-4 rounded-xl border-none focus:ring-2 focus:ring-primary font-body" placeholder="Researcher Email" type="email"/>
+<button class="bg-on-surface text-surface px-8 py-4 rounded-xl font-headline font-bold hover:bg-on-surface-variant transition-all">Subscribe</button>
+</form>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-slate-100 dark:bg-slate-950 w-full py-12 px-8 border-t border-slate-200/10">
+<div class="grid grid-cols-1 md:grid-cols-2 items-center max-w-7xl mx-auto">
+<div class="mb-8 md:mb-0">
+<span class="font-['Plus_Jakarta_Sans'] font-bold text-slate-900 dark:text-white block mb-2">Kinetic Lab</span>
+<p class="font-['Space_Grotesk'] text-xs uppercase tracking-widest text-slate-500">© 2024 Kinetic Laboratory. Precision Play.</p>
+</div>
+<div class="flex flex-wrap gap-6 md:justify-end">
+<a class="font-['Space_Grotesk'] text-xs uppercase tracking-widest text-slate-500 hover:text-blue-500 transition-colors opacity-80 hover:opacity-100" href="#">Twitter</a>
+<a class="font-['Space_Grotesk'] text-xs uppercase tracking-widest text-slate-500 hover:text-blue-500 transition-colors opacity-80 hover:opacity-100" href="#">GitHub</a>
+<a class="font-['Space_Grotesk'] text-xs uppercase tracking-widest text-slate-500 hover:text-blue-500 transition-colors opacity-80 hover:opacity-100" href="#">LinkedIn</a>
+<a class="font-['Space_Grotesk'] text-xs uppercase tracking-widest text-slate-500 hover:text-blue-500 transition-colors opacity-80 hover:opacity-100" href="#">Privacy</a>
+<a class="font-['Space_Grotesk'] text-xs uppercase tracking-widest text-slate-500 hover:text-blue-500 transition-colors opacity-80 hover:opacity-100" href="#">Terms</a>
+</div>
+</div>
+</footer>
+</body></html>

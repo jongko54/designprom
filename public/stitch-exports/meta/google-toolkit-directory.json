@@ -1,0 +1,21 @@
+{
+  "brand": "Google",
+  "contentType": "image/png",
+  "fileName": "google-toolkit-directory.png",
+  "generatedAt": "2026-04-03T02:11:31.320Z",
+  "htmlUrl": "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ8Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpbCiVodG1sX2JlOGQ3ZjEzNjQyMzQyYzZiZjJkMGZkZWIyNmNkNmU3EgsSBxCCisPc0AkYAZIBJAoKcHJvamVjdF9pZBIWQhQxMzA1NTE4NDQxODUzMjYxMjU3Mw&filename=&opi=96797242",
+  "imageUrl": "https://lh3.googleusercontent.com/aida/ADBb0uhvW5nLXBIxWk2hL4zz-cy4WJZ0A103-CN_u1g3HWMxReQDT52f0KMwOqAUtSN4AWTfHKc_mZfCd1qjidNxNtsE-_vQ_-yzr2OViWRlSuS121RiNGsKSufKlC5JrZQf02vM4T2zNDqctEj_v-WOk3jZGK6TcAedEFyyri4JQGfjAKZG3evHczUiasv5wCVICr0mbYAEZkXEs1e9n9DzsTOUwiMRUwgSPbyo1zb6p2KcAGbAmbeBGHbs2UKP",
+  "notes": [
+    "I've created the **Experimental Tools Directory** for you. It features that Google-inspired \"intelligent playground\" aesthetic, with modular cards and bright filter tabs to keep the interface exploratory yet highly usable.\n\nKey features include:\n- **Modular Tool Cards:** Each card uses primary-color accents and clear status indicators (Stable, Experimental, Beta).\n- **Bright Filter Tabs:** Easy navigation between tool categories like Vision, Language, and Robotics.\n- **Calm Documentation Clarity:** A clean, airy layout with plenty of whitespace to ensure the information is easy to digest.\n- **Unified Branding:** It fits perfectly with 'The Experimental Lab' design system we've been using.\n\nYou can see the new screen on the canvas. Ready for any refinements!"
+  ],
+  "prompt": "Create a Google-inspired experimental tools directory with modular cards, bright filter tabs, primary-color object accents, calm documentation clarity, and an open lab feeling. Keep the interface exploratory but highly usable.",
+  "projectId": "13055184418532612573",
+  "screenId": "487fac58d661415f97b0b1e69330bc0e",
+  "slug": "google-toolkit-directory",
+  "suggestions": [
+    "Add a 'Getting Started' guide to the directory",
+    "Create a detailed view for one of the tools (e.g., Iris Debugger)",
+    "Try a 'Dark Lab' mode for this directory"
+  ],
+  "title": "Experimental Tools Directory"
+}

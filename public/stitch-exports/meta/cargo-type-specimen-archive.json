@@ -1,0 +1,21 @@
+{
+  "brand": "Cargo / Typography",
+  "contentType": "image/png",
+  "fileName": "cargo-type-specimen-archive.png",
+  "generatedAt": "2026-04-02T04:24:02.467Z",
+  "htmlUrl": "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ8Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpbCiVodG1sXzc3ZGM2MGFjZTdmNTQwZTBhYjFmZmFjMzU1MDU4ZTVlEgsSBxCCisPc0AkYAZIBJAoKcHJvamVjdF9pZBIWQhQxNDMwODYzMzI0MDkyMDM4NTAwNQ&filename=&opi=96797242",
+  "imageUrl": "https://lh3.googleusercontent.com/aida/ADBb0ui9TdoTFPlvYY9zHUjHC1DciCp1yM78gMsnG3UmyUSendDv0IWQuikSr4LAP5iEl0dZTLoj95M-L6TpNebcqbbFx2Z880wOLlZZix5uLGJK2HYZt5oD7JamcYE0lBQck6Px-L-gCQD3I6PlZGbNeY6FOQLQXzEOb7SsbQLFJybcV-z54GtZO8KHJC9oB9DiGdMvyLoJCqAYJmYjMg7QV_xKGPmAjp_bwy3Ldz7qp0V6efeK96OgNMlYkiLe",
+  "notes": [
+    "I've designed a high-end typography portfolio inspired by the Cargo aesthetic, focusing on oversized specimen type and a quiet, monochrome structure. \n\nThe collection includes:\n- **The Archive:** A specimen-first gallery view with large, rhythmic typeface entries.\n- **Typeface Specimen:** A deep-dive page for a single font, showcasing its personality through various scales and contexts.\n- **Glyph Sheet:** A clean, structured grid of every character in a typeface, presented as individual specimens.\n- **Info & Licensing:** A minimal, information-rich page covering the archive's purpose and licensing terms.\n\nAll designs are built around a monochrome design system that prioritizes negative space and typographic clarity."
+  ],
+  "prompt": "Create a Cargo-inspired typography portfolio template with oversized specimen type, release metadata, glyph sheets, quiet monochrome structure, and a specimen-first archive rhythm.",
+  "projectId": "14308633240920385005",
+  "screenId": "dfe73d1733234282a9c4e6881e7b9304",
+  "slug": "cargo-type-specimen-archive",
+  "suggestions": [
+    "Add a mobile version of the Archive",
+    "Customize the colors for a warmer dark mode",
+    "Change the font to a more modern sans-serif"
+  ],
+  "title": "The Archive"
+}

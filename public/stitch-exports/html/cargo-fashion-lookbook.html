@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<!-- Material Symbols Link -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&amp;family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "secondary-container": "#d4d4d4",
+              "surface-container-low": "#f3f3f3",
+              "primary": "#000000",
+              "on-tertiary-fixed-variant": "#e2e2e2",
+              "error-container": "#ffdad6",
+              "surface-container-lowest": "#ffffff",
+              "on-primary": "#e2e2e2",
+              "secondary": "#5e5e5e",
+              "on-surface-variant": "#474747",
+              "secondary-fixed-dim": "#ababab",
+              "on-secondary-fixed": "#1b1b1b",
+              "on-primary-fixed": "#ffffff",
+              "surface-tint": "#5e5e5e",
+              "surface-dim": "#dadada",
+              "surface": "#f9f9f9",
+              "on-secondary-container": "#1b1b1b",
+              "on-error": "#ffffff",
+              "inverse-on-surface": "#f1f1f1",
+              "surface-bright": "#f9f9f9",
+              "on-secondary-fixed-variant": "#3b3b3b",
+              "tertiary-container": "#747474",
+              "on-background": "#1a1c1c",
+              "outline-variant": "#c6c6c6",
+              "on-primary-fixed-variant": "#e2e2e2",
+              "on-tertiary": "#e2e2e2",
+              "on-primary-container": "#ffffff",
+              "surface-container-high": "#e8e8e8",
+              "background": "#f9f9f9",
+              "primary-fixed-dim": "#474747",
+              "tertiary-fixed": "#5e5e5e",
+              "surface-container-highest": "#e2e2e2",
+              "tertiary": "#3b3b3b",
+              "on-surface": "#1a1c1c",
+              "on-tertiary-container": "#ffffff",
+              "error": "#ba1a1a",
+              "on-secondary": "#ffffff",
+              "surface-variant": "#e2e2e2",
+              "inverse-primary": "#c6c6c6",
+              "secondary-fixed": "#c6c6c6",
+              "outline": "#777777",
+              "surface-container": "#eeeeee",
+              "inverse-surface": "#2f3131",
+              "on-error-container": "#410002",
+              "primary-container": "#3b3b3b",
+              "tertiary-fixed-dim": "#474747",
+              "primary-fixed": "#5e5e5e",
+              "on-tertiary-fixed": "#ffffff"
+            },
+            fontFamily: {
+              "headline": ["Newsreader", "serif"],
+              "body": ["Inter", "sans-serif"],
+              "label": ["Inter", "sans-serif"]
+            },
+            borderRadius: {"DEFAULT": "0px", "lg": "0px", "xl": "0px", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        ::-webkit-scrollbar {
+            width: 4px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f9f9f9;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #e2e2e2;
+        }
+        /* No-Line Rule: Boundaries defined by tonal shifts */
+        .tonal-boundary {
+            background-color: #f3f3f3;
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body antialiased selection:bg-primary selection:text-on-primary">
+<!-- TopNavBar (Shared Component) -->
+<nav class="fixed top-0 w-full z-50 bg-neutral-50/70 dark:bg-neutral-950/70 backdrop-blur-xl flex justify-between items-center px-8 py-6 w-full">
+<div class="text-lg font-bold tracking-tighter text-neutral-950 dark:text-neutral-50 uppercase">STUDIO_01</div>
+<div class="flex items-center gap-12">
+<a class="text-neutral-950 dark:text-neutral-50 border-b border-neutral-950/20 pb-1 Inter mono-style uppercase tracking-widest text-[11px] hover:text-neutral-950 dark:hover:text-neutral-50 transition-colors duration-300" href="#">archive</a>
+<a class="text-neutral-500 dark:text-neutral-400 Inter mono-style uppercase tracking-widest text-[11px] hover:text-neutral-950 dark:hover:text-neutral-50 transition-colors duration-300" href="#">lookbook</a>
+<a class="text-neutral-500 dark:text-neutral-400 Inter mono-style uppercase tracking-widest text-[11px] hover:text-neutral-950 dark:hover:text-neutral-50 transition-colors duration-300" href="#">contact</a>
+</div>
+</nav>
+<main class="pt-40 pb-20 overflow-x-hidden">
+<!-- Header Section -->
+<header class="px-8 md:px-24 mb-32 max-w-7xl">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-8">
+<div>
+<h1 class="font-headline text-7xl md:text-9xl leading-[0.9] tracking-tighter text-primary lowercase mb-4">
+                        ss26 / the monolith
+                    </h1>
+</div>
+<div class="flex flex-col gap-1">
+<span class="font-label text-[10px] uppercase tracking-[0.2em] text-secondary">Season: Spring/Summer 2026</span>
+<span class="font-label text-[10px] uppercase tracking-[0.2em] text-secondary">Photographer: Elias Thorne</span>
+<span class="font-label text-[10px] uppercase tracking-[0.2em] text-secondary">Studio: 01 Amsterdam</span>
+</div>
+</div>
+</header>
+<!-- Vertical Runway Scroller -->
+<section class="flex flex-col items-center gap-[20rem]">
+<!-- Look 01 -->
+<div class="relative w-full max-w-[80vw] md:max-w-4xl group">
+<div class="relative aspect-[2/3] w-full overflow-hidden">
+<img alt="Editorial fashion photography of a model in architectural black tailoring standing against a brutalist concrete structure with sharp shadows" class="w-full h-full object-cover grayscale brightness-95" data-alt="Editorial fashion photography of a model in architectural black tailoring standing against a brutalist concrete structure with sharp shadows" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDBdvU6muNq7RRwaeZadLAhHXwgxRmffRqfFqFfhJ1fFPL0YlSiSimSRD49KDqVoVnEA3cBnpV-HaB6Xay0Gbjgp5IDJNw45BCPYp_A4D4j3DKPxkjUmeRyz1E7AQTlicbVdZOJ-J4w_4IsBoxfkhZyzMlvx72KtNUAuuuZBIa8Bz-qMhYf1BTh3W8uZQ49qCthZLmeyNbcjamsltczYmmf_2Cb_hyowuVxEUAdbmY1n8lY2YCRgrqXCbz5Z0kyrYGIXKhESpPDuBhz"/>
+</div>
+<div class="absolute bottom-[-2.5rem] left-0 md:left-[-4rem]">
+<span class="font-label text-[10px] uppercase tracking-[0.2em] text-on-surface-variant bg-surface/80 backdrop-blur-sm p-1">look 01 / structural wool mantle</span>
+</div>
+</div>
+<!-- Look 02 - Asymmetric Shift -->
+<div class="relative w-full max-w-[70vw] md:max-w-3xl self-end pr-8 md:pr-24">
+<div class="relative aspect-[3/4] w-full overflow-hidden">
+<img alt="Minimalist fashion shot of high-quality draped silk fabric in motion, deep charcoal tones, studio lighting with high contrast and grain" class="w-full h-full object-cover grayscale contrast-125" data-alt="Minimalist fashion shot of high-quality draped silk fabric in motion, deep charcoal tones, studio lighting with high contrast and grain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCW0slez0FL0gdUbl9VJVwPfUE74OpsXTMWxS-TP_ar1HpHcUvO8cBLZgnHe7h5ccgkqHr3K6WnC6at1HJdIGcvoQvgXA88CDf_EiABn7MP6yh5J_2k4rXmFB_qn49YTV5oiSar-eLULmxLLC_Gr-oZ-QHUmfqyfTwZXZvQd6JlrrFvUyfJx7_n9tPmOmfuyelD1G5mdcU7S_gzsdz7-QaqyukZt5fHMMqApA6CIxVl4QcIEnqWTvuPFkvchgz7DbenwrEpHmxQX5UT"/>
+</div>
+<div class="absolute top-[20%] left-[-2rem] md:left-[-6rem]">
+<span class="font-label text-[10px] uppercase tracking-[0.2em] text-on-surface-variant rotate-90 origin-left">fluidity in stone</span>
+</div>
+</div>
+<!-- Look 03 - Wide Bleed -->
+<div class="relative w-screen h-[1228px]">
+<img alt="Full width panoramic fashion image of a figure walking through a misty salt flat, wearing oversized monochromatic garments that flow with the wind" class="w-full h-full object-cover grayscale opacity-90" data-alt="Full width panoramic fashion image of a figure walking through a misty salt flat, wearing oversized monochromatic garments that flow with the wind" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDycVx327sgJmW3INfz-6qNuzpF9eFgcnlyIC6ED4h48Gf8nA5IF9k0aOFbQmLkK4f-F1PcpIZZuEs23KqQ6s68xOvdJFwaZNkdNy9KPj9mx5lHtt3nWApMKgxFiHMnrTjmsN-GGBA8y8CvbTaNnyUOS6lzigfdGvkSZJXJDNXEInS8TGp5CNU8ZwtorBoyp_zU1BuR2yeUsAap4PnCAt2cpCdVqdGNLOC1awqx4I9eAdK7eTtIXmDNs7HvuZw239WPK5cMds81o0Z9"/>
+<div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+<h2 class="font-headline text-[15vw] text-on-primary-fixed/10 tracking-tighter lowercase">permanence</h2>
+</div>
+</div>
+<!-- Look 04 - Tall Narrow -->
+<div class="relative w-full max-w-[50vw] md:max-w-xl self-start pl-8 md:pl-32">
+<div class="relative aspect-[1/2] w-full overflow-hidden">
+<img alt="Close up of avant-garde knitwear textures, intricate black patterns on a pale background, sharp focus on fabric weave and tactile quality" class="w-full h-full object-cover grayscale" data-alt="Close up of avant-garde knitwear textures, intricate black patterns on a pale background, sharp focus on fabric weave and tactile quality" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBQg6WTdv4AzlVctJ0LiIMlTNWGiDyUZM82ZTsnix1REUYR3AX4_pPaiULFFGxBE-jn70U-UEFvz8YFhhNMmt-5Ku22-dJ-AbZrXX2qh-WmBwXxJNU-LOD-6EvNUQqd3MOT8cGcKLxtiNLYN2VOT_0mEVL1Ad_9Yv7M2shKDD4pstawfe92IHfl1_gedcD08N_jI2ZhOFDD2OxOXlaS4CX-m-gqDfikynJ_2ftUlKEDNPM0_QG1foe9CIpOQaKZTwKZhS9ViL8z4JSu"/>
+</div>
+<div class="absolute bottom-8 right-[-3rem]">
+<p class="font-label text-[10px] uppercase tracking-[0.3em] leading-loose text-secondary max-w-[120px]">
+                        Tactile resistance. A study of heavy gauge weave.
+                    </p>
+</div>
+</div>
+</section>
+<!-- Tonal Shift Section for Next Navigation -->
+<section class="mt-60 py-40 bg-surface-container-low flex flex-col items-center">
+<span class="font-label text-[10px] uppercase tracking-[0.4em] text-secondary mb-12">up next</span>
+<a class="group flex flex-col items-center gap-6" href="#">
+<h3 class="font-headline text-5xl md:text-7xl tracking-tighter text-primary lowercase transition-all duration-500 group-hover:opacity-50">
+                    aw26 / the catalyst
+                </h3>
+<div class="w-12 h-[1px] bg-primary group-hover:w-32 transition-all duration-700"></div>
+</a>
+</section>
+</main>
+<!-- Footer (Shared Component) -->
+<footer class="w-full py-12 px-8 mt-20 bg-neutral-100 dark:bg-neutral-900 tonal-boundary">
+<div class="flex flex-col md:flex-row justify-between items-center w-full max-w-7xl mx-auto gap-8">
+<div class="text-sm font-black text-neutral-950 dark:text-neutral-50 uppercase tracking-tighter">©2024 STUDIO_01</div>
+<div class="flex gap-10">
+<a class="Labels: Inter uppercase tracking-widest text-[10px] text-neutral-400 dark:text-neutral-500 hover:text-neutral-950 dark:hover:text-neutral-50 transition-all" href="#">Instagram</a>
+<a class="Labels: Inter uppercase tracking-widest text-[10px] text-neutral-400 dark:text-neutral-500 hover:text-neutral-950 dark:hover:text-neutral-50 transition-all" href="#">Are.na</a>
+<button class="Labels: Inter uppercase tracking-widest text-[10px] text-neutral-400 dark:text-neutral-500 hover:text-neutral-950 dark:hover:text-neutral-50 transition-all" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">Back to Top</button>
+</div>
+</div>
+</footer>
+<!-- Fixed Floating Action Element (Contextual) -->
+<div class="fixed bottom-10 right-10 z-40 hidden md:flex items-center gap-4">
+<div class="h-px w-20 bg-primary/20"></div>
+<span class="font-label text-[9px] uppercase tracking-widest text-primary/40">scrolling session / 04:12</span>
+</div>
+</body></html>

@@ -1,0 +1,21 @@
+{
+  "brand": "Goka",
+  "contentType": "image/png",
+  "fileName": "goka-social-commerce.png",
+  "generatedAt": "2026-04-03T02:32:27.323Z",
+  "htmlUrl": "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ7Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpaCiVodG1sXzMxZDNkMzU1NWJiYjQ2MGQ5NmFhYTlhZTE5ZWU3YjY1EgsSBxCCisPc0AkYAZIBIwoKcHJvamVjdF9pZBIVQhM2NTk4NDc0ODc1Njk1ODI2ODU4&filename=&opi=96797242",
+  "imageUrl": "https://lh3.googleusercontent.com/aida/ADBb0ujtD6yFecJRGxmR7tdxJGqBhI5k7Ke4YMRSnNeP9b9HqBY4OVyEgH4Qh_BCizrZS6vrDZrSrTMZmJRdNwVHEUgH5HXyvJCSwZLnRL0o3fjre-WgY324BSbHZjGOtoD9ZOpHy00-Vf9ezciOmg1M_obpI3SYiS09VcwEqMx_uv3rrs6hMKEI-SvARPt28AAMp3nfYoBVCRCtmndCadmItXZ_b1JS7dBziVQJDvBPh1LrF9VVSwhjdw7vRQ",
+  "notes": [
+    "I've designed the Latin America-focused K-beauty homepage for \"Club Aesthetique.\" \n\nKey features included:\n- **Spanish-First Copy:** All messaging tailored for a Latin American audience.\n- **Trust & Reassurance:** Highlighting 100% original products, free shipping (México & Latam), and dedicated WhatsApp support.\n- **Club Tone:** A welcoming, community-driven membership aesthetic with \"Join the Club\" prompts.\n- **Social-Native Content:** A TikTok-inspired section to showcase trending products in a relatable way.\n- **Visual Style:** Bright, friendly, and approachable using the custom \"Aesthetique Sol\" design system.\n\nThe layout is built with a mobile-first philosophy, ensuring it looks and feels native on smartphones while scaling beautifully for desktop."
+  ],
+  "prompt": "Create a Latin America K-beauty ecommerce homepage with Spanish-first copy, WhatsApp trust cues, social-native campaign modules, authentic-product reassurance, free-shipping emphasis, and a club-like membership tone. Keep the page bright, friendly, mobile-first, and community-oriented.",
+  "projectId": "6598474875695826858",
+  "screenId": "0a437ef5c58241c6822406d7aadeb85d",
+  "slug": "goka-social-commerce",
+  "suggestions": [
+    "Add a product detail page for the Glow Serum",
+    "Design the 'Únete al Club' registration modal",
+    "Create a mobile-responsive view for this home page"
+  ],
+  "title": "Club Aesthetique Latam Home"
+}

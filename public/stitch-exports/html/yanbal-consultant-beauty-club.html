@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+
+<html class="light" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400&amp;family=Manrope:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "tertiary-fixed": "#e5e2dd",
+                    "outline-variant": "#c3c8bf",
+                    "on-tertiary-container": "#383835",
+                    "surface-tint": "#50644d",
+                    "on-secondary-fixed": "#291710",
+                    "tertiary-container": "#a3a19d",
+                    "primary-fixed-dim": "#b6cdb1",
+                    "primary-fixed": "#d2e9cc",
+                    "on-secondary-fixed-variant": "#594139",
+                    "on-secondary": "#ffffff",
+                    "on-primary": "#ffffff",
+                    "on-error": "#ffffff",
+                    "inverse-on-surface": "#f1f0f0",
+                    "secondary-fixed": "#fedbcf",
+                    "on-surface-variant": "#434841",
+                    "on-tertiary-fixed-variant": "#474743",
+                    "error-container": "#ffdad6",
+                    "secondary-container": "#fbd8cd",
+                    "on-tertiary-fixed": "#1c1c19",
+                    "inverse-primary": "#b6cdb1",
+                    "on-primary-fixed": "#0e1f0e",
+                    "on-primary-fixed-variant": "#384c36",
+                    "background": "#faf9f8",
+                    "error": "#ba1a1a",
+                    "on-tertiary": "#ffffff",
+                    "surface-container-lowest": "#ffffff",
+                    "on-primary-container": "#2a3c28",
+                    "surface-container-low": "#f4f3f2",
+                    "surface-container-high": "#e9e8e7",
+                    "on-background": "#1a1c1c",
+                    "tertiary": "#5f5e5b",
+                    "surface": "#faf9f8",
+                    "surface-dim": "#dadad9",
+                    "on-surface": "#1a1c1c",
+                    "on-error-container": "#93000a",
+                    "surface-container-highest": "#e3e2e1",
+                    "secondary-fixed-dim": "#e1bfb4",
+                    "outline": "#737971",
+                    "surface-variant": "#e3e2e1",
+                    "surface-bright": "#faf9f8",
+                    "tertiary-fixed-dim": "#c9c6c2",
+                    "surface-container": "#eeeeed",
+                    "primary-container": "#92a78d",
+                    "on-secondary-container": "#775d54",
+                    "secondary": "#725950",
+                    "primary": "#50644d",
+                    "inverse-surface": "#2f3130"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Noto Serif"],
+                    "body": ["Manrope"],
+                    "label": ["Manrope"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+            display: inline-block;
+            line-height: 1;
+        }
+        .glass-nav {
+            backdrop-filter: blur(20px);
+        }
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body selection:bg-primary-fixed selection:text-on-primary-fixed">
+<!-- Top Navigation Shell -->
+<nav class="fixed top-0 w-full z-50 bg-[#faf9f8]/60 dark:bg-[#1a1c1c]/60 backdrop-blur-xl flex justify-between items-center px-8 py-4 max-w-none">
+<div class="flex items-center gap-12 max-w-7xl mx-auto w-full">
+<span class="text-2xl font-headline italic text-[#50644d] dark:text-[#d2e9cc] shrink-0">ZEN-CLINICAL</span>
+<!-- Desktop Links -->
+<div class="hidden md:flex items-center gap-8 flex-1 justify-center font-headline text-sm tracking-wide">
+<a class="text-[#1a1c1c]/70 dark:text-[#faf9f8]/70 hover:text-[#50644d] transition-colors duration-300" href="#">Rutinas</a>
+<a class="text-[#50644d] font-bold border-b-2 border-[#50644d] pb-1" href="#">Novedades</a>
+<a class="text-[#1a1c1c]/70 dark:text-[#faf9f8]/70 hover:text-[#50644d] transition-colors duration-300" href="#">Tipo de Piel</a>
+<a class="text-[#1a1c1c]/70 dark:text-[#faf9f8]/70 hover:text-[#50644d] transition-colors duration-300" href="#">Ofertas</a>
+</div>
+<div class="flex items-center gap-6">
+<span class="material-symbols-outlined text-[#50644d] cursor-pointer hover:scale-95 transition-transform duration-200">shopping_bag</span>
+<span class="material-symbols-outlined text-[#50644d] cursor-pointer hover:scale-95 transition-transform duration-200">person</span>
+</div>
+</div>
+</nav>
+<main class="pt-20">
+<!-- Hero Section -->
+<section class="relative min-h-[870px] flex items-center overflow-hidden bg-surface">
+<div class="absolute inset-0 z-0">
+<img class="w-full h-full object-cover object-center opacity-60" data-alt="Ethereal lifestyle close-up of fresh botanical extracts and morning sunlight illuminating soft glass skincare bottles on a textured surface" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCH6nFbCDHq3uNTsiwsFTqK3q0hwVtFjdYDTzYT4gcVD_1Bf09W32TDgjclVG__SPs4fTec3Fi3M2SV_2hun4BtV3tIFS2AQPTce31IwA7-bxSIexQ6dd5rOk2Nz9mqTZE5leepaLDgs5Yzta4JgMC-VdMoLH_vGklJTis1z-7xdu37ZXw6Bp_wdr4rQHc9DuPu3tFw7NIuza6YyAep-JSa5dkJEiz0Fyqez5XP7JUYftsE-9YdpP3CBVgN7RnxOgwa-TM1G42MEjkB"/>
+<div class="absolute inset-0 bg-gradient-to-r from-background via-background/40 to-transparent"></div>
+</div>
+<div class="container mx-auto px-8 relative z-10 max-w-7xl">
+<div class="max-w-2xl">
+<span class="text-primary font-semibold tracking-widest uppercase text-xs mb-4 block">Tradición &amp; Ciencia</span>
+<h1 class="text-6xl md:text-7xl font-headline text-on-surface leading-tight mb-6">
+                        Belleza Coreana con <span class="italic font-normal">Alma Mexicana</span>
+</h1>
+<p class="text-xl text-on-surface-variant mb-10 leading-relaxed font-light">
+                        Asesoría personalizada por WhatsApp para encontrar tu ritual perfecto y transformar la salud de tu piel.
+                    </p>
+<div class="flex flex-wrap gap-4">
+<button class="bg-primary text-on-primary px-10 py-5 rounded-xl font-medium flex items-center gap-3 hover:bg-primary-container transition-all duration-300 shadow-lg shadow-primary/10">
+<span>Chatear con una experta</span>
+<span class="material-symbols-outlined text-lg">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Routine Navigation: The 10 Steps -->
+<section class="py-20 bg-surface-container-low">
+<div class="container mx-auto px-8 max-w-7xl text-center mb-12">
+<h2 class="text-3xl font-headline mb-2">Tu Ritual de 10 Pasos</h2>
+<div class="h-1 w-20 bg-primary/20 mx-auto rounded-full"></div>
+</div>
+<div class="container mx-auto px-8 max-w-7xl overflow-x-auto hide-scrollbar">
+<div class="flex justify-between min-w-[900px] gap-4">
+<!-- Step Item -->
+<div class="group flex flex-col items-center gap-4 cursor-pointer">
+<div class="w-16 h-16 rounded-full bg-surface-container-lowest flex items-center justify-center text-primary border border-outline-variant/20 group-hover:bg-primary group-hover:text-on-primary transition-all duration-300">
+<span class="material-symbols-outlined text-3xl">water_drop</span>
+</div>
+<span class="text-xs font-semibold uppercase tracking-tighter text-on-surface-variant">Aceite</span>
+</div>
+<div class="group flex flex-col items-center gap-4 cursor-pointer">
+<div class="w-16 h-16 rounded-full bg-surface-container-lowest flex items-center justify-center text-primary border border-outline-variant/20 group-hover:bg-primary group-hover:text-on-primary transition-all duration-300">
+<span class="material-symbols-outlined text-3xl">bubble_chart</span>
+</div>
+<span class="text-xs font-semibold uppercase tracking-tighter text-on-surface-variant">Limpiador</span>
+</div>
+<div class="group flex flex-col items-center gap-4 cursor-pointer">
+<div class="w-16 h-16 rounded-full bg-surface-container-lowest flex items-center justify-center text-primary border border-outline-variant/20 group-hover:bg-primary group-hover:text-on-primary transition-all duration-300">
+<span class="material-symbols-outlined text-3xl">auto_fix</span>
+</div>
+<span class="text-xs font-semibold uppercase tracking-tighter text-on-surface-variant">Exfoliante</span>
+</div>
+<div class="group flex flex-col items-center gap-4 cursor-pointer">
+<div class="w-16 h-16 rounded-full bg-surface-container-lowest flex items-center justify-center text-primary border border-outline-variant/20 group-hover:bg-primary group-hover:text-on-primary transition-all duration-300">
+<span class="material-symbols-outlined text-3xl">spa</span>
+</div>
+<span class="text-xs font-semibold uppercase tracking-tighter text-on-surface-variant">Tónico</span>
+</div>
+<div class="group flex flex-col items-center gap-4 cursor-pointer">
+<div class="w-16 h-16 rounded-full bg-surface-container-lowest flex items-center justify-center text-primary border border-outline-variant/20 group-hover:bg-primary group-hover:text-on-primary transition-all duration-300">
+<span class="material-symbols-outlined text-3xl">flare</span>
+</div>
+<span class="text-xs font-semibold uppercase tracking-tighter text-on-surface-variant">Esencia</span>
+</div>
+<div class="group flex flex-col items-center gap-4 cursor-pointer">
+<div class="w-16 h-16 rounded-full bg-surface-container-lowest flex items-center justify-center text-primary border border-outline-variant/20 group-hover:bg-primary group-hover:text-on-primary transition-all duration-300">
+<span class="material-symbols-outlined text-3xl">science</span>
+</div>
+<span class="text-xs font-semibold uppercase tracking-tighter text-on-surface-variant">Serum</span>
+</div>
+<div class="group flex flex-col items-center gap-4 cursor-pointer">
+<div class="w-16 h-16 rounded-full bg-surface-container-lowest flex items-center justify-center text-primary border border-outline-variant/20 group-hover:bg-primary group-hover:text-on-primary transition-all duration-300">
+<span class="material-symbols-outlined text-3xl">masks</span>
+</div>
+<span class="text-xs font-semibold uppercase tracking-tighter text-on-surface-variant">Mascarilla</span>
+</div>
+<div class="group flex flex-col items-center gap-4 cursor-pointer">
+<div class="w-16 h-16 rounded-full bg-surface-container-lowest flex items-center justify-center text-primary border border-outline-variant/20 group-hover:bg-primary group-hover:text-on-primary transition-all duration-300">
+<span class="material-symbols-outlined text-3xl">visibility</span>
+</div>
+<span class="text-xs font-semibold uppercase tracking-tighter text-on-surface-variant">Contorno</span>
+</div>
+<div class="group flex flex-col items-center gap-4 cursor-pointer">
+<div class="w-16 h-16 rounded-full bg-surface-container-lowest flex items-center justify-center text-primary border border-outline-variant/20 group-hover:bg-primary group-hover:text-on-primary transition-all duration-300">
+<span class="material-symbols-outlined text-3xl">opacity</span>
+</div>
+<span class="text-xs font-semibold uppercase tracking-tighter text-on-surface-variant">Hidratante</span>
+</div>
+<div class="group flex flex-col items-center gap-4 cursor-pointer">
+<div class="w-16 h-16 rounded-full bg-surface-container-lowest flex items-center justify-center text-primary border border-outline-variant/20 group-hover:bg-primary group-hover:text-on-primary transition-all duration-300">
+<span class="material-symbols-outlined text-3xl">light_mode</span>
+</div>
+<span class="text-xs font-semibold uppercase tracking-tighter text-on-surface-variant">Protector</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Product Rail: Novedades -->
+<section class="py-24 bg-background overflow-hidden">
+<div class="container mx-auto px-8 max-w-7xl flex justify-between items-end mb-12">
+<div>
+<h2 class="text-4xl font-headline mb-4">Novedades</h2>
+<p class="text-on-surface-variant font-light">Llegadas frescas directamente desde Seúl.</p>
+</div>
+<a class="text-primary font-semibold flex items-center gap-2 hover:translate-x-2 transition-transform" href="#">
+                    Ver todo <span class="material-symbols-outlined">trending_flat</span>
+</a>
+</div>
+<div class="container mx-auto px-8 max-w-7xl overflow-x-auto hide-scrollbar pb-8">
+<div class="flex gap-8 min-w-[1200px]">
+<!-- Product Card -->
+<div class="w-72 bg-surface-container-lowest rounded-xl p-4 group">
+<div class="relative overflow-hidden rounded-lg mb-4 h-80">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="Minimalist aesthetic skincare bottle in frosted glass on a neutral background with sharp shadows and soft lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC_JCnuH94JdIadQFTf_ivW0lbWbvScG7sgm57oT1JOSNdKhAUKMacMtBp23Bb9QXUT1aiNUS3vH-4nYYtjkp0pO-DMZz3VIQBM6ie1rUiWhAhKsTRc_xvsDmL1ZoX7WsUc0aHKjt9kzRNqN5veJIU0TZevOxoqm1A4nnV-2XwzqxnYW26Aud5-DpmYj-SDlWCm8ZGqk7soTUcWPwjxP8CxvuGkv2z0Kq9BuOQNEdaUx-6_Ok6xDLRryq8yuSEhQJBtXF_4rjeYIs7g"/>
+<div class="absolute top-4 left-4">
+<span class="bg-secondary-container text-on-secondary-container text-[10px] font-bold uppercase tracking-widest px-3 py-1 rounded-full">Nuevo</span>
+</div>
+</div>
+<div class="space-y-2">
+<div class="flex justify-between items-start">
+<h3 class="font-headline text-lg leading-tight">Advanced Snail 96 Mucin</h3>
+<span class="text-primary font-bold">$480 MXN</span>
+</div>
+<p class="text-sm text-on-surface-variant line-clamp-1">Esencia reparadora con extracto de caracol</p>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-sm text-yellow-500" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm text-yellow-500" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm text-yellow-500" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm text-yellow-500" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm text-yellow-500" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="text-xs text-outline ml-2">(48)</span>
+</div>
+</div>
+</div>
+<!-- Repeat cards -->
+<div class="w-72 bg-surface-container-lowest rounded-xl p-4 group">
+<div class="relative overflow-hidden rounded-lg mb-4 h-80">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="Luxury serum dropper bottle resting on a bed of fresh green leaves and white flowers representing natural ingredients" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDxPtyBLjSCvtEYoOcS8Cuy0_2W3rkeGWAgV9Uo1lXYa9rYNjMUoqrU0N2aEc8LeBErZcQHuZISB9hy30SDIE-zEOeZ1WoBC_m3Rou5euV7_Z1tZxHZ2wHzP3LzkvdPaDDrD9Ae54d2ZvZ7aaJ16zDWor7dhRhwB-N4UIR06iPtJJy0UBkhuN71cs0sG80ACx35asYpRyNk2F-nNlJEaAUt_owFKCDUW8hHYVcCKj1wEQRFKG0qkun7U46rkm-RUZsSNFv6o9ZtWh0N"/>
+</div>
+<div class="space-y-2">
+<div class="flex justify-between items-start">
+<h3 class="font-headline text-lg leading-tight">Rice Pure Toner</h3>
+<span class="text-primary font-bold">$520 MXN</span>
+</div>
+<p class="text-sm text-on-surface-variant line-clamp-1">Brillo natural con extractos de arroz orgánico</p>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-sm text-yellow-500" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm text-yellow-500" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm text-yellow-500" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm text-yellow-500" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm text-yellow-500" style="font-variation-settings: 'FILL' 0;">star</span>
+<span class="text-xs text-outline ml-2">(32)</span>
+</div>
+</div>
+</div>
+<div class="w-72 bg-surface-container-lowest rounded-xl p-4 group">
+<div class="relative overflow-hidden rounded-lg mb-4 h-80">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="Top down view of colorful k-beauty face masks with botanical illustrations in a minimalist laboratory setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDqlbfUUGfYHCAcnCslIZHTd9ktl7Kt9UASyfPuJ--PFfoRY-9F0qmVtZMszg5oFADOW0oZn6cZ9kyNut64ejTtlN1quZmHdzZHQ4dTbt_O-3JrjXZLxr_RkSgpS7vTH1aGCNUSuTKBud-wcR2lF6a6UKQCXsJMsrjO8aDnTniBS4gE5gta-zyY4dQR2GCYO_9zAVpqhE98Y0JH-jKFuhp0_9fu_waM8HKuIkNpOfY_xobI90aSX_LBrJi30zs0HtxaQ7PR4aWyTl64"/>
+</div>
+<div class="space-y-2">
+<div class="flex justify-between items-start">
+<h3 class="font-headline text-lg leading-tight">Sheet Mask Ritual Set</h3>
+<span class="text-primary font-bold">$390 MXN</span>
+</div>
+<p class="text-sm text-on-surface-variant line-clamp-1">Pack de 10 mascarillas para hidratación intensa</p>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-sm text-yellow-500" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm text-yellow-500" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm text-yellow-500" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm text-yellow-500" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm text-yellow-500" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="text-xs text-outline ml-2">(105)</span>
+</div>
+</div>
+</div>
+<div class="w-72 bg-surface-container-lowest rounded-xl p-4 group">
+<div class="relative overflow-hidden rounded-lg mb-4 h-80">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="Modern clinical sunscreen tube in a soft peach color aesthetic with water droplets on a white surface" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDhobIVUNOdziC1pt2X3jfmp9yE3u5vsqpL7Wep9yrBqAwrwT58HUeqCdWQn47elpr3D-JZJIhvKIS7ZHz7z3PUdD58DDm4CGgCuhStWIOso3dJzXIcK_sw96GRtxzStoaLeeYNoLobQ4I9dbewlQNycwH9CMcIXWunO6s3Hah2Xctf7cgSuijZTVLhkHLLkxTyhTmBUi2Jo9RKQ2khRlMWD-_nBGEDu7U00lpz5-fee5XuG3pTrriPAAyziVwTyBFF2vFAnlTR6gLP"/>
+</div>
+<div class="space-y-2">
+<div class="flex justify-between items-start">
+<h3 class="font-headline text-lg leading-tight">Relief Sun SPF50+</h3>
+<span class="text-primary font-bold">$440 MXN</span>
+</div>
+<p class="text-sm text-on-surface-variant line-clamp-1">Textura ligera con extracto de arroz y probióticos</p>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-sm text-yellow-500" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm text-yellow-500" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm text-yellow-500" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm text-yellow-500" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm text-yellow-500" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="text-xs text-outline ml-2">(212)</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Browse by Skin Type: Bento Grid -->
+<section class="py-24 bg-surface-container-low">
+<div class="container mx-auto px-8 max-w-7xl">
+<div class="text-center mb-16">
+<h2 class="text-4xl font-headline mb-4">Elige por tu tipo de piel</h2>
+<p class="text-on-surface-variant italic">Cada rostro cuenta una historia diferente.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-4 md:grid-rows-2 gap-4 h-[600px]">
+<div class="md:col-span-2 md:row-span-2 relative group overflow-hidden rounded-2xl cursor-pointer">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="Close up of clear water rippling over white marble with soft natural lighting and calm atmosphere" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDWzEw6eMB_pWyI94CZIEZQIDRRJTLJ3ZYKGVZ9rjU5rea8v8Ae6-9bwWVKo1Hc06DPYzw1ArOe-eG4cx6VCl8oT3NMopHYnvbMkfy3C6XQZezV33x8WHKlrM352d_Q5HjVbWM-XJWkENSHHnyK80nyUSm6k0qVsz34rOmYJ8dSmIC8E4dYbx0s8pPLT5ROXf9VQcZU6vo-dc0qVFo0pBkuu7nQ0-dvrE8Q7y7hyCrxIoYPiq2LEvjB13Pp2OuhQeYr_QoxBglOUHlN"/>
+<div class="absolute inset-0 bg-on-surface/20 group-hover:bg-on-surface/40 transition-colors"></div>
+<div class="absolute bottom-8 left-8 text-white">
+<h3 class="text-3xl font-headline mb-2">Piel Sensible</h3>
+<p class="text-sm font-light opacity-0 group-hover:opacity-100 transition-opacity">Calma y restaura la barrera cutánea.</p>
+</div>
+</div>
+<div class="md:col-span-2 relative group overflow-hidden rounded-2xl cursor-pointer">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="Clinical close up of clean skin texture with soft focus and professional lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD1aJo-YRlkGZubXaLoy5ktWdhNu2VZHvPSTOSPkURFLMqC8zOveI6qrGx5zbPyUduElpIhVg5TLJOmvTB4gwYIiSH1a_Bd7XruHbkwRPJ7GHhm45nxz5IQclQ14C6tNg20QTd__Sk-duUi4ZC04lKFqbKrjESEmJ3Oj4lfGzCg27hIFx8rYR4B67-wUinGa6z4QoU4kYVaxR06ayqp3heOcTS0cmDOW4jGrTfdfnPSrtI28zDZjNjQ4LPS5h79TUmeESC7q3PbKIHi"/>
+<div class="absolute inset-0 bg-on-surface/20 group-hover:bg-on-surface/40 transition-colors"></div>
+<div class="absolute bottom-6 left-6 text-white">
+<h3 class="text-2xl font-headline">Piel Grasa</h3>
+</div>
+</div>
+<div class="relative group overflow-hidden rounded-2xl cursor-pointer">
+<div class="absolute inset-0 bg-secondary-container"></div>
+<img class="w-full h-full object-cover opacity-60 group-hover:scale-105 transition-transform duration-700" data-alt="Artistic macro photo of golden honey swirling into milk representing nourishment and dry skin care" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA7_N8BSN9BWJQ5ZGvT8gqVwkPtQis9dKUgozuBh6W4ZhtQHbjyXGEM9wAWMCCYAl-S1xPD2LmjwhPD426j3dIAeTa3l77ORnB7gGHLjFbZdy5eiYtQ6L2NZQL5roemmM0lIpUDFWWa3W04ra4QdX0HyeiTTY-YmdaQJnLDUBvCAa9bUUedvDxj4cwvfPrQ6VsbACJen25vH6ncpmeXQUpL0idNwJWM-Yy9-sFnErCBZdoy20U2XGH3jCMj99pteg_1Y3Y5K1DqgiwB"/>
+<div class="absolute bottom-6 left-6 text-on-secondary-container">
+<h3 class="text-xl font-headline">Piel Seca</h3>
+</div>
+</div>
+<div class="relative group overflow-hidden rounded-2xl cursor-pointer">
+<div class="absolute inset-0 bg-primary-container"></div>
+<img class="w-full h-full object-cover opacity-60 group-hover:scale-105 transition-transform duration-700" data-alt="Aesthetic capture of sun beams passing through a green forest canopy representing timeless beauty and mature skin care" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC-Y24k-CuueHLMqHKIAbpB6mD4FWXgH8JBUwgvTdkywTx0k7QNcV10qqofcUD6wqsLaMrIAmpvG69_NNWL3x0AXd42k1Vm-0t9P0Yy0Y_3OsQFuG-9WoqV7TXO_DsgM8TY05Gl1H6eKg6STfmqk384H0_kQYJnWipwmNkTf-sop65j_3tkAMujrP2_HL-Y5BOgPZ3EI2t7Vnjj8UL63iDCeF2vQzV2Gk-WOpuy97fzAgELBo8K4t9ZJQJFJZ8Yr1eYKA6OONznMui_"/>
+<div class="absolute bottom-6 left-6 text-on-primary-container">
+<h3 class="text-xl font-headline">Piel Madura</h3>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Social Proof Section -->
+<section class="py-24 bg-surface">
+<div class="container mx-auto px-8 max-w-7xl">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+<div class="relative">
+<div class="grid grid-cols-2 gap-4">
+<div class="space-y-4 pt-12">
+<div class="rounded-2xl overflow-hidden shadow-xl">
+<img class="w-full aspect-[3/4] object-cover" data-alt="Close up of a woman's radiant face with no makeup, glowing and healthy skin under warm soft light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDLR51SgnoVNYm-uaP_SogiFxHDQrP_Br9jNBVl55pmrjdHmX4eYH_Zt_9nwSwxEstfzdjsUBvf8TPtv2TnBBWABQ4024eTUBdI45UPexu62hxoL9b5RlYa-FI4fwWwbuJdMUXp5QU1_8tZNl8BnQjKQZ0QupkbVyC41PFzBEsqAF8dkfgqAfgon8yY-shihmK3MzQVt_GIoZZh43FajU6yc0Sx0j4P14foNcTxiVmEUXEAJfoz3J1yh_-pHwmZ2ser0AhQRS6-OJPr"/>
+</div>
+<p class="text-[10px] text-center uppercase tracking-widest text-outline">Después del Ritual</p>
+</div>
+<div class="space-y-4">
+<div class="rounded-2xl overflow-hidden opacity-50 grayscale">
+<img class="w-full aspect-[3/4] object-cover" data-alt="Natural skin detail showing texture and redness in a clinical context before treatment" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBOYchMMDJDa2NLkEi149SZuqtzaAr4jArtNOV9CftHnjZ4Om_wtZs2RFNsHPxhFwGGKUuSavT6BBJNl7pNkoC6Afs2JuqT0W1oVnUTSl7txG4QKonsqHmPedPAtP2lX2nEGx25fSvXSyaurSK_cDCPwjqhtV0ZbjG_OlyFXETYyvPTaCHfJo64TWzJ9UVWf9pIOXuHcEEdBov0NgK0AUnlxqYuPisjeoHnwOIsJ2sx2rKrdBWH0DWHA1r9YFkhNYQIRbAy_MKSKl-J"/>
+</div>
+<p class="text-[10px] text-center uppercase tracking-widest text-outline">Antes</p>
+</div>
+</div>
+<div class="absolute -bottom-6 -right-6 bg-white p-6 rounded-2xl shadow-2xl max-w-[200px]">
+<div class="flex items-center gap-2 mb-2">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">verified</span>
+<span class="text-xs font-bold uppercase tracking-tighter">Resultados Reales</span>
+</div>
+<p class="text-[10px] text-on-surface-variant font-medium leading-tight">"Resultados visibles en solo 14 días de uso continuo."</p>
+</div>
+</div>
+<div class="space-y-8">
+<h2 class="text-5xl font-headline leading-tight">Lo que nuestras Zen-Lovers dicen</h2>
+<div class="bg-surface-container-low p-8 rounded-2xl space-y-4">
+<div class="flex gap-1 text-primary">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<blockquote class="text-2xl font-headline italic text-on-surface">
+                                "Mi piel nunca estuvo tan hidratada. El ritual de 10 pasos cambió mi confianza por completo."
+                            </blockquote>
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-full bg-primary-fixed flex items-center justify-center text-primary font-bold">M</div>
+<div>
+<p class="text-sm font-bold">Mariana G.</p>
+<p class="text-[10px] text-outline uppercase tracking-widest">CDMX, México</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Trust Badges Section -->
+<section class="py-16 border-y border-outline-variant/10 bg-surface">
+<div class="container mx-auto px-8 max-w-7xl">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-12 text-center">
+<div class="flex flex-col items-center gap-4 group">
+<div class="w-14 h-14 rounded-full bg-surface-container-high flex items-center justify-center text-primary group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-3xl">local_shipping</span>
+</div>
+<div>
+<h4 class="font-bold text-sm uppercase tracking-widest mb-1">Envío Gratis</h4>
+<p class="text-xs text-on-surface-variant">En todas tus compras desde $999 MXN.</p>
+</div>
+</div>
+<div class="flex flex-col items-center gap-4 group border-x border-outline-variant/10 px-12">
+<div class="w-14 h-14 rounded-full bg-surface-container-high flex items-center justify-center text-primary group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-3xl">verified_user</span>
+</div>
+<div>
+<h4 class="font-bold text-sm uppercase tracking-widest mb-1">Pago Seguro</h4>
+<p class="text-xs text-on-surface-variant">Aceptamos OXXO Pay &amp; Mercado Pago.</p>
+</div>
+</div>
+<div class="flex flex-col items-center gap-4 group">
+<div class="w-14 h-14 rounded-full bg-surface-container-high flex items-center justify-center text-primary group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-3xl">workspace_premium</span>
+</div>
+<div>
+<h4 class="font-bold text-sm uppercase tracking-widest mb-1">100% Originales</h4>
+<p class="text-xs text-on-surface-variant">Productos importados directamente de Corea.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-[#f4f3f2] dark:bg-[#1a1c1c] w-full py-12 px-8">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-8 max-w-7xl mx-auto">
+<div class="col-span-1 md:col-span-1">
+<span class="text-xl font-headline italic text-[#50644d] mb-6 block">ZEN-CLINICAL</span>
+<p class="text-xs text-on-surface-variant leading-relaxed mb-6 font-body">
+                    Tu portal exclusivo a la mejor selección de cosmética coreana curada por expertos clínicos.
+                </p>
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-[#50644d] cursor-pointer">language</span>
+<span class="material-symbols-outlined text-[#50644d] cursor-pointer">alternate_email</span>
+</div>
+</div>
+<div>
+<h5 class="font-['Manrope'] text-xs uppercase tracking-widest text-[#50644d] mb-6">Guía de Compra</h5>
+<ul class="space-y-3 font-['Manrope'] text-xs uppercase tracking-widest text-[#1a1c1c]/60">
+<li><a class="hover:text-[#50644d] transition-opacity opacity-80 hover:opacity-100" href="#">Envíos Locales</a></li>
+<li><a class="hover:text-[#50644d] transition-opacity opacity-80 hover:opacity-100" href="#">OXXO Pay</a></li>
+<li><a class="hover:text-[#50644d] transition-opacity opacity-80 hover:opacity-100" href="#">Mercado Pago</a></li>
+</ul>
+</div>
+<div>
+<h5 class="font-['Manrope'] text-xs uppercase tracking-widest text-[#50644d] mb-6">Nosotros</h5>
+<ul class="space-y-3 font-['Manrope'] text-xs uppercase tracking-widest text-[#1a1c1c]/60">
+<li><a class="hover:text-[#50644d] transition-opacity opacity-80 hover:opacity-100" href="#">Nuestra Filosofía</a></li>
+<li><a class="hover:text-[#50644d] transition-opacity opacity-80 hover:opacity-100" href="#">Wholesale</a></li>
+<li><a class="hover:text-[#50644d] transition-opacity opacity-80 hover:opacity-100" href="#">Puntos de Venta</a></li>
+</ul>
+</div>
+<div>
+<h5 class="font-['Manrope'] text-xs uppercase tracking-widest text-[#50644d] mb-6">Legales</h5>
+<ul class="space-y-3 font-['Manrope'] text-xs uppercase tracking-widest text-[#1a1c1c]/60">
+<li><a class="hover:text-[#50644d] underline text-[#50644d]" href="#">Aviso de Privacidad</a></li>
+<li><a class="hover:text-[#50644d] transition-opacity opacity-80 hover:opacity-100" href="#">Términos y Condiciones</a></li>
+<li><a class="hover:text-[#50644d] transition-opacity opacity-80 hover:opacity-100" href="#">Cookies</a></li>
+</ul>
+</div>
+</div>
+<div class="max-w-7xl mx-auto mt-12 pt-8 border-t border-outline-variant/10 text-center">
+<p class="font-['Manrope'] text-xs uppercase tracking-widest text-[#1a1c1c]/40">
+                © 2024 ZEN-CLINICAL México. Belleza Coreana con Alma Mexicana.
+            </p>
+</div>
+</footer>
+<!-- Floating WhatsApp Button -->
+<a class="fixed bottom-8 right-8 z-[60] bg-[#25D366] text-white p-4 rounded-full shadow-2xl hover:scale-110 transition-transform active:scale-95 group" href="https://wa.me/yournumber">
+<div class="flex items-center gap-3">
+<span class="max-w-0 overflow-hidden group-hover:max-w-xs transition-all duration-500 font-bold whitespace-nowrap px-0 group-hover:px-2">Ayuda Experta</span>
+<svg class="w-8 h-8 fill-current" viewbox="0 0 24 24">
+<path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766 0-3.18-2.587-5.771-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.522-2.961-2.638-.087-.117-.708-.941-.708-1.803 0-.863.447-1.284.608-1.458.161-.173.351-.216.468-.216.117 0 .234.001.334.004.106.003.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.305-.058.117-.087.188-.173.289-.087.101-.183.226-.261.304-.087.087-.177.182-.076.354.101.174.449.741.964 1.201.662.591 1.221.777 1.394.864.174.088.275.073.376-.042.101-.117.433-.506.549-.68.116-.173.231-.144.39-.087s1.011.477 1.184.564.289.13.332.202c.045.072.045.419-.1.824zM12 2c5.523 0 10 4.477 10 10s-4.477 10-10 10S2 17.523 2 12 6.477 2 12 2z"></path>
+</svg>
+</div>
+</a>
+</body></html>

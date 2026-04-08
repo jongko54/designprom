@@ -1,0 +1,21 @@
+{
+  "brand": "Airbnb",
+  "contentType": "image/png",
+  "fileName": "airbnb-group-trip-planner.png",
+  "generatedAt": "2026-04-02T11:06:25.054Z",
+  "htmlUrl": "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ7Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpaCiVodG1sX2U2YzlhMjMxNGU0YzQzOWNiYjJkN2VlYmZlNTJlOTdiEgsSBxCCisPc0AkYAZIBIwoKcHJvamVjdF9pZBIVQhM3MTQzMjg5MDExNTU3MTA0ODY0&filename=&opi=96797242",
+  "imageUrl": "https://lh3.googleusercontent.com/aida/ADBb0ujDUrbZdqLctWLe7SBcLkMcO8ruiw8sjRvqOXQIwJq7YGoT1j42RBaJt-EG1LjKYI57aHrPTdDKiE6WPjTtBPy8_0QCnoxVnFJeIi6p_wPUz4jbLwOzz5eSvOOmYNW6bICp-srhBBSmdoxMgg4cf7ZRmkjOuH03Ufb3up6_u3v4zfdUEj_2eZP2hLF3twT_EWdl_rLSwJ3AughX7EWUYQmdmljRZBMBhotxxIqxbk6847R1s334kN69IwM",
+  "notes": [
+    "I've designed the **Nomad Together: Trip Planner**, a collaborative space for group travel. \n\nThe design features:\n- **Warm Modernity Aesthetic:** A soft, approachable palette of neutrals and rounded elements that feel welcoming.\n- **Collaborative Itinerary:** A clear, daily breakdown of activities and stays, including live indicators like \"Sarah is editing Day 3\" to create a sense of presence.\n- **Shared Wishlist:** A side-by-side view for group voting and discussion on accommodation options, styled with high-fidelity booking cards.\n- **Functional Navigation:** A consistent side navigation for quick access to other trip-planning essentials like budgeting and group chat.\n\nWould you like to explore another part of the app, such as the budget tracker or a mobile-optimized view of this itinerary?"
+  ],
+  "prompt": "Design an Airbnb-like group trip planner page with itinerary panels, shared wishlists, booking cards, and reassuring collaboration cues. Use warm neutrals, approachable typography, and a clear action flow.",
+  "projectId": "7143289011557104864",
+  "screenId": "eaa5732293414f129fe73c3362b011a5",
+  "slug": "airbnb-group-trip-planner",
+  "suggestions": [
+    "Add a detail view for one of the stays",
+    "Design the 'Budget' tab for the trip",
+    "Create a mobile version of the itinerary"
+  ],
+  "title": "Nomad Together: Trip Planner"
+}

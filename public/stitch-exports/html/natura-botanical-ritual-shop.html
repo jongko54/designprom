@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&amp;family=Manrope:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "outline": "#87736b",
+                    "on-tertiary": "#ffffff",
+                    "surface-container": "#f0ede8",
+                    "background": "#fcf9f4",
+                    "on-secondary-fixed-variant": "#334c40",
+                    "primary-fixed-dim": "#ffb596",
+                    "on-background": "#1c1c19",
+                    "surface": "#fcf9f4",
+                    "tertiary-container": "#885f35",
+                    "inverse-surface": "#31302d",
+                    "on-error": "#ffffff",
+                    "on-error-container": "#93000a",
+                    "surface-container-lowest": "#ffffff",
+                    "on-primary-fixed-variant": "#76320f",
+                    "error": "#ba1a1a",
+                    "surface-variant": "#e5e2dd",
+                    "on-tertiary-fixed-variant": "#623f18",
+                    "secondary-container": "#cae6d6",
+                    "on-tertiary-fixed": "#2c1600",
+                    "on-surface": "#1c1c19",
+                    "on-secondary": "#ffffff",
+                    "surface-container-highest": "#e5e2dd",
+                    "surface-container-low": "#f6f3ee",
+                    "error-container": "#ffdad6",
+                    "inverse-primary": "#ffb596",
+                    "on-primary": "#ffffff",
+                    "surface-tint": "#944925",
+                    "surface-bright": "#fcf9f4",
+                    "secondary": "#4a6457",
+                    "on-primary-container": "#ffe1d6",
+                    "on-surface-variant": "#54433c",
+                    "on-tertiary-container": "#ffe2c9",
+                    "inverse-on-surface": "#f3f0eb",
+                    "primary": "#823b18",
+                    "secondary-fixed": "#cce9d9",
+                    "on-secondary-container": "#4e685b",
+                    "tertiary": "#6c4820",
+                    "secondary-fixed-dim": "#b1cdbd",
+                    "on-secondary-fixed": "#062016",
+                    "outline-variant": "#dac1b8",
+                    "on-primary-fixed": "#360f00",
+                    "surface-dim": "#dcdad5",
+                    "primary-container": "#a0522d",
+                    "surface-container-high": "#ebe8e3",
+                    "tertiary-fixed": "#ffdcbd",
+                    "tertiary-fixed-dim": "#f0bd8b",
+                    "primary-fixed": "#ffdbcd"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Noto Serif"],
+                    "body": ["Manrope"],
+                    "label": ["Manrope"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body { font-family: 'Manrope', sans-serif; background-color: #fcf9f4; color: #1c1c19; }
+        .font-serif { font-family: 'Noto Serif', serif; }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+    </style>
+</head>
+<body class="bg-background text-on-background">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-stone-50/80 dark:bg-stone-950/80 backdrop-blur-md">
+<div class="flex justify-between items-center px-8 py-4 max-w-full mx-auto">
+<div class="text-2xl font-serif italic text-orange-900 dark:text-orange-200">Natura Rituals</div>
+<div class="hidden md:flex items-center gap-8">
+<a class="text-orange-900 dark:text-orange-200 font-bold border-b-2 border-orange-900 hover:text-orange-700 transition-colors duration-300" href="#">Perfumery</a>
+<a class="text-stone-600 dark:text-stone-400 font-sans uppercase tracking-widest text-xs hover:text-orange-700 transition-colors duration-300" href="#">Body Care</a>
+<a class="text-stone-600 dark:text-stone-400 font-sans uppercase tracking-widest text-xs hover:text-orange-700 transition-colors duration-300" href="#">Skincare</a>
+<a class="text-stone-600 dark:text-stone-400 font-sans uppercase tracking-widest text-xs hover:text-orange-700 transition-colors duration-300" href="#">Gifts</a>
+</div>
+<div class="flex items-center gap-6">
+<button class="material-symbols-outlined text-orange-900 dark:text-orange-200 scale-95 transition-transform duration-200">shopping_bag</button>
+<button class="material-symbols-outlined text-orange-900 dark:text-orange-200 scale-95 transition-transform duration-200">person</button>
+</div>
+</div>
+</nav>
+<!-- Main Canvas -->
+<main class="pt-20">
+<!-- Hero Section: Botanical Editorial -->
+<section class="relative min-h-[870px] flex items-center px-8 md:px-16 bg-surface">
+<div class="grid grid-cols-1 md:grid-cols-12 w-full gap-12 items-center">
+<div class="md:col-span-5 z-10 space-y-8">
+<span class="font-label text-primary uppercase tracking-[0.2em] text-sm font-bold">The Soul of the Amazon</span>
+<h1 class="font-headline text-5xl md:text-7xl font-bold tracking-tight text-on-surface leading-[1.1]">
+                        Rituals of <br/><span class="italic text-primary">Living Light</span>
+</h1>
+<p class="font-body text-lg text-on-surface-variant max-w-md leading-relaxed">
+                        Experience the transformative power of bio-active ingredients harvested with heart. Our Brazilian beauty rituals honor the earth and your well-being.
+                    </p>
+<div class="pt-4">
+<button class="bg-primary text-on-primary px-8 py-4 rounded-full font-bold hover:opacity-90 transition-all flex items-center gap-3">
+                            Explore the Rituals
+                            <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+</div>
+<div class="md:col-span-7 relative">
+<div class="aspect-[4/5] rounded-[2.5rem] overflow-hidden shadow-2xl relative translate-x-4">
+<img class="w-full h-full object-cover" data-alt="lush amazon rainforest canopy with soft morning mist and warm sunlight filtering through dense green tropical foliage" src="https://lh3.googleusercontent.com/aida-public/AB6AXuClpgFX1IX33f7E5fZooqL59WZ7v_WW5m5HSV0LWvKGcaUMI6KBnMMRH4LRME1iASDlCCfLFU7d8yhliW1h7dB0KJEaW2VNQUA6o9jqYZALydvlbYNcz_pauVdpbPHjW10p7ZREP6BQX8n78SA350rFU2KoLLjAwvqCGv85FRFO3RXs-IX_TSuHbfsJkV4fQWjKLq7RiKuLIqjddRYYnd-q_IOwtESOSCPq2gPqk_UK_YIBEMUKch_IhlZll3DV0P6b_VFXMlNt7A4"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/20 to-transparent"></div>
+</div>
+<!-- Asymmetric Overlay Image -->
+<div class="absolute -bottom-12 -left-12 w-1/2 aspect-square rounded-xl overflow-hidden border-[12px] border-surface shadow-xl hidden lg:block">
+<img class="w-full h-full object-cover" data-alt="close-up of artisan botanical oil in a glass bottle surrounded by raw Amazonian nuts and dried orange slices on a stone surface" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBeuPAqWTV9AybBM3EuVjK2-UIFUiKnshG0qERgh6Gmz3MlgrGWDtabqR2K-lD_VcWuvha1IBukh9BXWTJHk1LUATJBgzYBOhuIBDNtw1aEf8nBxHDK2TVkBdcVFFQ3UEqofnE2--os_-KppIeZJBeuu4OBvM639JNh3kGS745z6NNfWXiV48bYVFnIbvzKwW3oISwGC89c9l1gI27HctW1kXXiiVHR0PjPSsSSH13mk5T77M7LYbPJYL1VvySkf6NgJPs7EC-4lUw"/>
+</div>
+</div>
+</div>
+</section>
+<!-- Category Rails: Vertical Storytelling -->
+<section class="py-24 px-8 md:px-16 space-y-20">
+<div class="flex flex-col md:flex-row justify-between items-end gap-6 mb-12">
+<h2 class="font-headline text-4xl font-bold text-on-surface">Curated by Nature</h2>
+<div class="h-[2px] flex-grow mx-8 bg-outline-variant/30 hidden md:block"></div>
+<p class="font-label text-sm uppercase tracking-widest text-primary font-bold">Discover Your Essence</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Perfumery -->
+<div class="group relative bg-surface-container-low p-8 rounded-2xl overflow-hidden min-h-[600px] flex flex-col">
+<h3 class="font-headline text-3xl font-bold mb-4">Perfumery</h3>
+<p class="text-on-surface-variant mb-8">Olfactory journeys inspired by the rhythms of the forest.</p>
+<div class="mt-auto relative rounded-xl overflow-hidden aspect-[3/4]">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="luxurious perfume bottle with gold details sitting on a weathered wooden log amidst lush green ferns" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBJCPEFOHj_rxOZQBuMuSYzA0jSZov-xbSa9zivDLHuBTAITvlGUv8b4KdiIlo6iq66zQhmixTFdMetmnzrah4nakz3dfFT79ZwDa_nXHk2xKUKid0lNOkYfg2t4TnnBEl0oTtmw71DRFiNtvIl8wqFzheODY7MTHFRTOraR4dmybhkN3jD_4M3piEfTRjqg5whdM92YgUFcJN0sVO36HaGjdz3eGOil0qHGfV0gf8JMXFi1a4b7F5KLw9-ezbk0TI3SZuZfWbjPz0"/>
+<div class="absolute bottom-4 left-4">
+<button class="bg-surface-container-lowest/90 backdrop-blur-md px-6 py-2 rounded-full text-sm font-bold">Shop Scent</button>
+</div>
+</div>
+</div>
+<!-- Body Care -->
+<div class="group relative bg-secondary-container/30 p-8 rounded-2xl overflow-hidden min-h-[600px] flex flex-col md:-translate-y-12">
+<h3 class="font-headline text-3xl font-bold mb-4">Body Care</h3>
+<p class="text-on-surface-variant mb-8">Nurturing moisture that honors the skin's natural barrier.</p>
+<div class="mt-auto relative rounded-xl overflow-hidden aspect-[3/4]">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="rich moisturizing body cream being applied to smooth skin in soft warm golden hour light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBaSyzkPy3G8aTdQafxfS0nJeeBD5lvC7wdDxSpjQjjbBCs49Jaukbp210Hlh5lejSXftGVnjDACCbZhooka01dHIf-D4cZR7e9M2V9-Ummcv4_AxzTWtIW_-vjEB5huP4UVAlkYF7WHzm4pad-TegAIHcQdbrmSkkbeMc75OToTJMGoLKg7ixmSNoEL62QPYq00x77KkGL5mMT2nI9neybbYWzTgbCNsHH5MJu1OM7q6q9ry41X2Q5Bb98ogBit2fGdJEHaehEgEc"/>
+<div class="absolute bottom-4 left-4">
+<button class="bg-surface-container-lowest/90 backdrop-blur-md px-6 py-2 rounded-full text-sm font-bold">Shop Body</button>
+</div>
+</div>
+</div>
+<!-- Skincare -->
+<div class="group relative bg-tertiary-fixed/20 p-8 rounded-2xl overflow-hidden min-h-[600px] flex flex-col">
+<h3 class="font-headline text-3xl font-bold mb-4">Skincare</h3>
+<p class="text-on-surface-variant mb-8">Botanical intelligence for a radiant, resilient complexion.</p>
+<div class="mt-auto relative rounded-xl overflow-hidden aspect-[3/4]">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="fresh botanical facial serum dropper bottle among tropical green leaves and clean water droplets" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBOSGjNEvecBs7zrlSh0vIGT6Px9eJkcqUgoIvDrF_bTNSDbMBCTLSvINDRyErgTYeIS2Oa9ielinp85hv47ZymeET4AEdmgTsso3JfwGwi1FPzA19Ou9sRgPto97S4Or37r13OW7DMV_Uk6iQwPvMeEQQVWyGUEmQJFm80wQg9GuaN0cdJfsE61tHCyHbLx6Iy2ZRw-540jZ0iz-HfnDBfkNpaKMthaQmA-hXFL91C0v-QDuZE9dGjsbatXPLTHbfYeYARkagbOIM"/>
+<div class="absolute bottom-4 left-4">
+<button class="bg-surface-container-lowest/90 backdrop-blur-md px-6 py-2 rounded-full text-sm font-bold">Shop Skin</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Sustainability: Refill & Rejuvenate -->
+<section class="bg-on-secondary-fixed text-on-secondary-fixed-variant py-24 px-8 md:px-16 overflow-hidden relative">
+<div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+<div class="space-y-10">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-4xl text-secondary-fixed">eco</span>
+<h2 class="font-headline text-4xl md:text-5xl font-bold text-secondary-fixed">Refill &amp; Rejuvenate</h2>
+</div>
+<p class="font-body text-xl text-secondary-fixed-dim leading-relaxed">
+                        In the heart of the Amazon, nothing is wasted. Our refill system reduces plastic waste by up to 80%, ensuring that the beauty you use today preserves the beauty of tomorrow.
+                    </p>
+<div class="grid grid-cols-2 gap-8">
+<div class="p-6 rounded-2xl bg-secondary-fixed/10 border border-secondary-fixed/20">
+<span class="material-symbols-outlined text-secondary-fixed text-3xl mb-4">rebase_edit</span>
+<h4 class="font-bold text-secondary-fixed mb-2 uppercase text-xs tracking-widest">Circular Design</h4>
+<p class="text-sm opacity-80">Our bottles are designed to last a lifetime, one refill at a time.</p>
+</div>
+<div class="p-6 rounded-2xl bg-secondary-fixed/10 border border-secondary-fixed/20">
+<span class="material-symbols-outlined text-secondary-fixed text-3xl mb-4">forest</span>
+<h4 class="font-bold text-secondary-fixed mb-2 uppercase text-xs tracking-widest">Ethical Harvest</h4>
+<p class="text-sm opacity-80">Direct partnerships with 40+ Amazonian communities.</p>
+</div>
+</div>
+<button class="bg-secondary-fixed text-on-secondary-fixed px-8 py-3 rounded-full font-bold hover:bg-secondary-fixed-dim transition-colors">Learn About Our Impact</button>
+</div>
+<div class="relative">
+<div class="aspect-square rounded-full border-[1px] border-secondary-fixed/20 absolute -inset-8 animate-[spin_20s_linear_infinite]"></div>
+<div class="rounded-3xl overflow-hidden aspect-[4/5] relative z-10">
+<img class="w-full h-full object-cover" data-alt="eco-friendly beauty refill pouches and glass bottles arranged on a bed of lush green moss and volcanic stones" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCAgJXZIiC7vMZP09meLSfFp5R2t_9v4rGigZ-IWh675bK_BGfcwwyORrlfncX_dbqz929hfVKpLQKWM2BuUGwxMuHeehQfEE5TH6f-RLOcTjI45afGMezhhuQgLCKLLe_ab9Kq6Boy0bhMHpEUTS303WxejuxdGtpCUS_XMEbNTjuEciNdcvD6eX3wztGJsMypkeLtcZTk7YEpps0V_5QeOlCJru3RqSYJ54nfgkzsWnygNz4pMj60DKDf9SretgUft8U2sL9OFvw"/>
+</div>
+</div>
+</div>
+</section>
+<!-- The Art of Gifting: Ritual Sets -->
+<section class="py-24 px-8 md:px-16 bg-surface-container-low">
+<div class="text-center max-w-3xl mx-auto mb-16">
+<span class="font-label text-tertiary font-bold tracking-[0.3em] uppercase text-xs">A Gesture of Love</span>
+<h2 class="font-headline text-4xl md:text-6xl font-bold text-on-surface mt-4 mb-6 italic">The Art of Gifting</h2>
+<p class="text-on-surface-variant font-body text-lg">Curated rituals wrapped in sustainable stories, ready to reconnect your loved ones with their inner radiance.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+<!-- Gift Set 1 -->
+<div class="bg-surface-container-lowest rounded-2xl overflow-hidden group">
+<div class="aspect-square overflow-hidden relative">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="beautifully wrapped eco-friendly gift box with dried botanical accents and a silk ribbon on a warm wooden table" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBXnadq8h87PgSlsBwoSq2KaSbgF_0laIpXEPXwsQl5UEGd2k7U7S_aZBnxxjD6_vtR5qawbcbXjmQiJ3OCGAcXd978pvOcCVlZ_iBiYl6iPlSe7WxXyenzxwIB8v44P3FNVLPFTU8M39QU9V5Wo03C9XRr3CCNcDhohV5NTfbS4eNwtSKyHLSPJ7K4yWQKtQZmEjb5fvh3DT73huetAKECpqYbfUaK37UtlY7Et4saowbljBjA5K9ILtnqlhi_7RhmuZDxvSh_lBw"/>
+<div class="absolute top-4 right-4 bg-tertiary text-on-tertiary px-3 py-1 rounded-full text-xs font-bold">Limited Edition</div>
+</div>
+<div class="p-6">
+<h4 class="font-bold text-lg mb-1">Morning Mist Ritual</h4>
+<p class="text-sm text-on-surface-variant mb-4">Refreshing body wash &amp; mist set.</p>
+<div class="flex justify-between items-center">
+<span class="font-headline font-bold text-primary">$65.00</span>
+<button class="bg-secondary-container text-on-secondary-container p-2 rounded-full hover:opacity-80 transition-opacity">
+<span class="material-symbols-outlined">add_shopping_cart</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Gift Set 2 -->
+<div class="bg-surface-container-lowest rounded-2xl overflow-hidden group translate-y-8">
+<div class="aspect-square overflow-hidden relative">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="skincare gift set with various serum bottles and creams in minimalist sustainable packaging" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC63ZOSOEqmrSEZKJQg-X_gkAcN-noayx5HWVWDYX8jLH4MaoYKK3DW16EXoS8ZAxJqyZLlmTlrlmakXp4Bm6tkm0k-GoOXzrdIG52-VgXIB77RZe-QHaNuxA_-AeJKZ-stwhYcUSjQScTjnUOcm0tqlVqNs2VPkKfs0YPXWF30igmKtefcHgccDoMaSNhE_qWKxHt-k97upRaXN90fgnzieGHfk7LG2RuVL0eKzaK7jdS_8tB9OOc0wkvJm2yhB-TsujleAXcyGGA"/>
+</div>
+<div class="p-6">
+<h4 class="font-bold text-lg mb-1">Amazonian Glow Trio</h4>
+<p class="text-sm text-on-surface-variant mb-4">Complete face care ritual.</p>
+<div class="flex justify-between items-center">
+<span class="font-headline font-bold text-primary">$120.00</span>
+<button class="bg-secondary-container text-on-secondary-container p-2 rounded-full hover:opacity-80 transition-opacity">
+<span class="material-symbols-outlined">add_shopping_cart</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Gift Set 3 -->
+<div class="bg-surface-container-lowest rounded-2xl overflow-hidden group">
+<div class="aspect-square overflow-hidden relative">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="selection of botanical bars of soap in natural earth tones with textured ingredients visible" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDNTIAEgi_JTBNMwGGy50BNXcKs8jW63ve0Gh1NJp0K-gLOdtP_NhM66n0G5quJh45avGGu7tGLiQvEJ8NOGmct3ciAPkrbIH0WOedKsOROlYdtrOkgq7pX47aPShFQGGto93OUKnt1wIhVO3U0hV3LpaNfMOrsjyrM8DdXMOlEodWovl2MJjoT57tL0xLIUTEBdyTn_WoHEEeJH3q9M2sD7A_OLSbemmxp90B4zjyHop-7IURml3n0B9YYPfMpRoj6-soleaLpk1Q"/>
+</div>
+<div class="p-6">
+<h4 class="font-bold text-lg mb-1">Sacred Soil Soaps</h4>
+<p class="text-sm text-on-surface-variant mb-4">Collection of 4 hand-poured bars.</p>
+<div class="flex justify-between items-center">
+<span class="font-headline font-bold text-primary">$42.00</span>
+<button class="bg-secondary-container text-on-secondary-container p-2 rounded-full hover:opacity-80 transition-opacity">
+<span class="material-symbols-outlined">add_shopping_cart</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Gift Set 4 -->
+<div class="bg-surface-container-lowest rounded-2xl overflow-hidden group translate-y-8">
+<div class="aspect-square overflow-hidden relative">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="premium candle with botanical scents sitting on a decorative tray with dried flower petals" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD3vsSSbz0PQNFzY7ul21PcF4v7ONh2IeDgKhlVFSdXCt4MBtrNr8d-5B1O3EO1IzshIiWexhXNJ9ZnpjTBVX6cChIHoczc7nQpOjST3KBPttQssxmZmwBnPAexSneBIJqkCz4OgikQbRYYKJvBJ2IaLreD_T8M6rIueS9gZOJ6F7YEt87kYYeDoZKD0RdFNIPat6_oxiTq543AIvyzWD0ua13iV-nyhTSxj9kZVKktuR8XQtvjw3rqZbz7o32RsM0uBVD3pqeshR8"/>
+<div class="absolute top-4 right-4 bg-secondary text-on-secondary px-3 py-1 rounded-full text-xs font-bold">Best Seller</div>
+</div>
+<div class="p-6">
+<h4 class="font-bold text-lg mb-1">Forest Flame Candle</h4>
+<p class="text-sm text-on-surface-variant mb-4">Infused with rare Amazonian oils.</p>
+<div class="flex justify-between items-center">
+<span class="font-headline font-bold text-primary">$58.00</span>
+<button class="bg-secondary-container text-on-secondary-container p-2 rounded-full hover:opacity-80 transition-opacity">
+<span class="material-symbols-outlined">add_shopping_cart</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full pt-20 pb-10 bg-stone-100 dark:bg-stone-900 border-t border-outline-variant/10">
+<div class="max-w-7xl mx-auto px-8 grid grid-cols-1 md:grid-cols-3 gap-12">
+<div class="space-y-6">
+<div class="font-serif text-3xl font-black text-orange-900">Natura Rituals</div>
+<p class="font-body text-stone-600 dark:text-stone-400 text-sm leading-relaxed max-w-xs">
+                    Rooted in the Amazon, our rituals celebrate the interconnectedness of all living things.
+                </p>
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-orange-900 cursor-pointer">public</span>
+<span class="material-symbols-outlined text-orange-900 cursor-pointer">potted_plant</span>
+<span class="material-symbols-outlined text-orange-900 cursor-pointer">volunteer_activism</span>
+</div>
+</div>
+<div class="space-y-4">
+<h4 class="font-serif text-lg font-bold text-stone-800 dark:text-stone-200">Our Essence</h4>
+<ul class="space-y-3">
+<li><a class="text-stone-500 dark:text-stone-400 text-sm font-sans hover:text-emerald-700 transition-all" href="#">Sustainability Report</a></li>
+<li><a class="text-stone-500 dark:text-stone-400 text-sm font-sans hover:text-emerald-700 transition-all" href="#">Refill Program</a></li>
+<li><a class="text-stone-500 dark:text-stone-400 text-sm font-sans hover:text-emerald-700 transition-all" href="#">Store Locator</a></li>
+<li><a class="text-stone-500 dark:text-stone-400 text-sm font-sans hover:text-emerald-700 transition-all" href="#">Ritual Guides</a></li>
+</ul>
+</div>
+<div class="space-y-4">
+<h4 class="font-serif text-lg font-bold text-stone-800 dark:text-stone-200">The Ritual Letter</h4>
+<p class="text-sm text-stone-500">Subscribe to receive botanical stories and exclusive ritual launches.</p>
+<div class="flex bg-white dark:bg-stone-800 rounded-lg p-1 border border-outline-variant/20">
+<input class="bg-transparent border-none focus:ring-0 text-sm flex-grow px-3" placeholder="Your email" type="email"/>
+<button class="bg-primary text-on-primary px-4 py-2 rounded-md text-xs font-bold uppercase tracking-widest">Join</button>
+</div>
+</div>
+</div>
+<div class="max-w-7xl mx-auto px-8 mt-16 pt-8 border-t border-outline-variant/10 text-center text-stone-400 text-xs tracking-widest font-sans uppercase">
+            © 2024 Natura Rituals. Inspired by the Amazon.
+        </div>
+</footer>
+<!-- Mobile BottomNavBar -->
+<nav class="md:hidden fixed bottom-0 left-0 w-full flex justify-around items-center px-4 pb-6 pt-2 bg-stone-50/90 dark:bg-stone-900/90 backdrop-blur-xl z-50 rounded-t-3xl shadow-[0_-8px_30px_rgb(0,0,0,0.04)]">
+<div class="flex flex-col items-center justify-center bg-emerald-100/50 dark:bg-emerald-900/30 text-emerald-900 dark:text-emerald-100 rounded-full px-5 py-2">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">auto_awesome</span>
+<span class="font-sans text-[10px] uppercase tracking-tighter">Rituals</span>
+</div>
+<div class="flex flex-col items-center justify-center text-stone-500 dark:text-stone-400 p-2">
+<span class="material-symbols-outlined">eco</span>
+<span class="font-sans text-[10px] uppercase tracking-tighter">Impact</span>
+</div>
+<div class="flex flex-col items-center justify-center text-stone-500 dark:text-stone-400 p-2">
+<span class="material-symbols-outlined">redeem</span>
+<span class="font-sans text-[10px] uppercase tracking-tighter">Gifts</span>
+</div>
+<div class="flex flex-col items-center justify-center text-stone-500 dark:text-stone-400 p-2">
+<span class="material-symbols-outlined">person</span>
+<span class="font-sans text-[10px] uppercase tracking-tighter">Account</span>
+</div>
+</nav>
+<!-- Floating Action Button: Contextual for Home -->
+<div class="fixed bottom-24 right-6 z-40 md:bottom-8 md:right-8">
+<button class="bg-primary text-on-primary w-14 h-14 rounded-full flex items-center justify-center shadow-2xl hover:scale-110 active:scale-95 transition-all">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">chat_bubble</span>
+</button>
+</div>
+</body></html>

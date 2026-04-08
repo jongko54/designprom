@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>THE DOSSIER | Runway Editorial</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400&amp;family=Inter:wght@300;400;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "inverse-on-surface": "#f3f0eb",
+                      "tertiary": "#3c3b38",
+                      "on-tertiary-fixed-variant": "#e5e2dd",
+                      "on-tertiary-container": "#ffffff",
+                      "surface-container-highest": "#e5e2dd",
+                      "on-secondary-container": "#1c1b1b",
+                      "primary": "#000000",
+                      "on-secondary-fixed-variant": "#3c3b3b",
+                      "surface-tint": "#5e5e5e",
+                      "surface-container-high": "#ebe8e3",
+                      "on-surface": "#1c1c19",
+                      "inverse-surface": "#31302d",
+                      "error-container": "#ffdad6",
+                      "surface-dim": "#dcdad5",
+                      "outline-variant": "#c6c6c6",
+                      "background": "#fcf9f4",
+                      "on-secondary-fixed": "#1c1b1b",
+                      "on-error": "#ffffff",
+                      "on-secondary": "#ffffff",
+                      "error": "#ba1a1a",
+                      "tertiary-container": "#767471",
+                      "surface-container-lowest": "#ffffff",
+                      "surface-bright": "#fcf9f4",
+                      "secondary": "#5f5e5e",
+                      "surface-variant": "#e5e2dd",
+                      "on-primary": "#e2e2e2",
+                      "outline": "#777777",
+                      "tertiary-fixed": "#5f5e5b",
+                      "surface-container": "#f0ede9",
+                      "primary-container": "#3b3b3b",
+                      "on-tertiary-fixed": "#ffffff",
+                      "on-background": "#1c1c19",
+                      "surface": "#fcf9f4",
+                      "on-tertiary": "#e5e2dd",
+                      "primary-fixed-dim": "#474747",
+                      "primary-fixed": "#5e5e5e",
+                      "on-primary-fixed-variant": "#e2e2e2",
+                      "secondary-fixed-dim": "#adabaa",
+                      "surface-container-low": "#f6f3ee",
+                      "on-surface-variant": "#474747",
+                      "on-error-container": "#410002",
+                      "tertiary-fixed-dim": "#484743",
+                      "inverse-primary": "#c6c6c6",
+                      "on-primary-container": "#ffffff",
+                      "secondary-container": "#d6d4d3",
+                      "on-primary-fixed": "#ffffff",
+                      "secondary-fixed": "#c8c6c5"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0px",
+                      "lg": "0px",
+                      "xl": "0px",
+                      "full": "9999px"
+              },
+              "fontFamily": {
+                      "headline": ["Noto Serif"],
+                      "body": ["Inter"],
+                      "label": ["Inter"]
+              }
+            },
+          },
+        }
+    </script>
+<style>
+        body {
+            background-color: #fcf9f4;
+            color: #1c1c19;
+            font-family: 'Inter', sans-serif;
+            -webkit-font-smoothing: antialiased;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        .font-serif { font-family: 'Noto Serif', serif; }
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+</head>
+<body class="bg-surface text-on-surface">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-[#fcf9f4]/80 dark:bg-black/80 backdrop-blur-xl flex justify-between items-center px-12 py-6 w-full">
+<div class="text-2xl font-serif tracking-tighter text-black dark:text-white">THE DOSSIER</div>
+<div class="hidden md:flex gap-12">
+<a class="font-serif tracking-tight uppercase text-xs text-black dark:text-white border-b border-black dark:border-white pb-1 cursor-pointer opacity-100 active:opacity-70 transition-colors duration-500" href="#">Collections</a>
+<a class="font-serif tracking-tight uppercase text-xs text-neutral-500 dark:text-neutral-400 hover:text-black dark:hover:text-white transition-colors duration-500 cursor-pointer opacity-100 active:opacity-70" href="#">Runway</a>
+<a class="font-serif tracking-tight uppercase text-xs text-neutral-500 dark:text-neutral-400 hover:text-black dark:hover:text-white transition-colors duration-500 cursor-pointer opacity-100 active:opacity-70" href="#">Archives</a>
+<a class="font-serif tracking-tight uppercase text-xs text-neutral-500 dark:text-neutral-400 hover:text-black dark:hover:text-white transition-colors duration-500 cursor-pointer opacity-100 active:opacity-70" href="#">House</a>
+</div>
+<div class="font-serif tracking-tight uppercase text-xs text-black dark:text-white cursor-pointer hover:opacity-70 transition-opacity">
+            Curator
+        </div>
+</nav>
+<!-- Hero Section -->
+<header class="relative h-screen w-full overflow-hidden bg-black">
+<img alt="The Dossier Opening Shot" class="w-full h-full object-cover opacity-80" data-alt="dramatic high-contrast fashion runway photography with a lone model walking in shadows and intense white spotlight beam from above" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCT8G4pq58Zv8CTqW0MUQvYF6YRKjyh9ERzzcLarTzcyC1d_Yx5Z4vPgprRL4i9Pe6ck8QwGx8GjHUFp2q47_AkP4Uvokr3CQLxqfXV8JjSM1A9opviU3yWHmqhmr0lHd9QdWhAVl_MCQXpTMTRXXSk3GCPPswQNdznIvWMcegQluHvzo4qZR92AANaKrHWwc0T3gQYRw1-qbhvTNyrxktJQB60IzSALnYsXz-GcoX-TxGzOqq5grxj-hLci_xYQiRLfByLFGqI4F4"/>
+<div class="absolute inset-0 flex flex-col justify-end items-center pb-24 px-12">
+<h1 class="font-serif text-white text-6xl md:text-[8rem] leading-none tracking-tighter text-center uppercase">
+                Winter <br/> <span class="italic">2024</span>
+</h1>
+<p class="font-label text-white/60 tracking-[0.2em] text-[10px] mt-8 uppercase">A Study in Silence</p>
+</div>
+</header>
+<!-- Content Chapter I -->
+<section class="py-32 px-12 md:px-24">
+<div class="max-w-7xl mx-auto">
+<div class="flex flex-col md:flex-row items-baseline justify-between mb-24 border-b border-outline-variant/15 pb-8">
+<span class="font-label text-neutral-400 text-[10px] tracking-[0.3em] uppercase mb-4 md:mb-0">Dossier Entry 01</span>
+<h2 class="font-serif text-4xl md:text-6xl tracking-tight text-on-surface">Chapter I: The New Minimalism</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-16 items-start">
+<div class="md:col-span-7 aspect-[3/4] bg-surface-container overflow-hidden">
+<img alt="Structural Silhouette" class="w-full h-full object-cover transition-transform duration-1000 hover:scale-105" data-alt="minimalist architectural fashion portrait of a model in a sharp ivory wool coat against a raw concrete wall with sharp geometric shadows" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDOQQezNQL0jTs32YmmGkiVFzpexUlaEoy1_yK7XVfL1-9IsGQ6bH5Y69a9EJq9iDFVJmqL4bs5QG_G5TXq6WGNUFY1_t3SkCR_d_SldtYhs8p86_X2VBZQpL-Q0wdoalb4pmbU5mSx18Re2WpQt5CSw0AGRXvACfuHq6k53yHVNa3GIxht7sRh3u0MD1D1M4R8WeJZtbrHZQjdGEthgIXmULPAnMkzH-UX3UfpWSuQPU1V4lp8E28eGuUpMnvoh4hGh75wJDljICo"/>
+</div>
+<div class="md:col-span-5 pt-12">
+<div class="max-w-sm">
+<h3 class="font-serif text-2xl mb-8 italic">The architecture of subtraction.</h3>
+<p class="font-body text-neutral-600 leading-relaxed text-sm mb-12">
+                            This collection explores the threshold where garment meets environment. By stripping away the superfluous, we reveal the raw structural integrity of Italian silks and heavy-gauge wools. Every seam is a calculated line in a broader spatial composition.
+                        </p>
+<button class="font-label text-[10px] tracking-[0.2em] uppercase border-b border-primary pb-2 hover:text-neutral-500 hover:border-neutral-500 transition-all">Explore the Archive</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Runway Scroller (Signature Component) -->
+<section class="py-32 bg-surface-container-low overflow-hidden">
+<div class="px-12 mb-16">
+<h2 class="font-serif text-3xl tracking-tight">Runway Stills</h2>
+</div>
+<div class="flex overflow-x-auto no-scrollbar gap-[64px] px-12 pb-12">
+<!-- Scroller Items -->
+<div class="flex-none w-[40vw] flex flex-col">
+<div class="aspect-[2/3] bg-surface overflow-hidden">
+<img alt="Detail 01" class="w-full h-full object-cover" data-alt="extreme close-up of high-fashion fabric texture showing detailed weave of black cashmere with soft bokeh lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDWm3FBAaROq1_RxO5yY7wRc1BLT62wnDH6YZiHcHFh89fa8n3geaMCVpFXwnDaqxq5KD52yoZ-gW9siZh12S1SbyxRLC2rpmrLJaG6hZbPdFM1wXWikqeSyf1-BvIVPUoPUbq6rs_YiV6QMo94eTvxSqjlGUlx93LWbs0YCASasVQ86T3Ldv4djSG2V-TqlZh1A66zMtwXMYSIsZesiWJtpqsheeYZLeiKbIbjv2lzUIrgadeg7JAxgti2zGxMy1HQlpFtr8aRg9g"/>
+</div>
+<div class="mt-4 self-end">
+<span class="font-label text-[10px] tracking-widest text-neutral-400 uppercase">Look 04 // Detail</span>
+</div>
+</div>
+<div class="flex-none w-[40vw] flex flex-col">
+<div class="aspect-[2/3] bg-surface overflow-hidden">
+<img alt="Movement 01" class="w-full h-full object-cover" data-alt="fashion model in movement walking on a dark runway with sheer fabric flowing behind creating a sense of ethereal motion" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAwZP4Rr-NJaZeZwyXjV1OtnPhN2sh8oUqMoDCWuZEcnQyI1TkF9U26UpSXs1grQW-oe0JgYxZcQMcQybTPvbM6V9ZXvXrBBo0hJ2893KhEqop7ji--ho_arBmsAYonGNMjKfZQc5_fOgcRPd1lVG5nDnXDhJbrNUmM99Wz8418BOjWjdO-TrcWQq8-pOwDKE6moMQYwTGgRJaltDWss-klxZuK_OCl4HCeldYnycfVRFZG1Mn52Ze6Eyw1X3_I1bVPYFP-LNQnTI4"/>
+</div>
+<div class="mt-4 self-end">
+<span class="font-label text-[10px] tracking-widest text-neutral-400 uppercase">Look 12 // Movement</span>
+</div>
+</div>
+<div class="flex-none w-[40vw] flex flex-col">
+<div class="aspect-[2/3] bg-surface overflow-hidden">
+<img alt="Form 01" class="w-full h-full object-cover" data-alt="artistic low-angle fashion shot of a models legs in structured trousers walking on a glass floor with moody reflections" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBR8Ooljr2S_CorD5TXesGm-rNj-l2wwt6j-wXwgVenKNiMgwmpreolyFcJJJrKB8VwTlgzcXh-a5cHLXb38GwTNL53SpwJEZfLTIp0lwaVHGeWsgUlPs5h-Z7IEPWRyGK-QS9lJVytbu8ZJ8zgarVYckXEpd3K9U3DF6uwaHPlI5RyVvo1sNSbO9rF2UPWkLPs0Z7jCavcrCN62H69eyAryFDXQ7RJ5zHBJJnLtkz-dp0qQTGiA8MHxAbRe_LpsnKfKgXtB6HKyqk"/>
+</div>
+<div class="mt-4 self-end">
+<span class="font-label text-[10px] tracking-widest text-neutral-400 uppercase">Look 21 // Structural Form</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Chapter II -->
+<section class="py-48 px-12">
+<div class="max-w-5xl mx-auto text-center">
+<span class="font-label text-neutral-400 text-[10px] tracking-[0.3em] uppercase mb-8 block">Dossier Entry 02</span>
+<h2 class="font-serif text-5xl md:text-8xl tracking-tighter text-on-surface mb-16 leading-tight">Chapter II: <br/> Structural Form</h2>
+<div class="aspect-[21/9] bg-surface-container-high mb-16 overflow-hidden">
+<img alt="The Venue" class="w-full h-full object-cover" data-alt="panoramic wide shot of a luxury fashion runway set in a brutalist concrete hall with cold blue and grey lighting tones" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBCjueU4N6gjUtBKLQy9fhD074W6YJVQp88bMeH8gH2Nm9_NSG_b9jEO0CVHK6bAZDplKbYzSum92LAdn3qTFowE17Z-MtjqJcx3JPiliTenKjZgWVbulioJdv_rxe0hn8FhI-qK8SHz0N1dacv2ByEdwlrWv-IfjfaCbVSwijkxw1NmJOYlelp1pszdl-IDGlqqlljFTt6pSpydT-5A8R-cw4Bcgau2TVSwuiHPDO9Fifb3NfYxgjwGGFC66WZTw81vhthbOFDsvA"/>
+</div>
+<div class="max-w-2xl mx-auto text-left">
+<p class="font-body text-neutral-600 leading-relaxed text-base italic">
+                    "We do not design clothes; we define the space surrounding the body." 
+                </p>
+<div class="mt-12 grid grid-cols-1 md:grid-cols-2 gap-12 text-sm text-neutral-500 font-body">
+<p>The second act of our winter odyssey focuses on the rigidity of form. Heavy felted fabrics are sculpted into geometric shapes that defy the traditional anatomy of tailoring.</p>
+<p>Contrasting this structural severity are moments of extreme fluidity—liquid silks that drape and fold like water against a stone facade.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Backstage Credits -->
+<section class="py-24 bg-surface-container-low border-t border-outline-variant/15">
+<div class="px-12 grid grid-cols-1 md:grid-cols-4 gap-12">
+<div>
+<h4 class="font-label text-[10px] tracking-widest text-neutral-400 uppercase mb-8">Production</h4>
+<ul class="font-label text-[10px] leading-loose uppercase space-y-1">
+<li class="text-on-surface">Creative Direction: A. Vance</li>
+<li class="text-on-surface">Photography: Elena Rossi</li>
+<li class="text-on-surface">Styling: Julian Thorne</li>
+</ul>
+</div>
+<div>
+<h4 class="font-label text-[10px] tracking-widest text-neutral-400 uppercase mb-8">Casting</h4>
+<ul class="font-label text-[10px] leading-loose uppercase space-y-1">
+<li class="text-on-surface">Casting: Bureau Noir</li>
+<li class="text-on-surface">Hair: Marc Clement</li>
+<li class="text-on-surface">Makeup: Satoko I.</li>
+</ul>
+</div>
+<div>
+<h4 class="font-label text-[10px] tracking-widest text-neutral-400 uppercase mb-8">Atmosphere</h4>
+<ul class="font-label text-[10px] leading-loose uppercase space-y-1">
+<li class="text-on-surface">Sound Design: O. Hertz</li>
+<li class="text-on-surface">Set Design: Form &amp; Void</li>
+<li class="text-on-surface">Lighting: Lux Studio</li>
+</ul>
+</div>
+<div class="flex items-end justify-end">
+<div class="text-right">
+<p class="font-serif text-3xl italic tracking-tighter">Backstage Credits</p>
+<p class="font-label text-[9px] tracking-widest text-neutral-400 uppercase mt-2">Paris Fashion Week // 2024</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-[#fcf9f4] dark:bg-black w-full py-24 px-12 border-t border-neutral-200/20 flex flex-col md:flex-row justify-between items-end w-full gap-8">
+<div class="flex flex-col gap-8 w-full md:w-auto">
+<div class="font-serif text-lg text-black dark:text-white">THE RUNWAY DOSSIER</div>
+<div class="flex flex-wrap gap-8">
+<a class="font-sans tracking-widest text-[10px] uppercase text-neutral-400 hover:underline underline-offset-4 decoration-[0.5px] transition-all" href="#">Backstage Credits</a>
+<a class="font-sans tracking-widest text-[10px] uppercase text-neutral-400 hover:underline underline-offset-4 decoration-[0.5px] transition-all" href="#">Legal</a>
+<a class="font-sans tracking-widest text-[10px] uppercase text-neutral-400 hover:underline underline-offset-4 decoration-[0.5px] transition-all" href="#">Archive Index</a>
+<a class="font-sans tracking-widest text-[10px] uppercase text-neutral-400 hover:underline underline-offset-4 decoration-[0.5px] transition-all" href="#">Contact</a>
+</div>
+</div>
+<div class="font-sans tracking-widest text-[10px] uppercase text-neutral-400 text-right">
+            © 2024 THE RUNWAY DOSSIER. ALL RIGHTS RESERVED.
+        </div>
+</footer>
+</body></html>

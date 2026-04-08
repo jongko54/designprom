@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Seoul Glow SEA | Official K-Beauty Mall</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-tertiary-container": "#440e7b",
+                    "surface-variant": "#dadddf",
+                    "on-error-container": "#520c00",
+                    "surface-container-lowest": "#ffffff",
+                    "tertiary-dim": "#65379d",
+                    "on-error": "#ffefec",
+                    "outline-variant": "#abadae",
+                    "tertiary-container": "#c99dff",
+                    "background": "#f5f6f7",
+                    "surface-container": "#e6e8ea",
+                    "on-primary": "#ffefee",
+                    "on-tertiary-fixed-variant": "#4e1c85",
+                    "secondary": "#652fe7",
+                    "primary-fixed-dim": "#fc5c60",
+                    "on-background": "#2c2f30",
+                    "inverse-surface": "#0c0f10",
+                    "inverse-primary": "#f9595e",
+                    "surface": "#f5f6f7",
+                    "on-secondary-fixed": "#3b00a0",
+                    "error-dim": "#b92902",
+                    "surface-bright": "#f5f6f7",
+                    "surface-container-highest": "#dadddf",
+                    "on-tertiary-fixed": "#25004b",
+                    "on-secondary-fixed-variant": "#591bdc",
+                    "surface-container-low": "#eff1f2",
+                    "on-primary-fixed": "#000000",
+                    "surface-container-high": "#e0e3e4",
+                    "on-surface": "#2c2f30",
+                    "tertiary": "#7244aa",
+                    "on-tertiary": "#faefff",
+                    "inverse-on-surface": "#9b9d9e",
+                    "secondary-fixed": "#d8caff",
+                    "tertiary-fixed": "#c99dff",
+                    "on-surface-variant": "#595c5d",
+                    "primary": "#af232f",
+                    "tertiary-fixed-dim": "#bd8df8",
+                    "primary-dim": "#9e1424",
+                    "primary-fixed": "#ff7575",
+                    "primary-container": "#ff7575",
+                    "secondary-container": "#d8caff",
+                    "surface-dim": "#d1d5d7",
+                    "secondary-fixed-dim": "#cabaff",
+                    "surface-tint": "#af232f",
+                    "secondary-dim": "#5819db",
+                    "on-primary-fixed-variant": "#60000e",
+                    "error": "#b02500",
+                    "on-secondary-container": "#5000d2",
+                    "outline": "#757778",
+                    "error-container": "#f95630",
+                    "on-secondary": "#f7f0ff",
+                    "on-primary-container": "#4e000a"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Plus Jakarta Sans"],
+                    "body": ["Plus Jakarta Sans"],
+                    "label": ["Plus Jakarta Sans"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+        .glass-header { backdrop-filter: blur(20px); }
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+</head>
+<body class="bg-surface text-on-surface">
+<!-- Promo Ticker -->
+<div class="bg-primary text-on-primary py-2 px-4 overflow-hidden whitespace-nowrap">
+<div class="flex items-center justify-center gap-8 animate-marquee text-[10px] md:text-xs font-bold uppercase tracking-[0.2em]">
+<span>Free Express Shipping for Members</span>
+<span class="w-2 h-2 rounded-full bg-white/40"></span>
+<span class="flex items-center gap-2">Flash Sale: Ends in <span class="text-white font-black">04:22:15</span></span>
+<span class="w-2 h-2 rounded-full bg-white/40"></span>
+<span>Official K-Beauty Distributor SEA</span>
+</div>
+</div>
+<!-- TopNavBar (Shared Component JSON Mapping) -->
+<header class="sticky top-0 z-50 bg-surface/80 dark:bg-surface/80 backdrop-blur-md shadow-[0px_0px_32px_rgba(44,47,48,0.06)]">
+<div class="flex justify-between items-center w-full px-6 py-4 max-w-7xl mx-auto plus-jakarta-sans title-sm tracking-tight">
+<!-- Brand Logo -->
+<div class="text-xl font-black italic tracking-tighter text-[#af232f] dark:text-[#ff7575]">
+                Seoul Glow SEA
+            </div>
+<!-- Navigation Links -->
+<nav class="hidden lg:flex items-center gap-8">
+<a class="text-[#af232f] dark:text-[#ff7575] border-b-2 border-[#af232f] pb-1" href="#">Shop by Ingredient</a>
+<a class="text-[#2c2f30] dark:text-[#f5f6f7] font-medium hover:text-[#af232f] transition-colors duration-200" href="#">Best Sellers</a>
+<a class="text-[#2c2f30] dark:text-[#f5f6f7] font-medium hover:text-[#af232f] transition-colors duration-200" href="#">New Arrivals</a>
+</nav>
+<!-- Trailing Actions -->
+<div class="flex items-center gap-4">
+<div class="hidden sm:flex flex-col items-end mr-4">
+<span class="text-[10px] uppercase font-bold text-on-surface-variant leading-none">Points Balance</span>
+<span class="text-primary font-black leading-none">2,450 GLOW</span>
+</div>
+<button class="bg-primary text-on-primary px-4 py-2 rounded-lg font-bold text-xs uppercase tracking-wider scale-95 active:opacity-80 transition-all">
+                    Track My Order
+                </button>
+<div class="flex gap-3">
+<span class="material-symbols-outlined text-2xl cursor-pointer">search</span>
+<span class="material-symbols-outlined text-2xl cursor-pointer">shopping_bag</span>
+</div>
+</div>
+</div>
+<!-- Ingredient Secondary Nav -->
+<div class="bg-surface-container-low py-2 border-t border-outline-variant/10">
+<div class="max-w-7xl mx-auto px-6 flex gap-6 overflow-x-auto no-scrollbar whitespace-nowrap text-[11px] font-bold uppercase tracking-widest text-on-surface-variant">
+<a class="hover:text-primary" href="#">Cica</a>
+<a class="hover:text-primary" href="#">Snail Mucin</a>
+<a class="hover:text-primary" href="#">Niacinamide</a>
+<a class="hover:text-primary" href="#">Mugwort</a>
+<a class="hover:text-primary" href="#">Vitamin C</a>
+<a class="hover:text-primary" href="#">Hyaluronic Acid</a>
+</div>
+</div>
+</header>
+<main>
+<!-- Hero Section -->
+<section class="relative h-[600px] w-full overflow-hidden bg-surface-container-low flex items-center">
+<div class="absolute inset-0 z-0">
+<img class="w-full h-full object-cover" data-alt="Premium close-up of minimal K-beauty skincare serums with soft morning light and artistic shadows on a textured pastel background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDyTAN3SgUAao_derJ9AhlNbdLVzf52tSX7N_WMlxhHZcR-SKutvv1dZ5nAXsaq2PwbFrzKAX_aRdEeGxjodiG3LdQqy1v1RS70WV1AFKvAjAKU0NlOlrwil8sDPZPyfJsN_2UVsipKLiSS3yZutgwjVVHtJy5A8PYv4626qjvEt-RhIiPhSFPWvfTZ0RUqrdypVgg6PsudpOQf5JfHhXYFXiVgO5KXAzWfp9f1tRwZDhRQC2xrdSEwdyibrdEOXA_rQRWyZ_0_2W8"/>
+<div class="absolute inset-0 bg-gradient-to-r from-surface to-transparent"></div>
+</div>
+<div class="relative z-10 max-w-7xl mx-auto px-6 w-full">
+<div class="max-w-xl">
+<span class="bg-tertiary text-on-tertiary px-3 py-1 rounded-full text-[10px] font-black uppercase tracking-tighter mb-4 inline-block">Online Exclusive</span>
+<h1 class="font-headline text-5xl md:text-7xl font-black tracking-tighter leading-[0.9] text-on-surface mb-6">
+                        The Glass Skin <br/><span class="text-primary italic">Glow Kit</span>
+</h1>
+<p class="text-lg text-on-surface-variant mb-8 font-medium">Bundle &amp; Save 20% on the trending 5-step ritual. Achieving the translucent look has never been easier.</p>
+<div class="flex items-center gap-4">
+<button class="bg-primary hover:bg-primary-dim text-white px-8 py-4 rounded-xl font-bold flex items-center gap-2 transition-all group">
+                            Add to Cart 
+                            <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">shopping_cart</span>
+</button>
+<div class="flex flex-col">
+<span class="text-sm line-through text-on-surface-variant opacity-60">RM 450.00</span>
+<span class="text-2xl font-black text-primary">RM 360.00</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Quick Navigation -->
+<section class="py-12 bg-surface">
+<div class="max-w-7xl mx-auto px-6">
+<div class="flex justify-between items-center overflow-x-auto no-scrollbar gap-8">
+<div class="flex flex-col items-center gap-3 shrink-0">
+<div class="w-16 h-16 rounded-full bg-error-container flex items-center justify-center text-white">
+<span class="material-symbols-outlined text-3xl" data-weight="fill">bolt</span>
+</div>
+<span class="text-[11px] font-black uppercase tracking-tight">Flash Sale</span>
+</div>
+<div class="flex flex-col items-center gap-3 shrink-0">
+<div class="w-16 h-16 rounded-full bg-surface-container-high flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-3xl">new_releases</span>
+</div>
+<span class="text-[11px] font-black uppercase tracking-tight">New Arrivals</span>
+</div>
+<div class="flex flex-col items-center gap-3 shrink-0">
+<div class="w-16 h-16 rounded-full bg-surface-container-high flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-3xl">star</span>
+</div>
+<span class="text-[11px] font-black uppercase tracking-tight">Best Sellers</span>
+</div>
+<div class="flex flex-col items-center gap-3 shrink-0">
+<div class="w-16 h-16 rounded-full bg-tertiary-container flex items-center justify-center text-on-tertiary-container">
+<span class="material-symbols-outlined text-3xl">featured_seasonal_and_gifts</span>
+</div>
+<span class="text-[11px] font-black uppercase tracking-tight">Bundle Deals</span>
+</div>
+<div class="flex flex-col items-center gap-3 shrink-0">
+<div class="w-16 h-16 rounded-full bg-surface-container-high flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-3xl">verified</span>
+</div>
+<span class="text-[11px] font-black uppercase tracking-tight">Exclusives</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Flash Sale Rail -->
+<section class="py-12 bg-surface-container-low">
+<div class="max-w-7xl mx-auto px-6">
+<div class="flex justify-between items-end mb-8">
+<div>
+<div class="flex items-center gap-2 mb-2">
+<span class="bg-error text-white px-2 py-0.5 rounded text-[10px] font-black uppercase">Live</span>
+<h2 class="text-2xl font-black uppercase tracking-tighter">Midnight Flash Sale</h2>
+</div>
+<p class="text-sm text-on-surface-variant">Limited quantities. Only available for the next 4 hours.</p>
+</div>
+<div class="flex gap-2 text-primary font-black font-headline text-xl">
+<span class="bg-white px-2 py-1 rounded shadow-sm">04</span> : 
+                        <span class="bg-white px-2 py-1 rounded shadow-sm">22</span> : 
+                        <span class="bg-white px-2 py-1 rounded shadow-sm">15</span>
+</div>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-4">
+<!-- Product 1 -->
+<div class="group bg-surface-container-lowest p-3 rounded-xl transition-all hover:shadow-lg">
+<div class="relative mb-4 aspect-square rounded-lg overflow-hidden bg-surface-container-low">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform" data-alt="Single bottle of COSRX Advanced Snail 96 Mucin Power Essence on a clean minimalist surface" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBjJds_fxuApGJDEpJv8Oc9Dm_IvG3KLhGNwsBNsjbalCzxtVDha3hlYYLTCvI6r_o8QqRgcpqNaWOeO9vgEI0iQFA7Z6XeETNpH0ICIeXzUpsjDB6oOxWBAUlYmPHJT4GjGZKspbxPHmVidHWREGIjWqnBYRAVGCsKbfp-iQs3duR_8iNca9K-NiAA8nTA1ezXF9q3vgF0nR6Kh6LZcrnCCIvL1eYEBOeocWXL37tuqq7ElCfPEEnYxc1z8K8P7EphVmHyfaTEtQw"/>
+<div class="absolute top-2 left-2 flex flex-col gap-1">
+<span class="bg-error text-white text-[9px] font-black px-1.5 py-0.5 rounded">-45%</span>
+</div>
+</div>
+<span class="text-[10px] font-bold text-on-surface-variant uppercase tracking-wider">COSRX</span>
+<h3 class="title-sm font-bold truncate mb-1">Advanced Snail 96 Mucin</h3>
+<div class="flex items-center gap-2 mb-3">
+<span class="text-primary font-black">RM 42.00</span>
+<span class="text-[10px] line-through text-on-surface-variant">RM 78.00</span>
+</div>
+<div class="space-y-1">
+<div class="flex justify-between text-[9px] font-bold uppercase tracking-tight">
+<span>85% Sold</span>
+<span>12 Left</span>
+</div>
+<div class="w-full h-1.5 bg-surface-container-high rounded-full overflow-hidden">
+<div class="bg-error h-full w-[85%]"></div>
+</div>
+</div>
+</div>
+<!-- Product 2 -->
+<div class="group bg-surface-container-lowest p-3 rounded-xl transition-all hover:shadow-lg">
+<div class="relative mb-4 aspect-square rounded-lg overflow-hidden bg-surface-container-low">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform" data-alt="Two elegant dropper bottles of Anua Heartleaf Soothing Ampoule against a soft sage green background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAPs74nEVt96lvYjKey4Zv0ArXqq4OwywQTEkAjjGIKi0p19Igm3gIVBucKKWIaRIHwShJzr478KDGUShh-D-VWHwJ3ToasjGOuJUmb7Cz6oPvxhMuSqNTRp_1wENFR2YZm7sH8u_kNrYiiPOko8UKC3JiBUe0OM_nbCmZVJ3ryRwwS9rwRxRETPYU7mIkOQNlUOo1l6PrJRnD1jLC7AokZ9bhAah7ghfZTXX2gEPinlUo3T0a7OwcfCtgpTFZk3CiXglfUZ4STDWk"/>
+<div class="absolute top-2 left-2 flex flex-col gap-1">
+<span class="bg-error text-white text-[9px] font-black px-1.5 py-0.5 rounded">-30%</span>
+</div>
+</div>
+<span class="text-[10px] font-bold text-on-surface-variant uppercase tracking-wider">Anua</span>
+<h3 class="title-sm font-bold truncate mb-1">Heartleaf 77% Soothing Toner</h3>
+<div class="flex items-center gap-2 mb-3">
+<span class="text-primary font-black">RM 68.00</span>
+<span class="text-[10px] line-through text-on-surface-variant">RM 98.00</span>
+</div>
+<div class="space-y-1">
+<div class="flex justify-between text-[9px] font-bold uppercase tracking-tight">
+<span>40% Sold</span>
+<span>45 Left</span>
+</div>
+<div class="w-full h-1.5 bg-surface-container-high rounded-full overflow-hidden">
+<div class="bg-error h-full w-[40%]"></div>
+</div>
+</div>
+</div>
+<!-- Product 3 -->
+<div class="group bg-surface-container-lowest p-3 rounded-xl transition-all hover:shadow-lg">
+<div class="relative mb-4 aspect-square rounded-lg overflow-hidden bg-surface-container-low">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform" data-alt="Beauty of Joseon Relief Sun Rice and Probiotics sunscreen tube on a clean stone surface with elegant lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAhG2ZIE5AO7eHc7sR2euM1XiyexQBUe01ZDgsHEdJ5-iQCMs2bc1AEGGswQrKrY0MawccWdx4VRZ4ejisvjG6tuF6s9_vnwDp0Zh2APWqZNU059ynpKQMET7nYmTP_kIyt1DHs27b4pMGpBdnfXXADl2zxDIdtKooPCp_K7m3a0f9LJW7-zzxtWZQk7g1O0ymRU07ahPuIN-MyTStRtBgUr1JDgIGTyOxepK4XakZqXrh7GyzcdzqkRoDfwgBx7X4x5rlnz_sTqmY"/>
+<div class="absolute top-2 left-2 flex flex-col gap-1">
+<span class="bg-error text-white text-[9px] font-black px-1.5 py-0.5 rounded">-50%</span>
+</div>
+</div>
+<span class="text-[10px] font-bold text-on-surface-variant uppercase tracking-wider">Beauty of Joseon</span>
+<h3 class="title-sm font-bold truncate mb-1">Relief Sun : Rice + Probiotics</h3>
+<div class="flex items-center gap-2 mb-3">
+<span class="text-primary font-black">RM 39.00</span>
+<span class="text-[10px] line-through text-on-surface-variant">RM 78.00</span>
+</div>
+<div class="space-y-1">
+<div class="flex justify-between text-[9px] font-bold uppercase tracking-tight">
+<span>92% Sold</span>
+<span>5 Left</span>
+</div>
+<div class="w-full h-1.5 bg-surface-container-high rounded-full overflow-hidden">
+<div class="bg-error h-full w-[92%]"></div>
+</div>
+</div>
+</div>
+<!-- Product 4 -->
+<div class="group bg-surface-container-lowest p-3 rounded-xl transition-all hover:shadow-lg">
+<div class="relative mb-4 aspect-square rounded-lg overflow-hidden bg-surface-container-low">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform" data-alt="Innisfree Green Tea Seed Serum bottle with stylized water droplets and fresh green tea leaves" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDR4dr_UtizGV8WHFsf1LoNpvC5w5xeZvey1fWTu3axOSAuPqT9BKjAXHwRb6c74vQ-spuFmlLAkcXOFuc6yIRrNq2wU9VJ-T4DCEruIQ69EYqiQxNVB5B8_WDI7glFVAlH6RG8qVY2BO2TY-sxCoZ7MiyUfunC17ZfKvClwvIih8yneE7ssyjfX-xSxZw4FCMd1bs0Z2c5w3pxDZa3VoylO_qYPzntXpOvRccOw4RYZbeqYINIrnDn9uwo8rp8dp7NwMEGgTqQs2A"/>
+<div class="absolute top-2 left-2 flex flex-col gap-1">
+<span class="bg-error text-white text-[9px] font-black px-1.5 py-0.5 rounded">-20%</span>
+</div>
+</div>
+<span class="text-[10px] font-bold text-on-surface-variant uppercase tracking-wider">Innisfree</span>
+<h3 class="title-sm font-bold truncate mb-1">Retinol Cica Repair Ampoule</h3>
+<div class="flex items-center gap-2 mb-3">
+<span class="text-primary font-black">RM 112.00</span>
+<span class="text-[10px] line-through text-on-surface-variant">RM 140.00</span>
+</div>
+<div class="space-y-1">
+<div class="flex justify-between text-[9px] font-bold uppercase tracking-tight">
+<span>15% Sold</span>
+<span>80 Left</span>
+</div>
+<div class="w-full h-1.5 bg-surface-container-high rounded-full overflow-hidden">
+<div class="bg-error h-full w-[15%]"></div>
+</div>
+</div>
+</div>
+<!-- Product 5 -->
+<div class="group bg-surface-container-lowest p-3 rounded-xl transition-all hover:shadow-lg opacity-75">
+<div class="relative mb-4 aspect-square rounded-lg overflow-hidden bg-surface-container-low grayscale">
+<img class="w-full h-full object-cover" data-alt="Laneige Water Bank Cream jar with frozen water textures in background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAZEfCIrEsJojUWbS6TGOIORMQxmb30UlY_SNuvxBfiyCZ44u26kOzdlKZnZrBzy76QRIAAels6kO3XLGTV9mOOVEIDHf5b2toLcw9Xk9nPVaDSnFj0ujH2_lz-V_dYk1KfOLRLVoTRpA8f_6AHDVHEqzkq4FuML4_zNRZRwPsaj4Y6I84o_7wQW_Iqn0e3zslidtqWANZ9fyWGCKWYBFe12TnsLlQD8qOhjU11xSoj_Gadks34Ken5V0buw2FRleADzBuKV6iEAp8"/>
+<div class="absolute inset-0 bg-black/40 flex items-center justify-center">
+<span class="text-white font-black uppercase text-xs tracking-tighter border-2 border-white px-2 py-1">Sold Out</span>
+</div>
+</div>
+<span class="text-[10px] font-bold text-on-surface-variant uppercase tracking-wider">Laneige</span>
+<h3 class="title-sm font-bold truncate mb-1">Water Bank Blue Hyaluronic</h3>
+<div class="flex items-center gap-2 mb-3">
+<span class="text-on-surface-variant/50 font-black">RM 145.00</span>
+</div>
+<div class="w-full h-1.5 bg-surface-container-high rounded-full overflow-hidden">
+<div class="bg-on-surface-variant/20 h-full w-full"></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Ingredient-Led Curations -->
+<section class="py-16">
+<div class="max-w-7xl mx-auto px-6">
+<div class="flex flex-col md:flex-row justify-between items-start md:items-end gap-6 mb-12">
+<div>
+<h2 class="text-4xl font-black tracking-tighter mb-2">Targeted Solutions</h2>
+<div class="flex gap-4 border-b border-outline-variant/20">
+<button class="pb-4 border-b-2 border-primary text-primary font-bold text-sm tracking-tight uppercase">Cica (Soothing)</button>
+<button class="pb-4 border-b-2 border-transparent text-on-surface-variant font-bold text-sm tracking-tight uppercase hover:text-on-surface">Vitamin C (Brightening)</button>
+<button class="pb-4 border-b-2 border-transparent text-on-surface-variant font-bold text-sm tracking-tight uppercase hover:text-on-surface">Retinol (Aging)</button>
+</div>
+</div>
+<a class="text-primary font-black uppercase text-xs tracking-widest border-b border-primary/30 pb-1" href="#">View Full Guide</a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Featured Cica Card 1 -->
+<div class="group bg-surface-container-low rounded-2xl overflow-hidden flex flex-col">
+<div class="h-64 overflow-hidden relative">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform" data-alt="A range of green-themed K-beauty products including tubes and jars on a minimal white pedestal" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAPBhwgHEJPPe1ucXznXGD5P5MTEDFBLBjfMib1Suuoel_VqHZtoMfsKUDQ7pzcKRVeidASpgrzGKqK2Z6v08DqnBD0wajVUFXJhrU1pkLn6sP2oKNEw4HyFirYUL8v9jmDMBVmfwK6I36b3qUtFHBHIPfmJuuBAXTBXLxSHxcTUBifPA-1N_rArfppeEZNMnmsDDlCSZhgkgSej5iBcFrpLUlZgL4NYccYWfLwojq80NJUgz8cRTJebnC_XAnpeZ7z15dNxGmp_6A"/>
+<div class="absolute top-4 left-4">
+<span class="bg-white/90 backdrop-blur-md px-3 py-1 rounded-full text-[10px] font-black uppercase text-primary">Best for Redness</span>
+</div>
+</div>
+<div class="p-6">
+<span class="text-[10px] font-bold text-tertiary uppercase tracking-widest mb-1 block">Dr.Jart+</span>
+<h3 class="text-xl font-bold mb-4 tracking-tight">Cicapair Color Correcting Treatment</h3>
+<ul class="space-y-2 mb-6">
+<li class="flex items-center gap-2 text-xs font-medium text-on-surface-variant">
+<span class="material-symbols-outlined text-sm text-primary">check_circle</span>
+                                    Instantly neutralizes redness
+                                </li>
+<li class="flex items-center gap-2 text-xs font-medium text-on-surface-variant">
+<span class="material-symbols-outlined text-sm text-primary">check_circle</span>
+                                    Strengthens skin barrier
+                                </li>
+</ul>
+<div class="mt-auto flex justify-between items-center">
+<span class="text-xl font-black">RM 165.00</span>
+<button class="w-10 h-10 rounded-full bg-primary text-white flex items-center justify-center scale-90 hover:scale-100 transition-all shadow-lg">
+<span class="material-symbols-outlined">add</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Featured Cica Card 2 -->
+<div class="group bg-surface-container-low rounded-2xl overflow-hidden flex flex-col">
+<div class="h-64 overflow-hidden relative">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform" data-alt="A close-up of clear serum texture on a green leaf with light reflecting off the liquid" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCLsnnoIfEOx1iSU4cmWEn65FNf_ypzqmJ4UHRnmoThvDGPnXkJ_KDZyTQAARrONJhBvkHEsTDBHm-sdvwf7YVBQTX8X3zTYhMQjrzBnILV0IgjhL66aQZOmzG5afbBfcti7TU-SrSX8cbY8ZFymAuEAv55MFW4bMaVIXHPy-sG9_sxJ8jB1j2ea7NDSPchqaneQQKjtv9S4E6p_iuSpTlagIzSVkBXzo07K_GrKO766MSDsjD0NgpuB-98XqpBzPLn3xghQYkxSVE"/>
+</div>
+<div class="p-6">
+<span class="text-[10px] font-bold text-tertiary uppercase tracking-widest mb-1 block">Skin1004</span>
+<h3 class="text-xl font-bold mb-4 tracking-tight">Madagascar Centella Ampoule</h3>
+<ul class="space-y-2 mb-6">
+<li class="flex items-center gap-2 text-xs font-medium text-on-surface-variant">
+<span class="material-symbols-outlined text-sm text-primary">check_circle</span>
+                                    100% Pure Centella Extract
+                                </li>
+<li class="flex items-center gap-2 text-xs font-medium text-on-surface-variant">
+<span class="material-symbols-outlined text-sm text-primary">check_circle</span>
+                                    Calms sensitive skin acne
+                                </li>
+</ul>
+<div class="mt-auto flex justify-between items-center">
+<span class="text-xl font-black">RM 52.00</span>
+<button class="w-10 h-10 rounded-full bg-primary text-white flex items-center justify-center scale-90 hover:scale-100 transition-all shadow-lg">
+<span class="material-symbols-outlined">add</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Promo Card -->
+<div class="bg-primary-container/20 rounded-2xl border-2 border-dashed border-primary/20 p-8 flex flex-col justify-center text-center">
+<span class="material-symbols-outlined text-5xl text-primary mb-4" data-weight="fill">spa</span>
+<h3 class="text-2xl font-black tracking-tighter mb-2 text-on-primary-container">Still Unsure About Ingredients?</h3>
+<p class="text-sm text-on-primary-container opacity-80 mb-6">Our skin experts are available for live consultation every day from 10AM to 8PM.</p>
+<button class="bg-primary text-white font-black py-3 rounded-xl tracking-widest uppercase text-xs">Chat with an Expert</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Bundle-First Section -->
+<section class="py-16 bg-surface-container-highest/30">
+<div class="max-w-7xl mx-auto px-6">
+<div class="flex items-center gap-3 mb-10">
+<h2 class="text-4xl font-black tracking-tighter">Routine Bundles</h2>
+<span class="bg-tertiary-container text-on-tertiary-container px-3 py-1 rounded text-[10px] font-black uppercase tracking-tighter">Member Only Pricing</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<!-- Bundle Card 1 -->
+<div class="group bg-surface-container-lowest rounded-[2rem] overflow-hidden flex flex-col md:flex-row shadow-sm hover:shadow-xl transition-all">
+<div class="w-full md:w-1/2 aspect-square relative">
+<img class="w-full h-full object-cover" data-alt="Double cleansing duo featuring an oil cleanser and water-based foam cleanser on a marble countertop with soft focus" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDjNNhAeutu6EyxgOl-S3A68TOFHUdOAbifLjimJVJwnRbDrCz2SniKEItb_eEfGTQOpc5wrs7f0L1zlbK9IYW4O4x2k0BL6-35MMHRjX8ABvuMHZqxS3zEm9_Zjx3P9YtPS3NOJA7ybhFYnf2BBET91Mjp7aWw7TvKGyDe6qH4Ivb491Iv5gh4x6bwZBMpvAqwRzsb9ON6NK7SaKPDNgGvN12EY5sOUz2_kqBvG_0Bcz3B5Ly8VjtfW05pjN7vdHRkHnBbJ82UYrs"/>
+<div class="absolute inset-0 bg-black/5 group-hover:bg-transparent transition-colors"></div>
+</div>
+<div class="w-full md:w-1/2 p-10 flex flex-col">
+<div class="flex justify-between items-start mb-4">
+<span class="bg-surface-container-low text-on-surface-variant text-[10px] font-black px-2 py-1 rounded">2 PRODUCTS</span>
+<span class="text-primary font-black">-15% OFF</span>
+</div>
+<h3 class="text-3xl font-black tracking-tight mb-4">The Double Wash Duo</h3>
+<p class="text-sm text-on-surface-variant mb-6 leading-relaxed">The essential foundation for healthy skin. Melt SPF and makeup with oil, followed by deep pore cleansing.</p>
+<div class="mt-auto">
+<div class="flex items-baseline gap-2 mb-4">
+<span class="text-2xl font-black">RM 118.00</span>
+<span class="text-sm line-through opacity-40">RM 142.00</span>
+</div>
+<button class="w-full bg-on-surface text-surface font-black py-4 rounded-2xl tracking-widest uppercase text-xs hover:bg-primary transition-colors">Select My Types</button>
+</div>
+</div>
+</div>
+<!-- Bundle Card 2 -->
+<div class="group bg-surface-container-lowest rounded-[2rem] overflow-hidden flex flex-col md:flex-row shadow-sm hover:shadow-xl transition-all">
+<div class="w-full md:w-1/2 aspect-square relative">
+<img class="w-full h-full object-cover" data-alt="Morning skincare routine kit with Vitamin C, moisturizer, and SPF arranged neatly on a clean white tray" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB3rZmkXY8RultDqqAjiF_KAnlItorXFZctSpESfQATAw4ynSwrI2ctnr2YL3zg_7oh8Comg9rVZun5fciP0d47Vpmz6eq2-ufwAUmz5ijsvaJaqNF4fAgDo_Yk7mmU6zeHyT0KmSRYB5KvN297XfidUx5d6fRuiQE5HhnFxhVl9ag8t47XfyUcjHsJ8Sv4dY9nznOEkHv6Z9OE92iOYAiF58bDV8shaijfxvRI5-CRLWEztERYR4wUdWvD3EbR0Q35g40Qm7TqktA"/>
+<div class="absolute inset-0 bg-black/5 group-hover:bg-transparent transition-colors"></div>
+</div>
+<div class="w-full md:w-1/2 p-10 flex flex-col">
+<div class="flex justify-between items-start mb-4">
+<span class="bg-surface-container-low text-on-surface-variant text-[10px] font-black px-2 py-1 rounded">3 PRODUCTS</span>
+<span class="text-primary font-black">-25% OFF</span>
+</div>
+<h3 class="text-3xl font-black tracking-tight mb-4">The Morning Ritual</h3>
+<p class="text-sm text-on-surface-variant mb-6 leading-relaxed">Brighten and protect. A curated mix of Vitamin C serum, lightweight cream, and high-SPF defense.</p>
+<div class="mt-auto">
+<div class="flex items-baseline gap-2 mb-4">
+<span class="text-2xl font-black">RM 225.00</span>
+<span class="text-sm line-through opacity-40">RM 305.00</span>
+</div>
+<button class="w-full bg-on-surface text-surface font-black py-4 rounded-2xl tracking-widest uppercase text-xs hover:bg-primary transition-colors">Add Bundle</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Localized Trust Cues -->
+<section class="bg-white py-10">
+<div class="max-w-7xl mx-auto px-6">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-4 divide-y md:divide-y-0 md:divide-x divide-outline-variant/20">
+<div class="flex items-center justify-center gap-4 py-4 md:py-0 px-4">
+<span class="material-symbols-outlined text-primary text-3xl">verified_user</span>
+<div>
+<p class="text-xs font-black uppercase tracking-widest">Official Store Guarantee</p>
+<p class="text-[10px] text-on-surface-variant">100% Authentic. Directly from Korea.</p>
+</div>
+</div>
+<div class="flex items-center justify-center gap-4 py-4 md:py-0 px-4">
+<span class="material-symbols-outlined text-primary text-3xl">local_shipping</span>
+<div>
+<p class="text-xs font-black uppercase tracking-widest">Fast 2-Day Shipping</p>
+<p class="text-[10px] text-on-surface-variant">Via Flash &amp; J&amp;T Express Logistics.</p>
+</div>
+</div>
+<div class="flex items-center justify-center gap-4 py-4 md:py-0 px-4">
+<span class="material-symbols-outlined text-primary text-3xl">loyalty</span>
+<div>
+<p class="text-xs font-black uppercase tracking-widest">Earn Glow Points</p>
+<p class="text-[10px] text-on-surface-variant">Redeem points for full-size gifts.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Membership Banner -->
+<section class="max-w-7xl mx-auto px-6 pb-20">
+<div class="relative rounded-[2.5rem] overflow-hidden bg-on-surface text-surface p-12 md:p-20 text-center">
+<div class="absolute top-0 right-0 w-64 h-64 bg-primary rounded-full blur-[100px] opacity-20 -translate-y-1/2 translate-x-1/2"></div>
+<div class="absolute bottom-0 left-0 w-64 h-64 bg-secondary rounded-full blur-[100px] opacity-20 translate-y-1/2 -translate-x-1/2"></div>
+<div class="relative z-10">
+<span class="text-primary font-black uppercase tracking-[0.3em] text-xs mb-4 block">Join the inner circle</span>
+<h2 class="text-4xl md:text-6xl font-black tracking-tighter mb-8 max-w-2xl mx-auto">Turn Your Glow into <br/>Rewards</h2>
+<p class="text-on-surface-variant max-w-lg mx-auto mb-10 text-lg">Members get early access to drops, exclusive birthday gifts, and 2x points on all COSRX orders.</p>
+<div class="flex flex-col sm:flex-row justify-center gap-4 max-w-md mx-auto">
+<input class="flex-1 bg-white/10 border-transparent rounded-2xl px-6 py-4 text-white focus:ring-primary focus:border-primary placeholder:text-white/40" placeholder="Enter your email" type="email"/>
+<button class="bg-primary text-white font-black px-8 py-4 rounded-2xl tracking-widest uppercase text-xs">Join Now</button>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer (Shared Component JSON Mapping) -->
+<footer class="bg-[#eff1f2] dark:bg-[#1a1c1d] w-full pt-12 pb-8 tonal-layering-surface-container-low flat no-shadows plus-jakarta-sans label-sm uppercase tracking-widest">
+<div class="grid grid-cols-2 md:grid-cols-4 gap-8 px-8 w-full max-w-7xl mx-auto">
+<!-- Brand Column -->
+<div class="col-span-2 md:col-span-1">
+<div class="text-lg font-bold text-[#2c2f30] dark:text-[#f5f6f7] mb-4">Seoul Glow SEA</div>
+<p class="normal-case tracking-normal text-[10px] text-[#2c2f30]/60 dark:text-[#f5f6f7]/60 leading-relaxed mb-6">
+                    The premium destination for authentic Korean Beauty across Southeast Asia. Curated for local skin concerns.
+                </p>
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-xl opacity-60">brand_awareness</span>
+<span class="material-symbols-outlined text-xl opacity-60">shopping_basket</span>
+<span class="material-symbols-outlined text-xl opacity-60">local_activity</span>
+</div>
+</div>
+<!-- Shop Column -->
+<div class="flex flex-col gap-3">
+<span class="text-[#2c2f30] dark:text-[#f5f6f7] font-black mb-2">Shopping</span>
+<a class="text-[#2c2f30]/60 dark:text-[#f5f6f7]/60 hover:underline decoration-[#af232f] underline-offset-4 transition-opacity" href="#">New Arrivals</a>
+<a class="text-[#af232f] font-bold" href="#">Best Sellers</a>
+<a class="text-[#2c2f30]/60 dark:text-[#f5f6f7]/60 hover:underline decoration-[#af232f] underline-offset-4 transition-opacity" href="#">Routine Kits</a>
+<a class="text-[#2c2f30]/60 dark:text-[#f5f6f7]/60 hover:underline decoration-[#af232f] underline-offset-4 transition-opacity" href="#">Clearance</a>
+</div>
+<!-- Links Column -->
+<div class="flex flex-col gap-3">
+<span class="text-[#2c2f30] dark:text-[#f5f6f7] font-black mb-2">Information</span>
+<a class="text-[#2c2f30]/60 dark:text-[#f5f6f7]/60 hover:underline decoration-[#af232f] underline-offset-4 transition-opacity" href="#">Flash Shipping</a>
+<a class="text-[#2c2f30]/60 dark:text-[#f5f6f7]/60 hover:underline decoration-[#af232f] underline-offset-4 transition-opacity" href="#">J&amp;T Express</a>
+<a class="text-[#2c2f30]/60 dark:text-[#f5f6f7]/60 hover:underline decoration-[#af232f] underline-offset-4 transition-opacity" href="#">TikTok</a>
+<a class="text-[#2c2f30]/60 dark:text-[#f5f6f7]/60 hover:underline decoration-[#af232f] underline-offset-4 transition-opacity" href="#">Instagram</a>
+</div>
+<!-- Partners Column -->
+<div class="flex flex-col gap-3">
+<span class="text-[#2c2f30] dark:text-[#f5f6f7] font-black mb-2">Help</span>
+<a class="text-[#2c2f30]/60 dark:text-[#f5f6f7]/60 hover:underline decoration-[#af232f] underline-offset-4 transition-opacity" href="#">Contact Us</a>
+<a class="text-[#2c2f30]/60 dark:text-[#f5f6f7]/60 hover:underline decoration-[#af232f] underline-offset-4 transition-opacity" href="#">Returns Policy</a>
+<a class="text-[#2c2f30]/60 dark:text-[#f5f6f7]/60 hover:underline decoration-[#af232f] underline-offset-4 transition-opacity" href="#">Membership FAQ</a>
+</div>
+</div>
+<div class="max-w-7xl mx-auto px-8 mt-12 pt-8 border-t border-[#2c2f30]/5 text-center md:text-left">
+<p class="text-[10px] text-[#2c2f30]/40 font-medium">© 2024 Seoul Glow SEA. Official Mall Guarantee.</p>
+</div>
+</footer>
+</body></html>

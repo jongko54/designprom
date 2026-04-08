@@ -1,0 +1,21 @@
+{
+  "brand": "TikTok",
+  "contentType": "image/png",
+  "fileName": "tiktok-campaign-drop.png",
+  "generatedAt": "2026-04-02T01:52:20.290Z",
+  "htmlUrl": "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ8Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpbCiVodG1sXzIzN2YzOTJhMDNiZDQwZGU5ZTczY2MyYjEyYjNjNzQ0EgsSBxCCisPc0AkYAZIBJAoKcHJvamVjdF9pZBIWQhQxNTE0MTM2NDkwMzg3Mzk0NjczOA&filename=&opi=96797242",
+  "imageUrl": "https://lh3.googleusercontent.com/aida/ADBb0ugHoKM2dw5EHPgSZBMm1AKaBXIH_-6BHAnEWUoYYaOg49dOeEZwPQnpV2rwG7FEcNfn0EnZv_YcJtLWHSek8TgVDaA14Av-7P5duvUmxpK779twVZtPyvqgcp8s6dCFCn_Z-2JMlPnUNI2cYBmRzVYyLthhRjCtp1QLi0cCD59CSJc82ktrQdVdxCQyDWWSi96ELI_PDoHcho6-XX-jxkzvAEvaw3r4jxA8LamK77vfC5Zil2RTUf6sHKc",
+  "notes": [
+    "I've designed a high-energy, TikTok-inspired campaign microsite called **\"Kinetic\"**. \n\nIt features:\n- **Vertical-Video Composition:** A full-screen hero section that mimics social media's natural aspect ratio.\n- **Punchy Overlay Typography:** High-impact, bold headings like \"THINK FAST. CREATE FASTER.\" to grab immediate attention.\n- **Social-Native Cues:** Floating interaction icons (like, share, comment) and a streamlined UI that feels at home on a creator's feed.\n- **High-Contrast Aesthetic:** A dark mode foundation with neon cyan accents for a sharp, modern, and \"impossible to ignore\" look.\n\nWhat do you think of this direction? I can easily swap the accent colors or push the kinetic typography even further."
+  ],
+  "prompt": "Create a TikTok-inspired campaign microsite with punchy overlay typography, creator-native pacing, vertical-video composition cues, high-contrast sections, and kinetic type transitions. The page should feel immediate, social, and impossible to ignore on first scroll.",
+  "projectId": "15141364903873946738",
+  "screenId": "4072a8733d95462d997d5ef8eaa2ec90",
+  "slug": "tiktok-campaign-drop",
+  "suggestions": [
+    "Try a neon pink or lime green accent color instead",
+    "Add a section for 'Creator Testimonials' with video thumbnails",
+    "Make the hero text even larger and more experimental"
+  ],
+  "title": "Kinetic Campaign Microsite"
+}

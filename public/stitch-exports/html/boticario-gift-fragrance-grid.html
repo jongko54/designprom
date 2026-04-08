@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+
+<html class="light" lang="pt-BR"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400&amp;family=Be+Vietnam+Pro:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-tertiary": "#ffffff",
+                    "surface-container-lowest": "#ffffff",
+                    "on-primary-fixed": "#410004",
+                    "on-background": "#1c1c18",
+                    "primary-fixed": "#ffdad7",
+                    "primary-container": "#ff847e",
+                    "inverse-on-surface": "#f4f0ea",
+                    "outline-variant": "#d3c5ae",
+                    "on-surface-variant": "#4f4634",
+                    "secondary-container": "#b9eeab",
+                    "on-tertiary-fixed": "#271900",
+                    "background": "#fdf9f3",
+                    "inverse-surface": "#31302d",
+                    "secondary-fixed-dim": "#a1d494",
+                    "surface-container": "#f1ede7",
+                    "surface-container-high": "#ebe8e2",
+                    "on-tertiary-fixed-variant": "#5e4200",
+                    "tertiary": "#7c5800",
+                    "inverse-primary": "#ffb3ae",
+                    "primary": "#ab3333",
+                    "on-primary-container": "#7c0f16",
+                    "surface-bright": "#fdf9f3",
+                    "surface-container-low": "#f7f3ed",
+                    "surface": "#fdf9f3",
+                    "error-container": "#ffdad6",
+                    "primary-fixed-dim": "#ffb3ae",
+                    "tertiary-container": "#da9e12",
+                    "surface-tint": "#ab3333",
+                    "on-secondary-fixed": "#002201",
+                    "tertiary-fixed-dim": "#fcbc36",
+                    "surface-variant": "#e6e2dc",
+                    "on-error-container": "#93000a",
+                    "surface-dim": "#dddad4",
+                    "error": "#ba1a1a",
+                    "surface-container-highest": "#e6e2dc",
+                    "on-secondary-container": "#3f6d38",
+                    "on-error": "#ffffff",
+                    "secondary-fixed": "#bcf0ae",
+                    "on-surface": "#1c1c18",
+                    "on-primary-fixed-variant": "#8a1b1e",
+                    "on-secondary": "#ffffff",
+                    "tertiary-fixed": "#ffdea8",
+                    "secondary": "#3b6934",
+                    "on-secondary-fixed-variant": "#23501e",
+                    "on-primary": "#ffffff",
+                    "outline": "#817662",
+                    "on-tertiary-container": "#523900"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Noto Serif"],
+                    "body": ["Be Vietnam Pro"],
+                    "label": ["Be Vietnam Pro"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body { font-family: 'Be Vietnam Pro', sans-serif; }
+        .font-serif { font-family: 'Noto Serif', serif; }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-morphism {
+            background: rgba(255, 255, 255, 0.6);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-[#f7f3ed] dark:bg-stone-900 transition-colors duration-300">
+<div class="flex justify-between items-center px-8 py-4 max-w-screen-2xl mx-auto">
+<div class="flex items-center gap-8">
+<span class="text-2xl font-serif italic text-[#1c1c18] dark:text-[#f7f3ed]">The Sensory Boutique</span>
+<div class="hidden md:flex gap-6 items-center">
+<a class="text-[#ab3333] dark:text-[#ff847e] border-b-2 border-[#ab3333] pb-1 font-label tracking-wider uppercase text-xs font-semibold" href="#">Perfumaria</a>
+<a class="text-[#1c1c18] dark:text-[#f7f3ed] hover:text-[#7c5800] transition-opacity duration-200 font-label tracking-wider uppercase text-xs font-semibold" href="#">Presentes</a>
+<a class="text-[#1c1c18] dark:text-[#f7f3ed] hover:text-[#7c5800] transition-opacity duration-200 font-label tracking-wider uppercase text-xs font-semibold" href="#">Skincare</a>
+<a class="text-[#1c1c18] dark:text-[#f7f3ed] hover:text-[#7c5800] transition-opacity duration-200 font-label tracking-wider uppercase text-xs font-semibold" href="#">Promoções</a>
+</div>
+</div>
+<div class="flex items-center gap-6">
+<span class="hidden lg:block font-label tracking-wider uppercase text-xs font-bold text-[#ab3333]">Clube Viva</span>
+<div class="flex gap-4">
+<span class="material-symbols-outlined cursor-pointer text-[#1c1c18] hover:opacity-80 transition-opacity" data-icon="person">person</span>
+<span class="material-symbols-outlined cursor-pointer text-[#1c1c18] hover:opacity-80 transition-opacity" data-icon="shopping_bag">shopping_bag</span>
+</div>
+</div>
+</div>
+</nav>
+<main class="pt-20">
+<!-- Hero Section -->
+<section class="relative h-[870px] flex items-center overflow-hidden">
+<div class="absolute inset-0 z-0">
+<img class="w-full h-full object-cover" data-alt="Luxurious perfume bottle resting on sun-drenched pink petals with soft golden hour light and delicate morning dew droplets" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCbN3we6C8zPSqyMCt-1mnm_9Ms1jDbpnvwtTEkXQWIgwyqR_VY9np0eky6KUtpNiaTPOCjTWDWl5cLxyB4LKOLjTunZmKWz03Gi5InfBfXbSCSd0oaPRkE1qXNFl0VK04QBVwT7NAjJm7c_EgGKM6iTYDyFG6Nhk40cAzwf4LMtMzRSU6cgWoXlGl-XQK3jjsVwJ60xutDdrgY9qNA0HdrEzHH3ES31iJ2nIAsGzXpP1B8108UYffVzZ2N_0CXrxqOEYj0_REM-og"/>
+<div class="absolute inset-0 bg-gradient-to-r from-[#fdf9f3]/60 via-transparent to-transparent"></div>
+</div>
+<div class="relative z-10 max-w-screen-2xl mx-auto px-8 w-full">
+<div class="max-w-2xl">
+<span class="font-label tracking-[0.2em] uppercase text-sm text-primary font-bold mb-4 block">Coleção Exclusiva</span>
+<h1 class="text-7xl md:text-8xl font-serif text-on-surface mb-6 leading-tight">Sinta a Alma <br/><i class="font-light">Brasileira</i></h1>
+<p class="text-lg text-on-surface-variant font-body mb-8 max-w-lg leading-relaxed">
+                        Eau de Parfum Floratta: uma fragrância que captura o desabrochar da natureza tropical sob a luz dourada do amanhecer.
+                    </p>
+<div class="flex gap-4">
+<button class="bg-gradient-to-br from-primary to-primary-container text-on-primary px-10 py-4 rounded-full font-semibold hover:opacity-90 transition-all active:scale-95 shadow-lg">
+                            Descobrir Fragrância
+                        </button>
+<button class="bg-transparent border border-outline-variant text-on-surface px-10 py-4 rounded-full font-semibold hover:bg-surface-container-low transition-all">
+                            Ver Campanha
+                        </button>
+</div>
+</div>
+</div>
+</section>
+<!-- Product Grid: Os Favoritos -->
+<section class="py-24 bg-surface px-8">
+<div class="max-w-screen-2xl mx-auto">
+<div class="flex justify-between items-end mb-16">
+<div>
+<h2 class="text-4xl font-serif mb-2">Os Favoritos de Perfumaria</h2>
+<p class="text-on-surface-variant">As essências mais amadas, inspiradas na biodiversidade.</p>
+</div>
+<a class="text-tertiary font-semibold flex items-center gap-2 hover:underline" href="#">
+                        Ver Todos <span class="material-symbols-outlined" data-icon="arrow_forward">arrow_forward</span>
+</a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+<!-- Product Card 1 -->
+<div class="group relative bg-surface-container-lowest rounded-xl p-4 transition-transform hover:-translate-y-2">
+<div class="aspect-[4/5] bg-surface-container-low rounded-lg overflow-hidden mb-4 relative">
+<img class="w-full h-full object-cover mix-blend-multiply group-hover:scale-105 transition-transform duration-500" data-alt="Elegantly shaped glass perfume bottle with botanical gold cap against a clean minimal beige background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC8Zmqgs5m8iJWbUhPdr1uCs8YHGl0ah6Yabzy78HfK6oQX2BBvLKvjIaIEOOkTO2ejoJEtEr8hQkdt7aT-1RIaZ8IXQuU7RSh0RpvCfPMeyXTSzfBYWq1lkwY4L9rfLlRVJhOa_LYwmXPKdzvvKJOzHc0gFi9FWaULnBHx9g1-JCK81ViuCjhT5siO-gTwNhPGAel8-OsnJF4iNsDKsKJefUlEcynOn61D81SVKxnhxkHOjZi_yAGb-ZIoYEgS15Eh5fsG1S0JhhI"/>
+<button class="absolute bottom-4 right-4 glass-morphism p-3 rounded-full shadow-lg opacity-0 group-hover:opacity-100 transition-opacity">
+<span class="material-symbols-outlined text-primary" data-icon="add_shopping_cart">add_shopping_cart</span>
+</button>
+</div>
+<h3 class="font-serif text-xl mb-1">Floratta Red</h3>
+<p class="text-sm text-on-surface-variant mb-4 font-body">Notas de Flor de Maçã e Frutas Vermelhas</p>
+<div class="flex justify-between items-center">
+<span class="text-lg font-bold text-on-surface">R$ 149,90</span>
+<div class="flex gap-1">
+<span class="material-symbols-outlined text-xs text-tertiary" data-icon="star" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="text-xs font-semibold text-tertiary">4.9</span>
+</div>
+</div>
+</div>
+<!-- Product Card 2 -->
+<div class="group relative bg-surface-container-lowest rounded-xl p-4 transition-transform hover:-translate-y-2">
+<div class="aspect-[4/5] bg-surface-container-low rounded-lg overflow-hidden mb-4 relative">
+<img class="w-full h-full object-cover mix-blend-multiply group-hover:scale-105 transition-transform duration-500" data-alt="Premium glass cologne bottle with dark wooden textures and warm amber lighting representing woody notes" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBNnpF5iHG43K5SN9UphZBT62_1v0fSzUu4v6v7Fk36GASBRdqm07_12SnZ99662SvV8E4Cu1h871rMa5p0vT4zQfTs4vnFZKhQwBJwQsB36kLzpCUTNrs-ci3r86AQFSa_AhtG-VgEDqx8Hero-itjL0eS6Z2AVP58hQhAIZGvuMrCcr6R-DAnrAzjZ1s3A9CTyY_sHc5aVkyY76wZz8nit05Zb9Kmn8bbv0udpIWWNaVTrc3vfch3eQ3PVlfxDAqHVRLlwW-41z4"/>
+<button class="absolute bottom-4 right-4 glass-morphism p-3 rounded-full shadow-lg opacity-0 group-hover:opacity-100 transition-opacity">
+<span class="material-symbols-outlined text-primary" data-icon="add_shopping_cart">add_shopping_cart</span>
+</button>
+</div>
+<h3 class="font-serif text-xl mb-1">Malbec Gold</h3>
+<p class="text-sm text-on-surface-variant mb-4 font-body">Amadeirado com notas de sândalo</p>
+<div class="flex justify-between items-center">
+<span class="text-lg font-bold text-on-surface">R$ 219,90</span>
+<div class="flex gap-1">
+<span class="material-symbols-outlined text-xs text-tertiary" data-icon="star" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="text-xs font-semibold text-tertiary">4.8</span>
+</div>
+</div>
+</div>
+<!-- Product Card 3 -->
+<div class="group relative bg-surface-container-lowest rounded-xl p-4 transition-transform hover:-translate-y-2">
+<div class="aspect-[4/5] bg-surface-container-low rounded-lg overflow-hidden mb-4 relative">
+<img class="w-full h-full object-cover mix-blend-multiply group-hover:scale-105 transition-transform duration-500" data-alt="Minimalist perfume spray bottle with soft lavender and jasmine sprigs beside it in natural sunlight" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDzfm9OWmnu0fc6OJ3Hlph9_kzw-8VzeWNDfRnl0Cy5L4K_SnRVYPnv1NmTb0fNDF-MmVtofZq1_9qOcpYO5uM-Ksnu651YH-g_44zA1cJtX8mJrgn007xdLJEGGIBcdT0t4Awi0bJ7k2OFFcLg0w3FsBRe4xvl1svOikjVO7ka4f4-i5YJte5mbKbTuCI-blsrBCxgbM4nx_ktqfdT5qnN5WJCoOyipIkwutYbKkQkbjYKiWI35GjClYppSI7JNqPwCROPcyC2-kI"/>
+<button class="absolute bottom-4 right-4 glass-morphism p-3 rounded-full shadow-lg opacity-0 group-hover:opacity-100 transition-opacity">
+<span class="material-symbols-outlined text-primary" data-icon="add_shopping_cart">add_shopping_cart</span>
+</button>
+</div>
+<h3 class="font-serif text-xl mb-1">Lily Lumière</h3>
+<p class="text-sm text-on-surface-variant mb-4 font-body">Floral leve com toques de Baunilha</p>
+<div class="flex justify-between items-center">
+<span class="text-lg font-bold text-on-surface">R$ 189,90</span>
+<div class="flex gap-1">
+<span class="material-symbols-outlined text-xs text-tertiary" data-icon="star" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="text-xs font-semibold text-tertiary">5.0</span>
+</div>
+</div>
+</div>
+<!-- Product Card 4 -->
+<div class="group relative bg-surface-container-lowest rounded-xl p-4 transition-transform hover:-translate-y-2">
+<div class="aspect-[4/5] bg-surface-container-low rounded-lg overflow-hidden mb-4 relative">
+<img class="w-full h-full object-cover mix-blend-multiply group-hover:scale-105 transition-transform duration-500" data-alt="Sleek modern perfume bottle with clear glass and geometric design on a textured stone surface with leaf shadows" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAfTw7YdnMLamOtPsmh_oBjrZs9w5FY48Gv1RnSTYy7u5ugipK3Ya0Q6DUHbpb4N0r9YuOuWAhP4_dgjuBVedfHjPFFsbn9qk6XUoTEVlLPnWB6cn_CvmMM_G5SSmDLJKwAcphgxfImiUKyAAowIeJm950XxLmH0INd2OtvClbC5ZJJcdbSVcmH7mkScuScF9AAMWaxZK53LpUkgvDAKWjuolDCsDoLdZrX1lGd-qQVC3bz9eYmmy1WNxumTNdek7Zqp0ZVPXuKp_g"/>
+<button class="absolute bottom-4 right-4 glass-morphism p-3 rounded-full shadow-lg opacity-0 group-hover:opacity-100 transition-opacity">
+<span class="material-symbols-outlined text-primary" data-icon="add_shopping_cart">add_shopping_cart</span>
+</button>
+</div>
+<h3 class="font-serif text-xl mb-1">Egeo Dolce</h3>
+<p class="text-sm text-on-surface-variant mb-4 font-body">Fragência gourmand e divertida</p>
+<div class="flex justify-between items-center">
+<span class="text-lg font-bold text-on-surface">R$ 124,90</span>
+<div class="flex gap-1">
+<span class="material-symbols-outlined text-xs text-tertiary" data-icon="star" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="text-xs font-semibold text-tertiary">4.7</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Merchandising: High Contrast Promo Banner -->
+<section class="px-8 pb-24">
+<div class="max-w-screen-2xl mx-auto overflow-hidden rounded-xl bg-[#ab3333] flex flex-col md:flex-row items-center">
+<div class="md:w-1/2 p-12 lg:p-20 text-on-primary">
+<span class="font-label tracking-widest uppercase text-xs font-bold bg-white/20 px-3 py-1 rounded-full mb-6 inline-block">Oferta Especial</span>
+<h2 class="text-5xl font-serif mb-6 leading-tight">Celebre a Primavera com 20% OFF</h2>
+<p class="text-lg opacity-90 mb-10 font-body">Leve a essência das flores para sua rotina. Use o cupom <span class="font-bold border-b-2">FLOR20</span> em produtos selecionados.</p>
+<button class="bg-white text-primary px-10 py-4 rounded-full font-bold hover:scale-105 transition-transform">
+                        Aproveitar Agora
+                    </button>
+</div>
+<div class="md:w-1/2 h-[400px] md:h-full min-h-[400px]">
+<img class="w-full h-full object-cover" data-alt="Lush green botanical garden with exotic Brazilian flowers in vibrant shades of red and orange under bright sun" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC2bvlAiQ-JTqtc7kS8TF3rgh75XmXcGf1ahcgCmeA8E02RRJIQZd93Z-6QArQoBeHlerUxKQ4YK8HrtWw5TQOKyBxILiqX0TamDAwPd079-IHfVzmNTiwCR2rGI79P4DjK6s_CIle_b2RwYRKnOvXuh43IKKnFKFhJgHWDyvMyBMyh6q4wIgDMHAEJknvzww8_xkv-BJ4QhV8R8qph4IeXfGFm1BQ0D_P34sP7DgyuSE1pOrDg6co23C3E2Ip0QNyYyVSbgE9a8Xk"/>
+</div>
+</div>
+</section>
+<!-- Gifting Modules: A Arte de Presentear -->
+<section class="py-24 bg-surface-container-low px-8">
+<div class="max-w-screen-2xl mx-auto">
+<div class="text-center mb-16">
+<h2 class="text-5xl font-serif mb-4 italic">A Arte de Presentear</h2>
+<p class="text-on-surface-variant max-w-xl mx-auto">Kits exclusivos em embalagens de edição limitada que contam histórias de afeto e cuidado.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Gift Kit 1 -->
+<div class="relative group overflow-hidden rounded-xl bg-tertiary-fixed shadow-sm">
+<div class="aspect-square">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="Premium gift box tied with a satin ribbon on a luxurious fabric backdrop with soft warm lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBEzTX5p2rAOqqlgJeQGO-CMaUZKe4N0fz_wM6bG6_N7tuS-HVMjVa8PUTMqsp1UHo3WoNlOUgz65T7TI0GZUEX3vmkK_hf9A4sZVUPKq0W7RjhcCGqhoYXszCEoiut5-LSub_APHELX3GXu2da-HycjlzMr4hqUwheWJaQFyhQiS0rDVlqENQxsrPhRE0tnM5N8o7Mp7wtcu9wN1qSD7sAJ-cbajaNztorbG2Ue-gxvxXL-JXFIX_6s2oAPwkPRGNrDywxoUzgctg"/>
+</div>
+<div class="absolute inset-0 bg-gradient-to-t from-[#7c5800]/80 via-transparent to-transparent flex flex-col justify-end p-8">
+<h3 class="text-white font-serif text-2xl mb-2">Kit Spa Botânico</h3>
+<p class="text-white/80 text-sm mb-6">Três fragrâncias miniatura + Creme Hidratante</p>
+<button class="w-full bg-white text-tertiary py-3 rounded-full font-bold uppercase tracking-wider text-xs hover:bg-tertiary-fixed-dim transition-colors">
+                                Comprar Agora
+                            </button>
+</div>
+</div>
+<!-- Gift Kit 2 -->
+<div class="relative group overflow-hidden rounded-xl bg-tertiary-fixed shadow-sm">
+<div class="aspect-square">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="Artistically arranged beauty gift set in a bright orange and gold box with festive decorations" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCxWH8syexoMBYAorP8gQm9PhkgYsJlzLM67auQGGas-xzwifgmacQdvBDDAixugFl7tUUj3mLjYL_VEHhKhhfqyHMHqjzR2BCOy6IwzoH9XM7kGOFPQ8u3JH4RukFve7jFQrkG_0_aq5ZQkvmx8Hb_NLJlVb-fkWqJfViXLYgtzB_a9_29KkGJ5zIEYRMhEboY0b2618ACDgUWksa629Y1E2UkG5s59DBmN1aN4HOrCjpQRzHTV5zfRJ8UM6LKEJsBV6pzJJdqLj8"/>
+</div>
+<div class="absolute inset-0 bg-gradient-to-t from-[#7c5800]/80 via-transparent to-transparent flex flex-col justify-end p-8">
+<h3 class="text-white font-serif text-2xl mb-2">Duo Amor Próprio</h3>
+<p class="text-white/80 text-sm mb-6">Colônia 50ml + Body Splash 100ml</p>
+<button class="w-full bg-white text-tertiary py-3 rounded-full font-bold uppercase tracking-wider text-xs hover:bg-tertiary-fixed-dim transition-colors">
+                                Comprar Agora
+                            </button>
+</div>
+</div>
+<!-- Gift Kit 3 -->
+<div class="relative group overflow-hidden rounded-xl bg-tertiary-fixed shadow-sm">
+<div class="aspect-square">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="Elegant gift wrapping with white paper and delicate gold leaf patterns in an editorial photo style" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDIKBRFE54omp8xpGq4NM1eze3At5AlaRTk7wV9J0XDJgjWFwTMOVhQL35F3Fxlp2yDFzQsItEcDdkOS-YE48XJ9XBieCIu243OZuXgqlx-vIIedb8z5RjSDohSrDYV29N9AQDXd1iJp1_Tuna23xprDvSEriwybGKHxTV8hJ1L1RYqR0BwNfkkOTRiLsaybeEGHqcZSZel80H-I7owqteRrN11X6HKnNTZLIvwdKiOx5-0snPeMVVNBgSJ9iNhpVF-scs2dxIb5Zs"/>
+</div>
+<div class="absolute inset-0 bg-gradient-to-t from-[#7c5800]/80 via-transparent to-transparent flex flex-col justify-end p-8">
+<h3 class="text-white font-serif text-2xl mb-2">Mimos de Luxo</h3>
+<p class="text-white/80 text-sm mb-6">Sabonetes em barra artesanais e Difusor</p>
+<button class="w-full bg-white text-tertiary py-3 rounded-full font-bold uppercase tracking-wider text-xs hover:bg-tertiary-fixed-dim transition-colors">
+                                Comprar Agora
+                            </button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Loyalty Section: Clube Viva -->
+<section class="py-24 px-8 overflow-hidden bg-surface">
+<div class="max-w-screen-2xl mx-auto">
+<div class="relative bg-surface-container-high rounded-[2rem] p-8 md:p-16 flex flex-col md:flex-row items-center gap-12 border-2 border-tertiary/10 shadow-xl">
+<div class="md:w-1/2">
+<div class="flex items-center gap-3 mb-6">
+<span class="material-symbols-outlined text-tertiary text-4xl" data-icon="stars" data-weight="fill" style="font-variation-settings: 'FILL' 1;">stars</span>
+<h2 class="text-4xl font-serif text-tertiary">Clube Viva</h2>
+</div>
+<h3 class="text-3xl font-serif mb-6">Sua fidelidade transformada em beleza e experiências.</h3>
+<div class="space-y-6 mb-10">
+<div class="flex items-start gap-4">
+<div class="bg-tertiary-fixed p-2 rounded-full">
+<span class="material-symbols-outlined text-tertiary" data-icon="loyalty">loyalty</span>
+</div>
+<div>
+<h4 class="font-bold text-on-surface">Acumule Pontos</h4>
+<p class="text-on-surface-variant text-sm">Cada real gasto se torna pontos que podem ser trocados por produtos.</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<div class="bg-tertiary-fixed p-2 rounded-full">
+<span class="material-symbols-outlined text-tertiary" data-icon="redeem">redeem</span>
+</div>
+<div>
+<h4 class="font-bold text-on-surface">Brindes Exclusivos</h4>
+<p class="text-on-surface-variant text-sm">Receba presentes especiais em todas as datas comemorativas.</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<div class="bg-tertiary-fixed p-2 rounded-full">
+<span class="material-symbols-outlined text-tertiary" data-icon="rocket_launch">rocket_launch</span>
+</div>
+<div>
+<h4 class="font-bold text-on-surface">Acesso Antecipado</h4>
+<p class="text-on-surface-variant text-sm">Seja o primeiro a conhecer e comprar nossos novos lançamentos.</p>
+</div>
+</div>
+</div>
+<button class="bg-tertiary text-on-tertiary px-12 py-4 rounded-full font-bold shadow-lg shadow-tertiary/20 hover:scale-105 transition-transform">
+                            Quero me Associar
+                        </button>
+</div>
+<div class="md:w-1/2 relative">
+<div class="grid grid-cols-2 gap-4">
+<div class="space-y-4">
+<img class="rounded-xl aspect-square object-cover shadow-md" data-alt="Young smiling woman with radiant skin applying a serum, high-key warm lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCzU7jBebtYoLpK4DlsGkhefyQoyZHW0Bkki970uvOpCZlzdaTmmPSNEblrWUEaMBLAnP2KYenfPIhs3fzxQfBrV5W98w_zB7C542e6FiYH-omhcvbXwRYHsegEkQXU05w2Fkc2SuIigIEsQMjFk3I9J8RP-NzzldOF_1UaEnHoOZJRHmAlo7xX4ouMYNdOzUg4b6PGc4FbexWau9pS8xGdbSCJTladAJvbyrRtNnQBxK5xw0mbOMI6JukSvSiheoxWQyNWVKOUZ44"/>
+<div class="bg-white p-6 rounded-xl shadow-sm border border-outline-variant/20">
+<p class="text-4xl font-serif text-tertiary mb-1">500</p>
+<p class="text-xs uppercase tracking-widest font-bold opacity-60">Pontos Acumulados</p>
+</div>
+</div>
+<div class="pt-8 space-y-4">
+<div class="bg-[#ab3333] p-6 rounded-xl shadow-sm text-white">
+<p class="text-xs uppercase tracking-widest font-bold opacity-80 mb-2">Próximo Nível</p>
+<p class="text-xl font-serif">Diamante</p>
+</div>
+<img class="rounded-xl aspect-[3/4] object-cover shadow-md" data-alt="Array of luxury makeup and brushes on a sun-drenched marble surface" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCU2JCzt77uDOCJ95xIlmLYLN9CJ03hlC42D7ECNIAoWFdFN50sBkG3rH7FPe3viz4l2jyZtN0oG7RXd-YbvIMxT2ffT-h2bwfPS2FqKW2KUUhVKjo91vtNPYYEfEs6GMmQmm45JV0JK8TT61WH_RtcWURuTUCeNlH6mZl9LuarLaexGYU7GbIktwcX5_klzGJ2w3W2QuwDhd_EPUQBgJvZBN5uuaMJVZavD84hGgDM3sIMYn-rwqw1sI3pEx0QXycfIrSswvwY8E8"/>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full border-t border-[#d3c5ae]/20 bg-[#f7f3ed] dark:bg-stone-900 mt-12">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-8 px-12 py-16 max-w-screen-2xl mx-auto">
+<div class="col-span-1 md:col-span-1">
+<span class="text-lg font-serif text-[#1c1c18] dark:text-[#f7f3ed] mb-6 block">The Sensory Boutique</span>
+<p class="text-[#1c1c18]/70 dark:text-[#f7f3ed]/70 text-sm leading-relaxed mb-6 font-body">Inspirada pela riqueza brasileira, criamos experiências sensoriais que celebram a alma e a beleza natural.</p>
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-[#7c5800] cursor-pointer" data-icon="brand_instagram">brand_family</span>
+<span class="material-symbols-outlined text-[#7c5800] cursor-pointer" data-icon="brand_facebook">brand_family</span>
+<span class="material-symbols-outlined text-[#7c5800] cursor-pointer" data-icon="brand_youtube">youtube_ad</span>
+</div>
+</div>
+<div>
+<h4 class="font-serif text-[#7c5800] dark:text-[#ffdea8] mb-6">Ajuda &amp; Contato</h4>
+<ul class="space-y-4 text-sm">
+<li><a class="text-[#1c1c18]/70 dark:text-[#f7f3ed]/70 hover:text-[#ab3333] transition-colors" href="#">Rastrear Pedido</a></li>
+<li><a class="text-[#1c1c18]/70 dark:text-[#f7f3ed]/70 hover:text-[#ab3333] transition-colors" href="#">Central de Atendimento</a></li>
+<li><a class="text-[#1c1c18]/70 dark:text-[#f7f3ed]/70 hover:text-[#ab3333] transition-colors" href="#">Encontrar Loja</a></li>
+<li><a class="text-[#1c1c18]/70 dark:text-[#f7f3ed]/70 hover:text-[#ab3333] transition-colors" href="#">Trabalhe Conosco</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-serif text-[#7c5800] dark:text-[#ffdea8] mb-6">Sobre Nós</h4>
+<ul class="space-y-4 text-sm">
+<li><a class="text-[#1c1c18]/70 dark:text-[#f7f3ed]/70 hover:text-[#ab3333] transition-colors" href="#">Sustentabilidade</a></li>
+<li><a class="text-[#1c1c18]/70 dark:text-[#f7f3ed]/70 hover:text-[#ab3333] transition-colors" href="#">Nossa História</a></li>
+<li><a class="text-[#1c1c18]/70 dark:text-[#f7f3ed]/70 hover:text-[#ab3333] transition-colors" href="#">Newsletter</a></li>
+<li><a class="text-[#1c1c18]/70 dark:text-[#f7f3ed]/70 hover:text-[#ab3333] transition-colors" href="#">Privacidade</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-serif text-[#7c5800] dark:text-[#ffdea8] mb-6">Newsletter</h4>
+<p class="text-xs text-[#1c1c18]/70 mb-4">Receba novidades e convites para eventos exclusivos.</p>
+<div class="flex gap-2">
+<input class="bg-white border border-outline-variant/30 rounded-full px-4 py-2 text-sm w-full focus:ring-1 focus:ring-primary outline-none" placeholder="E-mail" type="email"/>
+<button class="bg-[#ab3333] text-white p-2 rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+<div class="border-t border-[#d3c5ae]/10 py-8 px-12">
+<div class="max-w-screen-2xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
+<p class="text-xs text-[#1c1c18]/60 font-body">© 2024 The Sensory Boutique. Feito com sol e alma brasileira.</p>
+<div class="flex gap-6 text-[10px] uppercase tracking-widest font-bold opacity-60">
+<a class="hover:text-[#ab3333]" href="#">Termos</a>
+<a class="hover:text-[#ab3333]" href="#">Privacidade</a>
+<a class="hover:text-[#ab3333]" href="#">Acessibilidade</a>
+</div>
+</div>
+</div>
+</footer>
+</body></html>

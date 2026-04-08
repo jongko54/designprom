@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>AI DESIGN GUIDE | Celestial Archive</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;400;700;800&amp;family=Inter:wght@300;400;600&amp;family=Space_Grotesk:wght@300;500;700&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "surface-container-low": "#1c1b1c",
+              "secondary": "#96d1d6",
+              "surface-container": "#201f20",
+              "on-tertiary-container": "#715d00",
+              "on-primary-fixed": "#002022",
+              "surface-variant": "#353436",
+              "on-secondary": "#00363a",
+              "on-error": "#690005",
+              "on-background": "#e5e2e3",
+              "on-primary-container": "#006970",
+              "surface-container-highest": "#353436",
+              "error-container": "#93000a",
+              "error": "#ffb4ab",
+              "primary-fixed-dim": "#00dbe9",
+              "secondary-container": "#074f54",
+              "on-secondary-fixed": "#002022",
+              "on-surface": "#e5e2e3",
+              "on-tertiary-fixed-variant": "#554500",
+              "tertiary-fixed": "#ffe179",
+              "on-primary-fixed-variant": "#004f54",
+              "surface-bright": "#3a393a",
+              "inverse-primary": "#006970",
+              "inverse-surface": "#e5e2e3",
+              "on-secondary-container": "#84bfc5",
+              "surface": "#131314",
+              "outline-variant": "#3b494b",
+              "tertiary": "#fff5de",
+              "on-secondary-fixed-variant": "#074f54",
+              "primary-fixed": "#7df4ff",
+              "tertiary-fixed-dim": "#eac324",
+              "primary": "#dbfcff",
+              "outline": "#849495",
+              "on-tertiary-fixed": "#231b00",
+              "on-primary": "#00363a",
+              "on-tertiary": "#3b2f00",
+              "primary-container": "#00f0ff",
+              "inverse-on-surface": "#313031",
+              "tertiary-container": "#fed639",
+              "background": "#131314",
+              "surface-container-high": "#2a2a2b",
+              "surface-container-lowest": "#0e0e0f",
+              "on-surface-variant": "#b9cacb",
+              "secondary-fixed-dim": "#96d1d6",
+              "surface-tint": "#00dbe9",
+              "secondary-fixed": "#b1edf3",
+              "surface-dim": "#131314",
+              "on-error-container": "#ffdad6"
+            },
+            fontFamily: {
+              "headline": ["Manrope"],
+              "body": ["Inter"],
+              "label": ["Space Grotesk"]
+            },
+            borderRadius: {"DEFAULT": "0px", "lg": "0px", "xl": "0px", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        body {
+            background-color: #131314;
+            color: #e5e2e3;
+            overflow-x: hidden;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        .reticle-grid {
+            background-image: radial-gradient(circle, #3b494b 1px, transparent 1px);
+            background-size: 48px 48px;
+            opacity: 0.1;
+        }
+        .luminous-core {
+            background: radial-gradient(circle, rgba(0, 240, 255, 0.15) 0%, rgba(19, 19, 20, 0) 70%);
+        }
+        .scan-line {
+            height: 1px;
+            width: 100%;
+            background: linear-gradient(90deg, transparent, #3b494b, transparent);
+            opacity: 0.2;
+        }
+        .bracket {
+            width: 20px;
+            height: 20px;
+            border-color: #3b494b;
+            opacity: 0.4;
+        }
+    </style>
+</head>
+<body class="font-body selection:bg-primary-container selection:text-on-primary-container">
+<!-- Top Navigation -->
+<nav class="fixed top-0 left-0 z-50 flex justify-between items-center w-full px-12 py-8 max-w-full bg-transparent">
+<div class="text-xl font-bold tracking-tighter text-[#dbfcff] font-headline uppercase">AI DESIGN GUIDE</div>
+<div class="hidden md:flex items-center gap-12 font-['Manrope'] tracking-[-0.02em] uppercase text-sm">
+<a class="text-[#e5e2e3]/60 hover:text-[#00f0ff] transition-colors duration-300" href="#">ARCHIVE</a>
+<a class="text-[#e5e2e3]/60 hover:text-[#00f0ff] transition-colors duration-300" href="#">RESEARCH</a>
+<a class="text-[#e5e2e3]/60 hover:text-[#00f0ff] transition-colors duration-300" href="#">ABOUT</a>
+</div>
+<div class="flex items-center gap-6">
+<button class="text-[#e5e2e3]/60 hover:text-[#00f0ff] transition-all duration-200 active:scale-95">
+<span class="material-symbols-outlined text-xl">settings</span>
+</button>
+</div>
+</nav>
+<!-- Background Layers -->
+<div class="fixed inset-0 z-0 pointer-events-none">
+<div class="absolute inset-0 reticle-grid"></div>
+<div class="absolute inset-0 luminous-core flex items-center justify-center">
+<div class="w-[800px] h-[800px] rounded-full bg-[#00f0ff] blur-[160px] opacity-10"></div>
+</div>
+<div class="absolute top-1/4 left-0 scan-line"></div>
+<div class="absolute bottom-1/4 left-0 scan-line"></div>
+</div>
+<!-- Main Content Canvas -->
+<main class="relative z-10 min-h-screen flex flex-col items-center justify-center px-6">
+<!-- Technical Annotations (Asymmetric) -->
+<div class="absolute top-40 left-12 font-label text-[10px] text-outline tracking-[0.4em] opacity-40 uppercase hidden lg:block">
+            Observation Point: 44.02 // -121.31<br/>
+            System Status: Nominal
+        </div>
+<div class="absolute bottom-40 right-12 font-label text-[10px] text-outline tracking-[0.4em] opacity-40 uppercase text-right hidden lg:block">
+            Data Stream: Active<br/>
+            Frame Rate: 60hz [Locked]
+        </div>
+<!-- The "Core" Prompt Object / Hero Section -->
+<section class="relative w-full max-w-6xl py-32 flex flex-col items-center">
+<!-- Corner Brackets -->
+<div class="absolute top-0 left-0 bracket border-t border-l"></div>
+<div class="absolute top-0 right-0 bracket border-t border-r"></div>
+<div class="absolute bottom-0 left-0 bracket border-b border-l"></div>
+<div class="absolute bottom-0 right-0 bracket border-b border-r"></div>
+<!-- Central Content -->
+<div class="text-center space-y-12">
+<div class="font-label text-xs tracking-[0.6em] text-primary-fixed-dim uppercase opacity-60 mb-4">
+                    Experimental Protocol v0.9
+                </div>
+<h1 class="font-headline text-6xl md:text-8xl lg:text-9xl font-extrabold tracking-tighter text-on-background leading-none max-w-4xl">
+                    THE ARCHITECTURE <br/>
+<span class="text-primary">OF THOUGHT</span>
+</h1>
+<div class="max-w-md mx-auto">
+<p class="font-body text-on-surface-variant leading-relaxed text-sm tracking-wide font-light opacity-80">
+                        A clinical exploration of latent space. Decoding the visual patterns of synthetic intelligence through the lens of pure mathematics and structural design.
+                    </p>
+</div>
+<div class="pt-8">
+<button class="bg-primary text-on-primary px-10 py-4 font-label text-xs tracking-widest uppercase hover:shadow-[0_0_40px_-5px_rgba(0,240,255,0.4)] transition-all duration-500 active:scale-95">
+                        Initiate Sequence
+                    </button>
+</div>
+</div>
+</section>
+<!-- Secondary Immersive Element (Asymmetric Depth) -->
+<div class="w-full max-w-7xl mt-32 grid grid-cols-12 gap-0 relative">
+<div class="col-span-12 lg:col-span-7 aspect-[21/9] relative overflow-hidden bg-surface-container-low">
+<img alt="Cinematic deep space nebula" class="w-full h-full object-cover mix-blend-screen opacity-40 grayscale" data-alt="deep space nebula with vibrant cyan and deep charcoal gas clouds illuminated by distant stars in high resolution" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBnlrTNGrYoPDXayEo2CqIAYNgmI6hCHn4-DRZkMbhLr711dp3w9lhA8Xe-Qx-n2P4YfLZ7Y_3qO9q98cmFamn3oI2mRasvMBlUz9MoNQ5qSePoswklKaGA7mA4cL92LwW_B31BO6EIT7MtmNUByRwrrpQLWXWXLqyhZM2C2Nc0gkrynwe5MLjwTxsIBr-VfS2j8mxVIUzOVKb6mjyQi9pmd1W0fvjYsR2PBcFvlw4kv3Ujxadk6Py3P24U5i324qPTGS9ShuH2eRke"/>
+<div class="absolute inset-0 bg-gradient-to-r from-surface to-transparent"></div>
+<div class="absolute bottom-6 left-6 font-label text-[10px] text-primary opacity-60">
+                    S_01 // LATENT NEBULA CLUSTER
+                </div>
+</div>
+<div class="col-span-12 lg:col-span-4 lg:col-start-9 flex flex-col justify-end pb-12 pt-8 lg:pt-0">
+<div class="space-y-6 border-l border-outline-variant/20 pl-8">
+<h3 class="font-headline text-2xl font-bold text-on-surface">Precision Aesthetics</h3>
+<p class="font-body text-xs text-on-surface-variant leading-loose">
+                        The guide maps the intersections of digital noise and human perception. Every pixel is calculated, every void is intentional. We do not design for users; we design for observers.
+                    </p>
+<div class="font-label text-[10px] tracking-widest text-primary flex items-center gap-4">
+<span class="w-8 h-[1px] bg-primary"></span>
+                        VIEW DATA SETS
+                    </div>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer Shell -->
+<footer class="w-full px-12 py-6 flex flex-col md:flex-row justify-between items-center bg-[#131314] bg-opacity-50 backdrop-blur-md relative z-50">
+<div class="font-label text-[10px] tracking-widest uppercase text-[#e5e2e3]/30 mb-4 md:mb-0">
+            © 2024 CELESTIAL ARCHIVE. ALL DATA POINTS VERIFIED.
+        </div>
+<div class="flex gap-8 font-['Space_Grotesk'] text-[10px] tracking-widest uppercase">
+<a class="text-[#e5e2e3]/30 hover:text-[#00f0ff] transition-colors" href="#">TERMINAL</a>
+<a class="text-[#e5e2e3]/30 hover:text-[#00f0ff] transition-colors" href="#">SYSTEM_LOGS</a>
+<a class="text-[#e5e2e3]/30 hover:text-[#00f0ff] transition-colors" href="#">DEEP_SPACE_OPS</a>
+</div>
+<div class="mt-4 md:mt-0 text-xs text-[#00f0ff] font-label font-bold tracking-tighter">
+            COORD_LOC: 001_A_X
+        </div>
+</footer>
+</body></html>

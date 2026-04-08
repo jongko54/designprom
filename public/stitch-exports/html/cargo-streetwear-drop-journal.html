@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@700;900&amp;family=Space+Grotesk:wght@300;400;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-surface-variant": "#ababab",
+                        "outline": "#757575",
+                        "tertiary-fixed": "#ffffff",
+                        "surface-container-lowest": "#000000",
+                        "surface-dim": "#0e0e0e",
+                        "on-primary-fixed": "#000000",
+                        "secondary-container": "#474746",
+                        "on-error-container": "#ffa8a3",
+                        "primary-container": "#ff7852",
+                        "on-secondary-fixed-variant": "#5c5b5b",
+                        "on-secondary-fixed": "#403f3f",
+                        "surface-bright": "#2c2c2c",
+                        "primary": "#ff8f70",
+                        "on-primary-container": "#480d00",
+                        "surface-container": "#191919",
+                        "surface-container-low": "#131313",
+                        "surface-tint": "#ff8f70",
+                        "inverse-primary": "#b22e00",
+                        "primary-dim": "#ff734c",
+                        "background": "#0e0e0e",
+                        "on-primary-fixed-variant": "#581200",
+                        "on-tertiary-fixed-variant": "#6c6d6e",
+                        "inverse-on-surface": "#555555",
+                        "surface-variant": "#262626",
+                        "surface-container-highest": "#262626",
+                        "primary-fixed-dim": "#ff5d2e",
+                        "on-tertiary-fixed": "#4f5051",
+                        "tertiary-container": "#ebebeb",
+                        "error-container": "#9f0519",
+                        "outline-variant": "#484848",
+                        "tertiary-fixed-dim": "#f0f1f1",
+                        "tertiary-dim": "#ebebeb",
+                        "secondary": "#e5e2e1",
+                        "on-tertiary": "#5e5f60",
+                        "surface": "#0e0e0e",
+                        "error-dim": "#d7383b",
+                        "on-surface": "#ffffff",
+                        "on-error": "#490006",
+                        "inverse-surface": "#f9f9f9",
+                        "secondary-dim": "#d6d4d3",
+                        "secondary-fixed-dim": "#d6d4d3",
+                        "secondary-fixed": "#e5e2e1",
+                        "on-secondary": "#525151",
+                        "on-background": "#ffffff",
+                        "surface-container-high": "#1f1f1f",
+                        "primary-fixed": "#ff7852",
+                        "on-primary": "#5c1300",
+                        "tertiary": "#f9f9f9",
+                        "on-secondary-container": "#d2d0cf",
+                        "on-tertiary-container": "#555757",
+                        "error": "#ff716c"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0px",
+                        "lg": "0px",
+                        "xl": "0px",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Epilogue"],
+                        "body": ["Space Grotesk"],
+                        "label": ["Space Grotesk"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        body { background-color: #0e0e0e; color: #ffffff; }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+        .industrial-blur { backdrop-filter: blur(12px); background-color: rgba(25, 25, 25, 0.8); }
+        ::-webkit-scrollbar { width: 4px; }
+        ::-webkit-scrollbar-track { background: #0e0e0e; }
+        ::-webkit-scrollbar-thumb { background: #ff8f70; }
+    </style>
+</head>
+<body class="font-body selection:bg-primary selection:text-black">
+<!-- TopNavBar -->
+<nav class="fixed top-0 z-50 w-full bg-[#0e0e0e] flex justify-between items-center px-6 py-4 md:px-12">
+<div class="text-3xl font-black tracking-tighter text-[#FF4500] font-['Epilogue'] uppercase">SIGNAL</div>
+<div class="hidden md:flex gap-10 font-['Epilogue'] font-bold tracking-tighter uppercase">
+<a class="text-[#FF4500] border-b-2 border-[#FF4500] hover:bg-[#FF4500] hover:text-black transition-colors duration-100" href="#">DROP</a>
+<a class="text-white hover:bg-[#FF4500] hover:text-black transition-colors duration-100" href="#">LOOKS</a>
+<a class="text-white hover:bg-[#FF4500] hover:text-black transition-colors duration-100" href="#">INTEL</a>
+<a class="text-white hover:bg-[#FF4500] hover:text-black transition-colors duration-100" href="#">ARCHIVE</a>
+</div>
+<div class="flex items-center gap-6">
+<span class="material-symbols-outlined text-white cursor-pointer hover:text-[#FF4500] transition-colors">sensors</span>
+<div class="text-white font-['Epilogue'] font-bold tracking-tighter uppercase cursor-pointer hover:text-[#FF4500]">CART</div>
+</div>
+</nav>
+<main class="pt-0">
+<!-- Hero Section: Massive Campaign Poster -->
+<section class="relative h-screen w-full overflow-hidden flex flex-col justify-end">
+<img class="absolute inset-0 w-full h-full object-cover object-center grayscale brightness-75" data-alt="A model wearing oversized technical streetwear with multiple tactical straps and hardware, standing in a stark concrete industrial environment with dramatic high-contrast lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBS6vz2GAf0cVG83cGgMDOXu1aUJN8DhmdJtSjAcaadcS7MCm50PfJmh7vY5n-ejWSV_0xeB6OHmszkOA3dBSEnNRhuPKXrK3bfjJGdRMYH1Z2c0J8GgUGAOh1TLMHtYKuqtVIpPVDML2kq3apWzS-yB75og3ZGD6pMTK_msvZ819eBUJ8TEnGE5EYQBdfLaHnWIso_k3gZZRYxWX5-h6qiGt9V9lhTSjhmaH8tq0boXs81J3M9uI9fwJ3dNTYpkv_8EnIPZ9MKusQ"/>
+<!-- Branding Overlay -->
+<div class="relative z-10 w-full px-6 md:px-12 pb-12 md:pb-20">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-8">
+<div>
+<h1 class="font-headline text-[15vw] md:text-[12vw] leading-[0.85] font-black tracking-tighter text-[#FF4500] uppercase mix-blend-screen">DROP 004</h1>
+<p class="font-body text-sm md:text-base tracking-[0.2em] text-white mt-4 max-w-md uppercase">INDUSTRIAL BROADCAST EMISSION // SESSION 004 // TACTICAL ARCHIVE</p>
+</div>
+<!-- Ticking Countdown -->
+<div class="bg-[#FF4500] p-6 text-black">
+<div class="font-body text-xs font-bold tracking-widest uppercase mb-2">TIME UNTIL DEPLOYMENT</div>
+<div class="font-headline text-4xl md:text-6xl font-black tracking-tighter">03:22:45:12</div>
+</div>
+</div>
+</div>
+<!-- Linear Gradient Overlay for visibility -->
+<div class="absolute inset-0 bg-gradient-to-t from-[#0e0e0e] via-transparent to-transparent opacity-60 pointer-events-none"></div>
+</section>
+<!-- Vertical Campaign Stack -->
+<section class="bg-[#131313] py-24 px-6 md:px-12">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-24 items-start">
+<div class="space-y-12">
+<div class="aspect-[3/4] overflow-hidden relative group">
+<img class="w-full h-full object-cover grayscale transition-transform duration-700 group-hover:scale-105" data-alt="Full-length portrait of a model in a charcoal gray technical parka with reflective details, posed against a stark white wall in high contrast." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBdOG9QjCuZ2VjdCbJo5_pmJ84bBWwtVgnZaQoHtDFoS8ULnZa_GJL887JCbESN_CEpWCFJPkh3zJr3eWWd9eAQAUMS1_lmCqj7S08uTrI8Sy8R7vOT25JQW0xBFjtDsBXOAT7-BlXZbAjK2-kINnA6QLjmUYuFrMsbYU2gUZAn1Ohz4N4-aAQru0UFp9JGWNT3zCb_g8gxdy5nfSz0_QUfOr2RgHfoc80pykI00UkNouMiNpEJj2AI1rtkwpnTqg7ihx56k9BAz8Y"/>
+</div>
+<div class="flex items-start justify-between">
+<div class="max-w-xs">
+<span class="text-[#FF4500] font-body text-xs tracking-widest uppercase">SPECIMEN // 001</span>
+<h2 class="font-headline text-4xl font-bold tracking-tighter uppercase mt-2">THERMAL SHROUD</h2>
+</div>
+<div class="text-right">
+<span class="font-body text-sm uppercase text-on-surface-variant">SERIAL NO.</span>
+<p class="font-body text-lg font-bold">SIG-SH-04-A</p>
+</div>
+</div>
+</div>
+<div class="space-y-12 md:mt-48">
+<div class="aspect-[3/4] overflow-hidden relative group">
+<img class="w-full h-full object-cover grayscale transition-transform duration-700 group-hover:scale-105" data-alt="A model wearing wide-leg industrial trousers with heavy cargo pockets and nylon webbing, standing on a metal grating floor." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBMYm4j8xl4KeDThWsvtPhgBMPp7Gb4bzfemyAG1AuEGqdab3Xo2DsJ7gzNdDka-gpZqbHkv6g1aar7o8UHeaAvcJVsygQd7s8W9l4wgi-GluXNFIPfPmlBMzhNiHou3rp91aH69Hbo2gzd77vqAJOBZ8bsCKytdZ9rAAZxUvQAUps2GHzyJt3NY9W5zFAjEQUb0Oem3MEDevfk4o8dXOY4T0p7XgKKTgTT4-LaKJ_1fOKeR_a1Z1breuio81X8ZSBUQ2WEe9ICWN4"/>
+</div>
+<div class="flex items-start justify-between">
+<div class="max-w-xs">
+<span class="text-[#FF4500] font-body text-xs tracking-widest uppercase">SPECIMEN // 002</span>
+<h2 class="font-headline text-4xl font-bold tracking-tighter uppercase mt-2">KINETIC PANT</h2>
+</div>
+<div class="text-right">
+<span class="font-body text-sm uppercase text-on-surface-variant">SERIAL NO.</span>
+<p class="font-body text-lg font-bold">SIG-KP-04-B</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Oversized Look Stills -->
+<section class="bg-[#0e0e0e] w-full">
+<div class="flex flex-col">
+<div class="w-full h-[819px] overflow-hidden relative">
+<img class="w-full h-full object-cover grayscale contrast-125" data-alt="Dramatic close-up profile shot of a model wearing a heavy technical hood and goggles, lit with harsh red side lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBFaKiKosK8N0Ri1cZtrI06UtKyvYjxVMgiua2REWcD3Ne8QAnxnn-kGEOQjntBHnyj-2uCriISIq3Nc_e1vM_8xMOKdkSXXPGx16sRBkYqz7XYnCvzG6NoH40-8udYooACbhm3ZF8ppZteb_q9NIZWHprqVHaTSZ4R4hVkiXYVGO45DXMWEy-d0_6Jh_OqY3qye0o2aLBZxWSEioGXde8mEWNvNHV2Q64gNiUfl8mXCqNe1JeF5vb8xSnwOKK_txm-5o3xKmNDbks"/>
+<div class="absolute bottom-12 left-6 md:left-12 industrial-blur p-6 max-w-sm">
+<p class="font-body text-xs tracking-widest text-[#FF4500] mb-2 uppercase">VISUAL INPUT 012</p>
+<p class="font-body text-sm text-white uppercase leading-relaxed">High-density nylon construction with reinforced seam sealing for extreme environment atmospheric containment.</p>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 w-full">
+<div class="aspect-square bg-surface-container overflow-hidden group">
+<img class="w-full h-full object-cover grayscale group-hover:scale-110 transition-transform duration-500" data-alt="Micro macro shot of heavy-duty metal zipper teeth and weather-sealed fabric texture on an industrial garment." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB7UW_ALPO2cqUaScKqNLrEdYJon9n-ySq9FSZXMwAxiBgCkhEuR1CFJVzpIjqpCk_tBpCV7I2oF6WvC_FgyKfFfeeLMlgx1VNjAVSaMDYDvY4xwe3Kqd5YBgxByZhTsXQk8byn-kMtJvrSP-k0ohayTgkBQnen9x5rNm7wdPBjihI2q_rTWeihxBYYGKeOBKe40Y4Bha0k15ElwzmZgzcZaIZq25pSpGvKelEECypgtzlDhJL3dV0ZzRGpRpRurDcbI3lBb3DVlJw"/>
+</div>
+<div class="aspect-square bg-surface-container overflow-hidden group">
+<img class="w-full h-full object-cover grayscale group-hover:scale-110 transition-transform duration-500" data-alt="Detailed view of multiple nylon webbing straps and heavy plastic buckles on the back of a technical jacket." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCVcoX1iIb6a8RbuZHt62VTRwphn0DxS1jok1Gb5AuKqeQdpf1338GvUE3TQ_2huUGHfF93kBOLXh27GBbP-YtfGAX5BiXjgwmxwEwO0YBP76MYZRrm4ktqzbLb6JuGjsAPBiO3FJ6GSB-JpWNLxIBO3J3xDZK7EiNTrxSHfpirXrln_SJtrDlgk5qswAEYMzULoD9KAmVj8L9CP0KZZqOU_05iFsmQCaXxikdAxN-paAfWbVs12TiaSu9BkfRwvZcz847OjCTzgGg"/>
+</div>
+<div class="aspect-square bg-surface-container overflow-hidden group">
+<img class="w-full h-full object-cover grayscale group-hover:scale-110 transition-transform duration-500" data-alt="Action shot of a model moving, showing the silhouette and drape of oversized dark gray streetwear." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDUeB6ER7V32nhvLi0HJ4cKJnUxfBO79E2-qzchpJsCyikncY-d7TeSSGTh9vpJFgPeG8tJUC-_HUdEALzA2ywm6L0oOmQIHgJReSSUw4KRKbkZjV-9Z8XLuF9ipfyaYeSYaQZoVKO9bnIqjyDM1dUxxJuWbHao0-LOG6W5bSs2t2_C_SxcM3zzLKtoFAFLWOpxiGHlXBt_sqY11iwRqRldixDbesI8jBYkZgx4SCmas_liXy9n4AeHsI0sfhrwTKp10v0nEfLI4fc"/>
+</div>
+</div>
+</div>
+</section>
+<!-- Editorial Product Captions -->
+<section class="bg-[#131313] py-32 px-6 md:px-12 flex flex-col items-center">
+<div class="max-w-5xl w-full grid grid-cols-1 md:grid-cols-2 gap-16 md:gap-32">
+<div class="space-y-6">
+<div class="flex items-center gap-4">
+<div class="w-2 h-2 bg-[#FF4500] animate-pulse"></div>
+<span class="text-[#FF4500] font-body text-xs tracking-[0.3em] font-bold">STATUS: DEPLOYED</span>
+</div>
+<h3 class="font-headline text-5xl font-black tracking-tighter uppercase">UNIT-01: THERMAL PARKA</h3>
+<div class="space-y-4 font-body text-sm text-on-surface-variant uppercase tracking-wider leading-relaxed">
+<p>// MATERIAL: 3-LAYER LAMINATED RIPSTOP NYLON</p>
+<p>// INSULATION: 800-FILL RECYCLED SYNTHETIC DOWN</p>
+<p>// PROTECTION: IP-67 WATERPROOF RATING</p>
+<p>// MODULARITY: REMOVABLE HOOD AND INTERNAL SLING SYSTEM</p>
+<p class="pt-6 text-white border-t border-outline-variant">DESIGNED FOR URBAN ANOMALIES AND EXTREME THERMAL VARIANCE. THE SILHOUETTE IS AGGRESSIVELY OVERSIZED TO ALLOW FOR INTERNAL KIT STORAGE AND VENTILATION.</p>
+</div>
+</div>
+<div class="space-y-6">
+<div class="flex items-center gap-4">
+<div class="w-2 h-2 bg-[#FF4500] animate-pulse"></div>
+<span class="text-[#FF4500] font-body text-xs tracking-[0.3em] font-bold">STATUS: ARCHIVED</span>
+</div>
+<h3 class="font-headline text-5xl font-black tracking-tighter uppercase">UNIT-02: CARGO SHELL</h3>
+<div class="space-y-4 font-body text-sm text-on-surface-variant uppercase tracking-wider leading-relaxed">
+<p>// MATERIAL: HIGH-TENACITY CORDURA® FABRIC</p>
+<p>// STORAGE: 12-POCKET INTEGRATED SYSTEM</p>
+<p>// FIT: ARTICULATED KNEE AND DROP-CROTCH GEOMETRY</p>
+<p>// FASTENING: FIDLOCK® MAGNETIC BUCKLES</p>
+<p class="pt-6 text-white border-t border-outline-variant">A KINETIC PLATFORM FOR MOBILE OPERATIONS. EVERY STITCH IS REINFORCED FOR LIFETIME DURABILITY UNDER LOAD. BUILT FOR THE INDUSTRIAL BROADCAST OPERATIVE.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Archive CTA -->
+<section class="relative h-[614px] flex items-center justify-center bg-[#0e0e0e] overflow-hidden group cursor-pointer">
+<img class="absolute inset-0 w-full h-full object-cover opacity-30 grayscale group-hover:scale-110 transition-transform duration-1000" data-alt="Vast expanse of a dark concrete hangar floor reflecting dim overhead neon orange lights, creating a moody industrial landscape." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCqqsWCOKuW0Sqd93aUQyJMda32ijvwnQyg3olUJAw-EXWL_pV-MRgD33b1i-iet1Gfd0ZotA8TCjano4_KI-VHypmzFqrMIAhY1tgyfSdzVs6rv5Obj5-xWFRhuaIRF4iCru0dK2r3Km1tvDG9cH8tkKcnyyy1Y27w7MoqK1R4PsJw1pBk__lCvcY3DLRMii1K9zNSkAvp6WaBQmckjdiw5wV2ZkfTH2hJzjFZ2kiFgHNl69te1sUPXqcSwZrFPdqvAR2zZZDNCyQ"/>
+<div class="relative z-10 text-center">
+<span class="font-body text-xs tracking-[0.5em] text-[#FF4500] mb-4 block uppercase">RETROSPECTIVE ACCESS</span>
+<h2 class="font-headline text-7xl md:text-9xl font-black tracking-tighter text-white uppercase transition-colors group-hover:text-[#FF4500]">ARCHIVE</h2>
+<div class="mt-8 inline-block px-10 py-4 bg-[#FF4500] text-black font-headline font-bold uppercase tracking-widest text-sm hover:bg-white transition-colors duration-200">
+                    ENTER THE VOID
+                </div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-[#131313] border-t border-[#2c2c2c] w-full px-6 py-12 md:px-12 grid grid-cols-1 md:grid-cols-3 gap-8">
+<div class="flex flex-col gap-4">
+<div class="text-[#FF4500] font-bold font-headline text-2xl uppercase tracking-tighter">SIGNAL INDUSTRIAL BROADCAST</div>
+<p class="font-['Space_Grotesk'] text-[10px] uppercase tracking-[0.2em] text-gray-500 max-w-xs">A PERPETUAL TRANSMISSION OF FORM AND FUNCTION. ESTABLISHED 2024. COORDINATES: 40.7128° N, 74.0060° W.</p>
+</div>
+<div class="flex flex-col gap-2">
+<span class="text-[#FF4500] font-['Space_Grotesk'] text-[10px] uppercase tracking-[0.2em] mb-2">NETWORK</span>
+<div class="grid grid-cols-2 gap-4">
+<a class="font-['Space_Grotesk'] text-[10px] uppercase tracking-[0.2em] text-gray-500 hover:text-[#FF4500] transition-opacity duration-200" href="#">INSTAGRAM</a>
+<a class="font-['Space_Grotesk'] text-[10px] uppercase tracking-[0.2em] text-gray-500 hover:text-[#FF4500] transition-opacity duration-200" href="#">DISCORD</a>
+<a class="font-['Space_Grotesk'] text-[10px] uppercase tracking-[0.2em] text-gray-500 hover:text-[#FF4500] transition-opacity duration-200" href="#">TERMS</a>
+<a class="font-['Space_Grotesk'] text-[10px] uppercase tracking-[0.2em] text-gray-500 hover:text-[#FF4500] transition-opacity duration-200" href="#">PRIVACY</a>
+</div>
+</div>
+<div class="flex flex-col md:items-end justify-between">
+<div class="flex items-center gap-2">
+<div class="w-1.5 h-1.5 bg-[#FF4500] animate-ping"></div>
+<span class="font-['Space_Grotesk'] text-[10px] uppercase tracking-[0.2em] text-[#FF4500]">LIVE TRANSMISSION SIGNAL: STABLE</span>
+</div>
+<div class="font-['Space_Grotesk'] text-[10px] uppercase tracking-[0.2em] text-gray-500 mt-8 md:mt-0">©2024 SIGNAL INDUSTRIAL BROADCAST. ALL RIGHTS RESERVED.</div>
+</div>
+</footer>
+</body></html>

@@ -1,0 +1,21 @@
+{
+  "brand": "Shibuya / Blade Runner",
+  "contentType": "image/png",
+  "fileName": "shibuya-replicant-archive.png",
+  "generatedAt": "2026-04-03T05:44:55.915Z",
+  "htmlUrl": "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ7Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpaCiVodG1sX2YxOGM5MjA5NjhhNTQ1OGE4OGM5M2MwZDEyMzQ3ZDhkEgsSBxCCisPc0AkYAZIBIwoKcHJvamVjdF9pZBIVQhM3NzgyNzUwNjQ5NTc0OTY2NjM2&filename=&opi=96797242",
+  "imageUrl": "https://lh3.googleusercontent.com/aida/ADBb0uiRwL2sasVWPOm_WfJuVIW8OkxcjzKWUSmxYZK2v89ZICTj5szNF_-QqQ61uhCCxXWE5KnHPtg637JfKoSyatM6Jafjw892MLTylTWT3r0fBTtFIE6Rb-FKCjiYQq3HNJWCWBI5AzSq8quVCXouoqLxMybhJuraP71YsB-d_r2t_YUzHu9wpUW9E4a6bVYmy_9kfDLDaZpWaIHfjcmaHpRKgTAqHLC7MjnC20JMS_ImEr7OD0rIwgHSDA",
+  "notes": [
+    "I've crafted a \"Noir Art Direction Archive\" for SHIBUYA_STATION, inspired by the cinematic, rain-slicked aesthetic of Neo-Tokyo. \n\n### Design Strategy:\n*   **Atmosphere & Palette:** A \"rain-dark\" interface using deep charcoals and blacks with high-contrast Cyan (#00F3FF) and Amber (#FFBF00) signal lights. \n*   **Smoked Glass:** I've used heavy backdrop-blurs and thin, glowing borders to create the \"smoked-glass\" panels you requested, keeping the metadata dense but highly legible.\n*   **Typography:** The terminal-style layout uses Space Grotesk and tabular numbers for that technical-editorial feel—sophisticated, not cluttered.\n*   **Cinematic Reveals:** The composition is designed for smooth, scroll-based reveals, highlighting the \"Visual Studies\" collection of art direction.\n\nI've added both the **Design System** and the **Art Direction Archive** to your canvas. How does this look to you?"
+  ],
+  "prompt": "Create a noir art direction archive with Blade Runner and Shibuya station energy: smoked-glass panels, holographic labels, amber and cyan signal lights, dense but readable metadata, and cinematic scroll reveals over a rain-dark interface. Keep the composition luxurious and legible, not noisy or game-like.",
+  "projectId": "7782750649574966636",
+  "screenId": "7e44a50b749846a18dc4c0f6898e532b",
+  "slug": "shibuya-replicant-archive",
+  "suggestions": [
+    "Add a Protocol Details view",
+    "Change the amber to a neon magenta",
+    "Add more interactive holographic elements"
+  ],
+  "title": "SHIBUYA_ARCHIVE | Art Direction"
+}

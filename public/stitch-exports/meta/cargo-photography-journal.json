@@ -1,0 +1,21 @@
+{
+  "brand": "Cargo / Photography",
+  "contentType": "image/png",
+  "fileName": "cargo-photography-journal.png",
+  "generatedAt": "2026-04-02T04:29:10.820Z",
+  "htmlUrl": "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ8Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpbCiVodG1sXzE4YmVmMjFkZjdjNTQ4NjY4NzYxMjk3NWM2MmQ3ZTQ3EgsSBxCCisPc0AkYAZIBJAoKcHJvamVjdF9pZBIWQhQxMzg2NjI0OTQ0Nzg0NDE0ODg5NQ&filename=&opi=96797242",
+  "imageUrl": "https://lh3.googleusercontent.com/aida/ADBb0uhuRjxgXVgZZo4ouOqoikPXJ3dWGUVgqO21IlqIdcxNwvH6-qsRG1BLcNjGCsi1CJuCnZFzhRDDpEculFHVGULto1TVQb746dItqctpFCw5Zyp9_sftNIccoK1F42Av_b8w5aWZ6kwcEr-h5N8s9sNgNLIzKBZPOgctdS_Op9lzdMCGZ97M-j7TxI23rM07Av4WAm7AjRkg1cKY8M9RDvlBW2-LOhSx4J45HzeZRBtfedZaEXryHu0y8GRR",
+  "notes": [
+    "I've designed a curated, Cargo-inspired photography portfolio for you. The layout is built around a journal-like sequence of large, image-led modules that emphasize the photography, with calm Newsreader serif typography and minimal Inter sans-serif captions. \n\nI've also set up a dedicated design system, \"Frame & Sequence,\" to maintain this minimal and architectural aesthetic across any future screens.\n\nWhat would you like to see next? I could add a project detail page or an information view."
+  ],
+  "prompt": "Create a Cargo-like photography portfolio template with large image-led modules, calm captions, sparse navigation, and a journal-like sequence that feels curated and minimal.",
+  "projectId": "13866249447844148895",
+  "screenId": "a2b3fad0e8784c7a8b1e8a23f8aa8b2a",
+  "slug": "cargo-photography-journal",
+  "suggestions": [
+    "Add a project detail page for 'Abstract Architecture'",
+    "Design an info/about page with contact details",
+    "Create a grid-based index view for all projects"
+  ],
+  "title": "Portfolio Journal View"
+}

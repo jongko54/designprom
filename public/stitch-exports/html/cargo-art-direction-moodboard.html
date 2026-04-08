@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&amp;family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,700;1,6..72,400&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "error": "#ba1a1a",
+                        "secondary-container": "#d6d4d3",
+                        "surface-variant": "#e2e2e2",
+                        "tertiary-fixed": "#5e5e5e",
+                        "secondary-fixed": "#c8c6c6",
+                        "on-secondary-container": "#1b1c1c",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-dim": "#dadada",
+                        "on-background": "#1a1c1c",
+                        "on-secondary-fixed": "#1b1c1c",
+                        "primary": "#000000",
+                        "on-error-container": "#410002",
+                        "inverse-primary": "#c6c6c6",
+                        "surface-container-high": "#e8e8e8",
+                        "primary-container": "#3b3b3b",
+                        "tertiary-fixed-dim": "#474747",
+                        "on-secondary": "#ffffff",
+                        "on-surface-variant": "#474747",
+                        "secondary-fixed-dim": "#acabab",
+                        "on-primary-fixed-variant": "#e2e2e2",
+                        "inverse-surface": "#2f3131",
+                        "on-tertiary": "#e2e2e2",
+                        "surface-container": "#eeeeee",
+                        "outline-variant": "#c6c6c6",
+                        "surface-container-highest": "#e2e2e2",
+                        "tertiary": "#3b3b3b",
+                        "on-tertiary-container": "#ffffff",
+                        "tertiary-container": "#747474",
+                        "on-primary": "#e2e2e2",
+                        "on-primary-fixed": "#ffffff",
+                        "inverse-on-surface": "#f1f1f1",
+                        "surface-tint": "#5e5e5e",
+                        "surface": "#f9f9f9",
+                        "error-container": "#ffdad6",
+                        "secondary": "#5f5e5e",
+                        "on-primary-container": "#ffffff",
+                        "primary-fixed-dim": "#474747",
+                        "surface-container-low": "#f3f3f3",
+                        "outline": "#777777",
+                        "surface-bright": "#f9f9f9",
+                        "on-surface": "#1a1c1c",
+                        "on-secondary-fixed-variant": "#3b3b3b",
+                        "on-error": "#ffffff",
+                        "on-tertiary-fixed": "#ffffff",
+                        "on-tertiary-fixed-variant": "#e2e2e2",
+                        "primary-fixed": "#5e5e5e",
+                        "background": "#f9f9f9"
+                    },
+                    fontFamily: {
+                        "headline": ["Newsreader"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    },
+                    borderRadius: {"DEFAULT": "0px", "lg": "0px", "xl": "0px", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f9f9f9;
+        }
+        .newsreader {
+            font-family: 'Newsreader', serif;
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface selection:bg-primary selection:text-on-primary">
+<!-- Top Navigation Bar -->
+<!-- Executing Shared Components JSON: TopNavBar -->
+<nav class="fixed top-0 w-full z-50 flex justify-between items-center px-8 py-6 bg-stone-50/90 dark:bg-zinc-900/90 backdrop-blur-md shadow-sm dark:shadow-none">
+<div class="text-lg font-bold tracking-tighter text-black dark:text-white uppercase">THE CURATOR</div>
+<div class="flex gap-8 items-center">
+<!-- Active State Logic: No specific match for Home, defaulting to WORK or inactive state as per JSON definition -->
+<a class="text-black dark:text-white border-b border-black dark:border-white pb-1 text-[10px] font-medium tracking-[0.2em] font-sans uppercase hover:text-black dark:hover:text-white transition-colors duration-300" href="#">WORK</a>
+<a class="text-zinc-500 dark:text-zinc-400 pb-1 text-[10px] font-medium tracking-[0.2em] font-sans uppercase hover:text-black dark:hover:text-white transition-colors duration-300" href="#">ARCHIVE</a>
+<a class="text-zinc-500 dark:text-zinc-400 pb-1 text-[10px] font-medium tracking-[0.2em] font-sans uppercase hover:text-black dark:hover:text-white transition-colors duration-300" href="#">PROFILE</a>
+<a class="text-zinc-500 dark:text-zinc-400 pb-1 text-[10px] font-medium tracking-[0.2em] font-sans uppercase hover:text-black dark:hover:text-white transition-colors duration-300" href="#">CONTACT</a>
+</div>
+</nav>
+<!-- Main Content Canvas -->
+<main class="min-h-screen pt-24">
+<!-- Hero Entry Section -->
+<section class="relative w-full h-[921px] px-8 md:px-12 flex flex-col md:flex-row items-end pb-12 overflow-hidden">
+<!-- Hero Image: Following "The Curated Monolith" & Mixed-Media art direction -->
+<div class="absolute inset-0 z-0 px-8 py-4 md:px-12 md:py-8">
+<div class="w-full h-full bg-surface-container-low overflow-hidden">
+<img alt="Abstract art construction" class="w-full h-full object-cover mix-blend-multiply opacity-90 grayscale" data-alt="Monochromatic mixed-media collage featuring torn paper textures, brutalist architectural shapes, and subtle charcoal strokes against an archival paper background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBE88XdEKuN4ed_d1JsJ3MCzZL-2EFA6XjwWRnp-Ccq-UGbKwDdwEMvq1kVOoeIfdJErYT4AA3JwCIt5V62-uaaRA738PryfoQaq9FShR4ugr3-oUQrYPhGXhGg5aiYOadNEZ7Hn9mgeGm5p7YpMzc45q2VyLv9WSKfqeWGwf922fxXcFL8p7EG8EyMD6v86i7BnY8G_yOzCy0GBGucvt4r39KKE_z80_Jmko_8luOshfniATCP4cdDZw_8m63YlRgXKJLROGbp621o"/>
+</div>
+</div>
+<!-- Foreground Branding & Metadata -->
+<div class="relative z-10 w-full flex flex-col md:flex-row justify-between items-end gap-10">
+<div class="max-w-4xl">
+<h1 class="font-headline text-[clamp(3.5rem,10vw,8rem)] leading-[0.9] tracking-tight mb-8">
+                        Curated <br/>
+<span class="italic font-normal">Collected</span> <br/>
+                        Constructed.
+                    </h1>
+<div class="flex flex-wrap gap-x-12 gap-y-4">
+<div class="space-y-1">
+<p class="font-label text-[10px] uppercase tracking-widest text-secondary">Context</p>
+<p class="font-headline italic text-xl">Portfolio 2024</p>
+</div>
+<div class="space-y-1">
+<p class="font-label text-[10px] uppercase tracking-widest text-secondary">Status</p>
+<p class="font-headline italic text-xl">Selected Works</p>
+</div>
+</div>
+</div>
+<div class="pb-2">
+<button class="group relative px-8 py-4 bg-primary text-on-primary transition-all duration-300 hover:bg-primary-fixed active:scale-95">
+<span class="font-label text-[10px] uppercase tracking-[0.2em] font-bold">View Selected Works</span>
+</button>
+</div>
+</div>
+</section>
+<!-- Asymmetric Intro Section: Editorial Layout -->
+<section class="w-full px-8 md:px-12 py-32 grid grid-cols-1 md:grid-cols-12 gap-12 bg-surface">
+<div class="md:col-start-2 md:col-span-4 self-center">
+<p class="font-label text-[10px] uppercase tracking-widest text-secondary mb-6 flex items-center gap-2">
+<span class="w-4 h-px bg-secondary"></span> 01 / Introduction
+                </p>
+<h2 class="font-headline text-4xl md:text-5xl leading-tight mb-8">
+                    An inquiry into <span class="italic">spatial tension</span> and the digital monolith.
+                </h2>
+<p class="font-body text-secondary text-sm leading-relaxed max-w-sm">
+                    We approach design as an archival process. Each project is a meticulously organized volume within a larger visual library, emphasizing structural rigidity and organic content.
+                </p>
+</div>
+<div class="md:col-start-7 md:col-span-5 relative aspect-[4/5] bg-surface-container-high">
+<img alt="Minimal architectural detail" class="w-full h-full object-cover grayscale brightness-95" data-alt="Extreme close-up of a brutalist concrete structure showing sharp shadows and fine texture under harsh midday sunlight" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAOsn9maMy6urge0ltT6D5f3cvnd4gk1VvnVYg0gRZHjSzWGwBM21XY_RSzVOZiOY-nuwnRMD_zH9S38QkPvlrw9jK6mn0e9mdpQtTLNz2x5KW6QO1LqwfjpY1RXKquViIvrD2mvWOH4sFIYVgr-Uwbkn4oqR9RxUemALaHSnj6XHG69doTSv-ep0wd_W71MRdMkagrGH2FqwZY51gBqCIU3P5U-b7eykRJpqCvpOq_1L_xaF3iECc5BkNXVv20W-qzZjRi4X7P3Jps"/>
+<div class="absolute -bottom-6 -left-6 bg-surface-container-lowest p-6 shadow-sm max-w-[200px]">
+<p class="font-label text-[10px] leading-tight text-secondary uppercase tracking-tighter">
+                        Fig. 01 — Structural Integrity within a digital ecosystem. 
+                    </p>
+</div>
+</div>
+</section>
+<!-- Bento Grid: Curatorial Selection -->
+<section class="w-full px-8 md:px-12 py-20 bg-surface-container-low">
+<div class="flex justify-between items-end mb-16">
+<h3 class="font-headline text-3xl italic">The Catalog</h3>
+<p class="font-label text-[10px] uppercase tracking-widest text-secondary">Vol. II — Collection</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Card 1 -->
+<div class="md:col-span-2 group cursor-pointer">
+<div class="aspect-[16/9] overflow-hidden bg-surface-container-high relative mb-4">
+<img alt="Design Project One" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 grayscale" data-alt="Interior of a modern gallery with a single minimalist lamp illuminating a dark space with dramatic shadows" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCwv6TrGegxygYjFug4CPQmwCYz8qRpQEK0UYrdqxzTEcy5tDNMN4QxvUCbLy-ayNlwXDf5shTMSVAdZoRpi3ANpwsEhsMUdxau93ASUFWAMAm_IEf0qJpjBBd6FusN5cqvMUGWwyKNvPZ2yrIWQbgx9X9hgENSIVaPOWGbXhXRiFP3YcQCLoSiJOy-IAlu71ZX25JbhvWb8P91wyPc7NtlJIk3Xr0CqD1fHY_qw_sn3d6LEoUO8J3eWtv0RE4YX8BtRfPfJAqdxhTq"/>
+<div class="absolute inset-0 bg-black/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+</div>
+<div class="flex justify-between items-start">
+<div>
+<p class="font-label text-[10px] text-secondary uppercase mb-1">Architecture / 2024</p>
+<h4 class="font-headline text-2xl">The Void Pavilion</h4>
+</div>
+<span class="material-symbols-outlined text-sm">north_east</span>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="group cursor-pointer">
+<div class="aspect-[4/5] overflow-hidden bg-surface-container-high relative mb-4">
+<img alt="Design Project Two" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 grayscale" data-alt="Abstract 3D render of floating monochromatic spheres and geometric shapes with subtle grain texture" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBCOULJrjnM9FCnTcJ7cEl4i629xX-hzQDkNaNWLhQ504BBDwQptHCBKYWlb9rWcQs-2EF3gfh6sbvDAY8oX_llgLZzwX7-T40rQ-QNqtM1KaJ_xohJU10rcS323JiDUl4T6T3NMBXZwHHDO_tadxxgUyhOFOUAp4FiXZcXYn3aeaQLBrE_HnplxN4x1fQYhvGcXvsm3XdNXcomq3g0tKH-tSrOK7hCtfGtXv5OMZqgQ0hosUm_AOYTDK-SPin94-U_igRn76u1Up-p"/>
+</div>
+<div class="flex justify-between items-start">
+<div>
+<p class="font-label text-[10px] text-secondary uppercase mb-1">Visual Arts / 2023</p>
+<h4 class="font-headline text-2xl">Constructed Realities</h4>
+</div>
+<span class="material-symbols-outlined text-sm">north_east</span>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<!-- Executing Shared Components JSON: Footer -->
+<footer class="grid grid-cols-1 md:grid-cols-3 gap-10 w-full px-12 py-20 border-t border-zinc-200/10 bg-stone-200 dark:bg-zinc-950 text-black dark:text-stone-300">
+<div class="space-y-6">
+<div class="text-sm font-bold text-black dark:text-white uppercase tracking-tighter">THE DIGITAL GALLERY</div>
+<p class="font-headline italic text-lg opacity-80 leading-snug">
+                A repository for high-end art direction and digital craftsmanship.
+            </p>
+</div>
+<div class="flex flex-col gap-3">
+<p class="font-mono text-[10px] uppercase tracking-wider text-zinc-600 dark:text-zinc-500 mb-2">Connect</p>
+<a class="text-zinc-600 dark:text-zinc-500 font-mono text-[10px] uppercase tracking-wider hover:text-black dark:hover:text-white transition-all duration-300 w-fit" href="#">INSTAGRAM</a>
+<a class="text-zinc-600 dark:text-zinc-500 font-mono text-[10px] uppercase tracking-wider hover:text-black dark:hover:text-white transition-all duration-300 w-fit" href="#">ARE.NA</a>
+<a class="text-zinc-600 dark:text-zinc-500 font-mono text-[10px] uppercase tracking-wider hover:text-black dark:hover:text-white transition-all duration-300 w-fit" href="#">LINKEDIN</a>
+</div>
+<div class="flex flex-col justify-between items-start md:items-end">
+<a class="text-zinc-600 dark:text-zinc-500 font-mono text-[10px] uppercase tracking-wider hover:text-black dark:hover:text-white transition-all duration-300 underline underline-offset-4 active:scale-95 duration-200" href="#">BACK TO TOP</a>
+<div class="font-mono text-[10px] uppercase tracking-wider text-zinc-600 dark:text-zinc-500 mt-10 md:mt-0">
+                © 2024 THE DIGITAL GALLERY
+            </div>
+</div>
+</footer>
+</body></html>

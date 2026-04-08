@@ -1,0 +1,21 @@
+{
+  "brand": "Airbnb",
+  "contentType": "image/png",
+  "fileName": "airbnb-discovery-landing.png",
+  "generatedAt": "2026-04-02T01:41:54.414Z",
+  "htmlUrl": "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ8Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpbCiVodG1sXzkxNzkyNDM2M2U4OTQ4NzA5MWJhYzI1ZDEzYzEwM2QzEgsSBxCCisPc0AkYAZIBJAoKcHJvamVjdF9pZBIWQhQxNTE0MTM2NDkwMzg3Mzk0NjczOA&filename=&opi=96797242",
+  "imageUrl": "https://lh3.googleusercontent.com/aida/ADBb0uh1TO8J-PmpFxYOA8uIo1IR8NJ9vfUGUeeFqa0qGZt-DEGZCaExgo9ERa6cB16uT93Z-76Z9tjrU0D-w8WLRBr2xynHzasq-bx942AVUHqyTHmyVtehC4RUVRg8v9wdyTH8o1UKRP-AQTX5pn68bb2dSl3qYHS5YXuqodmupg29Klj7l9LRantwlmEQlnJjI72XLmlH8V4dAcRKoMj0eBKPvQcCL3XfnWojFBEBzr1SP0AAHe6RhK0GKjOQ",
+  "notes": [
+    "I've finished designing the **Wanderlust Landing Page** and its accompanying **\"The Warm Wanderer\" Design System**. \n\nThe page features:\n- A prominent, search-first booking flow in the hero.\n- Clean category navigation with rounded visual indicators.\n- High-quality, welcoming photography across featured adventure cards.\n- A human-centric testimonial section and a persuasive \"Become a Host\" call-to-action.\n\nThe design system uses a warm neutral palette and the Plus Jakarta Sans typeface to create that approachable, trustworthy Airbnb-inspired feel you were looking for. \n\nHow does this look for a first version?"
+  ],
+  "prompt": "Create a travel marketplace landing page in an Airbnb-inspired direction with warm neutral backgrounds, rounded modules, approachable sans-serif typography, welcoming photography, and a search-first booking flow. Make the page feel human, trustworthy, and easy to browse.",
+  "projectId": "15141364903873946738",
+  "screenId": "5987eb0bce9c4c20a766ca82470a901c",
+  "slug": "airbnb-discovery-landing",
+  "suggestions": [
+    "Add a mobile version of the landing page",
+    "Modify the color scheme to be cooler (blues and greens)",
+    "Add a 'Top Rated Destinations' section"
+  ],
+  "title": "Wanderlust Landing Page"
+}

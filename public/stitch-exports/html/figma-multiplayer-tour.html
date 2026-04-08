@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Digital Craftshop | Precision Atelier</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "surface-variant": "#dedcdc",
+            "on-secondary-container": "#004d6b",
+            "on-primary": "#faefff",
+            "error-dim": "#a70138",
+            "surface": "#f9f6f5",
+            "on-tertiary-container": "#650525",
+            "tertiary-fixed": "#ff8fa3",
+            "surface-container-highest": "#dedcdc",
+            "on-tertiary-fixed-variant": "#71112e",
+            "surface-container": "#eae8e7",
+            "secondary-fixed": "#9dd9ff",
+            "on-secondary": "#e8f4ff",
+            "tertiary-fixed-dim": "#f97c94",
+            "tertiary": "#9f364e",
+            "outline": "#777676",
+            "inverse-on-surface": "#9e9c9c",
+            "on-primary-fixed-variant": "#3f007c",
+            "secondary": "#006288",
+            "on-tertiary": "#ffeff0",
+            "surface-dim": "#d6d4d4",
+            "error-container": "#f74b6d",
+            "surface-container-lowest": "#ffffff",
+            "surface-bright": "#f9f6f5",
+            "primary-container": "#bb88ff",
+            "outline-variant": "#aeadac",
+            "tertiary-dim": "#8f2a43",
+            "on-secondary-fixed": "#003850",
+            "on-surface": "#2f2f2f",
+            "surface-tint": "#7a29d6",
+            "on-primary-container": "#330066",
+            "primary-fixed": "#bb88ff",
+            "inverse-primary": "#ae71ff",
+            "on-tertiary-fixed": "#390011",
+            "on-background": "#2f2f2f",
+            "on-primary-fixed": "#000000",
+            "surface-container-low": "#f3f0f0",
+            "primary-fixed-dim": "#b075ff",
+            "tertiary-container": "#ff8fa3",
+            "on-error": "#ffefef",
+            "primary-dim": "#6d12c9",
+            "on-error-container": "#510017",
+            "primary": "#7a29d6",
+            "secondary-fixed-dim": "#77cdff",
+            "surface-container-high": "#e4e2e1",
+            "inverse-surface": "#0e0e0e",
+            "error": "#b41340",
+            "on-surface-variant": "#5c5b5b",
+            "background": "#f9f6f5",
+            "secondary-dim": "#005677",
+            "secondary-container": "#9dd9ff",
+            "on-secondary-fixed-variant": "#005778"
+          },
+          fontFamily: {
+            "headline": ["Inter"],
+            "body": ["Inter"],
+            "label": ["Inter"]
+          },
+          borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+        },
+      },
+    }
+  </script>
+<style>
+    body { font-family: 'Inter', sans-serif; }
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    }
+    .cursor-label {
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    .asymmetric-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.5fr;
+    }
+  </style>
+</head>
+<body class="bg-surface text-on-surface selection:bg-primary-container selection:text-on-primary-container">
+<!-- TopNavBar Navigation Shell -->
+<nav class="w-full top-0 sticky bg-[#f9f6f5] dark:bg-zinc-950 border-b border-zinc-200/50 dark:border-zinc-800/50 z-50">
+<div class="flex justify-between items-center px-6 py-3 max-w-screen-2xl mx-auto">
+<div class="flex items-center gap-8">
+<span class="text-xl font-bold tracking-tighter text-zinc-900 dark:text-zinc-50">Precision Atelier</span>
+<div class="hidden md:flex gap-6">
+<a class="font-['Inter'] tracking-tight text-sm font-medium text-zinc-900 dark:text-zinc-50 border-b-2 border-[#A259FF] pb-1 hover:text-[#A259FF] transition-colors duration-200" href="#">Product</a>
+<a class="font-['Inter'] tracking-tight text-sm font-medium text-zinc-500 dark:text-zinc-400 hover:text-[#A259FF] transition-colors duration-200" href="#">Community</a>
+<a class="font-['Inter'] tracking-tight text-sm font-medium text-zinc-500 dark:text-zinc-400 hover:text-[#A259FF] transition-colors duration-200" href="#">Pricing</a>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<button class="font-['Inter'] tracking-tight text-sm font-medium text-zinc-500 dark:text-zinc-400 hover:text-[#A259FF] transition-colors duration-200 scale-95 active:opacity-80 transition-transform">Log In</button>
+<button class="bg-[#7a29d6] text-[#faefff] px-4 py-2 rounded-sm font-['Inter'] tracking-tight text-sm font-medium hover:bg-[#6d12c9] transition-colors duration-200 scale-95 active:opacity-80 transition-transform">Get Started</button>
+</div>
+</div>
+</nav>
+<main>
+<!-- Hero Section: Multiplayer Canvas -->
+<section class="relative overflow-hidden pt-20 pb-32 px-6">
+<div class="max-w-screen-2xl mx-auto flex flex-col items-center text-center mb-16">
+<span class="label-sm uppercase tracking-widest text-primary font-bold mb-4">The Digital Craftshop</span>
+<h1 class="text-6xl md:text-7xl font-black tracking-tighter text-on-surface mb-6 max-w-4xl">
+          Where Precision Meets <span class="text-primary italic">Collaboration.</span>
+</h1>
+<p class="text-xl text-on-surface-variant max-w-2xl font-medium leading-relaxed">
+          The professional workbench for designers who treat pixels like architecture. Real-time multiplayer built for high-fidelity masters.
+        </p>
+</div>
+<!-- Canvas Showcase -->
+<div class="max-w-6xl mx-auto relative group">
+<div class="bg-surface-container-lowest border border-outline-variant/20 rounded-lg p-4 shadow-2xl overflow-hidden aspect-[16/10] relative">
+<img alt="UI Canvas" class="w-full h-full object-cover rounded-sm opacity-90 grayscale-[0.2]" data-alt="High-fidelity UI design workspace with technical drafting elements, grid lines, and complex layout components in a minimalist aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCva8CfYqIjkI7D5BwEE8UWW5rREqxAguWEO66aUiuLb1HUEkhU4MNuYphwWd4qT8KhG91HzT2zVwAyPfwIX6zFstaBC_2GecTFqGqVcmwiHxqH6hxf2o8LLBJXk9cTJ_yU5m4mRIP82JyKR53EB3PbPm1FGT_ZfrfiS7coEXJFBbFgsMftQ0BE9L21BZHPzvljtOhldk2y9Y86bNnt9yjGH-FMRqjHf11rUOSA4InZcf-bfM2xTZ6Fcl920iYnLJwQ_jHv7ogCtbT5"/>
+<!-- Collaboration Cursors -->
+<!-- Elena -->
+<div class="absolute top-1/4 left-1/3 flex flex-col items-start gap-1 z-10 pointer-events-none">
+<svg class="text-primary drop-shadow-sm" fill="none" height="24" viewbox="0 0 24 24" width="24">
+<path d="M5.65376 12.3673L15.9452 16.9213L13.3718 13.0344L17.6114 8.89361L5.65376 12.3673Z" fill="currentColor" stroke="white" stroke-width="2"></path>
+</svg>
+<div class="bg-primary text-on-primary text-[11px] font-bold px-2 py-0.5 rounded-full cursor-label">Elena</div>
+</div>
+<!-- Marcus -->
+<div class="absolute bottom-1/3 right-1/4 flex flex-col items-start gap-1 z-10 pointer-events-none">
+<svg class="text-secondary drop-shadow-sm" fill="none" height="24" viewbox="0 0 24 24" width="24">
+<path d="M5.65376 12.3673L15.9452 16.9213L13.3718 13.0344L17.6114 8.89361L5.65376 12.3673Z" fill="currentColor" stroke="white" stroke-width="2"></path>
+</svg>
+<div class="bg-secondary text-on-secondary text-[11px] font-bold px-2 py-0.5 rounded-full cursor-label">Marcus</div>
+</div>
+<!-- Stitch -->
+<div class="absolute top-1/2 left-2/3 flex flex-col items-start gap-1 z-10 pointer-events-none">
+<svg class="text-tertiary drop-shadow-sm" fill="none" height="24" viewbox="0 0 24 24" width="24">
+<path d="M5.65376 12.3673L15.9452 16.9213L13.3718 13.0344L17.6114 8.89361L5.65376 12.3673Z" fill="currentColor" stroke="white" stroke-width="2"></path>
+</svg>
+<div class="bg-tertiary text-on-tertiary text-[11px] font-bold px-2 py-0.5 rounded-full cursor-label">Stitch</div>
+</div>
+<!-- Overlay Glass Header -->
+<div class="absolute top-0 inset-x-0 h-14 bg-surface-container-lowest/80 backdrop-blur-md border-b border-outline-variant/10 flex items-center px-4 justify-between">
+<div class="flex gap-2">
+<div class="w-3 h-3 rounded-full bg-error/20"></div>
+<div class="w-3 h-3 rounded-full bg-tertiary-container/20"></div>
+<div class="w-3 h-3 rounded-full bg-secondary-container/20"></div>
+</div>
+<div class="text-xs font-mono text-outline">v2.4.0-alpha / precision_v2_final.drft</div>
+<div class="flex items-center gap-3">
+<div class="flex -space-x-2">
+<div class="w-6 h-6 rounded-full border-2 border-surface-container-lowest bg-primary-container"></div>
+<div class="w-6 h-6 rounded-full border-2 border-surface-container-lowest bg-secondary-container"></div>
+</div>
+<div class="bg-primary text-on-primary text-[10px] px-2 py-1 rounded-sm font-bold uppercase tracking-widest">Share</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Storytelling Section 1: Precision Pane Reveals -->
+<section class="py-24 bg-surface-container-low overflow-hidden">
+<div class="max-w-screen-2xl mx-auto px-6">
+<div class="grid md:grid-cols-2 gap-16 items-center">
+<div>
+<h2 class="text-4xl font-bold tracking-tight text-on-surface mb-6">Precision Pane Reveals</h2>
+<p class="text-lg text-on-surface-variant mb-10 leading-relaxed">
+              Experience zero-clutter focus. Our panes only reveal what's necessary, when it's necessary. Deep-dive into technical properties without losing your spatial orientation on the canvas.
+            </p>
+<ul class="space-y-6">
+<li class="flex items-start gap-4">
+<div class="bg-primary-container/20 p-2 rounded-sm text-primary">
+<span class="material-symbols-outlined" data-icon="settings_input_component">settings_input_component</span>
+</div>
+<div>
+<h4 class="font-bold text-on-surface">Adaptive Inputs</h4>
+<p class="text-sm text-on-surface-variant">Fields morph based on the selected layer type, from Bezier controls to Auto-Layout parameters.</p>
+</div>
+</li>
+<li class="flex items-start gap-4">
+<div class="bg-secondary-container/20 p-2 rounded-sm text-secondary">
+<span class="material-symbols-outlined" data-icon="variable">variables</span>
+</div>
+<div>
+<h4 class="font-bold text-on-surface">Variable Overrides</h4>
+<p class="text-sm text-on-surface-variant">Manage complex design systems with nested variable panes that prevent context switching.</p>
+</div>
+</li>
+</ul>
+</div>
+<div class="relative">
+<div class="bg-surface-container-lowest shadow-xl border border-outline-variant/10 rounded-sm flex">
+<!-- Sidebar Tools -->
+<div class="w-12 border-r border-outline-variant/10 py-4 flex flex-col items-center gap-6">
+<span class="material-symbols-outlined text-primary" data-icon="near_me">near_me</span>
+<span class="material-symbols-outlined text-outline" data-icon="rectangle">rectangle</span>
+<span class="material-symbols-outlined text-outline" data-icon="text_fields">text_fields</span>
+<span class="material-symbols-outlined text-outline" data-icon="image">image</span>
+</div>
+<!-- Content -->
+<div class="flex-1 p-8 bg-surface-container">
+<div class="w-full h-48 rounded-sm bg-white border border-outline-variant/20 flex items-center justify-center relative overflow-hidden">
+<div class="absolute inset-0 opacity-10 bg-[radial-gradient(#7a29d6_1px,transparent_1px)] [background-size:16px_16px]"></div>
+<div class="w-24 h-24 bg-primary/10 border-2 border-primary border-dashed rounded-sm"></div>
+</div>
+</div>
+<!-- Precision Pane -->
+<div class="w-72 border-l border-outline-variant/20 p-6 bg-surface-container-lowest">
+<div class="text-[11px] font-bold uppercase tracking-widest text-outline mb-6">Object Properties</div>
+<div class="space-y-6">
+<div>
+<div class="text-[10px] font-bold mb-2 text-on-surface-variant uppercase">Layout</div>
+<div class="grid grid-cols-2 gap-2">
+<div class="bg-surface-container px-3 py-2 border-b border-outline/30 text-xs">X: 1024</div>
+<div class="bg-surface-container px-3 py-2 border-b border-outline/30 text-xs">Y: 512</div>
+</div>
+</div>
+<div>
+<div class="text-[10px] font-bold mb-2 text-on-surface-variant uppercase">Fill</div>
+<div class="flex items-center gap-3">
+<div class="w-6 h-6 bg-primary rounded-sm"></div>
+<div class="text-xs font-mono">#7A29D6</div>
+<div class="text-[10px] ml-auto text-outline">100%</div>
+</div>
+</div>
+<div>
+<div class="flex justify-between items-center mb-2">
+<div class="text-[10px] font-bold text-on-surface-variant uppercase">Auto Layout</div>
+<span class="material-symbols-outlined text-sm text-primary" data-icon="add">add</span>
+</div>
+<div class="bg-primary/5 p-4 rounded-sm border border-primary/20 flex justify-center gap-4">
+<span class="material-symbols-outlined text-primary opacity-50" data-icon="align_horizontal_left">align_horizontal_left</span>
+<span class="material-symbols-outlined text-primary" data-icon="align_horizontal_center">align_horizontal_center</span>
+<span class="material-symbols-outlined text-primary opacity-50" data-icon="align_horizontal_right">align_horizontal_right</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Storytelling Section 2: Collaborative Flow -->
+<section class="py-24 bg-surface">
+<div class="max-w-screen-2xl mx-auto px-6 text-center mb-16">
+<h2 class="text-4xl font-bold tracking-tight text-on-surface mb-4">Collaborative Flow</h2>
+<p class="text-on-surface-variant max-w-2xl mx-auto">From messy wireframes to pixel-perfect prototypes in one fluid motion. Watch how the team moves together.</p>
+</div>
+<div class="max-w-6xl mx-auto relative h-[500px] bg-surface-container-lowest border border-outline-variant/10 rounded-xl overflow-hidden shadow-sm">
+<div class="absolute inset-0 grid grid-cols-3 divide-x divide-outline-variant/10">
+<div class="p-8 flex flex-col">
+<span class="label-sm text-outline mb-4">Phase 01: Ideation</span>
+<div class="flex-1 flex items-center justify-center">
+<div class="w-full space-y-4 px-4">
+<div class="h-2 w-3/4 bg-surface-container rounded-full"></div>
+<div class="h-2 w-1/2 bg-surface-container rounded-full"></div>
+<div class="aspect-video bg-surface-container rounded-sm flex items-center justify-center">
+<span class="material-symbols-outlined text-outline/30 text-4xl" data-icon="polyline">polyline</span>
+</div>
+</div>
+</div>
+</div>
+<div class="p-8 flex flex-col bg-surface-container-low/50">
+<span class="label-sm text-outline mb-4">Phase 02: Structure</span>
+<div class="flex-1 flex items-center justify-center relative">
+<div class="w-full space-y-4 px-4 opacity-60">
+<div class="h-32 border-2 border-secondary/20 rounded-sm relative">
+<div class="absolute top-2 right-2 flex flex-col items-end gap-1">
+<svg class="text-secondary drop-shadow-sm" fill="none" height="20" viewbox="0 0 24 24" width="20">
+<path d="M5.65376 12.3673L15.9452 16.9213L13.3718 13.0344L17.6114 8.89361L5.65376 12.3673Z" fill="currentColor" stroke="white" stroke-width="1.5"></path>
+</svg>
+<span class="bg-secondary text-[8px] text-white px-1.5 rounded-full">Marcus</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="p-8 flex flex-col">
+<span class="label-sm text-primary font-bold mb-4">Phase 03: Precision</span>
+<div class="flex-1 flex items-center justify-center relative">
+<div class="w-full p-4">
+<div class="aspect-video shadow-2xl rounded-sm overflow-hidden relative border border-primary/20">
+<img alt="Final High Fidelity" class="w-full h-full object-cover" data-alt="Close up of a sleek, modern smartphone application interface with vibrant purple accents and professional typography." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAPzpwZcCBzkryWv4gwBC54Xuk_OQik6RYNOB-QfKGH_sXrFH8NlSbF8vTINddoWJ-V2f3fFSs9FISct-ISWkRL7B-sbds30wJCSJT8xGygqhQ4ENDwP68yz1hN06l3riquYZHg9lnHi2hOPOB5lWRnNPY9y8ZP1NRlsqJfQr44uKw-PAXEdu07kQPSuoAmDzY6mN65NMf4aAC7dDMknACjllkoeue_YU3rO3-O1v5JIFz0YfnQjgaJbj1SLukXUpL2-lgQXLY1loLP"/>
+<div class="absolute inset-0 bg-primary/10 mix-blend-overlay"></div>
+</div>
+<div class="absolute -bottom-4 -left-4 flex flex-col items-start gap-1">
+<svg class="text-primary drop-shadow-sm" fill="none" height="20" viewbox="0 0 24 24" width="20">
+<path d="M5.65376 12.3673L15.9452 16.9213L13.3718 13.0344L17.6114 8.89361L5.65376 12.3673Z" fill="currentColor" stroke="white" stroke-width="1.5"></path>
+</svg>
+<span class="bg-primary text-[8px] text-white px-1.5 rounded-full">Elena</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Storytelling Section 3: The Designer's Workbench -->
+<section class="py-24 bg-surface-container-high px-6">
+<div class="max-w-screen-2xl mx-auto">
+<div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
+<div class="max-w-2xl">
+<span class="label-sm text-primary uppercase font-bold tracking-widest mb-4 inline-block">The Toolkit</span>
+<h2 class="text-5xl font-black tracking-tight text-on-surface">The Designer's Workbench</h2>
+</div>
+<p class="text-on-surface-variant max-w-sm font-medium">
+            Pro-grade tools built on top of a lightning-fast engine. Engineered for those who demand absolute control.
+          </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-1">
+<!-- Card 1 -->
+<div class="bg-surface-container-lowest p-8 border border-outline-variant/10 group hover:bg-primary transition-all duration-300">
+<div class="w-12 h-12 bg-primary/10 rounded-sm flex items-center justify-center mb-8 group-hover:bg-on-primary/20">
+<span class="material-symbols-outlined text-primary group-hover:text-on-primary" data-icon="auto_awesome_motion">auto_awesome_motion</span>
+</div>
+<h3 class="text-xl font-bold mb-4 group-hover:text-on-primary">Auto-Layout 4.0</h3>
+<p class="text-sm text-on-surface-variant leading-relaxed group-hover:text-on-primary/80">
+              Advanced flexbox logic that feels intuitive. Nest containers, set absolute positioning, and let the canvas handle the math.
+            </p>
+</div>
+<!-- Card 2 -->
+<div class="bg-surface-container-lowest p-8 border border-outline-variant/10 group hover:bg-primary transition-all duration-300">
+<div class="w-12 h-12 bg-secondary/10 rounded-sm flex items-center justify-center mb-8 group-hover:bg-on-primary/20">
+<span class="material-symbols-outlined text-secondary group-symbols group-hover:text-on-primary" data-icon="layers">layers</span>
+</div>
+<h3 class="text-xl font-bold mb-4 group-hover:text-on-primary">Variable Modes</h3>
+<p class="text-sm text-on-surface-variant leading-relaxed group-hover:text-on-primary/80">
+              Switch entire themes, languages, or density scales with a single toggle. Variables that propagate through nested components.
+            </p>
+</div>
+<!-- Card 3 -->
+<div class="bg-surface-container-lowest p-8 border border-outline-variant/10 group hover:bg-primary transition-all duration-300">
+<div class="w-12 h-12 bg-tertiary/10 rounded-sm flex items-center justify-center mb-8 group-hover:bg-on-primary/20">
+<span class="material-symbols-outlined text-tertiary group-hover:text-on-primary" data-icon="terminal">terminal</span>
+</div>
+<h3 class="text-xl font-bold mb-4 group-hover:text-on-primary">Dev-Ready Logic</h3>
+<p class="text-sm text-on-surface-variant leading-relaxed group-hover:text-on-primary/80">
+              Every design decision maps directly to CSS properties. Export clean, production-ready code with one click.
+            </p>
+</div>
+</div>
+</div>
+</section>
+<!-- Final CTA Section -->
+<section class="py-32 bg-on-surface text-surface">
+<div class="max-w-screen-xl mx-auto px-6 text-center">
+<h2 class="text-5xl md:text-6xl font-black tracking-tighter mb-8">Ready to master your craft?</h2>
+<p class="text-xl text-surface-variant max-w-2xl mx-auto mb-12">
+          Join 40,000+ precision-obsessed designers using the Atelier to build the future of the web.
+        </p>
+<div class="flex flex-col sm:flex-row justify-center gap-4">
+<button class="bg-[#7a29d6] text-[#faefff] px-8 py-4 rounded-sm font-bold text-lg hover:bg-[#6d12c9] transition-all transform hover:scale-105 active:scale-95 shadow-xl">Start Your Tour</button>
+<button class="border border-outline-variant/30 text-surface px-8 py-4 rounded-sm font-bold text-lg hover:bg-surface/10 transition-all transform active:scale-95">Schedule Demo</button>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer Navigation Shell -->
+<footer class="w-full py-12 px-8 bg-[#f3f0f0] dark:bg-zinc-900/50">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center max-w-screen-2xl mx-auto">
+<div class="space-y-4">
+<span class="text-xs font-black text-zinc-400 uppercase tracking-widest">Precision Atelier</span>
+<p class="font-['Inter'] text-[11px] uppercase tracking-widest font-semibold text-zinc-500 dark:text-zinc-500">© 2024 Precision Atelier. Crafted for creators.</p>
+</div>
+<div class="flex md:justify-end gap-8">
+<a class="font-['Inter'] text-[11px] uppercase tracking-widest font-semibold text-zinc-500 dark:text-zinc-500 hover:text-zinc-900 dark:hover:text-zinc-100 underline underline-offset-4 transition-all duration-200 opacity-100 hover:opacity-80" href="#">Privacy</a>
+<a class="font-['Inter'] text-[11px] uppercase tracking-widest font-semibold text-zinc-500 dark:text-zinc-500 hover:text-zinc-900 dark:hover:text-zinc-100 underline underline-offset-4 transition-all duration-200 opacity-100 hover:opacity-80" href="#">Terms</a>
+<a class="font-['Inter'] text-[11px] uppercase tracking-widest font-semibold text-zinc-500 dark:text-zinc-500 hover:text-zinc-900 dark:hover:text-zinc-100 underline underline-offset-4 transition-all duration-200 opacity-100 hover:opacity-80" href="#">Security</a>
+<a class="font-['Inter'] text-[11px] uppercase tracking-widest font-semibold text-zinc-500 dark:text-zinc-500 hover:text-zinc-900 dark:hover:text-zinc-100 underline underline-offset-4 transition-all duration-200 opacity-100 hover:opacity-80" href="#">Status</a>
+</div>
+</div>
+</footer>
+</body></html>

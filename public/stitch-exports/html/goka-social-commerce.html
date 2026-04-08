@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+
+<html class="light" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Club Aesthetique - Lo mejor de K-Beauty en Latinoamérica</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&amp;family=Be+Vietnam+Pro:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "on-primary": "#ffefee",
+                      "on-surface-variant": "#814c59",
+                      "inverse-on-surface": "#ca8c99",
+                      "on-tertiary-fixed-variant": "#4c1d86",
+                      "primary-fixed-dim": "#eb8787",
+                      "on-secondary-fixed-variant": "#902b4b",
+                      "secondary-dim": "#8f294a",
+                      "secondary-container": "#ffc1ce",
+                      "tertiary": "#7044ab",
+                      "error": "#b02500",
+                      "outline-variant": "#dc9ca9",
+                      "on-error": "#ffefec",
+                      "on-primary-fixed": "#3a0006",
+                      "tertiary-fixed": "#c79dff",
+                      "on-primary-container": "#5d171c",
+                      "inverse-primary": "#fb9393",
+                      "surface-container-high": "#ffd9e0",
+                      "primary-container": "#fb9393",
+                      "error-dim": "#b92902",
+                      "surface-tint": "#944143",
+                      "on-secondary": "#ffeff0",
+                      "on-secondary-container": "#842142",
+                      "surface-variant": "#ffd1da",
+                      "background": "#fff4f4",
+                      "on-primary-fixed-variant": "#682024",
+                      "error-container": "#f95630",
+                      "secondary-fixed-dim": "#ffadbf",
+                      "tertiary-dim": "#64379e",
+                      "on-error-container": "#520c00",
+                      "surface-container-lowest": "#ffffff",
+                      "primary": "#944143",
+                      "tertiary-fixed-dim": "#bb8df9",
+                      "surface": "#fff4f4",
+                      "tertiary-container": "#c79dff",
+                      "surface-dim": "#ffc5d1",
+                      "primary-fixed": "#fb9393",
+                      "surface-container": "#ffe1e6",
+                      "outline": "#a06774",
+                      "surface-container-highest": "#ffd1da",
+                      "on-surface": "#4c212c",
+                      "on-tertiary-fixed": "#24004c",
+                      "on-background": "#4c212c",
+                      "on-tertiary": "#faefff",
+                      "surface-container-low": "#ffecee",
+                      "secondary": "#9e3656",
+                      "primary-dim": "#853638",
+                      "inverse-surface": "#23020c",
+                      "on-tertiary-container": "#430f7c",
+                      "secondary-fixed": "#ffc1ce",
+                      "surface-bright": "#fff4f4",
+                      "on-secondary-fixed": "#6a092f"
+              },
+              "borderRadius": {
+                      "DEFAULT": "1rem",
+                      "lg": "2rem",
+                      "xl": "3rem",
+                      "full": "9999px"
+              },
+              "fontFamily": {
+                      "headline": ["Plus Jakarta Sans"],
+                      "body": ["Be Vietnam Pro"],
+                      "label": ["Be Vietnam Pro"]
+              }
+            },
+          },
+        }
+    </script>
+<style>
+        .glass-nav {
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+        .text-glow {
+            text-shadow: 0 0 15px rgba(148, 65, 67, 0.2);
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .pill-shadow {
+            box-shadow: inset 0 2px 4px rgba(255, 255, 255, 0.15), 0 10px 40px -10px rgba(76, 33, 44, 0.1);
+        }
+    </style>
+</head>
+<body class="bg-surface font-body text-on-background antialiased overflow-x-hidden">
+<!-- TopNavBar -->
+<header class="sticky top-0 w-full z-50 bg-white/80 dark:bg-rose-950/80 backdrop-blur-md shadow-sm dark:shadow-none border-b-2 border-transparent bg-gradient-to-r from-rose-400 to-pink-300 bg-[length:100%_2px] bg-bottom bg-no-repeat">
+<div class="flex justify-between items-center px-6 py-4 max-w-screen-2xl mx-auto font-plus-jakarta-sans tracking-tight">
+<a class="text-2xl font-black text-rose-900 dark:text-rose-100 italic" href="#">Club Aesthetique</a>
+<!-- Desktop Nav -->
+<nav class="hidden md:flex gap-8">
+<a class="text-rose-700 dark:text-rose-300 font-bold border-b-2 border-rose-700 pb-1" href="#">Curación</a>
+<a class="text-rose-600/70 dark:text-rose-400/70 hover:text-rose-900 hover:opacity-80 transition-opacity" href="#">Rutinas</a>
+<a class="text-rose-600/70 dark:text-rose-400/70 hover:text-rose-900 hover:opacity-80 transition-opacity" href="#">Tienda</a>
+<a class="text-rose-600/70 dark:text-rose-400/70 hover:text-rose-900 hover:opacity-80 transition-opacity" href="#">Comunidad</a>
+</nav>
+<div class="flex items-center gap-4">
+<button class="material-symbols-outlined text-rose-800 dark:text-rose-200 hover:opacity-80 active:scale-95 duration-150">chat</button>
+<button class="material-symbols-outlined text-rose-800 dark:text-rose-200 hover:opacity-80 active:scale-95 duration-150">shopping_bag</button>
+<button class="material-symbols-outlined text-rose-800 dark:text-rose-200 hover:opacity-80 active:scale-95 duration-150">person</button>
+</div>
+</div>
+</header>
+<main>
+<!-- Hero Section -->
+<section class="relative px-6 pt-12 pb-24 md:py-32 flex flex-col md:flex-row items-center gap-12 max-w-screen-2xl mx-auto">
+<div class="flex-1 space-y-8 z-10">
+<h3 class="font-headline text-secondary uppercase tracking-widest text-sm font-bold">Bienvenida al Club</h3>
+<h1 class="font-headline text-on-surface text-5xl md:text-7xl font-extrabold leading-[1.1] tracking-tight">
+                    Tu piel, tu brillo, <span class="italic text-primary">tu club.</span>
+</h1>
+<p class="text-xl text-on-surface-variant max-w-lg leading-relaxed">
+                    K-Beauty real para Latam. Descubre la rutina que se adapta a tu clima y a tu ritmo de vida.
+                </p>
+<div class="flex flex-col sm:flex-row gap-4 pt-4">
+<a class="bg-primary text-on-primary px-10 py-5 rounded-full font-bold text-center pill-shadow hover:opacity-90 transition-all active:scale-95" href="#">Ver Catálogo</a>
+<a class="flex items-center justify-center gap-2 text-primary font-bold px-10 py-5 rounded-full border-2 border-primary/20 hover:bg-surface-container-high transition-all active:scale-95" href="#">
+<span class="material-symbols-outlined">forum</span>
+                        Habla con una experta
+                    </a>
+</div>
+</div>
+<div class="flex-1 relative w-full aspect-square md:aspect-[4/5]">
+<div class="absolute inset-0 bg-primary/10 rounded-xl -rotate-3 -z-10 translate-x-4"></div>
+<img alt="K-Beauty Club" class="w-full h-full object-cover rounded-xl shadow-2xl rotate-2 hover:rotate-0 transition-transform duration-500" data-alt="Close-up of three smiling Latin American women with luminous glowing skin, soft morning sunlight, diverse complexions, high-end beauty aesthetic" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAOhOSLr171GHLKWKnLpKGpGomYP04dyNwvgaXCrCQH_2slxVSN_i-01Vice2BWeUdRTHMmLg0qprHjyOz-MNIhWc6-9-3Bz1Sfe6p-FAqOtGKZOuAnrdV9Glbzg8tDx0FWYrAI0vtRBLXmb9op_BYP7U19FV4O8uXCl0rnCcYH1CG_GwLp28T9_gsY-K-qYF45TXwjS-60QHET7D_g8hSFtzwDrSvUZ03O-JiUeaW5rrNDvXrup0BGsuamnLnR334U_CYRoEacN5w"/>
+<div class="absolute -bottom-6 -left-6 bg-surface-container-lowest p-6 rounded-lg shadow-xl max-w-xs glass-nav border border-outline-variant/10">
+<p class="font-headline font-bold text-primary italic">#GlowGoals</p>
+<p class="text-sm text-on-surface-variant">Unidad, diversidad y el brillo que mereces.</p>
+</div>
+</div>
+</section>
+<!-- Trust Bar -->
+<section class="bg-surface-container-low py-10">
+<div class="max-w-screen-2xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-8">
+<div class="flex items-center gap-4 text-primary">
+<span class="material-symbols-outlined text-4xl" data-weight="fill">verified</span>
+<div>
+<p class="font-headline font-bold">Productos 100% Originales</p>
+<p class="text-xs text-on-surface-variant uppercase tracking-widest">Garantía Directa de Corea</p>
+</div>
+</div>
+<div class="flex items-center gap-4 text-primary">
+<span class="material-symbols-outlined text-4xl" data-weight="fill">local_shipping</span>
+<div>
+<p class="font-headline font-bold">Envíos Gratis (México &amp; Latam)</p>
+<p class="text-xs text-on-surface-variant uppercase tracking-widest">En compras mayores a $999</p>
+</div>
+</div>
+<div class="flex items-center gap-4 text-primary">
+<span class="material-symbols-outlined text-4xl" data-weight="fill">support_agent</span>
+<div>
+<p class="font-headline font-bold">Soporte en WhatsApp</p>
+<p class="text-xs text-on-surface-variant uppercase tracking-widest">Atención personalizada 24/7</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Product Grid: Imprescindibles -->
+<section class="py-24 px-6 max-w-screen-2xl mx-auto">
+<div class="flex justify-between items-end mb-12">
+<div>
+<h4 class="font-headline text-secondary font-bold mb-2 uppercase tracking-widest text-xs">Favoritos de la Temporada</h4>
+<h2 class="font-headline text-4xl md:text-5xl font-extrabold text-on-surface tracking-tight">Los Imprescindibles del Mes</h2>
+</div>
+<a class="hidden md:block font-headline font-bold text-primary underline underline-offset-8 decoration-2 hover:opacity-70 transition-opacity" href="#">Ver todo el catálogo</a>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+<!-- Product Card 1 -->
+<div class="group relative bg-surface-container-lowest rounded-xl p-4 transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 overflow-hidden">
+<div class="relative mb-6 aspect-square overflow-hidden rounded-lg">
+<img alt="Glow Serum" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="Minimalist skincare bottle aesthetic on pink marble surface, serum with glass dropper, soft natural lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCqlkuofOeicV_n7SQbalERtzaG_4wQPSBzJVohJCk7zuQI9rilEiUExXfsncP6r-wz2buvvwiHY_5VI5eYGCExDqsenBJda3TyHJYC4_f_5z89nG0qGaNyXLRkzqyWs5mXJUshbujgqoVbt4LmEGWWS8Pfhit80eUrfRFI-vhgq0B5SnTCGnO71M_bzIhcEA1NZTDPBAiw3ACl2txuB6sjuKkroV64mWVDt5h-sfFUmD52OCpE0cLK1Qlo-EwfwOzH3rW0zPf5hV4"/>
+<span class="absolute top-3 left-3 bg-tertiary text-on-tertiary text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-widest">Bestseller</span>
+</div>
+<div class="space-y-1">
+<p class="text-xs text-on-surface-variant uppercase font-medium">Beauty of Joseon</p>
+<h3 class="font-headline font-bold text-lg text-on-surface">Glow Serum: Propolis + Niacinamide</h3>
+<div class="flex items-center gap-1 py-1">
+<span class="material-symbols-outlined text-sm text-primary" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm text-primary" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm text-primary" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm text-primary" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm text-primary" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="text-[10px] text-on-surface-variant ml-1">(482 reviews)</span>
+</div>
+<div class="flex justify-between items-center pt-2">
+<p class="font-headline font-extrabold text-xl text-primary">$490 MXN</p>
+<button class="bg-primary text-on-primary w-10 h-10 rounded-full flex items-center justify-center shadow-md active:scale-90 transition-transform">
+<span class="material-symbols-outlined text-xl">add_shopping_cart</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Product Card 2 -->
+<div class="group relative bg-surface-container-lowest rounded-xl p-4 transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 overflow-hidden">
+<div class="relative mb-6 aspect-square overflow-hidden rounded-lg">
+<img alt="Cleansing Balm" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="Modern k-beauty cleansing balm in white container, soft focus aesthetic, pastel pink background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD3PiQkXPcmFC1sjz_j5SBGaC3zu4VpBnrIUFzKjqaLGWFXoo6KJ6VY99sHU2spgN6qXY7LVj6FDgMxwBEmZZqgj3d7SMUCa1SiQZVTad3QFMoqjVQEBd0F_ngaAnVd-d6u4_G_ZuXUWfVD1idO5VWZnvNf0EjDSpBI-dA8VkMPv3Y_0nheOIsuGpJ733K6Ho-ueSZ0cPQh5BILvr7NJk-483SwssKt4ci9mnmfwqmS1wIQME4glqATeqMtMdcR_W797UIrOI2VEN0"/>
+<span class="absolute top-3 left-3 bg-secondary text-on-secondary text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-widest">Viral en TikTok</span>
+</div>
+<div class="space-y-1">
+<p class="text-xs text-on-surface-variant uppercase font-medium">Heimish</p>
+<h3 class="font-headline font-bold text-lg text-on-surface">All Clean Balm</h3>
+<div class="flex items-center gap-1 py-1">
+<span class="material-symbols-outlined text-sm text-primary" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm text-primary" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm text-primary" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm text-primary" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm text-primary" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="text-[10px] text-on-surface-variant ml-1">(320 reviews)</span>
+</div>
+<div class="flex justify-between items-center pt-2">
+<p class="font-headline font-extrabold text-xl text-primary">$385 MXN</p>
+<button class="bg-primary text-on-primary w-10 h-10 rounded-full flex items-center justify-center shadow-md active:scale-90 transition-transform">
+<span class="material-symbols-outlined text-xl">add_shopping_cart</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Product Card 3 -->
+<div class="group relative bg-surface-container-lowest rounded-xl p-4 transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 overflow-hidden">
+<div class="relative mb-6 aspect-square overflow-hidden rounded-lg">
+<img alt="Sun Stick" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="Sunscreen stick aesthetic shot, yellow accents, bright airy lighting on clean surface" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCkV8GjLjkeAGoe1h-roUW0PA1IbrqvzmNkxNJkFOMPxYdUIFJhWA9qh85cNJTObEl8VS-EOQhQz7Q1knb81BE45rstmCI1JHofcHr7ZBQmSgx8wjtcLFwZ4uSy5iy0KreEkpWqtDWFjCzUnb8PFNF2lolM1tkHY_69r1_mMSHswKakYzx92_ZUFmJWsFTz27d5Q48QGT9ghvuIBXJLHIz2RMn3yQaeBiFOxh0r-FLXK7qBX3c0TPw2aO-Kpk990nt0qxTE0WjJdJE"/>
+<span class="absolute top-3 left-3 bg-primary text-on-primary text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-widest">Nuevo</span>
+</div>
+<div class="space-y-1">
+<p class="text-xs text-on-surface-variant uppercase font-medium">Isntree</p>
+<h3 class="font-headline font-bold text-lg text-on-surface">Hyaluronic Acid Airy Sun Stick</h3>
+<div class="flex items-center gap-1 py-1">
+<span class="material-symbols-outlined text-sm text-primary" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm text-primary" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm text-primary" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm text-primary" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm text-primary">star</span>
+<span class="text-[10px] text-on-surface-variant ml-1">(154 reviews)</span>
+</div>
+<div class="flex justify-between items-center pt-2">
+<p class="font-headline font-extrabold text-xl text-primary">$550 MXN</p>
+<button class="bg-primary text-on-primary w-10 h-10 rounded-full flex items-center justify-center shadow-md active:scale-90 transition-transform">
+<span class="material-symbols-outlined text-xl">add_shopping_cart</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Product Card 4 -->
+<div class="group relative bg-surface-container-lowest rounded-xl p-4 transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 overflow-hidden">
+<div class="relative mb-6 aspect-square overflow-hidden rounded-lg">
+<img alt="Cleansing Oil" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="Cleansing oil aesthetic, amber bottle on textured stone surface with water droplets, morning sun" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC9Bc3uGnhxUxkdrR3Wc-BDkvOFd7D2RH_1yJK9QenPGM9--8Bf20JYG_RBjvli1d_cr9zxC7KlgPCbJTGuQukMjDjatOC2ycbxktu_5Oy6aObBgtmHKfIFEKwo4mu2Ot17SGvJTDl5aXmHq7gD3GNmIam3QCuUdJvK2bJpz7hXzCR5hL5VzPwK0GlaVBkIOscS9X1xlFZsQn8UG4smNvTs4cUT2xUfkrqkd13wrHQoyxCTxjAx_eiCCmVW-YlZhc12SWC-Do60oZo"/>
+</div>
+<div class="space-y-1">
+<p class="text-xs text-on-surface-variant uppercase font-medium">Anua</p>
+<h3 class="font-headline font-bold text-lg text-on-surface">Heartleaf Pore Control Cleansing Oil</h3>
+<div class="flex items-center gap-1 py-1">
+<span class="material-symbols-outlined text-sm text-primary" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm text-primary" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm text-primary" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm text-primary" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm text-primary" style="font-variation-settings: 'FILL' 1;">star_half</span>
+<span class="text-[10px] text-on-surface-variant ml-1">(1.2k reviews)</span>
+</div>
+<div class="flex justify-between items-center pt-2">
+<p class="font-headline font-extrabold text-xl text-primary">$420 MXN</p>
+<button class="bg-primary text-on-primary w-10 h-10 rounded-full flex items-center justify-center shadow-md active:scale-90 transition-transform">
+<span class="material-symbols-outlined text-xl">add_shopping_cart</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Shop by Concern (Bento Grid) -->
+<section class="bg-surface-container py-24 px-6">
+<div class="max-w-screen-2xl mx-auto">
+<div class="text-center mb-16">
+<h2 class="font-headline text-4xl md:text-5xl font-extrabold text-on-surface tracking-tight mb-4 text-glow">¿Qué necesita tu piel hoy?</h2>
+<p class="text-on-surface-variant text-lg">Soluciones coreanas diseñadas para latinas.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-4 gap-6 h-[600px] md:h-[450px]">
+<div class="md:col-span-2 relative group overflow-hidden rounded-xl bg-primary">
+<img alt="Hidratación" class="w-full h-full object-cover opacity-60 group-hover:scale-105 transition-transform duration-700" data-alt="Splash of clean water in soft slow motion, blue tones, refreshing and pure hydration theme" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAbZUshrFHgaTLf_GCUD3aUIQP1pCHo2D33ALTci5wQmgMz_Nw_Lt5HQzLVD4krK1zRZR5VlIO-2Lei_WObebR-0l_Wn3AUi-epbJCgwlGxusZ5xX6tzri5EJUNkTVUFvX09nbY9Xg2f4VHRH2Ve-HxdzIUr4Fk8sgEXLfyHTKfLkVrVRK04elc6iyovv0H8r4DMdkBaQPiIQcPzWfUdxv3lgjvueFJcsHZJpmVz6eUpk2daVf4Zcuj6rf6UpG6062e6OH76F2-hdY"/>
+<div class="absolute inset-0 flex flex-col justify-end p-10">
+<h3 class="font-headline text-3xl font-black text-on-primary">Hidratación</h3>
+<p class="text-on-primary/80 mb-4">Adiós a la piel seca.</p>
+<button class="bg-surface-container-lowest text-primary px-6 py-2 rounded-full font-bold self-start active:scale-95 transition-transform">Explorar</button>
+</div>
+</div>
+<div class="relative group overflow-hidden rounded-xl bg-secondary">
+<img alt="Acné" class="w-full h-full object-cover opacity-60 group-hover:scale-105 transition-transform duration-700" data-alt="Young woman looking at mirror with focus on her skin, soft beauty lighting, acne care concept" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDmVgS_k2fJ-8aCZjoKA3aBDvEYrm7dIRXu_qp9JwETvhl-Qs4QgMRlBF6ASNyBlAA_f2UzzpX1kbOeDvnyC4ar9iwttjSnMps6sX3Q6zzZdgfnNpgovkBCfWd6P-ub_mkKqaMXsqf15979Z-ouJmIirXrmHccp3kw4Qcl7WGr7oFrGLZRFbFBRvYcTtuGngfGPmC5PjxXXEN_84kkQAFRX30IF1K0Lum5K0eIm_pPQpe3puo-y9eJIBgURNN1z9rrivj6tFPwy80Q"/>
+<div class="absolute inset-0 flex flex-col justify-end p-8">
+<h3 class="font-headline text-2xl font-black text-on-secondary">Acné</h3>
+<button class="bg-surface-container-lowest text-secondary px-6 py-2 rounded-full font-bold self-start active:scale-95 transition-transform mt-2">Ver Rutina</button>
+</div>
+</div>
+<div class="relative group overflow-hidden rounded-xl bg-tertiary">
+<img alt="Manchas" class="w-full h-full object-cover opacity-60 group-hover:scale-105 transition-transform duration-700" data-alt="Sunlight hitting a glass prism creating soft rainbow spots on a white wall, pigmentation concept" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDSPFkCNs6SNYnfThmogz7WqTmQsOvV4SK7vnSqFpjGE_FLaHBFF7Nkk9Sgw8vPffaBfDzSp0qcWcMzTh2yPtIrUZyon7jcFaNNFD6-AwMLAdPrGEwpad9Cdgjh6Ixja3BsNPij_rqP4wwss56E6nZyW_SY8A3EA5HDa5syKigXv6ORrXZjQs4ndTaE_E4BL_E2KYl4jcB7M2KcFY2ye0n3LS2VFSLVAAd93BoZf71NHtY3nGzGnpQKZLCS9SgtM-UlieG3GIBx9gU"/>
+<div class="absolute inset-0 flex flex-col justify-end p-8">
+<h3 class="font-headline text-2xl font-black text-on-tertiary">Manchas</h3>
+<button class="bg-surface-container-lowest text-tertiary px-6 py-2 rounded-full font-bold self-start active:scale-95 transition-transform mt-2">Aclarar</button>
+</div>
+</div>
+<div class="md:col-span-4 lg:col-span-1 relative group overflow-hidden rounded-xl bg-on-surface-variant">
+<div class="absolute inset-0 flex flex-col justify-center items-center p-8 text-center bg-surface-variant/40 backdrop-blur-sm">
+<h3 class="font-headline text-2xl font-black text-on-surface">Sensibilidad</h3>
+<p class="text-on-surface-variant text-sm mt-2">Cuidado gentil.</p>
+<a class="mt-4 material-symbols-outlined text-primary text-4xl" href="#">arrow_circle_right</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Social-Native Module (TikTok Style) -->
+<section class="py-24 px-6 max-w-screen-2xl mx-auto overflow-hidden">
+<div class="flex items-center gap-4 mb-12">
+<div class="w-12 h-12 rounded-full bg-gradient-to-tr from-rose-500 to-purple-600 flex items-center justify-center text-white">
+<span class="material-symbols-outlined" data-weight="fill">play_circle</span>
+</div>
+<div>
+<h2 class="font-headline text-3xl font-extrabold text-on-surface tracking-tight">Nuestros Favoritos de TikTok</h2>
+<p class="text-on-surface-variant uppercase text-[10px] font-bold tracking-[0.2em]">Viral &amp; Trending Now</p>
+</div>
+</div>
+<div class="flex gap-6 overflow-x-auto pb-8 snap-x no-scrollbar">
+<!-- Video Thumbnail 1 -->
+<div class="min-w-[280px] md:min-w-[320px] aspect-[9/16] relative rounded-xl overflow-hidden snap-center group">
+<img alt="TikTok Glow" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="Young woman applying serum to face, glowing skin, vibrant bedroom lighting, TikTok vertical video style" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBpG97noEloKEw_1t217kXUCRK5IXOsVjOlH8LGl6_SBpn7WzZDtiYTEBCqtodEIKo02T_cmdHMDrqt4IwFgBwSmXWHuFyAvFqYgzogYXLzG4yl1SSSva7BSVC3ZhpZ8kRGP_LyWNEWnq0MrRuus4t7qy6Hnn1o01wJ38OEKwdUoKAzygUTsBLJR7JTiCpR1oUvUwJ_UayKZlUNc1mzHz6GZ2T_iCNfyGEKkVI0o6m217kqPfC_V981h9KBqr1HIciaOQ5kv_Nja8I"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+<div class="absolute top-4 right-4 bg-black/30 backdrop-blur-md px-3 py-1 rounded-full text-white text-xs flex items-center gap-2">
+<span class="material-symbols-outlined text-sm">visibility</span> 12.4k
+                    </div>
+<div class="absolute bottom-4 left-4 right-4 space-y-3">
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 rounded-full border-2 border-white overflow-hidden">
+<img alt="User" class="w-full h-full object-cover" data-alt="User profile photo" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBqo4uj6ZG-sBV0frNl3JP7DLlNlv4ifXy7ah7WQL--Vb3xLtTwl_grvihzqNTldRUSMybog36LmKC6tqQt_HNmIgIUHwRoVnYbh0LSteLMSKiakfLS1tEB65FTp7_YV4kqaXG78KVy7iQall_GDoDVkurB_LtXCgUHIQQCTtS_M8B9BEMU22HjHbhpt-9Vi6V2myAxvTWtn7rPcaaUdoBow7EXEnluG-k-E_Q1odoUHVN-ypgSemwhU2y_sW2IzbgSH5qXu8LvxQc"/>
+</div>
+<p class="text-white font-bold text-sm">@mariaglow</p>
+</div>
+<div class="bg-white rounded-lg p-3 flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 bg-surface-container rounded-md overflow-hidden">
+<img alt="Product" class="w-full h-full object-cover" data-alt="Product thumbnail" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAIUkcx_miNX8ML9ki5xqIPiJH_-znSmXQjdS7Sqjk2vxXur1NVIvDhWvW4KpB2OMWN2AKwl_im0ZndAw5Z_Cc0ICfZxLWVoJcQtMPMS8N30wLkCzkDo3T8Dq1O9dDKCHNYMk0-TNSoCBpy_cmMsCofQRLDRa2hxp3bvSlasASa4QZNcQT7ssLU7wV-du1QPAOG8O3SiKwNk8zQrlPmF0aqSGme2W420Qa_Fd9D-0GQ3Xv8cg2es7P62XXICLCsRj4bp1aOXABGEXg"/>
+</div>
+<div class="text-[10px]">
+<p class="font-bold text-on-surface">Glow Serum</p>
+<p class="text-on-surface-variant">$490 MXN</p>
+</div>
+</div>
+<button class="bg-primary text-on-primary p-2 rounded-full active:scale-90 transition-transform">
+<span class="material-symbols-outlined text-sm">add</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Video Thumbnail 2 -->
+<div class="min-w-[280px] md:min-w-[320px] aspect-[9/16] relative rounded-xl overflow-hidden snap-center group">
+<img alt="Morning Routine" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="Skincare routine products on sink, morning light through window, soft aesthetic, vertical video frame" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDi5I7-orHzq2w84r432mBmOhbPbXHlK48Nm5pSiqybTXQ_d3cQbj-jvbSysYezn1t1rAPvzeKYmNOTVUoJSXH1exQw5GHChUo9sfzQpEtEVGLo2vUgUOJyihcQzXvMNuYp7rWRqLUSjtizHvFpcRABGqy7aqK_R70qYxdnfSDjWXSt1hLG7K0sfGKY3-eTKMwfSY2fLAJ9anPN_jcA0vNBW_WbAefwJuzV4xeHg8WI6t_1inmH4YhDPMD-MV8T_5YdHr8jQ0u9HKA"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+<div class="absolute top-4 right-4 bg-black/30 backdrop-blur-md px-3 py-1 rounded-full text-white text-xs flex items-center gap-2">
+<span class="material-symbols-outlined text-sm">visibility</span> 45.8k
+                    </div>
+<div class="absolute bottom-4 left-4 right-4 space-y-3">
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 rounded-full border-2 border-white overflow-hidden">
+<img alt="User" class="w-full h-full object-cover" data-alt="User profile photo" src="https://lh3.googleusercontent.com/aida-public/AB6AXuALpz_zjbBU6RVYXDpSZOvzeJcUTrsywkpDpVRh1OiIQIpm0HC1p4QxP980n7M5qy5FwVWOm1jPliOs_huVp056kG6P-oS4FNDjAWUEDIhkkndaDc5AysAXbP6WaNspURBLTpA1oBThdlL52HGG1M6WiftOn2VcKT0oNkuk-2ssvRzRZyaa7rAjmvBrUaH9EznQuZVnq6nRKjj9w9CHur7EeqqEH6G1N67TtfMwovIupwfo3PD8Aq3mWxrlZZ7cDdqXOSfeRPWQa6g"/>
+</div>
+<p class="text-white font-bold text-sm">@ale_beauty</p>
+</div>
+<div class="bg-white rounded-lg p-3 flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 bg-surface-container rounded-md overflow-hidden">
+<img alt="Product" class="w-full h-full object-cover" data-alt="Product thumbnail" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAGs6h-y7aYiIWwtCMxOV1rCHiVLuZ8CohujMj78iL8Cb8OvLkfGi2r27FVESfhgGowvnR4rzj_k5lrUk10xY02jcHQY0cQssYbtG7DYQOzSySTopRCx9MKxN5-nYEya4ohzdGZZG0XccXg8j-8QxUxNsNINvQe-DpSblNoU_IT8AMhwTa9zR5QpugCrqzMl0avmG6EDrNlgINjRgo4OFnZ6GxLnlf4enAY-fGWb7t77SM4vph6wLE1aCHu1Pdibs5gHY6MpFeK5YE"/>
+</div>
+<div class="text-[10px]">
+<p class="font-bold text-on-surface">Cleansing Balm</p>
+<p class="text-on-surface-variant">$385 MXN</p>
+</div>
+</div>
+<button class="bg-primary text-on-primary p-2 rounded-full active:scale-90 transition-transform">
+<span class="material-symbols-outlined text-sm">add</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Video Thumbnail 3 -->
+<div class="min-w-[280px] md:min-w-[320px] aspect-[9/16] relative rounded-xl overflow-hidden snap-center group">
+<img alt="Sun Protection" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="Close up of face with sunscreen being applied, luminous texture, sunbeams, vertical video format" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAGWgfFvcRd7dTRexo4Fo_RU9jVTqwulX2lvw80Q0L2BJquvoJf5D-7L2ue6oie2aoyzAJLMs-zc9xXPq6GF0vFJx4NffbyiWozf47MeuLlVojZWYkyJcbD4verScZNx5rsTq_l1r1zxG5ysGVXaRQoyXFKSSd2AK6BzgUjs-N_EyoanCgcHAxy7QlXbqKyJBut2kWdPVlfDIP-80bgVH89W7eGWo9H7f5CKnAgpYiX4f6X8sIUAYZAtkZq9qr4dglgSeDdjT-ZW2w"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+<div class="absolute top-4 right-4 bg-black/30 backdrop-blur-md px-3 py-1 rounded-full text-white text-xs flex items-center gap-2">
+<span class="material-symbols-outlined text-sm">visibility</span> 89.1k
+                    </div>
+<div class="absolute bottom-4 left-4 right-4 space-y-3">
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 rounded-full border-2 border-white overflow-hidden">
+<img alt="User" class="w-full h-full object-cover" data-alt="User profile photo" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAwzY1HhaoavpIsXUrAn2m6lprDDq_ke3T4JdLx_Jei1Y09egln_uWBU3tTr2AfX9F3-3EutwFGZQdA29BxVvBj74mL8ItrTH6daLBNRwQ6roxmswtLaglDfWoUCJ1JydyWlZOXX1yk_ImVBH5p09MAuipG5JyrXfg1VNXQh8GhT2J9ZGGqOvO0HK1FTYq11iT_t-KbbjKrcmZeSiFzH0AGAKPf52YTWPgTV1R68wg9Qs6DmVQBBUQBn1j6_5RjbBXKKZGWXb6uHPA"/>
+</div>
+<p class="text-white font-bold text-sm">@kbeauty_latam</p>
+</div>
+<div class="bg-white rounded-lg p-3 flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 bg-surface-container rounded-md overflow-hidden">
+<img alt="Product" class="w-full h-full object-cover" data-alt="Product thumbnail" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDfd7TArcf4gc259FWHiphb37ry5VgO5vbKVx5o6HyyKJire6wDGNwGPGB5PVKT8sB006ZMuEKZ42RqaDVlxOXcnuJVgyxnviLEzatrcsylEyZmsf79EbMgiKoqQX2QlQQJ_-HT6Ajh8D6vq0lKyO7V8_YTET7sg_v8_aBq9FDIxNopY0HRBG_ZyDlMoeCdFHwwzD7B9fiTK5h1bO7valFfcsqkxOdD2VrEmFQfMrWA4pZntq4rsQHkFMgdWA12Sxymnk1lCmk3jy8"/>
+</div>
+<div class="text-[10px]">
+<p class="font-bold text-on-surface">Airy Sun Stick</p>
+<p class="text-on-surface-variant">$550 MXN</p>
+</div>
+</div>
+<button class="bg-primary text-on-primary p-2 rounded-full active:scale-90 transition-transform">
+<span class="material-symbols-outlined text-sm">add</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Membership Section -->
+<section class="px-6 py-24">
+<div class="max-w-4xl mx-auto bg-primary rounded-xl overflow-hidden relative shadow-2xl">
+<div class="absolute top-0 right-0 w-64 h-64 bg-white/10 rounded-full -translate-y-1/2 translate-x-1/2 blur-3xl"></div>
+<div class="relative z-10 p-12 text-center">
+<h2 class="font-headline text-4xl font-extrabold text-on-primary mb-6">Sé parte del Club.</h2>
+<p class="text-on-primary/90 text-xl mb-10 max-w-xl mx-auto leading-relaxed">
+                        Beneficios exclusivos, rutinas personalizadas por expertas y acceso anticipado a lanzamientos.
+                    </p>
+<div class="flex flex-col items-center gap-6">
+<a class="bg-white text-primary px-12 py-5 rounded-full font-black text-xl shadow-lg hover:scale-105 transition-transform" href="#">Únete Gratis</a>
+<div class="flex items-center gap-2 text-on-primary/70 text-sm">
+<span class="material-symbols-outlined text-sm">group</span>
+                            Más de 50,000 integrantes en Latam.
+                        </div>
+</div>
+</div>
+</div>
+</section>
+<!-- Community Reassurance / Reviews -->
+<section class="py-24 px-6 max-w-screen-2xl mx-auto">
+<div class="text-center mb-16">
+<h2 class="font-headline text-4xl font-extrabold text-on-surface mb-2 tracking-tight">Piel real, resultados reales.</h2>
+<div class="flex justify-center items-center gap-1 mb-8">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="ml-2 font-bold text-on-surface">4.9/5 basado en testimonios</span>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Review 1 -->
+<div class="bg-surface-container-low rounded-xl p-8 space-y-6">
+<div class="w-full aspect-video rounded-lg overflow-hidden grayscale hover:grayscale-0 transition-all duration-500">
+<img alt="Resultados 1" class="w-full h-full object-cover" data-alt="Satisfied customer showing clear glowing skin after skincare routine, natural light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBbzcxKIE8CFX8ClAM3Nx7Xu8KtRIZriJdhRZBCeDg1p4Qf2-7Dmxf-Bn_jeXzLMvtCXyGEBultavXHZo-4VMLpVh8yEbCyt3wyM9x034zEkOwpplESCHM26-ddiOH_Ij19RDMlyFSzpyvw10YkdtmkPYnuekmHLnr8b_DgIGvA-53Bpvpdx9sXn99-gIkw9BY66tdHEl4U9__LoxtjRSgM9tR1krwVPjvKFo-UclwCwilrREE9vTZA7yrkHX-v_uN29G55ouZF6ow"/>
+</div>
+<p class="italic text-on-surface-variant leading-relaxed">"Nunca pensé que mi piel mixta se llevaría tan bien con los productos coreanos. En Club Aesthetique me ayudaron a elegir lo correcto para el calor de Monterrey."</p>
+<div class="flex items-center gap-3">
+<p class="font-bold text-primary">Lucía R.</p>
+<span class="material-symbols-outlined text-xs text-primary" style="font-variation-settings: 'FILL' 1;">verified</span>
+</div>
+</div>
+<!-- Review 2 -->
+<div class="bg-surface-container-low rounded-xl p-8 space-y-6">
+<div class="w-full aspect-video rounded-lg overflow-hidden grayscale hover:grayscale-0 transition-all duration-500">
+<img alt="Resultados 2" class="w-full h-full object-cover" data-alt="Woman with healthy skin smiling, soft pink background, professional editorial style" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC06FV4BUJvGBSQIGuTjhNDZ6zWORlu_gf7QodL6eQazXxPOKGuFG13CiMhXNAPCMBOzhFJ92gKuZh4XqF8oh7FC83_cW5kO4pkLATqk6NJzFT_HiRmU9xwvQFSkf8Cggm7wb4iU2OBvc65r4dQ1-WJQtTWS6JkYTmyi_z-HwkV9q_42w2Q9wgd8OkWsoyJUAiBsp3FndhI4LbdSMPxKtJVYa1H_WWjO7rT6otvAipt1C_NiRvYSPuuWK3ar1Lvm2Dvph8RMFPHdQE"/>
+</div>
+<p class="italic text-on-surface-variant leading-relaxed">"El soporte por WhatsApp es increíble. Me guiaron paso a paso para mi rutina de doble limpieza y el cambio en mis poros es impresionante."</p>
+<div class="flex items-center gap-3">
+<p class="font-bold text-primary">Camila V.</p>
+<span class="material-symbols-outlined text-xs text-primary" style="font-variation-settings: 'FILL' 1;">verified</span>
+</div>
+</div>
+<!-- Review 3 -->
+<div class="bg-surface-container-low rounded-xl p-8 space-y-6">
+<div class="w-full aspect-video rounded-lg overflow-hidden grayscale hover:grayscale-0 transition-all duration-500">
+<img alt="Resultados 3" class="w-full h-full object-cover" data-alt="Radiant young woman with clear skin, sunlight highlights, casual lifestyle beauty photo" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCa64AwXwTaR-BL81jWPis8VGuoIIkZNgRsgT1OykyUn6wTUIblUcLIGN41ranHn6YMS9FK1aZSCVxzvcai6M2n8DX9fcNHEbs5jIoe2UIPNVUb-FVr__7-zj1UfI2uJK00jFQJiyrAWaLoGXQs8rQxhiZcqfE3BL1jvil2yN0rVjb5oSPlvlpC8qkDysTOT9kHC1RkjJCBhqoOaZ62_DNkqP-67ZF3paWomrrF3c6TIyUK73WNojiRbh1oClP6FwEFC4A-KeLndXI"/>
+</div>
+<p class="italic text-on-surface-variant leading-relaxed">"Los envíos a Colombia llegaron súper rápido y todo 100% original. Amo ser parte de esta comunidad que entiende nuestra piel latina."</p>
+<div class="flex items-center gap-3">
+<p class="font-bold text-primary">Valeria M.</p>
+<span class="material-symbols-outlined text-xs text-primary" style="font-variation-settings: 'FILL' 1;">verified</span>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- WhatsApp Floating Button -->
+<a class="fixed bottom-8 right-8 z-[100] w-16 h-16 bg-[#25D366] text-white rounded-full flex items-center justify-center shadow-2xl hover:scale-110 active:scale-95 transition-all" href="#">
+<svg fill="currentColor" height="32" viewbox="0 0 16 16" width="32" xmlns="http://www.w3.org/2000/svg">
+<path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93a7.898 7.898 0 0 0-2.327-5.707zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"></path>
+</svg>
+<span class="absolute -top-1 -right-1 flex h-4 w-4">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+<span class="relative inline-flex rounded-full h-4 w-4 bg-primary"></span>
+</span>
+</a>
+<!-- Footer -->
+<footer class="w-full rounded-t-[3rem] mt-12 bg-stone-100 dark:bg-stone-900 px-12 py-16 grid grid-cols-1 md:grid-cols-3 gap-8">
+<div class="space-y-6">
+<a class="text-lg font-bold text-stone-800 dark:text-stone-200" href="#">Club Aesthetique</a>
+<p class="text-stone-600 dark:text-stone-400 font-be-vietnam-pro text-sm uppercase tracking-widest leading-relaxed">
+                © 2024 Club Aesthetique. Envíos Gratis en compras mayores a $999. Productos 100% Originales. WhatsApp: +52...
+            </p>
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-rose-800 dark:text-rose-300">social_leaderboard</span>
+<span class="material-symbols-outlined text-rose-800 dark:text-rose-300">share</span>
+</div>
+</div>
+<div class="space-y-4">
+<h5 class="text-rose-800 dark:text-rose-300 font-bold uppercase tracking-widest text-xs">Atención al Cliente</h5>
+<ul class="space-y-2">
+<li><a class="text-stone-600 dark:text-stone-400 font-be-vietnam-pro text-sm uppercase tracking-widest hover:text-rose-500 transition-colors" href="#">Consultas Expertas</a></li>
+<li><a class="text-stone-600 dark:text-stone-400 font-be-vietnam-pro text-sm uppercase tracking-widest hover:text-rose-500 transition-colors" href="#">Envíos y Devoluciones</a></li>
+<li><a class="text-stone-600 dark:text-stone-400 font-be-vietnam-pro text-sm uppercase tracking-widest hover:text-rose-500 transition-colors" href="#">Sustentabilidad</a></li>
+</ul>
+</div>
+<div class="space-y-4">
+<h5 class="text-rose-800 dark:text-rose-300 font-bold uppercase tracking-widest text-xs">Newsletter</h5>
+<p class="text-stone-600 dark:text-stone-400 text-xs">Recibe promociones y tips de K-Beauty cada semana.</p>
+<div class="flex">
+<input class="bg-white border-none rounded-l-full px-4 py-3 text-sm focus:ring-2 ring-rose-300 w-full" placeholder="Tu email" type="email"/>
+<button class="bg-rose-800 text-on-primary px-6 py-3 rounded-r-full font-bold">OK</button>
+</div>
+</div>
+</footer>
+</body></html>

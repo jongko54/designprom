@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 4px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #dddddc;
+            border-radius: 10px;
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "outline": "#777777",
+                        "on-tertiary-fixed-variant": "#006230",
+                        "on-error-container": "#570008",
+                        "on-surface-variant": "#5b5b5b",
+                        "secondary-container": "#e0c7ff",
+                        "error-container": "#fb5151",
+                        "inverse-primary": "#0397fd",
+                        "on-secondary-fixed": "#490091",
+                        "on-secondary-container": "#6200be",
+                        "surface-variant": "#dddddc",
+                        "primary": "#005ea0",
+                        "on-secondary-fixed-variant": "#6e00d5",
+                        "on-tertiary-fixed": "#00421e",
+                        "surface-container-high": "#e3e2e2",
+                        "surface": "#f8f6f6",
+                        "on-primary": "#edf3ff",
+                        "on-secondary": "#f9efff",
+                        "surface-container": "#e9e8e8",
+                        "tertiary-container": "#6bf196",
+                        "tertiary": "#006a34",
+                        "on-surface": "#2e2f2f",
+                        "primary-container": "#48a4ff",
+                        "surface-container-low": "#f2f0f0",
+                        "on-primary-fixed": "#000000",
+                        "error": "#b31b25",
+                        "on-error": "#ffefee",
+                        "secondary-dim": "#6d00d2",
+                        "surface-dim": "#d4d4d4",
+                        "on-background": "#2e2f2f",
+                        "secondary": "#7a1ee2",
+                        "on-tertiary-container": "#00572a",
+                        "inverse-on-surface": "#9d9d9d",
+                        "tertiary-fixed-dim": "#5ce289",
+                        "primary-fixed": "#48a4ff",
+                        "surface-container-highest": "#dddddc",
+                        "surface-bright": "#f8f6f6",
+                        "background": "#f8f6f6",
+                        "surface-tint": "#005ea0",
+                        "outline-variant": "#aeadad",
+                        "on-tertiary": "#cdffd4",
+                        "primary-fixed-dim": "#0397fd",
+                        "surface-container-lowest": "#ffffff",
+                        "tertiary-dim": "#005c2d",
+                        "secondary-fixed-dim": "#d5b6ff",
+                        "secondary-fixed": "#e0c7ff",
+                        "error-dim": "#9f0519",
+                        "on-primary-container": "#002442",
+                        "on-primary-fixed-variant": "#002d52",
+                        "primary-dim": "#00528d",
+                        "tertiary-fixed": "#6bf196",
+                        "inverse-surface": "#0d0e0f"
+                    },
+                    fontFamily: {
+                        "headline": ["Inter"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    },
+                    borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+                },
+            },
+        }
+    </script>
+</head>
+<body class="bg-surface text-on-surface selection:bg-secondary-container h-screen overflow-hidden flex">
+<!-- GLOBAL TOOL RAIL (Figma Style) -->
+<aside class="w-14 bg-surface-container flex flex-col items-center py-4 gap-6 shrink-0">
+<div class="w-8 h-8 bg-inverse-surface rounded flex items-center justify-center text-white font-black text-xs">P</div>
+<div class="flex flex-col gap-4">
+<button class="w-10 h-10 flex items-center justify-center rounded-lg bg-surface-container-highest text-on-surface-variant hover:text-on-surface">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">widgets</span>
+</button>
+<button class="w-10 h-10 flex items-center justify-center rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all">
+<span class="material-symbols-outlined">explore</span>
+</button>
+<button class="w-10 h-10 flex items-center justify-center rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all">
+<span class="material-symbols-outlined">settings</span>
+</button>
+</div>
+<div class="mt-auto">
+<div class="w-8 h-8 rounded-full bg-primary-container flex items-center justify-center text-[10px] font-bold text-on-primary-container">JD</div>
+</div>
+</aside>
+<!-- SECONDARY SIDEBAR (SideNavBar Shared Component Implementation) -->
+<nav class="bg-slate-100 dark:bg-slate-900 h-screen w-64 flex flex-col shrink-0">
+<div class="px-5 py-6">
+<h1 class="text-lg font-bold text-slate-900 dark:text-white uppercase tracking-tighter">Plugin Engine</h1>
+<p class="text-[0.6875rem] font-medium text-on-surface-variant tracking-tight opacity-60">V 2.4.1</p>
+</div>
+<div class="flex-1 overflow-y-auto px-3 custom-scrollbar flex flex-col gap-1">
+<!-- Nav Section 1 -->
+<div class="mb-6">
+<p class="px-2 mb-2 text-[10px] font-bold uppercase tracking-widest text-on-surface-variant opacity-50">Discovery</p>
+<!-- Active Item: All Plugins -->
+<a class="bg-purple-100 dark:bg-purple-900/30 text-purple-800 dark:text-purple-300 font-semibold flex items-center gap-3 px-3 py-2 rounded transition-colors duration-150" href="#">
+<span class="material-symbols-outlined text-[20px]">apps</span>
+<span class="text-[0.875rem] -tracking-[0.01em]">All Plugins</span>
+</a>
+<a class="text-slate-600 dark:text-slate-400 hover:bg-slate-200 dark:hover:bg-slate-800 transition-colors duration-150 flex items-center gap-3 px-3 py-2 rounded" href="#">
+<span class="material-symbols-outlined text-[20px]">download_done</span>
+<span class="text-[0.875rem] -tracking-[0.01em]">Installed</span>
+</a>
+<a class="text-slate-600 dark:text-slate-400 hover:bg-slate-200 dark:hover:bg-slate-800 transition-colors duration-150 flex items-center gap-3 px-3 py-2 rounded" href="#">
+<span class="material-symbols-outlined text-[20px]">grade</span>
+<span class="text-[0.875rem] -tracking-[0.01em]">Favorites</span>
+</a>
+<a class="text-slate-600 dark:text-slate-400 hover:bg-slate-200 dark:hover:bg-slate-800 transition-colors duration-150 flex items-center gap-3 px-3 py-2 rounded" href="#">
+<span class="material-symbols-outlined text-[20px]">star</span>
+<span class="text-[0.875rem] -tracking-[0.01em]">Featured</span>
+</a>
+</div>
+<!-- Nav Section 2: Categories -->
+<div class="mb-6">
+<p class="px-2 mb-2 text-[10px] font-bold uppercase tracking-widest text-on-surface-variant opacity-50">Categories</p>
+<div class="flex flex-col gap-0.5">
+<a class="text-slate-600 dark:text-slate-400 hover:bg-slate-200 dark:hover:bg-slate-800 px-3 py-1.5 rounded text-[0.875rem] -tracking-[0.01em]" href="#">Automation</a>
+<a class="text-slate-600 dark:text-slate-400 hover:bg-slate-200 dark:hover:bg-slate-800 px-3 py-1.5 rounded text-[0.875rem] -tracking-[0.01em]" href="#">Accessibility</a>
+<a class="text-slate-600 dark:text-slate-400 hover:bg-slate-200 dark:hover:bg-slate-800 px-3 py-1.5 rounded text-[0.875rem] -tracking-[0.01em]" href="#">Development</a>
+<a class="text-slate-600 dark:text-slate-400 hover:bg-slate-200 dark:hover:bg-slate-800 px-3 py-1.5 rounded text-[0.875rem] -tracking-[0.01em]" href="#">Design Systems</a>
+<a class="text-slate-600 dark:text-slate-400 hover:bg-slate-200 dark:hover:bg-slate-800 px-3 py-1.5 rounded text-[0.875rem] -tracking-[0.01em]" href="#">Typography</a>
+</div>
+</div>
+</div>
+<div class="p-4 border-t-0 bg-slate-100/50">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded bg-surface-container-high overflow-hidden">
+<img alt="Workspace" class="w-full h-full object-cover" data-alt="close-up of a minimalist desktop workspace with a keyboard and small green succulent plant in a white pot" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAe85zzOUrjFknVkc3abLV8SjlO2Fs2vLXWLYDU5IVSVETcJnO3onYAdMEAOWD52vHRcDOr2becr5LyuhpHR9OtJ1Bnq0mlIeK6t6GKt13WeHGhSHJWtYBDZGJjA42yXo_pFuw_61RgNJoNsCB2H07IUKE2FDrBs9l7oOCHBMoVxQneXRZkPzJsZiRk3gfNmX-5s_wpMDFUgRDhio4PFBYrrYmuZRc0kVMDHPBiWHf4z9Ri-5daTBQ_R8mHv7g_5M9X7BmSqUKUKbs"/>
+</div>
+<div class="flex flex-col">
+<span class="text-[12px] font-bold text-on-surface leading-tight">Design Ops</span>
+<span class="text-[10px] text-on-surface-variant opacity-70">Switch workspace</span>
+</div>
+</div>
+</div>
+</nav>
+<!-- MAIN WORKSPACE -->
+<main class="flex-1 flex flex-col bg-surface relative min-w-0">
+<!-- TOP NAVIGATION BAR (TopNavBar Shared Component Implementation) -->
+<header class="bg-white/80 dark:bg-slate-950/80 backdrop-blur-xl flex justify-between items-center w-full px-6 h-14 sticky top-0 z-40">
+<div class="flex items-center gap-4 flex-1">
+<h2 class="text-xl font-black text-slate-900 dark:text-white -tracking-[0.02em] shrink-0">The Precision Engine</h2>
+<div class="relative max-w-md w-full">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant text-[18px]">search</span>
+<input class="w-full bg-surface-container-low border-none rounded-lg py-1.5 pl-10 pr-4 text-sm focus:ring-2 focus:ring-blue-500/50 placeholder:text-on-surface-variant/50" placeholder="Search plugins, creators, or keywords..." type="text"/>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<button class="p-2 text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white transition-colors">
+<span class="material-symbols-outlined text-[20px]">filter_list</span>
+</button>
+<button class="p-2 text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white transition-colors">
+<span class="material-symbols-outlined text-[20px]">tune</span>
+</button>
+<button class="p-2 text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white transition-colors">
+<span class="material-symbols-outlined text-[20px]">help</span>
+</button>
+<div class="h-6 w-[1px] bg-outline-variant/20 mx-2"></div>
+<div class="w-8 h-8 rounded-full border-2 border-primary overflow-hidden">
+<img alt="Profile" class="w-full h-full object-cover" data-alt="professional portrait of a young male designer in a creative office environment with soft natural lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCLi-XcNYF4Nj1ZcZT6twRqeRkpbhaWBEXB9V7qD7Kvx2BNSaIb_92HdBw5EL2ixWuMuLXI-fNl_Ug1Gt-l-6Ei8wCSJ3v5jJS78RoYpkXGbisNmtl6PIVY97o7A74qb4philBs1ZB87wZa7E31MvoWB5RFyqv6RNUQkXX9zac-EqZAlYxU1D_zznWXlAqGHKWUUn-xwKSshVYxxwCRqFgN9t0dTUmqLRYMiEiK7vaoXlwANVoO7XGkDiGj1ffwCr2OS174GFx1DxA"/>
+</div>
+</div>
+</header>
+<!-- CANVAS CONTENT -->
+<div class="flex-1 overflow-y-auto custom-scrollbar p-8">
+<div class="max-w-7xl mx-auto">
+<!-- HERO SECTION (ASSET GRID) -->
+<section class="mb-12">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<!-- Featured Large -->
+<div class="md:col-span-2 relative group overflow-hidden rounded-xl bg-gradient-to-br from-primary to-primary-dim p-8 flex flex-col justify-end min-h-[320px]">
+<div class="absolute inset-0 opacity-20 pointer-events-none">
+<img alt="Abstract Pattern" class="w-full h-full object-cover mix-blend-overlay" data-alt="vibrant blue abstract fluid 3D waves with soft gradients and grainy texture on dark background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCBujSHZQCglVsmd_ST9A5JSAH0-Ui57eMVriim8hRkXceMTUHhHO0qvLd5j4J-hyB5eISpi1xVzdn6ED_QXrUIbTr2hbSBrO_CeD21-kg7k-Ct2TxLb7Uz-FIDmaPgWSvMoyOXDGtc1amXFU8z9f51MLjvIzApiX0mojxuiem2C7dtNvcHz9VnxFsk31fA7tBlACC3pGbJAPysZPbhksTWxfTr3Pj8gyVcLQDKGCbZy9a6BXxznsTna4Zbks0EQ1QyPl3apHmo-Uo"/>
+</div>
+<div class="relative z-10">
+<span class="px-2 py-1 bg-white/20 backdrop-blur-md rounded text-[10px] font-bold text-white uppercase tracking-wider mb-4 inline-block">Staff Pick</span>
+<h3 class="text-3xl font-bold text-white -tracking-[0.02em] mb-2">Automate Everything</h3>
+<p class="text-on-primary max-w-md text-sm mb-6 leading-relaxed">Save hours of manual design work with our new curated suite of automation plugins designed for enterprise design systems.</p>
+<button class="bg-surface-container-lowest text-primary font-bold text-xs py-2 px-6 rounded-lg hover:opacity-90 transition-opacity">Explore Collection</button>
+</div>
+</div>
+<!-- Featured Secondary -->
+<div class="bg-secondary-container rounded-xl p-8 flex flex-col justify-center items-center text-center relative overflow-hidden group">
+<div class="w-20 h-20 mb-6 bg-white/40 backdrop-blur-sm rounded-2xl flex items-center justify-center transform group-hover:scale-110 transition-transform duration-300">
+<span class="material-symbols-outlined text-[40px] text-secondary" style="font-variation-settings: 'FILL' 1;">auto_awesome</span>
+</div>
+<h3 class="text-xl font-bold text-on-secondary-container -tracking-[0.02em] mb-2">AI Color Weaver</h3>
+<p class="text-on-secondary-container/70 text-xs mb-6">Generative color palettes based on your brand sentiment.</p>
+<button class="bg-secondary text-white font-bold text-xs py-2 px-6 rounded-lg w-full">Try Now</button>
+</div>
+</div>
+</section>
+<!-- GRID LIST HEADER -->
+<div class="flex items-center justify-between mb-6">
+<div>
+<h4 class="text-xl font-bold text-on-surface -tracking-[0.02em]">Popular Plugins</h4>
+<p class="text-[0.6875rem] text-on-surface-variant font-medium">Updated every 24 hours based on community installs</p>
+</div>
+<div class="flex gap-2">
+<button class="bg-surface-container-high px-4 py-1.5 rounded text-[12px] font-bold flex items-center gap-2">
+                            Latest <span class="material-symbols-outlined text-[14px]">expand_more</span>
+</button>
+</div>
+</div>
+<!-- PLUGIN GRID -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
+<!-- Plugin Card 1 -->
+<div class="bg-surface-container-lowest rounded-lg p-4 hover:shadow-lg transition-shadow duration-300 flex flex-col group border border-transparent hover:border-outline-variant/10">
+<div class="flex items-start justify-between mb-4">
+<div class="w-12 h-12 rounded-lg bg-gradient-to-tr from-blue-500 to-indigo-600 flex items-center justify-center text-white">
+<span class="material-symbols-outlined text-[28px]" style="font-variation-settings: 'FILL' 1;">layers</span>
+</div>
+<div class="flex flex-col items-end">
+<span class="text-[10px] font-bold text-tertiary flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[12px]" style="font-variation-settings: 'FILL' 1;">star</span>
+                                    4.9
+                                </span>
+<span class="text-[9px] text-on-surface-variant">2.1k reviews</span>
+</div>
+</div>
+<h5 class="text-[14px] font-bold text-on-surface mb-0.5">Auto-Layout Master</h5>
+<p class="text-[11px] text-on-surface-variant mb-4">by Figma Team</p>
+<p class="text-[12px] text-on-surface-variant/80 mb-6 flex-1 line-clamp-2">Perfectly align your frames and components with one-click responsive logic.</p>
+<div class="flex gap-2">
+<button class="flex-1 bg-primary text-on-primary text-[11px] font-bold py-2 rounded-lg hover:bg-primary-dim transition-colors">Install</button>
+<button class="w-9 h-9 flex items-center justify-center bg-surface-container-low text-on-surface-variant rounded-lg hover:bg-surface-container-high transition-colors">
+<span class="material-symbols-outlined text-[18px]">more_horiz</span>
+</button>
+</div>
+</div>
+<!-- Plugin Card 2 -->
+<div class="bg-surface-container-lowest rounded-lg p-4 hover:shadow-lg transition-shadow duration-300 flex flex-col group border border-transparent hover:border-outline-variant/10">
+<div class="flex items-start justify-between mb-4">
+<div class="w-12 h-12 rounded-lg bg-gradient-to-tr from-purple-500 to-pink-500 flex items-center justify-center text-white">
+<span class="material-symbols-outlined text-[28px]" style="font-variation-settings: 'FILL' 1;">palette</span>
+</div>
+<div class="flex flex-col items-end">
+<span class="text-[10px] font-bold text-tertiary flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[12px]" style="font-variation-settings: 'FILL' 1;">star</span>
+                                    4.7
+                                </span>
+<span class="text-[9px] text-on-surface-variant">1.4k reviews</span>
+</div>
+</div>
+<h5 class="text-[14px] font-bold text-on-surface mb-0.5">Color Weaver</h5>
+<p class="text-[11px] text-on-surface-variant mb-4">by Plugins Inc</p>
+<p class="text-[12px] text-on-surface-variant/80 mb-6 flex-1 line-clamp-2">Generate accessible and harmonic color systems instantly from any input.</p>
+<div class="flex gap-2">
+<button class="flex-1 bg-primary text-on-primary text-[11px] font-bold py-2 rounded-lg hover:bg-primary-dim transition-colors">Install</button>
+<button class="w-9 h-9 flex items-center justify-center bg-surface-container-low text-on-surface-variant rounded-lg hover:bg-surface-container-high transition-colors">
+<span class="material-symbols-outlined text-[18px]">more_horiz</span>
+</button>
+</div>
+</div>
+<!-- Plugin Card 3 -->
+<div class="bg-surface-container-lowest rounded-lg p-4 hover:shadow-lg transition-shadow duration-300 flex flex-col group border border-transparent hover:border-outline-variant/10">
+<div class="flex items-start justify-between mb-4">
+<div class="w-12 h-12 rounded-lg bg-gradient-to-tr from-emerald-500 to-teal-600 flex items-center justify-center text-white">
+<span class="material-symbols-outlined text-[28px]" style="font-variation-settings: 'FILL' 1;">terminal</span>
+</div>
+<div class="flex flex-col items-end">
+<span class="text-[10px] font-bold text-tertiary flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[12px]" style="font-variation-settings: 'FILL' 1;">star</span>
+                                    5.0
+                                </span>
+<span class="text-[9px] text-on-surface-variant">842 reviews</span>
+</div>
+</div>
+<h5 class="text-[14px] font-bold text-on-surface mb-0.5">React Code Gen</h5>
+<p class="text-[11px] text-on-surface-variant mb-4">by DevTool Studio</p>
+<p class="text-[12px] text-on-surface-variant/80 mb-6 flex-1 line-clamp-2">Export your designs directly to production-ready React components with Tailwind.</p>
+<div class="flex gap-2">
+<button class="flex-1 bg-primary text-on-primary text-[11px] font-bold py-2 rounded-lg hover:bg-primary-dim transition-colors">Install</button>
+<button class="w-9 h-9 flex items-center justify-center bg-surface-container-low text-on-surface-variant rounded-lg hover:bg-surface-container-high transition-colors">
+<span class="material-symbols-outlined text-[18px]">more_horiz</span>
+</button>
+</div>
+</div>
+<!-- Plugin Card 4 -->
+<div class="bg-surface-container-lowest rounded-lg p-4 hover:shadow-lg transition-shadow duration-300 flex flex-col group border border-transparent hover:border-outline-variant/10">
+<div class="flex items-start justify-between mb-4">
+<div class="w-12 h-12 rounded-lg bg-gradient-to-tr from-amber-400 to-orange-500 flex items-center justify-center text-white">
+<span class="material-symbols-outlined text-[28px]" style="font-variation-settings: 'FILL' 1;">verified_user</span>
+</div>
+<div class="flex flex-col items-end">
+<span class="text-[10px] font-bold text-tertiary flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[12px]" style="font-variation-settings: 'FILL' 1;">star</span>
+                                    4.6
+                                </span>
+<span class="text-[9px] text-on-surface-variant">3.1k reviews</span>
+</div>
+</div>
+<h5 class="text-[14px] font-bold text-on-surface mb-0.5">Contrast Checker Pro</h5>
+<p class="text-[11px] text-on-surface-variant mb-4">by Accessibility Labs</p>
+<p class="text-[12px] text-on-surface-variant/80 mb-6 flex-1 line-clamp-2">Real-time WCAG 2.1 auditing for your entire canvas. Never miss a contrast issue.</p>
+<div class="flex gap-2">
+<button class="flex-1 bg-primary text-on-primary text-[11px] font-bold py-2 rounded-lg hover:bg-primary-dim transition-colors">Install</button>
+<button class="w-9 h-9 flex items-center justify-center bg-surface-container-low text-on-surface-variant rounded-lg hover:bg-surface-container-high transition-colors">
+<span class="material-symbols-outlined text-[18px]">more_horiz</span>
+</button>
+</div>
+</div>
+<!-- Plugin Card 5 -->
+<div class="bg-surface-container-lowest rounded-lg p-4 hover:shadow-lg transition-shadow duration-300 flex flex-col group border border-transparent hover:border-outline-variant/10">
+<div class="flex items-start justify-between mb-4">
+<div class="w-12 h-12 rounded-lg bg-gradient-to-tr from-rose-500 to-red-700 flex items-center justify-center text-white">
+<span class="material-symbols-outlined text-[28px]" style="font-variation-settings: 'FILL' 1;">font_download</span>
+</div>
+<div class="flex flex-col items-end">
+<span class="text-[10px] font-bold text-tertiary flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[12px]" style="font-variation-settings: 'FILL' 1;">star</span>
+                                    4.8
+                                </span>
+<span class="text-[9px] text-on-surface-variant">521 reviews</span>
+</div>
+</div>
+<h5 class="text-[14px] font-bold text-on-surface mb-0.5">Type Scale Maestro</h5>
+<p class="text-[11px] text-on-surface-variant mb-4">by Font Flow</p>
+<p class="text-[12px] text-on-surface-variant/80 mb-6 flex-1 line-clamp-2">Mathematical typographic scales for consistent digital hierarchy.</p>
+<div class="flex gap-2">
+<button class="flex-1 bg-primary text-on-primary text-[11px] font-bold py-2 rounded-lg hover:bg-primary-dim transition-colors">Install</button>
+<button class="w-9 h-9 flex items-center justify-center bg-surface-container-low text-on-surface-variant rounded-lg hover:bg-surface-container-high transition-colors">
+<span class="material-symbols-outlined text-[18px]">more_horiz</span>
+</button>
+</div>
+</div>
+<!-- Plugin Card 6 (Installed State Example) -->
+<div class="bg-surface-container-lowest rounded-lg p-4 flex flex-col group border border-transparent opacity-80">
+<div class="flex items-start justify-between mb-4">
+<div class="w-12 h-12 rounded-lg bg-slate-300 flex items-center justify-center text-slate-600">
+<span class="material-symbols-outlined text-[28px]" style="font-variation-settings: 'FILL' 1;">image</span>
+</div>
+<div class="flex flex-col items-end">
+<span class="text-[10px] font-bold text-tertiary flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[12px]" style="font-variation-settings: 'FILL' 1;">star</span>
+                                    4.5
+                                </span>
+<span class="text-[9px] text-on-surface-variant">12k reviews</span>
+</div>
+</div>
+<h5 class="text-[14px] font-bold text-on-surface mb-0.5">Image Resizer</h5>
+<p class="text-[11px] text-on-surface-variant mb-4">by Media Utils</p>
+<p class="text-[12px] text-on-surface-variant/80 mb-6 flex-1 line-clamp-2">Bulk resize and optimize images directly on the canvas with zero quality loss.</p>
+<div class="flex gap-2">
+<button class="flex-1 bg-surface-container-high text-on-surface text-[11px] font-bold py-2 rounded-lg flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-[14px]" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+                                Installed
+                            </button>
+<button class="w-9 h-9 flex items-center justify-center bg-surface-container-low text-on-surface-variant rounded-lg hover:bg-surface-container-high transition-colors">
+<span class="material-symbols-outlined text-[18px]">more_horiz</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- FOOTER (Footer Shared Component Implementation) -->
+<footer class="bg-slate-50 dark:bg-slate-950 flex justify-between px-8 items-center py-4 mt-auto">
+<span class="text-slate-400 text-[0.6875rem] font-medium tracking-tight">© 2024 Precision Engine Inc.</span>
+<div class="flex gap-6">
+<a class="text-slate-400 hover:text-blue-500 transition-colors text-[0.6875rem] font-medium" href="#">Documentation</a>
+<a class="text-slate-400 hover:text-blue-500 transition-colors text-[0.6875rem] font-medium" href="#">Changelog</a>
+<a class="text-slate-400 hover:text-blue-500 transition-colors text-[0.6875rem] font-medium" href="#">Community</a>
+</div>
+</footer>
+<!-- DRAWER / DETAIL PANEL (Figma Contextual Feel) -->
+<div class="absolute top-14 right-0 bottom-0 w-80 bg-white border-l border-outline-variant/10 shadow-2xl z-50 transform translate-x-full transition-transform hover:translate-x-0 hidden lg:flex flex-col">
+<!-- Details UI would go here -->
+</div>
+<!-- FLOATING ACTION TOOLBAR (Signature Component) -->
+<div class="fixed bottom-12 left-1/2 -translate-x-1/2 bg-surface-container-lowest/80 backdrop-blur-xl px-2 py-2 rounded-xl flex items-center gap-1 shadow-2xl border border-white/20">
+<button class="p-2 hover:bg-surface-container-high rounded-lg text-on-surface-variant transition-colors" title="Select Tool">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">near_me</span>
+</button>
+<button class="p-2 hover:bg-surface-container-high rounded-lg text-on-surface-variant transition-colors" title="Hand Tool">
+<span class="material-symbols-outlined text-[20px]">pan_tool</span>
+</button>
+<div class="w-[1px] h-4 bg-outline-variant/20 mx-1"></div>
+<button class="p-2 bg-primary-container text-on-primary-container rounded-lg flex items-center gap-2" title="Create Plugin">
+<span class="material-symbols-outlined text-[20px]">add</span>
+<span class="text-[11px] font-bold pr-1">New Plugin</span>
+</button>
+</div>
+</main>
+</body></html>

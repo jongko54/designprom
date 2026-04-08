@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>KINETIC | Fandom Hub</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-error-container": "#ffb2b9",
+              "on-tertiary-fixed-variant": "#003e56",
+              "outline": "#896b92",
+              "error-container": "#a70138",
+              "secondary-container": "#aa0266",
+              "on-surface-variant": "#c2a0ca",
+              "on-secondary-fixed": "#6b003e",
+              "inverse-primary": "#842cd3",
+              "surface-variant": "#391647",
+              "primary": "#cc97ff",
+              "on-secondary-fixed-variant": "#9e005e",
+              "on-secondary-container": "#ffe5ec",
+              "on-primary": "#47007c",
+              "surface": "#1b0425",
+              "on-tertiary-fixed": "#001a27",
+              "surface-container-high": "#31113e",
+              "tertiary-container": "#2db7f2",
+              "surface-container": "#2a0c36",
+              "on-secondary": "#460027",
+              "surface-container-low": "#22072d",
+              "primary-container": "#c284ff",
+              "on-surface": "#fadcff",
+              "tertiary": "#47c4ff",
+              "error": "#ff6e84",
+              "on-error": "#490013",
+              "on-primary-fixed": "#000000",
+              "secondary-dim": "#ff67ad",
+              "surface-dim": "#1b0425",
+              "secondary": "#ff67ad",
+              "on-background": "#fadcff",
+              "inverse-on-surface": "#674b70",
+              "tertiary-fixed-dim": "#1bafe9",
+              "on-tertiary-container": "#003044",
+              "background": "#1b0425",
+              "surface-bright": "#411b50",
+              "primary-fixed": "#c284ff",
+              "surface-container-highest": "#391647",
+              "on-tertiary": "#003b52",
+              "outline-variant": "#593e63",
+              "surface-tint": "#cc97ff",
+              "tertiary-dim": "#05a9e3",
+              "primary-fixed-dim": "#b971ff",
+              "surface-container-lowest": "#000000",
+              "on-primary-container": "#360061",
+              "on-primary-fixed-variant": "#430076",
+              "error-dim": "#d73357",
+              "secondary-fixed-dim": "#ffaccb",
+              "secondary-fixed": "#ffc1d6",
+              "tertiary-fixed": "#37bcf7",
+              "inverse-surface": "#fff7fb",
+              "primary-dim": "#9c48ea"
+            },
+            fontFamily: {
+              "headline": ["Plus Jakarta Sans"],
+              "body": ["Inter"],
+              "label": ["Plus Jakarta Sans"]
+            },
+            borderRadius: {"DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        body { background-color: #1b0425; font-family: 'Inter', sans-serif; overflow-x: hidden; }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+        .glass-panel { background: rgba(65, 27, 80, 0.6); backdrop-filter: blur(20px); }
+        .hide-scrollbar::-webkit-scrollbar { display: none; }
+    </style>
+</head>
+<body class="text-on-surface">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 h-16 bg-purple-950/60 backdrop-blur-3xl flex justify-between items-center px-8 w-full max-w-full shadow-[0_4px_30px_rgba(168,85,247,0.1)] bg-gradient-to-b from-purple-900/20 to-transparent">
+<div class="flex items-center gap-8">
+<span class="text-2xl font-black italic tracking-tighter bg-gradient-to-br from-purple-300 to-purple-600 bg-clip-text text-transparent">KINETIC</span>
+<div class="hidden md:flex gap-6 items-center">
+<a class="font-plus-jakarta text-sm font-bold tracking-tight text-purple-100 border-b-2 border-purple-400 pb-1 active:scale-95 transform transition-transform" href="#">#NEONVIBES</a>
+<a class="font-plus-jakarta text-sm font-bold tracking-tight text-purple-400/70 hover:bg-purple-500/20 hover:text-purple-100 transition-all duration-300 active:scale-95 transform transition-transform" href="#">#FANDOM_WARS</a>
+<a class="font-plus-jakarta text-sm font-bold tracking-tight text-purple-400/70 hover:bg-purple-500/20 hover:text-purple-100 transition-all duration-300 active:scale-95 transform transition-transform" href="#">#KINETIC_FLOW</a>
+<a class="font-plus-jakarta text-sm font-bold tracking-tight text-purple-400/70 hover:bg-purple-500/20 hover:text-purple-100 transition-all duration-300 active:scale-95 transform transition-transform" href="#">#CHALLENGE_ACCEPTED</a>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<button class="p-2 text-purple-300 active:scale-95 transform transition-transform hover:bg-purple-500/20 rounded-full">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+<button class="p-2 text-purple-300 active:scale-95 transform transition-transform hover:bg-purple-500/20 rounded-full">
+<span class="material-symbols-outlined">chat_bubble</span>
+</button>
+<button class="p-2 text-purple-300 active:scale-95 transform transition-transform hover:bg-purple-500/20 rounded-full">
+<span class="material-symbols-outlined">add_circle</span>
+</button>
+<div class="w-8 h-8 rounded-full overflow-hidden border border-primary/30">
+<img alt="User Profile Avatar" class="w-full h-full object-cover" data-alt="Portrait of a young person with stylish neon lighting accents on their face, high-energy digital creator aesthetic" src="https://lh3.googleusercontent.com/aida-public/AB6AXuApdwGowHwo-aJ6R00-L5_R9vLsr2mbNobZdOHNKdYqKAbKzYcQj573us_SFOpSkqwbNbTPoP2YZlwq3sK01fUXJf9BmGy3lvtAoMsb9yExgq4_rU6o5yt1uHF7AFCbO9m4zCQbN2d7xFQapAJA_OLlhzPAeULLdKZvZFXuZQ_qQneO5vBZG4ROUaSPgpnXQB433LgXEARZSjUNI32KOJLJlP8fSlE-jVVBJnzvKbFrkDi3nQai2Dp6vH6w_ujRNsNvDfB4lEidjm0"/>
+</div>
+</div>
+</nav>
+<!-- SideNavBar -->
+<aside class="fixed left-0 top-16 h-[calc(100vh-4rem)] w-64 pt-8 bg-purple-950/40 backdrop-blur-md flex flex-col gap-2 bg-surface-container-low/30">
+<div class="px-8 mb-6">
+<h2 class="font-plus-jakarta font-semibold tracking-wide uppercase text-xs text-purple-400">THE PULSE</h2>
+<p class="text-[10px] text-on-surface-variant">Stay Kinetic</p>
+</div>
+<nav class="flex flex-col gap-2">
+<a class="bg-gradient-to-r from-purple-500 to-purple-800 text-white rounded-full mx-4 px-6 py-3 shadow-lg shadow-purple-500/20 flex items-center gap-3 font-plus-jakarta font-semibold tracking-wide uppercase text-xs hover:translate-x-1 transition-transform" href="#">
+<span class="material-symbols-outlined">bolt</span>
+                For You
+            </a>
+<a class="text-purple-300/60 mx-4 px-6 py-3 hover:text-purple-100 flex items-center gap-3 font-plus-jakarta font-semibold tracking-wide uppercase text-xs hover:bg-white/5 hover:rounded-full transition-all duration-200 hover:translate-x-1 transition-transform" href="#">
+<span class="material-symbols-outlined">group</span>
+                Following
+            </a>
+<a class="text-purple-300/60 mx-4 px-6 py-3 hover:text-purple-100 flex items-center gap-3 font-plus-jakarta font-semibold tracking-wide uppercase text-xs hover:bg-white/5 hover:rounded-full transition-all duration-200 hover:translate-x-1 transition-transform" href="#">
+<span class="material-symbols-outlined">emoji_events</span>
+                Challenges
+            </a>
+<a class="text-purple-300/60 mx-4 px-6 py-3 hover:text-purple-100 flex items-center gap-3 font-plus-jakarta font-semibold tracking-wide uppercase text-xs hover:bg-white/5 hover:rounded-full transition-all duration-200 hover:translate-x-1 transition-transform" href="#">
+<span class="material-symbols-outlined">star</span>
+                Creators
+            </a>
+</nav>
+<div class="mt-8 px-4">
+<button class="w-full py-4 bg-gradient-to-br from-primary to-primary-dim text-on-primary-fixed font-bold rounded-full shadow-lg shadow-primary/20 active:scale-95 transition-transform">
+                Join the Flux
+            </button>
+</div>
+<div class="mt-auto pb-8 px-8 flex flex-col gap-2">
+<div class="flex flex-wrap gap-x-4 gap-y-2 opacity-40">
+<a class="text-[10px] uppercase tracking-widest hover:text-primary transition-colors" href="#">Safety</a>
+<a class="text-[10px] uppercase tracking-widest hover:text-primary transition-colors" href="#">Guidelines</a>
+<span class="text-[10px] uppercase tracking-widest">2024 Kinetic</span>
+</div>
+</div>
+</aside>
+<!-- Main Content Canvas -->
+<main class="ml-64 pt-20 px-8 pb-12">
+<div class="max-w-7xl mx-auto">
+<!-- Hero Grid: Kinetic Feed -->
+<div class="grid grid-cols-12 gap-6 items-start">
+<!-- Main Feed Section (TikTok-style Vertical Focus) -->
+<div class="col-span-12 lg:col-span-8 flex flex-col gap-12">
+<!-- Creator Mashup Card -->
+<div class="relative group aspect-[16/9] bg-surface-container-high rounded-lg overflow-hidden ring-1 ring-outline-variant/15">
+<div class="absolute inset-0 grid grid-cols-3 gap-0.5">
+<div class="relative overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="High-energy concert stage with purple lasers and a cheering crowd in silhouette" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDyAptCJmS_nMOp_a4P3RcjFWmPK2t9M28YWpD3gYueybdbaDnWTpzy3t3QpZpCPBVmYA7DpL0Yy5PC1hzBw4mdEWiaBTD-JljS0Hz4qDrM4z1SM4efOIaKHX8_j7VUtPwzlu4p9pgd8f8FmlwvRHMZauU3h9UMPWWlr7wWRlM8JFLNs9EME2lhRjFGUHFeV_sma1hSmByWw3HTedkGdQbAlLFXE8fPErptQoYnxmxcZKSRsDufDX4IGJiE0K8BP5xa9LRCCYjc0mo"/>
+</div>
+<div class="relative overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Energetic DJ performing at a night club with neon pink lighting and atmospheric smoke" src="https://lh3.googleusercontent.com/aida-public/AB6AXuADLAuM9rGO4nRJguobuigJTEmzD1qFhpgxPxWdxJmU5NQ15zGFSrUrUnYVuLnXZlnDpQA55YaYYQTmNqVA0-ZfIMSom8wpnRy695pnesfg7Z8SGDm3_ZWKcTQmGpsfiNKl6AEdVHp5zckDelSuPqBXs9bXMKkdTKvFI6947jVVj2hIFQKsy_Zf9IeyS4rnMU6j4btT-LVnnerQUbZE287zuTFYrmm8UlhGfv_KotGe1_fUB_CuSIJUnFakOzGxIG8UNctJgT4a1Gc"/>
+</div>
+<div class="relative overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Close-up of a vibrant street dancer in mid-motion with city neon lights blurred in background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBwHUcgIt4dO6ZZ6GEjJ02tyWX1i_TIfstbIIBS7RvRNZ9TsxdqeVekc6XLh4S4-9nJcEgfj0LNi_71D7kdAAZP8oeWWD6_WSXTsr9BbdLrhe27A4ohabc2X3RGnjVjyeWt2Nfojl28-Ml-RRvwUH71-_mO0y_VGyxRpq2IEBT5yfSiOiqeoold3dbvHVMssv8XbPtEmu9b35Qxm0i_55e-v5v1UDO6o6IFTm62k-7YEsspmzIxdJ6pljqN8YJu3N_8kNwVsKI-LuM"/>
+</div>
+</div>
+<div class="absolute inset-0 bg-gradient-to-t from-surface via-transparent to-transparent"></div>
+<div class="absolute top-6 left-6 flex gap-3">
+<span class="bg-error px-3 py-1 rounded-full text-[10px] font-black tracking-widest text-on-error">LIVE MASHUP</span>
+<span class="glass-panel px-3 py-1 rounded-full text-[10px] font-bold tracking-tight text-white">4.2K WATCHING</span>
+</div>
+<div class="absolute bottom-8 left-8 right-8 flex justify-between items-end">
+<div>
+<h3 class="font-headline text-3xl font-extrabold tracking-tighter text-white">THE NEON RIOT <span class="text-primary italic">#FandomWars</span></h3>
+<p class="text-on-surface-variant font-medium mt-2">Featuring @DJ_Pulse, @Rhythm_Ghost, and @CyberVibe</p>
+</div>
+<div class="flex gap-2">
+<button class="w-14 h-14 flex items-center justify-center rounded-full bg-primary text-on-primary-fixed shadow-xl shadow-primary/40 hover:scale-110 transition-transform">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Live Reaction Feed -->
+<div class="flex flex-col gap-6">
+<div class="flex items-center justify-between">
+<h2 class="font-headline text-2xl font-bold tracking-tight">Live Reactions</h2>
+<button class="text-xs font-bold text-primary uppercase tracking-widest hover:underline">View All</button>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<!-- Reaction Card 1 -->
+<div class="surface-container-high p-6 rounded-lg relative overflow-hidden group">
+<div class="flex gap-4 items-start relative z-10">
+<div class="flex-shrink-0 relative">
+<div class="w-12 h-12 rounded-full overflow-hidden border-2 border-primary">
+<img class="w-full h-full object-cover" data-alt="Portrait of a smiling young man with artistic studio lighting and vibrant purple background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuACWZsUq3cgBjGT6nnTFBBo8Zh4GEKpXhy8lqKkbXRAj8eyTaKs18BwhUU4KFnh9jnazeLOqiSCBQBQLf1QGwxJeWD5ClWShUusCyGk8vJjRsaOu6-A0BWKJzXnxC6TYqIaOkKAfXoTbUBrAsP4riZZgCK0MPQOXuUtvp7rEF2L8ca5_2fXIRIU0LoY5yo2jMRaP64yeHegSOsomiZjdEdJf2dVnuo_3lM2W5Vy7LAYbNTuu9xHU742ajAC715dlGji_SX_KIXLYNA"/>
+</div>
+<div class="absolute -bottom-1 -right-1 bg-secondary w-5 h-5 rounded-full flex items-center justify-center border-2 border-surface">
+<span class="material-symbols-outlined text-[10px] text-white" style="font-variation-settings: 'FILL' 1;">favorite</span>
+</div>
+</div>
+<div class="flex-1">
+<div class="flex items-center gap-2">
+<span class="text-sm font-bold text-white">@VibeCheck</span>
+<span class="text-[10px] text-primary bg-primary/10 px-2 rounded-full uppercase font-black">Top Fan</span>
+</div>
+<div class="mt-2 glass-panel p-3 rounded-tr-xl rounded-br-xl rounded-bl-xl border-l-2 border-primary">
+<p class="text-sm text-on-surface leading-relaxed italic">"The transition at 0:45 actually broke me! 🤯 Best mashup this week hands down."</p>
+</div>
+</div>
+</div>
+<div class="absolute -right-4 -bottom-4 opacity-10 group-hover:opacity-20 transition-opacity">
+<span class="material-symbols-outlined text-8xl text-primary">auto_awesome</span>
+</div>
+</div>
+<!-- Reaction Card 2 -->
+<div class="surface-container-high p-6 rounded-lg relative overflow-hidden group">
+<div class="flex gap-4 items-start relative z-10">
+<div class="flex-shrink-0 relative">
+<div class="w-12 h-12 rounded-full overflow-hidden border-2 border-secondary">
+<img class="w-full h-full object-cover" data-alt="Close-up of a stylish woman with colored hair, wearing neon-reflective fashion and smiling" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAuUN2W-SlWD4hWdw4MrLe_duBQG1uh5ZmL_ObjuGB-izz5Nv8eyESzdScoQR3bO_Vu7RL7BKxeG3Cg9D5YKtG59FMsHuHZ0oJndQoU1CauSo7ktzUHAERNZXpIAvDrQK2dc4wMANAiBBXoQXrumHSXnkr_cZVG7ZDVw5V99CD_PgbXX3moxR0vwJUG8HsaSnqlQCfatLYtZ89CsmDxXlh_Jhj-9DUSZvcyGcLoyaGNtGOTraYJcTaC8if6qfFlxWFxRgVi1NZpGf8"/>
+</div>
+<div class="absolute -bottom-1 -right-1 bg-tertiary w-5 h-5 rounded-full flex items-center justify-center border-2 border-surface">
+<span class="material-symbols-outlined text-[10px] text-white" style="font-variation-settings: 'FILL' 1;">bolt</span>
+</div>
+</div>
+<div class="flex-1">
+<div class="flex items-center gap-2">
+<span class="text-sm font-bold text-white">@NeonQueen</span>
+<span class="text-[10px] text-secondary bg-secondary/10 px-2 rounded-full uppercase font-black">Verified</span>
+</div>
+<div class="mt-2 glass-panel p-3 rounded-tr-xl rounded-br-xl rounded-bl-xl border-l-2 border-secondary">
+<p class="text-sm text-on-surface leading-relaxed italic">"Can we talk about the visual hierarchy here? Kinetic just keeps evolving! ✨"</p>
+</div>
+</div>
+</div>
+<div class="absolute -right-4 -bottom-4 opacity-10 group-hover:opacity-20 transition-opacity">
+<span class="material-symbols-outlined text-8xl text-secondary">flare</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Right Sidebar: Interactive & Challenges -->
+<div class="col-span-12 lg:col-span-4 flex flex-col gap-8">
+<!-- Challenge of the Day -->
+<div class="bg-gradient-to-br from-surface-container-high to-surface-container p-8 rounded-lg border-l-4 border-primary shadow-2xl relative overflow-hidden">
+<div class="absolute -right-12 -top-12 w-32 h-32 bg-primary/20 rounded-full blur-3xl"></div>
+<div class="relative z-10">
+<span class="text-[10px] font-black text-primary tracking-[0.2em] uppercase">Daily Ritual</span>
+<h2 class="font-headline text-3xl font-extrabold mt-2 leading-tight">The Kinetic Flip Challenge</h2>
+<p class="text-on-surface-variant text-sm mt-4 leading-relaxed">Submit your best 10-second transition using the #NeonPulse filter. Top 3 creators win Flux Points.</p>
+<div class="mt-8 space-y-2">
+<div class="flex justify-between text-[10px] font-bold uppercase tracking-widest text-primary">
+<span>Community Progress</span>
+<span>84%</span>
+</div>
+<div class="h-3 w-full bg-surface-container-lowest rounded-full overflow-hidden p-0.5">
+<div class="h-full w-[84%] bg-gradient-to-r from-primary to-secondary rounded-full"></div>
+</div>
+<p class="text-[10px] text-on-surface-variant italic mt-2">1,240 participants today</p>
+</div>
+<button class="w-full mt-8 py-4 bg-white text-surface font-black rounded-full hover:bg-primary transition-colors flex items-center justify-center gap-2 active:scale-95">
+<span class="material-symbols-outlined">add_a_photo</span>
+                                JOIN NOW
+                            </button>
+</div>
+</div>
+<!-- Playful Participation -->
+<div class="surface-container-low p-8 rounded-lg space-y-6">
+<h3 class="font-headline text-lg font-bold">Show Some Love</h3>
+<div class="grid grid-cols-2 gap-4">
+<button class="flex flex-col items-center justify-center gap-3 p-6 glass-panel rounded-lg hover:bg-primary/20 transition-all group border border-outline-variant/10">
+<span class="material-symbols-outlined text-primary text-3xl group-hover:scale-125 transition-transform">rocket_launch</span>
+<span class="text-[10px] font-bold uppercase tracking-widest">Drop a Vibe</span>
+</button>
+<button class="flex flex-col items-center justify-center gap-3 p-6 glass-panel rounded-lg hover:bg-secondary/20 transition-all group border border-outline-variant/10">
+<span class="material-symbols-outlined text-secondary text-3xl group-hover:scale-125 transition-transform">bolt</span>
+<span class="text-[10px] font-bold uppercase tracking-widest">Share Spark</span>
+</button>
+<button class="flex flex-col items-center justify-center gap-3 p-6 glass-panel rounded-lg hover:bg-tertiary/20 transition-all group border border-outline-variant/10">
+<span class="material-symbols-outlined text-tertiary text-3xl group-hover:scale-125 transition-transform">celebration</span>
+<span class="text-[10px] font-bold uppercase tracking-widest">Party Hard</span>
+</button>
+<button class="flex flex-col items-center justify-center gap-3 p-6 glass-panel rounded-lg hover:bg-error/20 transition-all group border border-outline-variant/10">
+<span class="material-symbols-outlined text-error text-3xl group-hover:scale-125 transition-transform">favorite</span>
+<span class="text-[10px] font-bold uppercase tracking-widest">Hype It</span>
+</button>
+</div>
+</div>
+<!-- Trending Creators -->
+<div class="space-y-6">
+<h3 class="font-headline text-lg font-bold px-2">Top Flux Creators</h3>
+<div class="flex flex-col gap-4">
+<div class="flex items-center gap-4 p-2 hover:bg-surface-container-high rounded-lg transition-colors">
+<div class="w-12 h-12 rounded-full overflow-hidden ring-2 ring-primary ring-offset-2 ring-offset-surface">
+<img class="w-full h-full object-cover" data-alt="Portrait of a young creative professional with modern tech-inspired fashion and purple ambient lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCi7JDY4T8sVqzjgGPvW0dZEdKZVQMqhpctAZ5kloXn6PKrc8eq3RgtB_cDy9XC59uga0ZSTcwX-GAnGKtBJogIJ-uFpZTy6Mp5e7Bcz7hQ78vjJJ9fG0QnTPDibUXQHAVAk9BCebizVgDGD4tFb8VGiB9ICuG0jWi_2EtLgPGn-J-rgDRfqeNKKjSBQGgRbAvjJg6DWBgqnFlqu8ImiwnBlC1a4JGGNZ3kglZE6LPrEwzTMf0SL-ObK8ol0_tDWjimbj1GSmmf_IY"/>
+</div>
+<div class="flex-1">
+<p class="text-sm font-bold">@CircuitBreaker</p>
+<p class="text-[10px] text-on-surface-variant uppercase tracking-widest">342K Kinetic Units</p>
+</div>
+<button class="px-4 py-2 bg-primary/10 text-primary text-[10px] font-black rounded-full hover:bg-primary hover:text-on-primary transition-all">FOLLOW</button>
+</div>
+<div class="flex items-center gap-4 p-2 hover:bg-surface-container-high rounded-lg transition-colors">
+<div class="w-12 h-12 rounded-full overflow-hidden ring-2 ring-secondary ring-offset-2 ring-offset-surface">
+<img class="w-full h-full object-cover" data-alt="Young man with expressive face and edgy urban style, colorful neon light reflection on his skin" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCJdlBv3J63bfU2DYCjGU4jquNArSlVW31K-TF7P1cy4NOVwLgbU0Q1ugSHSpvicfxmJhiPbdtnQSFvBadCkbM-eL-GrHY4Ics_2a22jmbqqgE1htbizGIEiWMfUuH6CIiH30S5oFuy-QKTI9FCZqtsK7581qCKiHJHtEHVfIZPian4Ee0tUuCy5C45FlBgsTBBBFCPnrXZQuJvaYd0eNSu_fmFQdj-jWojXB74eCB40Q0nZC3T-JC4xUU2Zx6r4V6spA4sJ8L2vfQ"/>
+</div>
+<div class="flex-1">
+<p class="text-sm font-bold">@PixelDrifter</p>
+<p class="text-[10px] text-on-surface-variant uppercase tracking-widest">128K Kinetic Units</p>
+</div>
+<button class="px-4 py-2 bg-primary/10 text-primary text-[10px] font-black rounded-full hover:bg-primary hover:text-on-primary transition-all">FOLLOW</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Bento Bottom Section: Quick Scan Hierarchy -->
+<div class="mt-20">
+<h2 class="font-headline text-3xl font-black italic tracking-tighter mb-8">DISCOVER THE FLUX</h2>
+<div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+<div class="col-span-1 md:col-span-2 relative aspect-[2/1] rounded-lg overflow-hidden group">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="Futuristic glowing retrowave style synthwave background with grid and digital mountains" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC35AirHg8p4YVR9QTXx51JEbVbnUPekh9O2uct-vhKSC8rWHRfHmfwo0R5-HsFS2QZyd3QLrvakEolAqerV7TfPbU1rBykoKMxVBJXju3HsKH03hlijhpOzc_J1HjrqJYyr0fmlN3qQ8aZ-UVhk91ONkOXa6fhnTjWskj6VEgbkED7_-nkBElYW_VdP5RFF9whD4vD4_Wj9gUZ27J1OCHsIdWgg5WCS6KVvcBF14BZ2Br9d4fZhOetf6IcqxVlxgPnTOQrS2vma6g"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface via-surface/40 to-transparent"></div>
+<div class="absolute bottom-6 left-6">
+<span class="bg-primary text-on-primary-fixed px-3 py-1 rounded-full text-[10px] font-black tracking-widest mb-2 inline-block">HOT TOPIC</span>
+<h3 class="font-headline text-2xl font-extrabold text-white">Retro-Futurism Week</h3>
+</div>
+</div>
+<div class="aspect-square relative rounded-lg overflow-hidden group">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="Close-up of vibrant liquid acrylic pour art with swirling purples and pinks" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCkxhiVoRZ6IUIfH7g6J7aZtfbHeexkAUEqkPicWmMlnlw5l0Jdsf0XJqBxrzlxaFbhnPf8NPG9cbtxevctBuuA4KSwCIgMpbIB97PTL_10TU9N1sY4FeECr4n1_dPDsQ0waxBcZHCYJey4E1GRBzGyJDwpY2OTNdxjHLaWC5i2EIzV0rB7J8V3-fwHJg3jEc_pbwRAw_JT8t6Oj3K-n4SynpWJmGfiZ2ynxmTckEX-yNzdeRvuVZFLBvN1bIK8wU7JCRZMGINmBjU"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface via-transparent to-transparent"></div>
+<div class="absolute bottom-4 left-4">
+<span class="bg-secondary text-white px-2 py-1 rounded-full text-[9px] font-black tracking-widest mb-1 inline-block">NEW ART</span>
+<p class="text-xs font-bold text-white">Fluid Motion Workshop</p>
+</div>
+</div>
+<div class="aspect-square relative rounded-lg overflow-hidden group border-2 border-dashed border-outline-variant/30 flex items-center justify-center p-8 text-center bg-surface-container-low hover:bg-surface-container transition-colors">
+<div>
+<span class="material-symbols-outlined text-4xl text-primary mb-4">explore</span>
+<h3 class="font-headline text-sm font-bold text-white mb-2">Explore More Realms</h3>
+<p class="text-[10px] text-on-surface-variant uppercase tracking-widest">Browse 400+ Active Fandoms</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Floating Action Button: Suppressed on focused views as per instructions, but kept as a global trigger for Dashboard vibe -->
+<button class="fixed bottom-8 right-8 w-16 h-16 bg-gradient-to-br from-primary to-primary-dim rounded-full flex items-center justify-center text-on-primary-fixed shadow-[0_10px_40px_rgba(204,151,255,0.4)] hover:scale-110 active:scale-95 transition-transform z-40">
+<span class="material-symbols-outlined text-3xl" style="font-variation-settings: 'FILL' 1;">add</span>
+</button>
+</body></html>

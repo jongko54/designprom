@@ -1,0 +1,21 @@
+{
+  "brand": "Airbnb",
+  "contentType": "image/png",
+  "fileName": "airbnb-experience-marketplace.png",
+  "generatedAt": "2026-04-02T01:45:17.283Z",
+  "htmlUrl": "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ8Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpbCiVodG1sXzM5Y2MxMTRlYmUwYjQ2MmE4OWZjMTY1NWY4MmVkZjk0EgsSBxCCisPc0AkYAZIBJAoKcHJvamVjdF9pZBIWQhQxNTE0MTM2NDkwMzg3Mzk0NjczOA&filename=&opi=96797242",
+  "imageUrl": "https://lh3.googleusercontent.com/aida/ADBb0uj1J6U3pEpeQyADIWofst3gu3Fk1DGYMk5MnWhzcQJVN7Eg0nZp_B4HTbzaTLsFJgbV2i4sUVGkH1BYmDO85YEwL8fCltz2g1kUP1U5_w7lgkUmi8gT_v1uIdWMkIO_BpNJ7UhAEFplj5hpQ-eu7_qfpZbOb2QYT3TMRfB6pd7KbpTeD3r-oedFFU6Ou4l7BhFIHBh-AmtCileJ9cA8CCb8jgQrwWZ_5q7sZwyrctobWM_cnv_oMGWc9FCo",
+  "notes": [
+    "I've created the local experiences marketplace page. It features a welcoming, Airbnb-inspired layout with soft rounded geometry, warm neutral backgrounds, and high-quality photography. Key sections include a robust search bar, modular discovery cards for top experiences, and a strong emphasis on social proof and community. Would you like me to refine the cards or add a detail page for one of the experiences?"
+  ],
+  "prompt": "Create an Airbnb-inspired local experiences marketplace page with modular discovery cards, soft rounded geometry, warm neutral backgrounds, human-led photography, and clear social proof. Make the layout feel browsable, welcoming, and highly practical.",
+  "projectId": "15141364903873946738",
+  "screenId": "e3928a22b76f42aeaf0463d52f260ba5",
+  "slug": "airbnb-experience-marketplace",
+  "suggestions": [
+    "Refine the search/filter functionality",
+    "Create a detailed experience page",
+    "Adjust the color scheme to be more vibrant"
+  ],
+  "title": "Local Experiences Marketplace"
+}

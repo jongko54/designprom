@@ -1,0 +1,21 @@
+{
+  "brand": "Apple",
+  "contentType": "image/png",
+  "fileName": "apple-assistant-os-preview.png",
+  "generatedAt": "2026-04-02T10:57:03.453Z",
+  "htmlUrl": "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ7Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpaCiVodG1sX2E0Zjg3NjlkODNiNzQwY2Y4YmI5Njg3ZDQ5ZmIwZDNlEgsSBxCCisPc0AkYAZIBIwoKcHJvamVjdF9pZBIVQhM3MTQzMjg5MDExNTU3MTA0ODY0&filename=&opi=96797242",
+  "imageUrl": "https://lh3.googleusercontent.com/aida/ADBb0ugLJkm6JpCtM4aEJmINvRljRNedPLXEhbcXZFvRog5qOb61tDRDEbObkI8_E1GP5bqD_J48OefJy5hwxWEQk9jUdfAr71VtPUjis_VxUnyiG2pbthUfdpSxkdQLSSH0wkzVAee6YqzBiPGrQYjAs_FwUzOzSzP7fPxLIInOFeUUd0DoCQN3Ii2t9h8-Wq_KZPP_AWtv6r-jH1CHS36XvwwRPxEl1bEWcfO_-jc_Ob2_5X4lUwUXzuwWOdk",
+  "notes": [
+    "I've designed an Apple-inspired OS preview for your AI assistant. It features a soft frosted device frame in the hero, stacked feature bands with subtle depth, and a 'Before/After' comparison strip to show the shift from clutter to clarity. The monochrome palette and wide layouts give it that calm, keynote-style product reveal feeling."
+  ],
+  "prompt": "Design an Apple-inspired OS preview page for an AI assistant. Use soft frosted device frames, stacked feature bands, one comparison strip, and calm monochrome depth. The page should feel like a keynote product reveal, not a SaaS dashboard.",
+  "projectId": "7143289011557104864",
+  "screenId": "c71803e9c4f243a9847370dc1c1e77d9",
+  "slug": "apple-assistant-os-preview",
+  "suggestions": [
+    "Show me a mobile version",
+    "Add a technical specs section",
+    "Experiment with a warmer color palette"
+  ],
+  "title": "OS Preview: A New Quiet"
+}

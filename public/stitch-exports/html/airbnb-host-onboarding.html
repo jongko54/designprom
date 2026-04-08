@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "inverse-surface": "#303030",
+              "on-tertiary-fixed": "#3f0017",
+              "primary-fixed-dim": "#ffb2b6",
+              "on-background": "#1b1c1c",
+              "surface": "#fbf9f8",
+              "secondary": "#5e5e5e",
+              "primary": "#ba0036",
+              "surface-container-lowest": "#ffffff",
+              "surface-variant": "#e4e2e2",
+              "on-primary-fixed-variant": "#920029",
+              "tertiary": "#b31352",
+              "inverse-primary": "#ffb2b6",
+              "tertiary-fixed": "#ffd9df",
+              "surface-dim": "#dbd9d9",
+              "primary-container": "#e21e4a",
+              "on-secondary": "#ffffff",
+              "on-primary": "#ffffff",
+              "inverse-on-surface": "#f2f0f0",
+              "surface-container-low": "#f5f3f3",
+              "on-secondary-container": "#646464",
+              "on-tertiary-fixed-variant": "#90003e",
+              "error": "#ba1a1a",
+              "background": "#fbf9f8",
+              "on-tertiary-container": "#fffbff",
+              "surface-bright": "#fbf9f8",
+              "on-error": "#ffffff",
+              "on-surface": "#1b1c1c",
+              "on-surface-variant": "#5c3f41",
+              "on-primary-fixed": "#40000d",
+              "error-container": "#ffdad6",
+              "secondary-container": "#e3e2e2",
+              "surface-tint": "#be0038",
+              "on-primary-container": "#fffbff",
+              "tertiary-container": "#d5336a",
+              "secondary-fixed": "#e3e2e2",
+              "primary-fixed": "#ffdada",
+              "on-secondary-fixed": "#1b1c1c",
+              "secondary-fixed-dim": "#c7c6c6",
+              "tertiary-fixed-dim": "#ffb1c1",
+              "surface-container-highest": "#e4e2e2",
+              "surface-container-high": "#eae8e7",
+              "on-tertiary": "#ffffff",
+              "outline-variant": "#e5bdbe",
+              "outline": "#906f70",
+              "on-error-container": "#93000a",
+              "surface-container": "#f0eded",
+              "on-secondary-fixed-variant": "#464747"
+            },
+            fontFamily: {
+              "headline": ["Manrope"],
+              "body": ["Manrope"],
+              "label": ["Manrope"]
+            },
+            borderRadius: {"DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        body { font-family: 'Manrope', sans-serif; }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .ambient-shadow {
+            box-shadow: 0 30px 60px -12px rgba(27, 28, 28, 0.06);
+        }
+        .glass-panel {
+            backdrop-filter: blur(24px);
+            background-color: rgba(251, 249, 248, 0.7);
+            border: 1px solid rgba(229, 189, 190, 0.15);
+        }
+        .hero-gradient {
+            background: linear-gradient(to right, rgba(186, 0, 54, 1), rgba(226, 30, 74, 1));
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface">
+<!-- TopNavBar (Hiding for transaction-focused onboarding context per mandate) -->
+<nav class="fixed top-0 w-full z-50 bg-stone-50/80 backdrop-blur-xl shadow-sm h-20 flex justify-between items-center px-8 font-manrope tracking-tight">
+<div class="text-2xl font-bold text-rose-700">Hearth &amp; Horizon</div>
+<div class="hidden md:flex gap-8 items-center">
+<a class="text-stone-600 font-medium hover:text-rose-600 transition-colors" href="#">Listings</a>
+<a class="text-stone-600 font-medium hover:text-rose-600 transition-colors" href="#">Inbox</a>
+<a class="text-stone-600 font-medium hover:text-rose-600 transition-colors" href="#">Calendar</a>
+<a class="text-stone-600 font-medium hover:text-rose-600 transition-colors" href="#">Insights</a>
+</div>
+<div class="flex items-center gap-4">
+<span class="hidden md:inline text-rose-700 font-bold border-b-2 border-rose-700 pb-1">Switch to Hosting</span>
+<img class="w-10 h-10 rounded-full object-cover" data-alt="Portrait of a smiling professional host in a sunlit modern interior setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBmtzAMUx0ORKBRw2qoyJ1xYHlpkh2syS2Fy7wUWd7sDXWSmq7gK8Uc7iZU40utmu_ek4A-OxAYB56jNF-Aiml9Z75lFMwBAflcKwQWj_KIcep-O1xmbgci5O1E2haHwrendQA0w3qpB9YgNnecUn_qH_fYz5VkNYkT79mRVTwc5ltOQgqY-EiPdao9PKJVGPDrZwjXhoa4Opu3eVjlCR2sd8DyASxFCV92ZyxVPnkRlaiUZQI4BoIp2nqHo3MemoGtv2RP_Gtffe45"/>
+</div>
+</nav>
+<main class="pt-20">
+<!-- Hero Section -->
+<section class="relative h-[870px] flex items-center px-6 md:px-12 overflow-hidden">
+<div class="absolute inset-0 z-0">
+<img class="w-full h-full object-cover" data-alt="Luxurious cozy living room with soft morning sunlight streaming through large windows and warm wooden textures" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD7XX13tHKC8-uF10kaplo6WIuFLvTR_BanVnA-PRg2tm5jDPLg4UUd86zj3w32x4FaPMAgLuaJHvNNlFFMkfTL1sqkA_NhaYv1MQ1Z7d61p9QxIBwj52h_LYbq377k4s0TkAEZJbTU2asN-Uv_UniP0f_xGv0CYFemWtYnUGHLgtpY1mRvg_KjaD8kV7tECYzflvq_pLJ5LhiGp0kJVvUYDathLXJfYg7B7h3kT80SeBrkn7gqnEju9JdgPKpZt4tCm7pzSnclph0e"/>
+<div class="absolute inset-0 bg-gradient-to-r from-surface/80 via-surface/40 to-transparent"></div>
+</div>
+<div class="relative z-10 max-w-2xl">
+<span class="inline-block px-4 py-1.5 mb-6 rounded-full bg-primary/10 text-primary font-bold text-xs tracking-widest uppercase">Start Your Journey</span>
+<h1 class="text-5xl md:text-7xl font-extrabold tracking-tight text-on-surface mb-6 leading-[1.1]">
+                    Open your doors, <br/>
+<span class="text-primary">share your world.</span>
+</h1>
+<p class="text-xl text-on-surface-variant mb-10 max-w-lg leading-relaxed">
+                    Join a global community of hosts who turn their extra space into extraordinary experiences and extra income.
+                </p>
+<div class="flex flex-col sm:flex-row gap-4">
+<button class="px-10 py-4 rounded-full hero-gradient text-on-primary font-bold text-lg ambient-shadow flex items-center justify-center gap-2">
+                        Get Started
+                        <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+<button class="px-10 py-4 rounded-full bg-surface-container-high text-on-surface font-semibold text-lg flex items-center justify-center">
+                        Explore Hosting
+                    </button>
+</div>
+</div>
+</section>
+<!-- 3-Step Guide Section -->
+<section class="py-32 px-6 md:px-12 bg-surface">
+<div class="max-w-7xl mx-auto">
+<div class="text-center mb-20">
+<h2 class="text-4xl md:text-5xl font-bold tracking-tight mb-4">Hosting made simple</h2>
+<p class="text-on-surface-variant text-lg">Your journey from guest to host in three easy steps.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+<!-- Step 1 -->
+<div class="group relative">
+<div class="mb-8 overflow-hidden rounded-lg">
+<img class="w-full h-64 object-cover transform group-hover:scale-105 transition-transform duration-700" data-alt="Detailed close-up of a host arranging beautiful ceramic decor on a wooden shelf in a bright room" src="https://lh3.googleusercontent.com/aida-public/AB6AXuArozbkDhH9whlMaj7O-mFo__vtr8K2HXb96VHyORogG1gVOqb6mw65dPxJAazf6gd_hqhV9M-RJuWoloSlOKUXybi39BO6gglhIs9tz4lEza6YfuY8p_sY888R8Mh8S7Dlb9FZgbEOApPT8ypUkBfLI6GAbIwdKamZOgK5aP9XIZRSloxxdpf-yXBrkZnrDBp23DjeW-SdMkfo2_KFSHjczayZVuyxoH6Uex4Bvf0ur8bbpevq5nTD7g18mXOB6qkWw-q8MiYv9lJZ"/>
+</div>
+<div class="flex items-start gap-4">
+<span class="text-4xl font-extrabold text-primary-container/30">01</span>
+<div>
+<h3 class="text-2xl font-bold mb-3">Tell us about your space</h3>
+<p class="text-on-surface-variant leading-relaxed">Share your location, property type, and what makes your place unique. Whether it's a cozy room or a coastal villa.</p>
+</div>
+</div>
+</div>
+<!-- Step 2 -->
+<div class="group relative">
+<div class="mb-8 overflow-hidden rounded-lg">
+<img class="w-full h-64 object-cover transform group-hover:scale-105 transition-transform duration-700" data-alt="A person taking professional photos of a well-lit living area with a camera on a tripod" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAae1isyCWIhqkZlKEsr9zc6uo8-WjFckdZAyh94mCPFBc-9XRUTVvoZE3fPpXaHOAzyHWtR9hmB88rJD3VBZwfa8p2sv63Y-GYba-NrnsegVG3waa0r7hJ-7zug5-N7YwcwHpkpXsKFNIKGsFpuOJx8zXzn2DTcaHTrf1FYtJusLOeWO2fTB2OMppMpg422JAc8An_rLFHXqJyM6JjmRiZcV-AfgftHN6HRca12Lbep78l7ac9Ze-9WnCrMbPpZUGS7rDPUVhZZHhX"/>
+</div>
+<div class="flex items-start gap-4">
+<span class="text-4xl font-extrabold text-primary-container/30">02</span>
+<div>
+<h3 class="text-2xl font-bold mb-3">Make it stand out</h3>
+<p class="text-on-surface-variant leading-relaxed">Add high-quality photos and write a welcoming description. We'll help you set the perfect price for your area.</p>
+</div>
+</div>
+</div>
+<!-- Step 3 -->
+<div class="group relative">
+<div class="mb-8 overflow-hidden rounded-lg">
+<img class="w-full h-64 object-cover transform group-hover:scale-105 transition-transform duration-700" data-alt="Warm handshake between host and guest in a sun-drenched doorway with a soft focus background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBmZ20sZQoGfJ1pCSL4em9lv1mPVDeReiMYLYRByfC8neUN2vXhn7RmB5yWoCwhwG2gU6-JhPxyejw5Fnp-CqoDRq018OYQyA0yQMXMQdX6CCytgTPyJS7d2Lt1kepb7A84Bz8chanHq1Ljv4KZ83pJo3mdHrM9uYoQXPmOp4JKv0p_MhhIdI8BlIBWzSzoTqg1CAtTfM6VIUGg52j1NV0CCX9bEweL3j0ikIVsVIh3TikytNTTi9igr2hFUfjQ-0-jS_0hMgJsK_YA"/>
+</div>
+<div class="flex items-start gap-4">
+<span class="text-4xl font-extrabold text-primary-container/30">03</span>
+<div>
+<h3 class="text-2xl font-bold mb-3">Welcome your first guest</h3>
+<p class="text-on-surface-variant leading-relaxed">Publish your listing and start receiving bookings. Our 24/7 support team is here for you at every turn.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Testimonial Section (Asymmetric Glass Focus) -->
+<section class="py-24 px-6 md:px-12 bg-surface-container-low">
+<div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-16">
+<div class="w-full md:w-1/2 relative">
+<div class="absolute -top-10 -left-10 w-40 h-40 bg-primary/10 rounded-full blur-3xl"></div>
+<img class="rounded-xl w-full aspect-[4/5] object-cover ambient-shadow relative z-10" data-alt="Close up portrait of a middle-aged man smiling warmly, dressed in a casual linen shirt with outdoor lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC7CtcEcXGW437asf37j3oGkqjt_Z7ZkNASCRsRAqozBAspRtYso2Evtn6FWec8UZwpUmLM3qOagqZozmMead6njEmrOCIoDXwC_vHB_Bhw9rv86f3PW2E5Cp9x8xsFwFhIsGIHeO4p9ySqMlF6zoCIh94hMJtOkkAYqjSWcpGvIVBIiIQC9GTQr3AkK32RDPXADbNeFkBB1kMOFnuXUgHZXXYm677M5hxQjC989ey2uxzZbY3iQPUn3AaB4upj0qIB8sPXI3NNPzrI"/>
+<div class="absolute -bottom-8 -right-8 glass-panel p-8 rounded-lg ambient-shadow z-20 max-w-xs">
+<p class="font-bold text-primary mb-1">Earned in 2023</p>
+<p class="text-3xl font-extrabold text-on-surface">$24,500</p>
+<p class="text-sm text-on-surface-variant mt-2">Marcus turned his cottage into a thriving guest home.</p>
+</div>
+</div>
+<div class="w-full md:w-1/2">
+<span class="material-symbols-outlined text-primary text-6xl mb-6" data-weight="fill">format_quote</span>
+<h2 class="text-3xl md:text-4xl font-bold leading-tight mb-8">
+                        "Hearth &amp; Horizon gave me the freedom to pursue my passion for interior design while meeting incredible people from all over the world."
+                    </h2>
+<div>
+<p class="text-xl font-bold text-on-surface">Marcus Chen</p>
+<p class="text-on-surface-variant">Host in Vancouver, Canada</p>
+</div>
+</div>
+</div>
+</section>
+<!-- FAQ Section -->
+<section class="py-32 px-6 md:px-12 bg-surface">
+<div class="max-w-3xl mx-auto">
+<h2 class="text-4xl font-bold tracking-tight mb-16 text-center">Your questions, answered</h2>
+<div class="space-y-4">
+<!-- FAQ Item 1 -->
+<div class="bg-surface-container-low rounded-lg p-8">
+<div class="flex justify-between items-center cursor-pointer">
+<h3 class="text-xl font-bold">Is my space right for Hearth &amp; Horizon?</h3>
+<span class="material-symbols-outlined text-primary">add</span>
+</div>
+<div class="mt-4 text-on-surface-variant leading-relaxed">
+                            Guests look for all kinds of places—from tiny homes and apartments to treehouses and villas. What matters most is a clean, welcoming environment and a thoughtful host.
+                        </div>
+</div>
+<!-- FAQ Item 2 -->
+<div class="bg-surface-container rounded-lg p-8">
+<div class="flex justify-between items-center cursor-pointer">
+<h3 class="text-xl font-bold">How do I get paid?</h3>
+<span class="material-symbols-outlined text-primary">add</span>
+</div>
+</div>
+<!-- FAQ Item 3 -->
+<div class="bg-surface-container rounded-lg p-8">
+<div class="flex justify-between items-center cursor-pointer">
+<h3 class="text-xl font-bold">What protection do I have as a host?</h3>
+<span class="material-symbols-outlined text-primary">add</span>
+</div>
+</div>
+<!-- FAQ Item 4 -->
+<div class="bg-surface-container rounded-lg p-8">
+<div class="flex justify-between items-center cursor-pointer">
+<h3 class="text-xl font-bold">Do I need to be home when guests are there?</h3>
+<span class="material-symbols-outlined text-primary">add</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Final CTA -->
+<section class="py-24 px-6 md:px-12">
+<div class="max-w-7xl mx-auto hero-gradient rounded-xl overflow-hidden p-12 md:p-24 relative flex flex-col items-center text-center">
+<div class="absolute inset-0 opacity-20">
+<img class="w-full h-full object-cover" data-alt="Abstract soft blur of a high-end luxury resort garden at dusk" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBm1h2Q3gs2ERqFnm0fEMWFLBSkAp9NHPoToDXjJwgrA3yr6NZgt_lzTjYv4uKIWYmiahoEVhVXK_zfkQcNiHIVBWJmO8Oi6VWZd34Z_J7jcbvW89PwDgkSi6IG_4LXZ97y0nmJjjXO6mwLbU-CvO5y1VAK_D6i-hAkQohcvoKxF2Uod5_v055uwvkYLnfevEz0F7lYKYPnfHZZoF7mM-GzECA5uENvOzJgOyIx44fG7d23ziNVDzwjq1JVta5iF9giyJ59-aZtxmKv"/>
+</div>
+<div class="relative z-10 max-w-2xl">
+<h2 class="text-4xl md:text-6xl font-extrabold text-on-primary tracking-tight mb-8">Ready to host your first guest?</h2>
+<p class="text-on-primary/90 text-xl mb-12">Join thousands of hosts and start your journey today. It only takes minutes to set up your listing.</p>
+<button class="px-12 py-5 rounded-full bg-surface text-primary font-bold text-xl hover:scale-105 transition-transform ambient-shadow">
+                        Create Your Listing
+                    </button>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full rounded-t-[3rem] mt-20 bg-stone-100 font-manrope text-sm">
+<div class="flex flex-col md:flex-row justify-between items-center px-12 py-16 w-full max-w-7xl mx-auto gap-8">
+<div class="flex flex-col gap-4">
+<div class="text-lg font-bold text-rose-700">Hearth &amp; Horizon</div>
+<p class="text-stone-500 max-w-xs">Connecting people through shared spaces and authentic travel experiences since 2024.</p>
+</div>
+<div class="flex flex-wrap justify-center gap-8">
+<a class="text-stone-500 hover:text-stone-900 underline decoration-rose-500/30" href="#">Hosting Resources</a>
+<a class="text-stone-500 hover:text-stone-900 underline decoration-rose-500/30" href="#">Community Forum</a>
+<a class="text-stone-500 hover:text-stone-900 underline decoration-rose-500/30" href="#">Safety &amp; Trust</a>
+<a class="text-stone-500 hover:text-stone-900 underline decoration-rose-500/30" href="#">Support</a>
+<a class="text-stone-500 hover:text-stone-900 underline decoration-rose-500/30" href="#">Terms of Service</a>
+</div>
+</div>
+<div class="px-12 pb-12 w-full max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center border-t border-stone-200 pt-8 gap-4">
+<p class="text-stone-400">© 2024 Hearth &amp; Horizon. All rights reserved.</p>
+<div class="flex gap-6">
+<span class="material-symbols-outlined text-stone-400">language</span>
+<span class="material-symbols-outlined text-stone-400">share</span>
+</div>
+</div>
+</footer>
+</body></html>

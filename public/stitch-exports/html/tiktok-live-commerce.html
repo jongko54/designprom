@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Pulse: Live Commerce Hub</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100..900;1,100..900&amp;family=Manrope:wght@200..800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "tertiary-fixed": "#ff81f5",
+              "inverse-primary": "#006a6e",
+              "inverse-surface": "#fcf8f8",
+              "primary-fixed-dim": "#00e5ee",
+              "on-background": "#ffffff",
+              "primary": "#a1faff",
+              "secondary": "#ff6f7c",
+              "surface-variant": "#262625",
+              "surface-container-lowest": "#000000",
+              "tertiary": "#ff51fa",
+              "error-dim": "#d7383b",
+              "on-tertiary-container": "#230023",
+              "background": "#0e0e0e",
+              "on-primary-fixed": "#004346",
+              "on-error": "#490006",
+              "error": "#ff716c",
+              "surface-container-low": "#141313",
+              "on-secondary-fixed": "#6f001c",
+              "on-error-container": "#ffa8a3",
+              "surface-container-highest": "#262625",
+              "secondary-fixed-dim": "#ffaeb2",
+              "outline-variant": "#494847",
+              "outline": "#777575",
+              "surface-dim": "#0e0e0e",
+              "on-secondary": "#49000f",
+              "primary-container": "#00f4fe",
+              "primary-dim": "#00e5ee",
+              "on-tertiary-fixed": "#320032",
+              "surface": "#0e0e0e",
+              "on-primary-fixed-variant": "#006266",
+              "on-surface": "#ffffff",
+              "on-surface-variant": "#adaaaa",
+              "surface-bright": "#2d2c2c",
+              "on-primary": "#006165",
+              "on-tertiary-fixed-variant": "#6a006a",
+              "inverse-on-surface": "#565554",
+              "on-secondary-container": "#fff6f5",
+              "secondary-fixed": "#ffc2c4",
+              "primary-fixed": "#00f4fe",
+              "secondary-container": "#be0036",
+              "error-container": "#9f0519",
+              "tertiary-container": "#fe00fe",
+              "surface-tint": "#a1faff",
+              "on-primary-container": "#00575b",
+              "tertiary-dim": "#ff51fa",
+              "surface-container": "#1a1919",
+              "secondary-dim": "#e51146",
+              "on-secondary-fixed-variant": "#a4002e",
+              "surface-container-high": "#201f1f",
+              "tertiary-fixed-dim": "#ff61f8",
+              "on-tertiary": "#400040"
+            },
+            fontFamily: {
+              "headline": ["Epilogue"],
+              "body": ["Manrope"],
+              "label": ["Epilogue"]
+            },
+            borderRadius: {"DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .kinetic-skew { transform: skewX(-7deg); }
+        .glass-panel { backdrop-filter: blur(20px); }
+        .shutter-frame { border-top-left-radius: 3rem; border-bottom-right-radius: 3rem; }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body selection:bg-primary selection:text-on-primary">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 flex justify-between items-center px-6 py-4 w-full bg-surface/40 backdrop-blur-xl shadow-[0_4px_30px_rgba(0,245,255,0.1)]">
+<div class="flex items-center gap-8">
+<span class="text-2xl font-epilogue italic font-black text-transparent bg-clip-text bg-gradient-to-br from-cyan-300 to-cyan-500">KINETIC</span>
+<div class="hidden md:flex gap-6">
+<a class="text-cyan-400 font-black italic hover:text-cyan-300 transition-colors duration-300" href="#">Live Now</a>
+<a class="text-gray-400 font-medium hover:text-cyan-300 transition-colors duration-300" href="#">Drops</a>
+<a class="text-gray-400 font-medium hover:text-cyan-300 transition-colors duration-300" href="#">Trending</a>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<button class="hidden md:block bg-gradient-to-br from-primary to-primary-container text-on-primary-container px-6 py-2 rounded-full font-headline font-extrabold italic uppercase tracking-tighter active:scale-95 transition-transform">
+                Go Live
+            </button>
+<div class="flex gap-4 text-gray-400">
+<span class="material-symbols-outlined cursor-pointer hover:text-cyan-300 transition-colors">notifications</span>
+<span class="material-symbols-outlined cursor-pointer hover:text-cyan-300 transition-colors">shopping_bag</span>
+<div class="w-10 h-10 rounded-full bg-surface-container-highest flex items-center justify-center overflow-hidden border border-white/10">
+<img alt="User profile" data-alt="High-quality 3D avatar of a stylish young creator with neon lighting accents on their face and clothing" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD8WsHJz_pxSKlnoOQVsACjfNRNww7nUSsPp0_w-OLy0q8OwdF0r6L6nq2qzjekRTo5FBo8xqoU_Pw5-5mFu_ntV6sbWzGrXXmHwKr7_qts9FCklmiALrts81Kh_H8IYWgIwpzIB_jdzgmN8jkzXaNkv3ouqPxu5RV25oFtOh3od0nsdcqMs94NFxaRpmsvVDqE26SpzxGnwUPFDc7gFv8Nt8tTXMRmNnD1EBPE9JF5XJJH7H49N82YkOY6m34QlH46njAeUbXau4AF"/>
+</div>
+</div>
+</div>
+<!-- Decorative Border -->
+<div class="absolute bottom-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-cyan-500/20 to-transparent"></div>
+</nav>
+<!-- SideNavBar -->
+<aside class="fixed left-0 top-0 h-full w-64 z-40 bg-surface/60 backdrop-blur-2xl border-r border-white/5 flex flex-col h-full py-20 hidden md:flex">
+<div class="px-6 mb-10">
+<h2 class="text-xl font-epilogue italic font-extrabold text-cyan-400">Pulse Feed</h2>
+<p class="text-xs text-on-surface-variant font-medium">High-Velocity Commerce</p>
+</div>
+<nav class="flex-1">
+<a class="flex items-center gap-4 bg-cyan-500/10 text-cyan-400 border-r-4 border-cyan-400 px-6 py-4 hover:translate-x-1 duration-200 transition-all" href="#">
+<span class="material-symbols-outlined">explore</span>
+<span class="font-manrope font-semibold">For You</span>
+</a>
+<a class="flex items-center gap-4 text-gray-400 px-6 py-4 hover:bg-white/5 hover:text-white hover:translate-x-1 duration-200 transition-all" href="#">
+<span class="material-symbols-outlined">group</span>
+<span class="font-manrope font-semibold">Following</span>
+</a>
+<a class="flex items-center gap-4 text-gray-400 px-6 py-4 hover:bg-white/5 hover:text-white hover:translate-x-1 duration-200 transition-all" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">live_tv</span>
+<span class="font-manrope font-semibold">LIVE</span>
+</a>
+</nav>
+<div class="px-6 mt-auto flex flex-col gap-4">
+<button class="w-full bg-surface-container-high py-4 rounded-xl text-primary font-headline font-black italic uppercase text-sm border border-primary/20 hover:bg-primary/10 transition-colors">
+                Shop Drop
+            </button>
+<div class="flex flex-col gap-2">
+<a class="flex items-center gap-3 text-xs text-gray-500 hover:text-white" href="#">
+<span class="material-symbols-outlined text-sm">settings</span> Settings
+                </a>
+<a class="flex items-center gap-3 text-xs text-gray-500 hover:text-white" href="#">
+<span class="material-symbols-outlined text-sm">help</span> Support
+                </a>
+</div>
+</div>
+</aside>
+<!-- Main Content Canvas -->
+<main class="md:ml-64 pt-24 pb-12 px-6">
+<div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+<!-- Left Column: Vertical Hero Stream -->
+<div class="lg:col-span-5 xl:col-span-4 sticky top-24">
+<div class="relative aspect-[9/16] bg-surface-container-low shutter-frame overflow-hidden shadow-2xl border border-white/5">
+<!-- Stream Background Image -->
+<img alt="Live stream" class="absolute inset-0 w-full h-full object-cover opacity-80" data-alt="Dynamic shot of a tech-focused fashion creator presenting an iridescent jacket in a neon-lit studio with shallow depth of field" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCMkAmiK8W-CQHkAFAatXYKxtRe6WuTfXtzxC_PXeBOw2d72W9ajYDjTkobQdeZfh38dzCVj6wJKMsSKgf3l1b0KlNxaIGBrRJ10UfJWaselrt6rUyBj-vbowbv-2krqcZUDnLyQwtljKw7BCrJneOOVwZ3PoMOM-EGcXAcd_NkviYBZnqa28sjZ_YxnCtj7fBENv0fYvbxaPnlNOJG27yTa6Cu8_tqN-HK5TlFsQURD2dWkdGV_gmsM0Ow3IBSSRr0bglg3lvbbear"/>
+<!-- Creator Overlay Header -->
+<div class="absolute top-6 left-6 right-6 flex items-center justify-between z-10">
+<div class="flex items-center gap-3 bg-black/40 backdrop-blur-md p-1 pr-4 rounded-full border border-white/10">
+<img alt="Creator" class="w-8 h-8 rounded-full border-2 border-primary" data-alt="Portrait of a young influencer with vibrant dyed hair and cyber-chic accessories" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA2e7IZiO0iiqnSQk3EI4TSk1MAte87lfu8dk9-8atucfJrn0ogkRIaeorrbwesLuzl39CsBFL7t0kGP65XsU7izUm6zGJVfiWVexObdNZGVQBBBWGEkFQGTxinhER8b5jCsldWBBXexRVe9wYRosyJnl6l2KJB-q9p9tPFg-Qty1MGRr-6tcPvFjIYPFwH1f7xohbY0pOchp_QIzLNL1-zwECJJj9TEB6toNBvlqp3URMO5Ev38yiGQmfgbBLSz7dBpwwW6gDzlsJV"/>
+<div>
+<p class="text-xs font-bold leading-tight">Aria_Tech</p>
+<p class="text-[10px] text-primary">12.4k viewers</p>
+</div>
+</div>
+<span class="bg-secondary text-on-secondary px-3 py-1 rounded-full text-[10px] font-headline font-black italic tracking-widest animate-pulse">LIVE</span>
+</div>
+<!-- Chat Bubbles -->
+<div class="absolute bottom-24 left-6 right-6 flex flex-col gap-2 max-h-48 overflow-hidden">
+<div class="bg-white/10 backdrop-blur-sm p-3 rounded-2xl rounded-bl-none border border-white/5 max-w-[80%]">
+<p class="text-[10px] font-bold text-primary mb-1">NeonVibe</p>
+<p class="text-xs">Is the glow effect real or just lighting? 🔥</p>
+</div>
+<div class="bg-white/10 backdrop-blur-sm p-3 rounded-2xl rounded-bl-none border border-white/5 max-w-[80%]">
+<p class="text-[10px] font-bold text-tertiary mb-1">CyberShopper</p>
+<p class="text-xs">Just copped! Only 5 left guys!! 😱</p>
+</div>
+<div class="flex items-center gap-2 text-[10px] text-white/40 italic px-2">
+<span class="material-symbols-outlined text-[10px]">shopping_cart</span>
+                            Marcus J. just purchased 'Vortex Shell'
+                        </div>
+</div>
+<!-- Vertical Interaction Bar -->
+<div class="absolute right-4 bottom-24 flex flex-col gap-6 items-center">
+<div class="flex flex-col items-center">
+<span class="material-symbols-outlined text-white text-3xl drop-shadow-lg" style="font-variation-settings: 'FILL' 1;">favorite</span>
+<span class="text-[10px] font-bold">24.1k</span>
+</div>
+<div class="flex flex-col items-center">
+<span class="material-symbols-outlined text-white text-3xl drop-shadow-lg">chat_bubble</span>
+<span class="text-[10px] font-bold">842</span>
+</div>
+<div class="flex flex-col items-center">
+<span class="material-symbols-outlined text-white text-3xl drop-shadow-lg">share</span>
+<span class="text-[10px] font-bold">Share</span>
+</div>
+</div>
+<!-- Bottom CTA Overlay -->
+<div class="absolute bottom-6 left-6 right-6">
+<div class="bg-surface-container-high/80 backdrop-blur-xl p-4 rounded-2xl border border-primary/20 flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="w-12 h-12 bg-white/10 rounded-lg overflow-hidden flex-shrink-0">
+<img alt="Featured Product" class="w-full h-full object-cover" data-alt="Minimalist high-tech smartwatch with a translucent band and glowing interface, professional product photography" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB19fOBnmewtR2rs6nlyOvVGdc-C7L7noNM9S4j80c478X-PuTMIqewNIvdEhJ-yncyB1Wgrb92Q0MaoNQ1zvBJsLdqa81IRv5-QbGbhTBTvjO7V0NTQK64EZOrV6Jua44mA8qcDZJt-yDfPikzPZDqWskGudfFqerFtUrvqFZoT-voEBxjINKqysoTZ39N62pTnziIlK5QtS_MZe1k5JupQ2IXhQfYWHaX9NKd5Gdvj-yjtivOLkzqfWoB9_78SufqDz9kfd_ahsKF"/>
+</div>
+<div>
+<p class="text-[10px] text-on-surface-variant font-bold uppercase tracking-wider">Flash Sale</p>
+<p class="font-headline font-black italic text-sm">VORTEX SHELL v2</p>
+</div>
+</div>
+<div class="text-right">
+<p class="text-xs line-through text-on-surface-variant">$199</p>
+<p class="text-lg font-headline font-black italic text-primary leading-none">$129</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Right Column: Content Stream -->
+<div class="lg:col-span-7 xl:col-span-8 flex flex-col gap-10">
+<!-- Flash Drop Timer Component -->
+<section class="bg-surface-container p-10 shutter-frame relative overflow-hidden group">
+<div class="absolute top-0 right-0 w-64 h-64 bg-tertiary/10 rounded-full blur-[100px] -mr-32 -mt-32"></div>
+<div class="relative z-10 flex flex-col md:flex-row justify-between items-end gap-6">
+<div>
+<span class="bg-tertiary text-on-tertiary px-4 py-1 rounded-full text-xs font-headline font-black italic uppercase tracking-tighter mb-4 inline-block">Flash Drop</span>
+<h1 class="text-5xl md:text-7xl font-headline font-black italic uppercase leading-[0.85] tracking-tighter kinetic-skew mb-4">
+                                NEON<br/><span class="text-transparent border-t border-b border-tertiary" style="-webkit-text-stroke: 1px #ff51fa;">SYNAPSE</span><br/>COLLECTION
+                            </h1>
+</div>
+<div class="text-right">
+<p class="font-manrope text-xs text-on-surface-variant uppercase tracking-widest mb-2">Drop expires in</p>
+<div class="flex gap-4 font-headline font-extrabold text-4xl text-tertiary drop-shadow-[0_0_15px_rgba(255,81,250,0.4)] animate-pulse">
+<span>04</span>:<span>12</span>:<span>59</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Product Grid (The Stream) -->
+<section>
+<div class="flex justify-between items-center mb-8">
+<h2 class="text-3xl font-epilogue italic font-extrabold uppercase tracking-tighter">Live Queue</h2>
+<div class="flex gap-2">
+<span class="w-2 h-2 rounded-full bg-primary"></span>
+<span class="w-2 h-2 rounded-full bg-surface-container-highest"></span>
+<span class="w-2 h-2 rounded-full bg-surface-container-highest"></span>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<!-- Product Card 1 -->
+<div class="bg-surface-container-low glass-panel rounded-xl overflow-hidden border border-white/5 group hover:border-primary/30 transition-all duration-500">
+<div class="relative h-64 overflow-hidden">
+<img alt="Red Sneakers" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="Close-up of premium red leather sneakers with metallic accents on a dark reflective surface with dramatic red neon side lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBa4brhQPkrH4LSyLRUrjkdtJhQ7AFgau9XQl95oMNWG3uW_Ix8VKotCrOvjsts-9aEApo0I2PSd24ICxOHEzCbU5FL2zA3QnI31V-cf8IsJUZ0d4XKj-nb-OVovOZpX8DmSaJAeyE2BXnzqIEEb37u3DLvlMfO3_M7xXaxrnW1OPMmj3jyCCY7rws_krxKSeYeyKu__prUL9Z0b3eJo6eo7hEu689imY2aoAYs7v7S_GVg0O8Yd9qLapUwq2LEZCFtrCbUYBw-dOLj"/>
+<div class="absolute top-4 right-4 bg-black/60 backdrop-blur-md px-3 py-1 rounded-full border border-white/10 flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-green-400"></span>
+<span class="text-[10px] font-bold uppercase tracking-wider">In Stock</span>
+</div>
+</div>
+<div class="p-6">
+<div class="flex justify-between items-start mb-2">
+<h3 class="font-manrope font-bold text-xl">Crimson Pulse X-1</h3>
+<p class="font-headline font-black italic text-2xl text-primary">$89</p>
+</div>
+<p class="text-sm text-on-surface-variant mb-6">Reactive sole technology for maximum urban velocity.</p>
+<button class="w-full py-4 bg-surface-container-highest rounded-lg font-headline font-extrabold italic uppercase text-sm group-hover:bg-primary group-hover:text-on-primary transition-all duration-300 flex items-center justify-center gap-2">
+                                    Queue Purchase <span class="material-symbols-outlined text-sm">trending_flat</span>
+</button>
+</div>
+</div>
+<!-- Product Card 2 -->
+<div class="bg-surface-container-low glass-panel rounded-xl overflow-hidden border border-white/5 group hover:border-primary/30 transition-all duration-500">
+<div class="relative h-64 overflow-hidden">
+<img alt="Headphones" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="Sleek black noise-canceling headphones with glowing cyan LED rings on the earcups, floating in a dark atmospheric space with smoke effects" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAtlUFI1yyafACAr4jeY-0d5DAgkz1jhtnhwAecCPEK6Vf0jDUVyWk-V57ONaFI6Bb0s7GHlVSnrZ8X8cO2tMT0KhorAsVL-XlRxGMJl2nucO6tRIODYmZa_DTgeloxSabjaI-YuF_rBjYjTKH_VCgfxfr6yzSCSulUX79dSKUQTKvEBVCS6XvH2fTLVVSrFtaFqcO6owbf5VKiiJp70UzBwSRQfFlfSFUeZQTx_0yeAWcSgv6zyhleYcPyJ8dUW1HaieTNRMiGF9ks"/>
+<div class="absolute top-4 right-4 bg-secondary text-on-secondary px-3 py-1 rounded-full text-[10px] font-headline font-black italic tracking-widest">LOW STOCK</div>
+</div>
+<div class="p-6">
+<div class="flex justify-between items-start mb-2">
+<h3 class="font-manrope font-bold text-xl">Void Echo ANC</h3>
+<p class="font-headline font-black italic text-2xl text-primary">$249</p>
+</div>
+<p class="text-sm text-on-surface-variant mb-6">Total isolation. 48hr battery. Pure sonic immersion.</p>
+<button class="w-full py-4 bg-surface-container-highest rounded-lg font-headline font-extrabold italic uppercase text-sm group-hover:bg-primary group-hover:text-on-primary transition-all duration-300 flex items-center justify-center gap-2">
+                                    Queue Purchase <span class="material-symbols-outlined text-sm">trending_flat</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Social Proof Moments -->
+<section class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<div class="bg-surface-container p-6 rounded-xl border-l-4 border-primary">
+<p class="text-primary font-headline font-black italic text-2xl mb-1">2,491</p>
+<p class="text-xs uppercase tracking-widest text-on-surface-variant font-bold">Items Dropped Today</p>
+</div>
+<div class="bg-surface-container p-6 rounded-xl border-l-4 border-secondary">
+<p class="text-secondary font-headline font-black italic text-2xl mb-1">14.2k</p>
+<p class="text-xs uppercase tracking-widest text-on-surface-variant font-bold">Active Pulsers</p>
+</div>
+<div class="bg-surface-container p-6 rounded-xl border-l-4 border-tertiary">
+<p class="text-tertiary font-headline font-black italic text-2xl mb-1">$1.2M</p>
+<p class="text-xs uppercase tracking-widest text-on-surface-variant font-bold">Creator Revenue</p>
+</div>
+</section>
+<!-- Latest Activity (Social Proof Feed) -->
+<section class="bg-surface-container-low p-8 shutter-frame">
+<h3 class="font-headline font-black italic uppercase tracking-tighter mb-6">Pulse Activity</h3>
+<div class="space-y-4">
+<div class="flex items-center gap-4 py-3 border-b border-white/5">
+<div class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">bolt</span>
+</div>
+<div class="flex-1">
+<p class="text-sm"><span class="font-bold text-primary">@NeonNinja</span> just sniped the <span class="font-bold italic">Titanium G-1</span></p>
+<p class="text-[10px] text-on-surface-variant uppercase">2 minutes ago</p>
+</div>
+<div class="text-xs font-bold text-green-400">+ $145</div>
+</div>
+<div class="flex items-center gap-4 py-3 border-b border-white/5">
+<div class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined">favorite</span>
+</div>
+<div class="flex-1">
+<p class="text-sm"><span class="font-bold text-secondary">Aria_Tech</span> stream reached <span class="font-bold">50k Likes</span></p>
+<p class="text-[10px] text-on-surface-variant uppercase">5 minutes ago</p>
+</div>
+<div class="text-xs font-bold text-primary">TRENDING</div>
+</div>
+</div>
+</section>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="w-full py-12 px-8 border-t border-white/5 bg-surface flex flex-col md:flex-row justify-between items-center gap-6 mt-12">
+<div class="flex flex-col gap-2">
+<span class="font-epilogue italic font-bold text-cyan-400 text-xl">KINETIC</span>
+<p class="font-manrope text-xs uppercase tracking-widest text-gray-500">© 2024 NEON PULSE COMMERCE. ALL RIGHTS RESERVED.</p>
+</div>
+<div class="flex gap-8">
+<a class="font-manrope text-xs uppercase tracking-widest text-gray-500 hover:text-cyan-200 transition-colors" href="#">Privacy</a>
+<a class="font-manrope text-xs uppercase tracking-widest text-gray-500 hover:text-cyan-200 transition-colors" href="#">Terms</a>
+<a class="font-manrope text-xs uppercase tracking-widest text-gray-500 hover:text-cyan-200 transition-colors" href="#">Creator Program</a>
+<a class="font-manrope text-xs uppercase tracking-widest text-gray-500 hover:text-cyan-200 transition-colors" href="#">Contact</a>
+</div>
+</footer>
+<!-- Mobile Nav Bar (Hidden on Desktop) -->
+<nav class="md:hidden fixed bottom-0 left-0 w-full bg-surface-container/80 backdrop-blur-xl border-t border-white/10 z-50 flex justify-around py-4">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">explore</span>
+<span class="material-symbols-outlined text-gray-400">group</span>
+<div class="w-12 h-12 bg-primary rounded-full flex items-center justify-center -mt-8 shadow-lg shadow-primary/40 border-4 border-surface">
+<span class="material-symbols-outlined text-on-primary font-bold">add</span>
+</div>
+<span class="material-symbols-outlined text-gray-400">shopping_bag</span>
+<span class="material-symbols-outlined text-gray-400">person</span>
+</nav>
+</body></html>

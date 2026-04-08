@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-primary-fixed": "#ffffff",
+              "on-tertiary-fixed": "#ffffff",
+              "on-secondary": "#ffffff",
+              "surface-container-lowest": "#ffffff",
+              "on-secondary-fixed-variant": "#3b3b3b",
+              "error": "#ba1a1a",
+              "tertiary-fixed": "#5e5e5e",
+              "tertiary-fixed-dim": "#474747",
+              "on-surface": "#1a1c1c",
+              "surface": "#f9f9f9",
+              "tertiary": "#3b3b3b",
+              "error-container": "#ffdad6",
+              "surface-container": "#eeeeee",
+              "on-primary-fixed-variant": "#e2e2e2",
+              "inverse-surface": "#2f3131",
+              "on-tertiary-container": "#ffffff",
+              "surface-container-highest": "#e2e2e2",
+              "primary-container": "#3b3b3b",
+              "primary-fixed": "#5e5e5e",
+              "on-error-container": "#410002",
+              "on-tertiary": "#e2e2e2",
+              "on-background": "#1a1c1c",
+              "on-tertiary-fixed-variant": "#e2e2e2",
+              "outline": "#777777",
+              "background": "#f9f9f9",
+              "on-secondary-container": "#1b1c1c",
+              "surface-tint": "#5e5e5e",
+              "tertiary-container": "#747474",
+              "on-primary-container": "#ffffff",
+              "inverse-primary": "#c6c6c6",
+              "on-primary": "#e2e2e2",
+              "outline-variant": "#c6c6c6",
+              "inverse-on-surface": "#f1f1f1",
+              "secondary-container": "#d6d4d3",
+              "surface-container-low": "#f3f3f3",
+              "primary-fixed-dim": "#474747",
+              "on-secondary-fixed": "#1b1c1c",
+              "surface-dim": "#dadada",
+              "secondary": "#5f5e5e",
+              "primary": "#000000",
+              "secondary-fixed-dim": "#acabaa",
+              "on-error": "#ffffff",
+              "surface-bright": "#f9f9f9",
+              "on-surface-variant": "#474747",
+              "secondary-fixed": "#c8c6c6",
+              "surface-variant": "#e2e2e2",
+              "surface-container-high": "#e8e8e8"
+            },
+            fontFamily: {
+              "headline": ["Newsreader", "serif"],
+              "body": ["Inter", "sans-serif"],
+              "label": ["Inter", "sans-serif"]
+            },
+            borderRadius: {"DEFAULT": "0px", "lg": "0px", "xl": "0px", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        body { background-color: #f9f9f9; }
+        .specimen-title { font-variant-ligatures: common-ligatures; }
+        /* Hide scrollbar but keep functionality */
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+</head>
+<body class="font-body text-on-background selection:bg-primary selection:text-on-primary">
+<!-- TopNavBar -->
+<nav class="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-8 py-6 bg-white/80 dark:bg-stone-950/80 backdrop-blur-xl transition-all duration-300">
+<div class="text-xl font-medium font-serif tracking-tight text-black dark:text-white">THE ARCHIVE</div>
+<div class="flex gap-12">
+<a class="text-[11px] tracking-[0.05em] uppercase font-bold text-black dark:text-white transition-colors duration-300" href="#">ARCHIVE</a>
+<a class="text-[11px] tracking-[0.05em] uppercase text-stone-400 dark:text-stone-500 hover:text-black dark:hover:text-white transition-colors duration-300" href="#">INFO</a>
+</div>
+</nav>
+<!-- Main Canvas -->
+<main class="pt-32 px-8 min-h-screen">
+<!-- Hero Section: Curatorial Statement -->
+<section class="mb-32 max-w-5xl">
+<h1 class="font-headline text-[clamp(2.5rem,8vw,6rem)] leading-[0.95] tracking-tightest mb-12">
+                A digital repository of <span class="italic">structural</span> and <span class="font-extralight text-outline">expressive</span> forms.
+            </h1>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-end">
+<div class="md:col-span-4">
+<p class="text-[10px] tracking-widest uppercase text-secondary mb-4">Volume 01</p>
+<p class="text-sm leading-relaxed text-on-surface-variant max-w-xs">
+                        Treating typography as a specimen. Every glyph carries a history of ink, light, and mathematical precision. This archive explores the void between communication and art.
+                    </p>
+</div>
+</div>
+</section>
+<!-- Specimen Grid: Quiet Brutalism -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px bg-surface-dim">
+<!-- Specimen 01 -->
+<article class="group relative bg-surface-container-low aspect-[4/5] p-10 flex flex-col justify-between hover:bg-surface-container-high transition-colors duration-500">
+<div class="flex justify-between items-start">
+<span class="text-[10px] tracking-widest uppercase font-bold">001</span>
+<div class="text-right">
+<p class="text-[10px] tracking-widest uppercase text-secondary">Aethelred Serif</p>
+<p class="text-[10px] tracking-widest uppercase text-outline-variant">2024 • 12 Weights</p>
+</div>
+</div>
+<div class="flex-grow flex items-center justify-center py-12">
+<span class="font-headline text-[15rem] leading-none group-hover:scale-105 transition-transform duration-700 ease-out">A</span>
+</div>
+<div class="flex justify-between items-end">
+<p class="font-headline text-3xl italic">Specimen</p>
+<button class="bg-primary text-on-primary px-6 py-3 text-[10px] tracking-widest uppercase opacity-0 group-hover:opacity-100 transition-opacity duration-300">View Detail</button>
+</div>
+</article>
+<!-- Specimen 02 -->
+<article class="group relative bg-surface-container-low aspect-[4/5] p-10 flex flex-col justify-between hover:bg-surface-container-high transition-colors duration-500">
+<div class="flex justify-between items-start">
+<span class="text-[10px] tracking-widest uppercase font-bold">002</span>
+<div class="text-right">
+<p class="text-[10px] tracking-widest uppercase text-secondary">Obsidian Sans</p>
+<p class="text-[10px] tracking-widest uppercase text-outline-variant">2023 • 08 Weights</p>
+</div>
+</div>
+<div class="flex-grow flex items-center justify-center py-12">
+<span class="font-body font-black text-[15rem] leading-none group-hover:scale-105 transition-transform duration-700 ease-out">g</span>
+</div>
+<div class="flex justify-between items-end">
+<p class="font-body text-xl font-light uppercase tracking-tighter">Geometric</p>
+<button class="bg-primary text-on-primary px-6 py-3 text-[10px] tracking-widest uppercase opacity-0 group-hover:opacity-100 transition-opacity duration-300">View Detail</button>
+</div>
+</article>
+<!-- Specimen 03 -->
+<article class="group relative bg-surface-container-low aspect-[4/5] p-10 flex flex-col justify-between hover:bg-surface-container-high transition-colors duration-500">
+<div class="flex justify-between items-start">
+<span class="text-[10px] tracking-widest uppercase font-bold">003</span>
+<div class="text-right">
+<p class="text-[10px] tracking-widest uppercase text-secondary">Fracture Mono</p>
+<p class="text-[10px] tracking-widest uppercase text-outline-variant">2024 • 04 Weights</p>
+</div>
+</div>
+<div class="flex-grow flex items-center justify-center py-12">
+<span class="font-body font-bold text-[12rem] leading-none group-hover:scale-105 transition-transform duration-700 ease-out tracking-tighter">{}</span>
+</div>
+<div class="flex justify-between items-end">
+<p class="font-body text-sm font-medium">Technicality</p>
+<button class="bg-primary text-on-primary px-6 py-3 text-[10px] tracking-widest uppercase opacity-0 group-hover:opacity-100 transition-opacity duration-300">View Detail</button>
+</div>
+</article>
+<!-- Specimen 04 (Full width on small, normal on large) -->
+<article class="group relative bg-surface-container-low aspect-[4/5] p-10 flex flex-col justify-between hover:bg-surface-container-high transition-colors duration-500 md:col-span-2 lg:col-span-1">
+<div class="flex justify-between items-start">
+<span class="text-[10px] tracking-widest uppercase font-bold">004</span>
+<div class="text-right">
+<p class="text-[10px] tracking-widest uppercase text-secondary">Lumina Display</p>
+<p class="text-[10px] tracking-widest uppercase text-outline-variant">2024 • 02 Weights</p>
+</div>
+</div>
+<div class="flex-grow flex items-center justify-center py-12">
+<span class="font-headline font-extralight italic text-[18rem] leading-none group-hover:scale-105 transition-transform duration-700 ease-out">S</span>
+</div>
+<div class="flex justify-between items-end">
+<p class="font-headline text-2xl tracking-widest">Atmosphere</p>
+<button class="bg-primary text-on-primary px-6 py-3 text-[10px] tracking-widest uppercase opacity-0 group-hover:opacity-100 transition-opacity duration-300">View Detail</button>
+</div>
+</article>
+<!-- Full-width Visual Break -->
+<div class="md:col-span-2 lg:col-span-2 h-[400px] overflow-hidden bg-surface-container-highest">
+<img alt="Close up of mechanical typewriter parts" class="w-full h-full object-cover grayscale opacity-40 mix-blend-multiply transition-transform duration-1000 group-hover:scale-110" data-alt="Close-up of mechanical typewriter keys and strikers in a monochrome, high-contrast studio setting with deep shadows" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDpXhfWoM7ew_0R37RfPjCiuEP54Ij7XlkjGfzix1orfasI6n_TIBpxktqFFY6Ngqow00T1WLArRHaSFC5vmy5kBod4tDjquUgUqGBXBfIXI9p-XvkIPTsFrgNBMxh5IVE4E-I0ON5Dt8yrw2Njg0VZW245Kum_h1wY8bkXFPC3LYo8bXoUtCmLgm10rPkAjmYLJYdQcrS5xqWMBY6WfPTuJ1RpyldESBHca34SESinjehR8KaRkET5ZCBm5aYzDtYJa3VjDkviotby"/>
+</div>
+<!-- Specimen 05 -->
+<article class="group relative bg-surface-container-low aspect-[4/5] p-10 flex flex-col justify-between hover:bg-surface-container-high transition-colors duration-500">
+<div class="flex justify-between items-start">
+<span class="text-[10px] tracking-widest uppercase font-bold">005</span>
+<div class="text-right">
+<p class="text-[10px] tracking-widest uppercase text-secondary">Vektor Stencil</p>
+<p class="text-[10px] tracking-widest uppercase text-outline-variant">2023 • 01 Weight</p>
+</div>
+</div>
+<div class="flex-grow flex items-center justify-center py-12">
+<span class="font-body font-black text-[14rem] leading-none group-hover:scale-105 transition-transform duration-700 ease-out tracking-[-0.1em]">W</span>
+</div>
+<div class="flex justify-between items-end">
+<p class="font-body text-xs font-bold uppercase tracking-widest">Industrial</p>
+<button class="bg-primary text-on-primary px-6 py-3 text-[10px] tracking-widest uppercase opacity-0 group-hover:opacity-100 transition-opacity duration-300">View Detail</button>
+</div>
+</article>
+</div>
+<!-- Release Metadata Table (No-Line Principle) -->
+<section class="mt-48 mb-24">
+<div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
+<h2 class="text-[10px] tracking-[0.2em] uppercase font-bold">Technical Specifications</h2>
+<div class="w-full md:w-1/3 h-px bg-surface-dim"></div>
+</div>
+<div class="space-y-11">
+<div class="grid grid-cols-12 gap-8 py-2">
+<div class="col-span-12 md:col-span-4 text-[10px] tracking-widest uppercase text-secondary">Family Name</div>
+<div class="col-span-12 md:col-span-4 text-[10px] tracking-widest uppercase text-secondary">Classification</div>
+<div class="col-span-12 md:col-span-2 text-[10px] tracking-widest uppercase text-secondary">Release</div>
+<div class="col-span-12 md:col-span-2 text-[10px] tracking-widest uppercase text-secondary text-right">Status</div>
+</div>
+<div class="grid grid-cols-12 gap-8 py-2 group cursor-pointer">
+<div class="col-span-12 md:col-span-4 font-headline text-2xl">Aethelred Serif</div>
+<div class="col-span-12 md:col-span-4 self-center font-body text-sm text-on-surface-variant">Transitional Serif</div>
+<div class="col-span-12 md:col-span-2 self-center font-body text-sm text-on-surface-variant">Oct 2024</div>
+<div class="col-span-12 md:col-span-2 self-center font-body text-xs text-right opacity-40 group-hover:opacity-100 transition-opacity">AVAILABLE</div>
+</div>
+<div class="grid grid-cols-12 gap-8 py-2 group cursor-pointer bg-surface-container-low px-4 -mx-4">
+<div class="col-span-12 md:col-span-4 font-body font-black text-2xl uppercase tracking-tighter">Obsidian Sans</div>
+<div class="col-span-12 md:col-span-4 self-center font-body text-sm text-on-surface-variant">Neo-Grotesque</div>
+<div class="col-span-12 md:col-span-2 self-center font-body text-sm text-on-surface-variant">Aug 2023</div>
+<div class="col-span-12 md:col-span-2 self-center font-body text-xs text-right opacity-40 group-hover:opacity-100 transition-opacity">AVAILABLE</div>
+</div>
+<div class="grid grid-cols-12 gap-8 py-2 group cursor-pointer">
+<div class="col-span-12 md:col-span-4 font-headline italic text-2xl">Lumina Display</div>
+<div class="col-span-12 md:col-span-4 self-center font-body text-sm text-on-surface-variant">High Contrast Display</div>
+<div class="col-span-12 md:col-span-2 self-center font-body text-sm text-on-surface-variant">Mar 2024</div>
+<div class="col-span-12 md:col-span-2 self-center font-body text-xs text-right opacity-40 group-hover:opacity-100 transition-opacity">RESTRICTED</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full flex flex-col md:flex-row justify-between items-center gap-8 px-12 bg-stone-100 dark:bg-stone-900 full-width p-12 mt-24">
+<div class="font-sans text-[10px] tracking-widest uppercase text-stone-500">© 2024 DIGITAL SPECIMEN ARCHIVE</div>
+<div class="flex gap-10">
+<a class="font-sans text-[10px] tracking-widest uppercase text-stone-500 hover:text-black dark:hover:text-white transition-opacity duration-300 opacity-80 hover:opacity-100" href="#">LICENSING</a>
+<a class="font-sans text-[10px] tracking-widest uppercase text-stone-500 hover:text-black dark:hover:text-white transition-opacity duration-300 opacity-80 hover:opacity-100" href="#">INSTAGRAM</a>
+<a class="font-sans text-[10px] tracking-widest uppercase text-stone-500 hover:text-black dark:hover:text-white transition-opacity duration-300 opacity-80 hover:opacity-100" href="#">CONTACT</a>
+</div>
+</footer>
+</body></html>

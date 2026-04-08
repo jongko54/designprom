@@ -1,0 +1,21 @@
+{
+  "brand": "Airbnb",
+  "contentType": "image/png",
+  "fileName": "airbnb-host-trust-center.png",
+  "generatedAt": "2026-04-02T11:08:24.623Z",
+  "htmlUrl": "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ7Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpaCiVodG1sXzE4MzZlMmM4ZDc2MTQxNTJiNjRlYmUzMjFiYTNmNWFjEgsSBxCCisPc0AkYAZIBIwoKcHJvamVjdF9pZBIVQhM3MTQzMjg5MDExNTU3MTA0ODY0&filename=&opi=96797242",
+  "imageUrl": "https://lh3.googleusercontent.com/aida/ADBb0uhs0fVb4Syla1_sT58HOW3z249kW0wD18JT8-l_25ClQIe0_r1IodkYn8B5Uix7WHmP5lDNzxHnt1X0wUtS0y7hCvtID2h4STvXoNqSPxi9NJiT9d0wClq2mwIpstCzHo8FyS1RTbXWFVsC5EQC7L6a5I9L0pEfGqUQ9fphLvE4lQmGhc3qAsFOMQRWTRbAYPCx03p0M4jHbvzLnlsrHjwL6XjGNvfvlGCFcCXQatwln0LWu-9HbADgVjE",
+  "notes": [
+    "I've designed the Host Trust Center page with an Airbnb-inspired aesthetic. \n\nThe layout focuses on creating a sense of reliability and calm. It includes:\n- A warm, human-centric hero section to build immediate rapport.\n- Clear, modular panels for safety and protection details.\n- Practical tools like an earnings calculator to provide tangible value.\n- Trust-building testimonial moments from real hosts.\n- Softly rounded UI elements and a neutral palette to ensure the page feels practical and approachable.\n\nThe new design system and the trust center screen are now available on your canvas. How does this initial version feel to you?"
+  ],
+  "prompt": "Design a host trust center page in an Airbnb-inspired language with safety modules, earnings proof, testimonial moments, soft rounded panels, and human photography. Make the page feel practical, calm, and trustworthy.",
+  "projectId": "7143289011557104864",
+  "screenId": "ed68d36b4f704f1a8ea2391fdfe65163",
+  "slug": "airbnb-host-trust-center",
+  "suggestions": [
+    "Change the color scheme to a cooler blue palette",
+    "Add more host resource cards in the bottom section",
+    "Make the safety protection section more prominent"
+  ],
+  "title": "Host Trust Center"
+}

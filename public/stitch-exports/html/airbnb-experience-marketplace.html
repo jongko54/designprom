@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "surface-dim": "#e2d9c6",
+              "surface-bright": "#fff8ef",
+              "surface-container": "#f6edda",
+              "on-tertiary-container": "#f5fff9",
+              "on-primary-container": "#fffbff",
+              "error-container": "#ffdad6",
+              "inverse-primary": "#ffb3b1",
+              "primary-container": "#d04148",
+              "inverse-surface": "#343023",
+              "on-secondary": "#ffffff",
+              "tertiary-fixed": "#86f7d4",
+              "on-primary-fixed-variant": "#8f0d20",
+              "surface-variant": "#eae2cf",
+              "on-secondary-fixed": "#3d060a",
+              "on-surface": "#1f1b10",
+              "surface-container-highest": "#eae2cf",
+              "primary-fixed": "#ffdad8",
+              "secondary-fixed-dim": "#ffb3b1",
+              "on-error-container": "#93000a",
+              "error": "#ba1a1a",
+              "surface-container-lowest": "#ffffff",
+              "on-primary": "#ffffff",
+              "outline": "#8d706f",
+              "surface-container-low": "#fcf3df",
+              "on-secondary-container": "#793334",
+              "primary-fixed-dim": "#ffb3b1",
+              "surface": "#fff8ef",
+              "on-tertiary": "#ffffff",
+              "on-background": "#1f1b10",
+              "primary": "#ae2732",
+              "on-surface-variant": "#594140",
+              "secondary-fixed": "#ffdad8",
+              "tertiary": "#006953",
+              "secondary": "#934848",
+              "surface-container-high": "#f0e7d4",
+              "on-tertiary-fixed": "#002118",
+              "on-error": "#ffffff",
+              "inverse-on-surface": "#f9f0dc",
+              "outline-variant": "#e1bfbd",
+              "tertiary-container": "#008469",
+              "on-primary-fixed": "#410007",
+              "tertiary-fixed-dim": "#68dab8",
+              "secondary-container": "#fe9f9d",
+              "on-tertiary-fixed-variant": "#00513f",
+              "on-secondary-fixed-variant": "#763132",
+              "background": "#fff8ef",
+              "surface-tint": "#b12a34"
+            },
+            fontFamily: {
+              "headline": ["Plus Jakarta Sans"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+      .glass-effect {
+        backdrop-filter: blur(24px);
+        -webkit-backdrop-filter: blur(24px);
+      }
+      .primary-gradient {
+        background: linear-gradient(135deg, #ae2732 0%, #d04148 100%);
+      }
+    </style>
+</head>
+<body class="bg-surface font-body text-on-surface selection:bg-secondary-container">
+<!-- TopNavBar -->
+<header class="fixed top-0 w-full z-50 bg-[#fff8ef]/80 dark:bg-stone-950/80 backdrop-blur-xl shadow-sm shadow-stone-200/50 dark:shadow-none">
+<nav class="flex justify-between items-center px-8 py-4 max-w-[1440px] mx-auto">
+<div class="flex items-center gap-8">
+<span class="text-2xl font-bold text-[#E34F55] dark:text-[#f28b90] font-headline">TerraRose</span>
+<div class="hidden md:flex gap-6 items-center">
+<a class="font-headline font-semibold tracking-tight text-[#E34F55] border-b-2 border-[#E34F55] pb-1" href="#">Experiences</a>
+<a class="font-headline font-semibold tracking-tight text-stone-600 dark:text-stone-400 hover:text-stone-900 transition-colors duration-200" href="#">Online Events</a>
+<a class="font-headline font-semibold tracking-tight text-stone-600 dark:text-stone-400 hover:text-stone-900 transition-colors duration-200" href="#">Host an Experience</a>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<button class="hidden lg:flex items-center px-4 py-2 rounded-full font-headline font-semibold text-stone-700 hover:bg-stone-100/50 transition-colors duration-200">
+                    Host
+                </button>
+<div class="flex items-center gap-2 p-1 bg-surface-container-lowest rounded-full border border-outline-variant/20 shadow-sm">
+<div class="p-2 hover:bg-stone-100/50 rounded-full cursor-pointer transition-transform active:scale-95">
+<span class="material-symbols-outlined text-stone-600" data-icon="language">language</span>
+</div>
+<div class="flex items-center gap-2 pl-2 pr-1 py-1 hover:bg-stone-100/50 rounded-full cursor-pointer transition-transform active:scale-95">
+<span class="material-symbols-outlined text-stone-600" data-icon="menu">menu</span>
+<span class="material-symbols-outlined text-stone-400 text-3xl" data-icon="account_circle" style="font-variation-settings: 'FILL' 1;">account_circle</span>
+</div>
+</div>
+</div>
+</nav>
+</header>
+<main class="pt-24">
+<!-- Hero Section -->
+<section class="px-8 md:px-12 py-16 max-w-[1440px] mx-auto">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+<div class="lg:col-span-6 order-2 lg:order-1">
+<h1 class="text-5xl lg:text-7xl font-headline font-extrabold tracking-tight text-on-surface mb-8 leading-[1.1]">
+                        Unforgettable experiences, <span class="text-primary">hosted by locals</span>
+</h1>
+<!-- Search Bar Shell -->
+<div class="bg-surface-container-lowest p-4 rounded-full shadow-2xl shadow-on-surface/5 flex flex-col md:flex-row items-center gap-2 border border-outline-variant/10">
+<div class="flex-1 px-6 py-2 border-r border-outline-variant/20">
+<label class="block text-[10px] font-bold uppercase tracking-wider text-outline mb-0.5">Where</label>
+<input class="w-full bg-transparent border-none p-0 focus:ring-0 text-on-surface placeholder:text-outline/60 font-medium" placeholder="Search destinations" type="text"/>
+</div>
+<div class="flex-1 px-6 py-2 border-r border-outline-variant/20">
+<label class="block text-[10px] font-bold uppercase tracking-wider text-outline mb-0.5">When</label>
+<input class="w-full bg-transparent border-none p-0 focus:ring-0 text-on-surface placeholder:text-outline/60 font-medium" placeholder="Add dates" type="text"/>
+</div>
+<div class="flex-1 px-6 py-2">
+<label class="block text-[10px] font-bold uppercase tracking-wider text-outline mb-0.5">How many</label>
+<input class="w-full bg-transparent border-none p-0 focus:ring-0 text-on-surface placeholder:text-outline/60 font-medium" placeholder="Add guests" type="text"/>
+</div>
+<button class="primary-gradient p-4 rounded-full text-white shadow-lg active:scale-95 transition-transform">
+<span class="material-symbols-outlined" data-icon="search">search</span>
+</button>
+</div>
+</div>
+<div class="lg:col-span-6 order-1 lg:order-2">
+<div class="relative h-[500px] w-full rounded-xl overflow-hidden shadow-2xl">
+<img alt="Chef teaching pasta making" class="w-full h-full object-cover" data-alt="Authentic Italian kitchen with a local chef teaching two travelers how to hand-roll fresh pasta, warm golden afternoon lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDJ4crvcUKK8-kxX-8vBVzy3KUioOSGK_h6X5Qdr5a9ZyT6rdWZwdFBOaZGkoya0637DbLXRXyMXOuv_13BWM6DW2r3PBqnN3KcfWtf5NokYiyu_yKscrmQYvOpCkAinwXGDfZYfEysN-YLxfs3WTOQ2tywzNEP4ZVOphJVruq8-lFCuRQTIz1m7aC1xRv-qkYO6a76aM6f_nJc7tpc8N5mQaRylvbJO1QbjxaJ5UANwdiguV_LyvGzy_l3Qx7wxDI0jbWJfYm9ZW0-"/>
+<div class="absolute inset-0 bg-gradient-to-t from-on-surface/40 to-transparent"></div>
+<div class="absolute bottom-8 left-8 text-white">
+<div class="flex items-center gap-2 mb-2">
+<span class="bg-primary px-3 py-1 rounded-full text-[10px] font-bold uppercase">Staff Pick</span>
+</div>
+<h3 class="text-2xl font-headline font-bold">Pasta making in a Roman villa</h3>
+<p class="text-sm opacity-90">Hosted by Chef Alessandro</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Discovery Grid: Top Experiences -->
+<section class="px-8 md:px-12 py-20 max-w-[1440px] mx-auto">
+<div class="flex justify-between items-end mb-12">
+<div>
+<h2 class="text-3xl font-headline font-bold text-on-surface mb-2">Top Experiences</h2>
+<p class="text-on-surface-variant font-medium">Curated activities loved by our community</p>
+</div>
+<button class="text-primary font-bold flex items-center gap-2 hover:underline underline-offset-4 transition-all">
+                    View all <span class="material-symbols-outlined text-sm" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+<!-- Bento-style Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<!-- Card 1 -->
+<div class="group cursor-pointer">
+<div class="relative h-80 rounded-xl overflow-hidden mb-4 shadow-sm group-hover:shadow-xl transition-all duration-300">
+<img alt="Food tour" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Vibrant night street food market in Tokyo with neon lights, steaming bowls of ramen, and crowds of people in soft bokeh" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBqdd0kmPdIs1xcYeajcGbyhf2n0GtBgk3FgRX851jWVyiuH_NG-pzrUleUtR3QC0BLe3Bt1caN5-OeNvtlYUQVl5uTUDmqQ1g6tSr_YXC1ECJPeaJWytbPyp18zIwrE9t5GYl3QeRCKCbn7NNhL2DGuteHLxhy5Mxhjs5l5uYP-u-KAvcaem-Lhpj_og8igutdwfevdLWSgoAD7Bz6ShDWGxqPqD34MgWwAgkZplSqF6YvbxX9dADFgW8sqEcabP7TsCXSNAX5x27H"/>
+<button class="absolute top-4 right-4 bg-white/20 backdrop-blur-md p-2 rounded-full text-white hover:bg-white hover:text-primary transition-colors">
+<span class="material-symbols-outlined" data-icon="favorite">favorite</span>
+</button>
+</div>
+<div class="flex justify-between items-start">
+<div>
+<div class="flex items-center gap-1 text-primary mb-1">
+<span class="material-symbols-outlined text-sm" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="text-xs font-bold font-body">4.95 (128)</span>
+<span class="text-xs text-outline mx-1">•</span>
+<span class="text-xs font-medium text-on-surface-variant">Tokyo, Japan</span>
+</div>
+<h4 class="text-lg font-headline font-bold text-on-surface group-hover:text-primary transition-colors">Hidden Street Food Secrets</h4>
+<p class="text-on-surface-variant text-sm mt-1">Hosted by Kenji</p>
+<p class="text-on-surface font-bold mt-2">From $65 <span class="font-medium text-outline">/ person</span></p>
+</div>
+<img alt="Host avatar" class="w-10 h-10 rounded-full border-2 border-surface-container-lowest shadow-sm" data-alt="Professional headshot of a friendly Japanese man in his 30s smiling warmly at the camera" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCgfaCNfkAenTX7BDuuGgtX-kpV7vf35mY7v9zvt1dUHCG9fZIx6zmSu_JBlUbZXC4w3Hpi3wzoxzzjkiICjVNgdbF7Bs0z9YzwuvHT-ccwEw-dtKHxOKEM49tVsBV5q3WC2M7wzb2p5n7n_aglttx0UXzre2uelHTNhOQk2FgKBDvZWZmRROP3zZI4ZgMiHCIpWtC_a5568qRDoRDpKNu7lZlwmy_dddnV5JY_1mwQdKG4u68R2gfSwzsAdC38s0xufGP8HlZS2Pp_"/>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="group cursor-pointer">
+<div class="relative h-80 rounded-xl overflow-hidden mb-4 shadow-sm group-hover:shadow-xl transition-all duration-300">
+<img alt="Surfing Bali" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Sun-drenched turquoise waves at a Bali beach with a surfer catching a clean barrel at sunset, tropical palm trees in distance" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBydW0uAH9zcpnDu5oomS_nVDQUOsPMNAFViZGYmjgcwYUW6-SZPY5JgDk0Y3N6pq5AL_5PZZTNfU_V0FBuH6sQ5NtoSlNI1_uIk4Ym6Jyg9VliJdalEXQ7z1z9Z7T3rLPYAxerjosWPAigK1fk-3YrcagwJHelRgG5vJb0UBsIpZraZoGvhdLe1UNytTequODzaPoeLVXQmJOu_aI-E0w5dq3AQ0LJ_iyW_NLLYXmRClHuCRwzGWEqlLAqN8IKuE2ULBNLGpSYsGDS"/>
+<button class="absolute top-4 right-4 bg-white/20 backdrop-blur-md p-2 rounded-full text-white hover:bg-white hover:text-primary transition-colors">
+<span class="material-symbols-outlined" data-icon="favorite">favorite</span>
+</button>
+</div>
+<div class="flex justify-between items-start">
+<div>
+<div class="flex items-center gap-1 text-primary mb-1">
+<span class="material-symbols-outlined text-sm" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="text-xs font-bold font-body">4.89 (310)</span>
+<span class="text-xs text-outline mx-1">•</span>
+<span class="text-xs font-medium text-on-surface-variant">Bali, Indonesia</span>
+</div>
+<h4 class="text-lg font-headline font-bold text-on-surface group-hover:text-primary transition-colors">Sunrise Surf &amp; Meditation</h4>
+<p class="text-on-surface-variant text-sm mt-1">Hosted by Wayan</p>
+<p class="text-on-surface font-bold mt-2">From $45 <span class="font-medium text-outline">/ person</span></p>
+</div>
+<img alt="Host avatar" class="w-10 h-10 rounded-full border-2 border-surface-container-lowest shadow-sm" data-alt="Close-up of a tanned athletic male surfing instructor with messy sun-bleached hair and a bright smile" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAelkv9fhbdvY-Ega-aOTlrW4XyTFdnOtuJDLKf4CRqSfIEFbykX-O-pFPvxBAwdp2PNjCJumYXCGIGqRBM5H8naHYnIucymD18pv6k-YDHDFBKwZRRTFMBlbi50pZXulGs4nUrPxWSE4KS3gGAE7gNOka6n7yHdSPoRboXppbLZ_YeGSC95MTMIRVQ4UY6baCY12ASuMQl1hL97XPFZYdJohiiqaMqO9GzMgyl04e_ubHDvmQI_ogxxSL_ZI3qfmR9TNY05m9jQ1GQ"/>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="group cursor-pointer">
+<div class="relative h-80 rounded-xl overflow-hidden mb-4 shadow-sm group-hover:shadow-xl transition-all duration-300">
+<img alt="Pottery Class" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Detail of hands shaping a clay pot on a spinning potter's wheel in a sunlit art studio with ceramics in the background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD7uasMj2eadByDqRmTjVDCAsPlNYG7QDO6KwM9rsjYrXyPCshDo4H6gcpvNOX3uoEdOYfdeR2hJS-MdABRLOEBuE24tX5vS44qDm4MZJtXKpXfbQ6vSRHoi2S3cGumLJqniqC7yeRGZtOWw0omSCzZ1jdUTRNBhDzgWHuxlNRtrSl2L9nTdAVxltc1g36-80sxwippKWSgYSEtpAyUEwJ1z526O2WGzeEIRs9nL3Wj2rq9bgboGwcQy9IevVXPRQ--GqxNpgMV5PWG"/>
+<button class="absolute top-4 right-4 bg-white/20 backdrop-blur-md p-2 rounded-full text-white hover:bg-white hover:text-primary transition-colors">
+<span class="material-symbols-outlined" data-icon="favorite">favorite</span>
+</button>
+</div>
+<div class="flex justify-between items-start">
+<div>
+<div class="flex items-center gap-1 text-primary mb-1">
+<span class="material-symbols-outlined text-sm" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="text-xs font-bold font-body">5.0 (89)</span>
+<span class="text-xs text-outline mx-1">•</span>
+<span class="text-xs font-medium text-on-surface-variant">Paris, France</span>
+</div>
+<h4 class="text-lg font-headline font-bold text-on-surface group-hover:text-primary transition-colors">Artisanal Pottery Workshop</h4>
+<p class="text-on-surface-variant text-sm mt-1">Hosted by Camille</p>
+<p class="text-on-surface font-bold mt-2">From $90 <span class="font-medium text-outline">/ person</span></p>
+</div>
+<img alt="Host avatar" class="w-10 h-10 rounded-full border-2 border-surface-container-lowest shadow-sm" data-alt="Portrait of a young woman with curly hair and apron looking thoughtfully at a piece of ceramic in her workshop" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD-Sv25sT4PmkhgGMSWdB9jiNDDvD2WfPp-sYKCZk7NsC8l_T7ewOElx0dFH7r6eG8xIv83eM8DPfuEi1EDOR3__K497xDp_8kliBsi3eLfmlSWafM7N_8pQJltadoK4BfDjXq90evuzYXJdGISpPaK6r7C9LKb8-kgq9ZwBqd2UclXDfBN9P-bQ-SfnmJf1Vifw3_lSrJ8n3FCybCybu9Jsl43mlSZIHLMJFK9NQ0-mM0QysGpFFY27zEqJwIki2sqwHTBHX_CppEu"/>
+</div>
+</div>
+</div>
+</section>
+<!-- Social Proof: Meet Our Community -->
+<section class="bg-surface-container-low py-24 rounded-t-[4rem]">
+<div class="px-8 md:px-12 max-w-[1440px] mx-auto">
+<div class="flex flex-col md:flex-row gap-16 items-center">
+<div class="w-full md:w-1/2">
+<span class="text-primary font-bold tracking-widest text-xs uppercase mb-4 block">Meet our community</span>
+<h2 class="text-4xl font-headline font-extrabold text-on-surface mb-6 leading-tight">Authentic stories from our hosts and guests</h2>
+<div class="space-y-8">
+<div class="bg-surface-container-lowest p-8 rounded-xl shadow-sm">
+<p class="italic text-lg text-on-surface-variant mb-6">"TerraRose gave me the platform to share my passion for Roman history through food. It's more than hosting; it's building global friendships."</p>
+<div class="flex items-center gap-4">
+<img alt="Alessandro" class="w-12 h-12 rounded-full object-cover" data-alt="Close-up of a distinguished middle-aged Italian man with graying beard and warm intelligent eyes" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBqlA9i_q7tbJnveeUnnwEk4pxjJqxO6b9mo8r27e6qasF5QIaWuyXKTxx0492uCXFkRyFPtoDV7J0j5CdPSwsPVGavuA0nSwlIrj68DJis13H3IJ1vq4GPNZPgtvOblp4osmJmtE6jdK_gijQv_Gvz_hGCBqe-QjfVOnbTndu4evX_F_A2wZGCuJbDP3CLR8CrD_FfV6csNYERREp5eyJeYL8FQZcm38_ZLuBZDefNGUwrdWHded1BqY-HXHtUTRIhJkSMvEBuqPuR"/>
+<div>
+<h5 class="font-bold text-on-surface">Alessandro V.</h5>
+<p class="text-xs text-outline">Host in Rome for 4 years</p>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-6 p-6 bg-surface-container-highest rounded-full w-fit">
+<div class="bg-primary-container p-3 rounded-full text-white">
+<span class="material-symbols-outlined" data-icon="verified_user">verified_user</span>
+</div>
+<div>
+<p class="font-bold text-sm text-on-surface">Trust &amp; Safety First</p>
+<p class="text-xs text-on-surface-variant">Secure payments and 24/7 global support for every journey.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="w-full md:w-1/2 relative">
+<div class="grid grid-cols-2 gap-4">
+<div class="pt-12">
+<img alt="Travelers laughing" class="rounded-xl aspect-[3/4] object-cover shadow-2xl" data-alt="Group of diverse young friends laughing and sharing a meal outdoors in a sun-drenched European plaza" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB7KiV9cprcsd1QBlHI4NIpfoa7yzWiZpw1skDNNOHrXFqh3GJ0XrQ9XrR4dIhO0uIVoTwGOTV37gqm-iG8BJ3QxBMNHGKp7YLDlqHwys68Cookgve_XnAxXisd0oMGzO8BkrZANjm1dDN7mt-5rDiUFxw9GQL7zrcxCtET7MRR0ugtNRkQZta8EAdwXf8607zD_BKQcnT696mnzcuc8H1kHma2JBCKuTXQfE8VrVH9UPU0DT6drEWryuAVgTSAK-1DaJYR6SqYQ3Og"/>
+</div>
+<div>
+<img alt="Cooking class" class="rounded-xl aspect-[3/4] object-cover shadow-xl" data-alt="Hands of several people from different backgrounds prepping vegetables together on a rustic wooden table" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDLnNry2ccMiaw4bGAf3yem618jrvEd-0tztyC7AA64z9MWweotSbw4sYl7jzppJ7KL0x4lwVMI7Fe6DlmIosKgLBnpMwr038cAvEjo4BKFlVYtTUDnagqJCX-NQ68uEconWexjEPzj_hqkNTMVUiN6XoZYxyPXCeQG7xcMk3bwiNzPh4CYTCSjifg2cHc54XlwHvg4v5r5JWEGXJ2_JY4RxErsXF6znmoifzEHseAn2Csgm51fdNQ_NW71nu_sGEG9VSWFcofH_DbQ"/>
+</div>
+</div>
+<div class="absolute -bottom-6 -left-6 bg-tertiary text-white p-8 rounded-xl shadow-2xl max-w-[240px]">
+<p class="text-3xl font-headline font-extrabold mb-1">10k+</p>
+<p class="text-sm font-medium opacity-80">Unique experiences hosted worldwide every month.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA: Host an experience -->
+<section class="px-8 md:px-12 py-24 max-w-[1440px] mx-auto text-center">
+<div class="bg-on-surface py-20 px-8 rounded-xl relative overflow-hidden">
+<!-- Background Decorative Pattern -->
+<div class="absolute inset-0 opacity-10 pointer-events-none">
+<svg height="100%" width="100%" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<pattern height="40" id="grid" patternunits="userSpaceOnUse" width="40">
+<path d="M 40 0 L 0 0 0 40" fill="none" stroke="white" stroke-width="1"></path>
+</pattern>
+</defs>
+<rect fill="url(#grid)" height="100%" width="100%"></rect>
+</svg>
+</div>
+<div class="relative z-10">
+<h2 class="text-4xl md:text-5xl font-headline font-extrabold text-white mb-6">Want to share your world?</h2>
+<p class="text-surface-container max-w-2xl mx-auto mb-10 text-lg">Turn your passion into a business and meet people from all over the globe. We provide the tools, you provide the magic.</p>
+<div class="flex flex-col sm:flex-row justify-center gap-4">
+<button class="primary-gradient px-8 py-4 rounded-full text-white font-bold text-lg shadow-xl active:scale-95 transition-transform">
+                            Host an experience
+                        </button>
+<button class="bg-white/10 backdrop-blur-md px-8 py-4 rounded-full text-white font-bold text-lg hover:bg-white/20 transition-all">
+                            Learn how it works
+                        </button>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full rounded-t-[3rem] mt-20 bg-[#fcf3df] dark:bg-stone-900">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12 px-12 py-16 max-w-[1440px] mx-auto">
+<div class="md:col-span-1">
+<span class="font-bold text-stone-900 dark:text-white text-xl block mb-4 font-headline">TerraRose</span>
+<p class="font-['Inter'] text-sm text-stone-700 dark:text-stone-300 mb-6 leading-relaxed">
+                    Connecting curious travelers with passionate locals for authentic, human-led experiences worldwide.
+                </p>
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-stone-600 hover:text-[#E34F55] cursor-pointer" data-icon="public">public</span>
+<span class="material-symbols-outlined text-stone-600 hover:text-[#E34F55] cursor-pointer" data-icon="chat">chat</span>
+<span class="material-symbols-outlined text-stone-600 hover:text-[#E34F55] cursor-pointer" data-icon="share">share</span>
+</div>
+</div>
+<div>
+<h6 class="font-headline font-bold text-stone-900 dark:text-white mb-6 uppercase text-xs tracking-widest">Marketplace</h6>
+<ul class="space-y-4">
+<li><a class="font-['Inter'] text-sm text-stone-600 dark:text-stone-400 hover:text-[#E34F55] underline-offset-4 hover:underline transition-all" href="#">Online Events</a></li>
+<li><a class="font-['Inter'] text-sm text-stone-600 dark:text-stone-400 hover:text-[#E34F55] underline-offset-4 hover:underline transition-all" href="#">Experience Categories</a></li>
+<li><a class="font-['Inter'] text-sm text-stone-600 dark:text-stone-400 hover:text-[#E34F55] underline-offset-4 hover:underline transition-all" href="#">Corporate Travel</a></li>
+<li><a class="font-['Inter'] text-sm text-stone-600 dark:text-stone-400 hover:text-[#E34F55] underline-offset-4 hover:underline transition-all" href="#">Gift Cards</a></li>
+</ul>
+</div>
+<div>
+<h6 class="font-headline font-bold text-stone-900 dark:text-white mb-6 uppercase text-xs tracking-widest">Support</h6>
+<ul class="space-y-4">
+<li><a class="font-['Inter'] text-sm text-stone-600 dark:text-stone-400 hover:text-[#E34F55] underline-offset-4 hover:underline transition-all" href="#">Community Support</a></li>
+<li><a class="font-['Inter'] text-sm text-stone-600 dark:text-stone-400 hover:text-[#E34F55] underline-offset-4 hover:underline transition-all" href="#">Safety Center</a></li>
+<li><a class="font-['Inter'] text-sm text-stone-600 dark:text-stone-400 hover:text-[#E34F55] underline-offset-4 hover:underline transition-all" href="#">Trust &amp; Safety</a></li>
+<li><a class="font-['Inter'] text-sm text-stone-600 dark:text-stone-400 hover:text-[#E34F55] underline-offset-4 hover:underline transition-all" href="#">Cancellation Options</a></li>
+</ul>
+</div>
+<div>
+<h6 class="font-headline font-bold text-stone-900 dark:text-white mb-6 uppercase text-xs tracking-widest">Legal</h6>
+<ul class="space-y-4">
+<li><a class="font-['Inter'] text-sm text-stone-600 dark:text-stone-400 hover:text-[#E34F55] underline-offset-4 hover:underline transition-all" href="#">Privacy Policy</a></li>
+<li><a class="font-['Inter'] text-sm text-stone-600 dark:text-stone-400 hover:text-[#E34F55] underline-offset-4 hover:underline transition-all" href="#">Terms of Service</a></li>
+<li><a class="font-['Inter'] text-sm text-stone-600 dark:text-stone-400 hover:text-[#E34F55] underline-offset-4 hover:underline transition-all" href="#">Cookie Settings</a></li>
+</ul>
+</div>
+</div>
+<div class="px-12 py-8 border-t border-stone-200/50 dark:border-stone-800/50 max-w-[1440px] mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
+<span class="font-['Inter'] text-sm text-stone-700 dark:text-stone-300">© 2024 TerraRose Marketplace. All rights reserved.</span>
+<div class="flex gap-6">
+<span class="font-['Inter'] text-sm text-stone-600 dark:text-stone-400 cursor-pointer hover:text-[#E34F55]">English (US)</span>
+<span class="font-['Inter'] text-sm text-stone-600 dark:text-stone-400 cursor-pointer hover:text-[#E34F55]">USD ($)</span>
+</div>
+</div>
+</footer>
+</body></html>

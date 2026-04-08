@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-tertiary": "#fbf8f8",
+              "surface-variant": "#e4e2e2",
+              "surface-container-highest": "#e4e2e2",
+              "tertiary": "#605f5f",
+              "secondary-dim": "#535353",
+              "surface-dim": "#dbdad9",
+              "secondary": "#5f5f5f",
+              "background": "#fcf9f8",
+              "error-container": "#fe8983",
+              "on-primary-fixed-variant": "#0050d4",
+              "primary": "#0053da",
+              "inverse-surface": "#0e0e0e",
+              "on-secondary-container": "#525252",
+              "tertiary-fixed": "#f6f3f2",
+              "primary-container": "#dbe1ff",
+              "tertiary-dim": "#535353",
+              "on-surface-variant": "#5f5f5f",
+              "on-secondary": "#fbf8f8",
+              "tertiary-fixed-dim": "#e7e5e4",
+              "primary-dim": "#0048c1",
+              "surface-bright": "#fcf9f8",
+              "on-error-container": "#752121",
+              "on-background": "#323233",
+              "error": "#9f403d",
+              "on-primary-container": "#0048bf",
+              "on-primary-fixed": "#003798",
+              "on-primary": "#f8f7ff",
+              "secondary-fixed": "#e4e2e2",
+              "surface-tint": "#0053da",
+              "error-dim": "#4e0309",
+              "surface-container": "#f0eded",
+              "surface-container-low": "#f6f3f2",
+              "outline": "#7b7a7a",
+              "surface-container-high": "#eae8e7",
+              "secondary-container": "#e4e2e2",
+              "surface-container-lowest": "#ffffff",
+              "on-tertiary-fixed-variant": "#676666",
+              "on-secondary-fixed-variant": "#5b5b5b",
+              "on-error": "#fff7f6",
+              "primary-fixed": "#dbe1ff",
+              "primary-fixed-dim": "#c7d3ff",
+              "outline-variant": "#b3b2b1",
+              "inverse-on-surface": "#9e9c9c",
+              "surface": "#fcf9f8",
+              "on-tertiary-container": "#5c5b5b",
+              "on-surface": "#323233",
+              "inverse-primary": "#618bff",
+              "secondary-fixed-dim": "#d6d4d4",
+              "on-tertiary-fixed": "#4a4949",
+              "tertiary-container": "#f6f3f2",
+              "on-secondary-fixed": "#3f3f3f"
+            },
+            fontFamily: {
+              "headline": ["Inter"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0px", "lg": "0px", "xl": "0px", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        body { font-family: 'Inter', sans-serif; }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .milled-surface { background-color: #f6f3f2; }
+        .canvas-base { background-color: #fcf9f8; }
+        .data-monolith { border-left: 4px solid #0053da; background-color: #ffffff; }
+        .ghost-border { border-bottom: 1px solid rgba(179, 178, 177, 0.2); }
+        .ghost-border:focus-within { border-bottom: 2px solid #0053da; }
+    </style>
+</head>
+<body class="bg-background text-on-surface antialiased">
+<!-- TopNavBar -->
+<nav class="bg-[#fcf9f8] dark:bg-slate-950 flex justify-between items-center w-full px-12 py-4 mx-auto sticky top-0 z-50">
+<div class="text-lg font-bold tracking-tighter text-[#323233] dark:text-slate-100 uppercase">IBM Enterprise</div>
+<div class="hidden md:flex items-center space-x-8">
+<a class="text-[#0053da] dark:text-[#0062ff] font-semibold border-b-2 border-[#0053da] pb-1 hover:text-[#0053da] dark:hover:text-[#0062ff] transition-colors" href="#">Solutions</a>
+<a class="text-[#5f5f5f] dark:text-slate-400 font-medium hover:text-[#0053da] dark:hover:text-[#0062ff] transition-colors" href="#">Infrastructure</a>
+<a class="text-[#5f5f5f] dark:text-slate-400 font-medium hover:text-[#0053da] dark:hover:text-[#0062ff] transition-colors" href="#">Intelligence</a>
+</div>
+<div class="flex items-center space-x-6">
+<div class="relative hidden lg:block">
+<span class="material-symbols-outlined absolute left-0 top-1/2 -translate-y-1/2 text-secondary text-sm">search</span>
+<input class="bg-transparent border-none focus:ring-0 text-sm pl-6 py-1 w-48 ghost-border" placeholder="Search Architecture" type="text"/>
+</div>
+<button class="bg-primary hover:bg-primary-dim text-on-primary px-6 py-2 text-sm font-semibold tracking-wide transition-all active:scale-[0.98]">Get Started</button>
+</div>
+</nav>
+<main>
+<!-- Hero Section -->
+<section class="relative overflow-hidden bg-surface py-24 lg:py-32 px-12">
+<div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-center">
+<div class="space-y-8">
+<div class="inline-flex items-center bg-surface-container px-3 py-1 space-x-3">
+<span class="w-2 h-2 bg-primary"></span>
+<span class="text-[0.6875rem] font-bold tracking-widest uppercase text-secondary">System Release v4.2.0</span>
+</div>
+<h1 class="text-5xl lg:text-7xl font-extrabold tracking-tighter text-on-surface leading-[1.1]">
+                        The Intelligence of Infrastructure. Refined to an Exacting Standard.
+                    </h1>
+<p class="text-lg text-on-surface-variant max-w-xl leading-relaxed">
+                        A rigorous architectural approach to enterprise-grade AI and data orchestration. Constructed for high-velocity logic and structural integrity.
+                    </p>
+<div class="flex space-x-4 pt-4">
+<button class="bg-primary text-on-primary px-8 py-4 font-bold uppercase tracking-wider text-xs">Initialize System</button>
+<button class="bg-surface-container-highest text-on-surface px-8 py-4 font-bold uppercase tracking-wider text-xs">View Documentation</button>
+</div>
+</div>
+<div class="relative">
+<div class="aspect-square milled-surface p-1">
+<img alt="Modernist glass skyscraper" class="w-full h-full object-cover grayscale opacity-90 contrast-125" data-alt="Monochromatic low angle shot of a modernist glass skyscraper facade with perfect geometric patterns and sharp reflections" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBj6PcH9TpZzEuz_9HlvUrCYyy_-g_2YSbx46oytNw4VE-2rYH_uCxM6k--yFrv4I0DqMa1ajKr3588-wakCvkpB81XRKSw32ummBFkcykwhFHA7ImABHt_XxAqE0WX_LMEpuI1nzyfoSDnZfAy0ilDyRSHDhrQgJl6J1VzC2AIXzcF0RM15W928e3BDfmCUlzP_ILDY0YUnYL_HvpqcY19xneAmGS6HQttZw7_HJKwycNRHS0iGuDn25D8aZoALo0gujDYDBniAO8L"/>
+<div class="absolute -bottom-8 -left-8 bg-surface-container-lowest p-8 w-64 shadow-2xl">
+<div class="text-primary font-bold text-3xl tracking-tighter">99.99%</div>
+<div class="text-[0.6875rem] text-secondary font-medium uppercase tracking-widest mt-1">Uptime SLA Protocol</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Capabilities Section -->
+<section class="bg-surface-container-low py-24 px-12">
+<div class="max-w-7xl mx-auto">
+<div class="mb-16">
+<h2 class="text-xs font-bold uppercase tracking-[0.2em] text-primary mb-4">Core Capabilities</h2>
+<div class="w-12 h-1 bg-primary mb-8"></div>
+</div>
+<div class="grid md:grid-cols-3 gap-1">
+<!-- Capability 1 -->
+<div class="bg-surface-container-lowest p-12 space-y-6 flex flex-col border border-surface-container">
+<div class="w-10 h-10 bg-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-on-primary" data-icon="account_tree">account_tree</span>
+</div>
+<h3 class="text-xl font-bold tracking-tight">Modular Knowledge Graph</h3>
+<p class="text-sm text-on-surface-variant leading-relaxed flex-grow">
+                            A structured semantic layer that maps enterprise relationships with mathematical precision. Dynamic schema evolution without downtime.
+                        </p>
+<a class="text-primary text-[0.6875rem] font-bold uppercase tracking-widest flex items-center group" href="#">
+                            Technical Spec <span class="material-symbols-outlined ml-2 text-sm group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</a>
+</div>
+<!-- Capability 2 -->
+<div class="bg-surface-container-lowest p-12 space-y-6 flex flex-col border border-surface-container">
+<div class="w-10 h-10 bg-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-on-primary" data-icon="encrypted">encrypted</span>
+</div>
+<h3 class="text-xl font-bold tracking-tight">Privacy-First Architecture</h3>
+<p class="text-sm text-on-surface-variant leading-relaxed flex-grow">
+                            Zero-trust data enclaves and homomorphic encryption standards. Ensure compliance at the silicon level across every regional node.
+                        </p>
+<a class="text-primary text-[0.6875rem] font-bold uppercase tracking-widest flex items-center group" href="#">
+                            Security Audit <span class="material-symbols-outlined ml-2 text-sm group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</a>
+</div>
+<!-- Capability 3 -->
+<div class="bg-surface-container-lowest p-12 space-y-6 flex flex-col border border-surface-container">
+<div class="w-10 h-10 bg-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-on-primary" data-icon="speed">speed</span>
+</div>
+<h3 class="text-xl font-bold tracking-tight">Instant Synthesis Engine</h3>
+<p class="text-sm text-on-surface-variant leading-relaxed flex-grow">
+                            Sub-millisecond inference and vector search orchestration. Transform raw telemetry into actionable intelligence with zero latency overhead.
+                        </p>
+<a class="text-primary text-[0.6875rem] font-bold uppercase tracking-widest flex items-center group" href="#">
+                            Performance Benchmarks <span class="material-symbols-outlined ml-2 text-sm group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+</section>
+<!-- Pricing Section -->
+<section class="bg-surface py-24 px-12">
+<div class="max-w-7xl mx-auto">
+<div class="text-center mb-20">
+<h2 class="text-4xl font-extrabold tracking-tighter mb-4">Investment Tiers</h2>
+<p class="text-on-surface-variant text-sm font-medium">Scalable architecture for every stage of enterprise maturity.</p>
+</div>
+<!-- Comparison Table / Monolith Layout -->
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-container-low">
+<th class="p-6 text-[0.6875rem] font-bold uppercase tracking-widest text-secondary">Feature Protocol</th>
+<th class="p-6">
+<div class="text-sm font-bold uppercase">Free</div>
+<div class="text-xs text-secondary font-normal mt-1">Foundational Sandbox</div>
+</th>
+<th class="p-6 border-x border-surface-container bg-surface-container-lowest">
+<div class="text-sm font-bold uppercase text-primary">Professional</div>
+<div class="text-xs text-secondary font-normal mt-1">Managed Workloads</div>
+</th>
+<th class="p-6">
+<div class="text-sm font-bold uppercase">Enterprise</div>
+<div class="text-xs text-secondary font-normal mt-1">Full-Scale Sovereignty</div>
+</th>
+</tr>
+</thead>
+<tbody class="text-sm">
+<tr class="ghost-border">
+<td class="p-6 font-medium">Monthly Compute Units</td>
+<td class="p-6 text-on-surface-variant">100k</td>
+<td class="p-6 bg-surface-container-lowest border-x border-surface-container font-bold">5.0M</td>
+<td class="p-6 text-on-surface-variant">Unlimited</td>
+</tr>
+<tr class="ghost-border">
+<td class="p-6 font-medium">Data Retention Policy</td>
+<td class="p-6 text-on-surface-variant">7 Days</td>
+<td class="p-6 bg-surface-container-lowest border-x border-surface-container">90 Days</td>
+<td class="p-6 text-on-surface-variant">Permanent / Immutable</td>
+</tr>
+<tr class="ghost-border">
+<td class="p-6 font-medium">Priority Support</td>
+<td class="p-6 text-on-surface-variant">—</td>
+<td class="p-6 bg-surface-container-lowest border-x border-surface-container">
+<span class="material-symbols-outlined text-primary text-base">check</span>
+</td>
+<td class="p-6 text-on-surface-variant">
+<span class="material-symbols-outlined text-primary text-base">check</span>
+</td>
+</tr>
+<tr class="ghost-border">
+<td class="p-6 font-medium">Custom SLAs</td>
+<td class="p-6 text-on-surface-variant">—</td>
+<td class="p-6 bg-surface-container-lowest border-x border-surface-container">—</td>
+<td class="p-6 text-on-surface-variant">
+<span class="material-symbols-outlined text-primary text-base">check</span>
+</td>
+</tr>
+<tr>
+<td class="p-6"></td>
+<td class="p-6">
+<button class="w-full py-3 bg-surface-container-highest font-bold text-[0.6875rem] uppercase tracking-widest">Start Free</button>
+</td>
+<td class="p-6 bg-surface-container-lowest border-x border-surface-container">
+<button class="w-full py-3 bg-primary text-on-primary font-bold text-[0.6875rem] uppercase tracking-widest shadow-lg">Activate Pro</button>
+</td>
+<td class="p-6">
+<button class="w-full py-3 bg-surface-container-highest font-bold text-[0.6875rem] uppercase tracking-widest">Contact Sales</button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="bg-surface-container-lowest py-24 px-12 border-t border-surface-container">
+<div class="max-w-4xl mx-auto text-center space-y-12">
+<h2 class="text-5xl font-extrabold tracking-tighter">Ready to elevate your intelligence?</h2>
+<div class="flex flex-col md:flex-row max-w-lg mx-auto">
+<div class="flex-grow relative">
+<input class="w-full bg-surface-container-low border-none p-4 text-sm ghost-border focus:outline-none placeholder:text-secondary-dim" placeholder="Enterprise email address" type="email"/>
+</div>
+<button class="bg-primary text-on-primary px-8 py-4 font-bold uppercase tracking-widest text-xs whitespace-nowrap">Request Access</button>
+</div>
+<p class="text-[0.6875rem] text-secondary font-medium uppercase tracking-[0.2em]">Deployment typically active within 24 hours of approval.</p>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-[#f6f3f2] dark:bg-slate-900 w-full px-12 py-12 grid grid-cols-1 md:grid-cols-4 gap-8">
+<div class="col-span-1 md:col-span-1 space-y-4">
+<div class="text-md font-bold text-[#323233] dark:text-slate-200 uppercase">IBM Enterprise</div>
+<p class="text-on-surface-variant text-xs leading-relaxed max-w-xs">
+                A definitive architectural standard for the next era of industrial computing and cognitive systems.
+            </p>
+</div>
+<div>
+<h4 class="text-[0.6875rem] font-bold uppercase tracking-widest text-secondary mb-4">Resources</h4>
+<ul class="space-y-2">
+<li><a class="text-sm text-[#5f5f5f] dark:text-slate-500 hover:text-[#323233] dark:hover:text-slate-200 transition-colors" href="#">Documentation</a></li>
+<li><a class="text-sm text-[#5f5f5f] dark:text-slate-500 hover:text-[#323233] dark:hover:text-slate-200 transition-colors" href="#">API Reference</a></li>
+<li><a class="text-sm text-[#5f5f5f] dark:text-slate-500 hover:text-[#323233] dark:hover:text-slate-200 transition-colors" href="#">Architecture Whitepaper</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-[0.6875rem] font-bold uppercase tracking-widest text-secondary mb-4">Company</h4>
+<ul class="space-y-2">
+<li><a class="text-sm text-[#5f5f5f] dark:text-slate-500 hover:text-[#323233] dark:hover:text-slate-200 transition-colors" href="#">About Precision</a></li>
+<li><a class="text-sm text-[#5f5f5f] dark:text-slate-500 hover:text-[#323233] dark:hover:text-slate-200 transition-colors" href="#">Trust Center</a></li>
+<li><a class="text-sm text-[#5f5f5f] dark:text-slate-500 hover:text-[#323233] dark:hover:text-slate-200 transition-colors" href="#">Partner Network</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-[0.6875rem] font-bold uppercase tracking-widest text-secondary mb-4">Legal</h4>
+<div class="space-y-2">
+<a class="block text-xs text-[#5f5f5f] hover:text-[#0053da] underline" href="#">Privacy Policy</a>
+<a class="block text-xs text-[#5f5f5f] hover:text-[#0053da] underline" href="#">Terms of Service</a>
+<a class="block text-xs text-[#5f5f5f] hover:text-[#0053da] underline" href="#">Cookie Preferences</a>
+</div>
+<div class="mt-8 text-[0.6875rem] text-secondary">
+                © 2024 IBM Enterprise. All rights reserved. Precision in Architecture.
+            </div>
+</div>
+</footer>
+</body></html>

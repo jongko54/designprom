@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>MONOLITH_OS | Authoritative Engineering</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "inverse-surface": "#0c0f0f",
+              "primary-container": "#dde1ff",
+              "error-dim": "#4f0116",
+              "on-tertiary-fixed": "#001127",
+              "primary-fixed": "#dde1ff",
+              "error": "#9e3f4e",
+              "on-surface": "#2d3435",
+              "surface-container-highest": "#dde4e5",
+              "tertiary": "#1d60a8",
+              "surface-container": "#ebeeef",
+              "surface-variant": "#dde4e5",
+              "secondary-fixed": "#e4e2e2",
+              "inverse-primary": "#748ffe",
+              "background": "#f9f9f9",
+              "primary-fixed-dim": "#cad2ff",
+              "tertiary-fixed": "#76adfa",
+              "on-secondary-fixed-variant": "#5b5b5b",
+              "surface-bright": "#f9f9f9",
+              "secondary-dim": "#535353",
+              "outline-variant": "#adb3b4",
+              "surface": "#f9f9f9",
+              "on-primary-fixed": "#0c33a1",
+              "surface-dim": "#d4dbdd",
+              "surface-tint": "#3855c1",
+              "tertiary-dim": "#02549b",
+              "secondary-container": "#e4e2e2",
+              "primary": "#3855c1",
+              "surface-container-lowest": "#ffffff",
+              "error-container": "#ff8b9a",
+              "on-tertiary-fixed-variant": "#003567",
+              "tertiary-fixed-dim": "#68a0ec",
+              "on-error-container": "#782232",
+              "on-tertiary-container": "#002d57",
+              "outline": "#757c7d",
+              "on-secondary": "#fbf8f8",
+              "on-tertiary": "#f8f8ff",
+              "on-primary-container": "#2948b4",
+              "surface-container-high": "#e4e9ea",
+              "on-primary-fixed-variant": "#3552be",
+              "tertiary-container": "#76adfa",
+              "on-background": "#2d3435",
+              "inverse-on-surface": "#9c9d9d",
+              "primary-dim": "#2a48b4",
+              "on-error": "#fff7f7",
+              "on-secondary-container": "#525252",
+              "on-secondary-fixed": "#3f3f3f",
+              "secondary": "#5f5f5f",
+              "on-primary": "#f8f7ff",
+              "secondary-fixed-dim": "#d6d4d4",
+              "on-surface-variant": "#5a6061",
+              "surface-container-low": "#f2f4f4"
+            },
+            fontFamily: {
+              "headline": ["Inter"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0px", "lg": "0px", "xl": "0px", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        body { font-family: 'Inter', sans-serif; }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+        .glass-effect { backdrop-filter: blur(20px); background: rgba(249, 249, 249, 0.8); }
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+</head>
+<body class="bg-background text-on-surface antialiased selection:bg-primary-container selection:text-on-primary-container">
+<!-- TopNavBar -->
+<nav class="bg-white dark:bg-slate-950 flex justify-between items-center w-full px-8 max-w-full mx-auto fixed top-0 z-50 docked rounded-none h-16 font-['Inter'] antialiased tracking-tight">
+<div class="flex items-center gap-8">
+<span class="text-lg font-black tracking-widest text-slate-900 dark:text-slate-50 uppercase">MONOLITH_OS</span>
+<div class="hidden md:flex items-center gap-6">
+<a class="text-blue-700 dark:text-blue-400 border-b-2 border-blue-700 pb-1 text-sm font-medium" href="#">Solutions</a>
+<a class="text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors duration-100 px-2 py-1 text-sm font-medium" href="#">Documentation</a>
+<a class="text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors duration-100 px-2 py-1 text-sm font-medium" href="#">Engine</a>
+<a class="text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors duration-100 px-2 py-1 text-sm font-medium" href="#">Resources</a>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<button class="px-4 py-2 text-sm font-medium text-slate-600 hover:bg-slate-100 transition-colors">Contact Sales</button>
+<button class="px-5 py-2 text-sm font-bold bg-primary text-on-primary hover:bg-primary-dim transition-all">Access Portal</button>
+</div>
+</nav>
+<!-- SideNavBar (Documentation Specific) -->
+<aside class="bg-slate-100 dark:bg-slate-900 fixed left-0 top-16 h-[calc(100vh-64px)] w-72 rounded-none flex flex-col border-none py-6 overflow-y-auto no-scrollbar">
+<div class="px-6 mb-8">
+<div class="flex items-center gap-3 mb-1">
+<div class="w-8 h-8 bg-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-on-primary text-sm">account_tree</span>
+</div>
+<div>
+<div class="text-xs font-bold text-slate-500 uppercase tracking-widest">DOCS_CORE</div>
+<div class="text-[10px] text-slate-400 font-mono">v4.2.0-stable</div>
+</div>
+</div>
+</div>
+<nav class="flex-1 space-y-1">
+<a class="flex items-center gap-3 px-6 py-3 bg-white dark:bg-slate-800 text-blue-700 dark:text-blue-300 font-bold text-sm" href="#">
+<span class="material-symbols-outlined text-[20px]" data-icon="account_tree">account_tree</span>
+                Architecture Overview
+            </a>
+<a class="flex items-center gap-3 px-6 py-3 text-slate-600 dark:text-slate-400 hover:bg-slate-200 dark:hover:bg-slate-800 text-sm font-medium transition-colors" href="#">
+<span class="material-symbols-outlined text-[20px]" data-icon="bolt">bolt</span>
+                Quick Start
+            </a>
+<a class="flex items-center gap-3 px-6 py-3 text-slate-600 dark:text-slate-400 hover:bg-slate-200 dark:hover:bg-slate-800 text-sm font-medium transition-colors" href="#">
+<span class="material-symbols-outlined text-[20px]" data-icon="terminal">terminal</span>
+                API Reference
+            </a>
+<a class="flex items-center gap-3 px-6 py-3 text-slate-600 dark:text-slate-400 hover:bg-slate-200 dark:hover:bg-slate-800 text-sm font-medium transition-colors" href="#">
+<span class="material-symbols-outlined text-[20px]" data-icon="database">database</span>
+                Data Models
+            </a>
+<a class="flex items-center gap-3 px-6 py-3 text-slate-600 dark:text-slate-400 hover:bg-slate-200 dark:hover:bg-slate-800 text-sm font-medium transition-colors" href="#">
+<span class="material-symbols-outlined text-[20px]" data-icon="shield">shield</span>
+                Security Protocols
+            </a>
+<a class="flex items-center gap-3 px-6 py-3 text-slate-600 dark:text-slate-400 hover:bg-slate-200 dark:hover:bg-slate-800 text-sm font-medium transition-colors" href="#">
+<span class="material-symbols-outlined text-[20px]" data-icon="history">history</span>
+                Change Log
+            </a>
+</nav>
+<div class="px-6 mt-auto">
+<button class="w-full py-4 bg-secondary-container text-on-secondary-container font-bold text-xs uppercase tracking-widest hover:bg-outline-variant transition-colors">
+                Download SDK
+            </button>
+</div>
+</aside>
+<!-- Main Content Canvas -->
+<main class="ml-72 pt-16 min-h-screen">
+<!-- Hero Section -->
+<section class="p-16 bg-surface-container-lowest grid grid-cols-12 gap-0 items-center">
+<div class="col-span-12 lg:col-span-7">
+<div class="mb-4 inline-flex items-center gap-2 px-3 py-1 bg-primary-container text-on-primary-container text-[10px] font-bold tracking-widest uppercase">
+                    Core Documentation &amp; Platform Guide
+                </div>
+<h1 class="text-[4.5rem] font-black leading-[0.9] text-on-surface tracking-tighter mb-8">
+                    THE ARCHITECTURAL<br/>MONOLITH.
+                </h1>
+<p class="text-lg text-on-surface-variant max-w-xl mb-12 font-medium leading-relaxed">
+                    A distributed operating system engineered for institutional-grade reliability. Seamlessly bridge high-performance computing with immutable architecture.
+                </p>
+<div class="flex gap-4">
+<button class="bg-primary text-on-primary px-8 py-4 font-bold uppercase tracking-widest text-xs hover:bg-primary-dim transition-all">Initialize Kernel</button>
+<button class="bg-surface-container-high text-on-surface px-8 py-4 font-bold uppercase tracking-widest text-xs hover:bg-surface-container-highest transition-all">View Specs</button>
+</div>
+</div>
+<div class="col-span-12 lg:col-span-5 relative mt-12 lg:mt-0">
+<div class="aspect-square bg-surface-container relative p-8">
+<img class="w-full h-full object-cover grayscale opacity-80 hover:grayscale-0 transition-all duration-700" data-alt="abstract close-up of a high-tech microchip processor with blue glowing light paths and architectural precision" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDNF6JPnK7CAe3j_2QA8TTv9s38qHbP9cl-A2Ls_UX0vjwtS6A6T0GpIp9Gv_e92R4TE3RMbE2qegMkBL-JSxnluQo3Tn6GPBBeVd60HfFy_Ia2MM7XJAmEpciZAQtWRr5laEiR1tkqU2vFoUCk624HmOB-jHX_NBOg3lR_DBD5d1lL4VnSU9CLTmBKHUQZZ3-_YjNWlTVCR0MheZznaCMdufiV8S_RHxl-HGcIHgI35Y4K-jowZBR_iUjfCbNCISRLAfcZIAirZUqI"/>
+<div class="absolute -bottom-8 -left-8 bg-primary text-on-primary p-6 w-48">
+<div class="text-4xl font-black mb-1">99.9</div>
+<div class="text-[10px] font-bold uppercase tracking-widest opacity-80 leading-tight">Uptime reliability protocol</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Technical Specs Bento Grid -->
+<section class="px-16 py-24 bg-surface">
+<div class="flex flex-col mb-16">
+<span class="text-label-sm font-bold text-primary uppercase tracking-[0.2em] mb-4">Core Components</span>
+<h2 class="text-4xl font-black tracking-tight">ENGINEERING SPECIFICATIONS</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-8">
+<!-- Bento Card 1: Large Feature -->
+<div class="md:col-span-2 lg:row-span-2 bg-surface-container-lowest p-10 flex flex-col justify-between group transition-all">
+<div>
+<span class="material-symbols-outlined text-primary text-4xl mb-8" data-icon="terminal">terminal</span>
+<h3 class="text-2xl font-extrabold mb-4 tracking-tight">IMMUTABLE KERNEL ENGINE</h3>
+<p class="text-on-surface-variant leading-relaxed font-medium">
+                            The core operating layer utilizes a read-only file system architecture that prevents runtime tampering and ensures deterministic state across all nodes.
+                        </p>
+</div>
+<div class="mt-12 bg-surface-container-high p-6 font-mono text-sm overflow-hidden">
+<div class="flex items-center gap-2 mb-4">
+<div class="w-3 h-3 rounded-full bg-error"></div>
+<div class="w-3 h-3 rounded-full bg-tertiary-fixed"></div>
+<div class="text-[10px] text-outline ml-auto">MONOLITH_TERMINAL</div>
+</div>
+<div class="text-primary font-bold">m_os --initialize --secure</div>
+<div class="text-on-surface-variant opacity-60 mt-1">&gt; Verifying kernel integrity...</div>
+<div class="text-on-surface-variant opacity-60">&gt; Security layer: ACTIVATED</div>
+<div class="text-on-surface-variant opacity-60">&gt; Node status: SYNCHRONIZED</div>
+</div>
+</div>
+<!-- Bento Card 2 -->
+<div class="bg-surface-container-high p-8">
+<span class="material-symbols-outlined text-on-surface text-2xl mb-6" data-icon="shield">shield</span>
+<h3 class="text-lg font-bold mb-3 tracking-tight">ZERO-TRUST PROTOCOL</h3>
+<p class="text-sm text-on-surface-variant leading-relaxed">Identity-first networking with automatic mTLS encryption for every internal packet.</p>
+</div>
+<!-- Bento Card 3 -->
+<div class="bg-surface-container-high p-8">
+<span class="material-symbols-outlined text-on-surface text-2xl mb-6" data-icon="database">database</span>
+<h3 class="text-lg font-bold mb-3 tracking-tight">DATA PERSISTENCE</h3>
+<p class="text-sm text-on-surface-variant leading-relaxed">Globally distributed ledger supporting 2M+ transactions per second with sub-ms latency.</p>
+</div>
+<!-- Bento Card 4 -->
+<div class="bg-surface-container-low p-8 col-span-2 flex items-center gap-8">
+<div class="w-32 h-32 flex-shrink-0 bg-white">
+<img class="w-full h-full object-cover grayscale" data-alt="racks of high-performance servers in a modern data center with blue ambient lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuApg-z9p-EZeiJMwpzyyzhvx-bbv9oiGuapbhns3OOA8X8gNdm4n0ImXV3Yuf6-iHMrPfVXSjaTFNw0Z844ObNEGXTBDEMOSa0pv_Kavck5RO30V0PBM2sLnih_f4FWh3XyLIHBo5cVmGwVrftSlbI7100NkuJb90g1N_lQiDpJgxoiPgVShJ8RY5IiN4aHovhxgykIgPBK88tNCIsV3P6iMzV6d4gtCqEB4eKe1Y8L3xSoWPXL32OBWR-2xdHKxJaEI8DKqidjzqH0"/>
+</div>
+<div>
+<h3 class="text-lg font-bold mb-2">SCALABLE INFRASTRUCTURE</h3>
+<p class="text-sm text-on-surface-variant">Automatically provision nodes across multi-cloud environments using our unified provisioning API.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Technical Roadmap / Architectural Specs -->
+<section class="px-16 py-24 bg-surface-container-lowest">
+<div class="max-w-4xl">
+<h2 class="text-3xl font-black mb-12 tracking-tight">SYSTEM CAPABILITIES MATRIX</h2>
+<div class="w-full overflow-hidden border-none">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-container uppercase text-[10px] font-black tracking-widest text-on-surface-variant">
+<th class="px-6 py-4">Protocol Layer</th>
+<th class="px-6 py-4">Standard</th>
+<th class="px-6 py-4">Throughput</th>
+<th class="px-6 py-4 text-right">Status</th>
+</tr>
+</thead>
+<tbody class="text-sm">
+<tr class="bg-white hover:bg-surface-container-low transition-colors">
+<td class="px-6 py-5 font-bold border-none">NETWORK_FABRIC</td>
+<td class="px-6 py-5 text-on-surface-variant border-none">IEEE 802.1Qcz</td>
+<td class="px-6 py-5 text-on-surface-variant border-none">400 Gbps</td>
+<td class="px-6 py-5 text-right border-none">
+<span class="text-xs font-bold text-primary">PRODUCTION</span>
+</td>
+</tr>
+<tr class="bg-surface-container-low hover:bg-surface-container transition-colors">
+<td class="px-6 py-5 font-bold border-none">CRYPTOGRAPHY</td>
+<td class="px-6 py-5 text-on-surface-variant border-none">AES-256-GCM</td>
+<td class="px-6 py-5 text-on-surface-variant border-none">1.2 TB/s</td>
+<td class="px-6 py-5 text-right border-none">
+<span class="text-xs font-bold text-primary">PRODUCTION</span>
+</td>
+</tr>
+<tr class="bg-white hover:bg-surface-container-low transition-colors">
+<td class="px-6 py-5 font-bold border-none">VIRTUALIZATION</td>
+<td class="px-6 py-5 text-on-surface-variant border-none">KVM_HARDENED</td>
+<td class="px-6 py-5 text-on-surface-variant border-none">Unlimited</td>
+<td class="px-6 py-5 text-right border-none">
+<span class="text-xs font-bold text-primary">PRODUCTION</span>
+</td>
+</tr>
+<tr class="bg-surface-container-low hover:bg-surface-container transition-colors">
+<td class="px-6 py-5 font-bold border-none">AI_INFERENCE</td>
+<td class="px-6 py-5 text-on-surface-variant border-none">MONO_LLM_V4</td>
+<td class="px-6 py-5 text-on-surface-variant border-none">8k t/s</td>
+<td class="px-6 py-5 text-right border-none">
+<span class="text-xs font-bold text-tertiary">STAGING</span>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
+<!-- Final Call to Action -->
+<section class="mx-16 my-24 p-16 bg-primary flex flex-col md:flex-row items-center justify-between gap-12">
+<div>
+<h2 class="text-4xl font-black text-on-primary mb-6 leading-tight">READY TO DEPLOY THE FUTURE OF ENTERPRISE OS?</h2>
+<p class="text-primary-container font-medium max-w-lg">Get started with our enterprise-tier SDK or schedule a deep-dive technical demo with our engineering team.</p>
+</div>
+<div class="flex flex-col gap-4 w-full md:w-auto">
+<button class="bg-on-primary text-primary px-10 py-5 font-black uppercase tracking-[0.15em] text-sm hover:bg-primary-container transition-all">Request Architecture Review</button>
+<button class="border border-primary-container text-on-primary px-10 py-5 font-black uppercase tracking-[0.15em] text-sm hover:bg-primary-dim transition-all">Documentation Hub</button>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-slate-50 dark:bg-slate-950 w-full py-12 px-8 flex justify-between items-center mt-24 text-[11px] font-medium uppercase tracking-[0.05rem]">
+<div class="text-slate-400 dark:text-slate-600">
+                © 2024 MONOLITH SYSTEMS. AUTHORITATIVE CLARITY THROUGH PRECISION ENGINEERING.
+            </div>
+<div class="flex gap-8">
+<a class="text-slate-400 dark:text-slate-600 hover:text-blue-700 dark:hover:text-blue-400 transition-colors" href="#">Privacy</a>
+<a class="text-slate-400 dark:text-slate-600 hover:text-blue-700 dark:hover:text-blue-400 transition-colors" href="#">Terms</a>
+<a class="text-slate-400 dark:text-slate-600 hover:text-blue-700 dark:hover:text-blue-400 transition-colors" href="#">SLA</a>
+<a class="text-slate-400 dark:text-slate-600 hover:text-blue-700 dark:hover:text-blue-400 transition-colors" href="#">Compliance</a>
+<a class="text-slate-400 dark:text-slate-600 hover:text-blue-700 dark:hover:text-blue-400 transition-colors" href="#">GitHub</a>
+</div>
+</footer>
+</main>
+</body></html>

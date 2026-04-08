@@ -1,0 +1,21 @@
+{
+  "brand": "Apple",
+  "contentType": "image/png",
+  "fileName": "apple-feature-story.png",
+  "generatedAt": "2026-04-02T01:34:28.341Z",
+  "htmlUrl": "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ8Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpbCiVodG1sXzUwNDk3MDY3OGU2NTQ1YzA4OTFmZmJkYjY3NWU3ODUyEgsSBxCCisPc0AkYAZIBJAoKcHJvamVjdF9pZBIWQhQxNTE0MTM2NDkwMzg3Mzk0NjczOA&filename=&opi=96797242",
+  "imageUrl": "https://lh3.googleusercontent.com/aida/ADBb0uh6aXI9MZn9Ka93-l3v-5amWOgtRKnxkJwk2ITIp_pWqN8UifNFevXXciP_oX9_tl39072qmSwjalaAMX7wlHDOuqoLVCXKXZaiL1bOaVymrhvJOhT9pTKChDjr9-2RJfVFeFvhFDT6IeR0-5iDPodi8xRirAEoALNaK6D9T0BED7TkvJ861DjUkBZ90zOoLniRjeS3TVI5mG-XT46uWG0-pORtNLiMcA-mTS3pIy6Cxbyz03lDehspjCZN",
+  "notes": [
+    "I've created the Apple-style feature story page for you. \n\nI started by establishing a new design system, **Cupertino Editorial**, to capture that high-end, restrained aesthetic. The resulting page, **\"The Evolution of Focus,\"** uses oversized product framing, a clean neutral palette with premium light gradients, and a minimalist, product-led structure. I've removed all unnecessary badges and icons to ensure the focus remains entirely on the software's UI and its core value.\n\nYou can see both the new design system and the feature story screen on the canvas."
+  ],
+  "prompt": "Create an Apple-like feature story page for a software product. Use oversized product framing, restrained neutral backgrounds, premium light gradients, concise copy blocks, and highly controlled transitions. Keep every section product-led and remove unnecessary badges, icons, and promotional clutter.",
+  "projectId": "15141364903873946738",
+  "screenId": "67c0193da32b41cd8277396d4f40d2e3",
+  "slug": "apple-feature-story",
+  "suggestions": [
+    "Make the product visuals darker for higher contrast",
+    "Add a 'Technical Specifications' section at the bottom",
+    "Try a more playful font instead of Inter"
+  ],
+  "title": "Feature Story - The Evolution of Focus"
+}

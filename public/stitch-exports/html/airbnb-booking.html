@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;700;900&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "inverse-surface": "#2f3131",
+              "surface-container-highest": "#e2e2e2",
+              "on-tertiary-container": "#f6fff6",
+              "secondary-fixed-dim": "#ffb2b6",
+              "error": "#ba1a1a",
+              "surface": "#f9f9f9",
+              "primary": "#ba0036",
+              "inverse-on-surface": "#f1f1f1",
+              "on-error-container": "#93000a",
+              "secondary-fixed": "#ffdada",
+              "on-surface": "#1a1c1c",
+              "tertiary": "#006a45",
+              "on-surface-variant": "#5c3f41",
+              "surface-variant": "#e2e2e2",
+              "secondary": "#a73544",
+              "on-tertiary": "#ffffff",
+              "surface-container-lowest": "#ffffff",
+              "surface-dim": "#dadada",
+              "on-tertiary-fixed-variant": "#005234",
+              "primary-fixed-dim": "#ffb2b6",
+              "outline": "#906f70",
+              "on-primary-fixed-variant": "#920029",
+              "surface-container-high": "#e8e8e8",
+              "outline-variant": "#e5bdbe",
+              "primary-container": "#e21e4a",
+              "surface-bright": "#f9f9f9",
+              "tertiary-container": "#008558",
+              "on-primary-fixed": "#40000d",
+              "on-secondary-fixed-variant": "#871d2f",
+              "tertiary-fixed-dim": "#62dca3",
+              "primary-fixed": "#ffdada",
+              "on-background": "#1a1c1c",
+              "on-secondary": "#ffffff",
+              "on-tertiary-fixed": "#002113",
+              "background": "#f9f9f9",
+              "error-container": "#ffdad6",
+              "on-primary-container": "#fffbff",
+              "secondary-container": "#fd7682",
+              "on-error": "#ffffff",
+              "on-primary": "#ffffff",
+              "surface-container": "#eeeeee",
+              "on-secondary-container": "#710920",
+              "inverse-primary": "#ffb2b6",
+              "surface-container-low": "#f3f3f3",
+              "on-secondary-fixed": "#40000d",
+              "surface-tint": "#be0038",
+              "tertiary-fixed": "#80f9bd"
+            },
+            fontFamily: {
+              "headline": ["Be Vietnam Pro"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .tonal-shift-low { background-color: #f3f3f3; }
+        body { background-color: #f9f9f9; color: #1a1c1c; font-family: 'Inter', sans-serif; }
+        .editorial-shadow { box-shadow: 0 40px 40px -15px rgba(0,0,0,0.06); }
+    </style>
+</head>
+<body class="selection:bg-primary-fixed selection:text-on-primary-fixed">
+<!-- TopNavBar -->
+<nav class="bg-white/70 dark:bg-zinc-900/70 backdrop-blur-xl rounded-full mt-4 mx-auto w-[95%] max-w-7xl sticky top-4 shadow-[0_40px_40px_-15px_rgba(0,0,0,0.06)] z-50 flex justify-between items-center px-8 h-20 transition-all duration-300">
+<div class="flex items-center gap-2">
+<span class="text-2xl font-black text-[#FF385C] tracking-tighter font-['Be_Vietnam_Pro']">Alchemist Travel</span>
+</div>
+<div class="hidden md:flex items-center gap-8 font-['Be_Vietnam_Pro'] font-medium text-sm tracking-tight">
+<a class="text-[#FF385C] font-bold border-b-2 border-[#FF385C] pb-1" href="#">Places to stay</a>
+<a class="text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100 hover:bg-zinc-100/50 dark:hover:bg-zinc-800/50 transition-all duration-300 rounded-full px-3 py-1" href="#">Experiences</a>
+<a class="text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100 hover:bg-zinc-100/50 dark:hover:bg-zinc-800/50 transition-all duration-300 rounded-full px-3 py-1" href="#">Online Experiences</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="text-zinc-600 font-medium text-sm hover:bg-zinc-100/50 px-4 py-2 rounded-full transition-all">Log in</button>
+<button class="bg-[#FF385C] text-white px-6 py-2.5 rounded-full text-sm font-bold scale-95 active:scale-90 transition-transform">Sign up</button>
+</div>
+</nav>
+<main class="max-w-7xl mx-auto px-6">
+<!-- Hero Section -->
+<section class="mt-12 md:mt-20">
+<div class="relative w-full aspect-[16/9] md:aspect-[21/9] rounded-xl overflow-hidden group">
+<img alt="Hero destination" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Modern minimalist living room with floor-to-ceiling windows overlooking a misty pine forest at dawn with warm interior lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDFHc2s4jE_D-EpiPHjiE_Q-R5PQ62C2H9mOfKDWu_xlG1_p_7ClU_S2vVCKu69bMdZWm8p9WEJABvYGIWxLFo0xL_Fr5YKQeBcnIFbMRWR4oir_Jymgqj3KahLmScYA3qQD1fdjTaaB_nYsg26JPuVFC-2UN1lpEb4A1b4w4f4Jvu2tOMjekQBDkF2S7sCC1lz_mXJ1PoRIYEat86YCLWDgqLyGe3VEktybKEOT7QueZnPY2SVzxDgGv6uVEKGbGbU2infpcKLG0E"/>
+<div class="absolute inset-0 bg-black/20 flex flex-col justify-center items-center text-center px-4">
+<h1 class="font-headline text-5xl md:text-7xl font-black text-white tracking-tighter mb-6 drop-shadow-2xl">
+                        Welcome Home.
+                    </h1>
+</div>
+<!-- Search Pill (The Alchemist Concierge) -->
+<div class="absolute -bottom-10 left-1/2 -translate-x-1/2 w-[90%] max-w-4xl bg-surface-container-lowest rounded-full p-2 md:p-3 editorial-shadow border border-outline-variant/10 flex flex-col md:flex-row items-center gap-2">
+<div class="flex-1 w-full md:w-auto px-6 py-2 md:py-0 text-left border-r-0 md:border-r border-outline-variant/15">
+<label class="block text-[10px] font-black uppercase tracking-widest text-zinc-400 mb-0.5">Where</label>
+<input class="w-full bg-transparent border-none p-0 text-sm font-semibold focus:ring-0 placeholder:text-zinc-400" placeholder="Search destinations" type="text"/>
+</div>
+<div class="flex-1 w-full md:w-auto px-6 py-2 md:py-0 text-left border-r-0 md:border-r border-outline-variant/15">
+<label class="block text-[10px] font-black uppercase tracking-widest text-zinc-400 mb-0.5">When</label>
+<p class="text-sm font-semibold text-zinc-400">Add dates</p>
+</div>
+<div class="flex-1 w-full md:w-auto px-6 py-2 md:py-0 text-left">
+<label class="block text-[10px] font-black uppercase tracking-widest text-zinc-400 mb-0.5">Who</label>
+<p class="text-sm font-semibold text-zinc-400">Add guests</p>
+</div>
+<button class="bg-[#FF385C] text-white p-4 rounded-full flex items-center justify-center transition-transform active:scale-90">
+<span class="material-symbols-outlined">search</span>
+</button>
+</div>
+</div>
+</section>
+<!-- Categories / Filters -->
+<section class="mt-24 mb-16 overflow-x-auto no-scrollbar">
+<div class="flex gap-10 items-center justify-center min-w-max">
+<div class="flex flex-col items-center gap-2 text-primary group cursor-pointer">
+<span class="material-symbols-outlined text-2xl" data-icon="cabin">cabin</span>
+<span class="text-xs font-bold font-label">Cabins</span>
+<div class="h-0.5 w-full bg-primary rounded-full"></div>
+</div>
+<div class="flex flex-col items-center gap-2 text-zinc-500 hover:text-zinc-900 group cursor-pointer transition-colors">
+<span class="material-symbols-outlined text-2xl" data-icon="landscape">landscape</span>
+<span class="text-xs font-medium font-label">Amazing views</span>
+</div>
+<div class="flex flex-col items-center gap-2 text-zinc-500 hover:text-zinc-900 group cursor-pointer transition-colors">
+<span class="material-symbols-outlined text-2xl" data-icon="pool">pool</span>
+<span class="text-xs font-medium font-label">Amazing pools</span>
+</div>
+<div class="flex flex-col items-center gap-2 text-zinc-500 hover:text-zinc-900 group cursor-pointer transition-colors">
+<span class="material-symbols-outlined text-2xl" data-icon="castle">castle</span>
+<span class="text-xs font-medium font-label">Castles</span>
+</div>
+<div class="flex flex-col items-center gap-2 text-zinc-500 hover:text-zinc-900 group cursor-pointer transition-colors">
+<span class="material-symbols-outlined text-2xl" data-icon="beach_access">beach_access</span>
+<span class="text-xs font-medium font-label">Beachfront</span>
+</div>
+<div class="flex flex-col items-center gap-2 text-zinc-500 hover:text-zinc-900 group cursor-pointer transition-colors">
+<span class="material-symbols-outlined text-2xl" data-icon="fireplace">fireplace</span>
+<span class="text-xs font-medium font-label">Trending</span>
+</div>
+</div>
+</section>
+<!-- Most Loved Stays: Bento Grid Layout -->
+<section>
+<div class="flex justify-between items-end mb-10">
+<div class="max-w-xl">
+<h2 class="font-headline text-4xl font-black tracking-tight text-on-surface mb-2">Most Loved Stays</h2>
+<p class="text-on-surface-variant font-body">Curated by our alchemy of comfort, style, and unique stories.</p>
+</div>
+<button class="hidden md:flex items-center gap-2 text-sm font-bold border-b-2 border-primary pb-1">View all</button>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-6">
+<!-- Large Feature Card -->
+<div class="md:col-span-8 group cursor-pointer">
+<div class="relative aspect-[16/10] overflow-hidden rounded-xl bg-surface-container-low mb-4">
+<img alt="Lofoten Cabin" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A cozy Scandinavian wooden cabin nestled in a snowy birch forest at dusk with warm glowing windows" src="https://lh3.googleusercontent.com/aida-public/AB6AXuADo1Dj2CuBMY_Mon3JQ46Wtdx9I65TFoKJvHZLw-vYXsX3aPndoykASU9xlsipULsRIXhdiJXV1hw6Cw9wGk0xKaA16ucOc1olaXBySfT2J3OPS3NlTmUG8-fIdxHjIIrD25gpRWzCbkbaFEmFhnubY5WrEEXJYNIWsCeP5-XD5Du8n9aSklCxpvNCbylEAREPfhJgngk-tp7IL7HXacMWL0g_oFix1vIxrWTfZ92bVCOXY6rr7botbehwt_abLHSL43SmAGGtYL0"/>
+<div class="absolute top-4 right-4 bg-white/90 backdrop-blur-md px-3 py-1.5 rounded-full flex items-center gap-1 shadow-sm">
+<span class="material-symbols-outlined text-sm text-[#FF385C]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="text-xs font-bold text-on-surface">4.98</span>
+</div>
+</div>
+<div class="flex justify-between items-start">
+<div>
+<h3 class="font-headline text-xl font-bold text-on-surface">The Arctic Alchemist's Retreat</h3>
+<p class="text-on-surface-variant text-sm">Lofoten, Norway • Mountain views</p>
+</div>
+<div class="text-right">
+<span class="block font-black text-lg text-primary">$450 <span class="text-sm font-normal text-on-surface-variant">/ night</span></span>
+</div>
+</div>
+</div>
+<!-- Vertical Card Stack -->
+<div class="md:col-span-4 flex flex-col gap-6">
+<div class="group cursor-pointer">
+<div class="relative aspect-[4/3] overflow-hidden rounded-lg bg-surface-container-low mb-3">
+<img alt="Luxury Villa" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="A luxurious modern villa with a sleek infinity pool overlooking the Mediterranean sea at sunset" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBwSwX6oM2-odNqdbGuafrPGAZEhQYekiQCkMqtuZVToa1zMaCCK7GSOsMhyKbGcQVKbWTimevdveYQJ3t2Unxi2mRzJi-ZA2Aa1_5eNsBR6UJh3w3QLaZkYHvjqJMo8iLSv4NNIWiXvHqYeXEolT_mlCKx3H7igCrD43Y8IS4x0LvoHqme1IaCIf7IkaHeFA_HBnjUKd1Qpl2Z4q6r_3Gx7JMlsODmDUhnwSfXfa1cy79NcMm1FX5E8mJ_LRbRzRsElmMp1yD49Vs"/>
+<div class="absolute top-3 right-3 bg-white/90 backdrop-blur-md px-2 py-1 rounded-full flex items-center gap-1 shadow-sm">
+<span class="material-symbols-outlined text-xs text-[#FF385C]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="text-[10px] font-bold">4.92</span>
+</div>
+</div>
+<h4 class="font-headline font-bold text-on-surface">Tuscany Glasshouse</h4>
+<p class="text-on-surface-variant text-xs">Siena, Italy • Vineyard View</p>
+</div>
+<div class="group cursor-pointer">
+<div class="relative aspect-[4/3] overflow-hidden rounded-lg bg-surface-container-low mb-3">
+<img alt="Beachfront Studio" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="A minimalist beachfront studio with high-end furniture and driftwood decor overlooking a turquoise ocean" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAziC0V-yyaR3ytcEgSnvjOnY4yRwK7uMuswmaZNnBVNo7zxCYkcrPRMVB7_tbpg1lO7NnL-i6iSzicBQfIu12zYY6cfwfI0qJB9qAh30-wfkjC7tdLLM057R9fh8PFyHFMUbGU6N-k6eHK_M3KHQ3mZpwE5l8I4Z8CO9mXc4ra7EZB3CjBcPNTtlHTnnWnfkoYEk30CLJY07V1Qn5gYFyBLGnuKSC2WTmjI94JVElYs-JPmwa7lo4hrYgckvIlCej8G4mDB7QnNwQ"/>
+<div class="absolute top-3 right-3 bg-white/90 backdrop-blur-md px-2 py-1 rounded-full flex items-center gap-1 shadow-sm">
+<span class="material-symbols-outlined text-xs text-[#FF385C]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="text-[10px] font-bold">4.88</span>
+</div>
+</div>
+<h4 class="font-headline font-bold text-on-surface">Azure Shore Retreat</h4>
+<p class="text-on-surface-variant text-xs">Santorini, Greece • Sunset Cliff</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Editorial Content Section -->
+<section class="mt-32 mb-12">
+<div class="bg-surface-container-low rounded-xl overflow-hidden grid grid-cols-1 md:grid-cols-2 items-center">
+<div class="p-12 md:p-20 order-2 md:order-1">
+<span class="inline-block px-4 py-1.5 bg-primary-fixed text-on-primary-fixed text-xs font-black rounded-full mb-6 uppercase tracking-widest">Alchemist Choice</span>
+<h2 class="font-headline text-5xl font-black text-on-surface leading-[1.1] mb-8">Travel as an art, not just a trip.</h2>
+<p class="text-on-surface-variant text-lg leading-relaxed mb-10 max-w-md">
+                        We believe every stay is a catalyst for change. Our homes aren't just properties; they're the backdrop for your next great story.
+                    </p>
+<button class="bg-on-surface text-surface py-4 px-10 rounded-full font-bold transition-all hover:bg-on-surface/90 active:scale-95">Become a Host</button>
+</div>
+<div class="relative h-[400px] md:h-full order-1 md:order-2">
+<img alt="Artistic Travel" class="w-full h-full object-cover" data-alt="Sun-drenched interior of a high-end designer apartment with velvet furniture, large books, and artisanal pottery" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA-8F3-plZy2gDt2GuKt5-5vhQg1Pm3iVzxZsB0bJTxZp98lOg6-qmymF1omxEYpFVOBeSAxay062I95rt46tt5-LgNjek8D_nvDEzO6ko-Ygo_gNzqMSxyYL65iFaJUJ3779IDWSH2uIVshUs65MVnmvcrmg_bKlrm5-IPTgq1jyom9RuQ4vFjdcmr0JPB5X-tyOBM6oiOXD5mp7zhQhLjwknrvooWK5RD6CtXtqkll-ZFFAhD7rSQFpsPASAACgZeWf3gq37vJ84"/>
+<div class="absolute inset-0 bg-gradient-to-r from-surface-container-low to-transparent md:hidden"></div>
+</div>
+</div>
+</section>
+<!-- Featured Collections -->
+<section class="mt-20">
+<h2 class="font-headline text-3xl font-black tracking-tight text-on-surface mb-8">Inspiration for your next alchemy</h2>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+<div class="group cursor-pointer">
+<div class="aspect-square rounded-lg overflow-hidden mb-3">
+<img alt="Autumn" class="w-full h-full object-cover transition-transform group-hover:scale-110" data-alt="Close up of a campfire at night in front of a modern A-frame cabin" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDca5KLTJamjfDwzU-abPJ3bk7I4p05Ri3n3Agi_KUV4GZwCgWeieUqf7DJTueKfmLuIIamvH903lIO42MULQr1hbZwFm9kTXwospbgW_SVcNEjeMAGyFtue0903Mj1YidDDpBRg3DDtigPrvQWAowaMZteH9Da_kA0hTCwSkSJuonGO5s-mL7zk-1Fn-uqqKuZr-HHi2OUI-0gme_j2RCB7BsCmOQWiS4zukKMqd0fwgKAY4NQOdGojsvefIJhIT5J0l-WVYk75cY"/>
+</div>
+<p class="font-bold text-on-surface">Fall Escapes</p>
+<p class="text-xs text-on-surface-variant">1,240 stays</p>
+</div>
+<div class="group cursor-pointer">
+<div class="aspect-square rounded-lg overflow-hidden mb-3">
+<img alt="Summer" class="w-full h-full object-cover transition-transform group-hover:scale-110" data-alt="A infinity pool in a tropical jungle resort at sunrise" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA_HbtlNTgXG5DVSqqntfpju7I1Xf5NMS62qX1v8pUNQ9zPv7Pr2EPJ60xGRrt7Rb060qmHtj1cb4qW9gOoW_k1CpCh7gjiqjae9VyGpgjaBDINcLTAJXamYNdAOBXW8m13cqBPlM4TRhULrogAWtifVRBI_cWcEusMhSnjO4nQo8QouTLDNHSQHue1We8cgCtE9oQeOipf2Bbwnh9yAF_cBYrrSD_r4P54oYAvv3vdEFo1iwlCBfG-9hJ_HdT00wG_eUOx8JelqTc"/>
+</div>
+<p class="font-bold text-on-surface">Tropical Zen</p>
+<p class="text-xs text-on-surface-variant">850 stays</p>
+</div>
+<div class="group cursor-pointer">
+<div class="aspect-square rounded-lg overflow-hidden mb-3">
+<img alt="Lakefront" class="w-full h-full object-cover transition-transform group-hover:scale-110" data-alt="A wooden pier leading into a crystal clear lake surrounded by mountains" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAN8e1XH1AccNu3VqSOAPYkhVzc7iO5Ru4vTKbJ2S4D1MZrxoPk96bIgyZuv-DABqsxM0HAIpn-567CPKF5hGeZrn1PM_BVkWcX2RvKCFKj0mVDT1nrM80ci14jkqYmsa5wIJcvZRVMpwCwJzE00sVq7FIGxd9oxWDO18nCNdGZZ8NPwQwTl4b2oYW3HH1RvmzjJr1F1hLSDYgSO2XiuhOXQz4j7kChtLShyza4df0t4eBXwmWBaoH9pOiRfOwUBhKYKhCtNJSLlwk"/>
+</div>
+<p class="font-bold text-on-surface">Hidden Lakes</p>
+<p class="text-xs text-on-surface-variant">420 stays</p>
+</div>
+<div class="group cursor-pointer">
+<div class="aspect-square rounded-lg overflow-hidden mb-3">
+<img alt="Winter" class="w-full h-full object-cover transition-transform group-hover:scale-110" data-alt="A snowy street in a quaint alpine village with festive lights" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCziy0kiehdBFa_nNPNk-JfW7W8HoQScKZJPgvNbGdP6KwoibV5m24yQhZ4XQVibhPEydE80qMR7142TUCNQngowynD5yKeab8Zw3nG955lLtJqcaFOc04XUgVLiloRpkQuc4QQT6UMZnzwsEp3QE8irFQUg4dGuYWCMXc3-ciWSmg8zwq2gmou7Kez6ttrv7TSyGsJbkeheRZrts03YMb8GZrCQiL-xeuqUCFmQNyNGkKX2R_QLmKZohABWcUyh5NSVMIZUxSdGRw"/>
+</div>
+<p class="font-bold text-on-surface">Winter Havens</p>
+<p class="text-xs text-on-surface-variant">960 stays</p>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-zinc-100 dark:bg-zinc-950 full-width rounded-t-[3rem] mt-20 w-full py-16 px-12 grid grid-cols-1 md:grid-cols-4 gap-12 font-['Inter'] text-sm text-zinc-500">
+<div class="col-span-1 md:col-span-1">
+<span class="font-['Be_Vietnam_Pro'] font-bold text-zinc-900 dark:text-zinc-100 text-xl block mb-6">Alchemist Travel</span>
+<p class="opacity-80 leading-relaxed mb-6">The modern concierge for the digital nomad. We craft stays into experiences through curation and design.</p>
+<div class="flex gap-4">
+<span class="material-symbols-outlined opacity-60 hover:opacity-100 cursor-pointer">public</span>
+<span class="material-symbols-outlined opacity-60 hover:opacity-100 cursor-pointer">share</span>
+<span class="material-symbols-outlined opacity-60 hover:opacity-100 cursor-pointer">mail</span>
+</div>
+</div>
+<div class="space-y-4">
+<h4 class="font-bold text-zinc-900 dark:text-zinc-100">Explore</h4>
+<nav class="flex flex-col gap-3">
+<a class="text-zinc-500 hover:text-zinc-800 transition-colors duration-200" href="#">Destinations</a>
+<a class="text-zinc-500 hover:text-zinc-800 transition-colors duration-200" href="#">Stays</a>
+<a class="text-zinc-500 hover:text-zinc-800 transition-colors duration-200" href="#">Experiences</a>
+<a class="text-zinc-500 hover:text-zinc-800 transition-colors duration-200" href="#">Trending</a>
+</nav>
+</div>
+<div class="space-y-4">
+<h4 class="font-bold text-zinc-900 dark:text-zinc-100">Company</h4>
+<nav class="flex flex-col gap-3">
+<a class="text-zinc-500 hover:text-zinc-800 transition-colors duration-200" href="#">Company details</a>
+<a class="text-zinc-500 hover:text-zinc-800 transition-colors duration-200" href="#">Careers</a>
+<a class="text-zinc-500 hover:text-zinc-800 transition-colors duration-200" href="#">Press</a>
+<a class="text-zinc-500 hover:text-zinc-800 transition-colors duration-200" href="#">Sitemap</a>
+</nav>
+</div>
+<div class="space-y-4">
+<h4 class="font-bold text-zinc-900 dark:text-zinc-100">Support</h4>
+<nav class="flex flex-col gap-3">
+<a class="text-zinc-500 hover:text-zinc-800 transition-colors duration-200" href="#">Privacy</a>
+<a class="text-zinc-500 hover:text-zinc-800 transition-colors duration-200" href="#">Terms</a>
+<a class="text-zinc-500 hover:text-zinc-800 transition-colors duration-200" href="#">Help Center</a>
+<a class="text-zinc-500 hover:text-zinc-800 transition-colors duration-200" href="#">Trust &amp; Safety</a>
+</nav>
+</div>
+<div class="col-span-1 md:col-span-4 pt-12 border-t border-zinc-200 dark:border-zinc-800 flex flex-col md:flex-row justify-between gap-6 items-center">
+<p class="opacity-80">© 2024 Alchemist Travel Marketplace. All rights reserved.</p>
+<div class="flex items-center gap-6">
+<span class="flex items-center gap-1 cursor-pointer"><span class="material-symbols-outlined text-sm">language</span> English (US)</span>
+<span class="flex items-center gap-1 cursor-pointer font-bold text-zinc-900">$ USD</span>
+</div>
+</div>
+</footer>
+</body></html>

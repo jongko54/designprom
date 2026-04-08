@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>KINETIC SHOP: THE DROP</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "outline": "#767579",
+            "primary": "#ff89ab",
+            "surface-container": "#19191d",
+            "on-error-container": "#ffb2b9",
+            "surface-dim": "#0e0e11",
+            "on-surface": "#f0edf1",
+            "error-dim": "#d73357",
+            "surface-container-high": "#1f1f23",
+            "inverse-surface": "#fcf8fd",
+            "on-secondary-container": "#e4ffe2",
+            "surface-container-low": "#131316",
+            "secondary-dim": "#00ee70",
+            "secondary": "#2efd7c",
+            "surface-bright": "#2c2c30",
+            "tertiary-fixed": "#00e3fd",
+            "on-tertiary-fixed": "#003840",
+            "on-tertiary-container": "#004d57",
+            "tertiary": "#81ecff",
+            "on-background": "#f0edf1",
+            "on-primary-fixed-variant": "#5d002a",
+            "tertiary-fixed-dim": "#00d4ec",
+            "on-surface-variant": "#acaaae",
+            "background": "#0e0e11",
+            "primary-container": "#ff709e",
+            "secondary-fixed": "#2efd7c",
+            "on-secondary": "#005b26",
+            "surface-tint": "#ff89ab",
+            "secondary-fixed-dim": "#00ee70",
+            "primary-dim": "#e30071",
+            "on-tertiary-fixed-variant": "#005762",
+            "on-primary-fixed": "#000000",
+            "on-primary": "#62002d",
+            "surface-container-lowest": "#000000",
+            "on-primary-container": "#4c0021",
+            "on-tertiary": "#005762",
+            "error": "#ff6e84",
+            "tertiary-container": "#00e3fd",
+            "outline-variant": "#48474b",
+            "inverse-on-surface": "#555458",
+            "surface-container-highest": "#25252a",
+            "surface-variant": "#25252a",
+            "on-secondary-fixed": "#00461c",
+            "tertiary-dim": "#00d4ec",
+            "error-container": "#a70138",
+            "on-secondary-fixed-variant": "#00662c",
+            "secondary-container": "#006d2f",
+            "primary-fixed-dim": "#ff5290",
+            "primary-fixed": "#ff709e",
+            "on-error": "#490013",
+            "inverse-primary": "#bc005c",
+            "surface": "#0e0e11"
+          },
+          fontFamily: {
+            "headline": ["Plus Jakarta Sans"],
+            "body": ["Plus Jakarta Sans"],
+            "label": ["Plus Jakarta Sans"]
+          },
+          borderRadius: {"DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px"},
+        },
+      },
+    }
+  </script>
+<style>
+    body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #0e0e11; color: #f0edf1; }
+    .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+    .neon-glow-primary { text-shadow: 0 0 10px rgba(255, 137, 171, 0.5); }
+    .no-scrollbar::-webkit-scrollbar { display: none; }
+    .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    .glass-nav { background: rgba(14, 14, 17, 0.7); backdrop-filter: blur(20px); }
+  </style>
+</head>
+<body class="bg-background text-on-surface antialiased no-scrollbar">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 shadow-[0px_20px_40px_rgba(0,0,0,0.4)] glass-nav h-16">
+<div class="flex justify-between items-center px-6 h-full w-full max-w-none">
+<div class="text-2xl font-black italic tracking-tighter text-[#ff89ab]">KINETIC</div>
+<div class="hidden md:flex gap-8 items-center">
+<a class="font-['Plus_Jakarta_Sans'] tracking-tighter text-[#ff89ab] font-bold hover:text-[#81ecff] transition-colors" href="#">Live</a>
+<a class="font-['Plus_Jakarta_Sans'] tracking-tighter text-gray-400 hover:text-[#81ecff] transition-colors" href="#">Shop</a>
+<a class="font-['Plus_Jakarta_Sans'] tracking-tighter text-gray-400 hover:text-[#81ecff] transition-colors" href="#">Flash</a>
+<a class="font-['Plus_Jakarta_Sans'] tracking-tighter text-gray-400 hover:text-[#81ecff] transition-colors" href="#">Feed</a>
+</div>
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-[#ff89ab] scale-95 active:scale-90 transition-transform cursor-pointer">shopping_cart</span>
+</div>
+</div>
+</nav>
+<!-- Main Content Scroll Container (Mobile-First Centered Rhythm) -->
+<main class="max-w-[500px] mx-auto pt-16 pb-32">
+<!-- Hero Creator Section -->
+<section class="relative w-full h-[870px] overflow-hidden">
+<div class="absolute inset-0 bg-cover bg-center" data-alt="high-energy fashion creator in neon streetwear posing in a futuristic studio with pink and green rim lighting" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBI1xZusKlzT0l8tcAbe2USEvvfhQkl0-4s1dczii_SKCvyC26SGRLAiDgYLp32a493wMqkTm4qCQexiaWa1z_BmXJBIuXwOzaxuC1Z-pRnvd5fp8WhqRmsbYgDTamGQ_jzxC0WUCCsuuCjbGfyZPSk86ACOp2J-uUH34UffvXTnrXLeX5eHDQICEJhn5eekDJRaa4-4MZFjMPJfqJZ734s4VU0SqgM95FJQTLxpKcJjD9d0PzG1SsbgkNtBKUqjL_3KgpDPVqR-jw');">
+<div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-80"></div>
+</div>
+<!-- Live Badge -->
+<div class="absolute top-6 left-6 flex items-center gap-2 bg-error px-3 py-1 rounded-full">
+<div class="w-2 h-2 bg-white rounded-full animate-pulse"></div>
+<span class="text-[10px] font-black tracking-widest uppercase">LIVE</span>
+</div>
+<!-- Creator Overlay UI -->
+<div class="absolute bottom-10 left-0 w-full px-6 flex flex-col gap-4">
+<div class="flex items-end justify-between">
+<div class="flex flex-col gap-1">
+<h1 class="text-4xl font-black tracking-tighter leading-none italic uppercase">KINETIC SHOP:<br/><span class="text-primary">THE DROP</span></h1>
+<p class="text-sm text-on-surface-variant font-medium">@CREATIVE_PULSE • 42.1k watching</p>
+</div>
+</div>
+<!-- Featured Product Overlay Card -->
+<div class="bg-surface-container-high/90 backdrop-blur-xl p-4 rounded-xl border border-white/5 flex gap-4 items-center transform translate-y-4">
+<div class="w-20 h-20 rounded-lg bg-cover bg-center flex-shrink-0" data-alt="sleek modern red athletic sneakers on dark reflective surface with neon accents" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuB0c-fbICMbp7jTdhRLbGHXb3uBdStAlKbfF2x5ueWQHHZ7rpXJmFfeG2eKjZS-rGQzQe0zCmcSS1x2ceSW46zzn9y_9j3e6ogPy_NBguVDCQy2JxfY5uU3W9TE8gYgB9pbNIKbWA4RqBc1R7HO_cy6SFNnVcy1Wt_YWXLwFdsfQye3NwS1CuVdUCNrnvhuOAkrpGzaLz4QWMKpX7Hk5lh2qXj3pTPL8RdAWPtQiBYY_dwlUBWbzR74vG7UJQFkxvVQ6cOGKVGL0qI');"></div>
+<div class="flex-grow">
+<p class="text-[10px] text-tertiary font-bold tracking-widest uppercase mb-1">FEATURED DROP</p>
+<h3 class="text-lg font-bold leading-tight">NEON-V VELOCITY X1</h3>
+<div class="flex items-center gap-2 mt-1">
+<span class="bg-secondary-container text-on-secondary-container px-2 py-0.5 rounded-sm text-xs font-black italic">$89.00! SLASHED</span>
+<span class="text-xs text-on-surface-variant line-through opacity-60">$140.00</span>
+</div>
+</div>
+<button class="bg-primary text-on-primary p-3 rounded-full flex items-center justify-center hover:scale-105 active:scale-95 transition-all">
+<span class="material-symbols-outlined">shopping_bag</span>
+</button>
+</div>
+</div>
+</section>
+<!-- Rhythmic Feed Section -->
+<div class="px-6 py-12 flex flex-col gap-12">
+<!-- Section Header -->
+<div class="flex items-center justify-between border-b border-white/5 pb-4">
+<h2 class="text-xl font-black tracking-tight italic uppercase">Flash Drops</h2>
+<span class="text-secondary text-xs font-bold tracking-widest">VIEW ALL</span>
+</div>
+<!-- Card 1: Bento Style -->
+<div class="group relative bg-surface-container-low rounded-xl overflow-hidden">
+<div class="aspect-[4/5] bg-cover bg-center transition-transform duration-700 group-hover:scale-105" data-alt="black designer t-shirt on a minimalist hanger with dramatic dark shadows and green neon highlight" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCDcJdK9VTivOxMPmHdnZm8ENlW3ZukZH2mfvgrZXLxX95VObNWTJEmXtUX18RvYV2ZPQgH_OegQIjQd0dd5H7qoRcorufQ_g7FTFBNgSWKkuTBnokzjva_6F0l_crc0C4_D696NTr8U_nI-0wrWTz2bxQaIluXkkviV-pc5U3RisbZFAGF00WeKEgsqGbu_T6pPCSjaMquIYENcq_bEG-fyakv8_vbYGpzkUlA9e1f76h2LQ2fKJjxWS1ntKqJGIlhyMDsW5_c1qQ');">
+<div class="absolute top-4 right-4 bg-tertiary text-on-tertiary-container px-3 py-1 rounded-sm text-[10px] font-black uppercase tracking-widest">EXTREME DEAL</div>
+<div class="absolute bottom-4 left-4 bg-secondary-container text-on-secondary-container px-3 py-1 rounded-sm transform -rotate-2">
+<span class="text-xl font-black italic leading-none">$19.99!</span>
+</div>
+</div>
+<div class="p-6">
+<div class="flex justify-between items-start mb-2">
+<div>
+<h4 class="text-lg font-bold leading-none">CORE OVERSIZED TEE</h4>
+<p class="text-xs text-on-surface-variant mt-1">KINETIC ESSENTIALS</p>
+</div>
+<span class="material-symbols-outlined text-primary cursor-pointer hover:scale-110 transition-transform">favorite</span>
+</div>
+<p class="text-sm text-on-surface-variant line-clamp-2 leading-relaxed">Engineered for the rhythm of the street. Premium weight cotton with neon-reactive stitching.</p>
+<button class="w-full mt-6 bg-surface-container-highest text-on-surface font-black py-4 rounded-full border border-white/10 hover:bg-primary hover:text-on-primary transition-all active:scale-95">ADD TO CART</button>
+</div>
+</div>
+<!-- Card 2: Wide Editorial Style -->
+<div class="relative bg-surface-container-low rounded-xl overflow-hidden p-6 flex flex-col gap-6">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-cover bg-center" data-alt="close up profile of a stylish young creator with neon blue hair and experimental makeup" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuC7hf26-do7OZDXlwEkq4ck_PYqJCh7XlPPCgp4kxnUxm7p-KdfLyJ9P-QMju42BZBpwqQpLbRuf5fjKNqgpFTJKUnRl9rpcSBeEw4VfHjQU3cx1FpmehvE9ITAGF7zasMPVvXqFYo4aYP87OP_rHMMHKMFNfTJjwPCt7bOJzSU7v_lUMsFHAgHVLyWNdlR4qRdFbYMcgsbM7R59ikJjzWZKpiHwysS3JlTvyRORUBO0bCnhx-oMXiRS_RRofFdjyM-b_tOTlDfyGo');"></div>
+<div>
+<p class="text-xs font-bold leading-none">LEXA_GLITCH</p>
+<p class="text-[10px] text-on-surface-variant uppercase tracking-widest">Creator Pick</p>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<div class="rounded-lg aspect-square bg-cover bg-center" data-alt="minimalist black streetwear hoodie front view with soft gradient lighting" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDhaVVlAwXWZwOVuoYf2TsO-tGFTTY_Jw3N72eZlu3F4cEYpcbj8OvO4gSyyyloTDDH7rFCzi15siiqexU_YQqFSo-D-nXtEXldFWeyT2OxBclmQsT2Wy2NnKmIeiJuYzukp6_d-VaV4cb_D4EUrSoNkMOByBn4SpgRToOEkU7W1cKJvWWjKEd9MKH8w-CQv5YuBr6US9TD34YC9Jeg9G5bEtu16bMrxd4UygdUUUxaRrX7EJHDMOXF4zn3AgCGYJ5DrUVYNoXssA4');"></div>
+<div class="rounded-lg aspect-square bg-cover bg-center" data-alt="minimalist black streetwear hoodie back view detail on logo" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAuZFIei6ipvHvyowwJAAnc3JlgkXT8T3eq5UX1owMM5MyJO8TbmD-_9aPCbssnnO04VrL0XMvgrOgEixEwwfPVgSY73UsRqf5TBmaH3YpesXg3EBNPXnQtzX-iFYQFjbaDZmCuVhgSTO7hN0FJ1ey1z99rXVVsi1S7eVHXlZvGK7rvfUKC0rMn5HGbKknAm_jV4JbhptpP-wsNhMjRi67F0ML59zH86WPq5dlDpooFh7UiIBFvrGupmVTZmdEerRHPQtdz2bq00G8');"></div>
+</div>
+<div>
+<h4 class="text-xl font-black italic tracking-tighter">GLITCH HOODIE V2</h4>
+<div class="flex items-center gap-4 mt-2">
+<span class="text-2xl font-black text-secondary leading-none">$45.00</span>
+<span class="bg-primary/20 text-primary px-2 py-1 rounded text-[10px] font-bold uppercase tracking-widest italic">30% OFF</span>
+</div>
+<div class="flex items-center gap-2 mt-4 text-xs text-secondary font-bold">
+<span class="material-symbols-outlined text-[16px]">local_shipping</span>
+<span>FREE SHIPPING</span>
+</div>
+</div>
+</div>
+<!-- Card 3: Video-first Mini Drop -->
+<div class="relative w-full aspect-[9/16] rounded-xl overflow-hidden group">
+<div class="absolute inset-0 bg-cover bg-center" data-alt="stylized wide shot of a streetwear model walking through an alleyway with pink and blue cinematic lighting" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBv97xk8Hq3lrPTaccsSbFslvbBfSgSyFlc5tpL_WLhnToa1Rl6ozHXxfMLo7V55wDHBMYdIx7LwELgPw3UoFlpLrT9OPrPzZOAECNlLbgclOdx8vOYoJGQVbzXeNd7__QgbBA83Nwlam6U7rtk0uE7a15l4Gj_H5T7LYQ-VFb415XueEasbsq4eBDYVvIc3VCWHOW67uspdPdFUpncobk-RynXoa6CuX-LDuRN2iUCeSMUwrIX2h4q2Gixeptq1uc3eIQfUyv1CX4');">
+<div class="absolute inset-0 bg-black/30 group-hover:bg-black/10 transition-colors"></div>
+</div>
+<div class="absolute top-4 left-4 flex gap-2">
+<span class="bg-black/60 backdrop-blur-md text-white px-2 py-1 rounded text-[10px] font-bold uppercase tracking-widest">KINETIC TV</span>
+</div>
+<div class="absolute inset-0 flex items-center justify-center">
+<span class="material-symbols-outlined text-white text-6xl opacity-80 group-hover:scale-110 transition-transform cursor-pointer">play_circle</span>
+</div>
+<div class="absolute bottom-6 left-6 right-6">
+<div class="bg-surface-container-highest/80 backdrop-blur-md p-4 rounded-lg flex justify-between items-center border border-white/5">
+<div>
+<p class="text-[10px] text-primary font-bold uppercase tracking-widest mb-1">LAST CHANCE</p>
+<h4 class="font-bold leading-none">DUSK CARGO PANTS</h4>
+</div>
+<span class="text-xl font-black italic text-secondary">$62.00</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Bottom Footer (Inside the centered main to maintain feed rhythm) -->
+<footer class="w-full py-12 border-t border-white/5 flex flex-col items-center gap-6 px-8 bg-[#0e0e11]">
+<div class="text-[#ff89ab] font-black tracking-tighter text-2xl italic">KINETIC</div>
+<div class="flex flex-wrap justify-center gap-6 font-['Plus_Jakarta_Sans'] text-xs uppercase tracking-widest text-gray-600">
+<a class="hover:text-[#2efd7c] transition-colors" href="#">Drops</a>
+<a class="hover:text-[#2efd7c] transition-colors" href="#">Terms</a>
+<a class="hover:text-[#2efd7c] transition-colors" href="#">Privacy</a>
+<a class="hover:text-[#2efd7c] transition-colors" href="#">Support</a>
+</div>
+<p class="text-[10px] text-gray-600 tracking-[0.2em] font-medium text-center">© 2024 KINETIC COMMERCE. RHYTHMIC VELOCITY.</p>
+</footer>
+</main>
+<!-- BottomNavBar -->
+<div class="fixed bottom-0 left-0 w-full flex justify-around items-center px-4 pb-6 pt-3 bg-[#0e0e11]/80 backdrop-blur-2xl z-50 rounded-t-[3rem] shadow-[0px_-10px_30px_rgba(0,0,0,0.5)]">
+<div class="flex flex-col items-center justify-center text-gray-500 hover:text-[#81ecff] transition-all duration-300 scale-110 cursor-pointer">
+<span class="material-symbols-outlined">sensors</span>
+<span class="font-['Plus_Jakarta_Sans'] text-[10px] uppercase font-bold tracking-widest mt-1">Live</span>
+</div>
+<div class="flex flex-col items-center justify-center text-gray-500 hover:text-[#81ecff] transition-all duration-300 scale-110 cursor-pointer">
+<span class="material-symbols-outlined">shopping_bag</span>
+<span class="font-['Plus_Jakarta_Sans'] text-[10px] uppercase font-bold tracking-widest mt-1">Shop</span>
+</div>
+<div class="flex flex-col items-center justify-center text-[#2efd7c] drop-shadow-[0_0_8px_rgba(46,253,124,0.6)] transition-all duration-300 scale-110 cursor-pointer">
+<span class="material-symbols-outlined">bolt</span>
+<span class="font-['Plus_Jakarta_Sans'] text-[10px] uppercase font-bold tracking-widest mt-1">Flash</span>
+</div>
+<div class="flex flex-col items-center justify-center text-gray-500 hover:text-[#81ecff] transition-all duration-300 scale-110 cursor-pointer">
+<span class="material-symbols-outlined">grid_view</span>
+<span class="font-['Plus_Jakarta_Sans'] text-[10px] uppercase font-bold tracking-widest mt-1">Feed</span>
+</div>
+<div class="flex flex-col items-center justify-center text-gray-500 hover:text-[#81ecff] transition-all duration-300 scale-110 cursor-pointer">
+<span class="material-symbols-outlined">person</span>
+<span class="font-['Plus_Jakarta_Sans'] text-[10px] uppercase font-bold tracking-widest mt-1">Account</span>
+</div>
+</div>
+</body></html>

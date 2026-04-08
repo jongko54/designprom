@@ -1,0 +1,21 @@
+{
+  "brand": "Apple",
+  "contentType": "image/png",
+  "fileName": "apple-ambient-device-launch.png",
+  "generatedAt": "2026-04-02T11:21:57.883Z",
+  "htmlUrl": "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ7Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpaCiVodG1sXzVjYmY0ZmNjNDhjZTRmZjg5NjE2MGNiMGVlZGIzNDcwEgsSBxCCisPc0AkYAZIBIwoKcHJvamVjdF9pZBIVQhM5MjM5NzI0NDIyMjI5OTI5MTg3&filename=&opi=96797242",
+  "imageUrl": "https://lh3.googleusercontent.com/aida/ADBb0ugGo_XHHCdQ1taGnay8Q8yY35R5dGqn1JnHITos5VNy8-LDQFRMqTSBHLpvO8tlcZGEoH1LSq-3OgIEETAVgnh8yhSCbi_1Tm1bGTjQD9eojascU49ENyATPYozHQIN_zub1R3rhE6ZM_DnSt_gnaGZiWq7uz-IPauGzHFHksTL-JnGxh6tiGOv2CWhHxkjIOVsm6pCxZvfI6vDhHtqNs2GScYxSGQGVa__dXGaksB__sn1ByUYAjId0w",
+  "notes": [
+    "I've designed the AETHER landing page with an Apple-inspired aesthetic. It features a sleek, floating hardware render on a black-to-silver hero stage, a massive headline, and a minimalist navigation bar. I also included a section showing its integration across your ecosystem—phone, Mac, and audio devices—maintaining a sparse, premium feel throughout.\n\nThe new design system and the landing page are now on your canvas."
+  ],
+  "prompt": "Design an Apple-inspired landing page for a desk AI device. Use a black-to-silver hero stage, floating hardware render, a huge restrained headline, minimal navigation, and one section showing ecosystem pairing across phone, desktop, and audio. Keep the layout sparse, glossy, and expensive.",
+  "projectId": "9239724422229929187",
+  "screenId": "bfb6fa7f6e24452b8505d1fb006ec1bd",
+  "slug": "apple-ambient-device-launch",
+  "suggestions": [
+    "Add a 'Tech Specs' section with detailed hardware info",
+    "Create a mobile version of the landing page",
+    "Design a checkout page for pre-ordering the device"
+  ],
+  "title": "AETHER Landing Page"
+}

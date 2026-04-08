@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Technical Architecture | System Architect</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "tertiary": "#625b77",
+                        "on-surface": "#2d3435",
+                        "secondary": "#5f5f62",
+                        "surface-container-high": "#e4e9ea",
+                        "secondary-fixed": "#e4e2e6",
+                        "error-container": "#fe8983",
+                        "surface": "#f9f9f9",
+                        "outline": "#757c7d",
+                        "inverse-primary": "#618bff",
+                        "secondary-fixed-dim": "#d5d3d8",
+                        "on-error": "#fff7f6",
+                        "tertiary-container": "#dfd5f7",
+                        "on-tertiary": "#fdf7ff",
+                        "on-tertiary-fixed": "#3c3650",
+                        "on-primary-fixed": "#003798",
+                        "secondary-dim": "#535356",
+                        "on-background": "#2d3435",
+                        "primary-fixed-dim": "#c7d3ff",
+                        "on-primary-fixed-variant": "#0050d4",
+                        "surface-bright": "#f9f9f9",
+                        "surface-container-low": "#f2f4f4",
+                        "secondary-container": "#e4e2e6",
+                        "on-tertiary-container": "#4f4964",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-container": "#ebeeef",
+                        "tertiary-fixed": "#dfd5f7",
+                        "inverse-surface": "#0c0f0f",
+                        "tertiary-dim": "#564f6b",
+                        "background": "#f9f9f9",
+                        "inverse-on-surface": "#9c9d9d",
+                        "surface-tint": "#0053da",
+                        "on-error-container": "#752121",
+                        "on-primary-container": "#0048bf",
+                        "on-surface-variant": "#5a6061",
+                        "on-secondary-fixed": "#3f3f43",
+                        "surface-variant": "#dde4e5",
+                        "tertiary-fixed-dim": "#d0c7e8",
+                        "on-secondary": "#faf8fc",
+                        "primary-container": "#dbe1ff",
+                        "on-primary": "#f8f7ff",
+                        "on-secondary-container": "#515155",
+                        "surface-dim": "#d4dbdd",
+                        "primary-dim": "#0048c1",
+                        "error": "#9f403d",
+                        "primary": "#0053da",
+                        "error-dim": "#4e0309",
+                        "primary-fixed": "#dbe1ff",
+                        "on-secondary-fixed-variant": "#5b5b5f",
+                        "on-tertiary-fixed-variant": "#59526e",
+                        "surface-container-highest": "#dde4e5",
+                        "outline-variant": "#adb3b4"
+                    },
+                    fontFamily: {
+                        "headline": ["Inter"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    },
+                    borderRadius: { "DEFAULT": "0px", "lg": "0px", "xl": "0px", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            display: inline-block;
+            line-height: 1;
+            text-transform: none;
+            letter-spacing: normal;
+            word-wrap: normal;
+            white-space: nowrap;
+            direction: ltr;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f9f9f9;
+        }
+        .reading-rail {
+            border-left: 1px solid rgba(173, 179, 180, 0.15);
+        }
+    </style>
+</head>
+<body class="antialiased text-on-surface">
+<!-- TopNavBar Navigation Shell -->
+<nav class="fixed top-0 w-full border-b-[1px] bg-white dark:bg-slate-950 border-slate-200/15 dark:border-slate-800/15 z-50 transition-all duration-150 ease-in-out font-['Inter'] text-[0.875rem] tracking-tight antialiased">
+<div class="flex justify-between items-center w-full px-6 h-16 max-w-full">
+<div class="flex items-center gap-8">
+<span class="text-lg font-bold tracking-tighter text-slate-900 dark:text-slate-50 uppercase">Technical Architecture</span>
+<div class="hidden md:flex items-center gap-6">
+<a class="text-blue-700 dark:text-blue-400 border-b-2 border-blue-700 dark:border-blue-400 pb-4 mt-4" href="#">Dashboard</a>
+<a class="text-slate-500 dark:text-slate-400 pb-4 mt-4 hover:bg-slate-50 dark:hover:bg-slate-900 transition-colors duration-150" href="#">Analytics</a>
+<a class="text-slate-500 dark:text-slate-400 pb-4 mt-4 hover:bg-slate-50 dark:hover:bg-slate-900 transition-colors duration-150" href="#">Modules</a>
+<a class="text-slate-500 dark:text-slate-400 pb-4 mt-4 hover:bg-slate-50 dark:hover:bg-slate-900 transition-colors duration-150" href="#">Registry</a>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-slate-500 cursor-pointer p-2 hover:bg-slate-50 transition-colors" data-icon="settings">settings</span>
+<span class="material-symbols-outlined text-slate-500 cursor-pointer p-2 hover:bg-slate-50 transition-colors" data-icon="notifications">notifications</span>
+<div class="w-8 h-8 bg-slate-200 flex items-center justify-center overflow-hidden">
+<img alt="User Profile" class="w-full h-full object-cover" data-alt="professional headshot of a software architect in a clean studio setting with neutral lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBaiMMe4fghzM3XqVq81HowzqRwAJBX2oR8_394NPtn8jg_bxJceLrjZpSXoxpFKDZjCd6-B1Tmh8GDYqBaB5ouyRkIuN84xk5U9GM4bieXQzkhQBmN01aTe02bwQ5RPtktveO2zX_J-JBetftYGmQ21YKhvZ76a99TCuGxol4_vd7e9DhJFgkIaOEQ9A-QZOB2FvilBOq1oJcNo54TfmjzrUDqLxy3OWlg31O7qeRCcyEYyVK-1ji0e08s5MydMGLlNVHPOcttNLc"/>
+</div>
+</div>
+</div>
+</nav>
+<main class="pt-16">
+<!-- Hero Section: The Architectural Foundation -->
+<section class="min-h-[819px] flex flex-col justify-center px-8 md:px-16 lg:px-24 bg-surface border-b border-outline-variant/15">
+<div class="grid grid-cols-12 gap-8 items-center">
+<div class="col-span-12 lg:col-span-6 reading-rail pl-8 py-12">
+<h1 class="text-5xl md:text-7xl font-extrabold tracking-tighter text-slate-900 leading-[0.95] mb-6">
+                        STRUCTURAL<br/>PRECISION BY<br/>DESIGN.
+                    </h1>
+<p class="text-lg text-on-surface-variant max-w-md mb-8 leading-relaxed font-medium">
+                        A rigorous 12-column framework for enterprise-grade technical architecture. Engineered for high-density information environments.
+                    </p>
+<div class="flex flex-col sm:flex-row gap-4">
+<button class="bg-primary hover:bg-primary-dim text-on-primary px-8 py-4 text-xs font-bold uppercase tracking-widest transition-all duration-150">
+                            DEPLOY INFRASTRUCTURE
+                        </button>
+<button class="border border-outline-variant/30 hover:bg-surface-container-low px-8 py-4 text-xs font-bold uppercase tracking-widest transition-all duration-150">
+                            VIEW DOCUMENTATION
+                        </button>
+</div>
+</div>
+<div class="col-span-12 lg:col-span-6 relative h-full min-h-[400px]">
+<div class="absolute inset-0 bg-surface-container-low border border-outline-variant/20 overflow-hidden">
+<img alt="Technical Illustration" class="w-full h-full object-cover opacity-80 mix-blend-multiply" data-alt="high-fidelity technical wireframe of a complex circuit board with glowing blue traces and monochrome architectural overlays" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCZaoohEPlcJhm20DKxBlEe4HX4KDEtIVQjWNlg6J1O59366H99WPYLcen14RgHb0X5BWdcdqWY4TjsMhC2ohz61hO9OzRp1riR88Wz_-pctpGiG7dTrwwNHAc4BhXXytizAgPORg1bvmk9XgBr5oi6FsD8jPYSpKaiQ6A6axGb0GizmqKBU0ljy1VUShs6sbelXr1g-OJgotG5NS23jV1phENm6B5iB4t10g2RlRF4I7viUul1A7eICUZZoepxG8Mj4LhjhGJbKks"/>
+<div class="absolute inset-0 bg-gradient-to-tr from-primary/5 to-transparent"></div>
+</div>
+</div>
+</div>
+</section>
+<!-- Capability Modules -->
+<section class="py-24 px-8 md:px-16 lg:px-24 bg-surface-container-lowest">
+<div class="grid grid-cols-1 md:grid-cols-3 border-t border-l border-outline-variant/20">
+<div class="p-10 border-r border-b border-outline-variant/20 hover:bg-surface-container-low transition-colors group">
+<span class="material-symbols-outlined text-primary mb-6 text-3xl" data-icon="account_tree">account_tree</span>
+<h3 class="text-xl font-bold tracking-tight mb-4 uppercase">Core Infrastructure</h3>
+<p class="text-sm text-on-surface-variant leading-relaxed mb-6">
+                        Distributed node clusters with automatic failover protocols. Optimized for 99.999% uptime in mission-critical environments.
+                    </p>
+<span class="text-[0.6875rem] font-bold tracking-widest text-primary uppercase group-hover:underline cursor-pointer">Explore Schematics</span>
+</div>
+<div class="p-10 border-r border-b border-outline-variant/20 hover:bg-surface-container-low transition-colors group">
+<span class="material-symbols-outlined text-primary mb-6 text-3xl" data-icon="database">database</span>
+<h3 class="text-xl font-bold tracking-tight mb-4 uppercase">Automated Registry</h3>
+<p class="text-sm text-on-surface-variant leading-relaxed mb-6">
+                        Real-time asset tracking and versioned documentation. Every deployment is logged, verified, and immutable within the ledger.
+                    </p>
+<span class="text-[0.6875rem] font-bold tracking-widest text-primary uppercase group-hover:underline cursor-pointer">Verify Logs</span>
+</div>
+<div class="p-10 border-r border-b border-outline-variant/20 hover:bg-surface-container-low transition-colors group">
+<span class="material-symbols-outlined text-primary mb-6 text-3xl" data-icon="analytics">analytics</span>
+<h3 class="text-xl font-bold tracking-tight mb-4 uppercase">Real-time Analytics</h3>
+<p class="text-sm text-on-surface-variant leading-relaxed mb-6">
+                        High-fidelity telemetry streams processed at the edge. Visualizing complex data points through a literate interface.
+                    </p>
+<span class="text-[0.6875rem] font-bold tracking-widest text-primary uppercase group-hover:underline cursor-pointer">Launch Console</span>
+</div>
+</div>
+</section>
+<!-- System Integrity Section -->
+<section class="py-24 px-8 md:px-16 lg:px-24 bg-surface">
+<div class="grid grid-cols-12 gap-0 border border-outline-variant/20">
+<div class="col-span-12 lg:col-span-7 bg-surface-container-high p-4 flex items-center justify-center min-h-[400px]">
+<div class="w-full h-full relative border border-outline-variant/10 bg-surface-container-lowest p-8 flex flex-col gap-4">
+<div class="flex justify-between items-center pb-4 border-b border-outline-variant/10">
+<span class="text-[0.6875rem] font-bold uppercase tracking-tighter text-on-surface-variant">System_Architecture_V4.2.svg</span>
+<div class="flex gap-2">
+<div class="w-2 h-2 bg-primary rounded-full"></div>
+<div class="w-2 h-2 bg-outline-variant rounded-full"></div>
+</div>
+</div>
+<div class="flex-grow flex items-center justify-center p-8 bg-surface-container-low/50">
+<img alt="Data Visualization" class="w-full h-full object-contain grayscale mix-blend-multiply contrast-125" data-alt="clean blueprint style visualization of a server rack and network nodes in blue and grey lines on a white background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAIds_7FSpdIEykdkQ-x30msmNz5SW4z6BPDbB3leTEyUKWZi3GFDyevOS9LJGIrUxaKRZSvsijg1AG0yprwzGW1saYuPB9aBjT78D4S6Gay3zOzLMU1Gs1zedGObvYbiprrAfRo4Ly0h0zg1fXuKhLuA14zcQ4KZubf6hINmHVkQccfv5Clq7d8Kr-9hRJCwlT6PvKG6t773U1TbGz3yTG2nW1IzzM9EV73Vzu7oyiJPqJvRyWdhsMXQfj3TozCLlMv53XjqtxwSs"/>
+</div>
+</div>
+</div>
+<div class="col-span-12 lg:col-span-5 p-12 flex flex-col justify-center reading-rail">
+<h2 class="text-3xl font-extrabold tracking-tight mb-8 leading-none">SYSTEM INTEGRITY PROTOCOLS</h2>
+<ul class="space-y-8">
+<li class="flex gap-4">
+<span class="text-primary font-bold text-xs pt-1">01</span>
+<div>
+<h4 class="text-sm font-bold uppercase tracking-wider mb-1">Zero-Trust Authorization</h4>
+<p class="text-xs text-on-surface-variant leading-relaxed">Continuous verification of every request, regardless of origin.</p>
+</div>
+</li>
+<li class="flex gap-4">
+<span class="text-primary font-bold text-xs pt-1">02</span>
+<div>
+<h4 class="text-sm font-bold uppercase tracking-wider mb-1">Atomic Deployments</h4>
+<p class="text-xs text-on-surface-variant leading-relaxed">All-or-nothing system updates to prevent partial state corruption.</p>
+</div>
+</li>
+<li class="flex gap-4">
+<span class="text-primary font-bold text-xs pt-1">03</span>
+<div>
+<h4 class="text-sm font-bold uppercase tracking-wider mb-1">Redundant Sync-Gates</h4>
+<p class="text-xs text-on-surface-variant leading-relaxed">Multi-point synchronization ensures global data consistency.</p>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</section>
+<!-- Trust Section -->
+<section class="py-16 px-8 md:px-16 lg:px-24 border-y border-outline-variant/15">
+<p class="text-[0.6875rem] font-bold uppercase tracking-[0.3em] text-center mb-12 text-on-surface-variant opacity-60">Architectural Partners &amp; Integrations</p>
+<div class="flex flex-wrap justify-between items-center gap-12 grayscale opacity-40 hover:grayscale-0 transition-all">
+<div class="h-8 w-32 bg-slate-400/20 flex items-center justify-center text-[0.6rem] font-black uppercase tracking-widest border border-slate-400/10">CORE_LOGIC</div>
+<div class="h-8 w-32 bg-slate-400/20 flex items-center justify-center text-[0.6rem] font-black uppercase tracking-widest border border-slate-400/10">DATA_STRAT</div>
+<div class="h-8 w-32 bg-slate-400/20 flex items-center justify-center text-[0.6rem] font-black uppercase tracking-widest border border-slate-400/10">SYNTH_SYS</div>
+<div class="h-8 w-32 bg-slate-400/20 flex items-center justify-center text-[0.6rem] font-black uppercase tracking-widest border border-slate-400/10">QUANT_NET</div>
+<div class="h-8 w-32 bg-slate-400/20 flex items-center justify-center text-[0.6rem] font-black uppercase tracking-widest border border-slate-400/10">FLUX_FRAME</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="py-32 px-8 text-center bg-surface-container-lowest">
+<div class="max-w-3xl mx-auto border-x border-outline-variant/20 py-16 px-8 relative">
+<div class="absolute top-0 left-1/2 -translate-x-1/2 w-8 h-[1px] bg-primary"></div>
+<h2 class="text-4xl font-extrabold tracking-tighter mb-6 uppercase">Request Early Access</h2>
+<p class="text-on-surface-variant mb-10 text-sm max-w-md mx-auto leading-relaxed">
+                    Join the closed pilot program for the V4.2 stable release. Secure your slot in the next architectural evolution.
+                </p>
+<form class="flex flex-col md:flex-row gap-0 max-w-lg mx-auto border border-outline-variant/30">
+<input class="flex-grow bg-surface-container-low border-none px-6 py-4 text-xs font-bold focus:ring-0 focus:border-primary" placeholder="ENTER WORK EMAIL" type="email"/>
+<button class="bg-primary text-on-primary px-8 py-4 text-xs font-bold uppercase tracking-widest hover:bg-primary-dim transition-colors" type="submit">
+                        SUBMIT
+                    </button>
+</form>
+<div class="absolute bottom-0 left-1/2 -translate-x-1/2 w-8 h-[1px] bg-primary"></div>
+</div>
+</section>
+</main>
+<!-- Footer Navigation Shell -->
+<footer class="w-full border-t-[1px] bg-slate-100 dark:bg-slate-900 border-slate-200/15 dark:border-slate-800/15 font-['Inter'] text-[0.6875rem] uppercase tracking-widest text-slate-500">
+<div class="grid grid-cols-2 md:flex md:justify-between items-center w-full px-8 py-10">
+<div class="order-2 md:order-1 mt-6 md:mt-0">
+                © 2024 SYSTEM ARCHITECT. ALL RIGHTS RESERVED. v4.2.1-STABLE
+            </div>
+<div class="order-1 md:order-2 flex flex-wrap gap-6 items-center">
+<a class="text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-50 transition-colors duration-150" href="#">Privacy Protocol</a>
+<a class="text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-50 transition-colors duration-150" href="#">Security Documentation</a>
+<a class="text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-50 transition-colors duration-150" href="#">API Reference</a>
+<a class="text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-50 transition-colors duration-150" href="#">Status</a>
+</div>
+</div>
+</footer>
+</body></html>

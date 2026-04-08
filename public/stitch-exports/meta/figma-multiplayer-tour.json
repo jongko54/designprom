@@ -1,0 +1,21 @@
+{
+  "brand": "Figma",
+  "contentType": "image/png",
+  "fileName": "figma-multiplayer-tour.png",
+  "generatedAt": "2026-04-02T01:40:30.801Z",
+  "htmlUrl": "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ8Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpbCiVodG1sX2VlZGU0YWU0OGI5NjRmYzFhMGMyMWI0ZTNkNTllYzUyEgsSBxCCisPc0AkYAZIBJAoKcHJvamVjdF9pZBIWQhQxNTE0MTM2NDkwMzg3Mzk0NjczOA&filename=&opi=96797242",
+  "imageUrl": "https://lh3.googleusercontent.com/aida/ADBb0uhRf81CHYD2vBvC7LS7z6fo7kcPbNNq7mJx12CI-3p3dDA-LoJgin5Kr2GA9ceXyzjft3CbY_mebNPAaTzJRfIaJyGdIH_Ev7BjqU0bPdThKxPI5hcMkgLqMGQH-Ed_S-zbH8XskXVeH0ujxCaKmjMfp5PQQqkzFip_8MjV9yS6ytgHx15Tv1Ty-y-kBnBwZoaKHMIyYaSlRWot-_Owt5WDQnxltVMEzNIHyWFRpt4lcKGovmd3hL_JYamE",
+  "notes": [
+    "I've designed the Figma-inspired product tour page for 'Digital Craftshop'. It's built to feel tool-first and collaborative, featuring:\n\n*   **Multiplayer Hero:** A large canvas view with floating cursors ('Elena', 'Marcus', 'Stitch') to immediately signal active collaboration.\n*   **'Precision Pane Reveals' Section:** Shows how the tool surfaces detailed properties only when needed, maintaining a clean workspace.\n*   **'Collaborative Flow' Storytelling:** A visual progression from low-fidelity wireframes to polished designs, emphasizing the seamless workflow.\n*   **The Toolkit:** Highlighted feature cards for auto-layout and variable modes with high-precision iconography.\n\nThe layout uses the custom purple (#A259FF) for primary actions and multiplayer highlights, all framed within the crisp, minimal aesthetic we defined for the 'Digital Craftshop' design system."
+  ],
+  "prompt": "Design a Figma-like product tour page with collaborative cursor moments, pane reveals, canvas zoom framing, and clear workflow storytelling. Keep the interface crisp, tool-first, and readable while showing active multiplayer energy.",
+  "projectId": "15141364903873946738",
+  "screenId": "9c6cc0bd6d1744a986e8bd811413e17e",
+  "slug": "figma-multiplayer-tour",
+  "suggestions": [
+    "Add a dark mode version of the tour page",
+    "Design a more detailed 'Auto-Layout' feature deep-dive section",
+    "Change the multiplayer cursors to a different color palette"
+  ],
+  "title": "Product Tour: Digital Craftshop"
+}

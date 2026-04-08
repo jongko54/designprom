@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Precision Engine Docs</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "on-primary": "#f5f7ff",
+                        "secondary": "#5c5f64",
+                        "inverse-surface": "#0e0e0e",
+                        "inverse-primary": "#0397fd",
+                        "secondary-container": "#e1e2e8",
+                        "error-dim": "#4e0309",
+                        "outline-variant": "#b2b2b2",
+                        "tertiary": "#5a5d78",
+                        "primary-fixed-dim": "#b9d7ff",
+                        "on-tertiary-container": "#4b4e69",
+                        "on-secondary-fixed-variant": "#595c61",
+                        "surface-container-highest": "#e3e2e2",
+                        "inverse-on-surface": "#9e9c9c",
+                        "on-secondary": "#f7f9ff",
+                        "surface-bright": "#fcf9f8",
+                        "surface-container-low": "#f6f3f2",
+                        "on-primary-fixed": "#004172",
+                        "secondary-fixed-dim": "#d3d4da",
+                        "secondary-dim": "#505358",
+                        "primary-container": "#d2e4ff",
+                        "surface-tint": "#0061a5",
+                        "on-surface-variant": "#5f5f5f",
+                        "on-primary-fixed-variant": "#005ea0",
+                        "on-surface": "#323233",
+                        "on-error-container": "#752121",
+                        "tertiary-dim": "#4e516c",
+                        "surface": "#fcf9f8",
+                        "on-tertiary-fixed": "#383c55",
+                        "surface-container": "#f0eded",
+                        "error-container": "#fe8983",
+                        "on-primary-container": "#005490",
+                        "error": "#9f403d",
+                        "on-secondary-fixed": "#3d3f44",
+                        "surface-container-high": "#e9e8e7",
+                        "primary": "#0061a5",
+                        "primary-dim": "#005591",
+                        "on-background": "#323233",
+                        "outline": "#7b7b7b",
+                        "secondary-fixed": "#e1e2e8",
+                        "surface-variant": "#e3e2e2",
+                        "tertiary-container": "#dbdefe",
+                        "tertiary-fixed-dim": "#cdd0ef",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-dim": "#dadada",
+                        "tertiary-fixed": "#dbdefe",
+                        "primary-fixed": "#d2e4ff",
+                        "background": "#fcf9f8",
+                        "on-tertiary": "#faf8ff",
+                        "on-secondary-container": "#4f5257",
+                        "on-tertiary-fixed-variant": "#545873",
+                        "on-error": "#fff7f6"
+                    },
+                    fontFamily: {
+                        "headline": ["Inter"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    },
+                    borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            font-size: 1.25rem;
+        }
+        body { font-family: 'Inter', sans-serif; }
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(12px);
+        }
+        /* Custom scrollbar for technical density */
+        ::-webkit-scrollbar { width: 4px; height: 4px; }
+        ::-webkit-scrollbar-track { background: transparent; }
+        ::-webkit-scrollbar-thumb { background: #e3e2e2; border-radius: 10px; }
+        ::-webkit-scrollbar-thumb:hover { background: #b2b2b2; }
+    </style>
+</head>
+<body class="bg-surface text-on-surface">
+<!-- TopNavBar -->
+<header class="flex justify-between items-center px-6 w-full sticky top-0 z-50 w-full h-14 border-b border-zinc-200/50 dark:border-zinc-800/50 bg-[#fcf9f8] dark:bg-zinc-950 font-inter text-body-md shadow-none">
+<div class="flex items-center gap-8">
+<span class="text-lg font-bold tracking-tighter text-[#0061a5] dark:text-blue-400">Precision Engine Docs</span>
+<nav class="hidden md:flex gap-6">
+<a class="text-zinc-600 dark:text-zinc-400 hover:text-[#0061a5] transition-colors duration-150" href="#">Release Notes</a>
+<a class="text-[#0061a5] font-semibold border-b-2 border-[#0061a5]" href="#">Resources</a>
+</nav>
+</div>
+<div class="flex items-center gap-4">
+<div class="relative flex items-center">
+<span class="material-symbols-outlined absolute left-3 text-zinc-400">search</span>
+<input class="pl-10 pr-4 py-1.5 bg-surface-container-lowest text-body-md border-none ring-1 ring-outline-variant/15 rounded focus:ring-primary focus:ring-2 w-64 transition-all" placeholder="Search documentation..." type="text"/>
+</div>
+<button class="material-symbols-outlined p-2 text-zinc-500 hover:bg-zinc-100 dark:hover:bg-zinc-900 rounded-md transition-colors duration-150">notifications</button>
+<button class="material-symbols-outlined p-2 text-zinc-500 hover:bg-zinc-100 dark:hover:bg-zinc-900 rounded-md transition-colors duration-150">settings</button>
+<button class="px-4 py-1.5 bg-primary text-on-primary text-body-md font-medium rounded-md hover:bg-primary-dim active:scale-95 transition-all">Upgrade</button>
+</div>
+</header>
+<div class="flex">
+<!-- SideNavBar -->
+<aside class="h-screen w-64 fixed left-0 top-0 pt-14 flex flex-col gap-1 p-4 border-r border-zinc-200/50 dark:border-zinc-800/50 bg-[#f6f3f2] dark:bg-zinc-900 font-inter text-label-sm uppercase tracking-wider overflow-y-auto">
+<div class="mb-6 px-2 pt-4">
+<div class="flex items-center gap-3 mb-1">
+<img class="w-8 h-8 rounded bg-white shadow-sm" data-alt="minimalist technical logo showing interlocking geometric gears in blue and white on a light gray background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC032Kh6lSxxA-AcJlOdQZP5_ZHhCVNMcOirm7EuQvqoglLgb2tWLKdsjK3exNbZwuDCnMxnwugJ_21AkF7FRcu9H6yW_lUg_IlLnFFG0re8jSSOcnCWtYbNhalV0PYVow6ivIq7XJry7J2XbTzlGM3UyFnrAfyeoeVjcipjv0cadX_btwbeLPIiCW5kxqcRonI2Pjf1NeE9l6KedF7TBuSAkfDr329WiH7SDtJ1vwq_5iZXDz2EoOHoV6P1g8dRNcU-8XMCY-66rM"/>
+<div>
+<div class="font-bold text-zinc-900 dark:text-zinc-100 tracking-normal">Library</div>
+<div class="text-[10px] text-zinc-500 tracking-normal capitalize">v1.2.0</div>
+</div>
+</div>
+</div>
+<nav class="flex-1 space-y-1">
+<p class="px-2 py-2 text-[10px] font-bold text-zinc-400">Foundations</p>
+<a class="flex items-center gap-3 p-2 bg-[#d2e4ff] dark:bg-blue-900/30 text-[#0061a5] dark:text-blue-200 font-medium rounded-md transition-all duration-150" href="#">
+<span class="material-symbols-outlined">palette</span>
+                    Colors
+                </a>
+<a class="flex items-center gap-3 p-2 text-zinc-500 dark:text-zinc-400 hover:bg-zinc-200 dark:hover:bg-zinc-800 transition-all duration-150" href="#">
+<span class="material-symbols-outlined">text_fields</span>
+                    Typography
+                </a>
+<p class="px-2 py-2 mt-4 text-[10px] font-bold text-zinc-400">Components</p>
+<a class="flex items-center gap-3 p-2 text-zinc-500 dark:text-zinc-400 hover:bg-zinc-200 dark:hover:bg-zinc-800 transition-all duration-150" href="#">
+<span class="material-symbols-outlined">smart_button</span>
+                    Buttons
+                </a>
+<a class="flex items-center gap-3 p-2 text-zinc-500 dark:text-zinc-400 hover:bg-zinc-200 dark:hover:bg-zinc-800 transition-all duration-150" href="#">
+<span class="material-symbols-outlined">input</span>
+                    Inputs
+                </a>
+<a class="flex items-center gap-3 p-2 text-zinc-500 dark:text-zinc-400 hover:bg-zinc-200 dark:hover:bg-zinc-800 transition-all duration-150" href="#">
+<span class="material-symbols-outlined">grid_view</span>
+                    Layouts
+                </a>
+<a class="flex items-center gap-3 p-2 text-zinc-500 dark:text-zinc-400 hover:bg-zinc-200 dark:hover:bg-zinc-800 transition-all duration-150" href="#">
+<span class="material-symbols-outlined">map</span>
+                    Navigation
+                </a>
+</nav>
+<div class="mt-auto space-y-1 pb-4">
+<a class="flex items-center gap-3 p-2 text-zinc-500 dark:text-zinc-400 hover:bg-zinc-200 dark:hover:bg-zinc-800 transition-all duration-150" href="#">
+<span class="material-symbols-outlined">help</span>
+                    Support
+                </a>
+<a class="flex items-center gap-3 p-2 text-zinc-500 dark:text-zinc-400 hover:bg-zinc-200 dark:hover:bg-zinc-800 transition-all duration-150" href="#">
+<span class="material-symbols-outlined">code</span>
+                    Github
+                </a>
+</div>
+</aside>
+<!-- Main Content Area -->
+<main class="ml-64 flex-1 min-h-screen">
+<div class="px-10 py-12 max-w-6xl">
+<!-- Header Section -->
+<header class="mb-12">
+<div class="flex items-center gap-2 text-label-sm text-primary font-medium mb-2 uppercase tracking-widest">Foundations</div>
+<h1 class="text-display-md font-extrabold text-on-surface tracking-tight leading-none mb-4">Colors &amp; Tokens</h1>
+<p class="text-body-md text-on-surface-variant max-w-2xl leading-relaxed">
+                        The Precision Engine color system is calibrated for high-density professional interfaces. We prioritize tonal shifts over structural borders to maintain a clean, machined aesthetic.
+                    </p>
+</header>
+<!-- Color Tokens Grid -->
+<section class="mb-16">
+<h2 class="text-headline-sm font-bold text-on-surface mb-6">Primary Palette</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+<div class="group cursor-pointer">
+<div class="h-24 w-full bg-primary rounded-md mb-2 flex items-end p-3 transition-transform active:scale-95 shadow-sm" style="background: linear-gradient(180deg, #0061a5 0%, #005490 100%)">
+<span class="text-white text-label-sm font-medium">Primary Base</span>
+</div>
+<div class="flex justify-between items-center px-1">
+<span class="text-label-sm font-bold text-zinc-900 uppercase">#0061A5</span>
+<span class="text-[10px] text-zinc-400">Action, Hero elements</span>
+</div>
+</div>
+<div class="group cursor-pointer">
+<div class="h-24 w-full bg-primary-container rounded-md mb-2 flex items-end p-3 transition-transform active:scale-95 shadow-sm">
+<span class="text-on-primary-container text-label-sm font-medium">Container</span>
+</div>
+<div class="flex justify-between items-center px-1">
+<span class="text-label-sm font-bold text-zinc-900 uppercase">#D2E4FF</span>
+<span class="text-[10px] text-zinc-400">Surface highlights</span>
+</div>
+</div>
+<div class="group cursor-pointer">
+<div class="h-24 w-full bg-primary-fixed-dim rounded-md mb-2 flex items-end p-3 transition-transform active:scale-95 shadow-sm">
+<span class="text-on-primary-container text-label-sm font-medium">Fixed Dim</span>
+</div>
+<div class="flex justify-between items-center px-1">
+<span class="text-label-sm font-bold text-zinc-900 uppercase">#B9D7FF</span>
+<span class="text-[10px] text-zinc-400">Active states</span>
+</div>
+</div>
+<div class="group cursor-pointer">
+<div class="h-24 w-full bg-surface-container-highest rounded-md mb-2 flex items-end p-3 transition-transform active:scale-95 shadow-sm ring-1 ring-inset ring-black/5">
+<span class="text-on-surface text-label-sm font-medium">Subtle Variant</span>
+</div>
+<div class="flex justify-between items-center px-1">
+<span class="text-label-sm font-bold text-zinc-900 uppercase">#E3E2E2</span>
+<span class="text-[10px] text-zinc-400">Ghost button bg</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Technical Token Table -->
+<section class="mb-16">
+<h2 class="text-headline-sm font-bold text-on-surface mb-6">Semantic Surfaces</h2>
+<div class="bg-surface-container-low rounded-xl overflow-hidden ring-1 ring-outline-variant/10">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-container text-[10px] uppercase tracking-wider text-zinc-500 font-bold">
+<th class="px-6 py-3">Token Name</th>
+<th class="px-6 py-3">Hex Code</th>
+<th class="px-6 py-3">Contrast</th>
+<th class="px-6 py-3">Usage Description</th>
+</tr>
+</thead>
+<tbody class="text-body-md divide-y divide-outline-variant/10">
+<tr class="hover:bg-surface-container-lowest transition-colors">
+<td class="px-6 py-4 font-mono text-primary">surface</td>
+<td class="px-6 py-4">#FCF9F8</td>
+<td class="px-6 py-4">
+<span class="inline-flex items-center px-2 py-0.5 rounded text-[10px] font-bold bg-emerald-100 text-emerald-700">AAA</span>
+</td>
+<td class="px-6 py-4 text-on-surface-variant text-label-sm">The primary background canvas for all workspaces.</td>
+</tr>
+<tr class="bg-surface-container-low hover:bg-surface-container-lowest transition-colors">
+<td class="px-6 py-4 font-mono text-primary">surface_container_low</td>
+<td class="px-6 py-4">#F6F3F2</td>
+<td class="px-6 py-4">
+<span class="inline-flex items-center px-2 py-0.5 rounded text-[10px] font-bold bg-emerald-100 text-emerald-700">AAA</span>
+</td>
+<td class="px-6 py-4 text-on-surface-variant text-label-sm">Standard sidebar and secondary panel background.</td>
+</tr>
+<tr class="hover:bg-surface-container-lowest transition-colors">
+<td class="px-6 py-4 font-mono text-primary">surface_container_high</td>
+<td class="px-6 py-4">#E9E8E7</td>
+<td class="px-6 py-4">
+<span class="inline-flex items-center px-2 py-0.5 rounded text-[10px] font-bold bg-amber-100 text-amber-700">AA</span>
+</td>
+<td class="px-6 py-4 text-on-surface-variant text-label-sm">Used for active element highlights and nested panels.</td>
+</tr>
+<tr class="bg-surface-container-low hover:bg-surface-container-lowest transition-colors">
+<td class="px-6 py-4 font-mono text-primary">surface_dim</td>
+<td class="px-6 py-4">#DADADA</td>
+<td class="px-6 py-4">
+<span class="inline-flex items-center px-2 py-0.5 rounded text-[10px] font-bold bg-red-100 text-red-700">Fail</span>
+</td>
+<td class="px-6 py-4 text-on-surface-variant text-label-sm">Shadow substitute and decorative depth mapping.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<!-- Component Preview Section -->
+<section class="mb-16">
+<h2 class="text-headline-sm font-bold text-on-surface mb-6">Buttons: Component Preview</h2>
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+<div class="p-8 bg-surface-container-lowest rounded-xl ring-1 ring-outline-variant/15 flex flex-col gap-8">
+<div>
+<h3 class="text-label-sm font-bold text-zinc-400 uppercase mb-4 tracking-widest">Primary</h3>
+<div class="flex flex-wrap gap-4 items-center">
+<button class="px-6 py-2.5 bg-primary text-on-primary text-body-md font-semibold rounded-md shadow-sm active:scale-95 transition-all" style="background: linear-gradient(180deg, #0061a5 0%, #005490 100%)">Default State</button>
+<button class="px-6 py-2.5 bg-primary-fixed-dim text-on-primary-container text-body-md font-semibold rounded-md transition-all">Hover State</button>
+<button class="px-6 py-2.5 bg-primary/40 text-on-primary text-body-md font-semibold rounded-md cursor-not-allowed">Disabled</button>
+</div>
+</div>
+<div>
+<h3 class="text-label-sm font-bold text-zinc-400 uppercase mb-4 tracking-widest">Secondary</h3>
+<div class="flex flex-wrap gap-4 items-center">
+<button class="px-6 py-2.5 bg-surface-container-highest text-on-surface text-body-md font-semibold rounded-md active:scale-95 transition-all">Default State</button>
+<button class="px-6 py-2.5 bg-surface-dim text-on-surface text-body-md font-semibold rounded-md transition-all">Hover State</button>
+</div>
+</div>
+<div>
+<h3 class="text-label-sm font-bold text-zinc-400 uppercase mb-4 tracking-widest">Ghost &amp; Icon</h3>
+<div class="flex flex-wrap gap-4 items-center">
+<button class="px-4 py-2 text-primary text-body-md font-bold hover:bg-primary-container/30 rounded-md transition-all">Text Only</button>
+<button class="p-2.5 bg-surface-container text-primary rounded-md flex items-center justify-center active:scale-90 transition-all">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">smart_button</span>
+</button>
+<button class="px-4 py-2 flex items-center gap-2 bg-primary/10 text-primary text-body-md font-bold rounded-md">
+<span class="material-symbols-outlined">add</span>
+                                        Create New
+                                    </button>
+</div>
+</div>
+</div>
+<!-- Code Preview / Spec -->
+<div class="bg-inverse-surface rounded-xl overflow-hidden flex flex-col shadow-xl">
+<div class="flex items-center gap-2 px-4 py-3 bg-zinc-900 border-b border-zinc-800">
+<div class="w-3 h-3 rounded-full bg-red-500/20 border border-red-500/40"></div>
+<div class="w-3 h-3 rounded-full bg-amber-500/20 border border-amber-500/40"></div>
+<div class="w-3 h-3 rounded-full bg-emerald-500/20 border border-emerald-500/40"></div>
+<span class="text-[10px] text-zinc-500 ml-2 font-mono uppercase">Button.tsx — v1.0</span>
+</div>
+<div class="p-6 font-mono text-[13px] leading-relaxed text-zinc-400 overflow-x-auto">
+<pre><code><span class="text-blue-400">const</span> <span class="text-amber-300">Button</span> = ({ variant, children }) =&gt; {
+  <span class="text-blue-400">const</span> baseClasses = <span class="text-emerald-400">"px-6 py-2.5 rounded-md font-semibold"</span>;
+  <span class="text-blue-400">const</span> styles = {
+    primary: <span class="text-emerald-400">"bg-primary text-on-primary shadow-sm"</span>,
+    secondary: <span class="text-emerald-400">"bg-surface-container-highest text-on-surface"</span>,
+    ghost: <span class="text-emerald-400">"text-primary hover:bg-primary-container/20"</span>
+  };
+
+  <span class="text-blue-400">return</span> (
+    &lt;<span class="text-pink-400">button</span> className={`${baseClasses} ${styles[variant]}`}&gt;
+      {children}
+    &lt;/<span class="text-pink-400">button</span>&gt;
+  );
+};</code></pre>
+</div>
+</div>
+</div>
+</section>
+</div>
+<!-- Collaborative Annotation Element (Floating Sidebar) -->
+<div class="fixed right-6 top-24 w-72 glass-panel p-5 rounded-xl shadow-2xl ring-1 ring-black/5 flex flex-col gap-4 border border-white/40">
+<div class="flex items-center justify-between">
+<span class="text-label-sm font-bold uppercase tracking-widest text-zinc-400">Feedback (3)</span>
+<button class="material-symbols-outlined text-zinc-400 hover:text-primary transition-colors">add_comment</button>
+</div>
+<div class="space-y-4">
+<div class="bg-surface-container-lowest p-3 rounded-lg border-l-4 border-primary shadow-sm">
+<div class="flex items-center gap-2 mb-2">
+<img class="w-5 h-5 rounded-full" data-alt="professional portrait of a creative director with glasses smiling warmly in a bright studio environment" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAJ5qaHsk2Q2ipC6cEkrjy8Vm8dCHLjTwpeonIeMPyclI5t334OCWkwcCZJluKMSFYcufr6XwvwrqxBvmrqBXRRilUCaRZkrc9bGWeEFyqHGXGuvXz8llwEJb_RewVxRCabjQMOhntgfycIDFQO6wwvC8nQe180OHoz7Nkp0uHT57-gOiq0n-XcoiS2NpYbsXwWBXXrhLu32MCU2KTf2lcD8eF2na7Gw6xKV7d-DTtHiPR-oATw3h4jcz_n2ZWgY5YlADSztkp2vgc"/>
+<span class="text-[11px] font-bold">Alex Chen</span>
+<span class="text-[10px] text-zinc-400 ml-auto">2h ago</span>
+</div>
+<p class="text-label-sm leading-snug">The contrast ratio for Primary Container text is borderline. Should we use `on-surface` instead?</p>
+</div>
+<div class="bg-white/50 p-3 rounded-lg border-l-4 border-zinc-200">
+<div class="flex items-center gap-2 mb-2">
+<img class="w-5 h-5 rounded-full" data-alt="close-up of a female engineer with short hair focused on work with soft office lighting background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBRe2p7RUfGVBe8M5YaLD-MI7r2p5M-40MtNll_lmOv0_mUwrl7wOoqxpNSZ81xQnPvP_89qyj6PNoAlcubDfNhNFr3X071flNBYA9rnlweJQTeOBiPDxUAJbjIkBWEgy5LlTh01mqH75Yvx2z3IFB1RCG27roOzfzKwU-yFHGW_uxR2EkP1ehnDepL7Dernmk_NCl1D1jh_dB0LHiq7lWu9HpPmzU57lX2Ah182J3VNU_T77gaaj9uFBy3Lcwr4cyWlLk-0lNxTv8"/>
+<span class="text-[11px] font-bold">Sarah Miller</span>
+<span class="text-[10px] text-zinc-400 ml-auto">5h ago</span>
+</div>
+<p class="text-label-sm leading-snug">Updated the gradient spec to 180deg per the Machined Interface directive.</p>
+</div>
+<div class="relative">
+<textarea class="w-full bg-surface-container-low text-label-sm border-none ring-1 ring-outline-variant/15 rounded-md p-2 h-16 focus:ring-primary focus:ring-1 transition-all resize-none" placeholder="Reply to thread..."></textarea>
+</div>
+</div>
+</div>
+<!-- Footer -->
+<footer class="flex justify-between items-center px-10 ml-0 w-full py-4 mt-auto border-t border-zinc-100 dark:border-zinc-900 bg-[#fcf9f8] dark:bg-zinc-950 font-inter text-[11px] text-zinc-400 shadow-none">
+<div>© 2024 Precision Engine Design System</div>
+<div class="flex gap-6">
+<a class="text-zinc-400 hover:text-zinc-600 hover:underline transition-all" href="#">Privacy</a>
+<a class="text-zinc-400 hover:text-zinc-600 hover:underline transition-all" href="#">Terms</a>
+<a class="text-zinc-400 hover:text-zinc-600 hover:underline transition-all" href="#">Feedback</a>
+</div>
+</footer>
+</main>
+</div>
+</body></html>

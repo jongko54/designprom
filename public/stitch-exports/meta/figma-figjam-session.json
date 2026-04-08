@@ -1,0 +1,21 @@
+{
+  "brand": "Figma",
+  "contentType": "image/png",
+  "fileName": "figma-figjam-session.png",
+  "generatedAt": "2026-04-02T11:02:01.678Z",
+  "htmlUrl": "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ7Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpaCiVodG1sXzFlOTk4NmJlY2Y4YTQ2NjU5NzJmYTRlMTAwNWRhNjgyEgsSBxCCisPc0AkYAZIBIwoKcHJvamVjdF9pZBIVQhM3MTQzMjg5MDExNTU3MTA0ODY0&filename=&opi=96797242",
+  "imageUrl": "https://lh3.googleusercontent.com/aida/ADBb0ug3uErVaQbq7q-PQdlasWaBnBebrTyShY-ykajxMQsqHhuc3lAfJjc19dBlCqtUG3sBg94Y-DirtdpBpp2ABlaMPetC2px7kcGju6sDQV-H6l921921P6W30xut9qOlzVykyElAxfWNgaQCPgiB8u25gmoblySenHD756yCaebS9bxxJ2qhZcNyB8Hr0Ac02FIeQFcsqrqSuXM9iaIRmlgTgzemDKGIJLHAX83sFMpcpyXrgBzDP0hG3gc",
+  "notes": [
+    "I've designed a lively, FigJam-inspired workshop page for you. The layout features an open, collaborative canvas with floating toolbars, sticky-note clusters, and active presence cursors to give it that tool-native, collaborative feel. I also included facilitation controls like a timer and voting to round out the workshop experience."
+  ],
+  "prompt": "Design a Figma-inspired FigJam workshop page with sticky-note clusters, cursor presence, breakout templates, and facilitation controls around a large canvas. The page should feel lively, collaborative, and tool-native.",
+  "projectId": "7143289011557104864",
+  "screenId": "b7323d62e0f34aeda9b005a34c8a3c38",
+  "slug": "figma-figjam-session",
+  "suggestions": [
+    "Add more sticky-note clusters",
+    "Design a dark mode version of the canvas",
+    "Change the color of the cursors"
+  ],
+  "title": "FigJam Workshop Canvas"
+}

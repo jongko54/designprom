@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&amp;family=Newsreader:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "error-container": "#fe8983",
+              "inverse-primary": "#ffffff",
+              "on-surface-variant": "#5a6061",
+              "surface-container": "#ebeeef",
+              "surface-container-high": "#e4e9ea",
+              "on-error": "#fff7f6",
+              "primary": "#5e5e5e",
+              "on-secondary": "#fbf8f8",
+              "on-primary-fixed": "#3f3f3f",
+              "on-tertiary-fixed-variant": "#1f0200",
+              "surface-container-lowest": "#ffffff",
+              "tertiary-dim": "#9f2300",
+              "surface-variant": "#dde4e5",
+              "surface-container-highest": "#dde4e5",
+              "tertiary-fixed": "#fb3d00",
+              "surface-container-low": "#f2f4f4",
+              "primary-container": "#e2e2e2",
+              "on-error-container": "#752121",
+              "inverse-surface": "#0c0f0f",
+              "surface": "#f9f9f9",
+              "primary-fixed": "#e2e2e2",
+              "outline-variant": "#adb3b4",
+              "secondary-dim": "#535353",
+              "on-secondary-container": "#525252",
+              "surface-bright": "#f9f9f9",
+              "on-tertiary": "#fff7f6",
+              "on-tertiary-fixed": "#000000",
+              "surface-dim": "#d4dbdd",
+              "on-primary-container": "#525252",
+              "on-primary": "#f8f8f8",
+              "secondary-fixed": "#e4e2e1",
+              "tertiary-container": "#fb3d00",
+              "outline": "#757c7d",
+              "inverse-on-surface": "#9c9d9d",
+              "on-tertiary-container": "#000000",
+              "tertiary": "#b52900",
+              "secondary": "#5f5f5f",
+              "primary-fixed-dim": "#d4d4d4",
+              "on-background": "#2d3435",
+              "background": "#f9f9f9",
+              "secondary-container": "#e4e2e1",
+              "on-primary-fixed-variant": "#5b5b5b",
+              "on-secondary-fixed": "#3f3f3f",
+              "error": "#9f403d",
+              "error-dim": "#4e0309",
+              "secondary-fixed-dim": "#d6d4d3",
+              "tertiary-fixed-dim": "#e43700",
+              "on-surface": "#2d3435",
+              "surface-tint": "#5e5e5e",
+              "primary-dim": "#525252",
+              "on-secondary-fixed-variant": "#5c5b5b"
+            },
+            fontFamily: {
+              "headline": ["Newsreader", "serif"],
+              "body": ["Inter", "sans-serif"],
+              "label": ["Inter", "sans-serif"]
+            },
+            borderRadius: {"DEFAULT": "0px", "lg": "0px", "xl": "0px", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            display: inline-block;
+            vertical-align: middle;
+        }
+        .tonal-shift-on-scroll {
+            transition: background-color 0.3s ease;
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-background font-body antialiased">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-[#f9f9f9]/80 backdrop-blur-xl">
+<div class="flex justify-between items-center w-full px-8 py-6 max-w-[1920px] mx-auto">
+<div class="text-2xl font-['Newsreader'] font-bold tracking-tighter text-[#1A1A1A]">
+                STUDIO
+            </div>
+<div class="flex gap-12">
+<a class="text-[#1A1A1A] border-b border-[#1A1A1A] pb-0.5 font-['Inter'] text-xs uppercase tracking-widest hover:text-[#1A1A1A] transition-colors duration-300" href="#">Work</a>
+<a class="text-[#5e5e5e] font-['Inter'] text-xs uppercase tracking-widest hover:text-[#1A1A1A] transition-colors duration-300" href="#">Info</a>
+<a class="text-[#5e5e5e] font-['Inter'] text-xs uppercase tracking-widest hover:text-[#1A1A1A] transition-colors duration-300" href="#">Contact</a>
+</div>
+</div>
+</nav>
+<main class="pt-32 px-8 max-w-[1920px] mx-auto">
+<!-- Hero Statement -->
+<header class="mb-24 md:mb-40 max-w-4xl">
+<h1 class="font-headline text-5xl md:text-7xl italic leading-[1.1] tracking-tighter text-on-surface">
+                A creative practice focused on visual identity, spatial design, and the intersection of digital &amp; physical realms.
+            </h1>
+</header>
+<!-- Project Grid -->
+<section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-y-20 gap-x-12 mb-40">
+<!-- Project 1 (Large - 8 cols) -->
+<div class="lg:col-span-8 flex flex-col group cursor-pointer">
+<div class="aspect-[4/5] bg-surface-container-low overflow-hidden">
+<img alt="Minimalist architectural monograph" class="w-full h-full object-cover filter grayscale hover:grayscale-0 transition-all duration-700" data-alt="high-contrast monochromatic photography of a brutalist concrete building with sharp shadows and architectural precision" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB2Iz6QS0ohj8IYPrrDDAFfon0iKS51X81HB66toeDV4Fy-WgjGj7WWlQ4NaZzsOBFKuO39IHxsjb8iva71Fpi5DW3BCV4YVoWfC_nfLYyh6k-E1v3SVaOUpnHbhZGhgMiFDWe1sp09LpGVgAmqObbSrPkZNBMzurtuQJlIpR6TySGefF5elRbleWk2nkGGuWUdPRvAKQTNZHtToaY6nKJ8Vy3A0QyAIsV2RdMItNdmSz5n3NYDBjTF4a7k-K-g4Y2E1_tqQgqbd-Ke"/>
+</div>
+<div class="mt-6 flex flex-col md:flex-row md:justify-between items-baseline gap-2">
+<h3 class="font-headline text-2xl italic tracking-tight">Concrete Vernacular</h3>
+<div class="flex gap-4 text-[10px] font-label uppercase tracking-[0.2em] text-secondary">
+<span>Exhibition Identity</span>
+<span>/</span>
+<span>2024</span>
+<span>/</span>
+<span>The Met</span>
+</div>
+</div>
+</div>
+<!-- Project 2 (Small - 4 cols, Offset Top) -->
+<div class="lg:col-span-4 lg:mt-24 flex flex-col group cursor-pointer">
+<div class="aspect-[3/4] bg-surface-container-low overflow-hidden">
+<img alt="Abstract digital render" class="w-full h-full object-cover filter grayscale hover:grayscale-0 transition-all duration-700" data-alt="abstract flowing 3D forms in muted beige and charcoal grey with soft studio lighting and grainy texture" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBobFa5dibVwaiDddf_iojQ59SawM5l64K2hnCxgK87xmkcplTVpRnq9oQ99xQGAjnPsf-N7j2x394_vicJ_QIXb1rPilnKtZ2LyLtBnGZnq2JhMGka520Klxc-8U6ponCWnBnWrkNzQYLd3AjCoTy3KapDfsqN81dKyj97OX4BnWzExPqRCuLozuL8qai0YUE3NkVfHqioZBGTRhtukSsF7cT8TfwkIMM_dFP9eBaW2Mtp2_4Nt0z4NP4z0-KD7GCrZ10E89P54Hd5"/>
+</div>
+<div class="mt-6">
+<h3 class="font-headline text-2xl italic tracking-tight">Aural Systems</h3>
+<p class="text-[10px] font-label uppercase tracking-[0.2em] text-secondary mt-1">Creative Direction / 2023 / Sony Music</p>
+</div>
+</div>
+<!-- Project 3 (Small - 4 cols) -->
+<div class="lg:col-span-4 flex flex-col group cursor-pointer">
+<div class="aspect-[1/1] bg-surface-container-low overflow-hidden">
+<img alt="Typography detail" class="w-full h-full object-cover filter grayscale hover:grayscale-0 transition-all duration-700" data-alt="extreme close-up of high-quality serif typography printed on heavy textured cream paper with visible ink grain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAPJxeP9IprBhskNjGo_FWw4lDQJMNKxJMI2ELhbX8jUjMaiEDRHkXS2VBRkOp87h9tBYahkj7Xf67Q2jdlgFirPAcv0aDQawPPICRwpgv0PHI8V1LlOVEqZ2Ouo2QCmzKb02V14Vf71mS2x_B9h286XYwYRw-irYNaGSwNV_f9GaIEEom9PC8pc9xz6BVhJXOvKgquSTN48XFcWOiThoUU0C2Zyz5rdM3WcX5xPyec1pq2yNfjc0kpU2rhxnCS7oBZW9RS-n7b17LN"/>
+</div>
+<div class="mt-6">
+<h3 class="font-headline text-2xl italic tracking-tight">Type as Object</h3>
+<p class="text-[10px] font-label uppercase tracking-[0.2em] text-secondary mt-1">Experimental / 2024 / Self-Initiated</p>
+</div>
+</div>
+<!-- Project 4 (Large - 8 cols) -->
+<div class="lg:col-span-8 flex flex-col group cursor-pointer">
+<div class="aspect-[16/9] bg-surface-container-low overflow-hidden">
+<img alt="Clean modern interior" class="w-full h-full object-cover filter grayscale hover:grayscale-0 transition-all duration-700" data-alt="wide shot of a minimal art gallery interior with white walls, blonde wood floors, and soft diffused ceiling light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA0jAgBy1JNZ9JhkwtJHFreI91YOUyPaQxMrw8fAjdKBL2g7Qmhvjj8cyldt-kG8PgSMTa7qMhuITGdD4qNJ5cuMKNrLyU5qsMGaztq2105OrHRrXSPeSzZ7H-wrU4XAaGBEYTbXHIUpknSlbZRy5UEON_aVQgnMcLiy5gmZoK0KPnEcqdhAoCbl3IkmG2DUjKFbarsaE0UfNnxozNDEC0pG4w0z4kPui177e5WeTq9TUI0lFmF3aBT6MYqbAXKPU_NWlPQcfbFuhSl"/>
+</div>
+<div class="mt-6 flex flex-col md:flex-row md:justify-between items-baseline gap-2">
+<h3 class="font-headline text-2xl italic tracking-tight">Kinship Gallery</h3>
+<div class="flex gap-4 text-[10px] font-label uppercase tracking-[0.2em] text-secondary">
+<span>Spatial Design</span>
+<span>/</span>
+<span>2023</span>
+<span>/</span>
+<span>Kinship Ltd.</span>
+</div>
+</div>
+</div>
+</section>
+<!-- The "Quiet" List View -->
+<section class="mt-32 pt-24 border-t border-outline-variant/10">
+<div class="mb-12">
+<span class="font-label text-[10px] uppercase tracking-[0.3em] text-secondary">Archive Selection</span>
+</div>
+<div class="flex flex-col">
+<!-- List Item -->
+<div class="group py-6 flex flex-col md:flex-row justify-between items-start md:items-center border-b border-outline-variant/10 hover:bg-surface-container-low transition-colors duration-200 cursor-pointer px-2">
+<span class="font-headline text-3xl italic group-hover:pl-4 transition-all duration-300">Nebula Identity</span>
+<div class="grid grid-cols-3 gap-12 mt-4 md:mt-0 text-[10px] font-label uppercase tracking-[0.2em] text-secondary">
+<div class="w-24">Branding</div>
+<div class="w-32">Nebula Labs</div>
+<div class="w-12 text-right">2022</div>
+</div>
+</div>
+<!-- List Item -->
+<div class="group py-6 flex flex-col md:flex-row justify-between items-start md:items-center border-b border-outline-variant/10 hover:bg-surface-container-low transition-colors duration-200 cursor-pointer px-2">
+<span class="font-headline text-3xl italic group-hover:pl-4 transition-all duration-300">Post-Digital Print</span>
+<div class="grid grid-cols-3 gap-12 mt-4 md:mt-0 text-[10px] font-label uppercase tracking-[0.2em] text-secondary">
+<div class="w-24">Editorial</div>
+<div class="w-32">Frame Mag</div>
+<div class="w-12 text-right">2022</div>
+</div>
+</div>
+<!-- List Item -->
+<div class="group py-6 flex flex-col md:flex-row justify-between items-start md:items-center border-b border-outline-variant/10 hover:bg-surface-container-low transition-colors duration-200 cursor-pointer px-2">
+<span class="font-headline text-3xl italic group-hover:pl-4 transition-all duration-300">Ocular Optics</span>
+<div class="grid grid-cols-3 gap-12 mt-4 md:mt-0 text-[10px] font-label uppercase tracking-[0.2em] text-secondary">
+<div class="w-24">Web Design</div>
+<div class="w-32">Ocular</div>
+<div class="w-12 text-right">2021</div>
+</div>
+</div>
+<!-- List Item -->
+<div class="group py-6 flex flex-col md:flex-row justify-between items-start md:items-center border-b border-outline-variant/10 hover:bg-surface-container-low transition-colors duration-200 cursor-pointer px-2">
+<span class="font-headline text-3xl italic group-hover:pl-4 transition-all duration-300">The Grid Monograph</span>
+<div class="grid grid-cols-3 gap-12 mt-4 md:mt-0 text-[10px] font-label uppercase tracking-[0.2em] text-secondary">
+<div class="w-24">Publication</div>
+<div class="w-32">Self-Published</div>
+<div class="w-12 text-right">2021</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Utility Metadata Component (Custom) -->
+<section class="mt-40 mb-20 grid grid-cols-1 md:grid-cols-4 gap-12">
+<div>
+<p class="font-label text-[10px] uppercase tracking-[0.2em] text-on-surface-variant mb-2">Location</p>
+<p class="font-body text-sm text-on-surface">Berlin / London / Remote</p>
+</div>
+<div>
+<p class="font-label text-[10px] uppercase tracking-[0.2em] text-on-surface-variant mb-2">Contact</p>
+<p class="font-body text-sm text-on-surface underline underline-offset-4 decoration-outline-variant hover:text-tertiary transition-colors">hello@studio.design</p>
+</div>
+<div>
+<p class="font-label text-[10px] uppercase tracking-[0.2em] text-on-surface-variant mb-2">Availability</p>
+<p class="font-body text-sm text-on-surface">Q3 — 2024</p>
+</div>
+<div class="flex items-end md:justify-end">
+<button class="bg-primary text-on-primary px-8 py-3 text-[10px] font-label uppercase tracking-[0.2em] hover:bg-on-background transition-colors duration-300">
+                    Inquire
+                </button>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full py-12 px-8 mt-24 bg-[#f2f4f4]">
+<div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-8 w-full max-w-[1920px] mx-auto">
+<div class="text-sm font-bold text-[#1A1A1A]">STUDIO</div>
+<div class="flex gap-8">
+<a class="text-[#5e5e5e] font-['Inter'] text-[10px] uppercase tracking-[0.2em] hover:text-[#b52900] transition-colors duration-200" href="#">Archive</a>
+<a class="text-[#5e5e5e] font-['Inter'] text-[10px] uppercase tracking-[0.2em] hover:text-[#b52900] transition-colors duration-200" href="#">Process</a>
+<a class="text-[#5e5e5e] font-['Inter'] text-[10px] uppercase tracking-[0.2em] hover:text-[#b52900] transition-colors duration-200" href="#">Instagram</a>
+<a class="text-[#5e5e5e] font-['Inter'] text-[10px] uppercase tracking-[0.2em] hover:text-[#b52900] transition-colors duration-200" href="#">Are.na</a>
+</div>
+<div class="text-[#5e5e5e] font-['Inter'] text-[10px] uppercase tracking-[0.2em]">
+                © 2024 Studio. All Rights Reserved. Built with Architectural Utilitarianism.
+            </div>
+</div>
+</footer>
+</body></html>

@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>The Experimental Lab - Tools Directory</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "tertiary-container": "#fbbc05",
+                      "surface-tint": "#0058bc",
+                      "error": "#b31b25",
+                      "secondary-container": "#ffc3bb",
+                      "inverse-on-surface": "#999da3",
+                      "surface-container": "#e4e8ef",
+                      "on-error-container": "#570008",
+                      "surface-container-highest": "#d8dde5",
+                      "on-surface-variant": "#585c61",
+                      "tertiary-fixed-dim": "#eaaf00",
+                      "secondary": "#b41a14",
+                      "background": "#f4f7fc",
+                      "primary-fixed": "#6d9fff",
+                      "on-tertiary-fixed": "#3a2900",
+                      "on-primary-container": "#00214f",
+                      "on-tertiary": "#fff1db",
+                      "outline": "#73777c",
+                      "primary-fixed-dim": "#5291ff",
+                      "tertiary-fixed": "#fbbc05",
+                      "inverse-primary": "#4d8efe",
+                      "on-surface": "#2b2f34",
+                      "on-secondary-container": "#940004",
+                      "secondary-fixed-dim": "#ffb0a5",
+                      "surface-container-low": "#edf1f7",
+                      "on-tertiary-fixed-variant": "#5f4500",
+                      "primary-container": "#6d9fff",
+                      "surface-bright": "#f4f7fc",
+                      "on-secondary-fixed": "#700002",
+                      "on-secondary": "#ffefed",
+                      "secondary-fixed": "#ffc3bb",
+                      "on-primary-fixed-variant": "#002a61",
+                      "on-error": "#ffefee",
+                      "surface-container-high": "#dee3ea",
+                      "surface": "#f4f7fc",
+                      "primary": "#0058bc",
+                      "primary-dim": "#004ca5",
+                      "error-dim": "#9f0519",
+                      "on-tertiary-container": "#543c00",
+                      "secondary-dim": "#a30709",
+                      "on-primary": "#f0f2ff",
+                      "tertiary": "#765600",
+                      "on-secondary-fixed-variant": "#a4090a",
+                      "surface-container-lowest": "#ffffff",
+                      "surface-dim": "#cfd5dd",
+                      "error-container": "#fb5151",
+                      "on-primary-fixed": "#000000",
+                      "on-background": "#2b2f34",
+                      "surface-variant": "#d8dde5",
+                      "inverse-surface": "#0a0f13",
+                      "tertiary-dim": "#674b00",
+                      "outline-variant": "#aaadb3"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "fontFamily": {
+                      "headline": ["Plus Jakarta Sans"],
+                      "body": ["Inter"],
+                      "label": ["Inter"]
+              }
+            },
+          },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body { font-family: 'Inter', sans-serif; }
+        h1, h2, h3, .brand-logo { font-family: 'Plus Jakarta Sans', sans-serif; }
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(20px);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface flex flex-col min-h-screen">
+<!-- Top Navigation Shell -->
+<header class="w-full top-0 sticky z-50 bg-[#edf1f7] dark:bg-slate-800">
+<nav class="flex justify-between items-center px-8 h-16 w-full max-w-screen-2xl mx-auto">
+<div class="flex items-center gap-8">
+<span class="text-xl font-bold tracking-tighter text-[#2b2f34] dark:text-white">The Experimental Lab</span>
+<div class="hidden md:flex gap-6 items-center">
+<a class="font-['Plus_Jakarta_Sans'] font-semibold tracking-tight text-[#0058bc] dark:text-[#6d9fff] border-b-2 border-[#0058bc] pb-1" href="#">Models</a>
+<a class="font-['Plus_Jakarta_Sans'] font-semibold tracking-tight text-[#2b2f34] dark:text-slate-400 hover:text-[#0058bc] hover:bg-[#e4e8ef] dark:hover:bg-slate-700 transition-colors duration-200" href="#">Datasets</a>
+<a class="font-['Plus_Jakarta_Sans'] font-semibold tracking-tight text-[#2b2f34] dark:text-slate-400 hover:text-[#0058bc] hover:bg-[#e4e8ef] dark:hover:bg-slate-700 transition-colors duration-200" href="#">Benchmarks</a>
+<a class="font-['Plus_Jakarta_Sans'] font-semibold tracking-tight text-[#2b2f34] dark:text-slate-400 hover:text-[#0058bc] hover:bg-[#e4e8ef] dark:hover:bg-slate-700 transition-colors duration-200" href="#">Papers</a>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-[#0058bc] dark:text-[#6d9fff] p-2 rounded-full hover:bg-[#e4e8ef] transition-colors cursor-pointer" data-icon="science">science</span>
+<span class="material-symbols-outlined text-[#0058bc] dark:text-[#6d9fff] p-2 rounded-full hover:bg-[#e4e8ef] transition-colors cursor-pointer" data-icon="account_circle">account_circle</span>
+</div>
+</nav>
+</header>
+<main class="flex-grow">
+<!-- Hero Section -->
+<section class="relative overflow-hidden pt-20 pb-24 px-8 max-w-screen-2xl mx-auto">
+<!-- Decorative 3D Geometries -->
+<div class="absolute top-10 -right-20 w-64 h-64 bg-tertiary-container opacity-20 rounded-full blur-3xl"></div>
+<div class="absolute bottom-0 -left-10 w-80 h-80 bg-primary opacity-10 rounded-full blur-3xl"></div>
+<div class="relative z-10 max-w-3xl">
+<h1 class="text-5xl md:text-7xl font-extrabold tracking-tight text-on-surface mb-6">
+                    Explore the <span class="text-primary">Intelligent</span> Playground
+                </h1>
+<p class="text-xl text-on-surface-variant font-medium leading-relaxed">
+                    A curated laboratory of next-generation AI tools. Discover, test, and integrate cutting-edge research artifacts built for developers and researchers.
+                </p>
+</div>
+</section>
+<!-- Search & Filter Controls -->
+<section class="px-8 max-w-screen-2xl mx-auto mb-12">
+<div class="flex flex-col md:flex-row gap-6 items-center">
+<!-- Search -->
+<div class="relative w-full md:w-96">
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-outline" data-icon="search">search</span>
+<input class="w-full pl-12 pr-4 py-4 bg-surface-container-highest border-none rounded-xl focus:ring-2 focus:ring-primary text-on-surface placeholder-on-surface-variant/60" placeholder="Search directory..." type="text"/>
+</div>
+<!-- Filter Tabs -->
+<div class="flex flex-wrap gap-2 items-center">
+<button class="px-6 py-3 rounded-full bg-primary text-on-primary font-semibold text-sm transition-transform active:scale-95 shadow-sm">All Tools</button>
+<button class="px-6 py-3 rounded-full bg-surface-container-low text-on-surface-variant font-semibold text-sm hover:bg-surface-container transition-colors">Vision</button>
+<button class="px-6 py-3 rounded-full bg-surface-container-low text-on-surface-variant font-semibold text-sm hover:bg-surface-container transition-colors">Language</button>
+<button class="px-6 py-3 rounded-full bg-surface-container-low text-on-surface-variant font-semibold text-sm hover:bg-surface-container transition-colors">Audio</button>
+<button class="px-6 py-3 rounded-full bg-surface-container-low text-on-surface-variant font-semibold text-sm hover:bg-surface-container transition-colors">Robotics</button>
+<button class="px-6 py-3 rounded-full bg-surface-container-low text-on-surface-variant font-semibold text-sm hover:bg-surface-container transition-colors">Infrastructure</button>
+</div>
+</div>
+</section>
+<!-- Tool Directory Grid -->
+<section class="px-8 max-w-screen-2xl mx-auto pb-24">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<!-- Card 1: Iris Debugger -->
+<div class="group bg-surface-container-lowest rounded-xl p-8 flex flex-col h-full hover:translate-y-[-4px] transition-all duration-300 shadow-[0px_20px_40px_rgba(43,47,52,0.06)]">
+<div class="flex justify-between items-start mb-6">
+<div class="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center text-primary group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-3xl" data-icon="visibility">visibility</span>
+</div>
+<span class="px-3 py-1 rounded-full bg-surface-container-high text-xs font-bold text-on-surface-variant tracking-wider uppercase">Beta</span>
+</div>
+<h3 class="text-2xl font-bold mb-3 text-on-surface">Iris Debugger</h3>
+<p class="text-on-surface-variant mb-8 flex-grow leading-relaxed">
+                        Visualize neural network decision layers in real-time. Understand exactly which features triggered a classification.
+                    </p>
+<div class="flex items-center gap-4 pt-6 mt-auto">
+<button class="flex-grow bg-primary text-on-primary py-3 px-6 rounded-full font-bold text-sm hover:bg-primary-dim transition-colors shadow-sm">Launch Tool</button>
+<a class="text-primary font-bold text-sm hover:underline" href="#">Docs</a>
+</div>
+</div>
+<!-- Card 2: Prompt Synthesizer -->
+<div class="group bg-surface-container-lowest rounded-xl p-8 flex flex-col h-full hover:translate-y-[-4px] transition-all duration-300 shadow-[0px_20px_40px_rgba(43,47,52,0.06)]">
+<div class="flex justify-between items-start mb-6">
+<div class="w-14 h-14 rounded-xl bg-tertiary-container/20 flex items-center justify-center text-tertiary group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-3xl" data-icon="auto_awesome">auto_awesome</span>
+</div>
+<span class="px-3 py-1 rounded-full bg-secondary-container text-xs font-bold text-on-secondary-container tracking-wider uppercase">Experimental</span>
+</div>
+<h3 class="text-2xl font-bold mb-3 text-on-surface">Prompt Synthesizer</h3>
+<p class="text-on-surface-variant mb-8 flex-grow leading-relaxed">
+                        Automated prompt engineering using evolutionary algorithms. Optimize LLM responses for complex logic tasks.
+                    </p>
+<div class="flex items-center gap-4 pt-6 mt-auto">
+<button class="flex-grow bg-primary text-on-primary py-3 px-6 rounded-full font-bold text-sm hover:bg-primary-dim transition-colors shadow-sm">Launch Tool</button>
+<a class="text-primary font-bold text-sm hover:underline" href="#">Docs</a>
+</div>
+</div>
+<!-- Card 3: Sonic Map -->
+<div class="group bg-surface-container-lowest rounded-xl p-8 flex flex-col h-full hover:translate-y-[-4px] transition-all duration-300 shadow-[0px_20px_40px_rgba(43,47,52,0.06)]">
+<div class="flex justify-between items-start mb-6">
+<div class="w-14 h-14 rounded-xl bg-secondary/10 flex items-center justify-center text-secondary group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-3xl" data-icon="graphic_eq">graphic_eq</span>
+</div>
+<span class="px-3 py-1 rounded-full bg-surface-container-high text-xs font-bold text-on-surface-variant tracking-wider uppercase">Stable</span>
+</div>
+<h3 class="text-2xl font-bold mb-3 text-on-surface">Sonic Map</h3>
+<p class="text-on-surface-variant mb-8 flex-grow leading-relaxed">
+                        Spatial audio reconstruction for robotics. Transform mono recordings into 3D environmental soundscapes.
+                    </p>
+<div class="flex items-center gap-4 pt-6 mt-auto">
+<button class="flex-grow bg-primary text-on-primary py-3 px-6 rounded-full font-bold text-sm hover:bg-primary-dim transition-colors shadow-sm">Launch Tool</button>
+<a class="text-primary font-bold text-sm hover:underline" href="#">Docs</a>
+</div>
+</div>
+<!-- Card 4: Ghost Link -->
+<div class="group bg-surface-container-lowest rounded-xl p-8 flex flex-col h-full hover:translate-y-[-4px] transition-all duration-300 shadow-[0px_20px_40px_rgba(43,47,52,0.06)]">
+<div class="flex justify-between items-start mb-6">
+<div class="w-14 h-14 rounded-xl bg-green-500/10 flex items-center justify-center text-[#34a853] group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-3xl" data-icon="lan">lan</span>
+</div>
+<span class="px-3 py-1 rounded-full bg-secondary-container text-xs font-bold text-on-secondary-container tracking-wider uppercase">Experimental</span>
+</div>
+<h3 class="text-2xl font-bold mb-3 text-on-surface">Ghost Link</h3>
+<p class="text-on-surface-variant mb-8 flex-grow leading-relaxed">
+                        Low-latency edge infrastructure for real-time inference on distributed IOT devices across global regions.
+                    </p>
+<div class="flex items-center gap-4 pt-6 mt-auto">
+<button class="flex-grow bg-primary text-on-primary py-3 px-6 rounded-full font-bold text-sm hover:bg-primary-dim transition-colors shadow-sm">Launch Tool</button>
+<a class="text-primary font-bold text-sm hover:underline" href="#">Docs</a>
+</div>
+</div>
+<!-- Card 5: Morph Engine -->
+<div class="group bg-surface-container-lowest rounded-xl p-8 flex flex-col h-full hover:translate-y-[-4px] transition-all duration-300 shadow-[0px_20px_40px_rgba(43,47,52,0.06)]">
+<div class="flex justify-between items-start mb-6">
+<div class="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center text-primary group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-3xl" data-icon="shape_line">shape_line</span>
+</div>
+<span class="px-3 py-1 rounded-full bg-surface-container-high text-xs font-bold text-on-surface-variant tracking-wider uppercase">Beta</span>
+</div>
+<h3 class="text-2xl font-bold mb-3 text-on-surface">Morph Engine</h3>
+<p class="text-on-surface-variant mb-8 flex-grow leading-relaxed">
+                        Generative 3D modeling from text descriptions. Create optimized meshes ready for game engine integration.
+                    </p>
+<div class="flex items-center gap-4 pt-6 mt-auto">
+<button class="flex-grow bg-primary text-on-primary py-3 px-6 rounded-full font-bold text-sm hover:bg-primary-dim transition-colors shadow-sm">Launch Tool</button>
+<a class="text-primary font-bold text-sm hover:underline" href="#">Docs</a>
+</div>
+</div>
+<!-- Featured Highlight Card (Wide) -->
+<div class="group relative overflow-hidden bg-primary rounded-xl p-8 lg:col-span-1 flex flex-col justify-between shadow-[0px_20px_40px_rgba(0,88,188,0.2)]">
+<div class="absolute -bottom-10 -right-10 w-48 h-48 bg-primary-container/20 rounded-full blur-2xl"></div>
+<div>
+<div class="w-14 h-14 rounded-xl bg-on-primary/20 flex items-center justify-center text-on-primary mb-6">
+<span class="material-symbols-outlined text-3xl" data-icon="rocket_launch">rocket_launch</span>
+</div>
+<h3 class="text-2xl font-bold mb-3 text-on-primary">Lab-1 Initiative</h3>
+<p class="text-on-primary/80 mb-8 leading-relaxed">
+                            Apply for early access to our private sovereign-grade clusters for massive model training.
+                        </p>
+</div>
+<button class="w-full bg-on-primary text-primary py-3 rounded-full font-bold text-sm transition-transform active:scale-95">Apply Now</button>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer Shell -->
+<footer class="w-full mt-auto py-12 bg-[#f4f7fc] dark:bg-slate-950 border-t border-[#aaadb3]/15">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8 px-8 max-w-screen-2xl mx-auto">
+<div class="flex flex-col gap-4">
+<span class="font-['Plus_Jakarta_Sans'] font-bold text-[#0058bc] text-lg">The Experimental Lab</span>
+<p class="font-['Inter'] text-sm text-[#2b2f34] dark:text-slate-400">© 2024 The Intelligent Playground. All rights reserved.</p>
+</div>
+<div class="flex flex-wrap md:justify-end gap-x-8 gap-y-4">
+<a class="font-['Inter'] text-sm text-[#2b2f34] dark:text-slate-400 opacity-80 hover:opacity-100 hover:text-[#0058bc] transition-opacity duration-300" href="#">Research Ethics</a>
+<a class="font-['Inter'] text-sm text-[#2b2f34] dark:text-slate-400 opacity-80 hover:opacity-100 hover:text-[#0058bc] transition-opacity duration-300" href="#">API Documentation</a>
+<a class="font-['Inter'] text-sm text-[#2b2f34] dark:text-slate-400 opacity-80 hover:opacity-100 hover:text-[#0058bc] transition-opacity duration-300" href="#">Open Source</a>
+<a class="font-['Inter'] text-sm text-[#2b2f34] dark:text-slate-400 opacity-80 hover:opacity-100 hover:text-[#0058bc] transition-opacity duration-300" href="#">Privacy Policy</a>
+</div>
+</div>
+</footer>
+</body></html>

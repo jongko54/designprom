@@ -1,0 +1,21 @@
+{
+  "brand": "IBM",
+  "contentType": "image/png",
+  "fileName": "ibm-automation-briefing.png",
+  "generatedAt": "2026-04-02T11:13:40.778Z",
+  "htmlUrl": "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ7Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpaCiVodG1sX2NhNTg1MGRkMmE0MzRiN2RhZDFiMDBkYTljNGMxNDY3EgsSBxCCisPc0AkYAZIBIwoKcHJvamVjdF9pZBIVQhM3MTQzMjg5MDExNTU3MTA0ODY0&filename=&opi=96797242",
+  "imageUrl": "https://lh3.googleusercontent.com/aida/ADBb0ugPW5XNqpYQ-WThtDoAes96TEPhPahP-olgvsuMToJYFxwF5snwIpwnkVHgyKn3YSzHHp9KY7O2cZsxmedywkQOgYi1gd9hN6tNkRR3sfj9lwYL6BAIR8jKHZvSgyNJGPyiNWjJwWLZ7QK5OWI1TzwQFGP6PA3opUdHfMZCsGpWS05yGSFhLN-U-gYAl9nUGSfB4tPJWy1OeAN_SpyL9gg8QnvwckzDbDtyejBmSncjVf5A1Oi9uZU61w",
+  "notes": [
+    "I've designed an IBM-inspired executive briefing page for enterprise automation. It features modular evidence cards for KPIs, an architecture summary diagram, and a clear workflow lifecycle. The aesthetic is measured and credible, focusing on technical precision and clarity. \n\nLet me know if you'd like to adjust the layout, refine the typography, or add more detailed technical charts."
+  ],
+  "prompt": "Design an IBM-inspired executive briefing page for enterprise automation. Use modular evidence cards, architecture summaries, process step diagrams, and confident typography. The result should feel measured and credible.",
+  "projectId": "7143289011557104864",
+  "screenId": "60592c2fa0e74d9e8d6d080b4bfb40d0",
+  "slug": "ibm-automation-briefing",
+  "suggestions": [
+    "Add a detailed cost-savings chart",
+    "Create a dark mode version",
+    "Add a 'Key Insights' sidebar"
+  ],
+  "title": "Machined Logic: Executive Briefing"
+}

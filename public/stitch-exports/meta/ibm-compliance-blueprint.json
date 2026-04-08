@@ -1,0 +1,21 @@
+{
+  "brand": "IBM",
+  "contentType": "image/png",
+  "fileName": "ibm-compliance-blueprint.png",
+  "generatedAt": "2026-04-02T11:11:56.236Z",
+  "htmlUrl": "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ7Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpaCiVodG1sXzlmYzdmN2YyZjQ2YzQ2MjViYWRmZmM0Y2U2MzMzYzdhEgsSBxCCisPc0AkYAZIBIwoKcHJvamVjdF9pZBIVQhM3MTQzMjg5MDExNTU3MTA0ODY0&filename=&opi=96797242",
+  "imageUrl": "https://lh3.googleusercontent.com/aida/ADBb0uhFZVR0-b7MxioHDWjfdlwLRnXK89cmOjpraEpQ1kROlmvCJbop9jaF3dPu-B3FH701nxD-RJeCyxP67N2wkfT7HDZsjLQHrpf0UODf2t3-zbDoIbAZJbcZaeivVjENhyiPWf7RasBFLKR1adsgeZRMAoYYGSdwsecJDaGjxO3K3Ftm1NKsiGvFs1ZYmnVgPAHxYJ3_1X9tuIb2_tt2JTwkxAcGcZr3OfAQdeyBHolwwlZA7WDgLpFc9c8",
+  "notes": [
+    "I've created the AI Compliance Blueprint for your regulated platform.\n\nI've established a design system, **Machined Blueprints** ([Design_System]), which focuses on high technical precision and a disciplined, documentation-heavy aesthetic inspired by IBM's corporate design language.\n\nThe new screen, **AI Compliance Blueprint** (AI Compliance Blueprint), includes:\n- A **Governance Stack Architecture** diagram that maps out your AI's regulatory infrastructure.\n- **Regulatory Policy Mapping** that provides a clear 'literate' comparison between requirements and controls.\n- A **Live Model Evaluation Log** for transparent audit trails.\n- **Certified Dossiers** that provide structured proof of compliance.\n\nThis design is built to feel both authoritative and highly functional for regulatory oversight. How does this direction look to you?"
+  ],
+  "prompt": "Create an IBM-like compliance blueprint page for a regulated AI platform. Use diagram blocks, policy rails, audit tables, and structured proof sections. Keep the page disciplined, literate, and documentation-clear.",
+  "projectId": "7143289011557104864",
+  "screenId": "d421636c033347d98ed27e959e997d15",
+  "slug": "ibm-compliance-blueprint",
+  "suggestions": [
+    "Generate a detailed 'Model Card' for a specific AI model",
+    "Add a 'Risk Assessment' workflow with interactive steps",
+    "Create a 'Regulatory Sandbox' exploration view"
+  ],
+  "title": "AI Compliance Blueprint"
+}

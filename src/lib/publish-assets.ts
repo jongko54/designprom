@@ -28,6 +28,21 @@ function imageExtension(src: string) {
   return src.endsWith(".svg") ? ".svg" : ".png";
 }
 
+function buildStitchArtifactAssets(slugs: string[]): PublishAsset[] {
+  return slugs.flatMap((slug) => [
+    {
+      filename: `${slug}.html`,
+      kind: "url" as const,
+      url: `/stitch-exports/html/${slug}.html`
+    },
+    {
+      filename: `${slug}.json`,
+      kind: "url" as const,
+      url: `/stitch-exports/meta/${slug}.json`
+    }
+  ]);
+}
+
 export function buildArchivePublishAssets(entry: PromptArchiveEntry): PublishAsset[] {
   const stitchCaptures = getArchiveStitchExports(entry);
   const publishImageAssets = Array.from(
@@ -78,7 +93,8 @@ export function buildArchivePublishAssets(entry: PromptArchiveEntry): PublishAss
         useCase: entry.useCase
       }
     },
-    ...publishImageAssets
+    ...publishImageAssets,
+    ...buildStitchArtifactAssets(entry.stitchExampleSlugs)
   ];
 }
 
@@ -87,21 +103,20 @@ export function buildStitchExamplePublishAssets(
 ): PublishAsset[] {
   const owner = getStitchExampleOwner(example.slug);
   const ownerHref = owner ? getCategoryHref(owner) : undefined;
-
-  return [
+  const assets: PublishAsset[] = [
     {
       content: `${example.stitchPrompt}\n`,
       filename: "stitch-prompt.txt",
-      kind: "text"
+      kind: "text" as const
     },
     {
       content: `${example.outputNotes.join("\n")}\n`,
       filename: "output-notes.txt",
-      kind: "text"
+      kind: "text" as const
     },
     {
       filename: "manifest.json",
-      kind: "json",
+      kind: "json" as const,
       value: {
         brandDnaHref: ownerHref,
         pageType: example.pageType,
@@ -123,25 +138,27 @@ export function buildStitchExamplePublishAssets(
         ]
       : [])
   ];
+
+  return [...assets, ...buildStitchArtifactAssets([example.slug])];
 }
 
 export function buildBrandGalleryPublishAssets(
   example: BrandDnaGalleryEntry
 ): PublishAsset[] {
-  return [
+  const assets: PublishAsset[] = [
     {
       content: `${example.stitchPrompt}\n`,
       filename: "stitch-prompt.txt",
-      kind: "text"
+      kind: "text" as const
     },
     {
       content: `${example.summary}\n${example.templateHint}\n`,
       filename: "notes.txt",
-      kind: "text"
+      kind: "text" as const
     },
     {
       filename: "manifest.json",
-      kind: "json",
+      kind: "json" as const,
       value: {
         brandName: example.brandName,
         colorDirection: example.colorDirection,
@@ -167,4 +184,6 @@ export function buildBrandGalleryPublishAssets(
         ]
       : [])
   ];
+
+  return [...assets, ...buildStitchArtifactAssets([example.slug])];
 }

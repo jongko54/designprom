@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "secondary": "#5f5e5e",
+              "inverse-on-surface": "#f0f0f2",
+              "surface": "#f9f9fb",
+              "on-secondary-fixed": "#1c1b1b",
+              "surface-tint": "#5e5e5e",
+              "surface-dim": "#d9dadc",
+              "tertiary": "#002ba5",
+              "tertiary-fixed": "#0046fa",
+              "surface-variant": "#e2e2e4",
+              "on-tertiary-fixed": "#ffffff",
+              "tertiary-fixed-dim": "#0033c0",
+              "surface-container": "#eeeef0",
+              "on-error": "#ffffff",
+              "primary-fixed": "#5e5e5e",
+              "inverse-surface": "#2f3132",
+              "on-surface": "#1a1c1d",
+              "primary": "#000000",
+              "surface-container-lowest": "#ffffff",
+              "on-secondary-fixed-variant": "#3c3b3b",
+              "background": "#f9f9fb",
+              "on-primary-fixed": "#ffffff",
+              "on-tertiary": "#dde1ff",
+              "on-primary": "#e2e2e2",
+              "tertiary-container": "#4065ff",
+              "on-tertiary-container": "#ffffff",
+              "on-background": "#1a1c1d",
+              "error": "#ba1a1a",
+              "error-container": "#ffdad6",
+              "on-primary-fixed-variant": "#e2e2e2",
+              "secondary-fixed-dim": "#adabaa",
+              "inverse-primary": "#c6c6c6",
+              "on-error-container": "#410002",
+              "outline-variant": "#c6c6c6",
+              "outline": "#777777",
+              "surface-container-high": "#e8e8ea",
+              "on-tertiary-fixed-variant": "#dde1ff",
+              "surface-container-low": "#f3f3f5",
+              "on-surface-variant": "#474747",
+              "secondary-fixed": "#c8c6c5",
+              "surface-container-highest": "#e2e2e4",
+              "on-primary-container": "#ffffff",
+              "surface-bright": "#f9f9fb",
+              "primary-container": "#3b3b3b",
+              "primary-fixed-dim": "#474747",
+              "on-secondary": "#ffffff",
+              "on-secondary-container": "#1c1b1b",
+              "secondary-container": "#d6d4d3"
+            },
+            fontFamily: {
+              "headline": ["Inter"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+            font-size: 1.25rem;
+        }
+        .glass-effect {
+            backdrop-filter: blur(20px);
+            background: rgba(255, 255, 255, 0.6);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body min-h-screen flex flex-col">
+<!-- Shared Component: TopNavBar -->
+<header class="w-full top-0 sticky z-50 bg-[#f9f9fb] dark:bg-slate-900 border-b border-gray-200/20 dark:border-gray-800/20 font-['Inter'] tracking-tight font-medium text-sm">
+<div class="flex justify-between items-center px-8 h-20 max-w-full mx-auto">
+<div class="text-xl font-black tracking-[-0.02em] text-[#000000] dark:text-white">MONOLITH</div>
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-[#474747] dark:text-gray-400 hover:text-black dark:hover:text-white transition-colors" href="#">Product</a>
+<a class="text-[#474747] dark:text-gray-400 hover:text-black dark:hover:text-white transition-colors" href="#">Solutions</a>
+<a class="text-[#000000] dark:text-white font-bold border-b-2 border-black dark:border-white pb-1" href="#">Pricing</a>
+<a class="text-[#474747] dark:text-gray-400 hover:text-black dark:hover:text-white transition-colors" href="#">Enterprise</a>
+</nav>
+<button class="bg-primary text-on-primary px-6 py-2.5 rounded-lg font-semibold hover:bg-primary-container active:scale-95 duration-150 transition-all">
+                Sign Up
+            </button>
+</div>
+</header>
+<main class="flex-grow">
+<!-- Hero Section -->
+<section class="px-8 pt-24 pb-16 text-center max-w-4xl mx-auto">
+<span class="font-label uppercase tracking-widest text-[10px] font-semibold text-on-surface-variant mb-4 block">Scalable Infrastructure</span>
+<h1 class="font-headline text-6xl md:text-7xl font-black tracking-[-0.03em] text-primary mb-8 leading-tight">Investment in Precision.</h1>
+<p class="text-lg text-on-surface-variant max-w-2xl mx-auto leading-relaxed">
+                Transparent pricing for architectural systems. Built for creators who value structural integrity and high-performance output.
+            </p>
+</section>
+<!-- Pricing Grid -->
+<section class="px-8 pb-32">
+<div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-0 relative">
+<!-- Tier 1: Free -->
+<div class="p-12 bg-surface-container-low border-r border-outline-variant/10 flex flex-col h-full">
+<div class="mb-12">
+<h3 class="font-headline text-2xl font-bold tracking-tight mb-2">Free</h3>
+<p class="text-on-surface-variant text-sm">For independent architects and hobbyists.</p>
+</div>
+<div class="mb-12">
+<span class="text-4xl font-black tracking-tighter">$0</span>
+<span class="text-on-surface-variant text-sm ml-2">/ month</span>
+</div>
+<ul class="space-y-4 mb-16 flex-grow">
+<li class="flex items-start gap-3 text-sm">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'wght' 700;">check</span>
+<span>Single workspace instance</span>
+</li>
+<li class="flex items-start gap-3 text-sm">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'wght' 700;">check</span>
+<span>Standard component library</span>
+</li>
+<li class="flex items-start gap-3 text-sm">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'wght' 700;">check</span>
+<span>Community-led support</span>
+</li>
+</ul>
+<button class="w-full py-4 bg-surface-container-high text-primary font-bold tracking-tight border border-outline-variant/20 hover:bg-surface-container-highest transition-all rounded">Get Started</button>
+</div>
+<!-- Tier 2: Professional (The Lens Effect) -->
+<div class="relative z-10 p-12 glass-effect border-x border-outline-variant/20 shadow-2xl flex flex-col h-full scale-105 transform origin-center">
+<div class="absolute inset-0 bg-tertiary/5 pointer-events-none"></div>
+<div class="mb-12 relative">
+<div class="inline-block bg-tertiary text-white text-[10px] font-bold px-3 py-1 mb-4 tracking-widest uppercase">Most Popular</div>
+<h3 class="font-headline text-2xl font-bold tracking-tight mb-2">Professional</h3>
+<p class="text-on-surface-variant text-sm">For growing studios and teams.</p>
+</div>
+<div class="mb-12 relative">
+<span class="text-5xl font-black tracking-tighter">$49</span>
+<span class="text-on-surface-variant text-sm ml-2">/ month</span>
+</div>
+<ul class="space-y-4 mb-16 flex-grow relative">
+<li class="flex items-start gap-3 text-sm font-medium">
+<span class="material-symbols-outlined text-tertiary" style="font-variation-settings: 'wght' 700;">check</span>
+<span>Unlimited projects &amp; components</span>
+</li>
+<li class="flex items-start gap-3 text-sm font-medium">
+<span class="material-symbols-outlined text-tertiary" style="font-variation-settings: 'wght' 700;">check</span>
+<span>Collaborative live sessions</span>
+</li>
+<li class="flex items-start gap-3 text-sm font-medium">
+<span class="material-symbols-outlined text-tertiary" style="font-variation-settings: 'wght' 700;">check</span>
+<span>Priority rendering queue</span>
+</li>
+<li class="flex items-start gap-3 text-sm font-medium">
+<span class="material-symbols-outlined text-tertiary" style="font-variation-settings: 'wght' 700;">check</span>
+<span>Advanced analytics suite</span>
+</li>
+</ul>
+<button class="w-full py-4 bg-primary text-on-primary font-bold tracking-tight hover:bg-primary-container transition-all rounded relative">Choose Professional</button>
+</div>
+<!-- Tier 3: Enterprise -->
+<div class="p-12 bg-surface-container-low border-l border-outline-variant/10 flex flex-col h-full">
+<div class="mb-12">
+<h3 class="font-headline text-2xl font-bold tracking-tight mb-2">Enterprise</h3>
+<p class="text-on-surface-variant text-sm">Global operations and scale.</p>
+</div>
+<div class="mb-12">
+<span class="text-4xl font-black tracking-tighter">Custom</span>
+</div>
+<ul class="space-y-4 mb-16 flex-grow">
+<li class="flex items-start gap-3 text-sm">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'wght' 700;">check</span>
+<span>Dedicated infrastructure</span>
+</li>
+<li class="flex items-start gap-3 text-sm">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'wght' 700;">check</span>
+<span>SSO &amp; custom security protocols</span>
+</li>
+<li class="flex items-start gap-3 text-sm">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'wght' 700;">check</span>
+<span>24/7 technical advisory</span>
+</li>
+</ul>
+<button class="w-full py-4 bg-surface-container-high text-primary font-bold tracking-tight border border-outline-variant/20 hover:bg-surface-container-highest transition-all rounded">Contact Sales</button>
+</div>
+</div>
+</section>
+<!-- Feature Comparison -->
+<section class="bg-surface-container-low py-32 px-8">
+<div class="max-w-5xl mx-auto">
+<div class="mb-20 text-center md:text-left">
+<h2 class="font-headline text-4xl font-bold tracking-tighter mb-4">Deep Architectural Analysis</h2>
+<p class="text-on-surface-variant">Compare technical capabilities across the Monolith ecosystem.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-4 gap-y-8 gap-x-12 border-t border-outline-variant/30 pt-12">
+<div class="md:col-span-1">
+<span class="font-label uppercase tracking-widest text-[10px] font-bold text-on-surface">Data Rendering</span>
+</div>
+<div class="md:col-span-3 grid grid-cols-1 md:grid-cols-2 gap-8">
+<div>
+<h4 class="font-bold text-sm mb-2">Asynchronous Processing</h4>
+<p class="text-on-surface-variant text-sm">Real-time data streams handled by dedicated nodes for zero-latency response.</p>
+</div>
+<div>
+<h4 class="font-bold text-sm mb-2">Vector Optimization</h4>
+<p class="text-on-surface-variant text-sm">Optimized mathematical rendering for complex structural blueprints.</p>
+</div>
+</div>
+<div class="md:col-span-1 pt-8 border-t border-outline-variant/10">
+<span class="font-label uppercase tracking-widest text-[10px] font-bold text-on-surface">Security</span>
+</div>
+<div class="md:col-span-3 grid grid-cols-1 md:grid-cols-2 gap-8 pt-8 border-t border-outline-variant/10">
+<div>
+<h4 class="font-bold text-sm mb-2">End-to-End Vault</h4>
+<p class="text-on-surface-variant text-sm">Military-grade encryption for all architectural assets and team IP.</p>
+</div>
+<div>
+<h4 class="font-bold text-sm mb-2">Audit Trails</h4>
+<p class="text-on-surface-variant text-sm">Granular logs of every interaction within your workspace ecosystem.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Social Proof Section -->
+<section class="py-32 px-8">
+<div class="max-w-7xl mx-auto">
+<div class="flex flex-col md:flex-row justify-between items-end gap-12 mb-24">
+<div class="max-w-xl">
+<h2 class="font-headline text-5xl font-black tracking-tight mb-6">Trusted by the Modern Guild.</h2>
+<p class="text-on-surface-variant leading-relaxed">The world's leading architectural firms and engineering collectives run on Monolith's refined grid system.</p>
+</div>
+<div class="flex flex-wrap gap-12 grayscale opacity-40">
+<span class="text-2xl font-bold tracking-tighter">AESTHETICA</span>
+<span class="text-2xl font-bold tracking-tighter">STRUCT</span>
+<span class="text-2xl font-bold tracking-tighter">FORM_</span>
+<span class="text-2xl font-bold tracking-tighter">AXIS</span>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-1 px-0 overflow-hidden bg-outline-variant/20">
+<div class="bg-surface p-16">
+<span class="material-symbols-outlined text-tertiary mb-8" style="font-variation-settings: 'FILL' 1;">format_quote</span>
+<p class="text-2xl font-medium tracking-tight mb-12 italic leading-snug">
+                            "Monolith hasn't just improved our workflow; it has redefined the aesthetic standard of our technical presentations. It is the architectural tool we didn't know we were missing."
+                        </p>
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 bg-surface-container-highest rounded-full overflow-hidden">
+<img class="w-full h-full object-cover grayscale" data-alt="black and white portrait of a senior architect in a minimalist studio environment" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDvgfdMuxt5ZUOWrjhbXB6gIt5B7eV35khYsqUh0yNhjkyoGjOMKBIAKJWm4PP-WmhYptHd-NRNRKbIQXvslabj1-Ao_v7BxfQXOktaKs4R2AcRXt-TeUNqWPiNe0YaBHB0PKtt2oVKk6F6_LzYjIUlrnEnMU-gSkisNAJ9r40qoRCuO9I2KE9FdPhvMqbNKrVuugX7FRwigCU3E1QPNVf2ze-J0XS4IcGcQUo-wg23XuqEVEo5jn0i5wae9b_6l-JlYCb18Lo9CxFH"/>
+</div>
+<div>
+<div class="font-bold text-sm">Marcus Vane</div>
+<div class="text-[10px] uppercase tracking-widest text-on-surface-variant">Principal at Vane &amp; Partners</div>
+</div>
+</div>
+</div>
+<div class="bg-surface p-16">
+<span class="material-symbols-outlined text-tertiary mb-8" style="font-variation-settings: 'FILL' 1;">format_quote</span>
+<p class="text-2xl font-medium tracking-tight mb-12 italic leading-snug">
+                            "The precision of the grid and the restraint in the UI design allows our work to breathe. It’s rare to find software that respects the designer's eye this deeply."
+                        </p>
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 bg-surface-container-highest rounded-full overflow-hidden">
+<img class="w-full h-full object-cover grayscale" data-alt="high contrast monochromatic portrait of a female creative director looking thoughtful" src="https://lh3.googleusercontent.com/aida-public/AB6AXuApmPomE1rjkQWeqaurJByLe6op3OpcY1e6lHHRmZZw8VdH9dSDYD6-fQXR3pJ4b0m8x96BNweBcSfqX3zFgFXUfBWYyVMCa1IZRts_oPgxtiY2BUbaNrGkB7j6khj-OUpVnIJq4t06JJxLybxwxLubfO5qtK8Y26LmNbh94QOAXrwjWx2LgqoI5KC4zba1KR8Oyi6hgsX8OEsZb_saFzRspf2HiX0qjWrq8f4Wwls6A0WLJBovbNcVhQoCS7tsVhu5y9o2UbzQuWUB"/>
+</div>
+<div>
+<div class="font-bold text-sm">Elena Voss</div>
+<div class="text-[10px] uppercase tracking-widest text-on-surface-variant">Design Director, Kinetica</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Final CTA -->
+<section class="py-32 px-8 text-center bg-primary text-on-primary">
+<h2 class="font-headline text-5xl font-black tracking-tight mb-8">Begin Your Monolith.</h2>
+<p class="text-on-primary/60 max-w-xl mx-auto mb-12">Join 12,000+ studios worldwide building the future on our infrastructure.</p>
+<div class="flex flex-col sm:flex-row gap-4 justify-center">
+<button class="px-12 py-5 bg-surface text-primary font-black uppercase tracking-widest text-xs rounded hover:bg-surface-container-high transition-all">Start Free Trial</button>
+<button class="px-12 py-5 border border-on-primary/20 text-on-primary font-black uppercase tracking-widest text-xs rounded hover:bg-white/10 transition-all">Request Demo</button>
+</div>
+</section>
+</main>
+<!-- Shared Component: Footer -->
+<footer class="w-full py-16 px-8 mt-auto bg-[#f9f9fb] dark:bg-slate-950 border-t border-gray-200 dark:border-gray-800 font-['Inter'] uppercase tracking-widest text-[10px] font-semibold">
+<div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-8 w-full max-w-full mx-auto">
+<div class="text-lg font-bold text-black dark:text-white normal-case tracking-tight">MONOLITH</div>
+<div class="flex flex-wrap gap-8">
+<a class="text-[#474747] dark:text-gray-500 hover:text-black dark:hover:text-white underline decoration-1 underline-offset-4" href="#">Privacy</a>
+<a class="text-[#474747] dark:text-gray-500 hover:text-black dark:hover:text-white underline decoration-1 underline-offset-4" href="#">Terms</a>
+<a class="text-[#474747] dark:text-gray-500 hover:text-black dark:hover:text-white underline decoration-1 underline-offset-4" href="#">LinkedIn</a>
+<a class="text-[#474747] dark:text-gray-500 hover:text-black dark:hover:text-white underline decoration-1 underline-offset-4" href="#">Twitter</a>
+</div>
+<div class="text-[#474747] dark:text-gray-500">© 2024 MONOLITH ARCHITECTURAL SYSTEMS</div>
+</div>
+</footer>
+</body></html>

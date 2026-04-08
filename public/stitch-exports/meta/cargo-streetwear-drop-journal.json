@@ -1,0 +1,21 @@
+{
+  "brand": "Cargo / Fashion",
+  "contentType": "image/png",
+  "fileName": "cargo-streetwear-drop-journal.png",
+  "generatedAt": "2026-04-07T06:11:34.652Z",
+  "htmlUrl": "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ7Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpaCiVodG1sXzFlMTlhN2NjOWJjMzRjNWM4MzU1MWZiMWY2MWI0NjJmEgsSBxCCisPc0AkYAZIBIwoKcHJvamVjdF9pZBIVQhMxMzM5MDExOTAxNzU1OTQ3MjQ5&filename=&opi=96797242",
+  "imageUrl": "https://lh3.googleusercontent.com/aida/ADBb0uhoz2aiauv1XClRyDFQu3KIpCXzlLOaG4onLiZjGu1oV6gAwduaSG9iiX85ifdBE_1BUgtT_JGqnWKQThHAghDNam-Pn6iOgLEyweYd0bmkcHzjBJfbPeKk4jfOaHw3p1ky9h0EnzzbMs_jzGo9OudoWYwI2S5A2R9Zd74AEEvEBS2ZqwfkCD77NqVhc8WafUxaASOaFCybKwUY1wcBGCzTmy-KIf9hAs7DeR53dNCmLPKf7XX7_-dYzqw",
+  "notes": [
+    "I've completed the first look at the **SIGNAL** drop microsite. \n\nThe design leans heavily into that industrial, \"broadcast\" aesthetic we discussed. I've focused on:\n- **High-Impact Visuals:** Using massive campaign posters and oversized stills to make it feel like a high-end editorial piece.\n- **Urgent Typography:** Bold, heavy sans-serif headlines in signal orange against deep black to create immediate visual tension.\n- **Technical Detailing:** Mono-spaced captions and \"Unit\" nomenclature to give the products a speculative, premium edge.\n- **The Ticking Clock:** A prominent countdown to keep the focus on the upcoming release without the typical clutter of a store page.\n\nHow does this direction feel for the brand? We can refine the product \"Specimen\" sections or experiment with more motion-heavy layouts next."
+  ],
+  "prompt": "Create a fashion drop microsite for a streetwear label with bold sans headlines, stacked campaign posters, release countdown cues, oversized look stills, editorial product captions, and sharp black-and-signal-orange pacing. Keep it image-led, urgent, and premium without turning into raw ecommerce.",
+  "projectId": "1339011901755947249",
+  "screenId": "f9256cc8e88b4632b344218ffd20b428",
+  "slug": "cargo-streetwear-drop-journal",
+  "suggestions": [
+    "Make the countdown more prominent",
+    "Add a 'Technical Specifications' section to one of the looks",
+    "Try a mobile version of this design"
+  ],
+  "title": "SIGNAL - Drop 004 Microsite"
+}

@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>DataMonolith Engine | Architecture Explainer</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-primary-fixed": "#003798",
+              "tertiary-fixed": "#f6f3f2",
+              "on-secondary-fixed-variant": "#5b5b5b",
+              "tertiary-fixed-dim": "#e7e5e4",
+              "surface-container-highest": "#e4e2e2",
+              "primary-container": "#dbe1ff",
+              "on-tertiary-container": "#5c5b5b",
+              "tertiary": "#605f5f",
+              "error-container": "#fe8983",
+              "surface": "#fcf9f8",
+              "on-background": "#323233",
+              "outline": "#7b7a7a",
+              "tertiary-container": "#f6f3f2",
+              "background": "#fcf9f8",
+              "outline-variant": "#b3b2b1",
+              "inverse-primary": "#618bff",
+              "primary-dim": "#0048c1",
+              "inverse-on-surface": "#9e9c9c",
+              "primary-fixed-dim": "#c7d3ff",
+              "secondary-fixed-dim": "#d6d4d4",
+              "on-error": "#fff7f6",
+              "secondary-fixed": "#e4e2e2",
+              "surface-container-high": "#eae8e7",
+              "tertiary-dim": "#535353",
+              "surface-container-lowest": "#ffffff",
+              "on-secondary": "#fbf8f8",
+              "on-tertiary-fixed": "#4a4949",
+              "error": "#9f403d",
+              "on-surface": "#323233",
+              "on-primary-fixed-variant": "#0050d4",
+              "inverse-surface": "#0e0e0e",
+              "surface-container": "#f0eded",
+              "secondary-dim": "#535353",
+              "on-error-container": "#752121",
+              "primary-fixed": "#dbe1ff",
+              "on-tertiary-fixed-variant": "#676666",
+              "on-tertiary": "#fbf8f8",
+              "on-primary-container": "#0048bf",
+              "surface-tint": "#0053da",
+              "on-secondary-container": "#525252",
+              "on-primary": "#f8f7ff",
+              "surface-container-low": "#f6f3f2",
+              "secondary-container": "#e4e2e2",
+              "secondary": "#5f5f5f",
+              "surface-dim": "#dbdad9",
+              "on-secondary-fixed": "#3f3f3f",
+              "primary": "#0053da",
+              "error-dim": "#4e0309",
+              "surface-bright": "#fcf9f8",
+              "on-surface-variant": "#5f5f5f",
+              "surface-variant": "#e4e2e2"
+            },
+            fontFamily: {
+              "headline": ["Inter"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0px", "lg": "0px", "xl": "0px", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        body { font-family: 'Inter', sans-serif; }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .milled-surface {
+            background-color: #f6f3f2;
+        }
+        .data-monolith-container {
+            border-left: 4px solid #0053da;
+            background-color: #ffffff;
+        }
+        .glass-panel {
+            background: rgba(252, 249, 248, 0.8);
+            backdrop-filter: blur(20px);
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface antialiased">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 h-16 bg-[#fcf9f8] dark:bg-stone-950 border-b border-[#b3b2b1]/15 flex justify-between items-center px-12">
+<div class="text-xl font-bold tracking-tighter text-[#323233] dark:text-stone-100">DataMonolith Engine</div>
+<div class="hidden md:flex gap-8 items-center h-full">
+<a class="font-['Inter'] tracking-tight text-sm font-medium text-[#0053da] dark:text-blue-400 border-b-2 border-[#0053da] pb-5 h-full flex items-center" href="#">Architecture</a>
+<a class="font-['Inter'] tracking-tight text-sm font-medium text-[#5f5f5f] dark:text-stone-400 hover:text-[#323233] dark:hover:text-stone-200 transition-colors" href="#">Solutions</a>
+<a class="font-['Inter'] tracking-tight text-sm font-medium text-[#5f5f5f] dark:text-stone-400 hover:text-[#323233] dark:hover:text-stone-200 transition-colors" href="#">Documentation</a>
+<a class="font-['Inter'] tracking-tight text-sm font-medium text-[#5f5f5f] dark:text-stone-400 hover:text-[#323233] dark:hover:text-stone-200 transition-colors" href="#">Support</a>
+</div>
+<div class="flex items-center gap-6">
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-secondary hover:text-primary cursor-pointer transition-colors" data-icon="settings">settings</span>
+<span class="material-symbols-outlined text-secondary hover:text-primary cursor-pointer transition-colors" data-icon="notifications">notifications</span>
+</div>
+<button class="bg-primary text-on-primary px-6 py-2 text-xs font-bold tracking-wider uppercase transition-all hover:bg-primary-dim">Console</button>
+</div>
+</nav>
+<!-- SideNavBar (Architecture Context) -->
+<aside class="h-screen w-64 fixed left-0 border-r border-[#b3b2b1]/15 bg-[#f6f3f2] flex flex-col pt-20 pb-8 hidden md:flex">
+<div class="px-6 mb-8">
+<div class="text-sm font-black text-[#323233]">Core Framework</div>
+<div class="text-[10px] text-secondary uppercase tracking-widest font-semibold">V2.4.18-Stable</div>
+</div>
+<nav class="flex-1 space-y-1">
+<a class="bg-[#ffffff] text-[#0053da] border-l-4 border-[#0053da] font-semibold flex items-center gap-3 px-4 py-3 text-[13px] transition-all" href="#">
+<span class="material-symbols-outlined text-[18px]" data-icon="layers">layers</span> Infrastructure
+            </a>
+<a class="text-[#5f5f5f] hover:bg-[#e4e2e2] flex items-center gap-3 px-4 py-3 text-[13px] transition-all" href="#">
+<span class="material-symbols-outlined text-[18px]" data-icon="cloud_queue">cloud_queue</span> Hybrid Cloud
+            </a>
+<a class="text-[#5f5f5f] hover:bg-[#e4e2e2] flex items-center gap-3 px-4 py-3 text-[13px] transition-all" href="#">
+<span class="material-symbols-outlined text-[18px]" data-icon="gavel">gavel</span> Governance
+            </a>
+<a class="text-[#5f5f5f] hover:bg-[#e4e2e2] flex items-center gap-3 px-4 py-3 text-[13px] transition-all" href="#">
+<span class="material-symbols-outlined text-[18px]" data-icon="security">security</span> Security
+            </a>
+<a class="text-[#5f5f5f] hover:bg-[#e4e2e2] flex items-center gap-3 px-4 py-3 text-[13px] transition-all" href="#">
+<span class="material-symbols-outlined text-[18px]" data-icon="psychology">psychology</span> AI Lifecycle
+            </a>
+</nav>
+<div class="px-6 mt-auto">
+<button class="w-full bg-surface-container-highest text-on-surface py-3 text-[11px] font-bold tracking-widest uppercase mb-6 transition-all hover:bg-outline-variant/20">Deploy Instance</button>
+<div class="space-y-3 opacity-60">
+<div class="flex items-center gap-3 text-[11px] font-bold uppercase tracking-widest">
+<span class="material-symbols-outlined text-[14px]" data-icon="check_circle">check_circle</span> Health Status
+                </div>
+<div class="flex items-center gap-3 text-[11px] font-bold uppercase tracking-widest">
+<span class="material-symbols-outlined text-[14px]" data-icon="verified_user">verified_user</span> License
+                </div>
+</div>
+</div>
+</aside>
+<!-- Main Content Stage -->
+<main class="ml-0 md:ml-64 pt-16 min-h-screen flex flex-col">
+<header class="px-12 py-12 bg-surface">
+<div class="max-w-6xl">
+<h1 class="text-[2.5rem] font-bold tracking-tighter text-on-surface mb-2 leading-none">System Architecture</h1>
+<p class="text-secondary body-md max-w-2xl leading-relaxed">A high-precision technical overview of the DataMonolith Engine's structural integrity, throughput pipelines, and governance-first storage layers.</p>
+</div>
+</header>
+<!-- 1. Core Architecture Diagram Section -->
+<section class="px-12 pb-12">
+<div class="grid grid-cols-12 gap-0 border border-outline-variant/15">
+<div class="col-span-12 md:col-span-8 p-1 w-full h-[500px] relative overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover opacity-80 grayscale" data-alt="Technical blueprint style visualization of a complex server architecture with glowing blue data pathways and translucent glass overlays" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAaSxcOUxM4hHV4C2eqOXhBoI_GwrgP4VOMgbR8YyyQyhONj_tFCORVEIT8C1gu-2kMhsVHjHpiaCHfA2yAldSeT4FagZ-kdwqaxRvRWZkCN0MQE4zZ915J97O2KAWVNiJC_GAvv4OuafIRzWCQLcSCmoIay4GB2gisgYHB-Vva8CLoVk8aNWlj12WXihkOM8c5eUkOOYdhA2NM7RAMSx6tzL0b4tY4-BA83KGGeBSY5fR8Yer9gXWFKQ9Rv9hkGX9zIkgy6smJGvUf"/>
+<div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+<div class="glass-panel p-8 border border-white/20 shadow-2xl max-w-md">
+<div class="flex items-center gap-3 mb-4">
+<div class="w-3 h-3 bg-primary"></div>
+<span class="label-sm font-black tracking-widest text-on-surface uppercase">Critical Path: Alpha-9</span>
+</div>
+<h3 class="headline-sm font-bold mb-2">Multi-Node Distribution</h3>
+<p class="text-[12px] leading-relaxed text-secondary">Global synchronization via high-concurrency protocols ensures sub-10ms latency across fragmented edge environments.</p>
+</div>
+</div>
+</div>
+<div class="col-span-12 md:col-span-4 milled-surface p-10 flex flex-col justify-center">
+<div class="mb-8">
+<span class="text-[10px] font-black uppercase tracking-[0.2em] text-primary">01. Schematic Control</span>
+<h4 class="text-xl font-bold mt-2">Relay Infrastructure</h4>
+</div>
+<ul class="space-y-6">
+<li class="flex items-start gap-4">
+<span class="text-primary font-mono text-sm">01</span>
+<div>
+<p class="text-[13px] font-bold uppercase tracking-tight">Load Balancing</p>
+<p class="text-[12px] text-secondary">Dynamic weight adjustment per compute instance.</p>
+</div>
+</li>
+<li class="flex items-start gap-4 border-t border-outline-variant/15 pt-6">
+<span class="text-primary font-mono text-sm">02</span>
+<div>
+<p class="text-[13px] font-bold uppercase tracking-tight">Encrypted Tunnels</p>
+<p class="text-[12px] text-secondary">TLS 1.3 mandated for all internal process communication.</p>
+</div>
+</li>
+<li class="flex items-start gap-4 border-t border-outline-variant/15 pt-6">
+<span class="text-primary font-mono text-sm">03</span>
+<div>
+<p class="text-[13px] font-bold uppercase tracking-tight">Signal Relay</p>
+<p class="text-[12px] text-secondary">Low-latency heartbeat monitoring for auto-failover.</p>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</section>
+<!-- 2. Data Flow Modules -->
+<section class="px-12 py-16 bg-surface-container-low">
+<div class="mb-12">
+<span class="text-[10px] font-black uppercase tracking-[0.2em] text-secondary">02. Data Processing Pipeline</span>
+<h2 class="text-3xl font-bold mt-2">Functional Modularity</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-4 gap-0">
+<!-- Ingestion -->
+<div class="bg-surface p-8 border-r border-outline-variant/15 group hover:bg-white transition-colors">
+<div class="w-12 h-12 flex items-center justify-center bg-tertiary-fixed mb-6 group-hover:bg-primary-container transition-colors">
+<span class="material-symbols-outlined text-primary" data-icon="input">input</span>
+</div>
+<h5 class="font-bold mb-3 uppercase text-[12px] tracking-widest">Ingestion</h5>
+<p class="text-[13px] text-secondary leading-relaxed mb-6">Real-time stream processing and batch ingestion via unified API gateway.</p>
+<div class="pt-4 border-t border-outline-variant/10">
+<span class="label-sm font-mono text-primary">THRU: 1.2 PB/DAY</span>
+</div>
+</div>
+<!-- Processing -->
+<div class="bg-surface p-8 border-r border-outline-variant/15 group hover:bg-white transition-colors">
+<div class="w-12 h-12 flex items-center justify-center bg-tertiary-fixed mb-6 group-hover:bg-primary-container transition-colors">
+<span class="material-symbols-outlined text-primary" data-icon="memory">memory</span>
+</div>
+<h5 class="font-bold mb-3 uppercase text-[12px] tracking-widest">Processing</h5>
+<p class="text-[13px] text-secondary leading-relaxed mb-6">Distributed compute clusters leveraging auto-scaling vector engines.</p>
+<div class="pt-4 border-t border-outline-variant/10">
+<span class="label-sm font-mono text-primary">SCALE: 25k NODES</span>
+</div>
+</div>
+<!-- Storage -->
+<div class="bg-surface p-8 border-r border-outline-variant/15 group hover:bg-white transition-colors">
+<div class="w-12 h-12 flex items-center justify-center bg-tertiary-fixed mb-6 group-hover:bg-primary-container transition-colors">
+<span class="material-symbols-outlined text-primary" data-icon="database">database</span>
+</div>
+<h5 class="font-bold mb-3 uppercase text-[12px] tracking-widest">Storage</h5>
+<p class="text-[13px] text-secondary leading-relaxed mb-6">Immutable object storage with 99.999999999% durability guarantees.</p>
+<div class="pt-4 border-t border-outline-variant/10">
+<span class="label-sm font-mono text-primary">COLD: &lt; 0.2ms</span>
+</div>
+</div>
+<!-- Intelligence -->
+<div class="bg-surface p-8 group hover:bg-white transition-colors">
+<div class="w-12 h-12 flex items-center justify-center bg-tertiary-fixed mb-6 group-hover:bg-primary-container transition-colors">
+<span class="material-symbols-outlined text-primary" data-icon="analytics">analytics</span>
+</div>
+<h5 class="font-bold mb-3 uppercase text-[12px] tracking-widest">Intelligence</h5>
+<p class="text-[13px] text-secondary leading-relaxed mb-6">Predictive analytics and ML model serving at the point of action.</p>
+<div class="pt-4 border-t border-outline-variant/10">
+<span class="label-sm font-mono text-primary">ACC: 99.42%</span>
+</div>
+</div>
+</div>
+</section>
+<!-- 3. System Resilience (Bento Grid Style) -->
+<section class="px-12 py-16">
+<div class="grid grid-cols-12 gap-6">
+<!-- Large Feature -->
+<div class="col-span-12 md:col-span-8 data-monolith-container p-12">
+<div class="flex flex-col md:flex-row gap-12 items-center">
+<div class="flex-1">
+<span class="text-primary text-[10px] font-black uppercase tracking-[0.2em] block mb-4">Enterprise Standard</span>
+<h2 class="text-4xl font-bold mb-6 tracking-tight">Uptime Resilience &amp; Security Enforcement</h2>
+<p class="text-secondary leading-relaxed mb-8">The DataMonolith Engine operates under a zero-trust architecture. Every data packet is validated, every request is authorized, and every byte is encrypted at rest and in transit.</p>
+<div class="grid grid-cols-2 gap-8">
+<div>
+<h6 class="text-xs font-black uppercase tracking-widest text-on-surface mb-2">SOC-2 Type II</h6>
+<p class="text-[12px] text-secondary">Verified architectural compliance for maximum operational integrity.</p>
+</div>
+<div>
+<h6 class="text-xs font-black uppercase tracking-widest text-on-surface mb-2">FIPS 140-2</h6>
+<p class="text-[12px] text-secondary">Cryptographic module validation for federal-grade security.</p>
+</div>
+</div>
+</div>
+<div class="w-full md:w-64 h-64 bg-surface-container overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Clean macro shot of circuit board details with architectural precision lighting and deep shadows" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBNSylm2BY2DPy8y0cH4-Lnk-RJog5NyxVGJfNpeAFpOh6A1DTuaHrTSkU7GGseGzuQBCWjek1Yn-gxGVckRf5g0Js2vG7qoH8H_D7Mw2hH6fDSN2ngwKHsF5Dq9FqddREkQEdWN6MlpBVM7UoN7YTgfVpP5U2fPwnTTHj5ftxZAwolHlWwnyAgTWFXNfipoO3Iw7ogeilTPmDRLobwEUuXv8B9eOCb2906lYqjv7_54nm1r91drIQhXU4RokTTV3RxXgMk6NjnJYyZ"/>
+</div>
+</div>
+</div>
+<!-- Stats Side Panel -->
+<div class="col-span-12 md:col-span-4 flex flex-col gap-6">
+<div class="bg-surface-container-high p-8 flex-1">
+<h6 class="text-[10px] font-black uppercase tracking-widest text-secondary mb-4">Uptime SLA</h6>
+<div class="text-5xl font-bold tracking-tighter text-on-surface">99.999%</div>
+<p class="text-[12px] text-secondary mt-4">Calculated over a trailing 365-day operational cycle with zero scheduled downtime.</p>
+</div>
+<div class="bg-primary p-8 flex-1">
+<h6 class="text-[10px] font-black uppercase tracking-widest text-on-primary/60 mb-4">Threat Detection</h6>
+<div class="text-5xl font-bold tracking-tighter text-on-primary">12ms</div>
+<p class="text-[12px] text-on-primary/80 mt-4">Mean time to detect and quarantine unauthorized network anomalies.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- High-Precision Governance Module -->
+<section class="px-12 py-16 bg-surface-container-lowest border-y border-outline-variant/15">
+<div class="max-w-6xl mx-auto flex flex-col md:flex-row gap-16 items-center">
+<div class="w-full md:w-1/3">
+<h3 class="text-2xl font-bold mb-4 tracking-tight">Regulatory Governance Automations</h3>
+<p class="text-[13px] text-secondary leading-relaxed">System-level hooks for automated GDPR, CCPA, and HIPAA compliance reporting across all active nodes.</p>
+</div>
+<div class="flex-1 grid grid-cols-2 md:grid-cols-4 gap-8">
+<div class="text-center">
+<div class="text-2xl font-bold text-primary mb-1">2048</div>
+<div class="text-[10px] font-black uppercase text-secondary tracking-widest">Key Length</div>
+</div>
+<div class="text-center border-l border-outline-variant/15">
+<div class="text-2xl font-bold text-primary mb-1">AES</div>
+<div class="text-[10px] font-black uppercase text-secondary tracking-widest">Storage Std</div>
+</div>
+<div class="text-center border-l border-outline-variant/15">
+<div class="text-2xl font-bold text-primary mb-1">ISO</div>
+<div class="text-[10px] font-black uppercase text-secondary tracking-widest">27001 Certified</div>
+</div>
+<div class="text-center border-l border-outline-variant/15">
+<div class="text-2xl font-bold text-primary mb-1">mTLS</div>
+<div class="text-[10px] font-black uppercase text-secondary tracking-widest">Node Auth</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="w-full border-t border-[#b3b2b1]/15 mt-auto bg-[#fcf9f8] dark:bg-stone-950 flex flex-col md:flex-row justify-between items-center px-12 py-8 gap-4 ml-0 md:ml-64">
+<div class="text-[11px] font-['Inter'] text-[#5f5f5f] dark:text-stone-500 uppercase tracking-widest">
+                © 2024 Monolith Data Systems. All rights reserved. Precision-engineered architectural standards.
+            </div>
+<div class="flex gap-8 text-[11px] font-['Inter'] text-[#5f5f5f] dark:text-stone-500 uppercase tracking-widest">
+<a class="hover:text-[#0053da] dark:hover:text-blue-400 cursor-pointer underline underline-offset-4 decoration-1" href="#">Legal</a>
+<a class="hover:text-[#0053da] dark:hover:text-blue-400 cursor-pointer underline underline-offset-4 decoration-1" href="#">Privacy Policy</a>
+<a class="hover:text-[#0053da] dark:hover:text-blue-400 cursor-pointer underline underline-offset-4 decoration-1" href="#">System Status</a>
+<a class="hover:text-[#0053da] dark:hover:text-blue-400 cursor-pointer underline underline-offset-4 decoration-1" href="#">Security Whitepaper</a>
+</div>
+</footer>
+</main>
+</body></html>

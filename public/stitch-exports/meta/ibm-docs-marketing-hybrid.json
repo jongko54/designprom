@@ -1,0 +1,21 @@
+{
+  "brand": "IBM",
+  "contentType": "image/png",
+  "fileName": "ibm-docs-marketing-hybrid.png",
+  "generatedAt": "2026-04-02T01:50:41.002Z",
+  "htmlUrl": "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ8Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpbCiVodG1sX2RkZmVhYzdiZWRlODRlNWU5MzY4NTE5NDU4Njc4NzA0EgsSBxCCisPc0AkYAZIBJAoKcHJvamVjdF9pZBIWQhQxNTE0MTM2NDkwMzg3Mzk0NjczOA&filename=&opi=96797242",
+  "imageUrl": "https://lh3.googleusercontent.com/aida/ADBb0uhu5xzOpL1Rz0btdJloGOKwntQWkGvFccDYFjYWlLgrPw8iGnKBvlHPoHKngfCfvowODpEL-qTvYApO_Z8hrECTUDhVxQBmO2w3i7FDMtSnmSUdiS-3vcAMG07yX-TBD-BjeGtSuJxbcmJSvQRPsROyRIBJZrhxFX3KXYy2AoqB-kwYV76Z7Ax3aQ2FVlCBuo2Y4jOTPtfh_J2tJouFnHaSBaZxSeeY6Fj2o-v6dGgdAqO8_Qvo3S1sPAyO",
+  "notes": [
+    "I've designed the \"Docs-meets-Marketing\" page for MONOLITH_OS, which you can see on the canvas.\n\nThis design implements:\n- **Strict IBM-Inspired Grid:** Ensuring high information density and structural alignment.\n- **Modular Content Rails:** Bridging high-level solution value with deep technical documentation.\n- **Architectural Specs Section:** Including a capabilities matrix for technical clarity.\n- **Code-Snippet Highlights:** Using technical visual cues for the \"Immutable Kernel Engine.\"\n- **Side Navigation Hierarchy:** For quick access to documentation paths.\n\nThe layout is designed to feel precise, authoritative, and efficient, reflecting a high-performance enterprise system."
+  ],
+  "prompt": "Design a docs-meets-marketing page in an IBM-inspired enterprise system. Use a strict grid, clear information density, exact headings, modular content rails, and minimal motion. The page should bridge solution marketing and technical documentation without losing structure.",
+  "projectId": "15141364903873946738",
+  "screenId": "fe64d5d7d04342f6b0324bcf7f1dad89",
+  "slug": "ibm-docs-marketing-hybrid",
+  "suggestions": [
+    "Add a \"Live API Playground\" section to this page",
+    "Create a dedicated \"Developer Resources\" dashboard in the same style",
+    "Design a dark mode version of this documentation page"
+  ],
+  "title": "MONOLITH_OS Documentation & Solutions"
+}

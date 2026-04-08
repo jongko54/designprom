@@ -1,0 +1,21 @@
+{
+  "brand": "Apple",
+  "contentType": "image/png",
+  "fileName": "apple-pricing-proof.png",
+  "generatedAt": "2026-04-02T01:36:02.001Z",
+  "htmlUrl": "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ8Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpbCiVodG1sXzExZThlMzY1MDhlZDRmNGZhZmVhNjFjYmMzMjI2NWY3EgsSBxCCisPc0AkYAZIBJAoKcHJvamVjdF9pZBIWQhQxNTE0MTM2NDkwMzg3Mzk0NjczOA&filename=&opi=96797242",
+  "imageUrl": "https://lh3.googleusercontent.com/aida/ADBb0uiEasX8Ffb_SenaVh3cUpbI8H18aStewpp-37sKAIX626iT0fAoIj101fwjMLCawayp6uYxVMRSNDFhO_8_2wwGdCbqe4lyfE2FlgU1dpAEsqMXkwkZAMWvaswwgtghK-iQy0OZcWyh2XRqpbqL4MLNoj9cegi-vf_dEYPKd6xNS4tE8OVp22kBdhEHsi-q1Sc8vgbIrbzK9jT7odIGMwmarp7N6S1-_FKMnebbn-lEseYZ4ENLCtc_5WB3",
+  "notes": [
+    "I've designed a premium, Apple-inspired pricing and proof page.\n\n### Key Design Decisions:\n- **Design System:** Created the \"Obsidian Grid\" design system, focusing on a sharp monochrome aesthetic, generous spacing, and an architectural layout.\n- **Visual Hierarchy:** Used high-contrast typography and a rigid grid to make information easy to scan and digest.\n- **The \"Glass\" Highlight:** The Professional plan is subtly highlighted with a glass-like backdrop to draw the eye without breaking the calm, monochrome palette.\n- **Proof & Trust:** Included a dedicated section for testimonials and partner logos, maintaining the same minimalist, authoritative style.\n\nWould you like me to adjust any of the pricing tiers or add more detailed feature comparisons?"
+  ],
+  "prompt": "Design a pricing and proof page in an Apple-like direction. Use a sharp monochrome grid, generous spacing, very few accent colors, and one glass-like feature comparison lens to highlight the main plan. The result should feel premium, calm, and easy to scan.",
+  "projectId": "15141364903873946738",
+  "screenId": "b6218fd8f16041d7abba3d9464b17210",
+  "slug": "apple-pricing-proof",
+  "suggestions": [
+    "Make the primary CTA more prominent",
+    "Add a Frequently Asked Questions section",
+    "Try a dark mode version of this page"
+  ],
+  "title": "Pricing & Comparison"
+}

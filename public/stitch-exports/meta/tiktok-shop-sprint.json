@@ -1,0 +1,21 @@
+{
+  "brand": "TikTok",
+  "contentType": "image/png",
+  "fileName": "tiktok-shop-sprint.png",
+  "generatedAt": "2026-04-02T11:19:25.359Z",
+  "htmlUrl": "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ7Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpaCiVodG1sX2JlOTQyMWJjZjE0YTQyOWRhNzBiMTFhN2ViNjM0YjYwEgsSBxCCisPc0AkYAZIBIwoKcHJvamVjdF9pZBIVQhM3MTQzMjg5MDExNTU3MTA0ODY0&filename=&opi=96797242",
+  "imageUrl": "https://lh3.googleusercontent.com/aida/ADBb0ui9GUMuiJ_vp_zW5NJHMuqk0gpTQRlu8-1oMuobQfd1PJWEbQx4Q7p3Qv2XpqpQe3TZ-hEF04BBaYP5RBpREKe0oGpsj4ql8WYCaSI_0u-xFBC9ZxIO_dic_6SDYhE4b5VocYfQOdCIfQIgiSoMQjafzm_jTmWouJ_R2Pyyt_Jt8ogO7mi_kqWZ-dlU7bibt08t-7WDYa7rPvAaor8R9KFRj0GxQvHelknh6iRRXsltzWgEsB4vL-mEcJ8",
+  "notes": [
+    "I've designed the TikTok-inspired **Kinetic Shop** landing page for you! \n\nI started by creating a dedicated design system, **Kinetic Neon**, which uses a dark mode palette with high-energy neon pink and electric green accents. The landing page follows a mobile-first, vertical rhythm with creator-led product cards, bold \"slashed\" pricing, and kinetic overlay badges like \"EXTREME DEAL\" to capture that fast-paced social commerce feel.\n\nThe new design system and the landing page are now on your canvas for review. How does the layout feel to you?"
+  ],
+  "prompt": "Create a TikTok-inspired shop event landing page with product cards mixed into creator media, strong price flashes, overlay badges, kinetic transitions, and a mobile-first commerce rhythm.",
+  "projectId": "7143289011557104864",
+  "screenId": "b4f5ba674670480b8071ce2dab5fbde9",
+  "slug": "tiktok-shop-sprint",
+  "suggestions": [
+    "Add a product detail modal for the 'Core Oversized Tee'",
+    "Swap the neon green accents for a bright cyan",
+    "Create a 'Flash Sale' countdown timer section"
+  ],
+  "title": "Kinetic Shop Landing Page"
+}

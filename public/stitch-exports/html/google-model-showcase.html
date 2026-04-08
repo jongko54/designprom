@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>The Experimental Lab | AI Model Showcase</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-effect {
+            backdrop-filter: blur(20px);
+            background: rgba(255, 255, 255, 0.7);
+        }
+        .text-glow {
+            text-shadow: 0 0 20px rgba(0, 88, 188, 0.1);
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                "tertiary-dim": "#674b00",
+                "primary": "#0058bc",
+                "secondary-fixed-dim": "#ffb0a5",
+                "tertiary": "#765600",
+                "surface-container-high": "#dee3ea",
+                "outline-variant": "#aaadb3",
+                "secondary-container": "#ffc3bb",
+                "background": "#f4f7fc",
+                "on-tertiary-fixed": "#3a2900",
+                "surface-container-lowest": "#ffffff",
+                "on-tertiary": "#fff1db",
+                "on-primary-fixed": "#000000",
+                "primary-fixed": "#6d9fff",
+                "on-background": "#2b2f34",
+                "on-primary-fixed-variant": "#002a61",
+                "on-surface": "#2b2f34",
+                "on-tertiary-container": "#543c00",
+                "outline": "#73777c",
+                "surface-dim": "#cfd5dd",
+                "on-error-container": "#570008",
+                "error-dim": "#9f0519",
+                "on-secondary-container": "#940004",
+                "secondary-fixed": "#ffc3bb",
+                "on-error": "#ffefee",
+                "surface-tint": "#0058bc",
+                "surface": "#f4f7fc",
+                "error-container": "#fb5151",
+                "primary-fixed-dim": "#5291ff",
+                "surface-bright": "#f4f7fc",
+                "on-primary-container": "#00214f",
+                "surface-container": "#e4e8ef",
+                "inverse-primary": "#4d8efe",
+                "on-tertiary-fixed-variant": "#5f4500",
+                "inverse-on-surface": "#999da3",
+                "on-surface-variant": "#585c61",
+                "inverse-surface": "#0a0f13",
+                "primary-container": "#6d9fff",
+                "secondary-dim": "#a30709",
+                "on-secondary": "#ffefed",
+                "tertiary-fixed": "#fbbc05",
+                "secondary": "#b41a14",
+                "on-secondary-fixed-variant": "#a4090a",
+                "on-primary": "#f0f2ff",
+                "error": "#b31b25",
+                "surface-container-highest": "#d8dde5",
+                "primary-dim": "#004ca5",
+                "tertiary-fixed-dim": "#eaaf00",
+                "surface-variant": "#d8dde5",
+                "on-secondary-fixed": "#700002",
+                "surface-container-low": "#edf1f7",
+                "tertiary-container": "#fbbc05"
+              },
+              "borderRadius": {
+                "DEFAULT": "0.25rem",
+                "lg": "0.5rem",
+                "xl": "0.75rem",
+                "2xl": "1.5rem",
+                "full": "9999px"
+              },
+              "fontFamily": {
+                "headline": ["Plus Jakarta Sans"],
+                "body": ["Inter"],
+                "label": ["Inter"]
+              }
+            }
+          }
+        }
+    </script>
+</head>
+<body class="bg-surface text-on-surface font-body selection:bg-primary-container selection:text-on-primary-container">
+<!-- Top Navigation Bar -->
+<nav class="w-full top-0 sticky bg-[#f4f7fc] dark:bg-slate-900 z-50">
+<div class="flex justify-between items-center px-8 h-16 w-full max-w-screen-2xl mx-auto">
+<div class="flex items-center gap-8">
+<span class="text-xl font-bold tracking-tighter text-[#2b2f34] dark:text-white font-headline">The Experimental Lab</span>
+<div class="hidden md:flex gap-6">
+<a class="font-['Plus_Jakarta_Sans'] font-semibold tracking-tight text-[#0058bc] dark:text-[#6d9fff] border-b-2 border-[#0058bc] pb-1" href="#">Models</a>
+<a class="font-['Plus_Jakarta_Sans'] font-semibold tracking-tight text-[#2b2f34] dark:text-slate-400 hover:text-[#0058bc] transition-colors duration-200" href="#">Datasets</a>
+<a class="font-['Plus_Jakarta_Sans'] font-semibold tracking-tight text-[#2b2f34] dark:text-slate-400 hover:text-[#0058bc] transition-colors duration-200" href="#">Benchmarks</a>
+<a class="font-['Plus_Jakarta_Sans'] font-semibold tracking-tight text-[#2b2f34] dark:text-slate-400 hover:text-[#0058bc] transition-colors duration-200" href="#">Papers</a>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<button class="p-2 rounded-full hover:bg-[#e4e8ef] dark:hover:bg-slate-700 transition-colors duration-200 flex items-center">
+<span class="material-symbols-outlined text-[#2b2f34] dark:text-white">science</span>
+</button>
+<button class="p-2 rounded-full hover:bg-[#e4e8ef] dark:hover:bg-slate-700 transition-colors duration-200 flex items-center">
+<span class="material-symbols-outlined text-[#2b2f34] dark:text-white">account_circle</span>
+</button>
+</div>
+</div>
+</nav>
+<main class="max-w-screen-2xl mx-auto px-8 py-12 relative overflow-hidden">
+<!-- Background Geometric Accents -->
+<div class="absolute top-20 -left-20 w-64 h-64 bg-primary opacity-5 rounded-full blur-3xl pointer-events-none"></div>
+<div class="absolute top-40 right-10 w-96 h-96 bg-tertiary opacity-5 rounded-full blur-3xl pointer-events-none"></div>
+<!-- Hero Section: Featured Models -->
+<section class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center mb-32">
+<div class="lg:col-span-7 space-y-8 relative z-10">
+<div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-surface-container text-primary font-semibold text-sm">
+<span class="material-symbols-outlined text-sm">bolt</span>
+<span>Q3 Research Breakthroughs</span>
+</div>
+<h1 class="text-6xl lg:text-8xl font-headline font-extrabold tracking-tight text-on-surface leading-[1.05]">
+                    Intelligence <br/>
+<span class="text-primary">Redefined.</span>
+</h1>
+<p class="text-xl text-on-surface-variant max-w-xl leading-relaxed">
+                    Explore our latest suite of open-research models designed for state-of-the-art vision, reasoning, and multimodal generation.
+                </p>
+<div class="flex flex-wrap gap-4">
+<button class="bg-primary text-on-primary px-8 py-4 rounded-full font-semibold text-lg hover:bg-primary-dim transition-all flex items-center gap-2 shadow-lg shadow-primary/20">
+                        Explore Models <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+<button class="bg-surface-container-lowest text-on-surface px-8 py-4 rounded-full font-semibold text-lg hover:bg-surface-container-high transition-all flex items-center gap-2 border border-outline-variant/15">
+                        Read Whitepaper
+                    </button>
+</div>
+</div>
+<!-- 3D Geometric Showcase -->
+<div class="lg:col-span-5 relative h-[500px] flex items-center justify-center">
+<!-- Blue Sphere -->
+<div class="absolute w-48 h-48 rounded-full bg-gradient-to-br from-primary to-primary-container shadow-2xl flex items-center justify-center translate-x-[-20%] translate-y-[-30%] z-20">
+<span class="material-symbols-outlined text-on-primary text-6xl" data-weight="fill">token</span>
+</div>
+<!-- Yellow Cube (Represented by rounded container) -->
+<div class="absolute w-40 h-40 bg-tertiary-container rounded-2xl shadow-xl rotate-12 flex items-center justify-center translate-x-[40%] translate-y-[-10%] z-10 overflow-hidden">
+<div class="absolute inset-0 bg-gradient-to-tr from-tertiary-dim/20 to-transparent"></div>
+<span class="material-symbols-outlined text-on-tertiary-container text-5xl">deployed_code</span>
+</div>
+<!-- Green Pyramid (Represented by rotated square) -->
+<div class="absolute w-32 h-32 bg-[#34a853] rounded-lg shadow-lg -rotate-12 translate-x-[-10%] translate-y-[60%] z-30 flex items-center justify-center">
+<span class="material-symbols-outlined text-white text-4xl">architecture</span>
+</div>
+<div class="absolute inset-0 flex items-center justify-center opacity-10 pointer-events-none">
+<div class="w-[400px] h-[400px] border border-outline dashed rounded-full animate-spin-slow"></div>
+</div>
+</div>
+</section>
+<!-- Modular Demo Shelves -->
+<section class="mb-32">
+<div class="flex justify-between items-end mb-12">
+<div class="space-y-2">
+<h2 class="text-4xl font-headline font-bold text-on-surface">Modular Shelves</h2>
+<p class="text-on-surface-variant">Specialized architectures for targeted domains.</p>
+</div>
+<div class="flex gap-2">
+<button class="w-12 h-12 rounded-full bg-surface-container flex items-center justify-center text-on-surface hover:bg-primary hover:text-on-primary transition-all">
+<span class="material-symbols-outlined">chevron_left</span>
+</button>
+<button class="w-12 h-12 rounded-full bg-surface-container flex items-center justify-center text-on-surface hover:bg-primary hover:text-on-primary transition-all">
+<span class="material-symbols-outlined">chevron_right</span>
+</button>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Vision Model Shelf -->
+<div class="group bg-surface-container-low rounded-2xl p-1 transition-all hover:bg-surface-container-high">
+<div class="bg-surface-container-lowest rounded-xl p-8 h-full flex flex-col">
+<div class="w-14 h-14 bg-secondary-container rounded-2xl flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-secondary text-3xl">visibility</span>
+</div>
+<h3 class="text-2xl font-headline font-bold mb-4">Iris-1 Vision</h3>
+<p class="text-on-surface-variant flex-grow mb-8 leading-relaxed">
+                            A massive visual language model trained on 10B image-text pairs with pixel-perfect attention mechanisms.
+                        </p>
+<div class="mt-auto space-y-4">
+<div class="flex justify-between text-sm font-semibold border-b border-outline-variant/10 pb-2">
+<span class="text-on-surface-variant">Accuracy (COCO)</span>
+<span class="text-primary">94.2%</span>
+</div>
+<button class="w-full py-3 rounded-full bg-surface-container text-on-surface font-semibold group-hover:bg-primary group-hover:text-on-primary transition-colors">
+                                View Benchmarks
+                            </button>
+</div>
+</div>
+</div>
+<!-- Language Model Shelf -->
+<div class="group bg-surface-container-low rounded-2xl p-1 transition-all hover:bg-surface-container-high">
+<div class="bg-surface-container-lowest rounded-xl p-8 h-full flex flex-col">
+<div class="w-14 h-14 bg-primary-container rounded-2xl flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-primary text-3xl">chat_bubble</span>
+</div>
+<h3 class="text-2xl font-headline font-bold mb-4">Lexicon-4 LMM</h3>
+<p class="text-on-surface-variant flex-grow mb-8 leading-relaxed">
+                            Pushing the boundaries of reasoning with a 2M token context window and native mathematical logic.
+                        </p>
+<div class="mt-auto space-y-4">
+<div class="flex justify-between text-sm font-semibold border-b border-outline-variant/10 pb-2">
+<span class="text-on-surface-variant">Human Eval</span>
+<span class="text-primary">88.5%</span>
+</div>
+<button class="w-full py-3 rounded-full bg-surface-container text-on-surface font-semibold group-hover:bg-primary group-hover:text-on-primary transition-colors">
+                                Try Reasoning
+                            </button>
+</div>
+</div>
+</div>
+<!-- Multimodal Model Shelf -->
+<div class="group bg-surface-container-low rounded-2xl p-1 transition-all hover:bg-surface-container-high">
+<div class="bg-surface-container-lowest rounded-xl p-8 h-full flex flex-col">
+<div class="w-14 h-14 bg-tertiary-container rounded-2xl flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-tertiary text-3xl">all_inclusive</span>
+</div>
+<h3 class="text-2xl font-headline font-bold mb-4">Omni-Flow X</h3>
+<p class="text-on-surface-variant flex-grow mb-8 leading-relaxed">
+                            Unified architecture for video, audio, and sensor data synthesis with zero-shot cross-modal capability.
+                        </p>
+<div class="mt-auto space-y-4">
+<div class="flex justify-between text-sm font-semibold border-b border-outline-variant/10 pb-2">
+<span class="text-on-surface-variant">Sync Latency</span>
+<span class="text-primary">&lt;120ms</span>
+</div>
+<button class="w-full py-3 rounded-full bg-surface-container text-on-surface font-semibold group-hover:bg-primary group-hover:text-on-primary transition-colors">
+                                Multi-Input Demo
+                            </button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Experimental Playground -->
+<section class="mb-32 relative overflow-hidden rounded-2xl bg-surface-container-low p-12">
+<div class="absolute top-0 right-0 w-1/2 h-full opacity-5 pointer-events-none">
+<svg class="w-full h-full" viewbox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+<path d="M37.5,-63.7C48.2,-55.9,56.1,-45.5,63.1,-34.2C70.1,-22.9,76.2,-10.8,75.1,1.1C74,13,65.7,24.7,57.1,34.9C48.5,45.1,39.6,53.8,29,61.1C18.4,68.4,6,74.3,-5.7,73.1C-17.4,71.9,-28.4,63.6,-38.7,55.5C-49,47.4,-58.5,39.5,-65.4,29.4C-72.3,19.3,-76.6,7,-76.2,-5.4C-75.8,-17.8,-70.7,-30.3,-62.4,-40.8C-54.1,-51.3,-42.6,-59.8,-30.7,-66.6C-18.8,-73.4,-6.5,-78.5,4.7,-80.2C15.9,-81.9,31.8,-80.1,37.5,-63.7Z" fill="#0058bc" transform="translate(200 200)"></path>
+</svg>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+<div class="space-y-6">
+<h2 class="text-5xl font-headline font-bold text-on-surface">Experimental <br/><span class="text-primary">Playground</span></h2>
+<p class="text-lg text-on-surface-variant leading-relaxed">
+                        Don't just read about our models—interact with them. Our live sandbox allows you to test hypotheses, chain multiple models, and visualize latent space in real-time.
+                    </p>
+<ul class="space-y-4">
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary" data-weight="fill">check_circle</span>
+<span class="font-medium">Real-time inference profiling</span>
+</li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary" data-weight="fill">check_circle</span>
+<span class="font-medium">Direct API key export for prototyping</span>
+</li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary" data-weight="fill">check_circle</span>
+<span class="font-medium">Visual attention heatmaps</span>
+</li>
+</ul>
+<button class="bg-on-surface text-surface px-8 py-4 rounded-full font-bold hover:opacity-90 transition-opacity">
+                        Launch Sandbox
+                    </button>
+</div>
+<div class="relative">
+<div class="bg-surface-container-lowest rounded-2xl shadow-2xl overflow-hidden border border-outline-variant/10">
+<div class="flex items-center justify-between px-6 py-4 bg-surface-container border-b border-outline-variant/10">
+<div class="flex gap-2">
+<div class="w-3 h-3 rounded-full bg-secondary"></div>
+<div class="w-3 h-3 rounded-full bg-tertiary"></div>
+<div class="w-3 h-3 rounded-full bg-[#34a853]"></div>
+</div>
+<span class="text-xs font-mono text-outline uppercase tracking-widest">Iris-1_v2.5_debug</span>
+</div>
+<div class="p-8 aspect-video bg-slate-900 relative">
+<img alt="AI detection visualization" class="w-full h-full object-cover opacity-60 rounded-lg grayscale hover:grayscale-0 transition-all duration-700" data-alt="Abstract digital network visualization with glowing nodes and connecting lines on a dark blue background representing neural networks" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCSC69D6P-bT_-C9shIUjS8HxRUCVRexCwbeTGQ8XMNWnIFS3TyYCqddg8taQJwcLZyEFsZa_rFDGClhcjV94sY32Op2prbJOHNT4Q0eiHpSFyUMf8IeOvvqtk2hZ8UC8nDNPdzWcmaRlyDpqRf2BY2iJNeWlgS8hhnWS3BZIdkr9Rl3gLwMgjqe_dYdeOzNfGW73Ej-39lwP3I0FPNNNCMkgff-ZvR3647dtwtiP84Zv6YwOfG9tJ6Y6s0blY-g1GodHIT2ay4ajd8"/>
+<div class="absolute inset-0 flex items-center justify-center">
+<div class="p-6 rounded-2xl glass-effect border border-white/20 text-center max-w-[280px]">
+<span class="material-symbols-outlined text-primary text-4xl mb-2">play_circle</span>
+<p class="text-sm font-semibold text-on-surface">Click to initialize real-time vision processing</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Overlapping 3D element -->
+<div class="absolute -bottom-8 -right-8 w-32 h-32 bg-tertiary rounded-full mix-blend-multiply opacity-20 blur-xl"></div>
+</div>
+</div>
+</section>
+<!-- Bento Explainers -->
+<section class="mb-32">
+<h2 class="text-center text-4xl font-headline font-bold mb-16">Research Methodology</h2>
+<div class="grid grid-cols-1 md:grid-cols-4 grid-rows-2 gap-6 h-[600px]">
+<div class="md:col-span-2 md:row-span-2 bg-surface-container rounded-2xl p-10 flex flex-col justify-end relative overflow-hidden group">
+<div class="absolute top-0 right-0 p-12 opacity-10 group-hover:scale-110 transition-transform duration-500">
+<span class="material-symbols-outlined text-[120px] text-primary">data_usage</span>
+</div>
+<div class="relative z-10">
+<h3 class="text-3xl font-headline font-bold mb-4">Ethical Data Procurement</h3>
+<p class="text-on-surface-variant max-w-sm">
+                            Every byte used in training our models is ethically sourced and transparently documented in our 'Data Lineage' manifesto.
+                        </p>
+</div>
+</div>
+<div class="md:col-span-2 bg-secondary-container/20 rounded-2xl p-10 flex items-center justify-between border border-secondary-container/30">
+<div class="max-w-xs">
+<h3 class="text-2xl font-headline font-bold mb-2">Zero-Bias Protocol</h3>
+<p class="text-on-surface-variant text-sm">Automated adversarial testing to ensure fairness across all demographic vectors.</p>
+</div>
+<span class="material-symbols-outlined text-secondary text-5xl">balance</span>
+</div>
+<div class="bg-surface-container-high rounded-2xl p-10 flex flex-col justify-center items-center text-center">
+<span class="material-symbols-outlined text-tertiary text-4xl mb-4">bolt</span>
+<h3 class="font-bold">Optimized Compute</h3>
+</div>
+<div class="bg-primary text-on-primary rounded-2xl p-10 flex flex-col justify-center items-center text-center">
+<span class="material-symbols-outlined text-on-primary text-4xl mb-4">public</span>
+<h3 class="font-bold">Global Scale</h3>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full mt-auto py-12 bg-[#f4f7fc] dark:bg-slate-950 border-t border-[#aaadb3]/15">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8 px-8 max-w-screen-2xl mx-auto">
+<div class="space-y-4">
+<span class="font-['Plus_Jakarta_Sans'] font-bold text-[#0058bc] text-2xl">The Experimental Lab</span>
+<p class="font-['Inter'] text-sm text-[#2b2f34] dark:text-slate-400 max-w-xs opacity-80">
+                    A collaborative research initiative dedicated to democratizing state-of-the-art machine intelligence.
+                </p>
+</div>
+<div class="grid grid-cols-2 gap-8">
+<div class="space-y-4">
+<h4 class="font-bold text-sm uppercase tracking-widest text-outline">Resources</h4>
+<ul class="space-y-2">
+<li><a class="font-['Inter'] text-sm text-[#2b2f34] dark:text-slate-400 opacity-80 hover:opacity-100 hover:text-[#0058bc] transition-all" href="#">Research Ethics</a></li>
+<li><a class="font-['Inter'] text-sm text-[#2b2f34] dark:text-slate-400 opacity-80 hover:opacity-100 hover:text-[#0058bc] transition-all" href="#">API Documentation</a></li>
+</ul>
+</div>
+<div class="space-y-4">
+<h4 class="font-bold text-sm uppercase tracking-widest text-outline">Legal</h4>
+<ul class="space-y-2">
+<li><a class="font-['Inter'] text-sm text-[#2b2f34] dark:text-slate-400 opacity-80 hover:opacity-100 hover:text-[#0058bc] transition-all" href="#">Open Source</a></li>
+<li><a class="font-['Inter'] text-sm text-[#2b2f34] dark:text-slate-400 opacity-80 hover:opacity-100 hover:text-[#0058bc] transition-all" href="#">Privacy Policy</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="max-w-screen-2xl mx-auto px-8 mt-12 pt-8 border-t border-outline-variant/10 text-center">
+<p class="font-['Inter'] text-sm text-[#2b2f34] dark:text-slate-400">© 2024 The Intelligent Playground. All rights reserved.</p>
+</div>
+</footer>
+</body></html>

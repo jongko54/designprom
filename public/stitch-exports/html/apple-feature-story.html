@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Software — The Evolution of Focus</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-secondary-fixed": "#3e3f43",
+              "secondary-container": "#e3e2e7",
+              "primary-fixed": "#e4e2e4",
+              "on-primary": "#faf7f9",
+              "on-surface-variant": "#596065",
+              "on-secondary-fixed-variant": "#5b5b60",
+              "secondary-fixed": "#e3e2e7",
+              "tertiary": "#6f576f",
+              "primary-fixed-dim": "#d6d3d6",
+              "surface-dim": "#d3dbe2",
+              "background": "#f9f9fb",
+              "tertiary-container": "#f8d9f6",
+              "on-secondary-container": "#515156",
+              "secondary-fixed-dim": "#d5d4d9",
+              "outline": "#757c81",
+              "on-tertiary-fixed-variant": "#6c546c",
+              "error-container": "#ff8b9a",
+              "tertiary-fixed-dim": "#eacbe7",
+              "surface-container": "#ebeef2",
+              "surface-variant": "#dde3e9",
+              "on-tertiary": "#fff7fa",
+              "surface-container-high": "#e4e9ee",
+              "on-surface": "#2d3338",
+              "inverse-primary": "#ffffff",
+              "tertiary-fixed": "#f8d9f6",
+              "on-tertiary-fixed": "#4e384e",
+              "error": "#9e3f4e",
+              "on-secondary": "#faf8fe",
+              "surface-bright": "#f9f9fb",
+              "inverse-surface": "#0c0e10",
+              "surface-tint": "#5f5e60",
+              "primary-dim": "#535254",
+              "on-background": "#2d3338",
+              "surface-container-highest": "#dde3e9",
+              "surface": "#f9f9fb",
+              "error-dim": "#4f0116",
+              "surface-container-low": "#f2f4f6",
+              "outline-variant": "#acb3b8",
+              "on-error": "#fff7f7",
+              "on-primary-fixed": "#3f3f41",
+              "on-error-container": "#782232",
+              "secondary-dim": "#525357",
+              "surface-container-lowest": "#ffffff",
+              "inverse-on-surface": "#9c9d9f",
+              "tertiary-dim": "#634c63",
+              "primary-container": "#e4e2e4",
+              "on-primary-fixed-variant": "#5c5b5d",
+              "primary": "#5f5e60",
+              "secondary": "#5e5f63",
+              "on-primary-container": "#525154",
+              "on-tertiary-container": "#614a61"
+            },
+            fontFamily: {
+              "headline": ["Inter", "sans-serif"],
+              "body": ["Inter", "sans-serif"],
+              "label": ["Inter", "sans-serif"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        body { font-family: 'Inter', sans-serif; -webkit-font-smoothing: antialiased; }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+        .editorial-gradient { background: linear-gradient(135deg, #f9f9fb 0%, #ebeef2 100%); }
+        .shadow-editorial { box-shadow: 0 40px 80px -20px rgba(45, 51, 56, 0.04); }
+        .mask-bleed { mask-image: linear-gradient(to bottom, black 80%, transparent 100%); }
+    </style>
+</head>
+<body class="bg-surface text-on-surface">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-slate-50/60 backdrop-blur-xl">
+<div class="flex justify-between items-center px-6 py-4 max-w-screen-2xl mx-auto">
+<div class="text-lg font-semibold tracking-tighter text-zinc-900">Software</div>
+<div class="hidden md:flex items-center space-x-8">
+<a class="text-zinc-900 font-medium font-sans tracking-tight transition-colors duration-300" href="#">Features</a>
+<a class="text-zinc-500 hover:text-zinc-900 font-sans tracking-tight transition-colors duration-300" href="#">Case Studies</a>
+<a class="text-zinc-500 hover:text-zinc-900 font-sans tracking-tight transition-colors duration-300" href="#">Pricing</a>
+<a class="text-zinc-500 hover:text-zinc-900 font-sans tracking-tight transition-colors duration-300" href="#">Documentation</a>
+</div>
+<button class="bg-primary text-on-primary px-5 py-2 rounded-md font-medium text-sm hover:bg-primary-dim transition-all active:scale-95">Get Started</button>
+</div>
+</nav>
+<main>
+<!-- Section 1: Hero -->
+<section class="relative pt-32 pb-24 lg:pt-48 lg:pb-40 overflow-hidden editorial-gradient">
+<div class="max-w-screen-2xl mx-auto px-6 md:px-12 text-center">
+<p class="text-[0.75rem] font-bold tracking-[0.1em] text-outline uppercase mb-6">Introduction</p>
+<h1 class="text-5xl md:text-7xl lg:text-[5rem] font-extrabold tracking-tight text-on-surface mb-12 max-w-4xl mx-auto leading-[1.1]">
+                    The Evolution of Focus
+                </h1>
+<div class="relative mt-16 md:mt-24 lg:mt-32">
+<div class="mx-auto max-w-6xl rounded-2xl overflow-hidden shadow-editorial bg-surface-container-lowest p-2 md:p-4">
+<img alt="Software Interface Hero" class="w-full h-auto rounded-xl" data-alt="Modern high-fidelity desktop software interface showing minimalist data visualization and a clean sidebar on a white screen" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB5B_8pVP7PWvcHyWXSMjxXE0G2l2nGm-H4_KNBA_vH78I7RammiNqn_VgbDnV9DBPpB7gA3upvjyONfSfRVg1gGqccfVT4EG6CZ3Ps09_B62RjdRAu9huniS_yLeqq3eV7vEepsKFwh2_-ZA9HYQMeeyi5yhmv-VxFVWZrMFy1-sRPbzgLcUAEniAk4va5K0tOUVdc4sZDMqLGr1jUx1Wht8kEjIQ8mFuCMeu_Y5hwtHvohvX8p1ksL2fx8Jp5xszK6oqeo3WEiCjM"/>
+</div>
+<!-- Subtle background light effect -->
+<div class="absolute -top-24 -left-24 w-96 h-96 bg-primary-container/20 rounded-full blur-[120px] -z-10"></div>
+<div class="absolute -bottom-24 -right-24 w-96 h-96 bg-tertiary-container/20 rounded-full blur-[120px] -z-10"></div>
+</div>
+</div>
+</section>
+<!-- Section 2: Core Feature -->
+<section class="py-24 md:py-48 bg-surface">
+<div class="max-w-screen-2xl mx-auto px-6 md:px-12 grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
+<div class="lg:col-span-7 order-2 lg:order-1">
+<div class="bg-surface-container-low rounded-2xl p-6 md:p-12 relative overflow-hidden">
+<img alt="Feature Detail" class="w-full h-auto rounded-lg shadow-sm" data-alt="Close-up crop of a sleek application UI featuring elegant typography and soft grey container borders with intentional whitespace" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAFybXHnQeAfHtDdxHEOSSK6tB7y8PJdk5RqiJnLIapUe74iJ_vYDctFIHY-kpavONH8y2oIhcoqilQ148tGF3PKCPSbfRDJA8mjWxPxkWjl0SX1QfX8VNGTUZNlBG_BfmDy3uOSyZ2ZG25zESLHDqk_QCaUa_4puke9urlJdG1DX4c5sH9hDvpV6tsaQvnTEmt0gnjYsqnO3A1BK3dxYfwrQveD5BaJOrPxtccnO-snswfBovsiy0ApeCBTTl0WlXKg8qLOvW4KI2H"/>
+</div>
+</div>
+<div class="lg:col-span-5 order-1 lg:order-2 flex flex-col justify-center">
+<h2 class="text-3xl md:text-4xl font-bold tracking-tight text-on-surface mb-8 leading-tight">
+                        Architecture of silence.
+                    </h2>
+<p class="text-lg text-on-surface-variant leading-relaxed max-w-md">
+                        Our interface is designed to disappear when you don't need it. Every element is weighed, measured, and placed with mathematical precision to ensure your work remains the center of gravity.
+                    </p>
+<div class="mt-12 h-px w-24 bg-outline-variant/30"></div>
+</div>
+</div>
+</section>
+<!-- Section 3: Seamless Experience -->
+<section class="py-24 md:py-48 bg-surface-container-low">
+<div class="max-w-screen-2xl mx-auto px-6 md:px-12">
+<div class="text-center mb-24">
+<h2 class="text-4xl md:text-5xl font-bold tracking-tight text-on-surface mb-8">
+                        Depth in every detail.
+                    </h2>
+<p class="text-lg text-on-surface-variant max-w-2xl mx-auto leading-relaxed">
+                        We use light and shadow not as decoration, but as a map. Elevated layers guide your focus to what matters most right now.
+                    </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-16">
+<div class="bg-surface-container-lowest rounded-3xl p-8 md:p-16 flex flex-col items-center justify-center text-center shadow-editorial">
+<div class="mb-12 w-full">
+<img alt="Interface Layer 1" class="w-full h-auto rounded-xl" data-alt="Macro view of a digital dashboard with soft blue and grey tones showing complex data simplified into elegant cards" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBKe3TqwuhBgTx_SWhNpBET0YgBbbTZEqULlGjm0kGU4p4LCAKdc54QkU5mslbPsP_-hC12FiPgdqE5KIVpEqigagNbqUeaYn8QtTMDHbkFPW807aFyVjC06et2l181sIWGEGYdewru3S9QSR33TG4KPRxdwjNZ6tGS6QBRHidXXZ498Vh5xC5v3L0FRNZ9pjMyfwKUr9jf8GmwmjSBBazCTY2VIyXTDA6zKvGn86JYF7QytcN83yfDEfskInqX_XwHEiUhKraWGekO"/>
+</div>
+<h3 class="text-xl font-semibold mb-4 text-on-surface">Intelligent Grouping</h3>
+<p class="text-on-surface-variant max-w-xs">Data is naturally categorized through tonal shifts, removing the need for harsh lines.</p>
+</div>
+<div class="bg-surface-container-lowest rounded-3xl p-8 md:p-16 flex flex-col items-center justify-center text-center shadow-editorial lg:mt-24">
+<div class="mb-12 w-full">
+<img alt="Interface Layer 2" class="w-full h-auto rounded-xl" data-alt="Sleek workflow management software view with focused attention on a single task card against a blurred background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDxsjlczZvhEu7MVYaoixK4PehxqThmgSX1_43g1wq2cSaoSy4oJRErGh_qkqAgfQFAbmB5-vC-brT-3HHtLEoIuVjkbyfRxnfDVpWCC1MRcxpk3JXb6XGcs-qgC0N4cgHidWNBHPB9NUokkg9yLvDh-prxTDPlA3iERKWqs18VnA3N-6POKRmN5-jhUdoADFXk-Zv-ubQhfrgMtHQO-nF0bnlruD5eecL7KVLWGQnobFkNyue150FMS6HhiKeM7UGH1PJP3td0PSsJ"/>
+</div>
+<h3 class="text-xl font-semibold mb-4 text-on-surface">Spatial Awareness</h3>
+<p class="text-on-surface-variant max-w-xs">Elements transition through 3D space with soft multi-layered blurs that feel tactile.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 4: Call to Action -->
+<section class="py-32 md:py-60 bg-surface">
+<div class="max-w-screen-xl mx-auto px-6 text-center">
+<h2 class="text-4xl md:text-6xl font-extrabold tracking-tighter text-on-surface mb-12">
+                    Start your journey.
+                </h2>
+<div class="flex flex-col md:flex-row items-center justify-center gap-6">
+<button class="bg-primary text-on-primary px-10 py-4 rounded-md font-semibold text-lg hover:bg-primary-dim transition-all active:scale-95 shadow-lg shadow-primary/10">
+                        Create Account
+                    </button>
+<button class="bg-transparent border border-outline-variant/30 text-primary px-10 py-4 rounded-md font-semibold text-lg hover:bg-surface-container-low transition-all">
+                        Talk to Sales
+                    </button>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full py-24 px-8 bg-slate-50 border-t border-outline-variant/10">
+<div class="flex flex-col md:flex-row justify-between items-center gap-8 max-w-screen-xl mx-auto">
+<div class="text-sm font-sans leading-relaxed text-zinc-500">
+                © 2024 The Silent Authority. All rights reserved.
+            </div>
+<div class="flex flex-wrap justify-center gap-8">
+<a class="text-sm font-sans leading-relaxed text-zinc-500 hover:text-zinc-900 transition-colors" href="#">Privacy Policy</a>
+<a class="text-sm font-sans leading-relaxed text-zinc-500 hover:text-zinc-900 transition-colors" href="#">Terms of Service</a>
+<a class="text-sm font-sans leading-relaxed text-zinc-500 hover:text-zinc-900 transition-colors" href="#">Twitter</a>
+<a class="text-sm font-sans leading-relaxed text-zinc-500 hover:text-zinc-900 transition-colors" href="#">LinkedIn</a>
+</div>
+</div>
+</footer>
+</body></html>

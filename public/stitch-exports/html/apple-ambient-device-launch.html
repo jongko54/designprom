@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>AETHER — Intelligence Redefined</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "tertiary-fixed-dim": "#006ee6",
+              "on-error-container": "#ff97a3",
+              "outline": "#75757b",
+              "on-secondary": "#1f2024",
+              "on-tertiary-container": "#000000",
+              "surface-container-high": "#1f1f24",
+              "on-primary-container": "#d0d0d0",
+              "on-tertiary": "#001f4a",
+              "on-primary-fixed-variant": "#5a5c5c",
+              "primary-dim": "#b8b9b9",
+              "on-background": "#e6e4ec",
+              "tertiary-container": "#007aff",
+              "inverse-on-surface": "#555557",
+              "on-error": "#490013",
+              "on-secondary-container": "#bfbfc4",
+              "on-secondary-fixed": "#3e3f43",
+              "secondary-fixed-dim": "#d4d4d9",
+              "on-surface-variant": "#abaab1",
+              "on-primary": "#3f4041",
+              "secondary": "#9d9da2",
+              "surface-container-low": "#131316",
+              "error-dim": "#b95463",
+              "on-tertiary-fixed": "#ffffff",
+              "primary-fixed": "#e2e2e2",
+              "primary-container": "#454747",
+              "inverse-surface": "#fcf8fb",
+              "surface-container": "#19191d",
+              "inverse-primary": "#5e5f60",
+              "secondary-fixed": "#e3e2e7",
+              "surface-variant": "#25252b",
+              "on-surface": "#e6e4ec",
+              "error": "#ec7c8a",
+              "surface-container-highest": "#25252b",
+              "tertiary": "#679cff",
+              "tertiary-fixed": "#007aff",
+              "primary-fixed-dim": "#d4d4d4",
+              "background": "#0e0e10",
+              "outline-variant": "#47474d",
+              "secondary-dim": "#9d9da2",
+              "on-secondary-fixed-variant": "#5a5b60",
+              "surface-bright": "#2b2c32",
+              "surface": "#0e0e10",
+              "surface-dim": "#0e0e10",
+              "surface-tint": "#c6c6c7",
+              "on-primary-fixed": "#3e4040",
+              "tertiary-dim": "#0070eb",
+              "on-tertiary-fixed-variant": "#f8f8ff",
+              "surface-container-lowest": "#000000",
+              "error-container": "#7f2737",
+              "primary": "#c6c6c7",
+              "secondary-container": "#3a3b3f"
+            },
+            fontFamily: {
+              "headline": ["Inter", "sans-serif"],
+              "body": ["Inter", "sans-serif"],
+              "label": ["Inter", "sans-serif"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        body { background-color: #0e0e10; font-family: 'Inter', sans-serif; -webkit-font-smoothing: antialiased; }
+        .glass-card {
+            background: rgba(37, 37, 43, 0.4);
+            backdrop-filter: blur(20px);
+            border-top: 1px solid rgba(198, 198, 199, 0.15);
+        }
+        .hero-gradient {
+            background: radial-gradient(circle at 50% 120%, rgba(198, 198, 199, 0.15) 0%, rgba(14, 14, 16, 1) 70%);
+        }
+        .text-glow {
+            text-shadow: 0 0 40px rgba(198, 198, 199, 0.3);
+        }
+        .orb-status {
+            background: radial-gradient(circle, #679cff 0%, transparent 70%);
+            filter: blur(40px);
+            opacity: 0.6;
+        }
+    </style>
+</head>
+<body class="text-on-background selection:bg-primary selection:text-on-primary">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-[#0e0e10]/80 backdrop-blur-xl">
+<div class="flex justify-between items-center px-6 md:px-12 py-4 max-w-[1440px] mx-auto">
+<div class="text-xl font-bold tracking-tighter text-[#e6e4ec]">AETHER</div>
+<div class="hidden md:flex items-center gap-10">
+<a class="font-inter tracking-tight font-medium text-sm text-[#abaab1] hover:text-[#e6e4ec] transition-colors duration-500" href="#">Ecosystem</a>
+<a class="font-inter tracking-tight font-medium text-sm text-[#abaab1] hover:text-[#e6e4ec] transition-colors duration-500" href="#">Experience</a>
+<a class="font-inter tracking-tight font-medium text-sm text-[#abaab1] hover:text-[#e6e4ec] transition-colors duration-500" href="#">Audio</a>
+<a class="font-inter tracking-tight font-medium text-sm text-[#abaab1] hover:text-[#e6e4ec] transition-colors duration-500" href="#">Specs</a>
+</div>
+<div class="flex items-center gap-6">
+<button class="material-symbols-outlined text-[#abaab1] hover:opacity-80 transition-opacity" data-icon="shopping_bag">shopping_bag</button>
+<button class="bg-primary text-on-primary px-5 py-2 rounded-full font-inter text-sm font-semibold tracking-tight hover:opacity-90 transition-opacity">Pre-order</button>
+</div>
+</div>
+</nav>
+<!-- Hero Section -->
+<section class="relative min-h-screen flex flex-col items-center justify-center pt-24 overflow-hidden hero-gradient">
+<div class="z-10 text-center px-6">
+<h1 class="text-5xl md:text-[5.5rem] font-extrabold tracking-[-0.04em] text-on-surface leading-tight mb-8">
+                Intelligence, redefined.
+            </h1>
+<p class="text-on-surface-variant text-lg md:text-xl max-w-2xl mx-auto font-light tracking-wide mb-12">
+                A desk-bound AI core crafted from single-block aluminum, designed to vanish into your workflow while amplifying every thought.
+            </p>
+</div>
+<!-- Main Product Render -->
+<div class="relative w-full max-w-5xl px-6 mt-12 aspect-[16/10]">
+<img alt="AETHER AI device" class="w-full h-full object-contain" data-alt="sleek obsidian glass and brushed aluminum cylindrical AI device floating on a dark stage with soft silver rim lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCVh_jjfNBGdyx53lxO96IVSLnpWb5C7BXgKLu86JVHEo5Mj7JtZpi170s82vnxCMpEVXxudrWR3hqHZ8yFcIHq3ZXGrdLyG0YpWpa5u2vHDjnmTBjWCfqgRILZ1eOYi39gxuH9i2IMpBzlMKCMjBVOqmg4HSKc7akjdYUepF85-JvWhJzvAIT3SItvBD9kS9DDE3rVMMOI-fZ7JP_nNY3MxzUGy_ld6_SkfEyffxw8tumCgmZfj2HqRXOHRvSncp27AmCNKb9Vbo4"/>
+<!-- AI Orb Effect -->
+<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64 orb-status rounded-full pointer-events-none -z-10"></div>
+</div>
+</section>
+<!-- Ecosystem Section -->
+<section class="py-32 px-6 md:px-12 max-w-[1440px] mx-auto">
+<div class="mb-20">
+<span class="label-sm text-primary tracking-[0.2em] font-semibold uppercase mb-4 block">Harmony</span>
+<h2 class="text-4xl md:text-5xl font-bold tracking-tight text-on-surface">The Ecosystem</h2>
+</div>
+<!-- Asymmetric Bento Grid -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-8">
+<!-- Left: Pair with iPhone -->
+<div class="md:col-span-7 glass-card rounded-3xl p-12 overflow-hidden flex flex-col justify-between h-[600px] group">
+<div>
+<h3 class="text-3xl font-bold text-on-surface mb-4">iPhone Continuity</h3>
+<p class="text-on-surface-variant text-lg max-w-md">Your Aether acts as a local neural hub, processing your phone's complex queries with dedicated desktop silicon.</p>
+</div>
+<div class="relative mt-8 -mb-12 transition-transform duration-700 group-hover:scale-105">
+<img alt="iPhone connectivity" class="w-full object-cover" data-alt="close-up of a modern high-end smartphone lying next to a sleek silver metallic surface with soft ambient blue glow" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC0JBAIgusuW1sUo0e-QjmvpmTlmTYIL8beKYPF9vcwM-ZUhPeV5V_7__Gb8pDqVUSl-NgHeYg5oilc7cPDa50epbIwVI41fvzHeLYfObo78tA22Y4m8SLdDDkTMWASJrJTllDFP_JAa5sMcufuhur3dTlgTuwU-FAX_ye27z_87-x6AWgp4fPzQglbZ5GBhFXISQTE_EzGXejyd8LcK60oy-4_vZe0UkOxbwLxHQt-iI0tDWbDXx0czx2Mhrmcc8VJpIRxTws8b4o"/>
+</div>
+</div>
+<!-- Right: Top - Audio -->
+<div class="md:col-span-5 glass-card rounded-3xl p-10 h-[280px] flex flex-col justify-center">
+<div class="flex items-start gap-6">
+<div class="bg-surface-container rounded-2xl p-4">
+<span class="material-symbols-outlined text-tertiary text-3xl" data-icon="headphones">headphones</span>
+</div>
+<div>
+<h3 class="text-xl font-bold text-on-surface mb-2">Sonic Presence</h3>
+<p class="text-on-surface-variant text-sm">Instant pairing with wireless headphones for private, low-latency AI assistance.</p>
+</div>
+</div>
+</div>
+<!-- Right: Bottom - Mac -->
+<div class="md:col-span-5 glass-card rounded-3xl p-10 h-[280px] bg-gradient-to-br from-surface-container to-surface flex flex-col justify-center">
+<div class="flex items-start gap-6">
+<div class="bg-surface-container rounded-2xl p-4">
+<span class="material-symbols-outlined text-primary text-3xl" data-icon="laptop_mac">laptop_mac</span>
+</div>
+<div>
+<h3 class="text-xl font-bold text-on-surface mb-2">Mac Extension</h3>
+<p class="text-on-surface-variant text-sm">Bridge the gap between your desktop workflow and Aether's dedicated reasoning engine.</p>
+</div>
+</div>
+</div>
+<!-- Full Width Featured Card -->
+<div class="md:col-span-12 glass-card rounded-3xl p-12 md:p-20 relative overflow-hidden flex items-center min-h-[500px]">
+<div class="relative z-10 max-w-xl">
+<h3 class="text-4xl md:text-5xl font-bold text-on-surface mb-6">Engineered for Silence.</h3>
+<p class="text-on-surface-variant text-xl leading-relaxed mb-10">Zero fans. Zero heat. Aether uses passive thermal dissipation to keep its high-performance silicon cool, ensuring your workspace remains as quiet as a sanctuary.</p>
+<a class="text-primary font-semibold flex items-center gap-2 hover:gap-4 transition-all duration-300" href="#">
+                        Explore the Architecture
+                        <span class="material-symbols-outlined" data-icon="arrow_forward">arrow_forward</span>
+</a>
+</div>
+<!-- Background Image Decoration -->
+<div class="absolute right-0 top-0 h-full w-1/2 opacity-40">
+<img alt="Hardware internals" class="w-full h-full object-cover" data-alt="macro shot of highly polished dark metal heat sinks and precise circuitry inside a luxury electronic device" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCluul2EbmuYOjHt3bhu1fHghoJfkKo3WpFZYwvsGUzLUaLaO-QJsQh71kbt6I9QNZ0VXM-V7zT66uDKfy9fjVo3fcaTaO_iS1AgB3WBy18zWJpK14mgUiuKhuNTXNt9uYLDuvoOsMSo43BpFiukHGkMDBCGsDMqZPRSVa-27Po-06q_6DVi0myJC6f5lP3gozHg27jblwlwLzlKcr9rKyUeyqUnPK3VQ7dLQ5XFSq9bmWn5JjkmV8OXZn9Fp3tOcHgXp771MFV4E8"/>
+</div>
+</div>
+</div>
+</section>
+<!-- Detailed Specs Minimal Section -->
+<section class="py-32 bg-surface-container-low">
+<div class="max-w-[1440px] mx-auto px-6 md:px-12">
+<div class="grid grid-cols-2 md:grid-cols-4 gap-12 text-center md:text-left">
+<div>
+<p class="text-primary font-bold text-4xl mb-2 tracking-tighter">120<span class="text-lg ml-1">TOPS</span></p>
+<p class="label-sm text-[#abaab1] uppercase tracking-widest">Neural Performance</p>
+</div>
+<div>
+<p class="text-primary font-bold text-4xl mb-2 tracking-tighter">0.8<span class="text-lg ml-1">ms</span></p>
+<p class="label-sm text-[#abaab1] uppercase tracking-widest">Response Latency</p>
+</div>
+<div>
+<p class="text-primary font-bold text-4xl mb-2 tracking-tighter">8k</p>
+<p class="label-sm text-[#abaab1] uppercase tracking-widest">Spatial Awareness</p>
+</div>
+<div>
+<p class="text-primary font-bold text-4xl mb-2 tracking-tighter">Al70</p>
+<p class="label-sm text-[#abaab1] uppercase tracking-widest">Aerospace Chassis</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-[#0e0e10] w-full py-20 px-6 md:px-12 border-t border-[#47474d]/15">
+<div class="max-w-[1440px] mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
+<div class="flex flex-col items-center md:items-start gap-4">
+<div class="text-[#e6e4ec] font-bold text-2xl tracking-tighter">AETHER</div>
+<p class="font-inter text-[11px] uppercase tracking-[0.1em] text-[#abaab1]">© 2024 Aether Systems. Engineered for Silence.</p>
+</div>
+<div class="flex gap-8">
+<a class="font-inter text-[11px] uppercase tracking-[0.1em] text-[#abaab1] hover:text-[#c6c6c7] transition-colors" href="#">Privacy</a>
+<a class="font-inter text-[11px] uppercase tracking-[0.1em] text-[#abaab1] hover:text-[#c6c6c7] transition-colors" href="#">Terms</a>
+<a class="font-inter text-[11px] uppercase tracking-[0.1em] text-[#abaab1] hover:text-[#c6c6c7] transition-colors" href="#">Newsroom</a>
+<a class="font-inter text-[11px] uppercase tracking-[0.1em] text-[#abaab1] hover:text-[#c6c6c7] transition-colors" href="#">Sustainability</a>
+</div>
+<div class="flex gap-6">
+<span class="material-symbols-outlined text-[#abaab1] cursor-pointer hover:text-on-surface transition-colors" data-icon="language">language</span>
+<span class="material-symbols-outlined text-[#abaab1] cursor-pointer hover:text-on-surface transition-colors" data-icon="share">share</span>
+</div>
+</div>
+</footer>
+</body></html>

@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>SHIBUYA_STATION // TOKYO_ARCHIVE</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-container-lowest": "#0e0e0e",
+                        "outline": "#849495",
+                        "tertiary-container": "#dddbdb",
+                        "on-secondary-fixed": "#261a00",
+                        "on-tertiary-container": "#606060",
+                        "on-tertiary": "#303031",
+                        "inverse-surface": "#e5e2e1",
+                        "outline-variant": "#3a494b",
+                        "secondary-fixed-dim": "#fbbc00",
+                        "surface-tint": "#00dce6",
+                        "error-container": "#93000a",
+                        "on-primary-fixed-variant": "#004f53",
+                        "surface-container": "#201f1f",
+                        "secondary-container": "#ffbf00",
+                        "inverse-primary": "#00696f",
+                        "on-secondary": "#402d00",
+                        "on-tertiary-fixed-variant": "#464747",
+                        "on-secondary-container": "#6d5000",
+                        "surface-container-high": "#2a2a2a",
+                        "on-primary-fixed": "#002022",
+                        "surface-variant": "#353534",
+                        "on-surface": "#e5e2e1",
+                        "error": "#ffb4ab",
+                        "surface": "#131313",
+                        "surface-dim": "#131313",
+                        "surface-container-highest": "#353534",
+                        "on-secondary-fixed-variant": "#5c4300",
+                        "on-background": "#e5e2e1",
+                        "primary-fixed-dim": "#00dce6",
+                        "secondary": "#ffe2ab",
+                        "on-surface-variant": "#b9cacb",
+                        "on-primary": "#00373a",
+                        "on-error": "#690005",
+                        "on-tertiary-fixed": "#1b1c1c",
+                        "primary": "#e3fdff",
+                        "surface-container-low": "#1c1b1b",
+                        "secondary-fixed": "#ffdfa0",
+                        "background": "#131313",
+                        "tertiary": "#f9f8f7",
+                        "tertiary-fixed-dim": "#c7c6c6",
+                        "on-primary-container": "#006b71",
+                        "surface-bright": "#3a3939",
+                        "inverse-on-surface": "#313030",
+                        "primary-container": "#00f3ff",
+                        "on-error-container": "#ffdad6",
+                        "primary-fixed": "#6ff6ff",
+                        "tertiary-fixed": "#e4e2e2"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0px",
+                        "lg": "0px",
+                        "xl": "0px",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Space Grotesk"],
+                        "body": ["Inter"],
+                        "label": ["Space Grotesk"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            background-color: #131313;
+            color: #e5e2e1;
+            font-family: 'Inter', sans-serif;
+        }
+        .tabular-nums {
+            font-variant-numeric: tabular-nums;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 200, 'GRAD' 0, 'opsz' 24;
+        }
+        /* Custom Scanline Progress Bar */
+        .scanline-progress {
+            background: linear-gradient(90deg, transparent 0%, #00f3ff 50%, transparent 100%);
+            background-size: 200% 100%;
+        }
+    </style>
+</head>
+<body class="antialiased overflow-x-hidden selection:bg-primary-container selection:text-on-primary">
+<!-- TopNavBar -->
+<header class="fixed top-0 w-full z-50 flex justify-between items-center px-6 bg-[#131313]/80 backdrop-blur-xl border-b border-[#00F3FF]/15 h-12 shadow-[0_0_15px_rgba(0,243,255,0.05)]">
+<div class="text-xl font-bold tracking-tighter text-[#00F3FF] font-headline">SHIBUYA_STATION</div>
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-[#00F3FF] border-b border-[#00F3FF] pb-1 font-space-grotesk uppercase tracking-[0.1em] text-xs transition-colors hover:bg-[#00F3FF]/5" href="#">ARCHIVE</a>
+<a class="text-[#00F3FF]/60 font-space-grotesk uppercase tracking-[0.1em] text-xs transition-colors hover:text-[#00F3FF] hover:bg-[#00F3FF]/5" href="#">METRICS</a>
+<a class="text-[#00F3FF]/60 font-space-grotesk uppercase tracking-[0.1em] text-xs transition-colors hover:text-[#00F3FF] hover:bg-[#00F3FF]/5" href="#">PROTOCOL</a>
+</nav>
+<div class="flex items-center gap-4">
+<span class="font-space-grotesk uppercase tracking-[0.1em] text-xs text-[#00F3FF]/60">CODE_200</span>
+<div class="h-4 w-[1px] bg-[#00F3FF]/20"></div>
+<span class="font-space-grotesk uppercase tracking-[0.1em] text-xs text-[#00F3FF]">JST_UTC+9</span>
+</div>
+</header>
+<main class="pt-12">
+<!-- Hero Section -->
+<section class="relative h-[921px] flex items-center justify-center overflow-hidden">
+<div class="absolute inset-0 z-0">
+<img class="w-full h-full object-cover opacity-40 mix-blend-luminosity" data-alt="cinematic wide shot of shibuya crossing at night during heavy rain with vibrant blue and amber neon lights reflecting on wet pavement" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDJAgDasEvwuObC6o3YpWFdCBbob91qbi-UNzO1abKGSO2JJr_cOzfy9GrwJKCMarv4gPtdu-oGtx3lVg3rhkF8BXPXrTs_lMhrY0FW7E0RjFQxDAnmRtHt8nAXuCDgQXQ-4Cz8RvS-IGvb0Red7dFi5WYtPmkSMhQl-UsIyygjsNkO2-pqtpPblWSln7efo0Lp87m9v85j1VulRAG4HYim_iWiprGeLsM3Jfusxyrq-BC6EhP7efS_hgup3H71xkjFX011VSewTDg"/>
+<div class="absolute inset-0 bg-gradient-to-b from-surface-container-lowest via-transparent to-surface"></div>
+</div>
+<div class="relative z-10 text-center space-y-8 px-6">
+<div class="space-y-2">
+<p class="font-label uppercase tracking-[0.5em] text-secondary text-xs opacity-80">STATION_IDENTIFIER // SHB_001</p>
+<h1 class="font-headline text-6xl md:text-[8rem] font-bold tracking-tighter text-primary-container drop-shadow-[0_0_20px_rgba(0,243,255,0.4)] leading-none uppercase">
+                        TOKYO_ARCHIVE
+                    </h1>
+</div>
+<div class="flex flex-col items-center gap-6">
+<button class="group relative px-12 py-4 bg-primary-container text-on-primary font-label font-bold tracking-widest text-sm shadow-[0_0_25px_rgba(0,243,255,0.2)] hover:shadow-[0_0_40px_rgba(0,243,255,0.4)] transition-all">
+<span class="relative z-10">DATA_ENTRY</span>
+<div class="absolute inset-0 bg-white opacity-0 group-hover:opacity-10 transition-opacity"></div>
+</button>
+<div class="w-48 h-[1px] bg-outline-variant/30 relative">
+<div class="absolute top-0 left-0 h-full w-1/3 bg-primary-container scanline-progress"></div>
+</div>
+</div>
+</div>
+<!-- Decorative Coordinate Detail -->
+<div class="absolute bottom-12 left-12 hidden lg:block">
+<div class="font-body tabular-nums text-[10px] tracking-widest text-outline uppercase space-y-1">
+<p>LAT: 35.6595° N</p>
+<p>LNG: 139.7005° E</p>
+<p>ELEV: 14.2M</p>
+</div>
+</div>
+</section>
+<!-- The Collection Grid -->
+<section class="max-w-[1400px] mx-auto px-6 py-24 space-y-24">
+<div class="flex flex-col md:flex-row justify-between items-end gap-6 border-l-2 border-primary-container pl-6">
+<div class="space-y-4">
+<h2 class="font-headline text-4xl font-bold uppercase tracking-tight text-white">Visual_Studies</h2>
+<p class="max-w-md text-on-surface-variant font-body text-sm leading-relaxed">
+                        A systematic decompression of the cinematic aesthetic. Documenting the intersection of light, moisture, and brutalist architecture within the Shibuya sector.
+                    </p>
+</div>
+<div class="font-label text-[10px] tracking-[0.2em] text-secondary-fixed-dim uppercase">
+                    TOTAL_ENTRIES: 04 // FILTER: ACTIVE
+                </div>
+</div>
+<!-- Bento Grid of Art Direction Studies -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+<!-- Study 1: Rain-Slicked Pavement -->
+<div class="group relative aspect-[4/5] bg-surface-container overflow-hidden border border-outline-variant/10">
+<img class="w-full h-full object-cover opacity-60 group-hover:scale-105 transition-transform duration-700 grayscale hover:grayscale-0" data-alt="dramatic close-up of dark asphalt pavement wet with rain reflecting yellow and blue light sources in a cinematic noir style" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBEejJZ8jHyfNBP7MBy8em49N80ObwSAut3OleCghMI2PdKIE4kyw4NMTLBP0o4o9_OW1GRWMtgRVhyhbJrrh6pqPZMfX1am5SG1UgssqicGnaEbaYVuaXYZ2USjWRdGF2Moi1qmB-Ns03dRSFJ5p-Gaxw_xXZc9sv4XLiKSDfyS_i_RFudwIdPBx-1NNsb_kGxSdYMzETsUEfvXPaEAEFMpkIJJVWmg7KSRigvH44gbJDRpmTViocQ87dxhXBDM7jy6tifmgFJmdI"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest to-transparent opacity-80"></div>
+<div class="absolute bottom-0 left-0 p-6 w-full space-y-3">
+<span class="inline-block py-1 px-2 bg-secondary-container text-on-secondary-container text-[9px] font-bold tracking-widest uppercase">L_ENT_01</span>
+<h3 class="font-headline text-xl text-primary-container font-bold uppercase">Rain-Slicked Pavement</h3>
+<div class="grid grid-cols-2 gap-2 text-[9px] font-body tabular-nums text-on-surface-variant/70 pt-4 border-t border-white/5">
+<div>FOCAL: 35MM</div>
+<div>ISO: 800</div>
+<div class="col-span-2">HASH: #1A1A1A / #00F3FF</div>
+</div>
+</div>
+</div>
+<!-- Study 2: Holographic Typography -->
+<div class="group relative aspect-[4/5] bg-surface-container overflow-hidden border border-outline-variant/10">
+<img class="w-full h-full object-cover opacity-60 group-hover:scale-105 transition-transform duration-700 grayscale hover:grayscale-0" data-alt="abstract composition of glowing cyan neon text blurred in the background with sharp tech geometric shapes in foreground" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDnTTePyFAYl4S73x1ecwzDXzM-wCeG3cjdpkXJxcSVgTUQL7Mvo9HUiA-BAPc5vxOPmN_BS6EKgyIsJ2_RDzfNp1ilFN82xi71_So_Uniz0Be_Am-6p_VAmCrhfRGq67YJTISuTcipUKMyMEbLFVZTP505iVZhMjrDZtPb4NVSBhI6n4vuSXSMIrDK_mRwr6xQe1F0G6S_YIRP21gKsi7wZEs1PvRVOTse-t3lSgmNde8lBncOVy9ZAmaB0UN2m4yYBKTcUI2T3mM"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest to-transparent opacity-80"></div>
+<div class="absolute bottom-0 left-0 p-6 w-full space-y-3">
+<span class="inline-block py-1 px-2 bg-secondary-container text-on-secondary-container text-[9px] font-bold tracking-widest uppercase">L_ENT_02</span>
+<h3 class="font-headline text-xl text-primary-container font-bold uppercase">Holographic Typography</h3>
+<div class="grid grid-cols-2 gap-2 text-[9px] font-body tabular-nums text-on-surface-variant/70 pt-4 border-t border-white/5">
+<div>FOCAL: 50MM</div>
+<div>ISO: 1600</div>
+<div class="col-span-2">HASH: #000000 / #00F3FF</div>
+</div>
+</div>
+</div>
+<!-- Study 3: Smoked-Glass Textures -->
+<div class="group relative aspect-[4/5] bg-surface-container overflow-hidden border border-outline-variant/10">
+<img class="w-full h-full object-cover opacity-60 group-hover:scale-105 transition-transform duration-700 grayscale hover:grayscale-0" data-alt="architectural shot of dark glass and steel building facade with deep shadows and soft ambient lighting from street below" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD-8UAtGrdxM4ESaPS2MOBZnfpxPqsAXd3e_HoJUwzu79d0_Z1oqA0LLe6SFrIGM1z0PXo7ecJydovmiX0DgEI7HVfpCjfRd7rBZF1PBpiHBpgKs2V9QqPg-u2OeJPRwUbpCkZfrGYvHCsinLG41ZVXGt4MqVxPdMs5pqo1Z9dhfY2g9i8IDceK0QqNZiCU6szru-Ut1GCPR3VmJVzWzLGG3cw5EgicJ8R3z-eJjIuL0FMr9w4Pzn4pfi3iwkU7ApFn99aLKtclBnY"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest to-transparent opacity-80"></div>
+<div class="absolute bottom-0 left-0 p-6 w-full space-y-3">
+<span class="inline-block py-1 px-2 bg-secondary-container text-on-secondary-container text-[9px] font-bold tracking-widest uppercase">L_ENT_03</span>
+<h3 class="font-headline text-xl text-primary-container font-bold uppercase">Smoked-Glass Textures</h3>
+<div class="grid grid-cols-2 gap-2 text-[9px] font-body tabular-nums text-on-surface-variant/70 pt-4 border-t border-white/5">
+<div>FOCAL: 85MM</div>
+<div>ISO: 400</div>
+<div class="col-span-2">HASH: #0E0E0E / #353534</div>
+</div>
+</div>
+</div>
+<!-- Study 4: Signal Light Studies -->
+<div class="group relative aspect-[4/5] bg-surface-container overflow-hidden border border-outline-variant/10">
+<img class="w-full h-full object-cover opacity-60 group-hover:scale-105 transition-transform duration-700 grayscale hover:grayscale-0" data-alt="close up of warm amber glowing traffic signals or industrial lights in a dark rainy urban environment with heavy bokeh" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAsq5rE-G_oAJbi-vceI9C8yEppxIIH_mLv2us90E28a3sNVFjCh51Pb4A9cqyogyEm8FYW4LWknCVKv91q1edTS0NUnaWXrIAnDvsVQ4pMGSXa9iuulwvx77R8UWQRH5L2LJ8ldzO1CTJf1BHSBApLZhKvpqVvuKIzlZ0_NIK2gsBxQUphj4ZehM60h8-j3SP7EejczsWYQW_CvUhkXpcDNTYTGObRVCBfah213WOvt3RxRy-g7-8JSnA0JfkfiRsTzX6bjjgz2hk"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest to-transparent opacity-80"></div>
+<div class="absolute bottom-0 left-0 p-6 w-full space-y-3">
+<span class="inline-block py-1 px-2 bg-secondary-container text-on-secondary-container text-[9px] font-bold tracking-widest uppercase">L_ENT_04</span>
+<h3 class="font-headline text-xl text-primary-container font-bold uppercase">Signal Light Studies</h3>
+<div class="grid grid-cols-2 gap-2 text-[9px] font-body tabular-nums text-on-surface-variant/70 pt-4 border-t border-white/5">
+<div>FOCAL: 24MM</div>
+<div>ISO: 3200</div>
+<div class="col-span-2">HASH: #FFBF00 / #261A00</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Technical Breakdown Section -->
+<section class="bg-surface-container-lowest py-24">
+<div class="max-w-[1400px] mx-auto px-6">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+<div class="space-y-12">
+<div class="space-y-4">
+<h2 class="font-headline text-5xl font-extrabold uppercase text-secondary">Aesthetic_Metrics</h2>
+<p class="text-on-surface-variant/60 font-body max-w-sm">Detailed telemetry on visual fidelity and atmospheric conditions during capture.</p>
+</div>
+<div class="space-y-8">
+<!-- Metric 1 -->
+<div class="space-y-2">
+<div class="flex justify-between items-end">
+<span class="font-label text-xs uppercase tracking-widest text-primary-container">Chrominance_Level</span>
+<span class="font-body tabular-nums text-xs text-secondary">82.4%</span>
+</div>
+<div class="h-1 bg-surface-container-highest w-full">
+<div class="h-full bg-primary-container shadow-[0_0_8px_rgba(0,243,255,0.4)] w-[82.4%]"></div>
+</div>
+</div>
+<!-- Metric 2 -->
+<div class="space-y-2">
+<div class="flex justify-between items-end">
+<span class="font-label text-xs uppercase tracking-widest text-primary-container">Luminance_Variance</span>
+<span class="font-body tabular-nums text-xs text-secondary">14.1%</span>
+</div>
+<div class="h-1 bg-surface-container-highest w-full">
+<div class="h-full bg-primary-container shadow-[0_0_8px_rgba(0,243,243,0.4)] w-[14.1%]"></div>
+</div>
+</div>
+<!-- Metric 3 -->
+<div class="space-y-2">
+<div class="flex justify-between items-end">
+<span class="font-label text-xs uppercase tracking-widest text-primary-container">Refractive_Index</span>
+<span class="font-body tabular-nums text-xs text-secondary">67.9%</span>
+</div>
+<div class="h-1 bg-surface-container-highest w-full">
+<div class="h-full bg-primary-container shadow-[0_0_8px_rgba(0,243,255,0.4)] w-[67.9%]"></div>
+</div>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+<!-- Art Direction Card 1 -->
+<div class="bg-surface-variant/20 backdrop-blur-md p-8 border-l border-t border-white/5 space-y-6">
+<div class="flex justify-between items-start">
+<span class="material-symbols-outlined text-secondary text-lg">filter_center_focus</span>
+<span class="font-label text-[10px] text-outline uppercase tracking-tighter">REF: 72-A</span>
+</div>
+<h4 class="font-headline text-lg font-bold uppercase text-white">Shadow_Depth</h4>
+<p class="text-xs text-on-surface-variant leading-relaxed">Achieving #0E0E0E surface wells via specific exposure compensation and dark-room processing.</p>
+<div class="pt-4 border-t border-white/10 font-body tabular-nums text-[10px] text-secondary space-y-1 uppercase tracking-widest">
+<p>COORD: 12.001 // 88.421</p>
+<p>TINT: CYAN_OFFSET_2</p>
+</div>
+</div>
+<!-- Art Direction Card 2 -->
+<div class="bg-surface-variant/20 backdrop-blur-md p-8 border-l border-t border-white/5 space-y-6">
+<div class="flex justify-between items-start">
+<span class="material-symbols-outlined text-secondary text-lg">blur_on</span>
+<span class="font-label text-[10px] text-outline uppercase tracking-tighter">REF: 04-F</span>
+</div>
+<h4 class="font-headline text-lg font-bold uppercase text-white">Glass_Blur</h4>
+<p class="text-xs text-on-surface-variant leading-relaxed">The layering of smoky panels to create infinite perceived depth in compact digital spaces.</p>
+<div class="pt-4 border-t border-white/10 font-body tabular-nums text-[10px] text-secondary space-y-1 uppercase tracking-widest">
+<p>COORD: 45.109 // 12.008</p>
+<p>TINT: AMBER_WASH_4</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full py-4 px-8 flex flex-col md:flex-row justify-between items-center border-t border-white/5 bg-[#0E0E0E]">
+<div class="text-[#FFBF00] font-black font-label text-[10px] tracking-widest uppercase mb-4 md:mb-0">
+            © 2024 SHIBUYA_STATION // ALL_RIGHTS_RESERVED
+        </div>
+<div class="flex gap-8">
+<a class="text-gray-500 font-inter tabular-nums text-[10px] tracking-widest uppercase hover:text-[#FFBF00] hover:scale-[1.02] transition-transform" href="#">LICENSE_V2</a>
+<a class="text-gray-500 font-inter tabular-nums text-[10px] tracking-widest uppercase hover:text-[#FFBF00] hover:scale-[1.02] transition-transform" href="#">SYSTEM_INTEGRITY</a>
+<a class="text-[#FFBF00] underline font-inter tabular-nums text-[10px] tracking-widest uppercase" href="#">ENCRYPTED_LINK</a>
+</div>
+</footer>
+<!-- FAB (Suppressed based on context of being an Archive/Details page) -->
+<!-- Determined as a specialized archive, FAB is suppressed for focus -->
+</body></html>

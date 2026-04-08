@@ -1,0 +1,21 @@
+{
+  "brand": "Apple",
+  "contentType": "image/png",
+  "fileName": "apple-ai-launch.png",
+  "generatedAt": "2026-04-02T01:32:48.261Z",
+  "htmlUrl": "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ8Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpbCiVodG1sXzIzYTFiMjU4M2Y2NjQ4M2RhYTg3ODc3M2EzMGI0NGQ1EgsSBxCCisPc0AkYAZIBJAoKcHJvamVjdF9pZBIWQhQxNTE0MTM2NDkwMzg3Mzk0NjczOA&filename=&opi=96797242",
+  "imageUrl": "https://lh3.googleusercontent.com/aida/ADBb0ujKJY69BeQ-IGGp6bwmh-wHmEwl0lLn6aqagwiouUDjoYI-b02FTd38Tayevdl9mGU3hUos4Cp6BnuMJ2WOpU5PIm9-hgAobrgs11vzo7-UdKHg6NDKIEU94eP3VbBmws3d2FYbPms8O6MbPSla1Uj8ozh-Wit33QFllnpH74n2U_yf7T3daDAl88Opnd18aey-ZUeCNquPVN28QYmNNNaeII3I7Y5w13tj-4alkluSFQEhzbHO6Tlhm1O0",
+  "notes": [
+    "I've designed the Aether AI landing page with a focus on that premium, Apple-inspired aesthetic you requested. \n\nThe design features:\n- **Generous whitespace** and quiet monochrome surfaces to let the content breathe.\n- A **centered hero section** with crisp, high-end typography and a subtle translucency in the navigation.\n- A **single cobalt highlight** for the primary CTA, ensuring it feels precise and expensive.\n- **Subtle depth** through soft shadows and minimalist UI chrome to maintain a clean, sophisticated look.\n\nHow does this direction look to you? I'm happy to refine the layout further or start on additional screens like a product deep-dive or pricing page."
+  ],
+  "prompt": "Design a premium AI product landing page in an Apple-inspired direction with generous white space, quiet monochrome surfaces, crisp product typography, subtle depth, and one disciplined cobalt highlight. Keep the hero centered, reduce chrome, and make the CTA feel precise and expensive rather than loud.",
+  "projectId": "15141364903873946738",
+  "screenId": "2252f3b7b7e44d3f89e23c7461613645",
+  "slug": "apple-ai-launch",
+  "suggestions": [
+    "Add a features detail page",
+    "Design a pricing screen in this style",
+    "Create a dark mode version"
+  ],
+  "title": "Aether AI - Landing Page"
+}

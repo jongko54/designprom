@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,400;0,700;0,900;1,900&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "surface-container-low": "#131313",
+              "inverse-primary": "#aa00aa",
+              "secondary-fixed-dim": "#00deec",
+              "on-tertiary-fixed-variant": "#0f6700",
+              "surface-variant": "#262626",
+              "tertiary-dim": "#2eef00",
+              "secondary-fixed": "#00eefc",
+              "on-tertiary": "#0f6500",
+              "primary": "#ff7cf5",
+              "error": "#ff6e84",
+              "primary-fixed-dim": "#ff1cfe",
+              "tertiary-fixed": "#32ff00",
+              "surface-bright": "#2c2c2c",
+              "error-dim": "#d73357",
+              "on-primary-fixed": "#000000",
+              "secondary": "#00eefc",
+              "on-tertiary-container": "#0c5c00",
+              "outline": "#767575",
+              "on-secondary-container": "#e3fdff",
+              "primary-fixed": "#ff5af9",
+              "surface-container-highest": "#262626",
+              "on-primary": "#580058",
+              "surface-dim": "#0e0e0e",
+              "on-background": "#ffffff",
+              "tertiary": "#b0ff96",
+              "on-error-container": "#ffb2b9",
+              "on-secondary-fixed-variant": "#005e64",
+              "surface": "#0e0e0e",
+              "surface-tint": "#ff7cf5",
+              "background": "#0e0e0e",
+              "primary-dim": "#ff51fa",
+              "on-surface": "#ffffff",
+              "inverse-surface": "#fcf9f8",
+              "on-secondary-fixed": "#003f43",
+              "outline-variant": "#484847",
+              "surface-container": "#1a1a1a",
+              "inverse-on-surface": "#565555",
+              "on-secondary": "#005359",
+              "on-tertiary-fixed": "#074600",
+              "on-primary-container": "#440044",
+              "surface-container-lowest": "#000000",
+              "on-error": "#490013",
+              "on-surface-variant": "#adaaaa",
+              "tertiary-container": "#32ff00",
+              "surface-container-high": "#20201f",
+              "secondary-container": "#006970",
+              "secondary-dim": "#00deec",
+              "tertiary-fixed-dim": "#2eef00",
+              "error-container": "#a70138",
+              "on-primary-fixed-variant": "#540054",
+              "primary-container": "#ff5af9"
+            },
+            fontFamily: {
+              "headline": ["Epilogue"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+      .depth-through-blur {
+        backdrop-filter: blur(20px);
+      }
+      .kinetic-shadow {
+        box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+      }
+      .primary-glow {
+        box-shadow: 0 0 30px rgba(255, 124, 245, 0.15);
+      }
+      .neon-text-glow {
+        text-shadow: 0 0 12px rgba(255, 124, 245, 0.6);
+      }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body overflow-x-hidden selection:bg-primary selection:text-on-primary">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-surface/60 backdrop-blur-xl flex justify-between items-center px-6 py-4 kinetic-shadow">
+<div class="text-2xl font-black italic tracking-tighter text-pink-500 dark:text-pink-400">PULSE CHALLENGE</div>
+<div class="hidden md:flex items-center gap-8">
+<a class="text-pink-500 dark:text-pink-400 font-bold border-b-4 border-pink-500 font-epilogue tracking-tighter uppercase transition-all duration-300" href="#">Discover</a>
+<a class="text-on-surface-variant font-medium font-epilogue tracking-tighter uppercase hover:scale-105 hover:text-cyan-400 transition-all duration-300" href="#">Trending</a>
+<a class="text-on-surface-variant font-medium font-epilogue tracking-tighter uppercase hover:scale-105 hover:text-cyan-400 transition-all duration-300" href="#">LIVE</a>
+</div>
+<button class="bg-primary hover:bg-primary-container text-on-primary font-bold px-6 py-2 rounded-full scale-95 active:scale-90 transition-transform font-label uppercase tracking-wider text-sm shadow-[0_0_20px_rgba(255,124,245,0.4)]">
+            Join Challenge
+        </button>
+</nav>
+<main class="pt-24">
+<!-- Hero Header -->
+<section class="relative w-full min-h-[819px] flex flex-col items-center justify-center px-6 text-center overflow-hidden">
+<div class="absolute inset-0 z-0 opacity-40">
+<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-primary/20 via-background to-background"></div>
+</div>
+<div class="relative z-10 max-w-5xl">
+<div class="inline-flex items-center gap-2 px-4 py-1 rounded-full bg-surface-container-highest mb-8 border border-outline-variant/20">
+<span class="material-symbols-outlined text-tertiary text-sm" style="font-variation-settings: 'FILL' 1;">bolt</span>
+<span class="font-label uppercase text-[10px] tracking-widest font-bold text-tertiary">Live Now: #NeonSynapse Challenge</span>
+</div>
+<h1 class="font-headline font-black text-6xl md:text-8xl lg:text-9xl tracking-tighter leading-[0.9] uppercase italic mb-8">
+                    BREAK THE <span class="text-primary italic neon-text-glow">ALGORITHM.</span> <br/>
+<span class="inline-block bg-secondary text-on-secondary px-4 transform -skew-x-12 mt-2">JOIN THE</span> CHALLENGE.
+                </h1>
+<p class="font-body text-on-surface-variant text-lg md:text-xl max-w-2xl mx-auto mb-10 leading-relaxed">
+                    Sync your neural network with the pulse. The #NeonSynapse challenge is rewriting the social code. Are you in or out?
+                </p>
+<div class="flex flex-wrap items-center justify-center gap-6">
+<button class="bg-primary text-on-primary font-headline font-black text-xl px-10 py-5 rounded-full hover:scale-105 active:scale-95 transition-all primary-glow uppercase italic tracking-tighter">
+                        Drop Your Entry
+                    </button>
+<div class="flex items-center -space-x-4">
+<img alt="User profile" class="w-12 h-12 rounded-full border-4 border-surface" data-alt="close-up portrait of a young man with neon lighting on his face" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAeyc314Fw2lR8JKm6kTdH3jORLCGUow8L8xWZxdfZqtKdWI5v_uCXYyx_y9XkOIlduyMAvS8EvyZb16oefo0hs2o5FpxVhgq4nPefQdXS002uZGK4nD6elv316pqEjX1mzD7NQ2NaOdheOj3smvXJ0Ciln9crQBTe8MmbC84tMOMb8ONAXAol8MsrO4AqlLmOj-qeOvv314_BpYyfngGyX9x9zXyMYlup9PziGan3tnkJo1e66CjUf6S8XXhLysX6SzqqhzxB4P4wi"/>
+<img alt="User profile" class="w-12 h-12 rounded-full border-4 border-surface" data-alt="vibrant portrait of a woman with pink and blue gel lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCOlv422k8uD6DTysgo1cCRILx8R0aUAORWR3fhpd3kq_7isS-oNwUM31DSa2-laATs-BOoxMvMHPW-sM7A7wzLvZMa_LSpMssIHbnBtdqqXV5m8U82Ri1xqje8INE4ZYJTGKeZH24STk1HcoH98p7ch3LUDIkhWoEqIo5hx50Ko1QDZQmZLcymIrqasOxFfAaefqeF8DOS55WklYuogJFehYk0b3q5WKjr5FztI1Xrg8_Y4K0wZ44qRjEUF6hS6gPSq1NFKhuS6P2M"/>
+<img alt="User profile" class="w-12 h-12 rounded-full border-4 border-surface" data-alt="stylish person in cyber punk urban setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCmAPeCf-fy8znWEeI7vcHE1Zq1eC6cD3D5kF5I5VmN0E4G8CKofCHQNW5OHeg20PoAcR94vvDiCdVP-yxxGZe0U38-n8pXSxIgHjHo1sdUJGdWkOW9Mz30DlYr-Y997FtipZCaH-eq6xk4tN5xIEVPrT6GOCqG6zRUXxKNHxrsC1ZlJf70JfWAS28WwMI_IBSK_fZ-psv_FJWp1ExaKmqfPo4tNN6xOCZDOKcMRTNWoJ-T3cEwhtl6NH6ejaBi2kATd1R_eySAAHGl"/>
+<div class="w-12 h-12 rounded-full border-4 border-surface bg-surface-container-highest flex items-center justify-center text-[10px] font-bold">
+                            +4.2k
+                        </div>
+</div>
+</div>
+</div>
+</section>
+<!-- Creator Showcase -->
+<section class="px-6 py-24 bg-surface-container-low rounded-t-xl">
+<div class="max-w-7xl mx-auto">
+<div class="flex justify-between items-end mb-16">
+<div>
+<h2 class="font-headline font-black text-5xl tracking-tighter uppercase italic">The Elite <span class="text-tertiary">Pulse</span></h2>
+<p class="text-on-surface-variant font-medium mt-2">Creators currently leading the synapse wave.</p>
+</div>
+<button class="hidden md:flex items-center gap-2 text-primary font-bold font-label uppercase tracking-widest text-xs hover:gap-4 transition-all">
+                        View All Drops <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<!-- Creator Card 1 -->
+<div class="group relative aspect-[3/4] rounded-xl overflow-hidden bg-surface-container-highest">
+<img alt="Creator entry" class="absolute inset-0 w-full h-full object-cover opacity-80 group-hover:scale-110 transition-transform duration-700" data-alt="dynamic shot of a dancer in a dark studio with pink neon light streaks around them" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCznYEF6rfJ7yDmZEVpnQfHO2woy5ARyhw4YT3Na67sQr7HmH2gk5dixP8DkBViZpRviohuYr7ja2_-lX37lOCrXMeyWExcLIMRflgHwncDFxJukhCEWdsXlPit0NtCROKxMSW98tqAR-Olulj_MosvwSvClgUqIOg2LRsiqmnVQ7tCDx6N7ErCVm4KGzw1ull4u6D7wlImptwFdkvnar03QFBrC8wJrZKJk97wUk0CckD_XeVZirOfKJh3qBc6RbFxNqCn2UwSlakg"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-transparent"></div>
+<div class="absolute top-6 left-6 flex items-center gap-3">
+<div class="p-1 rounded-full bg-tertiary">
+<span class="material-symbols-outlined text-on-tertiary text-xs" style="font-variation-settings: 'FILL' 1;">trending_up</span>
+</div>
+<span class="font-label text-[10px] uppercase font-black bg-black/40 backdrop-blur-md px-3 py-1 rounded-full tracking-widest">Trending</span>
+</div>
+<div class="absolute bottom-0 left-0 w-full p-8">
+<div class="flex items-center gap-4 mb-4">
+<img alt="Avatar" class="w-10 h-10 rounded-full border-2 border-primary" data-alt="avatar of a female creator with neon blue hair" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDcrZv-Iz37Owf61Y0kttHegUk_6zKvv6-Bsa2DkVnEmxKFf_8UVB2mJ8B1lMQPYzpI0L1_3w0auhx_fREjZHVgAUdzBnf3umOIWr_VFwPL6VhulLHW9v6Hl9lRJXEm9aux8HmDp2qU1qVgFWmZenxzyNfUr4LPqIoVspaB0itrLRGGjULOjQ_NRhf3Wno63L63qkQkXVZsv14gZE6H6RMq4f-6sy4DzSasmCMHThiDbzDoEfaOesVHr58s0V2QZLYXgjUZ6acGdvUJ"/>
+<div>
+<h4 class="font-bold text-sm">@Veda_Flux</h4>
+<p class="text-[10px] text-on-surface-variant uppercase font-bold tracking-widest">Digital Architect</p>
+</div>
+</div>
+<div class="flex gap-6 mb-6">
+<div class="flex flex-col">
+<span class="text-xl font-headline font-black text-secondary italic leading-none">1.2M</span>
+<span class="text-[10px] font-label uppercase text-on-surface-variant font-bold">Views</span>
+</div>
+<div class="flex flex-col">
+<span class="text-xl font-headline font-black text-primary italic leading-none">840K</span>
+<span class="text-[10px] font-label uppercase text-on-surface-variant font-bold">Pulse</span>
+</div>
+</div>
+<button class="w-full bg-white/10 backdrop-blur-xl border border-white/20 text-on-surface py-4 rounded-full font-headline font-black uppercase italic tracking-tighter hover:bg-primary hover:text-on-primary hover:border-transparent transition-all">
+                                Recreate This
+                            </button>
+</div>
+</div>
+<!-- Creator Card 2 -->
+<div class="group relative aspect-[3/4] rounded-xl overflow-hidden bg-surface-container-highest md:mt-12">
+<img alt="Creator entry" class="absolute inset-0 w-full h-full object-cover opacity-80 group-hover:scale-110 transition-transform duration-700" data-alt="creative portrait of a person with complex neon makeup and glass reflections" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBV4WfSqcTcW0Gf4ngiB6sICM47RBsD4klesVjVGNAAie_CxzUu99oCMgBcmJw6IjEiCjh3Y9or7pPpwT7xBvHDKQwWlBCCxu-LmkcYUiIl4s8MSDea72JlhF78JF6vcVseN-cQFlEmFZxFPFuAHQRq-uXL1ZtLo3lldUueytF04nKRE2zpXi9gd78ogYEdbQv3qtIUBtzau_1dHNW9VfvSgtl9etAnU2GxLBncTnQkC9tRpvPwX-hR7ANXHhwrJyCs-iTZNfH7xi1r"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-transparent"></div>
+<div class="absolute top-6 left-6 flex items-center gap-3">
+<div class="p-1 rounded-full bg-secondary">
+<span class="material-symbols-outlined text-on-secondary text-xs" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<span class="font-label text-[10px] uppercase font-black bg-black/40 backdrop-blur-md px-3 py-1 rounded-full tracking-widest">Rising Star</span>
+</div>
+<div class="absolute bottom-0 left-0 w-full p-8">
+<div class="flex items-center gap-4 mb-4">
+<img alt="Avatar" class="w-10 h-10 rounded-full border-2 border-secondary" data-alt="avatar of a male creator with high fashion eyewear" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDUwc22FyUJLpSm-Bl-1HlM_INPqlBL13d4Fkyh00GpKvZTZ7Gkp4lPg_aTA1VBTwYq9EpndbA6INonPTE8PLhdNtGRqlcB6TfABOEUG9KLkbxq8qVngD8V7OBZNYJRy3aDalIs0izMamVYJgmDa9X1tY0ebve7UMwbft3hUPpdCaVchRgEpyuF1q5uTsAMGp8H0anUmRfBBtJ4ypt9JcuShQ4ff7-MFttyV_a631jubpUAlcy0NlUmNWsZzYMd_FgceVQSVeeIImJA"/>
+<div>
+<h4 class="font-bold text-sm">@Cypher_X</h4>
+<p class="text-[10px] text-on-surface-variant uppercase font-bold tracking-widest">Gitch Artist</p>
+</div>
+</div>
+<div class="flex gap-6 mb-6">
+<div class="flex flex-col">
+<span class="text-xl font-headline font-black text-secondary italic leading-none">940K</span>
+<span class="text-[10px] font-label uppercase text-on-surface-variant font-bold">Views</span>
+</div>
+<div class="flex flex-col">
+<span class="text-xl font-headline font-black text-primary italic leading-none">520K</span>
+<span class="text-[10px] font-label uppercase text-on-surface-variant font-bold">Pulse</span>
+</div>
+</div>
+<button class="w-full bg-white/10 backdrop-blur-xl border border-white/20 text-on-surface py-4 rounded-full font-headline font-black uppercase italic tracking-tighter hover:bg-secondary hover:text-on-secondary hover:border-transparent transition-all">
+                                Recreate This
+                            </button>
+</div>
+</div>
+<!-- Creator Card 3 -->
+<div class="group relative aspect-[3/4] rounded-xl overflow-hidden bg-surface-container-highest">
+<img alt="Creator entry" class="absolute inset-0 w-full h-full object-cover opacity-80 group-hover:scale-110 transition-transform duration-700" data-alt="experimental high speed photography of colorful powder exploding in a dark studio" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDvQMulUdFmFy2G4z0tWWMf22KWa_4Ej3RpQABwJtD3fWoOTZl1czdwHx39Pdan5XGipUiOSakKE0lipfGfEoAXhOW5ahGsFPvFPp6kp9KlQVl6KLH6yPzXbGEmI41x3jlww_3SaetqcIE_ENt08yYIHG079VbDJHbLLa4Uk6u4EbQ0xHIpDDCZc6CBTbO1pFR4CAJMx_3pLAXFx8dyHOyy1rmqLPIt_-JyhzGPbxVOf35pz-NVP5bSFs_X5qXKEJWEFXMUDdAbYjfo"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-transparent"></div>
+<div class="absolute top-6 left-6 flex items-center gap-3">
+<div class="p-1 rounded-full bg-primary">
+<span class="material-symbols-outlined text-on-primary text-xs" style="font-variation-settings: 'FILL' 1;">auto_awesome</span>
+</div>
+<span class="font-label text-[10px] uppercase font-black bg-black/40 backdrop-blur-md px-3 py-1 rounded-full tracking-widest">Original</span>
+</div>
+<div class="absolute bottom-0 left-0 w-full p-8">
+<div class="flex items-center gap-4 mb-4">
+<img alt="Avatar" class="w-10 h-10 rounded-full border-2 border-tertiary" data-alt="avatar of a creator with a cool streetwear vibe" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAMcyi97jPX7o-6CN8sldGYMbwglqkmiolOEUKc2kWbyXzJ0IM2kPmLJC6dbfOqoIah0s9q4pF10DX_N8RA47HIZlBMYqA7RDXvJMq_vnpYJtJFqTEs8ponCS0Vb1t4qbUibDHndrqYqdzVZCn9JhHsiyzUbW6JCb426PG8WpSto3FfAOQUOSA77v79tRcFiLm_jHYmgoi4lMnFU6OfOIAQJ0whdUB6UUb3w-h2x7X0fe-_jCx34x4ty_nm3Ya9N7xVCuLP0c1dT-3h"/>
+<div>
+<h4 class="font-bold text-sm">@Neon_Drift</h4>
+<p class="text-[10px] text-on-surface-variant uppercase font-bold tracking-widest">Beat Maker</p>
+</div>
+</div>
+<div class="flex gap-6 mb-6">
+<div class="flex flex-col">
+<span class="text-xl font-headline font-black text-secondary italic leading-none">2.4M</span>
+<span class="text-[10px] font-label uppercase text-on-surface-variant font-bold">Views</span>
+</div>
+<div class="flex flex-col">
+<span class="text-xl font-headline font-black text-primary italic leading-none">1.1M</span>
+<span class="text-[10px] font-label uppercase text-on-surface-variant font-bold">Pulse</span>
+</div>
+</div>
+<button class="w-full bg-white/10 backdrop-blur-xl border border-white/20 text-on-surface py-4 rounded-full font-headline font-black uppercase italic tracking-tighter hover:bg-tertiary hover:text-on-tertiary hover:border-transparent transition-all">
+                                Recreate This
+                            </button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Challenge Mechanics -->
+<section class="py-24 px-6">
+<div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-center">
+<div class="order-2 lg:order-1">
+<div class="space-y-12">
+<!-- Step 1 -->
+<div class="flex gap-8 group">
+<div class="flex-shrink-0 w-20 h-20 bg-surface-container-highest rounded-xl flex items-center justify-center border-l-4 border-primary shadow-[10px_10px_0px_rgba(255,124,245,0.2)] group-hover:translate-x-2 transition-transform">
+<span class="font-headline font-black text-4xl italic text-primary">01</span>
+</div>
+<div>
+<h3 class="font-headline font-black text-2xl uppercase italic tracking-tight mb-2">Film your synapse</h3>
+<p class="text-on-surface-variant leading-relaxed">Capture your most energetic moment using our exclusive #NeonSynapse AR filter. Let the light trace your movement.</p>
+</div>
+</div>
+<!-- Step 2 -->
+<div class="flex gap-8 group">
+<div class="flex-shrink-0 w-20 h-20 bg-surface-container-highest rounded-xl flex items-center justify-center border-l-4 border-secondary shadow-[10px_10px_0px_rgba(0,238,252,0.2)] group-hover:translate-x-2 transition-transform">
+<span class="font-headline font-black text-4xl italic text-secondary">02</span>
+</div>
+<div>
+<h3 class="font-headline font-black text-2xl uppercase italic tracking-tight mb-2">Sync with the pulse</h3>
+<p class="text-on-surface-variant leading-relaxed">Match your edits to the "Hyper-Sync" audio track. Precision is the key to breaking the algorithm.</p>
+</div>
+</div>
+<!-- Step 3 -->
+<div class="flex gap-8 group">
+<div class="flex-shrink-0 w-20 h-20 bg-surface-container-highest rounded-xl flex items-center justify-center border-l-4 border-tertiary shadow-[10px_10px_0px_rgba(176,255,150,0.2)] group-hover:translate-x-2 transition-transform">
+<span class="font-headline font-black text-4xl italic text-tertiary">03</span>
+</div>
+<div>
+<h3 class="font-headline font-black text-2xl uppercase italic tracking-tight mb-2">Win the drop</h3>
+<p class="text-on-surface-variant leading-relaxed">Post with #NeonSynapse. Top trending entries receive the exclusive Phase 1 Digital Gear and Creator Hub access.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="order-1 lg:order-2 relative">
+<div class="absolute -top-10 -right-10 w-64 h-64 bg-primary/10 rounded-full blur-[100px]"></div>
+<div class="absolute -bottom-10 -left-10 w-64 h-64 bg-secondary/10 rounded-full blur-[100px]"></div>
+<div class="relative bg-surface-container-highest rounded-xl p-8 transform rotate-3 border-l-8 border-t-8 border-primary shadow-2xl">
+<img alt="Vibe image" class="w-full h-auto rounded-lg grayscale hover:grayscale-0 transition-all duration-500" data-alt="aesthetic shot of a high-tech retro computer setup with neon glowing cables" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCUWZWf9Cb82PWRXTmFcXAw4OLww4f4f8fl2xj4GihoYV5YRbHvvfw7h_Ac68vOV3d0efTfjrSKfUB65itmd9bD1kCKko7Ptnh1nRBrkqNq5OBmdEXker0FNbdHBmr6pWP4tVqSCCMTVrVTOBOYtQ-DXjrmzp2EbB4FfXlQ-W01gVKcWSBv8KJCqFhVIcSBq4ejXCN_g37st3UAAjUDbgFCNzZkNqDZgjCSJm2XgrabmAhsIjRNDEMD_3xsL90wjepY-f8IzgJRT0Uj"/>
+<div class="mt-8">
+<div class="flex justify-between items-center mb-2">
+<span class="font-label uppercase text-xs font-black tracking-widest text-primary">Challenge Progress</span>
+<span class="text-xs font-bold">84% FILLED</span>
+</div>
+<div class="w-full h-4 bg-background rounded-full overflow-hidden p-1">
+<div class="h-full w-[84%] bg-gradient-to-r from-primary to-secondary rounded-full"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Social Pulse -->
+<section class="py-24 px-6 overflow-hidden">
+<div class="max-w-7xl mx-auto">
+<div class="flex flex-col md:flex-row justify-between items-center mb-16 gap-8">
+<div class="text-center md:text-left">
+<h2 class="font-headline font-black text-5xl tracking-tighter uppercase italic leading-none">Social <span class="text-secondary">Pulse</span></h2>
+<div class="mt-4 flex items-center justify-center md:justify-start gap-4">
+<span class="inline-block w-3 h-3 bg-tertiary rounded-full animate-pulse"></span>
+<span class="font-label uppercase text-xs tracking-widest font-black">24,842 Active Participants</span>
+</div>
+</div>
+<div class="bg-surface-container-highest px-10 py-6 rounded-xl border-b-4 border-secondary text-center">
+<p class="text-[10px] font-label uppercase tracking-widest mb-1 text-on-surface-variant font-black">Latest Drops Count</p>
+<p class="font-headline font-black text-4xl italic text-secondary tracking-tighter">14,209</p>
+</div>
+</div>
+<div class="flex gap-6 animate-marquee whitespace-nowrap overflow-x-hidden py-10">
+<!-- Participant Bubbles -->
+<div class="flex gap-6 animate-[scroll_40s_linear_infinite]">
+<!-- Repeating pattern -->
+<div class="flex-shrink-0 w-80 bg-surface-container-highest p-4 rounded-xl relative group">
+<div class="flex items-center gap-4">
+<img alt="User" class="w-12 h-12 rounded-full" data-alt="portrait of a woman in modern urban fashion" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC1yhnod2e0TtxrKTNjMWqoh_m_nLOyYahGD3ijMQQ4ZScqsF7qi7eH3G6jbTscOSTJ0X7XRsFmxcI2MnXLC0rT_fhQ4LsbLt8kkoWQ0Syg8l59gBS4rKIVWQmZo5GxILVGqMg8UAR5P4-ONcugvIVDoyGcNxesHyWW3MVEhx3Qojla82B9yZYKupltOrxX1blnAgvVY0NuFcj-nB_3g5fTpyZkzqz9IypAh3One_Y02mtb_SlJ2ePN6V8i_1yTWXPaxJjWbEWsTHMa"/>
+<div>
+<p class="font-bold text-sm">@Sola_Vibes</p>
+<p class="text-[10px] text-tertiary font-bold uppercase">Just Dropped ⚡</p>
+</div>
+<span class="material-symbols-outlined text-primary absolute -top-4 -right-4 bg-surface p-2 rounded-full border border-primary/20 shadow-lg">favorite</span>
+</div>
+</div>
+<div class="flex-shrink-0 w-80 bg-surface-container-highest p-4 rounded-xl relative group">
+<div class="flex items-center gap-4">
+<img alt="User" class="w-12 h-12 rounded-full" data-alt="portrait of a man with dramatic lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCSZiiilFvVC85KUEO5oLdvgdS46dTG_GBZ1vjn3gSvNxHBy8LDmTjYgRN8IAQ-VumE3mcyCw0EKJ0JiWYv-3iCCLfomYX1foU9dnSBX47NkHB886klrIi8hdSDW6aWyqMXYrNBln3FuNG2AvnxU4FNVMmNg3KAbINB8melf6LCdmciKuoOwCDNpOL_qhIe1YQs9PEUrHytJu_bJeFI4hWfu6l6F8o95P7kcTkmK34OBJ6aY_qXd8Ma7oAeCvzAwmm0bjkKcVq4zJVi"/>
+<div>
+<p class="font-bold text-sm">@Kinetik_B</p>
+<p class="text-[10px] text-secondary font-bold uppercase">Joined Step 2 🌊</p>
+</div>
+<span class="material-symbols-outlined text-tertiary absolute -top-4 -right-4 bg-surface p-2 rounded-full border border-tertiary/20 shadow-lg" style="font-variation-settings: 'FILL' 1;">local_fire_department</span>
+</div>
+</div>
+<div class="flex-shrink-0 w-80 bg-surface-container-highest p-4 rounded-xl relative group">
+<div class="flex items-center gap-4">
+<img alt="User" class="w-12 h-12 rounded-full" data-alt="profile photo of a young man" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDIGyNV8jFZPfVa_nFifSuJe8lNUprvtdzr-geYV8a1paXIDQB5van-VQpFM0BIVxhv0Tk7rN-oebEBFFBOkj2iGeUy9MX1jsM4WLZbgHVZQC5et1vrBxpEyywDbaBL2x8QqLf90m63JfN_3AsV9PS-dxLWJp9b8BsfLQhxDl__vmZlaSXi532nabRpNZaNSNgFoas3lul50lOviu5CiRL334FJ1cvRxtGG7X3BtukTwlyxnzGOKdU_T4w_UmoglKZTdCLsCAxuITdS"/>
+<div>
+<p class="font-bold text-sm">@Urban_Echo</p>
+<p class="text-[10px] text-primary font-bold uppercase">New Record 🔥</p>
+</div>
+<span class="material-symbols-outlined text-secondary absolute -top-4 -right-4 bg-surface p-2 rounded-full border border-secondary/20 shadow-lg">bolt</span>
+</div>
+</div>
+<!-- Repeat for marquee effect simulation -->
+<div class="flex-shrink-0 w-80 bg-surface-container-highest p-4 rounded-xl relative group">
+<div class="flex items-center gap-4">
+<img alt="User" class="w-12 h-12 rounded-full" data-alt="portrait of a person laughing" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD9LDLbYUSn65-jfZmdnvr_Bbn7oU0WKSjTGmWBIXqYz8BPnW8qKn_8OsuoN-OFjeypdlheieLaU3tC_10IrXkz3pn7unn60gXTui0gX5eKx1ZWqFSr2JIX9hyB9hy9xYGLsi9wbyIaJvr4kCLNbTf1EXoWPgQbGgsFfaAJH_LgIwtZj5vla4YYiQp2o3XawmkMNuoIteSPRB2nKI0GeA1pOGWODUJbEXnkMZY-mhG_AQc_nDq2WofCQp92WJ5Un-P-pzpmWXSaL6_y"/>
+<div>
+<p class="font-bold text-sm">@Echo_Pixel</p>
+<p class="text-[10px] text-tertiary font-bold uppercase">Synapse Hot ⚡</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Final CTA section -->
+<section class="py-32 px-6">
+<div class="max-w-4xl mx-auto bg-gradient-to-br from-primary via-primary-container to-secondary p-1 rounded-xl shadow-[0_0_80px_rgba(255,124,245,0.3)]">
+<div class="bg-surface rounded-lg py-20 px-10 text-center">
+<h2 class="font-headline font-black text-5xl md:text-7xl tracking-tighter uppercase italic mb-8 leading-none">Ready to <span class="text-primary italic">Rewrite</span> <br/>The Feed?</h2>
+<p class="text-on-surface-variant max-w-xl mx-auto mb-12 text-lg">Your synapse is waiting. Don't let the algorithm decide your worth. Join the pulse today.</p>
+<div class="flex flex-col sm:flex-row justify-center gap-6">
+<button class="bg-primary text-on-primary font-headline font-black text-xl px-12 py-6 rounded-full hover:scale-105 active:scale-95 transition-all uppercase italic tracking-tighter shadow-xl">
+                            Enter Challenge
+                        </button>
+<button class="bg-surface-container-highest text-on-surface border border-outline-variant/30 font-headline font-black text-xl px-12 py-6 rounded-full hover:bg-surface-bright active:scale-95 transition-all uppercase italic tracking-tighter">
+                            Watch Trailer
+                        </button>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full rounded-t-[3rem] mt-20 bg-zinc-950 flex flex-col items-center py-12 px-8 text-center">
+<div class="text-4xl font-black text-lime-400 tracking-tighter mb-4 font-headline uppercase italic">PULSE CHALLENGE</div>
+<div class="flex flex-wrap justify-center gap-8 mb-10">
+<a class="text-zinc-500 hover:text-lime-400 transition-colors font-epilogue uppercase tracking-widest text-xs font-bold" href="#">Privacy</a>
+<a class="text-zinc-500 hover:text-lime-400 transition-colors font-epilogue uppercase tracking-widest text-xs font-bold" href="#">Terms</a>
+<a class="text-zinc-500 hover:text-lime-400 transition-colors font-epilogue uppercase tracking-widest text-xs font-bold" href="#">Safety</a>
+<a class="text-zinc-500 hover:text-lime-400 transition-colors font-epilogue uppercase tracking-widest text-xs font-bold" href="#">Creator Hub</a>
+</div>
+<div class="text-zinc-600 font-epilogue uppercase tracking-widest text-[10px]">
+            © 2024 PULSE CHALLENGE
+        </div>
+</footer>
+<!-- CSS Animation for Marquee -->
+<style>
+        @keyframes scroll {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-100%); }
+        }
+        .animate-marquee {
+            display: flex;
+            overflow: hidden;
+            user-select: none;
+        }
+    </style>
+</body></html>

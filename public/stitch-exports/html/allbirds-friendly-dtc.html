@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>The Editorial Earth | Sustainable Comfort Footwear</title>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Be+Vietnam+Pro:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "tertiary-fixed-dim": "#b7ccb9",
+                    "surface-container": "#efeee9",
+                    "on-secondary-container": "#7a532a",
+                    "primary-container": "#4a7942",
+                    "secondary": "#7d562d",
+                    "primary": "#32602c",
+                    "inverse-surface": "#30312e",
+                    "on-tertiary": "#ffffff",
+                    "on-primary-container": "#ccffbe",
+                    "surface-container-lowest": "#ffffff",
+                    "surface-container-high": "#e9e8e3",
+                    "on-background": "#1b1c19",
+                    "surface-container-low": "#f5f4ef",
+                    "on-error-container": "#93000a",
+                    "on-surface": "#1b1c19",
+                    "surface-dim": "#dbdad5",
+                    "tertiary": "#475a4b",
+                    "surface": "#faf9f4",
+                    "secondary-fixed-dim": "#f0bd8b",
+                    "surface-container-highest": "#e3e3de",
+                    "outline": "#707a6c",
+                    "surface-variant": "#e3e3de",
+                    "surface-bright": "#faf9f4",
+                    "on-tertiary-fixed-variant": "#394b3c",
+                    "on-surface-variant": "#40493d",
+                    "secondary-container": "#ffca98",
+                    "error-container": "#ffdad6",
+                    "on-primary-fixed-variant": "#23501e",
+                    "background": "#faf9f4",
+                    "inverse-primary": "#a1d494",
+                    "on-tertiary-fixed": "#0e1f13",
+                    "on-primary-fixed": "#002201",
+                    "error": "#ba1a1a",
+                    "outline-variant": "#bfcaba",
+                    "on-tertiary-container": "#e2f8e3",
+                    "tertiary-fixed": "#d3e8d4",
+                    "surface-tint": "#3b6934",
+                    "on-secondary-fixed": "#2c1600",
+                    "tertiary-container": "#5f7363",
+                    "primary-fixed-dim": "#a1d494",
+                    "on-secondary": "#ffffff",
+                    "on-primary": "#ffffff",
+                    "on-error": "#ffffff",
+                    "primary-fixed": "#bcf0ae",
+                    "on-secondary-fixed-variant": "#623f18",
+                    "inverse-on-surface": "#f2f1ec",
+                    "secondary-fixed": "#ffdcbd"
+            },
+            "borderRadius": {
+                    "DEFAULT": "1rem",
+                    "lg": "2rem",
+                    "xl": "3rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Plus Jakarta Sans"],
+                    "body": ["Be Vietnam Pro"],
+                    "label": ["Plus Jakarta Sans"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body { font-family: 'Be Vietnam Pro', sans-serif; }
+        h1, h2, h3, .font-jakarta { font-family: 'Plus Jakarta Sans', sans-serif; }
+        .glass-nav {
+            background: rgba(250, 249, 244, 0.8);
+            backdrop-filter: blur(12px);
+        }
+        .btn-primary-gradient {
+            background: linear-gradient(to right, #32602c, #4a7942);
+        }
+        .ambient-shadow {
+            box-shadow: 0 40px 60px -5px rgba(27, 28, 25, 0.04);
+        }
+        .ghost-border {
+            border: 1px solid rgba(191, 202, 186, 0.15);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface selection:bg-primary-container selection:text-on-primary-container">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 glass-nav">
+<div class="flex justify-between items-center px-8 h-20 w-full max-w-screen-2xl mx-auto">
+<div class="text-2xl font-bold tracking-tighter text-stone-900 dark:text-stone-50">
+                The Editorial Earth
+            </div>
+<div class="hidden md:flex items-center gap-8 font-jakarta text-sm tracking-tight">
+<a class="text-green-700 font-semibold border-b-2 border-green-700 pb-1" href="#">Shop All</a>
+<a class="text-stone-600 dark:text-stone-400 hover:text-stone-900 transition-opacity hover:opacity-80" href="#">Men</a>
+<a class="text-stone-600 dark:text-stone-400 hover:text-stone-900 transition-opacity hover:opacity-80" href="#">Women</a>
+<a class="text-stone-600 dark:text-stone-400 hover:text-stone-900 transition-opacity hover:opacity-80" href="#">Our Story</a>
+</div>
+<div class="flex items-center gap-6">
+<span class="material-symbols-outlined text-stone-600 cursor-pointer hover:opacity-80 transition-opacity">person</span>
+<span class="material-symbols-outlined text-stone-600 cursor-pointer hover:opacity-80 transition-opacity">shopping_bag</span>
+<button class="md:hidden">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</div>
+</nav>
+<main class="pt-20">
+<!-- Hero Section -->
+<section class="px-6 py-12 md:py-24">
+<div class="max-w-screen-2xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+<div class="lg:col-span-5 order-2 lg:order-1">
+<h1 class="text-5xl md:text-7xl font-extrabold tracking-tighter leading-[0.9] mb-8 text-on-surface">
+                        Walk the <br/><span class="text-primary italic">Gentle</span> Path.
+                    </h1>
+<p class="text-lg md:text-xl text-on-surface-variant mb-10 leading-relaxed max-w-md">
+                        Meticulously crafted footwear that prioritizes the planet and your comfort in equal measure.
+                    </p>
+<div class="flex flex-col sm:flex-row gap-4">
+<button class="btn-primary-gradient text-on-primary px-10 py-5 rounded-lg text-lg font-semibold hover:scale-102 transition-transform duration-300 ambient-shadow">
+                            Shop New Arrivals
+                        </button>
+<button class="ghost-border text-primary px-10 py-5 rounded-lg text-lg font-semibold hover:bg-surface-container-low transition-colors">
+                            Our Story
+                        </button>
+</div>
+</div>
+<div class="lg:col-span-7 order-1 lg:order-2">
+<div class="relative rounded-xl overflow-hidden aspect-[4/3] md:aspect-video">
+<img class="w-full h-full object-cover" data-alt="Premium sustainable sneaker in a soft sage green color resting on a stack of natural linen fabrics in a bright sunlit studio" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAGBFUZz-GEVQ2rHUlE5X1bsAwCbweVq9qrxVqYs_HARJGGSxU3l-jvbTdmStIFjUhZ1RMmVNXjYXLPN2LukoT30HshpalCFtH3zeJ34bWtI75yCbQ_jMq6d9GjJPkorgADEM0klykM51dohrXO-rSQn4LLjkfbM61nZoCqbfI1-jCoUX9BLkps4pHUmIoHrAlp1Yq5WqTfbv3lQ6-XcW5D2JQYO_i70sEwMFh6tue-eamIsTC9JvfzguILzPAlz-eksnQBVLM1gvM"/>
+<div class="absolute bottom-8 left-8 glass-nav p-6 rounded-lg ghost-border max-w-xs">
+<p class="text-sm font-jakarta font-bold uppercase tracking-widest text-primary mb-2">Sustainable Choice</p>
+<p class="text-sm text-on-surface">100% Recycled ocean plastic mesh with organic cork insoles.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Split Audience Section -->
+<section class="bg-surface-container-low py-24">
+<div class="max-w-screen-2xl mx-auto px-6">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<!-- Men -->
+<div class="group relative h-[600px] overflow-hidden rounded-xl">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Low angle shot of stylish men's leather boots on a forest path with dappled sunlight through the trees" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBT-noCt5SzMMqG6HsnNmIe3uBMzVV-ByuKzQ4iSbcfRgk3ZfUFPBjgtnOv-k2X2tqzEiiDnMHJa0-RtdsPUEVs0r4jR8ewW5e0RodsOHODEuZHZH0whcGizaxFHVhGNtgrx-J30qd3_2uFDz2G6RVAFJz_DHYgy6Dv42XROfERs_NgIu5Vh_cqH3eOlJkkMcAE2BefWvP2E_A6zLNg1yLpIlLYL01eBQU_tsLqI1xtvbPt-rHwWZ2K2FUrSxcmTGpPpyjiGCQ232E"/>
+<div class="absolute inset-0 bg-gradient-to-t from-on-surface/60 to-transparent"></div>
+<div class="absolute bottom-12 left-12 text-surface">
+<h2 class="text-4xl font-bold mb-4">The Men's Edit</h2>
+<button class="bg-surface text-on-surface px-8 py-4 rounded-lg font-jakarta font-bold hover:bg-surface-container transition-colors">
+                                Shop Men
+                            </button>
+</div>
+</div>
+<!-- Women -->
+<div class="group relative h-[600px] overflow-hidden rounded-xl">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Womens modern minimalist flats displayed on a minimalist concrete pedestal with a single palm leaf shadow" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBESbPGDb3ZXozxmPR3qvAO3o0cIeklrlYFmSDjFx6x09T8FYkngz9ZmmS9IYMvLetpUU_-t5laTUSueT7-jOka15Ynq383Bhp-A2lxQSQWMX_d6nVIb1Hp4KWxBEgU-pgQu40cD_hEPUVCWF23RX8bePxgqFRxs30PYGKDh2b1Lzbmmo64VpjpP_8Eyu5uyAb3QvshzU0MD6Cg5xYhAg7VGBkqQ9xAt6ZeK5oJFEUisOoadmG_k13jAPq5MdRD4gySMrrD3hHxo-k"/>
+<div class="absolute inset-0 bg-gradient-to-t from-on-surface/60 to-transparent"></div>
+<div class="absolute bottom-12 left-12 text-surface">
+<h2 class="text-4xl font-bold mb-4">The Women's Edit</h2>
+<button class="bg-surface text-on-surface px-8 py-4 rounded-lg font-jakarta font-bold hover:bg-surface-container transition-colors">
+                                Shop Women
+                            </button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Best Sellers Shelf -->
+<section class="py-24 bg-surface">
+<div class="max-w-screen-2xl mx-auto px-6">
+<div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-4">
+<div>
+<span class="text-secondary font-bold tracking-widest text-sm uppercase block mb-4">Customer Favorites</span>
+<h2 class="text-4xl md:text-5xl font-extrabold tracking-tighter">The Best-Sellers</h2>
+</div>
+<a class="text-primary font-bold flex items-center gap-2 group" href="#">
+                        View All Products 
+                        <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</a>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+<!-- Product Card 1 -->
+<div class="group cursor-pointer">
+<div class="bg-surface-container-low rounded-xl aspect-[4/5] mb-6 overflow-hidden relative">
+<img class="w-full h-full object-cover mix-blend-multiply group-hover:scale-105 transition-transform duration-500" data-alt="Close up of a vibrant orange running shoe against a neutral studio background with soft lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDdMOEHaMbKl-vOTLc_9SxRUwuBbdf8z7iNAj0DgUlvTbf92LUgD4fVb7JJd_cdbVT1h-Ii0ujLHFnaIB6jy1s8tSvCFvNteO4zHPZFu_3eGsTbEx_-VrNMSFvP3QdiMmhiO7hu17srp4a8mcvUngd0pp3eFl_0R9jinwiToTI1Sw4jyFuw5siTPgdRJqkAny07sSEEMBiVDADq1zCyeyC2Hu2CTXmLAGHFhorA019--o6lhY8x0gEcG9v4WKs3S6X9gJa0f4pPUIQ"/>
+<div class="absolute top-4 right-4 glass-nav px-3 py-1 rounded-full text-xs font-bold uppercase tracking-tight ghost-border">New</div>
+</div>
+<div class="flex justify-between items-start">
+<div>
+<h3 class="font-jakarta font-bold text-lg text-on-surface">Earth Runner v.1</h3>
+<p class="text-on-surface-variant">Sandstone / Cloud</p>
+</div>
+<span class="font-jakarta font-semibold text-primary">$145</span>
+</div>
+</div>
+<!-- Product Card 2 -->
+<div class="group cursor-pointer">
+<div class="bg-surface-container-low rounded-xl aspect-[4/5] mb-6 overflow-hidden relative">
+<img class="w-full h-full object-cover mix-blend-multiply group-hover:scale-105 transition-transform duration-500" data-alt="Minimalist white leather sneakers on a light grey background with professional studio lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC5SzjiU9csftzzXnAiuVevIlcyadCA1qgZR5oAnTYpGM2LiMg4ihFzQ6n8ek-0tbgQErs4w4bD11EuQMSg6G4sHE4rbL-ezpG1izJzWWDFHEDwnuVTQI0vBLF38yBWoCctGKgYX8UVjh_UUCHYnqHC5dcWSMQqn7ocNu-SyIGAGk5POb0MLfGjJfnf4q4nfxd68_sIuvuRqg3dRSwL6zSoiMME7f_ErwJa8T-xTCCS52OdhGyLwlFJn_U_Okd_OgyZRCRLRlmBFtw"/>
+</div>
+<div class="flex justify-between items-start">
+<div>
+<h3 class="font-jakarta font-bold text-lg text-on-surface">The Daily Loafer</h3>
+<p class="text-on-surface-variant">Midnight Forest</p>
+</div>
+<span class="font-jakarta font-semibold text-primary">$120</span>
+</div>
+</div>
+<!-- Product Card 3 -->
+<div class="group cursor-pointer">
+<div class="bg-surface-container-low rounded-xl aspect-[4/5] mb-6 overflow-hidden relative">
+<img class="w-full h-full object-cover mix-blend-multiply group-hover:scale-105 transition-transform duration-500" data-alt="Colorful high-top sneaker with artistic paneling in pastel tones" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCNG-9ldMSbxZLfngcNCv5sZj-KxpMJpHPQ9Zh0WfdzrfRZznRJCrWvXg4BIavLhV9St8_er236OBmdzw0bLRAIZ1Wq4KKOusuCqINrKfzrukdkKyF0rOYadTHyk3Ev_zJSB3QmbbyFEO5C5M-obpWi4FkZz27CSQWiBPwnr4pekK9a8fJmKHkbK302G55d0jRpgA4Iu5OUkjiNOf0bbRpaO2KhgbCxP3017CW-IN-Hspde39Ma3MsNJKf3LR2BdeIP6fdrcwWV2QY"/>
+</div>
+<div class="flex justify-between items-start">
+<div>
+<h3 class="font-jakarta font-bold text-lg text-on-surface">Urban Explorer</h3>
+<p class="text-on-surface-variant">Terracotta Dusk</p>
+</div>
+<span class="font-jakarta font-semibold text-primary">$165</span>
+</div>
+</div>
+<!-- Product Card 4 -->
+<div class="group cursor-pointer">
+<div class="bg-surface-container-low rounded-xl aspect-[4/5] mb-6 overflow-hidden relative">
+<img class="w-full h-full object-cover mix-blend-multiply group-hover:scale-105 transition-transform duration-500" data-alt="Earthy brown leather boot with rugged texture on a stone background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDcGYDGqDjP68fkW3XzibXez-YMuz3uNEH2luwKu1VhuXfoA55_U_ZgmSFbWRP6Evd9dvVoMxUZzDjVbzTwO3yqxrA36Kxcc5YwvLHtdIkODM5LrQd1hUYNXEjduxshbtM8_o2oeYcOdEaJbNb4Pha-tAr33JE31773G5LI5yy8V5Ooqf4vhwKhXdITM9-z7kioc5noiXaU40aXMKonM7cXBONbsecQtknnK3rAqbtDpd5wn_DP8BM4fIezx_T-iF1MLlZaFWt8dIU"/>
+</div>
+<div class="flex justify-between items-start">
+<div>
+<h3 class="font-jakarta font-bold text-lg text-on-surface">Highland Boot</h3>
+<p class="text-on-surface-variant">Raw Umber</p>
+</div>
+<span class="font-jakarta font-semibold text-primary">$210</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Benefit Blocks (Bento Style) -->
+<section class="py-24 bg-surface-container px-6">
+<div class="max-w-screen-2xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-8">
+<div class="md:col-span-8 bg-surface-container-lowest p-12 rounded-xl ghost-border flex flex-col justify-center">
+<span class="material-symbols-outlined text-primary text-5xl mb-8" style="font-variation-settings: 'FILL' 1;">spa</span>
+<h2 class="text-4xl font-extrabold tracking-tight mb-6">Unmatched Comfort</h2>
+<p class="text-xl text-on-surface-variant leading-relaxed max-w-2xl">
+                        We spent two years developing our signature SweetCloud™ foam. Derived from sugarcane, it provides a gravity-defying cushion that adapts to your unique stride without the environmental cost of traditional petroleum plastics.
+                    </p>
+</div>
+<div class="md:col-span-4 rounded-xl overflow-hidden min-h-[400px]">
+<img class="w-full h-full object-cover" data-alt="Abstract close-up of a soft, porous white material representing comfort technology with gentle shadows" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBtgaTDMVNLwfxSccRfPL3bLKAoDyg1dnF6J2uOHXUjrrtGLYKnhRiHn2tytJ9MyR96pETqVqVvEP1gSlQDuL_k7x4fxk7lQ-j1VkF3Bx9LHuLEoMPNMRgo10n073snNVKR2SyaG4vuDA3Ndl1QMNSkdHBrm0o0p5oQjicQG0wWu0V8ITfdconIOafUPpKd9-Nxj3yCsVAQnnjNtWkaiSI0_p4mHXfDWmp_EPrjV4ExsMrEWtX_cTFSUNSFZlGx_DchLtcIZG2zazA"/>
+</div>
+<div class="md:col-span-5 rounded-xl overflow-hidden min-h-[400px]">
+<img class="w-full h-full object-cover" data-alt="Hands of a craftsperson working with sustainable organic cotton fabric in a sunlit workshop" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCPilypBOM0yeHpJrzl8R41CXTuEOUQumWRebcIyvHtDdeFTJ8tCwaRWAv7w9iGWI9ap65TemJtd3MAkjscKsgwKSIRR03gizwvbjshmGOSDC5jAtu8KX85psWaT38iZDiCU6kLmfzzfDj_ajnRRMQbiIPjOlIaFtZOfGHDB7l7yImECcXyu-p9us5Oy4aYxZ7CFRpxnzoVp2OlFwYceDs_FqfI-w6cVg6zEjgBA-qdAOLp_8cSq-tMV7-lX5Dzn7-Gml60dCENGf0"/>
+</div>
+<div class="md:col-span-7 bg-primary text-on-primary p-12 rounded-xl ambient-shadow flex flex-col justify-center">
+<span class="material-symbols-outlined text-on-primary-container text-5xl mb-8">eco</span>
+<h2 class="text-4xl font-extrabold tracking-tight mb-6">Responsibly Made</h2>
+<p class="text-xl text-on-primary-container leading-relaxed">
+                        Every thread, sole, and eyelet is chosen for its environmental footprint. From carbon-neutral logistics to fair-wage artisan partnerships, we believe high fashion shouldn't cost the Earth.
+                    </p>
+</div>
+</div>
+</section>
+<!-- Named Collection Module -->
+<section class="py-24 bg-surface">
+<div class="max-w-screen-2xl mx-auto px-6">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+<div class="relative">
+<div class="bg-surface-container-high rounded-full w-64 h-64 absolute -top-10 -left-10 z-0"></div>
+<img class="rounded-xl relative z-10 w-full object-cover aspect-square md:aspect-[4/5]" data-alt="Lifestyle shot of a person walking on a modern architectural stairs wearing sleek grey sneakers" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDT9rFxKF3__HYnB6xQJwxo-4Y5d-51gGYwV0yRffoBdBInex9silzP71IxU4ygXyLv85FnTCK5tOlm1KzCQzpoXWqWIWxc7sW27io9N3dxlJOUm8Z8tCsHCzZZ0ScdeGbhS_pWmqILaIlt4hHzdsHDlz222uC06QxLGHg88xTLJa2DJyXl2OzpYuKHheQdMxlLeXRPGA-MOwTJwD4cJplX5m3c52QtLYeAmE1lBtM5-fQ_YKvryVAz7Y1m2yuuldU_TjY_EG3VzwU"/>
+</div>
+<div>
+<span class="text-tertiary font-bold tracking-widest text-sm uppercase block mb-4">Limited Edition</span>
+<h2 class="text-5xl font-extrabold tracking-tighter mb-8 text-on-surface">The Everyday Collection</h2>
+<p class="text-lg text-on-surface-variant mb-12 leading-relaxed">
+                            Designed for the modern commuter, the Everyday Collection features water-resistant merino wool and anti-odor liners. Versatile enough for the boardroom, comfortable enough for the park.
+                        </p>
+<div class="space-y-6">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-surface-container flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">water_drop</span>
+</div>
+<div>
+<h4 class="font-bold">Water Repellent</h4>
+<p class="text-sm text-on-surface-variant">Stay dry through unpredictable city rain.</p>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-surface-container flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">air</span>
+</div>
+<div>
+<h4 class="font-bold">Breathable Merino</h4>
+<p class="text-sm text-on-surface-variant">Naturally temperature regulating fiber.</p>
+</div>
+</div>
+</div>
+<button class="mt-12 btn-primary-gradient text-on-primary px-10 py-5 rounded-lg text-lg font-semibold hover:scale-102 transition-transform duration-300">
+                            Explore the Collection
+                        </button>
+</div>
+</div>
+</div>
+</section>
+<!-- Newsletter / Footer Prep -->
+<section class="py-24 bg-surface-container-low border-t border-outline-variant/10">
+<div class="max-w-4xl mx-auto px-6 text-center">
+<h2 class="text-3xl md:text-5xl font-extrabold tracking-tighter mb-6">Join the Earth List</h2>
+<p class="text-on-surface-variant mb-10 text-lg">Receive early access to limited drops and our monthly sustainability report.</p>
+<form class="flex flex-col sm:flex-row gap-4">
+<input class="flex-1 px-8 py-5 rounded-lg bg-surface-container-highest border-none focus:ring-2 focus:ring-primary transition-all text-lg" placeholder="Enter your email" type="email"/>
+<button class="btn-primary-gradient text-on-primary px-12 py-5 rounded-lg text-lg font-semibold">Subscribe</button>
+</form>
+<p class="mt-6 text-sm text-stone-500">By subscribing, you agree to our Privacy Policy.</p>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full py-16 px-8 bg-stone-100 dark:bg-stone-950">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12 max-w-screen-2xl mx-auto font-be-vietnam text-base leading-relaxed">
+<div class="space-y-6">
+<div class="text-xl font-bold text-stone-900 dark:text-stone-50">The Editorial Earth</div>
+<p class="text-stone-500">Walking together toward a more sustainable and comfortable future.</p>
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-stone-600 cursor-pointer">public</span>
+<span class="material-symbols-outlined text-stone-600 cursor-pointer">potted_plant</span>
+<span class="material-symbols-outlined text-stone-600 cursor-pointer">eco</span>
+</div>
+</div>
+<div>
+<h4 class="text-stone-900 font-bold mb-6">Shop</h4>
+<ul class="space-y-4 text-stone-500">
+<li><a class="hover:text-green-700 transition-colors hover:translate-x-1 inline-block transition-transform" href="#">Men's Collection</a></li>
+<li><a class="hover:text-green-700 transition-colors hover:translate-x-1 inline-block transition-transform" href="#">Women's Collection</a></li>
+<li><a class="hover:text-green-700 transition-colors hover:translate-x-1 inline-block transition-transform" href="#">Sustainability</a></li>
+<li><a class="hover:text-green-700 transition-colors hover:translate-x-1 inline-block transition-transform" href="#">Size Guide</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-stone-900 font-bold mb-6">Help</h4>
+<ul class="space-y-4 text-stone-500">
+<li><a class="hover:text-green-700 transition-colors hover:translate-x-1 inline-block transition-transform" href="#">Shipping &amp; Returns</a></li>
+<li><a class="hover:text-green-700 transition-colors hover:translate-x-1 inline-block transition-transform" href="#">Privacy Policy</a></li>
+<li><a class="hover:text-green-700 transition-colors hover:translate-x-1 inline-block transition-transform" href="#">Terms of Service</a></li>
+<li><a class="hover:text-green-700 transition-colors hover:translate-x-1 inline-block transition-transform" href="#">Newsletter Signup</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-stone-900 font-bold mb-6">Contact</h4>
+<ul class="space-y-4 text-stone-500">
+<li>hello@theeditorialearth.com</li>
+<li>1200 Sustainable Way</li>
+<li>San Francisco, CA</li>
+<li class="pt-4">
+<p class="text-xs text-stone-400">© 2024 The Editorial Earth. Sustainable Comfort.</p>
+</li>
+</ul>
+</div>
+</div>
+</footer>
+</body></html>

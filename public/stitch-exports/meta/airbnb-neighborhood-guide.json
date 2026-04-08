@@ -1,0 +1,21 @@
+{
+  "brand": "Airbnb",
+  "contentType": "image/png",
+  "fileName": "airbnb-neighborhood-guide.png",
+  "generatedAt": "2026-04-02T11:04:11.673Z",
+  "htmlUrl": "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ7Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpaCiVodG1sXzE3MGY2YTE3MzYwMzRlN2JiNDlhMDM5Y2RiODkxNzE1EgsSBxCCisPc0AkYAZIBIwoKcHJvamVjdF9pZBIVQhM3MTQzMjg5MDExNTU3MTA0ODY0&filename=&opi=96797242",
+  "imageUrl": "https://lh3.googleusercontent.com/aida/ADBb0ugcLY54Jl1uqnudjc18XSuMzcKbDVKyfEZqbnzg_9GD1bzGKlauwEM7x2kbev8njoynrzoOwjUsIVzywQ5ZBX6vaGyMj3iPStcLFgjGl66Rd4KCiWBqnsEwJe5fkBJeaG584cgbcpKufnVjB5wu085Vbgsv3DaASezTxD1WnSpjBVzGdtRyrX5PMfeCnMwyOmPft3HfKux0qZGDXip9sPZcIbX7YGgRtGGB8W8Thjt5ZyDlwCxPJr_kvro",
+  "notes": [
+    "I've created the **Horizon Ethos** design system and the initial landing page for your **Neighborhood Guide**.\n\nThis design features:\n- **Warm, Editorial Tone:** A soft, human-centric color palette (Sunset Coral/Earth tones) and Plus Jakarta Sans for a welcoming feel.\n- **Airbnb-Inspired Discovery:** Large, gentle rounded modules and high-quality photography.\n- **Discovery Elements:** Interactive-style cards for local guides, \"Hidden Gems\" sections, and map cues to help travelers orient themselves.\n- **Browsing Rhythm:** A clear, flowing layout that encourages exploration through \"Traveler Chronicles\" and \"Local Favorites.\"\n\nWhat would you like to explore next? We could build out a specific neighborhood detail page, an interactive map view, or even a local guide's personal profile."
+  ],
+  "prompt": "Create an Airbnb-inspired neighborhood guide landing page with warm photography, local guide cards, map cues, gentle rounded modules, and a browsable editorial travel rhythm. Keep it welcoming and discovery-first.",
+  "projectId": "7143289011557104864",
+  "screenId": "43fdcaf303ad451390090f2808224c80",
+  "slug": "airbnb-neighborhood-guide",
+  "suggestions": [
+    "Design a neighborhood detail page",
+    "Create an interactive map search view",
+    "Design a 'Local Guide' profile page"
+  ],
+  "title": "Horizon Ethos: The Neighborhood Guide"
+}

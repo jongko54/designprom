@@ -1,0 +1,22 @@
+{
+  "brand": "Figma",
+  "contentType": "image/png",
+  "fileName": "figma-design-system-docs.png",
+  "generatedAt": "2026-04-02T11:00:12.778Z",
+  "htmlUrl": "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ7Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpaCiVodG1sXzc4MGVkYzFkM2YyNDQ2OGNiOGQxODNhN2ZhMzJiMmI1EgsSBxCCisPc0AkYAZIBIwoKcHJvamVjdF9pZBIVQhM3MTQzMjg5MDExNTU3MTA0ODY0&filename=&opi=96797242",
+  "imageUrl": "https://lh3.googleusercontent.com/aida/ADBb0ujkSUZRkYUqxcAC4B5LalfSlUQtYlrqdy0Cfddm2gX9HcaWEoMA0IgVgR0nOahAzfs3nZH40aOP3uL329AeEIGmlbWbbrxG2uuDJblJVHeEMzcWGyaoUPrXVGW8WuLUmI4t0eEpf5fpqJXHk5krbqiVZ8aXZSuf76BYYHMCLIDk0gr1e6RCVJj_uXGWtsMxbOOXjbjDuuy_QAr8tcQNGHFYNrFm9YeHmkHgjylO-r5BzCmfZz1RlZwkvg",
+  "notes": [
+    "I've created a comprehensive, Figma-inspired design system documentation landing page for \"The Precision Engine.\"\n\nKey features of this design include:\n*   **High-Density Layout:** Designed for professional utility, not just aesthetics, with clear sections for Foundations and Components.\n*   **Token Tables:** Precise tables for color tokens including HEX codes, contrast ratios (AAA/AA), and usage descriptions.\n*   **Component Preview:** A dedicated section showing a Button component set in various states (Default, Hover, Disabled, Secondary, Ghost).\n*   **Code Integration:** A code snippet preview area for developers to see implementation details.\n*   **Collaborative Annotations:** A functional feedback panel for team collaboration within the documentation itself.\n*   **Navigation Rail:** A robust sidebar for quick access to all categories within the design system library.\n\nWould you like me to refine any of these sections, add more components, or perhaps create a mobile-optimized version of this documentation portal?"
+  ],
+  "prompt": "Create a Figma-like design system docs landing page with token tables, component previews, side navigation rails, collaborative annotations, and a readable but dense product rhythm. It should feel like a real system library, not a blog.",
+  "projectId": "7143289011557104864",
+  "screenId": "994d62d7562b4982961e054c3e687f5e",
+  "slug": "figma-design-system-docs",
+  "suggestions": [
+    "Add a Typography Foundations section",
+    "Create a Layout Grid component preview",
+    "Design the mobile version of this portal",
+    "Change the primary accent color to a deep purple"
+  ],
+  "title": "Precision Engine: System Docs"
+}

@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-error-container": "#410002",
+              "on-tertiary-fixed-variant": "#e2e2e2",
+              "surface-dim": "#dcd9d9",
+              "outline": "#777777",
+              "error-container": "#ffdad6",
+              "secondary": "#5e5e5e",
+              "secondary-container": "#d4d4d4",
+              "on-background": "#1c1b1b",
+              "on-surface-variant": "#474747",
+              "on-secondary-fixed": "#1b1b1b",
+              "inverse-primary": "#b4c5ff",
+              "tertiary-fixed-dim": "#474747",
+              "inverse-on-surface": "#f3f0ef",
+              "on-tertiary-container": "#ffffff",
+              "background": "#fcf9f8",
+              "on-secondary-fixed-variant": "#3b3b3b",
+              "surface-variant": "#e5e2e1",
+              "primary": "#000000",
+              "surface-bright": "#fcf9f8",
+              "on-secondary-container": "#1b1b1b",
+              "surface-container-highest": "#e5e2e1",
+              "primary-fixed": "#0053da",
+              "on-primary": "#dbe1ff",
+              "on-tertiary": "#e2e2e2",
+              "surface": "#fcf9f8",
+              "outline-variant": "#c6c6c6",
+              "surface-container-high": "#eae7e7",
+              "on-tertiary-fixed": "#ffffff",
+              "surface-tint": "#0053da",
+              "tertiary-container": "#747474",
+              "surface-container-lowest": "#ffffff",
+              "surface-container": "#f0edec",
+              "primary-fixed-dim": "#003ea8",
+              "on-secondary": "#ffffff",
+              "on-primary-fixed-variant": "#dbe1ff",
+              "on-primary-container": "#ffffff",
+              "surface-container-low": "#f6f3f2",
+              "primary-container": "#00348f",
+              "on-surface": "#1c1b1b",
+              "secondary-fixed": "#c6c6c6",
+              "tertiary": "#3b3b3b",
+              "secondary-fixed-dim": "#ababab",
+              "inverse-surface": "#313030",
+              "tertiary-fixed": "#5e5e5e",
+              "error": "#ba1a1a",
+              "on-error": "#ffffff",
+              "on-primary-fixed": "#ffffff"
+            },
+            fontFamily: {
+              "headline": ["Inter"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0px", "lg": "0px", "xl": "0px", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #fcf9f8;
+        }
+        .machined-grid {
+            background-size: 40px 40px;
+            background-image: radial-gradient(circle, #e5e2e1 1px, transparent 1px);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface">
+<!-- Top Navigation Bar -->
+<nav class="flex justify-between items-center w-full px-4 h-12 fixed top-0 z-50 bg-[#fcf9f8] dark:bg-[#161616] font-['Inter'] font-medium text-sm tracking-tight border-b border-outline-variant/15">
+<div class="flex items-center gap-8">
+<span class="text-lg font-bold tracking-tighter text-[#000000] dark:text-white uppercase">CLOUD_OPERATIONS</span>
+<div class="hidden md:flex items-center gap-6">
+<a class="text-[#0053da] dark:text-[#4589ff] border-l-2 border-[#0053da] pl-4 h-12 flex items-center" href="#">Monitor</a>
+<a class="text-[#000000] dark:text-[#f4f4f4] opacity-70 hover:opacity-100 transition-opacity" href="#">Analyze</a>
+<a class="text-[#000000] dark:text-[#f4f4f4] opacity-70 hover:opacity-100 transition-opacity" href="#">Scale</a>
+<a class="text-[#000000] dark:text-[#f4f4f4] opacity-70 hover:opacity-100 transition-opacity" href="#">Security</a>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<span class="text-[10px] tracking-widest uppercase opacity-50 hidden lg:inline">Status: Operational</span>
+<div class="flex items-center gap-2">
+<button class="p-2 hover:bg-[#eae7e7] dark:hover:bg-[#393939] transition-colors"><span class="material-symbols-outlined" data-icon="settings">settings</span></button>
+<button class="p-2 hover:bg-[#eae7e7] dark:hover:bg-[#393939] transition-colors"><span class="material-symbols-outlined" data-icon="notifications">notifications</span></button>
+<button class="p-2 hover:bg-[#eae7e7] dark:hover:bg-[#393939] transition-colors"><span class="material-symbols-outlined" data-icon="help">help</span></button>
+<div class="w-8 h-8 bg-surface-container-high flex items-center justify-center">
+<img alt="User profile" class="w-6 h-6 grayscale" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAyEw-yzRMrQl7xMRFx11BtBZw1EcA9uxqCzwB33ces2lbDLQHmby_KIP7X8WUXc30Udo-2i_RNQKvX9SP6k3lTcFvGIaXf7-91mvRYWuKfebf2kqpTpRvs1ndkAWLK0dyhK6lJoVVcjbrRJ39UViXKxqX6-qaA3pkeZfQWQjpCCn3QbXWvwNha-YfgsGwHLsv_dkwq21sbYkOjaHdi997wPAcDM9P76oIaYGrAkgYJdemql3J3j6D7b_k1gDSHlaT71PdE1C-Svqk"/>
+</div>
+</div>
+</div>
+</nav>
+<!-- Side Navigation (Web) -->
+<aside class="hidden md:flex flex-col h-screen w-64 fixed left-0 top-12 bg-[#f6f3f2] dark:bg-[#161616] font-['Inter'] text-[13px] leading-tight uppercase tracking-widest z-40">
+<div class="p-6">
+<div class="text-sm font-black text-black dark:text-white">INFRA_CORE</div>
+<div class="text-[10px] opacity-50">V-2.4.0</div>
+</div>
+<div class="flex-grow py-4">
+<nav class="flex flex-col gap-1">
+<a class="flex items-center gap-4 px-6 py-3 bg-[#eae7e7] dark:bg-[#393939] text-[#0053da] dark:text-[#4589ff] font-bold border-l-4 border-[#0053da]" href="#">
+<span class="material-symbols-outlined" data-icon="monitoring">monitoring</span>
+                    Monitor
+                </a>
+<a class="flex items-center gap-4 px-6 py-3 text-[#1b1b1b] dark:text-[#c6c6c6] opacity-70 hover:bg-[#eae7e7] dark:hover:bg-[#262626] transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="analytics">analytics</span>
+                    Analyze
+                </a>
+<a class="flex items-center gap-4 px-6 py-3 text-[#1b1b1b] dark:text-[#c6c6c6] opacity-70 hover:bg-[#eae7e7] dark:hover:bg-[#262626] transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="dynamic_feed">dynamic_feed</span>
+                    Scale
+                </a>
+<a class="flex items-center gap-4 px-6 py-3 text-[#1b1b1b] dark:text-[#c6c6c6] opacity-70 hover:bg-[#eae7e7] dark:hover:bg-[#262626] transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="security">security</span>
+                    Security
+                </a>
+</nav>
+</div>
+<div class="mt-auto py-6 border-t border-outline-variant/10">
+<nav class="flex flex-col gap-1">
+<a class="flex items-center gap-4 px-6 py-2 text-[#1b1b1b] dark:text-[#c6c6c6] opacity-50 hover:opacity-100 transition-opacity" href="#">
+<span class="material-symbols-outlined" data-icon="terminal">terminal</span>
+                    System Logs
+                </a>
+<a class="flex items-center gap-4 px-6 py-2 text-[#1b1b1b] dark:text-[#c6c6c6] opacity-50 hover:opacity-100 transition-opacity" href="#">
+<span class="material-symbols-outlined" data-icon="contact_support">contact_support</span>
+                    Support
+                </a>
+</nav>
+</div>
+</aside>
+<!-- Main Content Area -->
+<main class="md:ml-64 pt-12 min-h-screen">
+<!-- Hero Section: The Monolith Readout -->
+<section class="machined-grid border-b border-outline-variant/15 p-8 lg:p-12 relative overflow-hidden">
+<div class="max-w-7xl mx-auto grid grid-cols-12 gap-8 relative z-10">
+<!-- Operational Title -->
+<div class="col-span-12 lg:col-span-5 flex flex-col justify-center">
+<div class="inline-flex items-center gap-2 bg-primary px-3 py-1 mb-6 text-on-primary text-[10px] font-bold tracking-[0.2em] uppercase">
+                        Active Deployment / Node-01
+                    </div>
+<h1 class="text-6xl md:text-8xl font-black tracking-tighter leading-none mb-6">
+                        SYSTEM<br/>OVERVIEW
+                    </h1>
+<p class="text-on-surface-variant font-medium text-lg leading-relaxed max-w-md mb-8">
+                        Real-time telemetry and architectural orchestration for enterprise-grade digital infrastructure. Precisely machined for performance.
+                    </p>
+<div class="flex gap-4">
+<button class="px-8 py-3 bg-primary-fixed text-white font-bold text-sm tracking-widest uppercase hover:bg-primary-fixed-dim transition-colors">
+                            Deploy New Node
+                        </button>
+<button class="px-8 py-3 bg-surface-container-high text-primary font-bold text-sm tracking-widest uppercase hover:bg-surface-container-highest transition-colors">
+                            View Clusters
+                        </button>
+</div>
+</div>
+<!-- Hero Visualization -->
+<div class="col-span-12 lg:col-span-7">
+<div class="grid grid-cols-6 grid-rows-6 gap-2 h-[450px]">
+<div class="col-span-4 row-span-4 bg-surface-container-lowest border-l-4 border-primary-fixed p-6 relative group overflow-hidden">
+<div class="absolute inset-0 opacity-10 pointer-events-none">
+<div class="w-full h-full" style="background-image: repeating-linear-gradient(0deg, #0053da 0px, #0053da 1px, transparent 1px, transparent 20px);"></div>
+</div>
+<div class="flex justify-between items-start relative z-10">
+<div>
+<div class="text-[10px] uppercase tracking-widest opacity-50 mb-1">Total Network Mesh</div>
+<div class="text-4xl font-black tracking-tighter">842.12 GB/s</div>
+</div>
+<span class="material-symbols-outlined text-primary-fixed" data-icon="cloud_sync">cloud_sync</span>
+</div>
+<div class="mt-auto h-32 flex items-end gap-1 relative z-10">
+<div class="flex-1 bg-primary-fixed/20 h-[40%]"></div>
+<div class="flex-1 bg-primary-fixed/30 h-[60%]"></div>
+<div class="flex-1 bg-primary-fixed/20 h-[30%]"></div>
+<div class="flex-1 bg-primary-fixed/40 h-[75%]"></div>
+<div class="flex-1 bg-primary-fixed/60 h-[90%]"></div>
+<div class="flex-1 bg-primary-fixed/40 h-[65%]"></div>
+<div class="flex-1 bg-primary-fixed h-[100%]"></div>
+<div class="flex-1 bg-primary-fixed/20 h-[45%]"></div>
+</div>
+<div class="mt-4 flex justify-between text-[9px] uppercase tracking-tighter font-bold opacity-30">
+<span>00:00:00</span>
+<span>T-MINUS 1H</span>
+<span>LIVE_TELEMETRY</span>
+</div>
+</div>
+<div class="col-span-2 row-span-2 bg-inverse-surface text-on-tertiary p-4 flex flex-col justify-between">
+<span class="material-symbols-outlined text-primary-fixed" data-icon="security">security</span>
+<div>
+<div class="text-[9px] uppercase tracking-widest opacity-50">Firewall Status</div>
+<div class="text-xl font-bold">HARDENED</div>
+</div>
+</div>
+<div class="col-span-2 row-span-2 bg-surface-container-high p-4 flex flex-col justify-between border-l-2 border-primary">
+<span class="material-symbols-outlined" data-icon="hub">hub</span>
+<div>
+<div class="text-[9px] uppercase tracking-widest opacity-50">Active Nodes</div>
+<div class="text-2xl font-black tracking-tight">1,204</div>
+</div>
+</div>
+<div class="col-span-3 row-span-2 bg-surface-container-low p-4 relative">
+<div class="text-[9px] uppercase tracking-widest opacity-50 mb-4">Request distribution</div>
+<div class="flex items-center gap-1">
+<div class="h-1 flex-grow bg-primary-fixed"></div>
+<div class="h-1 flex-grow bg-outline-variant"></div>
+<div class="h-1 flex-grow bg-outline-variant"></div>
+</div>
+<div class="mt-4 text-sm font-medium">EMEA <span class="text-primary-fixed">64%</span></div>
+</div>
+<div class="col-span-3 row-span-2 bg-primary text-white p-4 flex flex-col justify-center items-center">
+<div class="text-4xl font-black">99.9</div>
+<div class="text-[9px] uppercase tracking-widest">Uptime Percent</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Status Terminal Modules -->
+<section class="p-8 lg:p-12 max-w-7xl mx-auto">
+<div class="mb-12 flex justify-between items-end">
+<div>
+<h2 class="text-[10px] font-bold tracking-[0.3em] uppercase text-primary-fixed mb-2">Operational Metrics</h2>
+<h3 class="text-3xl font-black tracking-tighter">RESOURCE_ALLOCATION</h3>
+</div>
+<div class="text-[10px] font-medium opacity-50 uppercase tracking-widest">Auto-refresh every 500ms</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+<!-- CPU Load -->
+<div class="bg-surface-container-low p-6 flex flex-col gap-4 group hover:bg-surface-container-high transition-colors">
+<div class="flex justify-between items-start">
+<div class="text-[10px] font-black tracking-widest opacity-50">CPU_CORE_LOAD</div>
+<span class="material-symbols-outlined text-[16px] opacity-30" data-icon="memory">memory</span>
+</div>
+<div class="flex items-end gap-2">
+<span class="text-4xl font-black tracking-tight">42.8</span>
+<span class="text-sm font-bold pb-1 opacity-50">%</span>
+</div>
+<div class="w-full bg-outline-variant/30 h-[2px]">
+<div class="bg-primary-fixed h-full w-[42.8%]"></div>
+</div>
+<div class="text-[10px] font-medium opacity-40 uppercase">Optimal operational range</div>
+</div>
+<!-- Memory Usage -->
+<div class="bg-surface-container-low p-6 flex flex-col gap-4 group hover:bg-surface-container-high transition-colors">
+<div class="flex justify-between items-start">
+<div class="text-[10px] font-black tracking-widest opacity-50">MEMORY_COMMIT</div>
+<span class="material-symbols-outlined text-[16px] opacity-30" data-icon="data_usage">data_usage</span>
+</div>
+<div class="flex items-end gap-2">
+<span class="text-4xl font-black tracking-tight">124.5</span>
+<span class="text-sm font-bold pb-1 opacity-50">TiB</span>
+</div>
+<div class="w-full bg-outline-variant/30 h-[2px]">
+<div class="bg-primary h-full w-[78%]"></div>
+</div>
+<div class="text-[10px] font-medium opacity-40 uppercase">Limit: 160.0 TiB</div>
+</div>
+<!-- Global Request Status -->
+<div class="bg-surface-container-low p-6 flex flex-col gap-4 group hover:bg-surface-container-high transition-colors">
+<div class="flex justify-between items-start">
+<div class="text-[10px] font-black tracking-widest opacity-50">GLOBAL_REQ_LATENCY</div>
+<span class="material-symbols-outlined text-[16px] opacity-30" data-icon="speed">speed</span>
+</div>
+<div class="flex items-end gap-2">
+<span class="text-4xl font-black tracking-tight">18</span>
+<span class="text-sm font-bold pb-1 opacity-50">MS</span>
+</div>
+<div class="w-full bg-outline-variant/30 h-[2px]">
+<div class="bg-primary-fixed h-full w-[15%]"></div>
+</div>
+<div class="text-[10px] font-medium text-primary-fixed uppercase font-bold">Sub-20ms threshold</div>
+</div>
+<!-- System Health -->
+<div class="bg-inverse-surface text-on-tertiary p-6 flex flex-col gap-4">
+<div class="flex justify-between items-start">
+<div class="text-[10px] font-black tracking-widest opacity-50">SYSTEM_INTEGRITY</div>
+<span class="material-symbols-outlined text-[16px] text-primary-fixed" data-icon="verified_user">verified_user</span>
+</div>
+<div class="flex items-end gap-2">
+<span class="text-3xl font-black tracking-tighter">STABLE</span>
+</div>
+<div class="flex gap-1">
+<div class="w-2 h-2 bg-primary-fixed"></div>
+<div class="w-2 h-2 bg-primary-fixed"></div>
+<div class="w-2 h-2 bg-primary-fixed"></div>
+<div class="w-2 h-2 bg-primary-fixed/20"></div>
+</div>
+<div class="text-[10px] font-medium opacity-50 uppercase">Operational - No errors</div>
+</div>
+</div>
+</section>
+<!-- Feature Grid (Architecture) -->
+<section class="bg-surface-container-low border-t border-outline-variant/15 py-24">
+<div class="max-w-7xl mx-auto px-8 lg:px-12">
+<div class="grid grid-cols-12 gap-8">
+<div class="col-span-12 lg:col-span-4 mb-12 lg:mb-0">
+<h4 class="text-[10px] font-bold tracking-[0.3em] uppercase text-primary-fixed mb-4">Core Components</h4>
+<h3 class="text-4xl font-black tracking-tighter mb-6">ARCHITECTURAL RIGOR.</h3>
+<p class="text-on-surface-variant font-medium leading-relaxed mb-8">
+                            Our cloud operations interface isn't just about visualization—it's about direct interaction with the underlying infrastructure machinery.
+                        </p>
+<div class="bg-surface p-6 border-l-4 border-primary">
+<p class="text-xs italic opacity-60">"The system delivers sub-millisecond telemetry that allows for preemptive scaling and security hardening before issues manifest."</p>
+<div class="mt-4 text-[10px] font-bold uppercase tracking-widest">Lead Engineer / DevOps</div>
+</div>
+</div>
+<div class="col-span-12 lg:col-span-8 grid grid-cols-1 md:grid-cols-2 gap-px bg-outline-variant/20">
+<!-- Feature 01 -->
+<div class="bg-surface p-10 flex flex-col">
+<span class="material-symbols-outlined text-4xl mb-6 text-primary-fixed" data-icon="auto_mode">auto_mode</span>
+<h5 class="text-lg font-black tracking-tight mb-2 uppercase">Autoscaling Logic</h5>
+<p class="text-sm text-on-surface-variant leading-relaxed">Dynamic resource provisioning based on predictive demand modeling and historical throughput analysis.</p>
+</div>
+<!-- Feature 02 -->
+<div class="bg-surface p-10 flex flex-col">
+<span class="material-symbols-outlined text-4xl mb-6 text-primary-fixed" data-icon="shield_with_heart">shield_with_heart</span>
+<h5 class="text-lg font-black tracking-tight mb-2 uppercase">Adaptive Security</h5>
+<p class="text-sm text-on-surface-variant leading-relaxed">Continuous threat detection using behavioral pattern recognition and automated isolation protocols.</p>
+</div>
+<!-- Feature 03 -->
+<div class="bg-surface p-10 flex flex-col">
+<span class="material-symbols-outlined text-4xl mb-6 text-primary-fixed" data-icon="terminal">terminal</span>
+<h5 class="text-lg font-black tracking-tight mb-2 uppercase">Deep-Level Logs</h5>
+<p class="text-sm text-on-surface-variant leading-relaxed">Instant access to kernel-level performance data and containerized application stack traces.</p>
+</div>
+<!-- Feature 04 -->
+<div class="bg-surface p-10 flex flex-col">
+<span class="material-symbols-outlined text-4xl mb-6 text-primary-fixed" data-icon="account_tree">account_tree</span>
+<h5 class="text-lg font-black tracking-tight mb-2 uppercase">Global Mesh</h5>
+<p class="text-sm text-on-surface-variant leading-relaxed">Orchestrate multi-cloud environments through a single unified control plane with zero abstraction leak.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Persistent Data Visual -->
+<section class="py-24 max-w-7xl mx-auto px-8 lg:px-12">
+<div class="bg-surface-container-highest border border-outline-variant/20 h-96 relative flex items-center justify-center overflow-hidden">
+<div class="absolute inset-0 opacity-5">
+<img alt="Technical Grid" class="w-full h-full object-cover" data-alt="Intricate blue laser light network patterns on dark background creating a complex digital geometric web structure" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA9cIuB9oX_phvt34Zmy4NMNKhhTiItDZlUgwERJwgIIh1K4ucM9Oj-B533baSuUUiJOb93Usy57qCx11fAkRm9PGVVJ0uEgvhu4lFB8tpluCJ9G4MyJqlyjHEPJhy8YfKXWk0tBv1uCCR4SOc1IwK1Bkqnu75hhdknD2FaUHBuWvOKE5nrL2Rrdg4o5jgvoGHuPlefmLZAEiJy71NrcziewxAdFejWTNPesR-kuwqysYXCTwrWA_A65P8nP83bmnKkx_8-E1Cp0oc"/>
+</div>
+<div class="relative z-10 text-center px-6">
+<div class="text-[10px] font-black tracking-[0.5em] uppercase opacity-50 mb-6">Internal System Map</div>
+<h2 class="text-4xl md:text-6xl font-black tracking-tighter max-w-2xl mx-auto mb-8 uppercase">Machined For Operational Excellence</h2>
+<button class="px-12 py-4 bg-primary text-white font-bold tracking-[0.2em] uppercase hover:bg-primary-fixed transition-all border border-transparent active:scale-95">
+                        Access Full Dashboard
+                    </button>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="flex flex-col md:flex-row justify-between items-center px-8 py-6 w-full bg-[#fcf9f8] dark:bg-[#161616] border-t border-[#c6c6c6]/15 font-['Inter'] text-[10px] font-medium tracking-widest uppercase">
+<div class="opacity-50 mb-4 md:mb-0">
+                © 2024 DIGITAL MONOLITH OPS. ALL RIGHTS RESERVED.
+            </div>
+<div class="flex gap-8">
+<a class="text-[#1b1b1b] dark:text-[#c6c6c6] opacity-50 hover:opacity-100 transition-opacity" href="#">Legal</a>
+<a class="text-[#1b1b1b] dark:text-[#c6c6c6] opacity-50 hover:opacity-100 transition-opacity" href="#">Compliance</a>
+<a class="text-[#1b1b1b] dark:text-[#c6c6c6] opacity-50 hover:opacity-100 transition-opacity" href="#">Privacy</a>
+<a class="text-[#1b1b1b] dark:text-[#c6c6c6] opacity-50 hover:opacity-100 transition-opacity" href="#">Terms of Service</a>
+</div>
+</footer>
+</main>
+</body></html>

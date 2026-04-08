@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>STUDIO | Photography Portfolio</title>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,300;0,400;0,500;0,600;1,400&amp;family=Inter:wght@300;400;500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "inverse-primary": "#c6c6c6",
+              "on-tertiary-fixed": "#ffffff",
+              "surface-container-low": "#f3f3f3",
+              "tertiary": "#3b3b3b",
+              "secondary-fixed": "#c6c6c6",
+              "on-secondary-fixed-variant": "#3b3b3b",
+              "on-primary": "#e2e2e2",
+              "surface-container": "#eeeeee",
+              "outline-variant": "#c6c6c6",
+              "surface-dim": "#dadada",
+              "primary-fixed-dim": "#474747",
+              "on-error": "#ffffff",
+              "on-error-container": "#410002",
+              "primary-container": "#3b3b3b",
+              "tertiary-fixed": "#5e5e5e",
+              "error": "#ba1a1a",
+              "on-secondary-container": "#1b1b1b",
+              "on-background": "#1b1b1b",
+              "on-tertiary": "#e2e2e2",
+              "on-primary-container": "#ffffff",
+              "on-surface-variant": "#474747",
+              "surface-bright": "#f9f9f9",
+              "secondary-container": "#d4d4d4",
+              "outline": "#777777",
+              "surface-container-lowest": "#ffffff",
+              "on-surface": "#1b1b1b",
+              "on-primary-fixed": "#ffffff",
+              "background": "#f9f9f9",
+              "primary": "#000000",
+              "inverse-on-surface": "#f1f1f1",
+              "on-tertiary-fixed-variant": "#e2e2e2",
+              "on-tertiary-container": "#ffffff",
+              "surface-tint": "#5e5e5e",
+              "on-primary-fixed-variant": "#e2e2e2",
+              "surface": "#f9f9f9",
+              "tertiary-fixed-dim": "#474747",
+              "secondary": "#5e5e5e",
+              "secondary-fixed-dim": "#ababab",
+              "surface-variant": "#e2e2e2",
+              "primary-fixed": "#5e5e5e",
+              "tertiary-container": "#747474",
+              "surface-container-high": "#e8e8e8",
+              "on-secondary": "#ffffff",
+              "error-container": "#ffdad6",
+              "surface-container-highest": "#e2e2e2",
+              "inverse-surface": "#303030",
+              "on-secondary-fixed": "#1b1b1b"
+            },
+            fontFamily: {
+              "headline": ["Newsreader", "serif"],
+              "body": ["Inter", "sans-serif"],
+              "label": ["Inter", "sans-serif"]
+            },
+            borderRadius: {"DEFAULT": "0px", "lg": "0px", "xl": "0px", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f9f9f9;
+        }
+        .journal-scroll-bar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 2px;
+            background-color: #5e5e5e;
+            width: 30%; /* Mock progress */
+            z-index: 100;
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface selection:bg-primary-container selection:text-white">
+<div class="journal-scroll-bar"></div>
+<!-- TopNavBar -->
+<header class="fixed top-0 w-full z-50 bg-neutral-50/80 dark:bg-black/80 backdrop-blur-xl">
+<nav class="flex justify-between items-baseline w-full px-8 py-6 max-w-[1920px] mx-auto">
+<div class="text-2xl font-medium font-serif italic text-black dark:text-white">
+                STUDIO
+            </div>
+<div class="flex gap-12 font-body text-[11px] uppercase tracking-widest items-center">
+<a class="text-black dark:text-white border-b border-black dark:border-white pb-0.5 transition-colors duration-300" href="#">Projects</a>
+<a class="text-neutral-500 dark:text-neutral-400 hover:text-black dark:hover:text-white transition-colors duration-300" href="#">Journal</a>
+<a class="text-neutral-500 dark:text-neutral-400 hover:text-black dark:hover:text-white transition-colors duration-300" href="#">Info</a>
+</div>
+</nav>
+</header>
+<main class="pt-32 pb-24">
+<!-- Gallery Wall -->
+<div class="max-w-[1920px] mx-auto px-8 flex flex-col gap-40">
+<!-- Series 01: Abstract Architecture -->
+<section class="grid grid-cols-12 gap-6 items-start">
+<div class="col-span-12 md:col-span-10 md:col-start-2">
+<figure class="relative mb-8">
+<img alt="Abstract Architecture" class="w-full h-auto object-cover grayscale brightness-105" data-alt="Monochromatic minimalist architectural photography showing sharp concrete angles and shadow play against a clear pale sky" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBHhEzcqt9VMtUeHIQMLKog6-PxcrIzF2nctcLur30m6aYEBYHGKdeSux6EpYptTYSQHee7KO5OHL9MyDwfTmQmxtf1byhER8cjZhI4I9kFNsN3P4BOflA4eq9L6SIHEHYcaDsFNMZijEAaTqAQrzJQ848MPcwuMb-e8uIXkzRjacZhxJLOMMTqw30_3PYkDeXld0nGSjFLR208ttzJ55ZRdK8VnqZKCZl-FN0gWwxvWHpK4bQ4_mgr0CVtY8lyIc8SQJpC9-9n965z"/>
+</figure>
+</div>
+<div class="col-span-12 md:col-span-4 md:col-start-2">
+<h2 class="font-headline text-5xl md:text-7xl font-light tracking-tight text-primary leading-none">Abstract Architecture</h2>
+</div>
+<div class="col-span-12 md:col-span-3 md:col-start-8 flex flex-col gap-4">
+<div class="flex flex-col gap-1 border-l border-primary/10 pl-6">
+<span class="font-label text-[10px] uppercase tracking-[0.2em] text-secondary">Location</span>
+<span class="font-body text-sm text-on-surface">Berlin, Germany</span>
+</div>
+<div class="flex flex-col gap-1 border-l border-primary/10 pl-6">
+<span class="font-label text-[10px] uppercase tracking-[0.2em] text-secondary">Medium</span>
+<span class="font-body text-sm text-on-surface">35mm Monochrome</span>
+</div>
+<div class="mt-4">
+<button class="bg-primary text-on-primary px-8 py-3 text-xs uppercase tracking-widest font-medium hover:bg-primary-container transition-colors">
+                            View Series
+                        </button>
+</div>
+</div>
+</section>
+<!-- Series 02: Forest Light (Asymmetric Layout) -->
+<section class="grid grid-cols-12 gap-6 items-center">
+<div class="col-span-12 md:col-span-7">
+<figure class="bg-surface-container-low p-12">
+<img alt="Forest Light" class="w-full aspect-[4/5] object-cover grayscale opacity-90" data-alt="Ethereal sunbeams piercing through a dense morning forest fog with soft silhouettes of towering pine trees" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCbINp53uRxutsZ2mUnUqFFzPGeN6JIUR2BLSxGAA7EIzO4tmlrf5VB8cevbXMhrgU7ZDDCudqvakWkpcPZLPos53R0ZE81YNwcWUjcEYwUtFsdBlBeKdQ-_4iwn3RzgkGU-LeZESHNEzlAmL3PsAsANe2NEQLUd6D--WrNjN31Mun1C8Ua1k7zILPJ46BPyzJ9xMmTTtu8INGWMUi8CQyGOQWLukFXmZuHuO9ellHtH0mLqGPgetqOGksglDsjV5UeUlLwDsK3IOD9"/>
+</figure>
+</div>
+<div class="col-span-12 md:col-span-4 md:col-start-9">
+<span class="font-label text-[10px] uppercase tracking-[0.3em] text-secondary mb-4 block">02 / 24</span>
+<h2 class="font-headline text-5xl md:text-6xl italic font-light text-primary mb-6">Forest Light</h2>
+<p class="font-body text-secondary text-sm leading-relaxed max-w-sm mb-8">
+                        A study of light as a physical presence within the ancient woodlands of the Pacific Northwest. Captured during the vernal equinox.
+                    </p>
+<div class="flex items-center gap-2 group cursor-pointer">
+<span class="font-label text-[11px] uppercase tracking-widest border-b border-primary pb-1">Explore Narrative</span>
+<span class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform" data-icon="arrow_right_alt">arrow_right_alt</span>
+</div>
+</div>
+</section>
+<!-- Series 03: Concrete Vernacular -->
+<section class="grid grid-cols-12 gap-6">
+<div class="col-span-12 md:col-span-8 md:col-start-3">
+<div class="grid grid-cols-2 gap-4">
+<img alt="Brutalist detail" class="w-full aspect-square object-cover grayscale" data-alt="Extreme close up of weathered brutalist concrete texture with geometric drain patterns and soft shadows" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA5Xm3Q3XpXXALSOBO-BpCLbtfrORqqmvPlnOGKYMSXKjLuzYT-JIrnFhp5oefAgsrRxuMpK4-A0we0nhgZrgtnhQZfNNzsYBvi1QA6c-jBSn-0_eFZkukSSDj_46XBA61WOGIBNHvqAQ-CcpKciK-GRCwe9TgQ3blTiiCjlkT_gxM-d0zzwP95ITrEwP0VM2ALXpuQofj2ApCVN28LZOTViSQ_CZCdv5p99E6iexFncqmrIg9DSYqmY_CbaBenmGLjWgXC3Qs_Qk_B"/>
+<img alt="Urban Geometry" class="w-full aspect-square object-cover grayscale mt-24" data-alt="Sharp diagonal shadow falling across a pristine white gallery wall with a single minimal door frame" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB-eSUr0mMRs04SCUrofZNZ7JXW0mSVGn4_EUsXg-EsAOybhJJmSIxGLRc7F5fMgEXTnu3c6fDOAi-gOsKVOhg-q0IyyxAHjXLoTyEWmxwXlMkgkO1cW60f3nxZ7Tnzv-krgERFhnjMaW68V4uO8vGWxBa4P96uwSlGAY6kWXZ7QKwIICvx0Jexm9QbxlTcZdq5pP5JZHFK45lS1MKh3Go4Y0Nt1gUBGKW0lcXZwmurJaWE_hF757JB0nS8La6ws39VQiGvVFzdYVtx"/>
+</div>
+<div class="mt-12 text-center">
+<h2 class="font-headline text-4xl md:text-5xl font-light text-primary mb-2">Concrete Vernacular</h2>
+<p class="font-label text-[11px] uppercase tracking-[0.2em] text-secondary">Series 03 — London, UK</p>
+</div>
+</div>
+</section>
+<!-- Final Sequence: The Quiet -->
+<section class="relative w-full h-[921px] overflow-hidden">
+<div class="absolute inset-0 bg-neutral-900/5 z-10"></div>
+<img alt="The Quiet" class="w-full h-full object-cover grayscale" data-alt="Wide minimalist landscape of a single solitary tree on a rolling horizon under a vast overcast sky in muted tones" src="https://lh3.googleusercontent.com/aida-public/AB6AXuARK0QlgoxbgEpeOo5WI-1Qr5SA4mjXI7Oxk6jA0TkBbwFrClkCxSiUN4NvVtjQaydjgOgU8Rrx2RNk3VVm9B7GUefvMJd_KFok41Q-eVNJRVXd4r9KaiZMfJJGr6OrFSmHX1HD9IN_2P9WkOvPVQKzSNW7kIM2RbNTZ_7Lxcm4LVHCGeEnF16l2k-bA3KBzKHcZrajAaHvNz3B_x3mF0oUUiXUXIMupax0xajFYMivE-gbbLae_BjAhfmKcwF7Povm2ILBXwA4rx95"/>
+<div class="absolute inset-0 flex flex-col justify-center items-center z-20">
+<h2 class="font-headline text-white text-6xl md:text-8xl font-light mix-blend-difference">The Quiet</h2>
+<span class="text-white/70 font-label text-[11px] uppercase tracking-[0.5em] mt-6 mix-blend-difference">Coming Autumn 2024</span>
+</div>
+</section>
+</div>
+</main>
+<!-- Footer -->
+<footer class="w-full mt-auto bg-neutral-50 dark:bg-black">
+<div class="flex flex-col md:flex-row justify-between items-center w-full px-8 py-12 gap-6 max-w-[1920px] mx-auto border-t border-primary/5">
+<div class="font-sans text-[11px] uppercase tracking-[0.2em] font-light text-neutral-400 dark:text-neutral-600">
+                © 2024 Studio. All rights reserved.
+            </div>
+<div class="flex gap-8">
+<a class="font-sans text-[11px] uppercase tracking-[0.2em] font-light text-neutral-400 dark:text-neutral-600 hover:text-black dark:hover:text-white underline underline-offset-4 transition-all duration-500 ease-in-out" href="#">Instagram</a>
+<a class="font-sans text-[11px] uppercase tracking-[0.2em] font-light text-neutral-400 dark:text-neutral-600 hover:text-black dark:hover:text-white underline underline-offset-4 transition-all duration-500 ease-in-out" href="#">Archive</a>
+</div>
+</div>
+</footer>
+</body></html>

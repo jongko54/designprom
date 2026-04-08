@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Wanderlust - Travel Marketplace</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Be+Vietnam+Pro:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "background": "#fdf9ef",
+              "primary-fixed": "#ffdad8",
+              "on-error": "#ffffff",
+              "on-tertiary-fixed": "#281900",
+              "on-secondary-fixed-variant": "#004e5f",
+              "on-surface": "#1c1c16",
+              "on-tertiary-fixed-variant": "#5f4100",
+              "outline": "#8e706f",
+              "surface-bright": "#fdf9ef",
+              "on-primary-container": "#61000e",
+              "primary-fixed-dim": "#ffb3b0",
+              "surface-container-low": "#f7f3e9",
+              "secondary": "#00677d",
+              "error-container": "#ffdad6",
+              "surface": "#fdf9ef",
+              "surface-tint": "#b52330",
+              "inverse-on-surface": "#f4f0e6",
+              "on-primary-fixed": "#410007",
+              "on-primary": "#ffffff",
+              "on-tertiary-container": "#3e2900",
+              "tertiary": "#7e5700",
+              "surface-container-highest": "#e6e2d8",
+              "tertiary-container": "#c38900",
+              "surface-container": "#f1eee4",
+              "on-tertiary": "#ffffff",
+              "outline-variant": "#e2bebc",
+              "secondary-fixed-dim": "#80d2ed",
+              "inverse-surface": "#31312a",
+              "on-primary-fixed-variant": "#92001b",
+              "on-surface-variant": "#5a403f",
+              "on-secondary": "#ffffff",
+              "tertiary-fixed-dim": "#ffba35",
+              "inverse-primary": "#ffb3b0",
+              "primary": "#b52330",
+              "on-error-container": "#93000a",
+              "on-secondary-fixed": "#001f27",
+              "primary-container": "#ff5a5f",
+              "surface-container-high": "#ece8de",
+              "on-secondary-container": "#00667c",
+              "secondary-fixed": "#b4ebff",
+              "tertiary-fixed": "#ffdeac",
+              "on-background": "#1c1c16",
+              "surface-dim": "#dddad0",
+              "surface-container-lowest": "#ffffff",
+              "secondary-container": "#91e3fe",
+              "surface-variant": "#e6e2d8",
+              "error": "#ba1a1a"
+            },
+            fontFamily: {
+              "headline": ["Plus Jakarta Sans"],
+              "body": ["Be Vietnam Pro"],
+              "label": ["Be Vietnam Pro"]
+            },
+            borderRadius: {"DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+      .editorial-shadow {
+        box-shadow: 0 12px 32px -4px rgba(28, 28, 22, 0.06);
+      }
+      .sunset-gradient {
+        background: linear-gradient(135deg, #b52330 0%, #ff5a5f 100%);
+      }
+    </style>
+</head>
+<body class="bg-background font-body text-on-surface selection:bg-primary-fixed selection:text-on-primary-fixed">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-[#fdf9ef]/70 dark:bg-stone-900/70 backdrop-blur-md">
+<div class="flex justify-between items-center px-8 py-4 max-w-7xl mx-auto font-['Plus_Jakarta_Sans'] tracking-tight">
+<div class="text-2xl font-bold text-[#1c1c16] dark:text-[#fdf9ef] tracking-tighter">Wanderlust</div>
+<div class="hidden md:flex items-center gap-8">
+<a class="text-[#b52330] dark:text-[#ff5a5f] border-b-2 border-[#b52330] pb-1 hover:text-[#b52330] transition-colors duration-300" href="#">Stays</a>
+<a class="text-[#5a403f] dark:text-[#e2bebc] hover:text-[#b52330] transition-colors duration-300" href="#">Experiences</a>
+<a class="text-[#5a403f] dark:text-[#e2bebc] hover:text-[#b52330] transition-colors duration-300" href="#">Adventures</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="p-2 text-[#5a403f] dark:text-[#e2bebc] scale-95 active:opacity-80 transition-all">
+<span class="material-symbols-outlined" data-icon="account_circle">account_circle</span>
+</button>
+</div>
+</div>
+</nav>
+<main class="pt-24">
+<!-- Hero Section & Search Flow -->
+<section class="px-6 lg:px-12 py-12 max-w-7xl mx-auto">
+<div class="relative w-full aspect-[21/9] rounded-xl overflow-hidden mb-[-4rem] z-0">
+<img class="w-full h-full object-cover" data-alt="expansive mountain lake landscape at sunset with warm orange and pink light reflecting on calm blue water and pine trees" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB6irxC-EJlpH27-CpyC3xLWRPwPLzKeHh76_3Lb9L5cle-bBqDk3MTG5sYFEo_INrZBr3mM5G2HmOto7-E9UmzhOiPVk0IzQhlj6Mc5SgD58jvC4AChalwdaalqfr278pcQonvZLocONjLTyz9VM_2jG2MpEhnT8-QXrUZnsyHchctwXLM-sH7_j2VXKLHbv1vAKx3WTBhPnZj10kac9Vj_F0aDGVhjqSSbxmRPXRw3AEBvU5EjcS49V6L1EZu_1WfruG1WkBka-fL"/>
+<div class="absolute inset-0 bg-black/10"></div>
+<div class="absolute inset-0 flex flex-col items-center justify-center text-center p-6">
+<h1 class="font-headline text-4xl md:text-6xl font-extrabold text-white mb-4 tracking-tight drop-shadow-lg">Find your piece of peace</h1>
+</div>
+</div>
+<!-- Booking Shell -->
+<div class="relative z-10 max-w-5xl mx-auto">
+<div class="bg-surface-container-lowest editorial-shadow rounded-lg p-4 md:p-2 flex flex-col md:flex-row items-center gap-2">
+<div class="flex-1 w-full grid grid-cols-1 md:grid-cols-3 gap-2">
+<div class="px-6 py-3 hover:bg-surface-container-low rounded-lg transition-colors cursor-pointer">
+<label class="block text-[10px] font-bold text-on-surface-variant uppercase tracking-widest mb-1">Where</label>
+<input class="w-full bg-transparent border-none p-0 focus:ring-0 placeholder:text-outline text-on-surface font-medium" placeholder="Search destinations" type="text"/>
+</div>
+<div class="px-6 py-3 border-t md:border-t-0 md:border-l border-outline-variant/30 hover:bg-surface-container-low rounded-lg transition-colors cursor-pointer">
+<label class="block text-[10px] font-bold text-on-surface-variant uppercase tracking-widest mb-1">When</label>
+<div class="text-on-surface font-medium">Add dates</div>
+</div>
+<div class="px-6 py-3 border-t md:border-t-0 md:border-l border-outline-variant/30 hover:bg-surface-container-low rounded-lg transition-colors cursor-pointer">
+<label class="block text-[10px] font-bold text-on-surface-variant uppercase tracking-widest mb-1">Who</label>
+<div class="text-on-surface font-medium">Add guests</div>
+</div>
+</div>
+<button class="sunset-gradient text-on-primary w-full md:w-auto h-14 px-8 rounded-full flex items-center justify-center gap-2 font-bold scale-95 active:opacity-80 transition-all">
+<span class="material-symbols-outlined">search</span>
+                        Search
+                    </button>
+</div>
+</div>
+</section>
+<!-- Categories -->
+<section class="py-12 overflow-x-auto no-scrollbar">
+<div class="flex justify-center items-center gap-10 px-6 min-w-max mx-auto max-w-7xl">
+<div class="flex flex-col items-center gap-2 group cursor-pointer border-b-2 border-primary pb-2">
+<span class="material-symbols-outlined text-primary" data-icon="house">house</span>
+<span class="font-label text-xs font-semibold text-primary">Cabins</span>
+</div>
+<div class="flex flex-col items-center gap-2 group cursor-pointer opacity-60 hover:opacity-100 transition-opacity pb-2">
+<span class="material-symbols-outlined" data-icon="beach_access">beach_access</span>
+<span class="font-label text-xs font-semibold">Beachfront</span>
+</div>
+<div class="flex flex-col items-center gap-2 group cursor-pointer opacity-60 hover:opacity-100 transition-opacity pb-2">
+<span class="material-symbols-outlined" data-icon="nature">nature</span>
+<span class="font-label text-xs font-semibold">Tiny Homes</span>
+</div>
+<div class="flex flex-col items-center gap-2 group cursor-pointer opacity-60 hover:opacity-100 transition-opacity pb-2">
+<span class="material-symbols-outlined" data-icon="castle">castle</span>
+<span class="font-label text-xs font-semibold">Castles</span>
+</div>
+<div class="flex flex-col items-center gap-2 group cursor-pointer opacity-60 hover:opacity-100 transition-opacity pb-2">
+<span class="material-symbols-outlined" data-icon="pool">pool</span>
+<span class="font-label text-xs font-semibold">Amazing Pools</span>
+</div>
+<div class="flex flex-col items-center gap-2 group cursor-pointer opacity-60 hover:opacity-100 transition-opacity pb-2">
+<span class="material-symbols-outlined" data-icon="landscape">landscape</span>
+<span class="font-label text-xs font-semibold">Countryside</span>
+</div>
+<div class="flex flex-col items-center gap-2 group cursor-pointer opacity-60 hover:opacity-100 transition-opacity pb-2">
+<span class="material-symbols-outlined" data-icon="skillet">skillet</span>
+<span class="font-label text-xs font-semibold">Chef's Kitchen</span>
+</div>
+</div>
+</section>
+<!-- Featured Adventures (Editorial Grid) -->
+<section class="px-6 lg:px-12 py-16 max-w-7xl mx-auto">
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-4">
+<div>
+<h2 class="font-headline text-3xl font-bold tracking-tight mb-2">Featured Adventures</h2>
+<p class="text-on-surface-variant font-body max-w-md">Hand-picked experiences that prioritize connection, comfort, and the great outdoors.</p>
+</div>
+<button class="text-primary font-bold flex items-center gap-1 hover:gap-2 transition-all">
+                    View all adventures <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-8">
+<!-- Large Feature Card -->
+<div class="md:col-span-8 group cursor-pointer">
+<div class="relative aspect-[16/10] rounded-xl overflow-hidden mb-4">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="rustic a-frame cabin interior with warm lighting, large window looking out to snowy pine trees, and a cozy fireplace" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDWIEkwtCPoxLxKxeXZuA3-q5PzLAfUN0EysBjd5QKRY8HpsLyp3hbciOBTOALgncHw8N_6BhJJIAPhB_8U2Ia2r79PyNhx-HyRnQVyAAFffy9_FA2Yc9BcpDC0LeXnAXeM3N4EXJIA7wLJfa2U0bgmdNO0mFHDk0hg_uJp_a8pd9qE0wr67D3sNopROdvgNzRjlBqETgG1_haqgoSh2FaYHkwP61XJdukN94_IU6GIZbVDgVL34fUuwlEzmt4zzlQd4zRwC6rvvu0o"/>
+<div class="absolute top-4 left-4 bg-surface/90 backdrop-blur px-4 py-1 rounded-full text-xs font-bold text-primary tracking-widest uppercase">Editor's Pick</div>
+</div>
+<div class="flex justify-between items-start">
+<div>
+<h3 class="font-headline text-xl font-bold mb-1">The Nordic Escape</h3>
+<p class="text-on-surface-variant text-sm">Hallingdal, Norway • 4.98 ★</p>
+</div>
+<div class="text-right">
+<span class="font-bold text-lg">$280</span>
+<span class="text-on-surface-variant text-sm block">/ night</span>
+</div>
+</div>
+</div>
+<!-- Side Column Cards -->
+<div class="md:col-span-4 flex flex-col gap-8">
+<div class="group cursor-pointer">
+<div class="relative aspect-square rounded-lg overflow-hidden mb-4">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="luxury beachfront villa with white linens and open doors leading to a turquoise ocean deck at sunrise" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD35Q9wosiESxtoJpLm6CE8qFDqLa2Dz188eATyjlxue26df_DRB7pqIY9yY_QW8HjNyHH2cOJ4kvs7QyXBAEPQfL2SGJk3y16f8c1n8PjUKUeKjyUDMIDrBIDWV2FbLcWAOuvY2crnfzMfl9s_BIdxucu8uUHmi65pZ5ivbInTEQCRtMbXP-qvoj2jj3_XbuSsD4J7uBiD2fNlD0qMY7XNH9zdqAvOYRg_JcX9N4_l1fqLo5VukvBm42S2lA7K6YeAUju1qdFW8PWM"/>
+</div>
+<h3 class="font-headline font-bold mb-1">Oceanic Solitude</h3>
+<p class="text-on-surface-variant text-sm">Crete, Greece • $420/night</p>
+</div>
+<div class="group cursor-pointer">
+<div class="relative aspect-square rounded-lg overflow-hidden mb-4">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="serene morning fog over a lush green meadow with a small wooden cottage and grazing deer in the distance" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAnFuTImb7iepxDTfCuKFenlR2EhlyH4cIul5yhJZSXGA7H-GUXqdSgnmJVsni-aDf9tTQ_vUIvSVapJ4_STB6fV1joPc518QadD3pE0n7ECyELI-j6HgcSkKVyJxXmwjtT1KiDJpaL0VHsZRrd91u8zIew1lX4hY3kdRU3OesNkMyG5M4NM6OwmsV-ihZDmgsHGCMmCTKOy7_Is7UBi8v1zveMluEGk8O5iUeiBtvQmS3YlUZbKqyzMZ_gX5kUzqDQzENGyh3SYlS6"/>
+</div>
+<h3 class="font-headline font-bold mb-1">Meadow Mist Sanctuary</h3>
+<p class="text-on-surface-variant text-sm">Oregon, USA • $195/night</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Testimonial Section -->
+<section class="bg-surface-container-low py-24">
+<div class="max-w-7xl mx-auto px-6 lg:px-12">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+<div class="relative">
+<div class="absolute -top-12 -left-12 w-24 h-24 bg-tertiary-fixed rounded-full opacity-20"></div>
+<img class="rounded-xl w-full aspect-[4/5] object-cover relative z-10 editorial-shadow" data-alt="diverse group of friends laughing together around a sunlit wooden table in a high-end vacation rental home" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAQyBXaO3yiC-_DjqD_UGQbUd8uF0A6L5Cb4iMxtW1uz6K9vEcvOztBKc4j-p3OcYM2yDF-pxh27gy5pWVtJQBRLlkqjTI2R28nQbCCXdK_C0dvVu5RHJyxoslnKubsUl1q0IpAjmCy8avWiClGN-A7iRlplJXYS3oMbGYuykIBKGvZIVKo4zv51qkVQSSRWi1NNkPR8V8Xx7vVsZUbXoH6s52PF4FEzq8abq5yBVLlaUNh0XmoLtENLPBuqFk8r-ik1jzd-vRMOqXP"/>
+</div>
+<div class="space-y-8">
+<span class="material-symbols-outlined text-6xl text-primary/20" style="font-variation-settings: 'FILL' 1;">format_quote</span>
+<blockquote class="font-headline text-3xl font-medium leading-tight text-on-surface">
+                            "Wanderlust didn't just find us a place to stay; they curated an experience that felt like coming home to a world we didn't know existed. Every detail was intentional."
+                        </blockquote>
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="portrait of a middle-aged man with a warm smile and casual travel attire" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBosDOVH4Kd3QLFDBpgHSIOVOl8eJzLT_5MDBPphr95E88qCPTumLqgVz6G4cqlnZM1rgOAhv7x67SqKGgybVO59POopI_z-M8d8x370KoI1zz8aRs23Iw-ENWENYhe6iMhzHyy9ZHucP26QVjU7a3F9zihkT4hL4jDtj8whPUcP0Ly0Z6Sa4fVtGQmaa5xVZfhl0_JpoJ4ugA2J2BpLBJvM9WEGaZVj9eAabOBjAI6_KnKLqxfBQiOVbuO6CI4O8Gj2t2hNDanS8qV"/>
+</div>
+<div>
+<p class="font-bold text-lg">Marcus Thornton</p>
+<p class="text-on-surface-variant text-sm">Spent 14 days in Tuscany</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Host CTA Banner -->
+<section class="px-6 lg:px-12 py-24 max-w-7xl mx-auto">
+<div class="relative bg-on-surface rounded-xl overflow-hidden p-12 md:p-20 text-white">
+<div class="absolute inset-0 opacity-40">
+<img class="w-full h-full object-cover" data-alt="warmly lit cozy living room with bookshelves and a comfortable armchair at dusk" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCGTQmi_iasrpK3smysrBBZJMk8jGyfqhvAmXbRXsht3xcRCjHUeD4fWZ3oqdSu8RnF08oq9rhVDpnlR5GG78f7wlFwf1CxZuW5Vxa1ybNn9mTCCBO0mQeIbrA0Z79f-wM_YGMled38Vum2iXCsXrl6IOKQ8SnRI8X0IGN6gC-fwjFstOpxNjTuEL8GOPRBjJQywTY4Ic1mwS8aoT1exthQPdSjK7SMFomnHFixlrWsjjz_K9wf0gBBp2iufAmzNq5haTa9hkHDIYUb"/>
+</div>
+<div class="relative z-10 max-w-2xl">
+<h2 class="font-headline text-4xl md:text-5xl font-extrabold mb-6">Open your doors to the world.</h2>
+<p class="text-lg opacity-90 mb-10 leading-relaxed">Turn your space into a sanctuary for travelers. With Wanderlust, you're not just a host—you're a curator of unforgettable memories.</p>
+<div class="flex flex-wrap gap-4">
+<button class="bg-primary hover:bg-primary-container text-white px-8 py-4 rounded-full font-bold transition-all shadow-xl shadow-primary/20">Become a Host</button>
+<button class="bg-white/10 backdrop-blur-md hover:bg-white/20 text-white px-8 py-4 rounded-full font-bold transition-all">Learn More</button>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full rounded-t-[3rem] mt-20 bg-[#f7f3e9] dark:bg-stone-950">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:flex lg:justify-between items-center px-12 py-16 w-full font-['Be_Vietnam_Pro'] text-sm tracking-wide">
+<div class="mb-8 lg:mb-0">
+<div class="text-xl font-bold text-[#1c1c16] dark:text-[#fdf9ef] mb-2">Wanderlust</div>
+<p class="text-[#5a403f] dark:text-[#e2bebc] max-w-xs">Connecting explorers with the most intentional spaces on earth.</p>
+</div>
+<div class="flex flex-wrap gap-8 items-center">
+<a class="text-[#5a403f] dark:text-[#e2bebc] hover:underline decoration-[#b52330] underline-offset-4 transition-opacity opacity-90 hover:opacity-100" href="#">Privacy Policy</a>
+<a class="text-[#5a403f] dark:text-[#e2bebc] hover:underline decoration-[#b52330] underline-offset-4 transition-opacity opacity-90 hover:opacity-100" href="#">Terms of Service</a>
+<a class="text-[#5a403f] dark:text-[#e2bebc] hover:underline decoration-[#b52330] underline-offset-4 transition-opacity opacity-90 hover:opacity-100" href="#">Cookie Policy</a>
+<a class="text-[#5a403f] dark:text-[#e2bebc] hover:underline decoration-[#b52330] underline-offset-4 transition-opacity opacity-90 hover:opacity-100" href="#">Contact Us</a>
+</div>
+<div class="mt-8 lg:mt-0 text-[#5a403f] dark:text-[#e2bebc]">
+                © 2024 Wanderlust. All rights reserved.
+            </div>
+</div>
+</footer>
+</body></html>

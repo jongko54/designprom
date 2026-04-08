@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Digital Workbench | Workshop Canvas</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#005f9a",
+            "tertiary": "#755700",
+            "secondary-dim": "#94077c",
+            "error-container": "#fb5151",
+            "on-secondary-container": "#870071",
+            "surface-container-high": "#e1e3e3",
+            "surface-container-lowest": "#ffffff",
+            "surface-variant": "#dbdddd",
+            "inverse-on-surface": "#9c9d9d",
+            "background": "#f6f6f6",
+            "tertiary-fixed": "#fdc003",
+            "on-secondary-fixed": "#660054",
+            "on-error": "#ffefee",
+            "on-tertiary-container": "#553e00",
+            "outline-variant": "#acadad",
+            "primary-fixed-dim": "#0099f3",
+            "on-primary-fixed": "#000000",
+            "on-primary-container": "#00243f",
+            "surface-container-low": "#f0f1f1",
+            "secondary-container": "#ffbfe7",
+            "surface-bright": "#f6f6f6",
+            "outline": "#767777",
+            "on-surface": "#2d2f2f",
+            "on-primary": "#ecf3ff",
+            "tertiary-container": "#fdc003",
+            "tertiary-fixed-dim": "#ecb200",
+            "on-primary-fixed-variant": "#002e4e",
+            "on-background": "#2d2f2f",
+            "secondary-fixed-dim": "#ffa9e1",
+            "primary-container": "#32a6ff",
+            "on-tertiary-fixed": "#3d2b00",
+            "error-dim": "#9f0519",
+            "tertiary-dim": "#664b00",
+            "surface-container-highest": "#dbdddd",
+            "primary-fixed": "#32a6ff",
+            "on-secondary-fixed-variant": "#96097d",
+            "on-tertiary": "#fff1db",
+            "surface": "#f6f6f6",
+            "surface-dim": "#d3d5d5",
+            "on-error-container": "#570008",
+            "on-tertiary-fixed-variant": "#604700",
+            "secondary-fixed": "#ffbfe7",
+            "primary-dim": "#005387",
+            "error": "#b31b25",
+            "inverse-primary": "#139ef9",
+            "secondary": "#a41d89",
+            "inverse-surface": "#0c0f0f",
+            "on-secondary": "#ffeef5",
+            "on-surface-variant": "#5a5c5c",
+            "surface-container": "#e7e8e8",
+            "surface-tint": "#005f9a"
+          },
+          fontFamily: {
+            "headline": ["Inter"],
+            "body": ["Inter"],
+            "label": ["Inter"]
+          },
+          borderRadius: {"DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px"},
+        },
+      },
+    }
+  </script>
+<style>
+    body { font-family: 'Inter', sans-serif; background-color: #f6f6f6; }
+    .canvas-grid {
+      background-image: radial-gradient(#acadad 1px, transparent 1px);
+      background-size: 24px 24px;
+      opacity: 0.15;
+    }
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    }
+    .sticky-note {
+      transition: transform 0.2s ease;
+    }
+    .sticky-note:hover {
+      transform: rotate(1deg) scale(1.02);
+    }
+  </style>
+</head>
+<body class="bg-background text-on-surface overflow-hidden h-screen w-screen relative">
+<!-- Canvas Background Layer -->
+<div class="fixed inset-0 canvas-grid pointer-events-none"></div>
+<!-- Shared Component: TopNavBar -->
+<nav class="fixed top-0 left-0 right-0 z-50 flex justify-between items-center px-6 py-2 bg-white/85 dark:bg-slate-900/85 backdrop-blur-lg rounded-full mt-4 mx-auto w-[95%] max-w-screen-2xl no-border shadow-[0_12px_40px_rgba(45,47,47,0.06)]">
+<div class="flex items-center gap-6">
+<div class="text-lg font-semibold text-slate-900 dark:text-white flex items-center gap-2">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">dashboard</span>
+        Digital Workbench
+      </div>
+<div class="hidden md:flex gap-4">
+<button class="text-blue-600 dark:text-blue-400 font-bold hover:bg-slate-100/50 dark:hover:bg-slate-800/50 transition-all px-3 py-1 rounded-md">File</button>
+<button class="text-slate-500 dark:text-slate-400 hover:bg-slate-100/50 dark:hover:bg-slate-800/50 transition-all px-3 py-1 rounded-md">Edit</button>
+<button class="text-slate-500 dark:text-slate-400 hover:bg-slate-100/50 dark:hover:bg-slate-800/50 transition-all px-3 py-1 rounded-md">View</button>
+<button class="text-slate-500 dark:text-slate-400 hover:bg-slate-100/50 dark:hover:bg-slate-800/50 transition-all px-3 py-1 rounded-md">Assets</button>
+</div>
+</div>
+<div class="flex items-center gap-3">
+<div class="flex -space-x-2 mr-4">
+<img alt="User 1" class="w-8 h-8 rounded-full border-2 border-white shadow-sm" data-alt="close-up portrait of a young professional man with short dark hair and a warm friendly expression" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAnrUlL2WQ2K0k0-fAiGS0d5XX3JtyB_eapE4IvuQGqX3Gok_K4wi76VWNIuQmhatPA8pQpbtBjlLteNem0Q1gIx4Yox4Q7xfPdd4OLTTfYneAKqQR_AeAEr4MZLBRBtzb42tJ74gwUJsOAQ8avuq0UluKeAFSZMS0DprvODlJ7l7RbUkozwn-5q0rQSZIENdSjTO52q10O3w5V3gOMtJOqsSUZ0LJoDqFGHu_uepsmeYZQgdMLHKj8_1Mw55KWSOuaSYgO7TkORFk"/>
+<img alt="User 2" class="w-8 h-8 rounded-full border-2 border-white shadow-sm" data-alt="portrait of a woman with curly brown hair wearing a creative modern outfit in a brightly lit studio" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCJb_P9nzdF34vWXbOfeUFHKgoICVFqIp7tOndinDjvbiy6dA1Q12Yb89Irwt9KaVrsQW3cFsRGhqsH8zjIlQ-Vh8ryhhuPnEpHcKcf_x9eU8TLYVNJIebwjnf2VvzRdMuhHd2c-p4Df8nTIzytagh4YyQ6yCdNyXbtpZJvInoFsEQbFWZFlQ6aC381IovpoRA2gNGwfSY0aNvG-O824xmtfWb3RoDeJML_OwxU_OHPu0EuuNhVeCaaH_kkT9PDmDfqSwhH5yv20Nc"/>
+<div class="w-8 h-8 rounded-full bg-surface-container-high border-2 border-white shadow-sm flex items-center justify-center text-[10px] font-bold">+4</div>
+</div>
+<button class="flex items-center gap-2 text-slate-500 dark:text-slate-400 p-2 hover:bg-slate-100/50 dark:hover:bg-slate-800/50 rounded-full transition-all">
+<span class="material-symbols-outlined">group</span>
+</button>
+<button class="flex items-center gap-2 text-slate-500 dark:text-slate-400 p-2 hover:bg-slate-100/50 dark:hover:bg-slate-800/50 rounded-full transition-all">
+<span class="material-symbols-outlined">history</span>
+</button>
+<button class="bg-primary text-white px-5 py-2 rounded-full font-semibold scale-95 active:scale-90 transition-transform">Share</button>
+<button class="p-2 text-slate-500 hover:bg-slate-100 rounded-full">
+<span class="material-symbols-outlined">more_vert</span>
+</button>
+</div>
+</nav>
+<!-- Shared Component: SideNavBar (Sidebar tools) -->
+<aside class="fixed left-0 top-1/2 -translate-y-1/2 z-40 h-[614px] w-20 flex flex-col items-center py-8 bg-white/80 dark:bg-slate-900/80 backdrop-blur-md rounded-3xl ml-4 shadow-xl shadow-slate-200/40 dark:shadow-none">
+<div class="mb-8 text-center">
+<div class="w-10 h-10 bg-primary-container rounded-xl flex items-center justify-center mx-auto mb-1">
+<span class="material-symbols-outlined text-on-primary-container" style="font-variation-settings: 'FILL' 1;">auto_awesome</span>
+</div>
+<span class="font-bold text-[10px] block text-slate-800">Breakouts</span>
+</div>
+<div class="flex flex-col gap-6 w-full">
+<button class="flex flex-col items-center gap-1 w-full border-l-4 border-blue-500 bg-blue-50/50 dark:bg-blue-900/20 text-blue-600 dark:text-blue-300 py-2 hover:translate-x-1 transition-transform duration-200">
+<span class="material-symbols-outlined">dashboard_customize</span>
+<span class="text-[10px] font-medium">Templates</span>
+</button>
+<button class="flex flex-col items-center gap-1 w-full text-slate-400 dark:text-slate-500 py-2 hover:translate-x-1 transition-transform duration-200">
+<span class="material-symbols-outlined">layers</span>
+<span class="text-[10px] font-medium">Layers</span>
+</button>
+<button class="flex flex-col items-center gap-1 w-full text-slate-400 dark:text-slate-500 py-2 hover:translate-x-1 transition-transform duration-200">
+<span class="material-symbols-outlined">cloud_download</span>
+<span class="text-[10px] font-medium">Library</span>
+</button>
+<button class="flex flex-col items-center gap-1 w-full text-slate-400 dark:text-slate-500 py-2 hover:translate-x-1 transition-transform duration-200">
+<span class="material-symbols-outlined">forum</span>
+<span class="text-[10px] font-medium">Chat</span>
+</button>
+</div>
+</aside>
+<!-- Main Canvas Content -->
+<main class="relative w-full h-full p-24 overflow-auto scrollbar-hide">
+<!-- Hero/Workspace Label -->
+<div class="mb-16">
+<h1 class="text-5xl font-extrabold tracking-tighter text-on-surface mb-2">Quarterly Strategy</h1>
+<p class="text-on-surface-variant font-medium">Designing the next generation of collaborative tools</p>
+</div>
+<!-- The Canvas Artifacts -->
+<div class="relative min-w-[2000px] min-h-[1200px]">
+<!-- Section: Breakout Template -->
+<div class="absolute top-20 left-20 border-2 border-dashed border-outline-variant/30 rounded-lg p-12 w-[800px] h-[500px] bg-white/20 backdrop-blur-sm">
+<div class="flex justify-between items-center mb-10">
+<h2 class="text-2xl font-bold text-on-surface-variant/50 uppercase tracking-widest">Breakout Template</h2>
+<span class="material-symbols-outlined text-outline-variant">drag_indicator</span>
+</div>
+<div class="grid grid-cols-2 gap-8">
+<div class="h-64 border border-outline-variant/20 rounded-xl bg-surface-container-low flex flex-col items-center justify-center gap-4 group hover:bg-surface-container-high transition-colors">
+<span class="material-symbols-outlined text-4xl text-outline-variant group-hover:text-primary transition-colors">add_circle</span>
+<span class="text-sm font-semibold text-outline">Drop persona data here</span>
+</div>
+<div class="h-64 border border-outline-variant/20 rounded-xl bg-surface-container-low flex flex-col items-center justify-center gap-4 group hover:bg-surface-container-high transition-colors">
+<span class="material-symbols-outlined text-4xl text-outline-variant group-hover:text-secondary transition-colors">flowsheet</span>
+<span class="text-sm font-semibold text-outline">Map architecture here</span>
+</div>
+</div>
+</div>
+<!-- Sticky Notes Cluster -->
+<!-- Yellow -->
+<div class="sticky-note absolute top-64 left-[950px] w-48 h-48 bg-tertiary-fixed shadow-[0_8px_30px_rgba(0,0,0,0.08)] p-6 rotate-[-2deg] flex flex-col justify-between">
+<p class="text-on-tertiary-fixed font-medium text-lg leading-tight">Core User Flows</p>
+<span class="text-[10px] uppercase font-bold text-on-tertiary-fixed/60">Sarah • 2m ago</span>
+</div>
+<!-- Pink -->
+<div class="sticky-note absolute top-[400px] left-[1100px] w-48 h-48 bg-secondary-fixed shadow-[0_8px_30px_rgba(0,0,0,0.08)] p-6 rotate-[3deg] flex flex-col justify-between">
+<p class="text-on-secondary-fixed font-medium text-lg leading-tight">Persona Insights</p>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-sm text-on-secondary-fixed">favorite</span>
+<span class="text-[10px] uppercase font-bold text-on-secondary-fixed/60">Alex</span>
+</div>
+</div>
+<!-- Blue -->
+<div class="sticky-note absolute top-[150px] left-[1200px] w-48 h-48 bg-primary-container shadow-[0_8px_30px_rgba(0,0,0,0.08)] p-6 rotate-[-1deg] flex flex-col justify-between">
+<p class="text-on-primary-container font-medium text-lg leading-tight">Mobile First approach for 2024</p>
+<span class="text-[10px] uppercase font-bold text-on-primary-container/60">Liam</span>
+</div>
+<!-- Collaborative Cursors -->
+<!-- Alex -->
+<div class="absolute top-[480px] left-[1150px] z-30 flex items-start gap-1 pointer-events-none">
+<svg class="text-secondary drop-shadow-sm" fill="none" height="24" viewbox="0 0 24 24" width="24">
+<path d="M5.65376 12.3822L2.10329 1.57014L12.9154 5.12061L8.33089 7.33771L5.65376 12.3822Z" fill="currentColor"></path>
+</svg>
+<div class="bg-secondary text-white text-xs font-bold px-2 py-1 rounded-sm shadow-md">Alex</div>
+</div>
+<!-- Sarah -->
+<div class="absolute top-[280px] left-[1020px] z-30 flex items-start gap-1 pointer-events-none">
+<svg class="text-tertiary drop-shadow-sm" fill="none" height="24" viewbox="0 0 24 24" width="24">
+<path d="M5.65376 12.3822L2.10329 1.57014L12.9154 5.12061L8.33089 7.33771L5.65376 12.3822Z" fill="currentColor"></path>
+</svg>
+<div class="bg-tertiary text-white text-xs font-bold px-2 py-1 rounded-sm shadow-md">Sarah</div>
+</div>
+<!-- Liam -->
+<div class="absolute top-[200px] left-[1380px] z-30 flex items-start gap-1 pointer-events-none">
+<svg class="text-primary drop-shadow-sm" fill="none" height="24" viewbox="0 0 24 24" width="24">
+<path d="M5.65376 12.3822L2.10329 1.57014L12.9154 5.12061L8.33089 7.33771L5.65376 12.3822Z" fill="currentColor"></path>
+</svg>
+<div class="bg-primary text-white text-xs font-bold px-2 py-1 rounded-sm shadow-md">Liam</div>
+</div>
+</div>
+</main>
+<!-- Facilitation Controls Floating Panel -->
+<div class="fixed right-8 top-1/2 -translate-y-1/2 bg-white/90 backdrop-blur-xl p-3 rounded-2xl shadow-2xl flex flex-col gap-4 z-50 border border-white/50">
+<button class="p-3 bg-surface-container-low hover:bg-primary-container hover:text-white transition-colors rounded-xl flex flex-col items-center gap-1 group">
+<span class="material-symbols-outlined text-2xl group-hover:fill-current">timer</span>
+<span class="text-[9px] font-bold uppercase tracking-tighter">05:00</span>
+</button>
+<button class="p-3 bg-surface-container-low hover:bg-secondary-container hover:text-on-secondary-container transition-colors rounded-xl flex flex-col items-center gap-1 group">
+<span class="material-symbols-outlined text-2xl">how_to_vote</span>
+<span class="text-[9px] font-bold uppercase tracking-tighter">Voting</span>
+</button>
+<button class="p-3 bg-surface-container-low hover:bg-tertiary-container hover:text-on-tertiary-container transition-colors rounded-xl flex flex-col items-center gap-1 group">
+<span class="material-symbols-outlined text-2xl">music_note</span>
+<span class="text-[9px] font-bold uppercase tracking-tighter">Music</span>
+</button>
+</div>
+<!-- Shared Component: BottomNavBar (Tools) -->
+<nav class="fixed bottom-0 left-0 right-0 z-50 flex justify-center items-center gap-2 p-2 bg-white/90 dark:bg-slate-900/90 backdrop-blur-xl rounded-full mb-8 mx-auto w-fit shadow-2xl shadow-blue-500/10 tonal-shift">
+<button class="text-slate-600 dark:text-slate-300 p-3 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-full transition-all flex flex-col items-center">
+<span class="material-symbols-outlined">near_me</span>
+<span class="label-sm font-medium uppercase tracking-widest text-[8px] mt-1">Select</span>
+</button>
+<button class="bg-blue-500 text-white rounded-full p-3 shadow-lg shadow-blue-500/40 scale-110 -translate-y-1 flex flex-col items-center">
+<span class="material-symbols-outlined">pan_tool</span>
+<span class="label-sm font-medium uppercase tracking-widest text-[8px] mt-1">Hand</span>
+</button>
+<button class="text-slate-600 dark:text-slate-300 p-3 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-full transition-all flex flex-col items-center">
+<span class="material-symbols-outlined">sticky_note_2</span>
+<span class="label-sm font-medium uppercase tracking-widest text-[8px] mt-1">Note</span>
+</button>
+<button class="text-slate-600 dark:text-slate-300 p-3 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-full transition-all flex flex-col items-center">
+<span class="material-symbols-outlined">gesture</span>
+<span class="label-sm font-medium uppercase tracking-widest text-[8px] mt-1">Draw</span>
+</button>
+<button class="text-slate-600 dark:text-slate-300 p-3 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-full transition-all flex flex-col items-center">
+<span class="material-symbols-outlined">category</span>
+<span class="label-sm font-medium uppercase tracking-widest text-[8px] mt-1">Shape</span>
+</button>
+</nav>
+<!-- Zoom Controls (Bottom Right) -->
+<div class="fixed bottom-10 right-10 flex items-center gap-4 bg-white/80 backdrop-blur-md px-4 py-2 rounded-full shadow-lg border border-white/20">
+<button class="text-on-surface-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-lg">remove</span>
+</button>
+<span class="text-xs font-bold w-12 text-center">100%</span>
+<button class="text-on-surface-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-lg">add</span>
+</button>
+<div class="h-4 w-px bg-outline-variant/30"></div>
+<button class="text-on-surface-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-lg">center_focus_strong</span>
+</button>
+</div>
+</body></html>

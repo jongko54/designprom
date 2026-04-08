@@ -1,0 +1,21 @@
+{
+  "brand": "Figma",
+  "contentType": "image/png",
+  "fileName": "figma-workspace-home.png",
+  "generatedAt": "2026-04-02T01:37:35.811Z",
+  "htmlUrl": "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ8Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpbCiVodG1sXzU3YjNlZDEyZTBmYTQyYzE5NmExZGRlMjQzYmU3MGE1EgsSBxCCisPc0AkYAZIBJAoKcHJvamVjdF9pZBIWQhQxNTE0MTM2NDkwMzg3Mzk0NjczOA&filename=&opi=96797242",
+  "imageUrl": "https://lh3.googleusercontent.com/aida/ADBb0uhIyIlpDqadsJ58KuHh93so5lwuzeyrfZUmjJBxLvhX1AqIhUamZPYVnSBmJFCRhiSLSj_R3ZsWwz3OjFIAj53jZVskz3S8kuuhSK1Ni3PyUO4yCvLUKlgKvHWD4DoOpHByKm9-mHlx2RbcFH5q7yWY0xhxwCPSJuHL7htbSTo8uHCeQTpLWJGeOvzZDypc9FSyAqxSfiRg3neevSCHooUnyCSqwxQSOSfLSNsVPBKndxrp4pn-x79E2zbL",
+  "notes": [
+    "I've designed a Figma-inspired collaborative workspace landing page for you. \n\nI've created a custom design system, **Canvas Studio ([Design_System])**, to capture that precise, tool-focused aesthetic. This design system uses a crisp, neutral base with vibrant, multi-colored accents for user cursors and collaboration cues, like Figma purple (#A259FF).\n\nThe resulting page, **Architectural Workspace Landing Page (Architectural Workspace Landing Page)**, features:\n- **Layered Side Rails:** A functional left rail for layers and assets, and a right rail for design properties.\n- **Canvas Framing:** The main project area feels like a real product surface with multiple active user cursors.\n- **Floating Utility Panes:** Small, rounded panes for version history and comments to add to the 'multiplayer' feel.\n- **Crisp Product Hierarchy:** Clear sections for team libraries and developer handoff, built with a focus on product-as-marketing.\n\nWould you like to explore any specific sections in more detail, or perhaps see how this looks in a dark mode version?"
+  ],
+  "prompt": "Design a Figma-inspired collaborative workspace landing page with layered side rails, canvas framing, floating utility panes, live-collaboration cues, and crisp product hierarchy. Make the page feel like a real product surface rather than a generic SaaS marketing layout.",
+  "projectId": "15141364903873946738",
+  "screenId": "727100c062e84a1595581a25800f9dbc",
+  "slug": "figma-workspace-home",
+  "suggestions": [
+    "Design a dark mode version",
+    "Add a developer handoff view",
+    "Create a dashboard for team projects"
+  ],
+  "title": "Architectural Workspace Landing Page"
+}

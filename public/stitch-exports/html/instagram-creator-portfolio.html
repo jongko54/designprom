@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>ARCHIVE | Digital Gallery</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "surface-variant": "#262626",
+              "on-tertiary-fixed": "#484a4a",
+              "on-secondary-fixed-variant": "#5c5b5b",
+              "tertiary-fixed-dim": "#e5e5e5",
+              "primary-dim": "#b8b9b9",
+              "inverse-primary": "#5e5f60",
+              "primary": "#c6c6c7",
+              "on-error": "#490013",
+              "tertiary-fixed": "#f4f3f3",
+              "on-secondary": "#202020",
+              "on-tertiary-container": "#555757",
+              "surface-container-low": "#131313",
+              "on-primary-fixed": "#3e4040",
+              "primary-fixed": "#e2e2e2",
+              "surface-container-high": "#1f1f1f",
+              "outline": "#757575",
+              "inverse-surface": "#f9f9f9",
+              "outline-variant": "#484848",
+              "on-secondary-container": "#c1bfbe",
+              "surface-bright": "#2c2c2c",
+              "on-primary-container": "#d0d0d0",
+              "surface-dim": "#0e0e0e",
+              "surface-container-highest": "#262626",
+              "surface-container-lowest": "#000000",
+              "secondary-container": "#3c3b3b",
+              "error-dim": "#b95463",
+              "surface": "#0e0e0e",
+              "on-error-container": "#ff97a3",
+              "on-secondary-fixed": "#403f3f",
+              "secondary": "#9f9d9d",
+              "on-surface-variant": "#ababab",
+              "background": "#0e0e0e",
+              "primary-fixed-dim": "#d4d4d4",
+              "secondary-fixed-dim": "#d6d4d3",
+              "secondary-fixed": "#e5e2e1",
+              "on-tertiary-fixed-variant": "#656666",
+              "primary-container": "#454747",
+              "on-primary": "#3f4041",
+              "secondary-dim": "#9f9d9d",
+              "tertiary-container": "#ebebeb",
+              "error": "#ec7c8a",
+              "inverse-on-surface": "#555555",
+              "on-primary-fixed-variant": "#5a5c5c",
+              "surface-container": "#191919",
+              "tertiary-dim": "#ebebeb",
+              "surface-tint": "#c6c6c7",
+              "on-tertiary": "#5e5f5f",
+              "on-surface": "#e5e5e5",
+              "on-background": "#e5e5e5",
+              "error-container": "#7f2737",
+              "tertiary": "#f9f9f9"
+            },
+            fontFamily: {
+              "headline": ["Plus Jakarta Sans"],
+              "body": ["Plus Jakarta Sans"],
+              "label": ["Plus Jakarta Sans"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: #0e0e0e;
+            color: #e5e5e5;
+            -webkit-font-smoothing: antialiased;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        .metallic-glow {
+            background: linear-gradient(135deg, #c6c6c7 0%, #454747 100%);
+        }
+        .glass-header {
+            background-color: rgba(14, 14, 14, 0.7);
+            backdrop-filter: blur(20px);
+        }
+    </style>
+</head>
+<body class="selection:bg-primary-container selection:text-white">
+<!-- TopNavBar -->
+<header class="fixed top-0 w-full flex justify-between items-center px-6 py-4 max-w-screen-2xl mx-auto z-50 glass-header">
+<div class="text-2xl font-bold tracking-tighter text-[#e5e5e5]">ARCHIVE</div>
+<nav class="hidden md:flex items-center space-x-10">
+<a class="text-[#f9f9f9] border-b border-[#c6c6c7]/50 pb-1 text-base leading-relaxed transition-all duration-300 ease-[cubic-bezier(0.2,0,0,1)] hover:opacity-80" href="#">Work</a>
+<a class="text-[#ababab] hover:text-[#e5e5e5] text-base leading-relaxed transition-all duration-300 ease-[cubic-bezier(0.2,0,0,1)] hover:opacity-80" href="#">Series</a>
+<a class="text-[#ababab] hover:text-[#e5e5e5] text-base leading-relaxed transition-all duration-300 ease-[cubic-bezier(0.2,0,0,1)] hover:opacity-80" href="#">Info</a>
+</nav>
+<div class="flex items-center gap-5">
+<button class="text-[#c6c6c7] transition-all duration-300 ease-[cubic-bezier(0.2,0,0,1)] hover:opacity-80 scale-95 duration-500">
+<span class="material-symbols-outlined" data-icon="account_circle">account_circle</span>
+</button>
+<button class="text-[#c6c6c7] transition-all duration-300 ease-[cubic-bezier(0.2,0,0,1)] hover:opacity-80 scale-95 duration-500">
+<span class="material-symbols-outlined" data-icon="grid_view">grid_view</span>
+</button>
+</div>
+</header>
+<main class="pt-32 pb-24 px-6 max-w-screen-2xl mx-auto">
+<!-- Hero Title (The Statement) -->
+<div class="mb-20">
+<h1 class="text-[3.5rem] font-extrabold tracking-tight leading-none text-on-surface mb-4">Selected works</h1>
+<p class="text-[1.375rem] font-medium text-on-surface-variant max-w-2xl">A curated archive of visual explorations, digital artifacts, and technical experiments across the spectrum of light and form.</p>
+</div>
+<!-- Filter Chips (Mobile-Native feel on desktop) -->
+<div class="flex flex-wrap gap-3 mb-12">
+<span class="px-6 py-2 rounded-full bg-tertiary text-on-secondary font-medium text-sm transition-all duration-500">All Collections</span>
+<span class="px-6 py-2 rounded-full bg-surface-container-highest text-on-surface-variant hover:text-on-surface font-medium text-sm transition-all duration-500">Branding</span>
+<span class="px-6 py-2 rounded-full bg-surface-container-highest text-on-surface-variant hover:text-on-surface font-medium text-sm transition-all duration-500">Photography</span>
+<span class="px-6 py-2 rounded-full bg-surface-container-highest text-on-surface-variant hover:text-on-surface font-medium text-sm transition-all duration-500">Digital Art</span>
+<span class="px-6 py-2 rounded-full bg-surface-container-highest text-on-surface-variant hover:text-on-surface font-medium text-sm transition-all duration-500">Motion</span>
+</div>
+<!-- Bento / Asymmetric Grid Layout -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-6 lg:gap-10">
+<!-- Large Focus Card -->
+<div class="md:col-span-8 group cursor-pointer">
+<div class="relative overflow-hidden rounded-lg bg-surface-container-low aspect-[16/10]">
+<img alt="Minimalist Architecture" class="w-full h-full object-cover transition-transform duration-700 ease-[cubic-bezier(0.2,0,0,1)] group-hover:scale-105" data-alt="Monolithic minimalist concrete architecture with sharp shadows and deep contrast under a clear midday sky, brutalist aesthetic" src="https://lh3.googleusercontent.com/aida-public/AB6AXuANaXwnCh4eZg2U2xL9FDD91MrrCY7yp4p7n8hW3gmX1n6LZ7ru2s34RCd5CPWWjuoxQ6jNHoFdlaen84tXQAWo-HjNbWtQGfrkWpqVurm17qGzt6hMrBgQQqVpHWEsLnPTs8fZAp5_uv4UQaQD-29A3ujhXrl3WbrStmGpbiTOg2gCy1GDnjCfTD4fc_bV0BEHbzsRaEeHfQ3Ut6kzS3kl8kvT1DEg9HdU5rtb9_ijqvxDCe3D2WkHcOWrSvAcPugdvW7VcRjsPvM"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8">
+<span class="text-xs uppercase tracking-widest text-primary mb-2">Architectural Study</span>
+<h3 class="text-xl font-bold">The Void Within</h3>
+</div>
+</div>
+<div class="mt-4 flex justify-between items-start">
+<div>
+<h2 class="text-lg font-medium text-on-surface">Void Series 01</h2>
+<p class="text-sm text-on-surface-variant">2024 • Editorial</p>
+</div>
+</div>
+</div>
+<!-- Tall Secondary Card -->
+<div class="md:col-span-4 group cursor-pointer">
+<div class="relative overflow-hidden rounded-lg bg-surface-container-low aspect-[4/5]">
+<img alt="Abstract digital waves" class="w-full h-full object-cover transition-transform duration-700 ease-[cubic-bezier(0.2,0,0,1)] group-hover:scale-105" data-alt="Abstract 3D rendering of soft silk-like waves in shades of charcoal and deep silver with subtle metallic sheen" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCfuYC5a7jbn0HeA0LsSDpXscRbvKTxv9zou-RLC0qTFw0sMDzTAS-femDzqDcVS7W-_z6ACKSdembe-IvntWEUYo1v9-MFIe4pKPdJrPLbaGkdJoDFhV4d34J7SvsxeXslCq0yYpvrYwbZn0D8Vf1qk9OvejprmOr5RGsM8Cli4K4fu4rdmhfI-XTHLcoi8qpAo82OuHfwR94tcCJPgRWItdP2-9bf1aZ7JpvvX3FBdwG8QtDx4tMH1bmCLrklIOMnDZcSw__gJhg"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8">
+<span class="text-xs uppercase tracking-widest text-primary mb-2">Digital Form</span>
+<h3 class="text-xl font-bold">Fluidity in Motion</h3>
+</div>
+</div>
+<div class="mt-4">
+<h2 class="text-lg font-medium text-on-surface">Silk Flows</h2>
+<p class="text-sm text-on-surface-variant">2023 • Digital</p>
+</div>
+</div>
+<!-- Grid Items -->
+<div class="md:col-span-4 group cursor-pointer">
+<div class="relative overflow-hidden rounded-lg bg-surface-container-low aspect-square">
+<img alt="Interior Design" class="w-full h-full object-cover transition-transform duration-700 ease-[cubic-bezier(0.2,0,0,1)] group-hover:scale-105" data-alt="Interior of a modern minimal dark living room with a single designer lamp casting soft warm light on a grey wall" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDmPU6Gfg_x9QoQO2X9dI-woJdw4b8ji3gO5W5K6F49DCIEt-OueJuKx0YCJlayMnTuMw2Lo3myBsBiSRMoUY66qTLas2lDm3noQXWrQwvERmtoWMciwXKh2wFK9Copv9ncCCZW8LpvuPlX420RrCY9LzyhCyiq0Exc9DiDAkz_VmRiJu0zIcWwIET7i_334NxUguX3eh18NQhl-FBi_dkiHFrEV6yRYW1BN8PPKtEgryL9qlFO37cINZomvZQRYY6FZGT11xRLrf8"/>
+</div>
+<div class="mt-4">
+<h2 class="text-lg font-medium text-on-surface">Lumina</h2>
+<p class="text-sm text-on-surface-variant">2024 • Interior</p>
+</div>
+</div>
+<div class="md:col-span-4 group cursor-pointer">
+<div class="relative overflow-hidden rounded-lg bg-surface-container-low aspect-square">
+<img alt="Abstract Gradient" class="w-full h-full object-cover transition-transform duration-700 ease-[cubic-bezier(0.2,0,0,1)] group-hover:scale-105" data-alt="Smooth deep purple to midnight blue gradient texture with fine grain and organic flow" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA84Bh_wFA73v8vOs1AvlMk5FLtKbE-HMgz3Rq464vE-Y7KgqtAhyEm0oVwHsAzxed83OKtzVe-x_vZZIwQTMyf3OEDtazH7hIHG6VbzfVxIH-wKBPZwM3MNe778pBvvaNYctmWM7cn6gaz2ZO44STPs1lCVKT0kpvsxg8Vq1YAf246nRn1JWmjPxE9fBq3HmogEBuv3OQIdyapil-fG8k4lTd9uVtvfnJ3QNgyf2wIAptPloxdkcZF8dccR1JUSIN-HDEWMUja_V4"/>
+</div>
+<div class="mt-4">
+<h2 class="text-lg font-medium text-on-surface">Atmosphere</h2>
+<p class="text-sm text-on-surface-variant">2023 • Abstract</p>
+</div>
+</div>
+<div class="md:col-span-4 group cursor-pointer">
+<div class="relative overflow-hidden rounded-lg bg-surface-container-low aspect-square">
+<img alt="Abstract Paint" class="w-full h-full object-cover transition-transform duration-700 ease-[cubic-bezier(0.2,0,0,1)] group-hover:scale-105" data-alt="Macro photography of white oil paint swirling in dark water, creating complex marble-like patterns" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC3gKfAs0voRH1DiufDp-fp2znR1bx9bG0M1gQ94LDNow8YznJeSZy0rzYSRDOCXoCtKAkrR2PIwRXUKaifgefjv-psys8fDXwIUibHJ_7Audc-2l4BW9sYJRKsSWfHKdfXfeqrrJY3GQxW4bT-gzWjcDJoLhodHgpuXY8DpiAIklXIfBmZglUZO1NwS0OdhwYSnglc-SAkBn5Owu9S8Nv7dwGMkE2_d753G5i8kI1ZH3LaNXQdC5tgNjYP_IEzcMcL-FQchk3tUxI"/>
+</div>
+<div class="mt-4">
+<h2 class="text-lg font-medium text-on-surface">Genesis</h2>
+<p class="text-sm text-on-surface-variant">2024 • Experimental</p>
+</div>
+</div>
+<!-- Wide Secondary Feature -->
+<div class="md:col-span-12 group cursor-pointer mt-12">
+<div class="relative overflow-hidden rounded-lg bg-surface-container-low aspect-[21/9]">
+<img alt="Vast Landscape" class="w-full h-full object-cover transition-transform duration-700 ease-[cubic-bezier(0.2,0,0,1)] group-hover:scale-105" data-alt="Panoramic view of a foggy mountain range at dawn with misty valleys and soft silhouettes of distant peaks" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD_aTgpLF0O4JD3sqNDrUtz9pOBpYva6aBg-Mklu3bzyaBVy5BgAo8ZeAlhxTHo6FLlGrDQlAaB5WuvCBxcqdCBmg8MKzWmwP0Wln4_owVPnsgZ-cZytTtGo90eNAJp-QbB7r__YmIyqJemaurBAYPGgECoQVTGRyz5crmYu2xt2pR22D5-XRMHYG5Y7z4f8hHmDSYIH5WDGnDD3sxqB-SYqQx9OLdkT8TwPDsk7Rc2rNy64JdLJ4Mt4FzpMQejKXWF8Yh6v00CsSI"/>
+<div class="absolute inset-0 bg-black/30 group-hover:bg-black/10 transition-colors duration-500"></div>
+</div>
+<div class="mt-6">
+<h2 class="text-2xl font-bold text-on-surface">Horizon Bound</h2>
+<p class="text-base text-on-surface-variant">A series exploring the infinite scale of nature through a monochrome lens.</p>
+</div>
+</div>
+</div>
+<!-- Pagination / Load More (Editorial style) -->
+<div class="mt-32 flex flex-col items-center">
+<button class="metallic-glow px-12 py-4 rounded-xl text-on-surface font-bold text-lg hover:scale-105 transition-all duration-500 ease-[cubic-bezier(0.2,0,0,1)] shadow-2xl">
+                Explore More Artifacts
+            </button>
+<p class="mt-6 text-on-surface-variant text-[0.75rem] uppercase tracking-widest">Showing 12 of 148 works</p>
+</div>
+</main>
+<!-- Footer -->
+<footer class="w-full py-12 px-6 border-t border-[#191919] bg-[#0e0e0e]">
+<div class="max-w-screen-2xl mx-auto w-full flex flex-col md:flex-row justify-between items-center gap-8">
+<div class="text-lg font-black text-[#e5e5e5]">ARCHIVE</div>
+<div class="flex flex-wrap justify-center gap-8">
+<a class="text-[0.75rem] uppercase tracking-widest text-[#ababab] hover:text-[#c6c6c7] underline decoration-[#454747] underline-offset-4 transition-opacity opacity-70 hover:opacity-100" href="#">Instagram</a>
+<a class="text-[0.75rem] uppercase tracking-widest text-[#ababab] hover:text-[#c6c6c7] underline decoration-[#454747] underline-offset-4 transition-opacity opacity-70 hover:opacity-100" href="#">Are.na</a>
+<a class="text-[0.75rem] uppercase tracking-widest text-[#ababab] hover:text-[#c6c6c7] underline decoration-[#454747] underline-offset-4 transition-opacity opacity-70 hover:opacity-100" href="#">Twitter</a>
+<a class="text-[0.75rem] uppercase tracking-widest text-[#ababab] hover:text-[#c6c6c7] underline decoration-[#454747] underline-offset-4 transition-opacity opacity-70 hover:opacity-100" href="#">Contact</a>
+</div>
+<div class="text-[0.75rem] uppercase tracking-widest text-[#ababab]">© 2024 DIGITAL GALLERY ARCHIVE</div>
+</div>
+</footer>
+<!-- FAB (Suppressed based on Task Context: Main Grid View allows FAB for fast upload/add action if it were an admin, but here we prioritize the Gallery feel) -->
+</body></html>

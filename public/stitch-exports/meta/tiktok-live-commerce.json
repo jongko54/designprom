@@ -1,0 +1,21 @@
+{
+  "brand": "TikTok",
+  "contentType": "image/png",
+  "fileName": "tiktok-live-commerce.png",
+  "generatedAt": "2026-04-02T01:54:24.878Z",
+  "htmlUrl": "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ8Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpbCiVodG1sXzYzYjkyMzU1MDdmNzQ5YTJiODVlMWVlZjk3YmJiM2UwEgsSBxCCisPc0AkYAZIBJAoKcHJvamVjdF9pZBIWQhQxNTE0MTM2NDkwMzg3Mzk0NjczOA&filename=&opi=96797242",
+  "imageUrl": "https://lh3.googleusercontent.com/aida/ADBb0ugKTpON79VJZ71EEkSRIoLvB1Nha88oWGaC87E7P15VSiHANwtte9wiSR6zAa29IypBvLuXCxPIBd0cxzxHjWeHVVsKjJ9VZFlxuYW_RJiAAp3tJLZbxphFYpNPE7Xz7W8mYmzujcwkKgLJuXas6EMW-QpXBT57LlEkcA4C3qGjYMTyuVYg55_TwaNbOPMQtky_qnJjzmrGbAY2TeRwc52VcYxThYaehglq8LsmFF4coDt5uK1Qbn1q8wXt",
+  "notes": [
+    "I've created the **Pulse: Live Commerce Hub**, a TikTok-style landing page built with the **Kinetic Commerce** design system. \n\nThe layout captures the high-energy, vertical-media framing you requested, featuring:\n- A large, blurred 'Hero' live stream with creator overlays for chat, likes, and product tags.\n- Glassmorphic side navigation and floating top navigation for 'Live Now' status.\n- Strong, neon-accented pricing callouts and 'flash drop' banners.\n- Native social-proof moments, like real-time purchase activity and creator engagement counts.\n\nHow does this look for a start? We could refine the product grid or adjust the 'pulse' animations next."
+  ],
+  "prompt": "Design a TikTok-like live commerce landing page with creator overlays, rapid scene changes, strong pricing callouts, vertical-media framing, and social-proof moments that feel native to creator content. Keep the pace fast and the hierarchy obvious.",
+  "projectId": "15141364903873946738",
+  "screenId": "92ee2370b4154afea031fab835be2494",
+  "slug": "tiktok-live-commerce",
+  "suggestions": [
+    "Add a checkout flow for the live stream items",
+    "Change the neon accent color to electric purple",
+    "Create a mobile version of this page"
+  ],
+  "title": "Pulse: Live Commerce Hub"
+}

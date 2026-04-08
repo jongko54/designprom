@@ -1,0 +1,21 @@
+{
+  "brand": "IBM",
+  "contentType": "image/png",
+  "fileName": "ibm-solution-page.png",
+  "generatedAt": "2026-04-02T01:47:17.861Z",
+  "htmlUrl": "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ8Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpbCiVodG1sX2EzODAyOTdlM2E1NzQ4YWJiZmU1Y2Q5NmU5ODJhNDAxEgsSBxCCisPc0AkYAZIBJAoKcHJvamVjdF9pZBIWQhQxNTE0MTM2NDkwMzg3Mzk0NjczOA&filename=&opi=96797242",
+  "imageUrl": "https://lh3.googleusercontent.com/aida/ADBb0uhteybuJg3UW8TOyb0qIuVtliRMp4fLnuhqFxu6XEST-mwHWL4mVmdBcXOAPw5o1cqvJuKLIJydE6xh3q-Vv3ONVX7XtVyaBwDsJIdmae5Eo3S0Y6YDRSnnk-qtoSE142W7uDrkUmz06UlevYyBMjElWUEg_OtXEt8FCZ5vAHaOb92wW_q7nWYFJixDtExfyTtNQstkb8FOuFQR13kQJNtDTP4nzgwM4G525KLpOJ9kPkG-jTKVRZ9uYd2V",
+  "notes": [
+    "I've created the IBM-inspired enterprise solution page, which you can see on the canvas. I focused on a precise, modular grid, a restrained monochrome palette, and a single, disciplined blue accent to ensure it feels credible and exact for an enterprise buyer. I also created a dedicated design system, 'Systematic Blue', to underpin this look.\n\nWould you like to try a different accent color, or perhaps explore a dark mode version of this page?"
+  ],
+  "prompt": "Design an IBM-inspired enterprise solution page with rigorous grid alignment, clear module boundaries, restrained monochrome surfaces, concise technical copy, and one disciplined blue accent. The page should feel exact, literate, and credible to an enterprise buyer.",
+  "projectId": "15141364903873946738",
+  "screenId": "a0a1765a08274720aa7829397f64b8cb",
+  "slug": "ibm-solution-page",
+  "suggestions": [
+    "Create a dark mode version",
+    "Try a deep green accent instead of blue",
+    "Add a detailed case study section"
+  ],
+  "title": "IBM Enterprise Solution Page"
+}

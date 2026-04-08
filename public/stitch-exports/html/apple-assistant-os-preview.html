@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>OS Preview | A New Quiet</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary-fixed": "#e2e2e4",
+              "inverse-on-surface": "#555555",
+              "tertiary-fixed-dim": "#e7e4e8",
+              "tertiary": "#fbf8fc",
+              "surface-variant": "#262626",
+              "surface-dim": "#0e0e0e",
+              "surface": "#0e0e0e",
+              "on-tertiary": "#5f5f62",
+              "on-primary-fixed": "#3e3f41",
+              "on-primary": "#3e4042",
+              "primary": "#c6c6c8",
+              "inverse-surface": "#f9f9f9",
+              "on-secondary-fixed-variant": "#5b5b60",
+              "surface-container-lowest": "#000000",
+              "primary-dim": "#b8b9bb",
+              "inverse-primary": "#5d5f61",
+              "on-tertiary-container": "#575659",
+              "tertiary-container": "#eceaee",
+              "error": "#ee7d77",
+              "tertiary-dim": "#eceaee",
+              "on-background": "#e5e5e5",
+              "primary-container": "#454749",
+              "secondary-container": "#3a3b40",
+              "surface-container-low": "#131313",
+              "on-surface-variant": "#ababab",
+              "outline": "#757575",
+              "on-tertiary-fixed-variant": "#666669",
+              "on-primary-container": "#d0d0d2",
+              "on-error": "#490106",
+              "surface-container": "#191919",
+              "error-dim": "#bb5551",
+              "secondary": "#9e9da2",
+              "surface-tint": "#c6c6c8",
+              "tertiary-fixed": "#f5f3f6",
+              "on-tertiary-fixed": "#49494c",
+              "on-secondary-fixed": "#3e3f43",
+              "on-surface": "#e5e5e5",
+              "secondary-dim": "#9e9da2",
+              "background": "#0e0e0e",
+              "secondary-fixed-dim": "#d5d4d9",
+              "on-primary-fixed-variant": "#5a5c5d",
+              "on-error-container": "#ff9993",
+              "error-container": "#7f2927",
+              "primary-fixed-dim": "#d4d4d6",
+              "surface-bright": "#2c2c2c",
+              "on-secondary-container": "#bfbfc4",
+              "on-secondary": "#1f2024",
+              "secondary-fixed": "#e3e2e7",
+              "surface-container-high": "#1f1f1f",
+              "outline-variant": "#484848",
+              "surface-container-highest": "#262626"
+            },
+            fontFamily: {
+              "headline": ["Inter"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        body { font-family: 'Inter', sans-serif; background-color: #0e0e0e; color: #e5e5e5; }
+        .glass-panel {
+            backdrop-filter: blur(20px);
+            background: rgba(38, 38, 38, 0.4);
+        }
+        .hero-gradient-bleed {
+            background: radial-gradient(circle at center, rgba(198, 198, 200, 0.05) 0%, transparent 70%);
+        }
+        .text-glow {
+            text-shadow: 0 0 30px rgba(229, 229, 229, 0.2);
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="antialiased selection:bg-primary selection:text-on-primary">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-[#131313]/40 backdrop-blur-xl shadow-[0_20px_50px_rgba(0,0,0,0.4)]">
+<div class="flex justify-between items-center px-12 py-6 max-w-[1440px] mx-auto">
+<div class="text-xl font-bold tracking-tighter text-[#e5e5e5]">OS Preview</div>
+<div class="hidden md:flex items-center gap-10">
+<a class="font-['Inter'] font-medium tracking-tight body-lg text-[#ababab] hover:text-[#e5e5e5] transition-colors" href="#">Explore</a>
+<a class="font-['Inter'] font-bold tracking-tight body-lg text-[#e5e5e5] border-b-2 border-[#c6c6c8] pb-1" href="#">OS</a>
+<a class="font-['Inter'] font-medium tracking-tight body-lg text-[#ababab] hover:text-[#e5e5e5] transition-colors" href="#">Safety</a>
+</div>
+<button class="bg-primary text-on-primary px-8 py-3 rounded-xl font-medium hover:opacity-90 transition-all active:scale-95 duration-200">Download Beta</button>
+</div>
+</nav>
+<main>
+<!-- Hero Section: A New Quiet -->
+<section class="relative min-h-screen flex flex-col items-center justify-center pt-32 pb-24 overflow-hidden hero-gradient-bleed">
+<div class="z-10 text-center px-6 max-w-5xl mx-auto">
+<h1 class="text-[3.5rem] md:text-[5rem] font-extrabold tracking-tighter leading-[1.1] mb-8 text-glow">
+                    A New Quiet
+                </h1>
+<p class="text-on-surface-variant text-xl md:text-2xl font-light max-w-2xl mx-auto mb-16 leading-relaxed">
+                    The ghost in the machine has arrived. A fluid, ethereal interface designed to fade into the background until you need it.
+                </p>
+</div>
+<!-- Frosted Device Frame -->
+<div class="relative w-full max-w-6xl px-6 mx-auto mt-12">
+<div class="aspect-[16/10] bg-surface-container-low rounded-[3rem] p-4 shadow-2xl relative border border-outline-variant/10">
+<div class="w-full h-full bg-surface-container-lowest rounded-[2.5rem] overflow-hidden glass-panel relative flex items-center justify-center">
+<img alt="Minimalist abstract digital landscape" class="absolute inset-0 w-full h-full object-cover opacity-40 mix-blend-luminosity" data-alt="abstract digital landscape with soft monochromatic gradients and ethereal flowing shapes in deep charcoal and silver" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDa5NbQmcF3DjXgemiiyVAADMup38doPD_-XJL593SjZo_kSnGFBo4AXGiy7oDoJgMJYfbeIJbQGUp_Ps-Xm0mG6hVTGMtki7GfEaLm1vb7th4nR5sMxZnIOjFBPp5K4kHtY048py16OPaPpqFVxnpsAMjfFDHwUegagFaxApRY2Txn5sX-_d-MUDQg-FuDXYXiscRkhIBRgMGH3jt31YCiCCqV8aVZzgEPpIthyTTC5cB_TT3wUsIkPv8P3K8zUSJNhYnlhQv0X1g"/>
+<!-- Minimal AI Interface Overlay -->
+<div class="z-20 w-full max-w-md bg-white/5 backdrop-blur-3xl rounded-xl p-8 border border-white/10 flex flex-col gap-6">
+<div class="flex items-center gap-4">
+<div class="w-3 h-3 rounded-full bg-primary animate-pulse"></div>
+<span class="text-sm font-medium tracking-widest uppercase opacity-60">System Awareness</span>
+</div>
+<div class="h-1 bg-white/10 w-full rounded-full overflow-hidden">
+<div class="h-full bg-primary w-1/3"></div>
+</div>
+<p class="text-lg font-light italic">"Synthesizing your workflow for the afternoon..."</p>
+</div>
+</div>
+</div>
+<!-- Device Reflection -->
+<div class="absolute -bottom-12 left-1/2 -translate-x-1/2 w-[80%] h-24 bg-gradient-to-t from-transparent to-primary/5 blur-3xl opacity-30"></div>
+</div>
+</section>
+<!-- Feature Bands -->
+<section class="w-full bg-surface py-24">
+<div class="max-w-[1440px] mx-auto flex flex-col gap-8 px-12">
+<!-- Universal Sync -->
+<div class="group relative overflow-hidden rounded-xl bg-surface-container-low min-h-[400px] flex items-center p-16 border border-outline-variant/5">
+<div class="absolute inset-0 bg-gradient-to-r from-surface-container-low to-primary/5 opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
+<div class="relative z-10 grid md:grid-cols-2 w-full items-center gap-12">
+<div>
+<span class="label-md uppercase tracking-[0.2em] text-on-surface-variant mb-4 block">Ecosystem</span>
+<h2 class="text-4xl font-bold tracking-tight mb-6">Universal Sync</h2>
+<p class="text-on-surface-variant text-lg leading-relaxed max-w-md">Your digital self, mirrored across every device with zero-latency synchronization. No clouds, just pure connection.</p>
+</div>
+<div class="flex justify-center md:justify-end">
+<div class="w-64 h-64 rounded-full bg-gradient-to-br from-primary/20 to-transparent blur-2xl"></div>
+<span class="material-symbols-outlined text-[120px] text-primary/40 absolute self-center" data-icon="sync">sync</span>
+</div>
+</div>
+</div>
+<!-- Neural Privacy -->
+<div class="group relative overflow-hidden rounded-xl bg-surface-container-low min-h-[400px] flex items-center p-16 border border-outline-variant/5">
+<div class="absolute inset-0 bg-gradient-to-l from-surface-container-low to-primary/5 opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
+<div class="relative z-10 grid md:grid-cols-2 w-full items-center gap-12">
+<div class="order-2 md:order-1 flex justify-center md:justify-start">
+<div class="w-64 h-64 rounded-full bg-gradient-to-bl from-primary/20 to-transparent blur-2xl"></div>
+<span class="material-symbols-outlined text-[120px] text-primary/40 absolute self-center" data-icon="fingerprint">fingerprint</span>
+</div>
+<div class="order-1 md:order-2">
+<span class="label-md uppercase tracking-[0.2em] text-on-surface-variant mb-4 block">Security</span>
+<h2 class="text-4xl font-bold tracking-tight mb-6">Neural Privacy</h2>
+<p class="text-on-surface-variant text-lg leading-relaxed max-w-md">On-device processing that learns from you without ever leaving you. Your data is encrypted at the synaptic level.</p>
+</div>
+</div>
+</div>
+<!-- Ambient Intelligence -->
+<div class="group relative overflow-hidden rounded-xl bg-surface-container-low min-h-[400px] flex items-center p-16 border border-outline-variant/5">
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-low to-primary/10 opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
+<div class="relative z-10 grid md:grid-cols-2 w-full items-center gap-12">
+<div>
+<span class="label-md uppercase tracking-[0.2em] text-on-surface-variant mb-4 block">Context</span>
+<h2 class="text-4xl font-bold tracking-tight mb-6">Ambient Intelligence</h2>
+<p class="text-on-surface-variant text-lg leading-relaxed max-w-md">OS OS anticipates your needs before you articulate them. An interface that reacts to your presence and intention.</p>
+</div>
+<div class="flex justify-center md:justify-end">
+<div class="w-64 h-64 rounded-full bg-gradient-to-tr from-primary/20 to-transparent blur-2xl"></div>
+<span class="material-symbols-outlined text-[120px] text-primary/40 absolute self-center" data-icon="waves">waves</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Comparison Strip -->
+<section class="bg-surface-container-lowest py-32">
+<div class="max-w-[1440px] mx-auto px-12 text-center mb-20">
+<h2 class="text-4xl font-bold tracking-tighter mb-4">The Clutter Ends Here</h2>
+<p class="text-on-surface-variant">Experience the transition from noise to silence.</p>
+</div>
+<div class="grid md:grid-cols-2 gap-px bg-outline-variant/20 overflow-hidden">
+<!-- Before -->
+<div class="bg-surface p-12 md:p-24 flex flex-col items-center gap-12 relative group">
+<span class="text-sm font-bold tracking-widest uppercase text-error-dim">Before: Legacy OS</span>
+<div class="w-full aspect-video bg-surface-container-high rounded-xl border border-outline-variant/30 p-4 opacity-50 grayscale transition-all group-hover:grayscale-0">
+<div class="grid grid-cols-4 gap-2 h-full opacity-60">
+<div class="col-span-1 bg-surface-container-highest rounded flex flex-col gap-2 p-2">
+<div class="h-2 bg-white/10 w-full"></div>
+<div class="h-2 bg-white/10 w-3/4"></div>
+<div class="h-2 bg-white/10 w-1/2"></div>
+</div>
+<div class="col-span-3 bg-surface-container-low rounded border border-dashed border-white/10 flex items-center justify-center">
+<div class="text-[10px] opacity-20">Fragmented Windows</div>
+</div>
+</div>
+</div>
+<p class="text-on-surface-variant font-light italic">Overwhelming notifications and rigid structures.</p>
+</div>
+<!-- After -->
+<div class="bg-surface p-12 md:p-24 flex flex-col items-center gap-12 relative">
+<span class="text-sm font-bold tracking-widest uppercase text-primary">After: OS OS</span>
+<div class="w-full aspect-video bg-surface-container-lowest rounded-xl border border-primary/20 shadow-[0_0_40px_rgba(198,198,200,0.1)] p-4 flex items-center justify-center">
+<div class="w-3/4 h-1 bg-gradient-to-r from-transparent via-primary to-transparent opacity-40"></div>
+</div>
+<p class="text-on-surface text-lg font-medium">Fluid, centered, and unified.</p>
+</div>
+</div>
+</section>
+<!-- Keynote Close -->
+<section class="relative min-h-[819px] flex flex-col items-center justify-center text-center px-12 bg-surface py-32">
+<div class="absolute inset-0 bg-gradient-to-b from-surface-container-lowest to-surface"></div>
+<div class="relative z-10 max-w-4xl">
+<h2 class="text-[3.5rem] md:text-[6rem] font-black tracking-tighter leading-none mb-12">
+                    The machine is now personal.
+                </h2>
+<div class="flex flex-col md:flex-row items-center justify-center gap-8">
+<button class="bg-primary text-on-primary px-12 py-6 rounded-xl text-xl font-bold hover:scale-105 transition-transform">
+                        Join the Developer Beta
+                    </button>
+<button class="glass-panel text-on-surface px-12 py-6 rounded-xl text-xl font-medium border border-white/10 hover:bg-white/10 transition-all">
+                        Watch Keynote
+                    </button>
+</div>
+<p class="mt-12 text-on-surface-variant font-label tracking-widest uppercase text-sm">Coming Winter 2024</p>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full py-24 bg-[#0e0e0e] border-t border-white/5">
+<div class="flex flex-col md:flex-row justify-between items-center px-12 max-w-[1440px] mx-auto gap-8">
+<div class="text-lg font-semibold text-[#e5e5e5]">OS OS</div>
+<div class="flex flex-wrap justify-center gap-12">
+<a class="font-['Inter'] body-lg text-[#ababab] hover:text-[#c6c6c8] transition-colors" href="#">Privacy Policy</a>
+<a class="font-['Inter'] body-lg text-[#ababab] hover:text-[#c6c6c8] transition-colors" href="#">Terms of Service</a>
+<a class="font-['Inter'] body-lg text-[#ababab] hover:text-[#c6c6c8] transition-colors" href="#">Legal</a>
+<a class="font-['Inter'] body-lg text-[#ababab] hover:text-[#c6c6c8] transition-colors" href="#">Security</a>
+</div>
+<div class="font-['Inter'] body-lg text-[#ababab] opacity-80">
+                © 2024 The Ghost in the Machine. All rights reserved.
+            </div>
+</div>
+</footer>
+</body></html>
