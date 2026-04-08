@@ -146,6 +146,68 @@ function buildSingleStitchArtifactAssets(slug: string): PublishAsset[] {
   ];
 }
 
+function buildStitchBundleManifest({
+  previewFileName,
+  promptFileName,
+  slug,
+  title
+}: {
+  previewFileName?: string;
+  promptFileName: string;
+  slug: string;
+  title: string;
+}) {
+  return {
+    bundle: "stitch-export",
+    files: [
+      "index.html",
+      promptFileName,
+      "stitch-export/output-notes.txt",
+      "stitch-export/designprom-notes.json",
+      "stitch-export/index.html",
+      "stitch-export/stitch-export.json",
+      ...(previewFileName ? [previewFileName] : [])
+    ],
+    slug,
+    title
+  };
+}
+
+function buildStitchBundleReadme(title: string) {
+  return [
+    `${title}`,
+    "",
+    "This ZIP follows the Designprom Stitch export bundle format.",
+    "",
+    "Included files:",
+    "- index.html: quick local entry page for this export",
+    "- stitch-export/index.html: raw Stitch HTML export snapshot",
+    "- stitch-export/stitch-export.json: Stitch metadata and source URLs",
+    "- stitch-export/prompt.txt: prompt used for this direction",
+    "- stitch-export/output-notes.txt: output notes and interpretation",
+    "- stitch-export/designprom-notes.json: Designprom bundle metadata",
+    "- stitch-export/preview.*: captured preview image, when available"
+  ].join("\n");
+}
+
+function buildArchiveBundleReadme(title: string, stitchCount: number) {
+  return [
+    `${title}`,
+    "",
+    "This ZIP follows the Designprom archive case bundle format.",
+    "",
+    "Included files:",
+    "- index.html: quick local entry page for this archive case",
+    "- archive-case/prompt.txt: main prompt",
+    "- archive-case/remix-prompt.txt: remix prompt",
+    "- archive-case/archive-case.json: archive metadata",
+    "- archive-case/preview.*: cover image",
+    "- archive-case/outputs/: generated output stills",
+    "- archive-case/screens/: linked Stitch capture screens",
+    `- archive-case/stitch-exports/: ${stitchCount} bundled Stitch export folder(s)`
+  ].join("\n");
+}
+
 function buildArchiveStitchArtifactAssets(slugs: string[]): PublishAsset[] {
   return slugs.flatMap((slug) => {
     const previewImage = getStitchExports(slug)[0]?.image;
@@ -214,6 +276,11 @@ export function buildArchivePublishAssets(entry: PromptArchiveEntry): PublishAss
       kind: "text"
     },
     {
+      content: `${buildArchiveBundleReadme(entry.title, entry.stitchExampleSlugs.length)}\n`,
+      filename: "README.txt",
+      kind: "text"
+    },
+    {
       content: `${entry.prompt}\n`,
       filename: "archive-case/prompt.txt",
       kind: "text"
@@ -234,6 +301,32 @@ export function buildArchivePublishAssets(entry: PromptArchiveEntry): PublishAss
         summary: entry.summary,
         title: entry.title,
         useCase: entry.useCase
+      }
+    },
+    {
+      filename: "archive-case/manifest.json",
+      kind: "json",
+      value: {
+        bundle: "archive-case",
+        files: [
+          "index.html",
+          "README.txt",
+          "archive-case/prompt.txt",
+          "archive-case/remix-prompt.txt",
+          "archive-case/archive-case.json",
+          previewFileName,
+          ...publishImageAssets
+            .map((asset) => asset.filename)
+            .filter((filename) => filename !== previewFileName),
+          ...entry.stitchExampleSlugs.flatMap((slug) => [
+            `archive-case/stitch-exports/${slug}/index.html`,
+            `archive-case/stitch-exports/${slug}/stitch-export.json`,
+            `archive-case/stitch-exports/${slug}/preview.png`
+          ])
+        ],
+        slug: entry.slug,
+        stitchExampleSlugs: entry.stitchExampleSlugs,
+        title: entry.title
       }
     },
     ...publishImageAssets,
@@ -262,6 +355,11 @@ export function buildStitchExamplePublishAssets(
       kind: "text" as const
     },
     {
+      content: `${buildStitchBundleReadme(example.title)}\n`,
+      filename: "README.txt",
+      kind: "text" as const
+    },
+    {
       content: `${example.stitchPrompt}\n`,
       filename: "stitch-export/prompt.txt",
       kind: "text" as const
@@ -284,6 +382,16 @@ export function buildStitchExamplePublishAssets(
         tone: example.tone,
         useCase: example.useCase
       }
+    },
+    {
+      filename: "stitch-export/manifest.json",
+      kind: "json" as const,
+      value: buildStitchBundleManifest({
+        previewFileName,
+        promptFileName: "stitch-export/prompt.txt",
+        slug: example.slug,
+        title: example.title
+      })
     },
     ...(example.captureImage
       ? [
@@ -318,6 +426,11 @@ export function buildBrandGalleryPublishAssets(
       kind: "text" as const
     },
     {
+      content: `${buildStitchBundleReadme(example.title)}\n`,
+      filename: "README.txt",
+      kind: "text" as const
+    },
+    {
       content: `${example.stitchPrompt}\n`,
       filename: "stitch-export/prompt.txt",
       kind: "text" as const
@@ -344,6 +457,16 @@ export function buildBrandGalleryPublishAssets(
         title: example.title,
         tone: example.tone
       }
+    },
+    {
+      filename: "stitch-export/manifest.json",
+      kind: "json" as const,
+      value: buildStitchBundleManifest({
+        previewFileName,
+        promptFileName: "stitch-export/prompt.txt",
+        slug: example.slug,
+        title: example.title
+      })
     },
     ...(example.captureImage
       ? [
