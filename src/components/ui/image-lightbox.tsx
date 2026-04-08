@@ -5,23 +5,33 @@ import type { CSSProperties } from "react";
 
 type ImageLightboxProps = {
   alt: string;
+  browserUrl?: string;
+  browserLabel?: string;
+  caption?: string;
   className?: string;
   height?: number;
   modalClassName?: string;
+  modalImageClassName?: string;
   src: string;
   style?: CSSProperties;
   modalStyle?: CSSProperties;
+  viewer?: "image" | "website";
   width?: number;
 };
 
 export function ImageLightbox({
   alt,
+  browserLabel,
+  browserUrl,
+  caption,
   className,
   height,
   modalClassName,
+  modalImageClassName,
   modalStyle,
   src,
   style,
+  viewer = "image",
   width
 }: ImageLightboxProps) {
   const [open, setOpen] = useState(false);
@@ -80,14 +90,41 @@ export function ImageLightbox({
             >
               Close
             </button>
-            <img
-              alt={alt}
-              className={modalClassName ?? "lightbox-image"}
-              height={height}
-              src={src}
-              style={modalStyle ?? style}
-              width={width}
-            />
+            {viewer === "website" ? (
+              <div className={modalClassName ?? "lightbox-website"}>
+                <div className="lightbox-website-chrome">
+                  <div className="lightbox-dots">
+                    <span />
+                    <span />
+                    <span />
+                  </div>
+                  <div className="lightbox-website-meta">
+                    <strong>{browserLabel ?? alt}</strong>
+                    <span>{browserUrl ?? src}</span>
+                  </div>
+                </div>
+                <div className="lightbox-website-stage">
+                  <img
+                    alt={alt}
+                    className={modalImageClassName ?? "lightbox-website-image"}
+                    height={height}
+                    src={src}
+                    style={modalStyle ?? style}
+                    width={width}
+                  />
+                </div>
+                {caption ? <p className="lightbox-website-caption">{caption}</p> : null}
+              </div>
+            ) : (
+              <img
+                alt={alt}
+                className={modalClassName ?? "lightbox-image"}
+                height={height}
+                src={src}
+                style={modalStyle ?? style}
+                width={width}
+              />
+            )}
           </div>
         </div>
       ) : null}

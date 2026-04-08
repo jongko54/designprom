@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Manrope:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "error-dim": "#d53d18",
+                    "surface": "#0e0e0e",
+                    "on-primary-fixed": "#064200",
+                    "on-primary-container": "#0b5800",
+                    "primary-dim": "#2be800",
+                    "primary": "#8eff71",
+                    "on-secondary-container": "#e4ffe2",
+                    "outline": "#767575",
+                    "secondary-container": "#006d2f",
+                    "outline-variant": "#484847",
+                    "on-primary": "#0d6100",
+                    "on-error": "#450900",
+                    "on-tertiary": "#005d62",
+                    "surface-container-high": "#20201f",
+                    "background": "#0e0e0e",
+                    "surface-container-lowest": "#000000",
+                    "tertiary": "#88f6ff",
+                    "error": "#ff7351",
+                    "on-surface-variant": "#adaaaa",
+                    "on-secondary": "#005f28",
+                    "surface-container": "#1a1a1a",
+                    "secondary-fixed": "#90f9a3",
+                    "surface-dim": "#0e0e0e",
+                    "secondary-dim": "#82ea96",
+                    "primary-container": "#2ff801",
+                    "surface-container-highest": "#262626",
+                    "inverse-on-surface": "#565555",
+                    "error-container": "#b92902",
+                    "surface-bright": "#2c2c2c",
+                    "primary-fixed": "#2ff801",
+                    "on-tertiary-container": "#005458",
+                    "surface-tint": "#8eff71",
+                    "on-tertiary-fixed": "#003f43",
+                    "secondary-fixed-dim": "#82ea96",
+                    "on-secondary-fixed": "#004a1e",
+                    "surface-container-low": "#131313",
+                    "on-primary-fixed-variant": "#0d6200",
+                    "on-tertiary-fixed-variant": "#005e63",
+                    "inverse-primary": "#106f00",
+                    "tertiary-fixed": "#17eefa",
+                    "on-background": "#ffffff",
+                    "surface-variant": "#262626",
+                    "inverse-surface": "#fcf9f8",
+                    "tertiary-container": "#17eefa",
+                    "on-error-container": "#ffd2c8",
+                    "secondary": "#90f9a3",
+                    "on-secondary-fixed-variant": "#006a2e",
+                    "on-surface": "#ffffff",
+                    "primary-fixed-dim": "#2be800",
+                    "tertiary-dim": "#00deea",
+                    "tertiary-fixed-dim": "#00deea"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "fontFamily": {
+                    "headline": ["Space Grotesk"],
+                    "body": ["Manrope"],
+                    "label": ["Manrope"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        .tonal-carving-low {
+            background: linear-gradient(180deg, rgba(14, 14, 14, 0.8) 0%, rgba(19, 19, 19, 0.8) 100%);
+        }
+        .cursor-terminal-blink::after {
+            content: '_';
+            animation: blink 1s step-end infinite;
+        }
+        @keyframes blink { 50% { opacity: 0; } }
+        .glass-panel {
+            background: rgba(26, 26, 26, 0.4);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(72, 72, 71, 0.15);
+        }
+        .text-glow {
+            text-shadow: 0 0 15px rgba(142, 255, 113, 0.3);
+        }
+        .bg-botanical-mesh {
+            background-image: radial-gradient(circle at 20% 30%, rgba(142, 255, 113, 0.03) 0%, transparent 50%),
+                              radial-gradient(circle at 80% 70%, rgba(57, 255, 20, 0.02) 0%, transparent 50%);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body selection:bg-primary selection:text-on-primary">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-[#0e0e0e]/80 backdrop-blur-xl shadow-[0_20px_50px_rgba(57,255,20,0.05)]">
+<div class="flex justify-between items-center px-8 h-20 w-full max-w-[1440px] mx-auto">
+<div class="text-xl font-bold tracking-tighter text-[#39FF14] font-headline">
+                LIVING_CIRCUIT
+            </div>
+<div class="hidden md:flex items-center gap-10 font-['Space_Grotesk'] uppercase tracking-widest text-sm">
+<a class="text-[#39FF14] border-b border-[#39FF14]/30 pb-1 hover:text-[#39FF14] transition-colors duration-300" href="#">WORKS</a>
+<a class="text-white/60 hover:text-[#39FF14] transition-colors duration-300" href="#">LAB</a>
+<a class="text-white/60 hover:text-[#39FF14] transition-colors duration-300" href="#">ARCHIVE</a>
+<a class="text-white/60 hover:text-[#39FF14] transition-colors duration-300" href="#">MANIFESTO</a>
+</div>
+<div class="flex items-center gap-6">
+<button class="bg-[#0e0e0e] border border-[#39FF14]/30 px-6 py-2 text-[#39FF14] font-['Space_Grotesk'] uppercase tracking-widest text-xs hover:bg-[#39FF14] hover:text-[#0d6100] transition-all duration-300">
+                    START COLLAB
+                </button>
+<span class="material-symbols-outlined text-[#39FF14]" data-icon="sensors">sensors</span>
+</div>
+</div>
+</nav>
+<main class="relative min-h-screen pt-20 bg-botanical-mesh overflow-hidden">
+<!-- Hero Section -->
+<section class="relative h-[921px] flex flex-col items-center justify-center px-8">
+<div class="absolute inset-0 z-0 flex items-center justify-center opacity-40">
+<div class="relative w-[80vw] h-[80vw] max-w-[800px] max-h-[800px]">
+<img alt="Botanical Circuit Hybrid" class="w-full h-full object-contain filter drop-shadow-[0_0_80px_rgba(142,255,113,0.3)]" data-alt="A massive central 3D hybrid object: a glowing bioluminescent flower merged with complex neon green circuit board patterns, floating in a dark void" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDy287ijvcADUUHpOJ4TebRn835G1fPxxJgi806Yl6OdP-IHn_RI2kAmDwSUSPG5Q8JG6P44FN-16MZrO0hMK5Bop-zDuJHKqS7vVIskad-rBtCrD7R01BX99YRZLPo-vgnZFUwkmzSQ2_gGd3n-toYIAxCfoA3Xeula5V7QdgnQZlCGfK0eeL2vKVWkbuIjluLdlDXNlezHZOwtojlblQ4RvAcSx5LAKeyUrgHcckmye5YIu02fjcwt8hpe6-XBAb7bQ7_napJdGg"/>
+</div>
+</div>
+<div class="relative z-10 text-center space-y-4">
+<div class="inline-flex items-center gap-2 px-3 py-1 bg-surface-container text-primary text-[10px] tracking-[0.2em] font-headline border border-primary/20 uppercase mb-8">
+<span class="w-1.5 h-1.5 bg-primary animate-pulse rounded-full"></span>
+                    Terminal_v1.0.4 Online
+                </div>
+<h1 class="font-headline font-bold text-7xl md:text-9xl tracking-tighter leading-none uppercase text-glow">
+                    ORGANIC<br/>INTELLIGENCE
+                </h1>
+<div class="flex justify-center gap-12 mt-12">
+<div class="text-left border-l border-primary/30 pl-4">
+<p class="text-xs uppercase tracking-widest text-on-surface-variant font-headline">Status</p>
+<p class="text-lg font-headline text-primary">BLOOMING</p>
+</div>
+<div class="text-left border-l border-primary/30 pl-4">
+<p class="text-xs uppercase tracking-widest text-on-surface-variant font-headline">Process</p>
+<p class="text-lg font-headline text-primary">SYNTHESIS</p>
+</div>
+</div>
+</div>
+<!-- Scroll Indicator -->
+<div class="absolute bottom-10 flex flex-col items-center gap-4">
+<span class="text-[10px] tracking-[0.4em] uppercase text-on-surface-variant font-headline">Scroll_Down</span>
+<div class="w-px h-20 bg-gradient-to-b from-primary/60 to-transparent"></div>
+</div>
+</section>
+<!-- Project Section: Layered Windows -->
+<section class="relative py-32 px-8 max-w-7xl mx-auto">
+<div class="mb-24 flex justify-between items-end">
+<div>
+<span class="text-primary font-headline text-xs tracking-widest uppercase mb-2 block">Case Studies</span>
+<h2 class="font-headline text-5xl font-bold uppercase">Synthetically<br/>Grown Projects</h2>
+</div>
+<div class="text-right hidden md:block">
+<p class="text-on-surface-variant max-w-xs text-sm leading-relaxed">Exploring the intersection of neural networks and biological systems through digital architectural prototypes.</p>
+</div>
+</div>
+<div class="relative h-[1200px] md:h-[900px]">
+<!-- Project Window 1 -->
+<div class="absolute top-0 left-0 w-full md:w-[600px] glass-panel p-1 z-20 group transition-transform duration-500 hover:-translate-y-2">
+<div class="bg-surface-container-low p-6">
+<div class="flex justify-between items-center mb-6 pb-4 border-b border-outline-variant/15">
+<div class="flex gap-1.5">
+<div class="w-2.5 h-2.5 rounded-full bg-error-dim/40"></div>
+<div class="w-2.5 h-2.5 rounded-full bg-primary/40"></div>
+<div class="w-2.5 h-2.5 rounded-full bg-on-surface-variant/40"></div>
+</div>
+<span class="text-[10px] font-headline uppercase tracking-widest text-on-surface-variant">Project_01 // Chlorofill_v2</span>
+</div>
+<div class="aspect-video mb-6 overflow-hidden">
+<img alt="Chlorofill Project" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700" data-alt="Digital representation of fluid glowing green data flowing like sap through a network of white futuristic tree roots" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB8wxEDKV703M3dCPV1tlJW7-j-nM13wSG4fisOJWiXomSxU9R91f_vxcYDEXLpEmkl8s81837A5S8C0Zv3v7ZVKW1d4PyZOtppxfvziUazzgfSYJhMiiIPf6GAwQPcr6nQcY2FJPYe7bGi1mRphwHqhDDfIxHimGsJGE8ldmXprPg5QRzvu9hhsCraABQR0ikP6ntaQweubTWgaH_hPvwyufixZ0lTHmiSryJ64xfOT26x6vbfJ4keF1SmS-uAmTOgdbl29kWNv3Y"/>
+</div>
+<div class="space-y-4">
+<h3 class="font-headline text-2xl font-bold uppercase text-primary">Neural Moss</h3>
+<p class="text-sm text-on-surface-variant leading-relaxed">Implementing adaptive UI that grows and decays based on user interaction density. A living interface for the next web.</p>
+<button class="flex items-center gap-2 text-xs font-headline uppercase tracking-widest text-primary hover:gap-4 transition-all">
+                                Initialize_View <span class="material-symbols-outlined text-sm" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Project Window 2 -->
+<div class="absolute top-[300px] md:top-[100px] md:right-0 w-full md:w-[550px] glass-panel p-1 z-10 group transition-transform duration-500 hover:-translate-y-2">
+<div class="bg-surface-container-low p-6">
+<div class="flex justify-between items-center mb-6 pb-4 border-b border-outline-variant/15">
+<div class="flex gap-1.5">
+<div class="w-2.5 h-2.5 rounded-full bg-error-dim/40"></div>
+<div class="w-2.5 h-2.5 rounded-full bg-primary/40"></div>
+<div class="w-2.5 h-2.5 rounded-full bg-on-surface-variant/40"></div>
+</div>
+<span class="text-[10px] font-headline uppercase tracking-widest text-on-surface-variant">Project_02 // Bloom_Engine</span>
+</div>
+<div class="aspect-[4/3] mb-6 overflow-hidden">
+<img alt="Bloom Engine" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700" data-alt="Close up of a metallic mechanical orchid with emerald green translucent petals and visible copper circuitry inside" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBKnoYXiGAzdwbuKAzeb5-AG2Ft6dyBAfiYOwazu1_oxJ-pGTFVxMA-6nC4N5ylBRFj5LvLoTL9zz3hDJiz3DeMW7VB7WcksIAmKiCmLoO69vfCIuKsSV3s8g4U_21qN_cz9T1svU3nOXF_sEWlVr9aRTNzESaSzbH1P0_JN-hgJzSeTB47lz50sbKd8yuV2EI4xD--2fazQzkkux4QJBd57IfWv7DrB68E0Kt6fd7SBDlH-8WoXg1ZCdFh6HVZnGL3bVuDmYHv-Ss"/>
+</div>
+<div class="space-y-4">
+<h3 class="font-headline text-2xl font-bold uppercase">Petal Core</h3>
+<p class="text-sm text-on-surface-variant leading-relaxed">Generative 3D assets that follow biological fractals for immersive VR environments.</p>
+<button class="flex items-center gap-2 text-xs font-headline uppercase tracking-widest text-primary hover:gap-4 transition-all">
+                                Execute_Core <span class="material-symbols-outlined text-sm" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Project Window 3 -->
+<div class="absolute top-[600px] md:top-[400px] left-[10%] w-full md:w-[480px] glass-panel p-1 z-30 group transition-transform duration-500 hover:-translate-y-2">
+<div class="bg-surface-container-low p-6 shadow-[0_40px_100px_rgba(0,0,0,0.5)]">
+<div class="flex justify-between items-center mb-6 pb-4 border-b border-outline-variant/15">
+<div class="flex gap-1.5">
+<div class="w-2.5 h-2.5 rounded-full bg-error-dim/40"></div>
+<div class="w-2.5 h-2.5 rounded-full bg-primary/40"></div>
+<div class="w-2.5 h-2.5 rounded-full bg-on-surface-variant/40"></div>
+</div>
+<span class="text-[10px] font-headline uppercase tracking-widest text-on-surface-variant">Project_03 // Root_Network</span>
+</div>
+<div class="space-y-4">
+<div class="flex justify-between items-start">
+<h3 class="font-headline text-3xl font-bold uppercase leading-none">Sub_Data<br/>Ecosystem</h3>
+<div class="w-16 h-16 bg-primary/10 flex items-center justify-center rounded">
+<span class="material-symbols-outlined text-primary text-3xl" data-icon="hub">hub</span>
+</div>
+</div>
+<p class="text-sm text-on-surface-variant leading-relaxed">Decentralized mycelium data storage protocols visualized through bioluminescent graph mapping.</p>
+<div class="pt-4 grid grid-cols-2 gap-4">
+<div class="bg-surface p-3 border border-outline-variant/10">
+<span class="block text-[8px] uppercase tracking-widest text-on-surface-variant">Latent_Space</span>
+<span class="block font-headline text-primary text-lg">94.2%</span>
+</div>
+<div class="bg-surface p-3 border border-outline-variant/10">
+<span class="block text-[8px] uppercase tracking-widest text-on-surface-variant">Sync_Rate</span>
+<span class="block font-headline text-primary text-lg">1.2ms</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Signature Component: The Growth Bar Section -->
+<section class="py-32 px-8 bg-surface-container-low">
+<div class="max-w-4xl mx-auto text-center space-y-16">
+<div class="space-y-4">
+<h2 class="font-headline text-4xl font-bold uppercase tracking-tighter">System Maturation</h2>
+<p class="text-on-surface-variant font-headline text-sm tracking-widest uppercase">Biological Processor Load</p>
+</div>
+<div class="space-y-12">
+<!-- Growth Bar 1 -->
+<div class="space-y-3">
+<div class="flex justify-between text-[10px] font-headline uppercase tracking-widest text-on-surface-variant">
+<span>Photosynthesis_Simulation</span>
+<span>88%</span>
+</div>
+<div class="relative h-1 w-full bg-primary/10 rounded-full overflow-hidden">
+<div class="absolute inset-y-0 left-0 bg-primary rounded-full" style="width: 88%;">
+<div class="absolute right-0 top-1/2 -translate-y-1/2 w-4 h-4 bg-primary blur-md"></div>
+</div>
+</div>
+</div>
+<!-- Growth Bar 2 -->
+<div class="space-y-3">
+<div class="flex justify-between text-[10px] font-headline uppercase tracking-widest text-on-surface-variant">
+<span>Genetic_Compiling</span>
+<span>42%</span>
+</div>
+<div class="relative h-1 w-full bg-primary/10 rounded-full overflow-hidden">
+<div class="absolute inset-y-0 left-0 bg-primary rounded-full" style="width: 42%;">
+<div class="absolute right-0 top-1/2 -translate-y-1/2 w-4 h-4 bg-primary blur-md"></div>
+</div>
+</div>
+</div>
+<!-- Growth Bar 3 -->
+<div class="space-y-3">
+<div class="flex justify-between text-[10px] font-headline uppercase tracking-widest text-on-surface-variant">
+<span>Digital_Transpiration</span>
+<span>65%</span>
+</div>
+<div class="relative h-1 w-full bg-primary/10 rounded-full overflow-hidden">
+<div class="absolute inset-y-0 left-0 bg-primary rounded-full" style="width: 65%;">
+<div class="absolute right-0 top-1/2 -translate-y-1/2 w-4 h-4 bg-primary blur-md"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="py-48 px-8 relative overflow-hidden">
+<div class="absolute inset-0 opacity-10 flex items-center justify-center">
+<span class="font-headline text-[25vw] font-bold leading-none select-none">SYNTHESIS</span>
+</div>
+<div class="relative z-10 max-w-4xl mx-auto text-center space-y-10">
+<h2 class="font-headline text-6xl md:text-8xl font-bold uppercase tracking-tighter">Ready to<br/><span class="text-primary italic">Evolve?</span></h2>
+<div class="flex flex-col md:flex-row justify-center items-center gap-6">
+<button class="bg-primary text-on-primary px-10 py-5 font-headline font-bold uppercase tracking-[0.2em] text-sm hover:scale-105 transition-all">
+                        Initiate_Protocol
+                    </button>
+<button class="border border-outline-variant/30 text-on-surface px-10 py-5 font-headline font-bold uppercase tracking-[0.2em] text-sm hover:bg-surface-container transition-all">
+                        Download_Manifesto
+                    </button>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full border-t border-[#484847]/15 bg-[#131313]">
+<div class="grid grid-cols-2 md:grid-cols-4 gap-4 p-8 w-full font-mono font-['Manrope'] text-[10px] tracking-mono uppercase">
+<div class="space-y-2">
+<div class="text-[#39FF14] font-mono mb-4">LIVING_CIRCUIT_STUDIO</div>
+<div class="text-[#484847]">©2030_CIRCUIT_STUDIO_TERMINAL_V1.0.4</div>
+</div>
+<div class="flex flex-col gap-2">
+<a class="text-[#484847] hover:bg-[#1a1a1a] hover:text-[#39FF14] transition-colors" href="#">SYSTEM_STATUS:ONLINE</a>
+<a class="text-[#484847] hover:bg-[#1a1a1a] hover:text-[#39FF14] transition-colors" href="#">LATENCY:24MS</a>
+</div>
+<div class="flex flex-col gap-2">
+<a class="text-[#484847] hover:bg-[#1a1a1a] hover:text-[#39FF14] transition-colors" href="#">ENCRYPT_AES_256</a>
+<a class="text-[#484847] hover:bg-[#1a1a1a] hover:text-[#39FF14] transition-colors" href="#">DATA_LEAK_NONE</a>
+</div>
+<div class="text-right flex flex-col justify-end">
+<div class="text-[#39FF14] cursor-terminal-blink">TERMINAL_ACTIVE</div>
+</div>
+</div>
+</footer>
+</body></html>

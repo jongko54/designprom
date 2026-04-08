@@ -665,6 +665,46 @@ const exportRegistry: Record<string, StitchExportScreen[]> = {
       "The middle crop should keep selected projects readable inside a high-contrast immersive system.",
       "The close should preserve drama while making collaboration entry points obvious."
     ]
+  ),
+  "readymag-scarlet-runway-house": buildExportScreens(
+    stitchCaptureAssets["readymag-scarlet-runway-house"],
+    "Scarlet Runway House",
+    ["Runway hero", "Campaign rail", "Atelier close"],
+    [
+      "The opener should hit like a fashion poster with scarlet as the dominant field.",
+      "The middle crop should keep fashion modules and campaign imagery large and graphic.",
+      "The close should preserve luxury intensity instead of flattening into ecommerce UI."
+    ]
+  ),
+  "readymag-orange-soundstage-portal": buildExportScreens(
+    stitchCaptureAssets["readymag-orange-soundstage-portal"],
+    "Orange Soundstage Portal",
+    ["Soundstage opener", "Program strip", "Signal close"],
+    [
+      "The opener should feel culturally loud and studio-led through orange atmosphere and sharp type.",
+      "The middle crop should treat programs or selected work like poster strips, not app cards.",
+      "The close should keep the pace vivid while maintaining a readable hierarchy."
+    ]
+  ),
+  "readymag-solar-editorial-playground": buildExportScreens(
+    stitchCaptureAssets["readymag-solar-editorial-playground"],
+    "Solar Editorial Playground",
+    ["Issue cover", "Story grid", "Contributor close"],
+    [
+      "The opener should feel like a cover page translated into a homepage with yellow doing real work.",
+      "The middle crop should balance playful editorial modules with strong readability.",
+      "The close should remain bright, graphic, and publication-led."
+    ]
+  ),
+  "readymag-verdant-digital-garden": buildExportScreens(
+    stitchCaptureAssets["readymag-verdant-digital-garden"],
+    "Verdant Digital Garden",
+    ["Living hero", "Project canopy", "Lab close"],
+    [
+      "The opener should use green as a living system rather than a simple accent.",
+      "The middle crop should keep layered windows and selected work readable through experimental depth.",
+      "The close should make collaboration and proof clear while preserving the green atmosphere."
+    ]
   )
 };
 

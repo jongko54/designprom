@@ -482,6 +482,34 @@ const samples = [
       "Design a dark creator portfolio website for a web designer working with artists and brands. Use a bold headline, a high-contrast black interface, a few kinetic type moments, premium project modules, and one clear contact path. Keep it futuristic, dramatic, and legible."
   },
   {
+    slug: "readymag-scarlet-runway-house",
+    brand: "Readymag / Fashion",
+    title: "Scarlet Runway House",
+    prompt:
+      "Design a fashion homepage with a saturated scarlet base, deep black editorial typography, oversized runway stills, narrow luxury navigation, and a cinematic scroll rhythm. Make the page feel hot, graphic, and expensive rather than minimal white."
+  },
+  {
+    slug: "readymag-orange-soundstage-portal",
+    brand: "Readymag / Culture",
+    title: "Orange Soundstage Portal",
+    prompt:
+      "Design a cultural homepage with a vivid orange base, poster-like typography, stacked program strips, event cues, dark contrast details, and a bold studio rhythm. Make it feel energetic, authored, and unmistakably alive."
+  },
+  {
+    slug: "readymag-solar-editorial-playground",
+    brand: "Readymag / Editorial",
+    title: "Solar Editorial Playground",
+    prompt:
+      "Design an editorial homepage with a luminous yellow base, black typography, asymmetrical image windows, issue-style captions, and playful modular navigation. Make the page feel bright, collectible, and visually authored instead of neutral or minimal."
+  },
+  {
+    slug: "readymag-verdant-digital-garden",
+    brand: "Readymag / Creative Tech",
+    title: "Verdant Digital Garden",
+    prompt:
+      "Create a creative tech homepage with an electric green base, dark interface chrome, layered project windows, botanical-digital textures, and one immersive hero object. Make the page feel alive, experimental, and contemporary without losing structure."
+  },
+  {
     slug: "ai-design-guide-science-hero",
     brand: "Designprom / Home",
     title: "AI Design Guide Hero",

@@ -476,6 +476,22 @@ export const stitchCaptureAssets = {
   "readymag-web3-creator-broadcast": createStitchCaptureAsset(
     "readymag-web3-creator-broadcast",
     "Readymag-inspired Stitch export for the web3 creator broadcast site"
+  ),
+  "readymag-scarlet-runway-house": createStitchCaptureAsset(
+    "readymag-scarlet-runway-house",
+    "Readymag-inspired Stitch export for the scarlet fashion runway homepage"
+  ),
+  "readymag-orange-soundstage-portal": createStitchCaptureAsset(
+    "readymag-orange-soundstage-portal",
+    "Readymag-inspired Stitch export for the orange cultural soundstage homepage"
+  ),
+  "readymag-solar-editorial-playground": createStitchCaptureAsset(
+    "readymag-solar-editorial-playground",
+    "Readymag-inspired Stitch export for the solar editorial playground homepage"
+  ),
+  "readymag-verdant-digital-garden": createStitchCaptureAsset(
+    "readymag-verdant-digital-garden",
+    "Readymag-inspired Stitch export for the verdant digital garden homepage"
   )
 } as const;
 
@@ -3737,6 +3753,206 @@ export const promptArchive: PromptArchiveEntry[] = [
       {
         title: "Inquiry Close",
         caption: "A closing section where contact and collaboration stay clear without flattening the drama.",
+        meta: "close",
+        size: "tall"
+      }
+    ]
+  },
+  {
+    slug: "scarlet-runway-house-case",
+    title: "Scarlet Runway House",
+    summary:
+      "A color-forward fashion homepage prompt built on a scarlet field, black editorial typography, and runway-scale imagery for brands that need immediate visual heat.",
+    brief:
+      "Design a fashion homepage where the first screen needs to feel expensive, urgent, and image-led. The page should use a dominant red stage, strong typography, and premium product or runway stills instead of a white template grid.",
+    useCase: "Fashion homepage",
+    portfolioCategory: "Fashion",
+    previewTone: "gradient",
+    coverImage: stitchCaptureAssets["readymag-scarlet-runway-house"],
+    categorySlugs: [
+      "premium-gradient-atmosphere",
+      "kinetic-type-signal",
+      "modern-art-modular"
+    ],
+    stitchExampleSlugs: ["readymag-scarlet-runway-house"],
+    prompt:
+      "Design a fashion homepage with a saturated scarlet base, deep black editorial typography, oversized runway stills, narrow luxury navigation, and a cinematic scroll rhythm. Make the page feel hot, graphic, and expensive rather than minimal white.",
+    remixPrompt:
+      "Adapt the same scarlet homepage for a beauty or accessories launch. Keep the red field and black editorial type, but make the first product image cleaner, add one sharper CTA zone, and let the secondary modules feel more collectible than campaign-heavy.",
+    curatorNote:
+      "This direction works when color is the brand signal. The first screen should hit like a poster, not a standard ecommerce hero.",
+    outputFocus: [
+      "A poster-like first screen with one dominant scarlet surface and one luxury headline",
+      "Runway or campaign imagery that stays large and unapologetic",
+      "A homepage rhythm that feels fashion-led instead of grid-template neutral"
+    ],
+    outputs: [
+      {
+        title: "Scarlet Hero",
+        caption: "A runway-led opener where red carries the entire first impression and the headline lands with editorial force.",
+        meta: "hero",
+        size: "wide",
+        image: stitchCaptureAssets["readymag-scarlet-runway-house"]
+      },
+      {
+        title: "Campaign Rail",
+        caption: "A mid-page sequence of fashion modules, release cues, and visual proof without diluting the scarlet field.",
+        meta: "campaign",
+        size: "square"
+      },
+      {
+        title: "Runway Close",
+        caption: "A closing section where styling, credits, and inquiry keep the fashion intensity intact.",
+        meta: "close",
+        size: "tall"
+      }
+    ]
+  },
+  {
+    slug: "orange-soundstage-portal-case",
+    title: "Orange Soundstage Portal",
+    summary:
+      "A bright orange cultural homepage prompt with poster energy, event-led modules, and a studio-like rhythm for music, festivals, and creative programs.",
+    brief:
+      "Create a homepage for a music-forward creative studio or event platform where the page needs to feel bold, immediate, and culturally alive. Orange should dominate the atmosphere without making the layout unreadable.",
+    useCase: "Culture homepage",
+    portfolioCategory: "Culture",
+    previewTone: "motion",
+    coverImage: stitchCaptureAssets["readymag-orange-soundstage-portal"],
+    categorySlugs: [
+      "motion-first-canvas",
+      "kinetic-type-signal",
+      "modern-art-modular"
+    ],
+    stitchExampleSlugs: ["readymag-orange-soundstage-portal"],
+    prompt:
+      "Design a cultural homepage with a vivid orange base, poster-like typography, stacked program strips, event cues, dark contrast details, and a bold studio rhythm. Make it feel energetic, authored, and unmistakably alive.",
+    remixPrompt:
+      "Rework the same orange homepage for a brand studio instead of a public program. Keep the orange base and poster pacing, but replace date-heavy modules with selected work, short statements, and one clear inquiry block.",
+    curatorNote:
+      "Orange works best here when it behaves like stage lighting. The site should feel loud in color, not chaotic in structure.",
+    outputFocus: [
+      "A first screen with orange atmosphere and strong cultural signaling",
+      "Event or program blocks that feel like poster strips instead of app cards",
+      "Enough dark contrast to keep the page readable under a hot palette"
+    ],
+    outputs: [
+      {
+        title: "Soundstage Opener",
+        caption: "A hero section where orange behaves like venue light and the typography sets the tempo immediately.",
+        meta: "hero",
+        size: "wide",
+        image: stitchCaptureAssets["readymag-orange-soundstage-portal"]
+      },
+      {
+        title: "Program Strip",
+        caption: "A sequence of schedule or campaign bands that keeps the page energetic without losing hierarchy.",
+        meta: "program",
+        size: "square"
+      },
+      {
+        title: "Studio Close",
+        caption: "A closing section for partners, contact, or next release cues that stays vivid and structured.",
+        meta: "close",
+        size: "tall"
+      }
+    ]
+  },
+  {
+    slug: "solar-editorial-playground-case",
+    title: "Solar Editorial Playground",
+    summary:
+      "A yellow-led editorial homepage prompt that feels like a magazine cover, using black type, modular imagery, and bright cultural optimism.",
+    brief:
+      "Build an editorial homepage for a creative publication or designer where yellow should be the dominant field. The layout needs to feel graphic, collectible, and confidently authored rather than minimalist and white.",
+    useCase: "Editorial homepage",
+    portfolioCategory: "Editorial",
+    previewTone: "warm",
+    coverImage: stitchCaptureAssets["readymag-solar-editorial-playground"],
+    categorySlugs: [
+      "editorial-grid-2d",
+      "premium-gradient-atmosphere",
+      "modern-art-modular"
+    ],
+    stitchExampleSlugs: ["readymag-solar-editorial-playground"],
+    prompt:
+      "Design an editorial homepage with a luminous yellow base, black typography, asymmetrical image windows, issue-style captions, and playful modular navigation. Make the page feel bright, collectible, and visually authored instead of neutral or minimal.",
+    remixPrompt:
+      "Adapt the same yellow editorial homepage for a portfolio or research studio. Preserve the yellow field and issue-like modules, but reduce the number of story rails and make selected work thumbnails more dominant in the first scroll.",
+    curatorNote:
+      "Yellow only works if it feels intentional. The page should read like a designed publication, not a basic landing page with a yellow background.",
+    outputFocus: [
+      "A magazine-like opening where yellow controls the mood immediately",
+      "Editorial modules and captions that feel designed, not templated",
+      "A homepage flow that stays bright and readable at the same time"
+    ],
+    outputs: [
+      {
+        title: "Issue Cover Hero",
+        caption: "A bright cover-like opener where yellow and black do the heavy lifting in one precise frame.",
+        meta: "hero",
+        size: "wide",
+        image: stitchCaptureAssets["readymag-solar-editorial-playground"]
+      },
+      {
+        title: "Story Grid",
+        caption: "A field of modular stories and features that keeps the page feeling playful and publication-led.",
+        meta: "stories",
+        size: "square"
+      },
+      {
+        title: "Contributor Close",
+        caption: "A closing section with credits, contributor cues, and archive paths that stays warm and graphic.",
+        meta: "close",
+        size: "tall"
+      }
+    ]
+  },
+  {
+    slug: "verdant-digital-garden-case",
+    title: "Verdant Digital Garden",
+    summary:
+      "A green-first creative tech homepage prompt with experimental depth, layered windows, and a living-system feel instead of another clean white lab page.",
+    brief:
+      "Design a creative tech homepage where green is the core signal and the page should feel alive, experimental, and contemporary. The result needs to look like a real website, not a generic futuristic dashboard.",
+    useCase: "Creative tech homepage",
+    portfolioCategory: "Creative Tech",
+    previewTone: "spatial",
+    coverImage: stitchCaptureAssets["readymag-verdant-digital-garden"],
+    categorySlugs: [
+      "immersive-3d",
+      "motion-first-canvas",
+      "modular-research-surface"
+    ],
+    stitchExampleSlugs: ["readymag-verdant-digital-garden"],
+    prompt:
+      "Create a creative tech homepage with an electric green base, dark interface chrome, layered project windows, botanical-digital textures, and one immersive hero object. Make the page feel alive, experimental, and contemporary without losing structure.",
+    remixPrompt:
+      "Rework the same green homepage for a more commercial AI lab. Keep the verdant base and layered windows, but make the hero object calmer, increase whitespace around the first CTA, and let the proof modules feel more precise.",
+    curatorNote:
+      "Green becomes powerful when it reads as an ecosystem, not a novelty accent. The page should feel alive and deliberate.",
+    outputFocus: [
+      "A living-system hero that uses green as the dominant visual field",
+      "Layered windows and modules that still read like a real homepage",
+      "A creative tech atmosphere that stays structured instead of noisy"
+    ],
+    outputs: [
+      {
+        title: "Living Hero",
+        caption: "A green-led opening frame where one immersive object and layered windows define the page at a glance.",
+        meta: "hero",
+        size: "wide",
+        image: stitchCaptureAssets["readymag-verdant-digital-garden"]
+      },
+      {
+        title: "Project Canopy",
+        caption: "A middle section where selected work and system modules stack like a living interface canopy.",
+        meta: "projects",
+        size: "square"
+      },
+      {
+        title: "Lab Close",
+        caption: "A final section where contact, proof, and ecosystem cues remain experimental but usable.",
         meta: "close",
         size: "tall"
       }

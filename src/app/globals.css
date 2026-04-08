@@ -2550,6 +2550,84 @@ select {
   box-shadow: 0 16px 44px rgba(0, 0, 0, 0.22);
 }
 
+.lightbox-website {
+  display: grid;
+  gap: 0;
+  width: min(1240px, calc(100vw - 24px));
+  max-height: calc(100vh - 24px);
+  overflow: hidden;
+  background: #f4f0ef;
+  box-shadow: 0 24px 64px rgba(0, 0, 0, 0.28);
+}
+
+.lightbox-website-chrome {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  gap: 16px;
+  min-height: 64px;
+  padding: 16px 18px;
+  background: #e7e0dd;
+  border-bottom: 1px solid rgba(16, 16, 16, 0.08);
+}
+
+.lightbox-dots {
+  display: inline-flex;
+  gap: 8px;
+}
+
+.lightbox-dots span {
+  width: 10px;
+  height: 10px;
+  background: rgba(16, 16, 16, 0.22);
+}
+
+.lightbox-website-meta {
+  display: grid;
+  gap: 4px;
+  min-width: 0;
+}
+
+.lightbox-website-meta strong,
+.lightbox-website-caption {
+  font-family: var(--font-display), sans-serif;
+}
+
+.lightbox-website-meta strong {
+  font-size: 1rem;
+  letter-spacing: -0.04em;
+}
+
+.lightbox-website-meta span {
+  min-width: 0;
+  overflow: hidden;
+  color: var(--muted);
+  font-size: 0.8rem;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.lightbox-website-stage {
+  overflow: auto;
+  max-height: min(78vh, 1080px);
+  background: #ffffff;
+}
+
+.lightbox-website-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  background: #ffffff;
+}
+
+.lightbox-website-caption {
+  margin: 0;
+  padding: 14px 18px 18px;
+  color: var(--muted);
+  font-size: 0.92rem;
+  line-height: 1.5;
+}
+
 .preview-dots span,
 .preview-block,
 .preview-brutalist .preview-block,
@@ -3016,6 +3094,16 @@ select {
   height: auto;
   max-height: calc(100vh - 72px);
   object-fit: contain;
+}
+
+.preview-thumbnail-website-lightbox {
+  width: min(1360px, calc(100vw - 24px));
+}
+
+.preview-thumbnail-website-image {
+  display: block;
+  width: 100%;
+  height: auto;
 }
 
 .preview-thumbnail-copy {

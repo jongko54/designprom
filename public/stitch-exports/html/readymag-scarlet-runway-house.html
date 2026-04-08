@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&amp;family=Inter:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "tertiary-fixed-dim": "#acc7ff",
+                    "on-surface-variant": "#603e39",
+                    "primary-fixed-dim": "#ffb4a8",
+                    "surface-variant": "#e2e2e2",
+                    "on-tertiary-fixed": "#001a40",
+                    "on-secondary-fixed": "#410000",
+                    "on-primary": "#ffffff",
+                    "inverse-on-surface": "#f1f1f1",
+                    "surface-container-low": "#f3f3f3",
+                    "secondary": "#b72114",
+                    "surface": "#bc0100",
+                    "error": "#ba1a1a",
+                    "outline-variant": "#ebbbb4",
+                    "secondary-fixed-dim": "#ffb4a8",
+                    "surface-bright": "#f9f9f9",
+                    "inverse-primary": "#ffb4a8",
+                    "on-tertiary-fixed-variant": "#004491",
+                    "on-tertiary-container": "#fefcff",
+                    "surface-dim": "#dadada",
+                    "outline": "#956d67",
+                    "on-secondary-fixed-variant": "#930100",
+                    "primary-container": "#eb0000",
+                    "on-primary-fixed": "#410000",
+                    "surface-container": "#eeeeee",
+                    "background": "#bc0100",
+                    "surface-tint": "#c00100",
+                    "on-surface": "#1b1b1b",
+                    "secondary-fixed": "#ffdad4",
+                    "tertiary-fixed": "#d7e2ff",
+                    "on-primary-fixed-variant": "#930100",
+                    "primary-fixed": "#ffdad4",
+                    "tertiary": "#0059ba",
+                    "on-secondary-container": "#5c0000",
+                    "on-error-container": "#93000a",
+                    "inverse-surface": "#303030",
+                    "on-secondary": "#ffffff",
+                    "secondary-container": "#ff5541",
+                    "surface-container-highest": "#e2e2e2",
+                    "surface-container-lowest": "#ffffff",
+                    "primary": "#bc0100",
+                    "surface-container-high": "#e8e8e8",
+                    "error-container": "#ffdad6",
+                    "tertiary-container": "#0071e8",
+                    "on-tertiary": "#ffffff",
+                    "on-error": "#ffffff",
+                    "on-background": "#1b1b1b",
+                    "on-primary-container": "#fffbff"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0px",
+                    "lg": "0px",
+                    "xl": "0px",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Newsreader"],
+                    "body": ["Inter"],
+                    "label": ["Inter"]
+            }
+          },
+        }
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 200, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            background-color: #bc0100;
+        }
+    </style>
+</head>
+<body class="bg-primary text-on-surface selection:bg-on-surface selection:text-primary">
+<!-- Top Navigation Shell -->
+<nav class="fixed top-0 w-full z-50 flex justify-between items-center px-4 py-6 bg-[#f9f9f9]/80 dark:bg-[#1b1b1b]/80 backdrop-blur-xl shadow-[0px_20px_40px_rgba(27,27,27,0.08)]">
+<div class="text-2xl font-black tracking-tighter text-[#1b1b1b] dark:text-[#f9f9f9]">THE SCARLET MANIFESTO</div>
+<div class="hidden md:flex items-center gap-10">
+<a class="font-serif text-3xl tracking-tighter leading-none uppercase text-[#bc0100] border-b-2 border-[#bc0100] pb-1" href="#">RUNWAY</a>
+<a class="font-serif text-3xl tracking-tighter leading-none uppercase text-[#1b1b1b] dark:text-[#f9f9f9] hover:text-[#bc0100] transition-colors" href="#">COLLECTIONS</a>
+<a class="font-serif text-3xl tracking-tighter leading-none uppercase text-[#1b1b1b] dark:text-[#f9f9f9] hover:text-[#bc0100] transition-colors" href="#">EDITORIAL</a>
+<a class="font-serif text-3xl tracking-tighter leading-none uppercase text-[#1b1b1b] dark:text-[#f9f9f9] hover:text-[#bc0100] transition-colors" href="#">ARCHIVE</a>
+<a class="font-serif text-3xl tracking-tighter leading-none uppercase text-[#1b1b1b] dark:text-[#f9f9f9] hover:text-[#bc0100] transition-colors" href="#">SHOP</a>
+</div>
+<div class="flex items-center gap-6">
+<button class="hover:opacity-70 transition-opacity duration-300 scale-95 active:duration-100 transition-transform">
+<span class="material-symbols-outlined text-[#1b1b1b]">search</span>
+</button>
+<button class="hover:opacity-70 transition-opacity duration-300 scale-95 active:duration-100 transition-transform">
+<span class="material-symbols-outlined text-[#1b1b1b]">shopping_bag</span>
+</button>
+</div>
+</nav>
+<!-- Main Content Canvas -->
+<main class="pt-24 space-y-0">
+<!-- Hero: Asymmetric Editorial -->
+<section class="relative min-h-screen flex flex-col justify-end p-4 md:p-8 bg-primary">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-4 h-full items-end">
+<div class="md:col-span-8 relative">
+<img class="w-full h-[819px] object-cover grayscale brightness-50 contrast-125 mix-blend-multiply" data-alt="striking high-fashion model in sharp red silhouette couture posing against a minimalist scarlet background with dramatic cinematic lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBfxgDyXgdcUI6JDPrcs4LubYYM7ZVhs42aJHyRNQEce8pmoaHRQlbENyVLr57PY4R9XpsWm-ugiFBookuDKxZ-X7s5ZyU17Rj6fuXaZw0v2qVtPOtMncEmkM1t3dgKhWHuD52FZbk7t9X3FYe6lEf1nsPdml-N4TQPAYXHiBpkP-pYR-esAbaVTTwyzoW0F-5E3ZkLaMyX0T25zgQ-v3fFNjuFMn3PKYvJvd2EzQfsXUK1mABTOPlC2KgUCbUIKR9PRAn3-aO1oW0"/>
+<h1 class="absolute -bottom-10 -left-2 md:-left-8 font-headline text-[15vw] leading-[0.8] tracking-tighter text-on-surface uppercase font-black mix-blend-difference">
+                        SCARLET<br/>POISON
+                    </h1>
+</div>
+<div class="md:col-span-4 self-center space-y-8 pl-4">
+<p class="font-label text-sm tracking-[0.2em] text-on-surface uppercase font-bold max-w-xs">
+                        VOL. 04 / ISSUE 02<br/>AN EXPLORATION OF DOMINANCE AND FABRIC.
+                    </p>
+<button class="px-8 py-4 bg-on-surface text-surface font-label font-bold tracking-[0.1em] uppercase hover:bg-on-surface/90 transition-all">
+                        EXPLORE ISSUE
+                    </button>
+</div>
+</div>
+</section>
+<!-- The Lookbook Grid: Zero Gap / Asymmetric -->
+<section class="bg-primary pt-40 pb-20 px-4">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-1">
+<div class="relative group aspect-[3/4] overflow-hidden bg-on-surface">
+<img class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700" data-alt="ultra-sharp runway shot of a model walking in avant-garde black leather against a blood red set with harsh strobe lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAHjkTyjEqp0oSmMVao1niaP5auBhTzyGZJPB5v13VYXuLraBSuViqYkzrZoWCY83fl0u8S1eQAUDw4Mjuz4mbT0bh_m1PNUJJQSSAX6RyjXE-Cw8wRuhN5Lz8CbKxePCMg8N0b-8o3Cy23rBcenvzWwf8FPIPCpKkm6wZUtRQ4NjPxhxupGMJAw5I8541lYb71KdWHjB4I4ud0oFdFYzG2AmVN5cOtQKkerA8iXZ33StlvX2zPwRwr8lDH2etDGTbR3kjqs-K9RMc"/>
+<div class="absolute inset-0 flex items-end p-6 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity">
+<span class="font-headline text-surface text-4xl italic">Desire</span>
+</div>
+</div>
+<div class="md:col-span-2 relative aspect-video overflow-hidden bg-on-surface">
+<img class="w-full h-full object-cover" data-alt="wide cinematic shot of multiple models in monochromatic scarlet suits standing in a geometric architectural space" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBYcaDLsdtDQw7E62R56ZZEErrykiwmz4LL4vqoMvToDXBP9fr6TSLATtM--gK-mEogXphCEClZurTJgDGUMI-IOOF4DcNL0akxfWmeipJh48ONVOaBHluz8GsXeSkbFziTi5zYgXlmJ7Gg95cYx3N9uhL23WU1C60EBJYdEQyM28ZHFJGbr8yiZ34Bc6Eo2vdsvbgxC10ft6iC48POVwPRaWfT3YSelGiQGOaswXTogP0-LXthuzCYOghg04Mou3a28CC2J7sEDY0"/>
+<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-center w-full px-4">
+<h2 class="font-headline text-[10vw] text-on-surface uppercase font-black mix-blend-overlay">UNIFORM</h2>
+</div>
+</div>
+<div class="relative group aspect-square overflow-hidden bg-on-surface">
+<img class="w-full h-full object-cover grayscale brightness-75 hover:scale-105 transition-transform duration-1000" data-alt="close-up of haute couture textile textures featuring deep red velvet and metallic hardware with high contrast photography" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB7gsroWpKJhMgOF5AjR8VIUxJemNexii0QCrZmg9bugibcMfpKTVqbOuAAnWgcgrh8EwluOIfMe73Tqfx0T6RVl7LuQm0eaNKz4ty6YOg60dVdw0_20iiwwxSX0dtPo6KuhR9ZOWFVpTIUPOFWVBzGQkjTmS7ARW90QIc-h44mdG5qg3M7oBqXeNucRL0yVH6gJnRi87HqatP_qUiD1f0ESdtGagvYSwLmLwQ5bWFt9uOk_iPmAUMSJs2HnQLYT9y51CSOBVwaD9Q"/>
+</div>
+<div class="relative group aspect-[3/4] overflow-hidden bg-on-surface md:-mt-40">
+<img class="w-full h-full object-cover grayscale" data-alt="editorial portrait of a model with sharp features wearing oversized futuristic eyewear in a dark moody setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDK7K2NwWNiWoCGDEoU6DPvzwinZzxlpnbwBoNK8n8Qq7RThfIbP4xwLsKflRnLhQpqnXeGR92r3tmEGgsj7RvZJ8pPrVcFq796APYAwtyEeMrh8BD-3Zbc1U_2HDiV3n_N9ZO6hwzuqRC5-SelhDTddHWKkZY9bHRirx8JHnVBBs_jOSMUEuOsGtDeoPQH-p-Awc_H418NoFgduZ6rthShzbu6kvuU7v_2Ir89a3PWjT8ZvAE0uEqiDO7oejdWCHjo7l7EzIcxaTE"/>
+<div class="absolute top-0 right-0 p-6">
+<span class="font-label text-surface text-xs tracking-widest vertical-rl uppercase rotate-90 origin-top-right">COLLECTION_024</span>
+</div>
+</div>
+<div class="relative group aspect-square overflow-hidden bg-on-surface">
+<img class="w-full h-full object-cover mix-blend-luminosity" data-alt="geometric fashion composition with high shadows and vibrant scarlet lighting on a minimalist set" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAJGhBBh0nWX9MmRP5nTHKZvhKLl9ycvgv9exFMJ1lRkx3038kxgOr1mjVvezVoZq4VrMc99Wx_EKIEIkMf9b9OpqX9BxxHDvMJc2qFjF73WY_wOaxLn95KvooekqyNo3dTmF6M4jvyLp1WQyFwhSaPGOihMqwjbrByrp957mb1KPcQIMlbJe5smGRxqgVO5GG_JGXTJKFiPsz3P8ZuYcb9WhkllDs2BL5XpGOFMNSObsXrieLTp3m3uIH8uInttm5w8W6OIRYmBx4"/>
+</div>
+</div>
+</section>
+<!-- Mid-Page Statement -->
+<section class="h-[614px] bg-on-surface flex items-center justify-center text-center p-8">
+<div class="max-w-4xl space-y-6">
+<h3 class="font-headline text-5xl md:text-8xl text-primary uppercase font-bold leading-none italic">"Style is a weapon for those who know how to aim it."</h3>
+<p class="font-label text-surface text-xs tracking-[0.3em] uppercase">THE NEW MANIFESTO © 2024</p>
+</div>
+</section>
+<!-- Product Block: Tonal Shifts Only -->
+<section class="bg-surface-container-low py-32">
+<div class="px-4">
+<div class="flex justify-between items-end mb-16 border-b-2 border-on-surface pb-4">
+<h4 class="font-headline text-6xl text-on-surface uppercase font-black">CURATED SHOP</h4>
+<a class="font-label text-sm font-bold border-b border-on-surface hover:text-primary transition-colors" href="#">VIEW ALL PIECES</a>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+<!-- Shop Item -->
+<div class="space-y-4 group">
+<div class="aspect-[2/3] overflow-hidden bg-surface-container-high">
+<img class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" data-alt="luxury designer leather bag in blood red with gold accents on a clean white surface" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAl-dfV6J3_itFOYBdiO8KE3Oma3k55-a6DB97EIeuhIWi8Xf3oBkIc6DuqnN3jm29MbgvyyhXUXjv6yoP6z9QH94E6buEh1D1k7xeQWqMCRFUgKz1Ij0WgQYXZqtrwc2CycEWv0-ySaA_MjyD_Yn7EEmAuWHd5Br2f10jQ5HGlkroYWsbOlARhvxJImNwQIf5DioxICVCWXpPwCbffQlEcJSB99TJIrHca5NcQBXGnPmGRD--TAAmPUkRhrBoKsc2S0x7rfvajbRA"/>
+</div>
+<div class="flex justify-between font-label text-xs font-bold tracking-wider">
+<span class="uppercase">THE BLOOD CLUTCH</span>
+<span>$1,450</span>
+</div>
+</div>
+<!-- Shop Item -->
+<div class="space-y-4 group">
+<div class="aspect-[2/3] overflow-hidden bg-surface-container-high">
+<img class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" data-alt="sleek high-fashion stiletto heels in vibrant red with a sharp pointed toe" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDLvfvEFdSa4iVuGzE5DD3qGTjc_bKKcAqXPCeB_0zfBT24God7r2PVOqDBYHO4R_DcOcCTijp5GibRsGYDN1jBNN8FYLDxA-V_k7mGh0IYRxRoCaQB7D0mXpiATHPSi9ZzWQ-bvDo4_Kjhsm_9VQssTc-g6Ic45loab4_4v54OODVSuhsr4YG6nQIuHKfT9nmpSByU8UfdT_jJrEr_T1-OnnbL3t0sZCUc_lIXYeVy5jwnJ84ixP7lTow-9N8diquQDmoWlKPVRhQ"/>
+</div>
+<div class="flex justify-between font-label text-xs font-bold tracking-wider">
+<span class="uppercase">VAMP PUMPS</span>
+<span>$890</span>
+</div>
+</div>
+<!-- Shop Item -->
+<div class="space-y-4 group">
+<div class="aspect-[2/3] overflow-hidden bg-surface-container-high">
+<img class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" data-alt="high-end editorial shot of a red silk dress draped on a minimalist hanger" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBmIkh_5QtpakgguUyY-xvRexRN03Ih3tm-by2pwuoR392bQS9i9PU6rbROL6YD2QUdouZtFGN13wrEIH81mg7itYXpnyG_zdFYqqpXFjynIkV3Hybt60bcxDLKqT4pYWVJNcFPBDBR7m1x8g6AHfRQI_IpRkGDHbEcFpvHGOokRHzQxtfVexvwgR5e0vasea9_K1t1uCPmnYtbtrVHQIUuPEc1UbLgSYlpJ0DTETq7sioljiQr6zi-dyRYrDI0k6D4B9DKjpts3gM"/>
+</div>
+<div class="flex justify-between font-label text-xs font-bold tracking-wider">
+<span class="uppercase">SILK VOID GOWN</span>
+<span>$3,200</span>
+</div>
+</div>
+<!-- Shop Item -->
+<div class="space-y-4 group">
+<div class="aspect-[2/3] overflow-hidden bg-surface-container-high">
+<img class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" data-alt="pair of designer oversized sunglasses with thick red frames and dark lenses" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBb85hvnnVcCkV_cUV8L-U5jvfVMBhJWc1hN___o8HAdjQjFRe4Z018bjDuUe9lGHxlS54CTsaKEeLjbtwlmsTz7niPj_ao751ZtkKSCTujD30FKMO08gx9QuW3uC7p1jQ93Q6YhVKk4Sw7SI82iLbnF8XkcSAvMybfxu9yZcRW5TftQtkZp103QJ0X4NaAlyisbq_IQEqQA9FcBl89Ug6Jd19DympO1sonnWorpq2U2-FMAEPFoT7n-Y0GD57vw2aMHB4Ff_aagnE"/>
+</div>
+<div class="flex justify-between font-label text-xs font-bold tracking-wider">
+<span class="uppercase">ORBIT FRAME 01</span>
+<span>$550</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Editorial Feature: Massive Overlap -->
+<section class="bg-primary relative py-40 overflow-hidden">
+<div class="absolute top-0 right-0 w-1/2 h-full opacity-20">
+<img class="w-full h-full object-cover grayscale" data-alt="ghostly abstract overlay of moving fabrics in scarlet and deep black with a blurred editorial motion effect" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDYIPAcdU7JMKrbnzIU-jVwkY9-BouAGZ4XGD4lnM9oUcaxMjXfpazwnBnba50Y8ZG5GpHm4tiPf1K84ZJL0YYsBTRN_O8sFEmH1qIc72JxVv5s8hLSF7EGyhenib2ZQEsyPJ3FUL7YR5NX0M0TskZhxiK1DtM32xor2Lan5GgtbGdfCfP3c31uAxSOpJKWoQjmbqUsuAXXdMZUa1d9xncogHZAmbdFtWi2T8vBkFMVArt4tDCcryGhczZMOP0wvfLf0BrX7lHt4I0"/>
+</div>
+<div class="container mx-auto px-4 relative z-10">
+<div class="max-w-2xl">
+<h5 class="font-label text-surface text-sm tracking-[0.4em] uppercase mb-12">FEATURED STORY</h5>
+<div class="relative">
+<img class="w-full h-[716px] object-cover grayscale brightness-50" data-alt="high-fashion model in a massive red tulle dress filling an industrial dark concrete warehouse space" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA3WuTa7ld6ZwnPrfN790IBFahWvOx7Upf3eM2HRzDWmo-6_QIpfVkl922XZg_Kucp86cYd6XDGrae_JISVOc3XCS-ekOmXDNFlZdB2cQ3caXeSpTsfFgkonLeIgvNn_ESokuldivxuZGelSC9XUzpwTxhAf_aqf8G4ZD2NjYdBXq9cOKxeB3a_NMRUFfudO7Az7g2C2gmdywyUd8cNQ9ruG8LSbnWlNnBdwpgmb8A6Ll50CywzoeNhKCIh7XaHhg3ITgNx9kS2Qe8"/>
+<div class="absolute -bottom-20 md:-right-40 max-w-lg bg-on-surface p-12 space-y-6">
+<h6 class="font-headline text-5xl text-surface uppercase font-black leading-tight">THE FABRIC OF REBELLION</h6>
+<p class="font-body text-surface/80 leading-relaxed text-sm">
+                                Explore the intersection of punk heritage and modern luxury through the lens of creative director Aris Thorne. A dialogue between the needle and the knife.
+                            </p>
+<a class="inline-block font-label text-primary text-xs font-bold tracking-widest uppercase border-b-2 border-primary pb-2 hover:text-surface hover:border-surface transition-all" href="#">READ MANIFESTO</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer Shell -->
+<footer class="w-full bg-[#1b1b1b] py-20 px-4 flex flex-col md:flex-row justify-between items-center gap-8 no-borders">
+<div class="text-xl font-black text-[#f9f9f9]">SCARLET MANIFESTO</div>
+<div class="flex gap-12 font-sans text-[0.75rem] tracking-[0.2em] uppercase font-bold">
+<a class="text-[#f9f9f9] hover:underline decoration-2 underline-offset-8 transition-all" href="#">INSTAGRAM</a>
+<a class="text-[#f9f9f9] hover:underline decoration-2 underline-offset-8 transition-all" href="#">VOGUE</a>
+<a class="text-[#f9f9f9] hover:underline decoration-2 underline-offset-8 transition-all" href="#">LEGAL</a>
+<a class="text-[#f9f9f9] hover:underline decoration-2 underline-offset-8 transition-all" href="#">CONTACT</a>
+</div>
+<div class="font-sans text-[0.75rem] tracking-[0.2em] uppercase font-bold text-[#f9f9f9]/50">
+            © 2024 SCARLET MANIFESTO. ALL RIGHTS RESERVED.
+        </div>
+</footer>
+</body></html>

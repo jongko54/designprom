@@ -11,6 +11,16 @@ type PreviewLibraryBrowserProps = {
   items: PromptArchiveEntry[];
 };
 
+const previewPriority = new Map(
+  [
+    "web3-creator-broadcast-case",
+    "scarlet-runway-house-case",
+    "orange-soundstage-portal-case",
+    "solar-editorial-playground-case",
+    "verdant-digital-garden-case"
+  ].map((slug, index) => [slug, index])
+);
+
 function getPreviewFilters(items: PromptArchiveEntry[]) {
   return Array.from(new Set(items.map((item) => item.portfolioCategory))).sort((left, right) =>
     left.localeCompare(right)
@@ -22,33 +32,45 @@ export function PreviewLibraryBrowser({ items }: PreviewLibraryBrowserProps) {
   const [query, setQuery] = useState("");
   const filters = getPreviewFilters(items);
   const normalizedQuery = query.trim().toLowerCase();
-  const visibleItems = items.filter((item) => {
-    const matchesFilter =
-      activeFilter === "All" || item.portfolioCategory === activeFilter;
+  const itemOrder = new Map(items.map((item, index) => [item.slug, index]));
+  const visibleItems = items
+    .filter((item) => {
+      const matchesFilter =
+        activeFilter === "All" || item.portfolioCategory === activeFilter;
 
-    if (!matchesFilter) {
-      return false;
-    }
+      if (!matchesFilter) {
+        return false;
+      }
 
-    if (!normalizedQuery) {
-      return true;
-    }
+      if (!normalizedQuery) {
+        return true;
+      }
 
-    const haystack = [
-      item.title,
-      item.summary,
-      item.brief,
-      item.useCase,
-      item.portfolioCategory,
-      item.prompt,
-      item.remixPrompt,
-      item.outputFocus.join(" ")
-    ]
-      .join(" ")
-      .toLowerCase();
+      const haystack = [
+        item.title,
+        item.summary,
+        item.brief,
+        item.useCase,
+        item.portfolioCategory,
+        item.prompt,
+        item.remixPrompt,
+        item.outputFocus.join(" ")
+      ]
+        .join(" ")
+        .toLowerCase();
 
-    return haystack.includes(normalizedQuery);
-  }).reverse();
+      return haystack.includes(normalizedQuery);
+    })
+    .sort((left, right) => {
+      const leftPriority = previewPriority.get(left.slug);
+      const rightPriority = previewPriority.get(right.slug);
+
+      if (leftPriority !== undefined || rightPriority !== undefined) {
+        return (leftPriority ?? Number.MAX_SAFE_INTEGER) - (rightPriority ?? Number.MAX_SAFE_INTEGER);
+      }
+
+      return (itemOrder.get(right.slug) ?? 0) - (itemOrder.get(left.slug) ?? 0);
+    });
 
   return (
     <section className="preview-browser-shell site-shell">
@@ -106,9 +128,14 @@ export function PreviewLibraryBrowser({ items }: PreviewLibraryBrowserProps) {
                 <div className="preview-thumbnail-stage">
                   <ImageLightbox
                     alt={previewImage.alt}
+                    browserLabel={entry.title}
+                    browserUrl={`https://designprom.vercel.app/archive/${entry.slug}`}
+                    caption={entry.summary}
                     className="preview-thumbnail-image"
-                    modalClassName="preview-thumbnail-lightbox-image"
+                    modalClassName="preview-thumbnail-website-lightbox"
+                    modalImageClassName="preview-thumbnail-website-image"
                     src={previewImage.src}
+                    viewer="website"
                   />
                 </div>
               </div>
