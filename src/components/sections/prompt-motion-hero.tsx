@@ -581,7 +581,7 @@ export function PromptMotionHero({ onApplyPrompt }: PromptMotionHeroProps) {
                   },
                   {
                     content: publishHtml,
-                    filename: "preview.html",
+                    filename: "index.html",
                     kind: "text"
                   },
                   {

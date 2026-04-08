@@ -24,8 +24,111 @@ export type PublishAsset =
       url: string;
     };
 
+function escapeHtml(value: string) {
+  return value
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#39;");
+}
+
 function imageExtension(src: string) {
   return src.endsWith(".svg") ? ".svg" : ".png";
+}
+
+function buildSimpleExportHtml({
+  title,
+  intro,
+  prompt,
+  notes,
+  imagePath
+}: {
+  imagePath?: string;
+  intro: string;
+  notes: string[];
+  prompt: string;
+  title: string;
+}) {
+  const noteMarkup = notes
+    .map((note) => `<li>${escapeHtml(note)}</li>`)
+    .join("");
+
+  return `<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>${escapeHtml(title)}</title>
+  <style>
+    :root { color-scheme: light; }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      padding: 24px;
+      background: #faf9f9;
+      color: #101010;
+      font-family: Inter, Arial, sans-serif;
+    }
+    main {
+      display: grid;
+      gap: 18px;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+    section {
+      display: grid;
+      gap: 12px;
+      padding: 20px;
+      background: #ffffff;
+    }
+    h1, h2 {
+      margin: 0;
+      font-family: "Space Grotesk", Inter, Arial, sans-serif;
+      line-height: 0.96;
+      letter-spacing: -0.04em;
+    }
+    h1 { font-size: 2.8rem; }
+    h2 { font-size: 1.1rem; }
+    p, li { margin: 0; line-height: 1.65; color: #5f5a5b; }
+    pre {
+      margin: 0;
+      padding: 16px;
+      background: #f5f3f3;
+      white-space: pre-wrap;
+      font: inherit;
+      line-height: 1.7;
+      color: #101010;
+    }
+    img {
+      display: block;
+      width: 100%;
+      height: auto;
+      background: #f5f3f3;
+    }
+    ul {
+      display: grid;
+      gap: 8px;
+      padding-left: 18px;
+      margin: 0;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <section>
+      <h1>${escapeHtml(title)}</h1>
+      <p>${escapeHtml(intro)}</p>
+    </section>
+    ${imagePath ? `<section><img src="${escapeHtml(imagePath)}" alt="${escapeHtml(title)} preview" /></section>` : ""}
+    <section>
+      <h2>Prompt</h2>
+      <pre>${escapeHtml(prompt)}</pre>
+    </section>
+    ${notes.length ? `<section><h2>Notes</h2><ul>${noteMarkup}</ul></section>` : ""}
+  </main>
+</body>
+</html>`;
 }
 
 function buildSingleStitchArtifactAssets(slug: string): PublishAsset[] {
@@ -73,11 +176,12 @@ function buildArchiveStitchArtifactAssets(slugs: string[]): PublishAsset[] {
 
 export function buildArchivePublishAssets(entry: PromptArchiveEntry): PublishAsset[] {
   const stitchCaptures = getArchiveStitchExports(entry);
+  const previewFileName = `archive-case/preview${imageExtension(entry.coverImage.src)}`;
   const publishImageAssets = Array.from(
     new Map(
       [
         {
-          filename: `archive-case/preview${imageExtension(entry.coverImage.src)}`,
+          filename: previewFileName,
           kind: "url" as const,
           url: entry.coverImage.src
         },
@@ -98,6 +202,17 @@ export function buildArchivePublishAssets(entry: PromptArchiveEntry): PublishAss
   );
 
   return [
+    {
+      content: buildSimpleExportHtml({
+        imagePath: previewFileName,
+        intro: entry.summary,
+        notes: entry.outputFocus,
+        prompt: `${entry.prompt}\n\nRemix prompt:\n${entry.remixPrompt}`,
+        title: entry.title
+      }),
+      filename: "index.html",
+      kind: "text"
+    },
     {
       content: `${entry.prompt}\n`,
       filename: "archive-case/prompt.txt",
@@ -131,7 +246,21 @@ export function buildStitchExamplePublishAssets(
 ): PublishAsset[] {
   const owner = getStitchExampleOwner(example.slug);
   const ownerHref = owner ? getCategoryHref(owner) : undefined;
+  const previewFileName = example.captureImage
+    ? `stitch-export/preview${imageExtension(example.captureImage.src)}`
+    : undefined;
   const assets: PublishAsset[] = [
+    {
+      content: buildSimpleExportHtml({
+        imagePath: previewFileName,
+        intro: example.summary,
+        notes: example.outputNotes,
+        prompt: example.stitchPrompt,
+        title: example.title
+      }),
+      filename: "index.html",
+      kind: "text" as const
+    },
     {
       content: `${example.stitchPrompt}\n`,
       filename: "stitch-export/prompt.txt",
@@ -159,7 +288,7 @@ export function buildStitchExamplePublishAssets(
     ...(example.captureImage
       ? [
           {
-            filename: `stitch-export/preview${imageExtension(example.captureImage.src)}`,
+            filename: previewFileName!,
             kind: "url" as const,
             url: example.captureImage.src
           }
@@ -173,7 +302,21 @@ export function buildStitchExamplePublishAssets(
 export function buildBrandGalleryPublishAssets(
   example: BrandDnaGalleryEntry
 ): PublishAsset[] {
+  const previewFileName = example.captureImage
+    ? `stitch-export/preview${imageExtension(example.captureImage.src)}`
+    : undefined;
   const assets: PublishAsset[] = [
+    {
+      content: buildSimpleExportHtml({
+        imagePath: previewFileName,
+        intro: example.summary,
+        notes: [example.templateHint, `${example.brandName} / ${example.pageType}`],
+        prompt: example.stitchPrompt,
+        title: example.title
+      }),
+      filename: "index.html",
+      kind: "text" as const
+    },
     {
       content: `${example.stitchPrompt}\n`,
       filename: "stitch-export/prompt.txt",
@@ -205,7 +348,7 @@ export function buildBrandGalleryPublishAssets(
     ...(example.captureImage
       ? [
           {
-            filename: `stitch-export/preview${imageExtension(example.captureImage.src)}`,
+            filename: previewFileName!,
             kind: "url" as const,
             url: example.captureImage.src
           }

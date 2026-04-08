@@ -717,6 +717,11 @@ export function BuilderPanel({
               <PublishActions
                 assets={[
                   {
+                    content: `<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" /><title>${selectedDna.title} rough draft</title><style>body{margin:0;padding:24px;background:#faf9f9;color:#101010;font-family:Inter,Arial,sans-serif}main{display:grid;gap:18px;max-width:1100px;margin:0 auto}section{display:grid;gap:12px;padding:20px;background:#fff}h1,h2{margin:0;font-family:\"Space Grotesk\",Inter,Arial,sans-serif;line-height:.96;letter-spacing:-.04em}h1{font-size:2.8rem}h2{font-size:1.1rem}p,pre{margin:0;line-height:1.65;color:#5f5a5b;font:inherit;white-space:pre-wrap}img{display:block;width:100%;height:auto;background:#f5f3f3}</style></head><body><main><section><h1>${selectedDna.title} ${pageType}</h1><p>${selectedStyle.summary}</p></section>${hordeDraft.imageUrl ? `<section><img src=\"${hordeDraft.imageUrl}\" alt=\"rough draft preview\" /></section>` : ""}<section><h2>Prompt</h2><pre>${generatedPrompt}</pre></section></main></body></html>`,
+                    filename: "index.html",
+                    kind: "text"
+                  },
+                  {
                     content: `${generatedPrompt}\n`,
                     filename: "prompt.txt",
                     kind: "text"
