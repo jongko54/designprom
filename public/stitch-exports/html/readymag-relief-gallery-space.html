@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>ARCHIVE | The Archival Perspective</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&amp;family=Inter:wght@100..900&amp;family=Space+Grotesk:wght@300..700&amp;display=swap" rel="stylesheet"/>
+<!-- Icons -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "inverse-on-surface": "#f3f0eb",
+                    "secondary-fixed": "#c8c6c5",
+                    "tertiary-fixed-dim": "#224583",
+                    "on-primary": "#ffdbd0",
+                    "on-surface-variant": "#474747",
+                    "surface-container-highest": "#e5e2dd",
+                    "on-primary-fixed": "#ffffff",
+                    "inverse-primary": "#ffb59e",
+                    "tertiary": "#123976",
+                    "primary": "#000000",
+                    "on-surface": "#1c1c19",
+                    "secondary-fixed-dim": "#adabaa",
+                    "background": "#fcf9f4",
+                    "primary-fixed-dim": "#842500",
+                    "surface": "#fcf9f4",
+                    "surface-container-high": "#ebe8e3",
+                    "secondary": "#5f5e5e",
+                    "surface-variant": "#e5e2dd",
+                    "on-tertiary-fixed": "#ffffff",
+                    "on-error": "#ffffff",
+                    "surface-container-lowest": "#ffffff",
+                    "on-tertiary": "#d8e2ff",
+                    "surface-container": "#f0ede8",
+                    "inverse-surface": "#31302d",
+                    "on-error-container": "#410002",
+                    "primary-container": "#711e00",
+                    "secondary-container": "#d6d4d3",
+                    "surface-tint": "#ad3300",
+                    "tertiary-fixed": "#3c5d9c",
+                    "surface-dim": "#dcdad5",
+                    "on-secondary": "#ffffff",
+                    "on-secondary-fixed-variant": "#3c3b3b",
+                    "primary-fixed": "#ad3300",
+                    "on-secondary-container": "#1c1b1b",
+                    "on-tertiary-fixed-variant": "#d8e2ff",
+                    "surface-bright": "#fcf9f4",
+                    "on-tertiary-container": "#ffffff",
+                    "outline-variant": "#c6c6c6",
+                    "on-primary-container": "#ffffff",
+                    "on-secondary-fixed": "#1c1b1b",
+                    "tertiary-container": "#5474b4",
+                    "on-background": "#1c1c19",
+                    "error": "#ba1a1a",
+                    "on-primary-fixed-variant": "#ffdbd0",
+                    "outline": "#777777",
+                    "surface-container-low": "#f6f3ee",
+                    "error-container": "#ffdad6"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0px",
+                    "lg": "0px",
+                    "xl": "0px",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Newsreader", "serif"],
+                    "body": ["Inter", "sans-serif"],
+                    "label": ["Space Grotesk", "monospace"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        body { background-color: #fcf9f4; }
+    </style>
+</head>
+<body class="font-body text-on-surface antialiased">
+<!-- TopNavBar (Shared Component) -->
+<nav class="fixed top-0 w-full z-50 bg-[#fcf9f4]/80 backdrop-blur-xl">
+<div class="flex justify-between items-center px-6 md:px-12 py-6 w-full max-w-screen-2xl mx-auto">
+<div class="text-2xl font-bold tracking-tighter text-black Newsreader">ARCHIVE</div>
+<div class="hidden md:flex items-center space-x-12">
+<a class="font-serif italic text-lg Newsreader text-black border-b border-orange-700 pb-1" href="#">Exhibitions</a>
+<a class="font-serif italic text-lg Newsreader text-stone-500 hover:text-black transition-colors duration-300" href="#">Events</a>
+<a class="font-serif italic text-lg Newsreader text-stone-500 hover:text-black transition-colors duration-300" href="#">Archive</a>
+<a class="font-serif italic text-lg Newsreader text-stone-500 hover:text-black transition-colors duration-300" href="#">About</a>
+</div>
+<div class="flex items-center space-x-8">
+<div class="hidden lg:flex items-center space-x-2 text-stone-400">
+<span class="material-symbols-outlined text-sm">search</span>
+<span class="font-label text-[10px] uppercase tracking-widest">Search Catalog</span>
+</div>
+<button class="bg-primary text-on-primary-fixed px-8 py-3 font-label text-xs uppercase tracking-widest hover:bg-primary-fixed transition-colors">Connect</button>
+</div>
+</div>
+</nav>
+<!-- SideNavBar (Shared Component - Desktop Only) -->
+<aside class="hidden md:flex fixed left-0 top-1/4 h-auto w-16 bg-[#fcf9f4] flex-col items-center space-y-8 py-8 z-40">
+<div class="flex flex-col items-center space-y-8">
+<a class="group flex flex-col items-center space-y-1" href="#">
+<span class="material-symbols-outlined text-[#ad3300] scale-110">info</span>
+<span class="font-label text-[8px] uppercase text-[#ad3300]">Context</span>
+</a>
+<a class="group flex flex-col items-center space-y-1 opacity-50 hover:opacity-100 transition-opacity" href="#">
+<span class="material-symbols-outlined text-stone-400">menu_book</span>
+<span class="font-label text-[8px] uppercase text-stone-400">Manifesto</span>
+</a>
+<a class="group flex flex-col items-center space-y-1 opacity-50 hover:opacity-100 transition-opacity" href="#">
+<span class="material-symbols-outlined text-stone-400">architecture</span>
+<span class="font-label text-[8px] uppercase text-stone-400">Process</span>
+</a>
+<a class="group flex flex-col items-center space-y-1 opacity-50 hover:opacity-100 transition-opacity" href="#">
+<span class="material-symbols-outlined text-stone-400">history</span>
+<span class="font-label text-[8px] uppercase text-stone-400">Legacy</span>
+</a>
+</div>
+<div class="pt-8 border-t border-stone-200 flex flex-col items-center">
+<span class="font-label text-[8px] rotate-180 [writing-mode:vertical-lr] tracking-[0.2em] text-stone-400">V.01-2024</span>
+</div>
+</aside>
+<main class="pt-24">
+<!-- Hero Section -->
+<section class="relative w-full min-h-[921px] px-6 md:px-12 flex flex-col justify-center">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-0 items-end">
+<div class="md:col-span-11 relative overflow-hidden group">
+<img alt="Main Gallery" class="w-full h-[768px] object-cover transition-transform duration-1000 group-hover:scale-105" data-alt="Cinematic shot of a minimalist white gallery space with high ceilings and a singular large-scale abstract painting in deep ochre and black." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAFPdMKjdxzhlpkuxXccnbH1g4UPGnReZMibtqLaOlSs46pl6q14gA46yedphyv6PSg4XmRzH_ch3SSOQ9M3SSBAthU3r2BYcJFYi1eOp9aunAdsezbAIrIfPeY39h2wsGqVJA2ukdCisstgfu3Nue2q-D8XyYR3q5vAzQv18L0hhiKTrgol-lgITV6JzNLVD9TZmcxR6ny2n_x8JpZthP8HswClCcheGyaZ7OTImqoZzNd__gFpd6NI0_SnDG_4yTK9m2PWySdNK0"/>
+<!-- Archival Label (Curatorial Overlay) -->
+<div class="absolute bottom-0 right-0 md:right-auto md:left-0 bg-surface/90 backdrop-blur-xl p-8 md:p-12 max-w-lg">
+<div class="flex items-center space-x-4 mb-4">
+<span class="w-8 h-[1px] bg-primary-fixed"></span>
+<span class="font-label text-xs uppercase tracking-[0.2em] text-primary-fixed">Now Open</span>
+</div>
+<h1 class="font-headline text-5xl md:text-7xl mb-4 leading-none tracking-tight italic">Ethereal Residue</h1>
+<p class="font-label text-sm mb-8 text-stone-500 uppercase tracking-widest">Artist: Elena Koroleva • JAN 15 — APR 30</p>
+<button class="bg-primary text-white px-12 py-5 font-label text-xs uppercase tracking-widest flex items-center space-x-4 hover:bg-primary-fixed-dim transition-all">
+<span>Book Entry</span>
+<span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Metadata Side Pillar -->
+<div class="hidden md:block absolute right-12 top-1/2 -translate-y-1/2 [writing-mode:vertical-rl] space-y-4">
+<span class="font-label text-[10px] uppercase tracking-[0.5em] text-stone-400">Coordinates: 40.7128° N, 74.0060° W</span>
+</div>
+</section>
+<!-- Manifesto Section -->
+<section class="py-32 px-6 md:px-12 max-w-7xl mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-12">
+<div class="md:col-start-2 md:col-span-10 text-center">
+<div class="inline-block mb-12">
+<span class="font-label text-xs uppercase tracking-[0.3em] text-stone-400">The Manifesto</span>
+</div>
+<blockquote class="font-headline text-4xl md:text-6xl leading-[1.2] italic mb-16">
+                        "Art is not a passive artifact but an <span class="text-primary-fixed">active dialogue</span> between history and the immediate present. We do not just archive; we curate the pulse of our collective memory."
+                    </blockquote>
+<div class="flex justify-center space-x-24 items-start text-left">
+<div class="max-w-xs">
+<h4 class="font-label text-[10px] uppercase tracking-widest mb-4 text-primary">01 / Permanence</h4>
+<p class="font-body text-sm text-stone-500 leading-relaxed">Preserving the ephemeral through digital and physical record-keeping that defies the speed of modern consumption.</p>
+</div>
+<div class="max-w-xs">
+<h4 class="font-label text-[10px] uppercase tracking-widest mb-4 text-primary">02 / Community</h4>
+<p class="font-body text-sm text-stone-500 leading-relaxed">The gallery serves as a vessel for diverse voices, creating a living archive of contemporary human experience.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Event Modules (Bento Grid) -->
+<section class="py-24 bg-surface-container-low px-6 md:px-12">
+<div class="max-w-screen-2xl mx-auto">
+<div class="flex flex-col md:flex-row justify-between items-end mb-20 space-y-6">
+<div>
+<h2 class="font-headline text-5xl mb-4 italic">Upcoming Dialogues</h2>
+<p class="font-label text-xs uppercase tracking-widest text-stone-400">Curated screenings, workshops, and panel discussions.</p>
+</div>
+<a class="font-label text-xs uppercase tracking-widest border-b border-primary pb-1 hover:text-primary-fixed hover:border-primary-fixed transition-colors" href="#">View All Events</a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-1">
+<!-- Event 01 -->
+<div class="bg-surface p-10 group hover:bg-white transition-colors duration-500 flex flex-col justify-between h-[450px]">
+<div>
+<div class="flex justify-between items-start mb-12">
+<span class="font-label text-[10px] bg-surface-container-high px-3 py-1 uppercase tracking-widest">Workshop</span>
+<span class="font-label text-[10px] text-stone-400">01.03.2024</span>
+</div>
+<h3 class="font-headline text-3xl mb-6 italic leading-snug">The Architecture of Analog Synthesis</h3>
+<p class="font-body text-sm text-stone-500 line-clamp-3">An exploration into the tangible nature of sound waves and the preservation of vintage synthesizers in modern music.</p>
+</div>
+<div class="pt-8 border-t border-stone-100 flex justify-between items-center">
+<div class="space-y-1">
+<p class="font-label text-[9px] uppercase text-stone-400">Location</p>
+<p class="font-label text-[11px] uppercase tracking-tight">Studio A • 14:00</p>
+</div>
+<span class="material-symbols-outlined text-stone-300 group-hover:text-primary-fixed transition-colors">add</span>
+</div>
+</div>
+<!-- Event 02 (Large) -->
+<div class="bg-primary text-white p-10 flex flex-col justify-between h-[450px] relative overflow-hidden">
+<div class="relative z-10">
+<div class="flex justify-between items-start mb-12">
+<span class="font-label text-[10px] bg-white/10 px-3 py-1 uppercase tracking-widest">Screening</span>
+<span class="font-label text-[10px] text-white/50">04.03.2024</span>
+</div>
+<h3 class="font-headline text-3xl mb-6 italic leading-snug">Light as Material: A Retrospective</h3>
+<p class="font-body text-sm text-stone-300">Exclusive 16mm projection of "Lumen" followed by a curatorial talk with director Marcus Thorne.</p>
+</div>
+<div class="pt-8 border-t border-white/10 flex justify-between items-center relative z-10">
+<div class="space-y-1">
+<p class="font-label text-[9px] uppercase text-white/50">Location</p>
+<p class="font-label text-[11px] uppercase tracking-tight">Main Hall • 20:00</p>
+</div>
+<button class="bg-primary-fixed text-white px-6 py-2 font-label text-[10px] uppercase tracking-widest">Register</button>
+</div>
+<div class="absolute inset-0 opacity-10 pointer-events-none">
+<img class="w-full h-full object-cover" data-alt="A blurry abstract texture of light streaks and shadows in dark tones." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBJHuu0Jft-imWxjZhX17CgZ2jWiUJMXN-RYzgRU3xQ6tNBiQN2cBlzIwmRtzpPJkLK43nsEa23l0WGSeqIcGQzmQoGMYpoi7uh-3l_kmhifhVejRhUz9NH4fVvRjkmZGo_o2IhvbUQyqiYDxJ0ppaUuHJ_EA2Atwr2JW-A9_aYvDq52qG2e3Tm-xb9DnHXdTtMAxV1LJtlk7B8D6LNjRhZ48BngfZtspTFujMUjUAobxQmzzwLWCLC7dBU6hGDV8vU9tBpqqEWOoE"/>
+</div>
+</div>
+<!-- Event 03 -->
+<div class="bg-surface p-10 group hover:bg-white transition-colors duration-500 flex flex-col justify-between h-[450px]">
+<div>
+<div class="flex justify-between items-start mb-12">
+<span class="font-label text-[10px] bg-surface-container-high px-3 py-1 uppercase tracking-widest">Dialogue</span>
+<span class="font-label text-[10px] text-stone-400">12.03.2024</span>
+</div>
+<h3 class="font-headline text-3xl mb-6 italic leading-snug">The Ethics of Cultural Data</h3>
+<p class="font-body text-sm text-stone-500 line-clamp-3">A roundtable discussion on digitizing indigenous artifacts and the role of transparency in archives.</p>
+</div>
+<div class="pt-8 border-t border-stone-100 flex justify-between items-center">
+<div class="space-y-1">
+<p class="font-label text-[9px] uppercase text-stone-400">Location</p>
+<p class="font-label text-[11px] uppercase tracking-tight">Digital Library • 18:30</p>
+</div>
+<span class="material-symbols-outlined text-stone-300 group-hover:text-primary-fixed transition-colors">add</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Asymmetric Visual Rhythm Section -->
+<section class="py-32 px-6 md:px-12 overflow-hidden">
+<div class="max-w-screen-2xl mx-auto flex flex-col md:flex-row gap-16 items-center">
+<div class="w-full md:w-1/2">
+<img alt="Sculptural Detail" class="w-full grayscale hover:grayscale-0 transition-all duration-700 aspect-[4/5] object-cover" data-alt="Extreme close-up of a white marble sculpture showing intricate textures and dramatic soft lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAyPxHMti4HCdPkeU9jrIKvjBS6KAU2FYSg6eqi8vFR84dcgNZMlVqbvzqNl2Tt347kYNnVxb5FOE0GlOqpNzfiiGaW1sbCEb-CENYenEAEDchb27zL6kQNU2cUyv7mIOlsBu_1Aj63HdNvrfS9RCfAZq3Pb6tWXHWxn4WZJ9FxVq7q97OnJFQSlbNdimvhLksyJxubZtbbm2z5bN68fhf0SwFLfzbjpPBFq7mLSAiBLqmRjuURkPf5MO4JOO3PGKfsCXrUnD-Zb1Q"/>
+</div>
+<div class="w-full md:w-1/3">
+<span class="font-label text-[10px] uppercase tracking-[0.4em] text-primary-fixed mb-8 block">Process Focus</span>
+<h2 class="font-headline text-5xl italic mb-8">Capturing the Invisible.</h2>
+<p class="font-body text-base text-stone-500 leading-relaxed mb-12">
+                        Our preservation lab works at the intersection of high-resolution scanning and traditional restoration. Every piece is documented not just for its visual state, but its historical context and tactile essence.
+                    </p>
+<a class="font-label text-xs uppercase tracking-widest border-b border-primary-fixed text-primary pb-1 hover:text-primary-fixed transition-colors inline-flex items-center space-x-2" href="#">
+<span>Read the Process Blog</span>
+<span class="material-symbols-outlined text-sm">north_east</span>
+</a>
+</div>
+</div>
+</section>
+<!-- Partner Rail -->
+<section class="py-20 border-t border-stone-100 mx-6 md:mx-12">
+<div class="flex flex-col md:flex-row justify-between items-center space-y-8 md:space-y-0">
+<span class="font-label text-[10px] uppercase tracking-widest text-stone-400">Institutional Partners</span>
+<div class="flex flex-wrap justify-center gap-12 md:gap-24 grayscale opacity-30">
+<div class="font-headline text-xl italic tracking-tighter">METRO-POLIS</div>
+<div class="font-label text-xs font-bold uppercase tracking-[0.2em]">Kultur-Stiftung</div>
+<div class="font-headline text-xl italic tracking-tighter">AESTHETIC ARCHIVE</div>
+<div class="font-label text-xs font-bold uppercase tracking-[0.2em]">Global Heritage</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer (Shared Component) -->
+<footer class="w-full bg-[#f6f3ee] py-20 px-6 md:px-12 mt-24 border-t border-stone-200">
+<div class="max-w-screen-2xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-12">
+<div class="col-span-1 md:col-span-1">
+<div class="text-xl font-bold Newsreader text-black mb-6">ARCHIVE</div>
+<p class="font-body text-sm text-stone-500 leading-relaxed">Dedicated to the elevation of cultural artifacts and contemporary dialogues through curated permanence.</p>
+</div>
+<div>
+<h5 class="font-label text-[10px] uppercase tracking-widest mb-6 text-primary">Discover</h5>
+<ul class="space-y-4">
+<li><a class="font-sans text-sm text-stone-500 hover:text-[#ad3300] transition-colors" href="#">Exhibitions</a></li>
+<li><a class="font-sans text-sm text-stone-500 hover:text-[#ad3300] transition-colors" href="#">Permanent Collection</a></li>
+<li><a class="font-sans text-sm text-stone-500 hover:text-[#ad3300] transition-colors" href="#">Artists</a></li>
+<li><a class="font-sans text-sm text-stone-500 hover:text-[#ad3300] transition-colors" href="#">Newsletter</a></li>
+</ul>
+</div>
+<div>
+<h5 class="font-label text-[10px] uppercase tracking-widest mb-6 text-primary">Connect</h5>
+<ul class="space-y-4">
+<li><a class="font-sans text-sm text-stone-500 hover:text-[#ad3300] transition-colors" href="#">Partners</a></li>
+<li><a class="font-sans text-sm text-stone-500 hover:text-[#ad3300] transition-colors" href="#">Social Channels</a></li>
+<li><a class="font-sans text-sm text-stone-500 hover:text-[#ad3300] transition-colors" href="#">Press Room</a></li>
+<li><a class="font-sans text-sm text-stone-500 hover:text-[#ad3300] transition-colors" href="#">Contact</a></li>
+</ul>
+</div>
+<div>
+<h5 class="font-label text-[10px] uppercase tracking-widest mb-6 text-primary">Legal</h5>
+<ul class="space-y-4">
+<li><a class="font-sans text-sm text-stone-500 hover:text-[#ad3300] transition-colors" href="#">Privacy Policy</a></li>
+<li><a class="font-sans text-sm text-stone-500 hover:text-[#ad3300] transition-colors" href="#">Cookie Policy</a></li>
+<li><a class="font-sans text-sm text-stone-500 hover:text-[#ad3300] transition-colors" href="#">Terms of Entry</a></li>
+<li><a class="font-sans text-sm text-stone-500 hover:text-[#ad3300] transition-colors" href="#">Accessibility</a></li>
+</ul>
+</div>
+</div>
+<div class="max-w-screen-2xl mx-auto mt-20 pt-8 border-t border-stone-200/50 flex flex-col md:flex-row justify-between items-center text-stone-400">
+<span class="font-sans text-sm tracking-wide Inter">© 2024 The Archival Perspective. All Rights Reserved.</span>
+<div class="flex space-x-8 mt-4 md:mt-0">
+<span class="font-label text-[10px] uppercase tracking-[0.2em]">London</span>
+<span class="font-label text-[10px] uppercase tracking-[0.2em]">Berlin</span>
+<span class="font-label text-[10px] uppercase tracking-[0.2em]">Tokyo</span>
+</div>
+</div>
+</footer>
+</body></html>

@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&amp;family=Inter:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-dim": "#dcdad5",
+                        "surface-container-highest": "#e5e2dd",
+                        "on-primary-fixed-variant": "#00419e",
+                        "surface-variant": "#e5e2dd",
+                        "on-secondary-fixed": "#1c1b1b",
+                        "on-tertiary": "#ffffff",
+                        "on-surface": "#1c1c19",
+                        "surface-bright": "#fcf9f4",
+                        "on-primary-container": "#a5bdff",
+                        "primary-container": "#0047ab",
+                        "secondary-fixed-dim": "#c8c6c5",
+                        "tertiary-fixed-dim": "#ffb59a",
+                        "on-secondary-fixed-variant": "#474746",
+                        "tertiary": "#651f00",
+                        "surface-tint": "#2559bd",
+                        "secondary": "#5f5e5e",
+                        "tertiary-fixed": "#ffdbcf",
+                        "secondary-fixed": "#e5e2e1",
+                        "on-secondary": "#ffffff",
+                        "secondary-container": "#e2dfde",
+                        "inverse-on-surface": "#f3f0eb",
+                        "surface-container-high": "#ebe8e3",
+                        "on-error": "#ffffff",
+                        "outline-variant": "#c3c6d5",
+                        "surface-container-lowest": "#ffffff",
+                        "background": "#fcf9f4",
+                        "error-container": "#ffdad6",
+                        "outline": "#737784",
+                        "on-error-container": "#93000a",
+                        "primary-fixed": "#dae2ff",
+                        "on-primary-fixed": "#001946",
+                        "on-primary": "#ffffff",
+                        "tertiary-container": "#8b2e01",
+                        "on-secondary-container": "#636262",
+                        "on-tertiary-fixed": "#380d00",
+                        "error": "#ba1a1a",
+                        "surface-container-low": "#f6f3ee",
+                        "on-surface-variant": "#434653",
+                        "on-tertiary-container": "#ffaa8a",
+                        "on-background": "#1c1c19",
+                        "inverse-surface": "#31302d",
+                        "surface-container": "#f0ede8",
+                        "surface": "#fcf9f4",
+                        "inverse-primary": "#b1c5ff",
+                        "on-tertiary-fixed-variant": "#802900",
+                        "primary": "#00327d",
+                        "primary-fixed-dim": "#b1c5ff"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0px",
+                        "lg": "0px",
+                        "xl": "0px",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Newsreader"],
+                        "body": ["Newsreader"],
+                        "label": ["Inter"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        .tonal-shift-on-scroll {
+            transition: background-color 0.3s ease;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body selection:bg-primary-container selection:text-on-primary-container">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-transparent backdrop-blur-md">
+<div class="flex justify-between items-center px-8 py-6 w-full max-w-[1440px] mx-auto">
+<div class="font-['Newsreader'] font-bold text-2xl tracking-tighter text-[#1c1c19]">STUDIO</div>
+<div class="hidden md:flex items-center gap-12">
+<a class="font-['Newsreader'] italic text-lg text-[#0047AB] border-b border-[#0047AB]/20 transition-all duration-300" href="#">The Work</a>
+<a class="font-['Newsreader'] italic text-lg text-[#1c1c19] opacity-80 hover:opacity-100 hover:text-[#0047AB] transition-all duration-300" href="#">The Thinking</a>
+<a class="font-['Newsreader'] italic text-lg text-[#1c1c19] opacity-80 hover:opacity-100 hover:text-[#0047AB] transition-all duration-300" href="#">The Studio</a>
+</div>
+<button class="bg-primary px-6 py-2 text-on-primary font-label uppercase tracking-widest text-xs active:scale-95 transition-transform">
+                Inquire
+            </button>
+</div>
+</nav>
+<main>
+<!-- Section 1: Statement-led Hero -->
+<section class="min-h-screen flex flex-col justify-center px-8 md:px-24 pt-32 pb-16">
+<div class="max-w-5xl">
+<h1 class="text-6xl md:text-8xl lg:text-9xl font-headline font-light leading-[0.9] tracking-tighter mb-12">
+                    We create brands that read like <span class="italic text-primary">literature.</span>
+</h1>
+<div class="flex flex-col md:flex-row items-baseline gap-8 md:gap-24">
+<p class="font-headline italic text-2xl md:text-3xl max-w-xl opacity-80">
+                        In an age of automated aesthetics, we opt for the deliberate, the authored, and the strategically poetic.
+                    </p>
+<div class="flex items-center gap-4 group cursor-pointer">
+<span class="font-label uppercase text-xs tracking-[0.2em] text-primary">Scroll to Explore</span>
+<span class="material-symbols-outlined text-primary group-hover:translate-y-1 transition-transform" data-icon="arrow_downward">arrow_downward</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 2: Cultural Insight Modules -->
+<section class="bg-surface-container-low py-32 px-8 md:px-24">
+<div class="max-w-[1440px] mx-auto grid grid-cols-1 md:grid-cols-3 gap-16 lg:gap-32">
+<div class="flex flex-col gap-8">
+<span class="font-label uppercase text-[10px] tracking-[0.3em] text-secondary">Insight 01</span>
+<h3 class="font-headline italic text-3xl">The Architecture of Silence.</h3>
+<p class="font-label text-sm leading-relaxed text-on-surface-variant">
+                        Modern branding often mistakes noise for presence. We believe the most powerful statements are found in the negative space—the moments where a brand allows the audience to breathe.
+                    </p>
+<blockquote class="font-headline italic text-xl border-l-2 border-primary/20 pl-6 py-2 text-primary">
+                        "Luxury is the absence of the unnecessary."
+                    </blockquote>
+</div>
+<div class="flex flex-col gap-8">
+<span class="font-label uppercase text-[10px] tracking-[0.3em] text-secondary">Insight 02</span>
+<h3 class="font-headline italic text-3xl">Narrative as Strategy.</h3>
+<p class="font-label text-sm leading-relaxed text-on-surface-variant">
+                        A logo is a period at the end of a sentence. Before the mark comes the manifesto. We build verbal identities that serve as the bedrock for every visual decision.
+                    </p>
+<p class="font-label text-sm leading-relaxed text-on-surface-variant">
+                        Strategy is not a document; it is a living voice that dictates how a brand moves through the world.
+                    </p>
+</div>
+<div class="flex flex-col gap-8">
+<span class="font-label uppercase text-[10px] tracking-[0.3em] text-secondary">Insight 03</span>
+<h3 class="font-headline italic text-3xl">Digital Craftsmanship.</h3>
+<p class="font-label text-sm leading-relaxed text-on-surface-variant">
+                        We reject the standardized grid. Every interface should feel like a custom-bound book, tailored to the specific weight and texture of the content it holds.
+                    </p>
+<blockquote class="font-headline italic text-xl border-l-2 border-primary/20 pl-6 py-2 text-primary">
+                        "Precision is the highest form of poetry."
+                    </blockquote>
+</div>
+</div>
+</section>
+<!-- Section 3: Selected Work Tiles (Bento/Asymmetric) -->
+<section class="py-32 px-8 md:px-24 bg-surface">
+<div class="flex justify-between items-end mb-24 max-w-[1440px] mx-auto">
+<h2 class="text-4xl md:text-6xl font-headline font-light">Selected <span class="italic">Work</span></h2>
+<a class="font-label uppercase text-xs tracking-widest border-b border-on-surface pb-1 mb-2 hover:text-primary hover:border-primary transition-colors" href="#">View All Archive</a>
+</div>
+<div class="max-w-[1440px] mx-auto grid grid-cols-1 md:grid-cols-12 gap-12">
+<!-- Project 1 -->
+<div class="md:col-span-7 flex flex-col gap-6 group cursor-pointer">
+<div class="overflow-hidden aspect-[4/5] md:aspect-[16/10] bg-surface-container">
+<img alt="" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700 scale-105 group-hover:scale-100" data-alt="Minimalist architectural interior with clean lines, soft parchment tones, and dramatic shadows in an editorial photography style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDPJS4vOUbjRNMgepBxY5RO3DTyqdxtOpecA0lsi7ucTYUczfIgcTAxNWFR507A0zi73K7JQ0D7Z62S09amUSNTF9t2BM8okxWDXY6Nqdya1ApvGd64HQtaWSU5J9cD6SsE9Z25a-9TWkroh-b1VM8aiDV434ujuM0dYEFkkJIPO8JPjw9vAN9kqHWk3T97-Dzr9ucHMR9-PMrfkCzzfkw3BOIj1OLjoGIbcSZFIYYwVN04OzZaC95LpG7sMUZ-pomgR4RDzBoOWTc"/>
+</div>
+<div class="flex flex-col gap-2">
+<div class="flex justify-between items-baseline">
+<h3 class="font-headline text-3xl italic">Aethelgard Estate</h3>
+<span class="font-label uppercase text-[10px] tracking-widest opacity-40">2023 / Visual Identity</span>
+</div>
+<p class="max-w-md font-label text-sm text-on-surface-variant leading-relaxed">
+                            A narrative-first identity for a heritage distillery, blending Nordic minimalism with Victorian botanical illustrations.
+                        </p>
+</div>
+</div>
+<!-- Project 2 -->
+<div class="md:col-span-5 md:mt-32 flex flex-col gap-6 group cursor-pointer">
+<div class="overflow-hidden aspect-[3/4] bg-surface-container">
+<img alt="" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700 scale-105 group-hover:scale-100" data-alt="Macro shot of high-quality textured paper and a fountain pen tip with deep blue ink, elegant and tactile atmosphere." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAwh9PWHKFRv5rNzWyriIWpZYLW09Gkt--ymuBpqCaJZT4-h0MeMXTzZ-pgFs4fWhUCfTuYE6zyASCvp30arnS_HGRlGVsqne_oV3j8ivPzhSdxSoUfhNH21gSHT7UO7tHsF2fWCLKX4VzS73FYK160UA6KGMXxPeE8ZNA6cvz893iMgfMMUiBChERhNTBSbE18PReMqvKjwx0A_n-WoWb4YPaeFXtJcYvZ-rw385oO-qPezhyKy33mRr4nqCYHFbCjSENRzOOQRNI"/>
+</div>
+<div class="flex flex-col gap-2">
+<div class="flex justify-between items-baseline">
+<h3 class="font-headline text-3xl italic">The Inkwell Journal</h3>
+<span class="font-label uppercase text-[10px] tracking-widest opacity-40">2024 / Digital Editorial</span>
+</div>
+<p class="font-label text-sm text-on-surface-variant leading-relaxed">
+                            Redefining the digital reading experience for a high-end cultural publication.
+                        </p>
+</div>
+</div>
+<!-- Project 3 -->
+<div class="md:col-span-5 flex flex-col gap-6 group cursor-pointer">
+<div class="overflow-hidden aspect-[1/1] bg-surface-container">
+<img alt="" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700 scale-105 group-hover:scale-100" data-alt="An abstract composition of light and shadow on a gallery wall with a single sculptural element, high contrast." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA5Qr2WmI0eIbILVGRF2R7t8V086kJX967BlZsnprg5eCDhQ94vIGMooxBttmcgSddWk_hrK_0sbLJEHLpqRfxR84UZY3zJRbIAsa1MfFRqiFyP_lY7LeJlg2yPM6NtT3kKrwU-_eWrCndjKYygQKizTaPJvDbYgHH2oUHU313UHDFxOGXXMYjSiKKWhalKbRYrSuBsAY3ug0Ioul08mjHinArBEcIrg3r-JWI050IRQ3iH3N-5Gmxd9PfyGSP7ah-JXo0gKG6QBPo"/>
+</div>
+<div class="flex flex-col gap-2">
+<div class="flex justify-between items-baseline">
+<h3 class="font-headline text-3xl italic">Orizzonte</h3>
+<span class="font-label uppercase text-[10px] tracking-widest opacity-40">2022 / Naming &amp; Strategy</span>
+</div>
+<p class="font-label text-sm text-on-surface-variant leading-relaxed">
+                            Building a brand for a boutique hotel that lives at the intersection of the horizon and the home.
+                        </p>
+</div>
+</div>
+<!-- Project 4 -->
+<div class="md:col-span-7 flex flex-col gap-6 group cursor-pointer">
+<div class="overflow-hidden aspect-[16/9] bg-surface-container">
+<img alt="" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700 scale-105 group-hover:scale-100" data-alt="Minimalist graphic design layout with elegant serif typography and cobalt blue accents on a warm white background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB74rQsNoZKK7APLkOoeo5E1DtPGIpMnEW5n1-0sgNFguEwfsp7qhT8crfg_is-5W9tM7olEtR2nXkQ_Apj-se-lhJMYe2eaPVZK6-lqvK1eB5lMrFL9R3OaP_2iPLsG34XWRBf9sWc1Od6H5bTl7v8xJlsdEoRrHQCXlRqR0-yVfkuBLMxaJd3H4omVv01nHPFBsEGc804ktWJeqfoB9UiF_DI-bnmmxBqs7kG5zOZ17rzM7lttNYkX7ZCbDzO2xIlUJNlMorGMB0"/>
+</div>
+<div class="flex flex-col gap-2">
+<div class="flex justify-between items-baseline">
+<h3 class="font-headline text-3xl italic">Curator Studio</h3>
+<span class="font-label uppercase text-[10px] tracking-widest opacity-40">2024 / Self-Identity</span>
+</div>
+<p class="font-label text-sm text-on-surface-variant leading-relaxed">
+                            A reflection on our own philosophy: treating every touchpoint as a curated archival experience.
+                        </p>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 4: The Studio Philosophy -->
+<section class="py-32 px-8 md:px-24 bg-surface-container-high overflow-hidden">
+<div class="max-w-[1440px] mx-auto flex flex-col lg:flex-row items-center gap-24 lg:gap-32">
+<div class="w-full lg:w-1/2 relative">
+<div class="aspect-[4/5] bg-surface-dim relative z-10 overflow-hidden">
+<img alt="" class="w-full h-full object-cover grayscale brightness-95" data-alt="A dignified, quiet portrait of a male creative director in a dimly lit studio, natural light catching subtle facial details." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC4K0bXh2f1nI09i-mjW598o204R46us9J0eBrcysgU_GXv_cLKfg1Iu-17-TXLR5_lc__2mJX75U7H2CfsBBywZ6-f5aeBwEjP4N5QN3Eu8w8d-8APCEYPZ0g2CmAquaBMMK6yw64x8Ma8mSP3EKHQc06oBfHx25Ig755wrEHVyaBLlUORPhxKcoIO6wPuQjW2HEkxB401EK6--0dT_ZkhWvU21xXGrpwEBAgRTsazBhlf8HTuRh6hkYykrWQdGizIUsqD8BMbJ9Q"/>
+</div>
+<!-- Decorative Element -->
+<div class="absolute -top-12 -left-12 w-48 h-48 border border-primary/20 -z-0"></div>
+<div class="absolute -bottom-6 -right-6 font-headline italic text-4xl text-primary z-20">The Authored Approach</div>
+</div>
+<div class="w-full lg:w-1/2 flex flex-col gap-12">
+<span class="font-label uppercase text-xs tracking-[0.4em] text-secondary">The Philosophy</span>
+<h2 class="text-5xl md:text-7xl font-headline leading-tight">We do not design brands; we <span class="italic text-primary">author</span> them.</h2>
+<div class="flex flex-col gap-6 max-w-lg">
+<p class="font-label text-base leading-relaxed text-on-surface-variant">
+                            Founded by strategic curators, the studio operates at the nexus of literature, architecture, and commerce. We believe that every brand has a soul that can be articulated through precise typography and intentional space.
+                        </p>
+<p class="font-label text-base leading-relaxed text-on-surface-variant">
+                            Our process is slow by design. We listen to the silence between words to find the brand's unique cadence. The result is an identity that doesn't just sit on a screen—it commands the room.
+                        </p>
+</div>
+<div class="pt-8">
+<button class="group flex items-center gap-6">
+<span class="font-label uppercase text-xs tracking-widest border-b border-primary text-primary pb-2">Read our Manifesto</span>
+<span class="material-symbols-outlined text-primary group-hover:translate-x-2 transition-transform" data-icon="east">east</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-[#f2efe9] text-[#1c1c19] w-full relative bottom-0">
+<div class="flex flex-col md:flex-row justify-between items-center px-12 py-16 w-full max-w-[1440px] mx-auto">
+<div class="mb-8 md:mb-0">
+<p class="font-['Inter'] uppercase tracking-widest text-[10px] text-[#1c1c19]/40">
+                    © 2024 Digital Curator Studio. All rights reserved. <span class="text-[#0047AB]">Strategic Poetic.</span>
+</p>
+</div>
+<div class="flex gap-12">
+<a class="font-['Inter'] uppercase tracking-widest text-[10px] text-[#1c1c19]/40 hover:text-[#0047AB] hover:underline underline-offset-4 transition-all duration-300" href="#">Privacy</a>
+<a class="font-['Inter'] uppercase tracking-widest text-[10px] text-[#1c1c19]/40 hover:text-[#0047AB] hover:underline underline-offset-4 transition-all duration-300" href="#">Terms</a>
+<a class="font-['Inter'] uppercase tracking-widest text-[10px] text-[#1c1c19]/40 hover:text-[#0047AB] hover:underline underline-offset-4 transition-all duration-300" href="#">LinkedIn</a>
+<a class="font-['Inter'] uppercase tracking-widest text-[10px] text-[#1c1c19]/40 hover:text-[#0047AB] hover:underline underline-offset-4 transition-all duration-300" href="#">Journal</a>
+</div>
+</div>
+</footer>
+<!-- SideNavBar (Mobile / Floating) -->
+<div class="hidden md:flex flex-col p-12 gap-8 h-full w-64 fixed left-0 top-0 z-[60] bg-[#fcf9f4] dark:bg-[#1c1c19] shadow-[32px_0_64px_rgba(28,28,25,0.05)] -translate-x-full transition-transform duration-500" id="sideNav">
+<div class="flex flex-col mb-12">
+<div class="font-['Newsreader'] text-xl text-[#1c1c19]">STUDIO</div>
+<p class="font-['Inter'] uppercase tracking-[0.05em] text-[8px] opacity-40">Deep Architecture</p>
+</div>
+<nav class="flex flex-col gap-10">
+<a class="group flex items-center gap-4 text-[#1c1c19]/60 hover:translate-x-1 transition-transform duration-200" href="#">
+<span class="material-symbols-outlined text-sm" data-icon="folder_open">folder_open</span>
+<span class="font-['Inter'] uppercase tracking-[0.05em] text-xs">Archive</span>
+</a>
+<a class="group flex items-center gap-4 text-[#1c1c19]/60 hover:translate-x-1 transition-transform duration-200" href="#">
+<span class="material-symbols-outlined text-sm" data-icon="psychology">psychology</span>
+<span class="font-['Inter'] uppercase tracking-[0.05em] text-xs">Process</span>
+</a>
+<a class="group flex items-center gap-4 text-[#1c1c19]/60 hover:translate-x-1 transition-transform duration-200" href="#">
+<span class="material-symbols-outlined text-sm" data-icon="auto_stories">auto_stories</span>
+<span class="font-['Inter'] uppercase tracking-[0.05em] text-xs">Manifesto</span>
+</a>
+<a class="group flex items-center gap-4 text-[#1c1c19]/60 hover:translate-x-1 transition-transform duration-200" href="#">
+<span class="material-symbols-outlined text-sm" data-icon="mail">mail</span>
+<span class="font-['Inter'] uppercase tracking-[0.05em] text-xs">Contact</span>
+</a>
+</nav>
+</div>
+</body></html>

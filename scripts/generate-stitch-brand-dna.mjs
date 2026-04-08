@@ -440,6 +440,48 @@ const samples = [
       "Create a noir art direction archive with Blade Runner and Shibuya station energy: smoked-glass panels, holographic labels, amber and cyan signal lights, dense but readable metadata, and cinematic scroll reveals over a rain-dark interface. Keep the composition luxurious and legible, not noisy or game-like."
   },
   {
+    slug: "readymag-book-promo-editorial",
+    brand: "Readymag / Editorial",
+    title: "Book Promo Editorial Showcase",
+    prompt:
+      "Design a premium editorial microsite for a book launch with one dominant cover stage, oversized literary typography, chapter excerpt bands, author notes, pre-order cues, and gallery-like whitespace. Keep the interface sparse, collectible, and cinematic instead of turning it into a generic ecommerce page."
+  },
+  {
+    slug: "readymag-cultural-brand-studio",
+    brand: "Readymag / Studio",
+    title: "Cultural Branding Studio Portal",
+    prompt:
+      "Create a boutique branding studio website with a statement-led hero, cultural insight modules, selected work tiles, quiet serif and sans contrast, and a premium rhythm that balances strategy writing with image-led projects. The result should feel authored, narrative, and highly curated."
+  },
+  {
+    slug: "readymag-bookmaker-index-portfolio",
+    brand: "Readymag / Portfolio",
+    title: "Bookmaker Index Portfolio",
+    prompt:
+      "Design a book designer portfolio with a numbered project index, calm monochrome typography, image-led book entries, quiet biography details, and a restrained archival structure that feels like a monograph rather than a startup site."
+  },
+  {
+    slug: "readymag-minimal-designer-grid",
+    brand: "Readymag / Portfolio",
+    title: "Minimal Designer Grid",
+    prompt:
+      "Create a minimal design portfolio with a crisp project grid, oversized but restrained typography, black-and-ivory surfaces, selective captions, and almost no decorative interface chrome. The page should feel precise, contemporary, and easy to browse."
+  },
+  {
+    slug: "readymag-relief-gallery-space",
+    brand: "Readymag / Culture",
+    title: "Relief Gallery Cultural Space",
+    prompt:
+      "Design a cultural gallery website with an exhibition-led hero, manifesto text, event modules, partner rails, and a premium visual rhythm that mixes art-world seriousness with community access. Keep the page spacious, international, and image-led without becoming chaotic."
+  },
+  {
+    slug: "readymag-web3-creator-broadcast",
+    brand: "Readymag / Creator",
+    title: "Web3 Creator Broadcast Site",
+    prompt:
+      "Design a dark creator portfolio website for a web designer working with artists and brands. Use a bold headline, a high-contrast black interface, a few kinetic type moments, premium project modules, and one clear contact path. Keep it futuristic, dramatic, and legible."
+  },
+  {
     slug: "ai-design-guide-science-hero",
     brand: "Designprom / Home",
     title: "AI Design Guide Hero",

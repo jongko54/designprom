@@ -4,10 +4,8 @@ import Link from "next/link";
 import { useState } from "react";
 
 import { ImageLightbox } from "@/components/ui/image-lightbox";
-import { PublishActions } from "@/components/ui/publish-actions";
 import { getArchiveStitchExports } from "@/data/stitch-exports";
 import { type PromptArchiveEntry } from "@/data/site";
-import { buildArchivePublishAssets } from "@/lib/publish-assets";
 
 type PreviewLibraryBrowserProps = {
   items: PromptArchiveEntry[];
@@ -50,7 +48,7 @@ export function PreviewLibraryBrowser({ items }: PreviewLibraryBrowserProps) {
       .toLowerCase();
 
     return haystack.includes(normalizedQuery);
-  });
+  }).reverse();
 
   return (
     <section className="preview-browser-shell site-shell">
@@ -85,63 +83,44 @@ export function PreviewLibraryBrowser({ items }: PreviewLibraryBrowserProps) {
         </div>
       </div>
       <div className="preview-browser-meta micro-row">
-        <span>{visibleItems.length} live-style previews</span>
+        <span>{visibleItems.length} preview thumbnails</span>
         <span>{activeFilter === "All" ? "All categories" : activeFilter}</span>
       </div>
-      <div className="preview-stream">
+      <div className="preview-thumbnail-grid">
         {visibleItems.map((entry) => {
           const stitchScreen = getArchiveStitchExports(entry)[0];
           const previewImage = stitchScreen?.image ?? entry.coverImage;
           const previewMeta = stitchScreen?.runLabel ?? entry.useCase;
-          const previewNote = stitchScreen?.note ?? entry.summary;
 
           return (
-            <article className="preview-stream-card" key={entry.slug}>
-              <div className="preview-stream-browser">
-                <div className="preview-stream-chrome">
+            <article className="preview-thumbnail-card" key={entry.slug}>
+              <div className="preview-thumbnail-browser">
+                <div className="preview-thumbnail-chrome">
                   <div className="preview-dots">
                     <span />
                     <span />
                     <span />
                   </div>
                   <span>{previewMeta}</span>
-                  <span>{entry.portfolioCategory}</span>
                 </div>
-                <div className="preview-stream-stage">
+                <div className="preview-thumbnail-stage">
                   <ImageLightbox
                     alt={previewImage.alt}
-                    className="preview-stream-image"
-                    modalClassName="preview-stream-lightbox-image"
+                    className="preview-thumbnail-image"
+                    modalClassName="preview-thumbnail-lightbox-image"
                     src={previewImage.src}
                   />
                 </div>
               </div>
-              <div className="preview-stream-copy">
+              <div className="preview-thumbnail-copy">
                 <div className="micro-row">
                   <span>{entry.portfolioCategory}</span>
                   <span>{entry.useCase}</span>
                 </div>
-                <h2>{entry.title}</h2>
+                <Link className="preview-thumbnail-title" href={`/archive/${entry.slug}`}>
+                  {entry.title}
+                </Link>
                 <p>{entry.summary}</p>
-                <div className="preview-stream-focus">
-                  {entry.outputFocus.slice(0, 4).map((focus) => (
-                    <span key={focus}>{focus}</span>
-                  ))}
-                </div>
-                <p className="preview-stream-note">{previewNote}</p>
-                <div className="preview-stream-actions">
-                  <Link className="ghost-button" href={`/archive/${entry.slug}`}>
-                    Open case file
-                  </Link>
-                  <PublishActions
-                    assets={buildArchivePublishAssets(entry)}
-                    className="publish-actions compact"
-                    shareText={entry.title}
-                    shareTitle={entry.title}
-                    shareUrl={`/archive/${entry.slug}`}
-                    zipName={entry.slug}
-                  />
-                </div>
               </div>
             </article>
           );

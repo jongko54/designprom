@@ -605,6 +605,66 @@ const exportRegistry: Record<string, StitchExportScreen[]> = {
       "The middle crop keeps dense metadata and holographic labels readable through glass layers.",
       "The close should stay luxurious and exact instead of drifting into game UI."
     ]
+  ),
+  "readymag-book-promo-editorial": buildExportScreens(
+    stitchCaptureAssets["readymag-book-promo-editorial"],
+    "Book Promo Editorial Showcase",
+    ["Cover opener", "Chapter rail", "Author close"],
+    [
+      "The opener should feel like a collectible literary launch with one strong cover stage.",
+      "The middle crop should treat excerpts and chapter cues as editorial modules, not marketing cards.",
+      "The close should keep author, credits, and pre-order details elegant and sparse."
+    ]
+  ),
+  "readymag-cultural-brand-studio": buildExportScreens(
+    stitchCaptureAssets["readymag-cultural-brand-studio"],
+    "Cultural Branding Studio Portal",
+    ["Studio thesis", "Narrative grid", "Inquiry close"],
+    [
+      "The opener should balance positioning language and selected work in one premium statement.",
+      "The middle crop should let narrative modules and project tiles coexist cleanly.",
+      "The close should make inquiry feel authored and studio-led instead of sales-led."
+    ]
+  ),
+  "readymag-bookmaker-index-portfolio": buildExportScreens(
+    stitchCaptureAssets["readymag-bookmaker-index-portfolio"],
+    "Bookmaker Index Portfolio",
+    ["Index opener", "Book sequence", "Detail close"],
+    [
+      "The opening frame should establish numbered navigation and calm monographic pacing right away.",
+      "The middle crop should keep many book projects legible through quiet indexing and restrained metadata.",
+      "The close should feel like a printed spread translated to the web."
+    ]
+  ),
+  "readymag-minimal-designer-grid": buildExportScreens(
+    stitchCaptureAssets["readymag-minimal-designer-grid"],
+    "Minimal Designer Grid",
+    ["Grid opener", "Selected work", "Case close"],
+    [
+      "The opener should feel contemporary and exact with almost no interface noise.",
+      "The middle crop should keep the selected-work field airy even with several projects visible.",
+      "The close should scale one project up without losing the monochrome system."
+    ]
+  ),
+  "readymag-relief-gallery-space": buildExportScreens(
+    stitchCaptureAssets["readymag-relief-gallery-space"],
+    "Relief Gallery Cultural Space",
+    ["Exhibition hero", "Program shelf", "Community close"],
+    [
+      "The opening frame should feel like a premium cultural invitation rather than a plain events list.",
+      "The middle crop should organize programs, partners, and dates without flattening the atmosphere.",
+      "The close should keep public participation and institution signals elegant and accessible."
+    ]
+  ),
+  "readymag-web3-creator-broadcast": buildExportScreens(
+    stitchCaptureAssets["readymag-web3-creator-broadcast"],
+    "Web3 Creator Broadcast Site",
+    ["Broadcast hero", "Project signal", "Inquiry close"],
+    [
+      "The opener should land with a creator-broadcast tone and dark motion depth immediately.",
+      "The middle crop should keep selected projects readable inside a high-contrast immersive system.",
+      "The close should preserve drama while making collaboration entry points obvious."
+    ]
   )
 };
 

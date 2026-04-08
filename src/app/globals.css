@@ -2952,61 +2952,64 @@ select {
   gap: 12px;
 }
 
-.preview-stream {
+.preview-thumbnail-grid {
   display: grid;
-  gap: 24px;
-}
-
-.preview-stream-card {
-  display: grid;
-  grid-template-columns: minmax(0, 1.45fr) minmax(320px, 0.82fr);
-  gap: 18px;
-  padding: 18px;
-  background: var(--surface-container-low);
-}
-
-.preview-stream-browser,
-.preview-stream-copy {
-  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
   gap: 14px;
 }
 
-.preview-stream-chrome {
+.preview-thumbnail-card {
   display: grid;
-  grid-template-columns: auto 1fr auto;
+  gap: 10px;
+}
+
+.preview-thumbnail-browser,
+.preview-thumbnail-copy {
+  display: grid;
+  gap: 10px;
+}
+
+.preview-thumbnail-chrome {
+  display: grid;
+  grid-template-columns: auto 1fr;
   align-items: center;
-  gap: 14px;
-  min-height: 48px;
-  padding: 0 14px;
+  gap: 10px;
+  min-height: 36px;
+  padding: 0 10px;
   background: var(--surface-container-highest);
   color: var(--muted);
-  font-size: 0.72rem;
-  letter-spacing: 0.12em;
+  font-size: 0.68rem;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
 }
 
-.preview-stream-stage {
-  min-height: 620px;
+.preview-thumbnail-stage {
+  aspect-ratio: 4 / 5;
   overflow: hidden;
   background: var(--surface-container-lowest);
 }
 
-.preview-stream-stage .lightbox-trigger {
+.preview-thumbnail-stage .lightbox-trigger {
   display: block;
   width: 100%;
   height: 100%;
 }
 
-.preview-stream-image {
+.preview-thumbnail-image {
   display: block;
   width: 100%;
   height: 100%;
   object-fit: cover;
   object-position: top center;
   background: var(--surface);
+  transition: transform 180ms ease;
 }
 
-.preview-stream-lightbox-image {
+.preview-thumbnail-browser:hover .preview-thumbnail-image {
+  transform: scale(1.02);
+}
+
+.preview-thumbnail-lightbox-image {
   display: block;
   width: auto;
   max-width: 100%;
@@ -3015,49 +3018,33 @@ select {
   object-fit: contain;
 }
 
-.preview-stream-copy {
+.preview-thumbnail-copy {
   align-content: start;
-  padding: 6px 6px 6px 0;
+  padding: 0 2px 2px;
 }
 
-.preview-stream-copy h2 {
-  margin: 0;
+.preview-thumbnail-title {
+  color: inherit;
   font-family: var(--font-display), sans-serif;
-  font-size: clamp(2rem, 3vw, 3rem);
-  line-height: 0.92;
-  letter-spacing: -0.06em;
+  font-size: clamp(1rem, 1.5vw, 1.28rem);
+  line-height: 0.98;
+  letter-spacing: -0.04em;
+  text-decoration: none;
 }
 
-.preview-stream-copy > p,
-.preview-stream-note {
+.preview-thumbnail-title:hover {
+  text-decoration: underline;
+  text-underline-offset: 0.16em;
+}
+
+.preview-thumbnail-copy > p {
   margin: 0;
-  line-height: 1.7;
+  line-height: 1.55;
   color: var(--muted);
-}
-
-.preview-stream-focus {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-}
-
-.preview-stream-focus span {
-  padding: 8px 10px;
-  background: var(--surface-container-highest);
-  color: var(--muted);
-  font-size: 0.72rem;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-}
-
-.preview-stream-actions {
-  display: grid;
-  gap: 12px;
-  align-content: start;
-}
-
-.preview-stream-actions .publish-actions.compact .card-actions {
-  justify-content: flex-start;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
 .preview-browser-empty {
@@ -4778,7 +4765,6 @@ select {
   .stitch-example-grid,
   .stitch-screen-grid,
   .builder-presets-grid,
-  .preview-stream-card,
   .bauhaus-hero-grid {
     grid-template-columns: 1fr;
   }
@@ -4833,8 +4819,12 @@ select {
     width: min(320px, 68%);
   }
 
-  .preview-stream-stage {
-    min-height: 460px;
+  .preview-thumbnail-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .preview-thumbnail-stage {
+    aspect-ratio: 4 / 5;
   }
 }
 
@@ -4907,6 +4897,10 @@ select {
   .brand-dna-logo-rail {
     overflow-x: auto;
     padding-bottom: 6px;
+  }
+
+  .preview-thumbnail-grid {
+    grid-template-columns: 1fr;
   }
 
   .prompt-motion-input {

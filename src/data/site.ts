@@ -452,6 +452,30 @@ export const stitchCaptureAssets = {
   "shibuya-replicant-archive": createStitchCaptureAsset(
     "shibuya-replicant-archive",
     "Blade Runner and Shibuya-inspired Stitch export for the noir art direction archive"
+  ),
+  "readymag-book-promo-editorial": createStitchCaptureAsset(
+    "readymag-book-promo-editorial",
+    "Readymag-inspired Stitch export for the editorial book promo microsite"
+  ),
+  "readymag-cultural-brand-studio": createStitchCaptureAsset(
+    "readymag-cultural-brand-studio",
+    "Readymag-inspired Stitch export for the cultural branding studio website"
+  ),
+  "readymag-bookmaker-index-portfolio": createStitchCaptureAsset(
+    "readymag-bookmaker-index-portfolio",
+    "Readymag-inspired Stitch export for the bookmaker index portfolio"
+  ),
+  "readymag-minimal-designer-grid": createStitchCaptureAsset(
+    "readymag-minimal-designer-grid",
+    "Readymag-inspired Stitch export for the minimal designer portfolio grid"
+  ),
+  "readymag-relief-gallery-space": createStitchCaptureAsset(
+    "readymag-relief-gallery-space",
+    "Readymag-inspired Stitch export for the cultural gallery website"
+  ),
+  "readymag-web3-creator-broadcast": createStitchCaptureAsset(
+    "readymag-web3-creator-broadcast",
+    "Readymag-inspired Stitch export for the web3 creator broadcast site"
   )
 } as const;
 
@@ -3413,6 +3437,306 @@ export const promptArchive: PromptArchiveEntry[] = [
       {
         title: "Archive Close",
         caption: "A final section where credits, contact, and project lineage remain luxurious and exact.",
+        meta: "close",
+        size: "tall"
+      }
+    ]
+  },
+  {
+    slug: "book-promo-editorial-showcase-case",
+    title: "Book Promo Editorial Showcase",
+    summary:
+      "A Readymag-inspired microsite prompt for books and essay launches where one cover, a few quotes, and cinematic whitespace do most of the work.",
+    brief:
+      "Create a promo page for a book release where the cover art, chapter excerpts, author bio, and one strong pre-order path need to feel collectible and editorial rather than ecommerce-heavy.",
+    useCase: "Book launch microsite",
+    portfolioCategory: "Editorial",
+    previewTone: "editorial",
+    coverImage: stitchCaptureAssets["readymag-book-promo-editorial"],
+    categorySlugs: [
+      "editorial-grid-2d",
+      "minimal-monochrome",
+      "modern-art-modular"
+    ],
+    stitchExampleSlugs: ["readymag-book-promo-editorial"],
+    prompt:
+      "Design an editorial book launch microsite with one dominant cover stage, oversized literary typography, chapter excerpt bands, author notes, pre-order cues, and gallery-like whitespace. Keep the page collectible, sparse, and cinematic instead of turning it into a generic shop page.",
+    remixPrompt:
+      "Rework the same book microsite for a design or photography monograph. Preserve the quiet literary pacing, but give the cover image more scale, make chapter labels slightly stricter, and let the excerpt modules feel more exhibition-like.",
+    curatorNote:
+      "This direction works when the release should feel authored and tactile. The strongest version uses very little interface chrome and lets the cover art do real compositional work.",
+    outputFocus: [
+      "A cover-led first screen with one clear pre-order action",
+      "Excerpt modules that feel like chapter cards, not marketing blocks",
+      "Author and release details that stay elegant and collectible"
+    ],
+    outputs: [
+      {
+        title: "Cover Opener",
+        caption: "A book-led opener with one dominant cover image, one headline, and a restrained release cue.",
+        meta: "hero",
+        size: "wide",
+        image: stitchCaptureAssets["readymag-book-promo-editorial"]
+      },
+      {
+        title: "Excerpt Rail",
+        caption: "A quiet sequence of chapter extracts and editorial metadata arranged like gallery captions.",
+        meta: "chapters",
+        size: "square"
+      },
+      {
+        title: "Author Close",
+        caption: "A closing band for author note, credits, and pre-order without breaking the literary rhythm.",
+        meta: "close",
+        size: "tall"
+      }
+    ]
+  },
+  {
+    slug: "cultural-branding-studio-case",
+    title: "Cultural Branding Studio Portal",
+    summary:
+      "A Readymag-inspired studio website prompt for boutique branding teams that need cultural positioning, selected work, and narrative authority in the same frame.",
+    brief:
+      "Build a studio site for a small branding agency where strategy, cultural insight, selected projects, and writing need to feel authored and premium instead of agency-template generic.",
+    useCase: "Studio website",
+    portfolioCategory: "Studio",
+    previewTone: "gradient",
+    coverImage: stitchCaptureAssets["readymag-cultural-brand-studio"],
+    categorySlugs: [
+      "modern-art-modular",
+      "calm-precision-ui",
+      "editorial-grid-2d"
+    ],
+    stitchExampleSlugs: ["readymag-cultural-brand-studio"],
+    prompt:
+      "Design a boutique branding studio website with a statement-led hero, cultural insight modules, selected work tiles, quiet serif and sans contrast, and a premium rhythm that balances strategy writing with image-led project cards. Keep it polished, narrative, and highly curated.",
+    remixPrompt:
+      "Adapt the same studio site for a smaller independent strategist. Keep the cultural narrative and selected work structure, but reduce service complexity, enlarge the writing modules, and make the first project card more dominant.",
+    curatorNote:
+      "The site should behave like a strategic portfolio, not a service grid. The best version lets language and selected work reinforce each other instead of competing.",
+    outputFocus: [
+      "A strong opening thesis about the studio point of view",
+      "Selected work modules that feel premium and sparse",
+      "Strategy writing blocks that support the work rather than slowing it down"
+    ],
+    outputs: [
+      {
+        title: "Studio Thesis",
+        caption: "A statement-led opener where positioning and selected work share the first screen cleanly.",
+        meta: "hero",
+        size: "wide",
+        image: stitchCaptureAssets["readymag-cultural-brand-studio"]
+      },
+      {
+        title: "Narrative Grid",
+        caption: "A mid-page arrangement of insight modules, short essays, and selected brand case studies.",
+        meta: "strategy",
+        size: "square"
+      },
+      {
+        title: "Contact Close",
+        caption: "A final section where studio details, writing, and inquiry stay premium and understated.",
+        meta: "close",
+        size: "tall"
+      }
+    ]
+  },
+  {
+    slug: "bookmaker-index-portfolio-case",
+    title: "Bookmaker Index Portfolio",
+    summary:
+      "A Readymag-inspired portfolio prompt for book designers and makers who need numbered project indexing, quiet metadata, and monographic pacing.",
+    brief:
+      "Create a portfolio for a book designer or maker where many projects need to be browsed through a restrained index, with numbered navigation, project titles, and quiet contact details.",
+    useCase: "Book design portfolio",
+    portfolioCategory: "Graphic Design",
+    previewTone: "mono",
+    coverImage: stitchCaptureAssets["readymag-bookmaker-index-portfolio"],
+    categorySlugs: [
+      "minimal-monochrome",
+      "editorial-grid-2d",
+      "modern-art-modular"
+    ],
+    stitchExampleSlugs: ["readymag-bookmaker-index-portfolio"],
+    prompt:
+      "Design a book designer portfolio with a numbered project index, calm monochrome typography, image-led project entries, quiet biography details, and a restrained archival structure that feels like a monograph rather than a startup site.",
+    remixPrompt:
+      "Rework the same portfolio for a foundry or editorial studio. Preserve the numbered index and monographic calm, but make specimen imagery more visible and give the information rail a slightly more systematic pace.",
+    curatorNote:
+      "This category depends on restraint. The numbered index is the spine of the interface, and everything else should support that reading rhythm.",
+    outputFocus: [
+      "A numeric index that clearly sequences many projects",
+      "Quiet contact and bio details that do not break the portfolio rhythm",
+      "Project cards that feel archival and bookish, not card-template based"
+    ],
+    outputs: [
+      {
+        title: "Indexed Opener",
+        caption: "A calm index page where numbered projects and one biography rail set the tone immediately.",
+        meta: "index",
+        size: "wide",
+        image: stitchCaptureAssets["readymag-bookmaker-index-portfolio"]
+      },
+      {
+        title: "Project Sequence",
+        caption: "A slow sequence of book projects with quiet metadata and curated cover pacing.",
+        meta: "projects",
+        size: "square"
+      },
+      {
+        title: "Book Detail",
+        caption: "A detail page where project images, captions, and credits hold together like a printed spread.",
+        meta: "detail",
+        size: "tall"
+      }
+    ]
+  },
+  {
+    slug: "minimal-designer-grid-case",
+    title: "Minimal Designer Grid",
+    summary:
+      "A Readymag-inspired personal portfolio prompt for minimal designers who need a clean project field and very little interface noise.",
+    brief:
+      "Build a personal design portfolio where selected projects, short labels, and a small amount of personal positioning need to feel immediate, modern, and extremely clean.",
+    useCase: "Design portfolio",
+    portfolioCategory: "Graphic Design",
+    previewTone: "calm",
+    coverImage: stitchCaptureAssets["readymag-minimal-designer-grid"],
+    categorySlugs: [
+      "minimal-monochrome",
+      "calm-precision-ui",
+      "editorial-grid-2d"
+    ],
+    stitchExampleSlugs: ["readymag-minimal-designer-grid"],
+    prompt:
+      "Create a minimal design portfolio with a crisp project grid, oversized but restrained typography, black-and-ivory surfaces, selective captions, and almost no decorative interface chrome. The page should feel precise, contemporary, and easy to browse.",
+    remixPrompt:
+      "Adapt the same portfolio for a motion or brand designer. Keep the minimal grid and monochrome precision, but allow one stronger project thumbnail in the first screen and make category tags more legible.",
+    curatorNote:
+      "The strength here is elimination. If the layout starts adding too many rails, badges, or tricks, it stops feeling sharp.",
+    outputFocus: [
+      "A clean first-screen project field with one strong entry point",
+      "Typography that feels deliberate without becoming expressive clutter",
+      "Captions and labels that support browsing without visual weight"
+    ],
+    outputs: [
+      {
+        title: "Grid Opener",
+        caption: "A sharp portfolio opener where the project grid and headline share one disciplined frame.",
+        meta: "hero",
+        size: "wide",
+        image: stitchCaptureAssets["readymag-minimal-designer-grid"]
+      },
+      {
+        title: "Selected Work",
+        caption: "A minimal field of selected work that stays airy and exact even with several projects visible.",
+        meta: "grid",
+        size: "square"
+      },
+      {
+        title: "Case Detail",
+        caption: "A detail page where one project gets more scale without losing the calm system.",
+        meta: "detail",
+        size: "tall"
+      }
+    ]
+  },
+  {
+    slug: "relief-gallery-cultural-space-case",
+    title: "Relief Gallery Cultural Space",
+    summary:
+      "A Readymag-inspired culture website prompt for galleries and creative communities that need event framing, mission language, and a premium visual field.",
+    brief:
+      "Design a cultural platform website where exhibitions, collaborations, mission language, and community participation need to feel elevated, international, and visually serious.",
+    useCase: "Culture website",
+    portfolioCategory: "Culture",
+    previewTone: "editorial",
+    coverImage: stitchCaptureAssets["readymag-relief-gallery-space"],
+    categorySlugs: [
+      "modern-art-modular",
+      "editorial-grid-2d",
+      "warm-global-hospitality"
+    ],
+    stitchExampleSlugs: ["readymag-relief-gallery-space"],
+    prompt:
+      "Create a cultural gallery website with an exhibition-led hero, manifesto text, event modules, partner rails, and a premium visual rhythm that mixes art-world seriousness with community access. Keep the page spacious, international, and image-led without becoming chaotic.",
+    remixPrompt:
+      "Rework the same cultural site for a program-heavy season. Preserve the exhibition-led hero and premium pacing, but make event dates, visiting information, and partner modules slightly more visible in the first scroll.",
+    curatorNote:
+      "The page should feel cultural first, functional second. The mission language is part of the design hierarchy, not just a block of copy.",
+    outputFocus: [
+      "An exhibition-led opener that feels premium and public-facing at once",
+      "Event and partner modules that are readable without losing atmosphere",
+      "Mission language that reinforces the institution's role in culture"
+    ],
+    outputs: [
+      {
+        title: "Exhibition Hero",
+        caption: "A cultural opener where one event image and the mission statement establish the tone immediately.",
+        meta: "hero",
+        size: "wide",
+        image: stitchCaptureAssets["readymag-relief-gallery-space"]
+      },
+      {
+        title: "Program Shelf",
+        caption: "A structured field of events, collaborations, and visiting details under one calm system.",
+        meta: "program",
+        size: "square"
+      },
+      {
+        title: "Community Close",
+        caption: "A final section where participation, partner signals, and contact stay elegant and public-facing.",
+        meta: "close",
+        size: "tall"
+      }
+    ]
+  },
+  {
+    slug: "web3-creator-broadcast-case",
+    title: "Web3 Creator Broadcast Site",
+    summary:
+      "A Readymag-inspired portfolio prompt for futuristic creator-builders who need a bold personal site without losing structure.",
+    brief:
+      "Build a personal studio site for a website creator working with brands and artists, where broadcast-style hero messaging, immersive motion cues, and project credibility all need to land quickly.",
+    useCase: "Creative studio website",
+    portfolioCategory: "Creative Tech",
+    previewTone: "motion",
+    coverImage: stitchCaptureAssets["readymag-web3-creator-broadcast"],
+    categorySlugs: [
+      "motion-first-canvas",
+      "immersive-3d",
+      "brutalist-contrast"
+    ],
+    stitchExampleSlugs: ["readymag-web3-creator-broadcast"],
+    prompt:
+      "Design a futuristic creator studio website with a broadcast-style opener, bold headline pacing, dark high-contrast surfaces, web3-era depth cues, kinetic type moments, and premium project modules for brands and artists. Keep it dramatic, but still legible and portfolio-led.",
+    remixPrompt:
+      "Adapt the same creator studio site for a more client-facing presentation. Preserve the broadcast hero and dark motion system, but make project proof, service clarity, and inquiry entry points slightly calmer and more obvious.",
+    curatorNote:
+      "This direction needs tension, not chaos. The site should feel like a strong creator signal rather than an effects demo.",
+    outputFocus: [
+      "A broadcast-like first screen with personal positioning and project authority",
+      "Dark motion surfaces that support, not obscure, the work",
+      "Selected projects and inquiry paths that remain legible under high contrast"
+    ],
+    outputs: [
+      {
+        title: "Broadcast Hero",
+        caption: "A dramatic opener where creator positioning, dark motion, and premium type land in one frame.",
+        meta: "hero",
+        size: "wide",
+        image: stitchCaptureAssets["readymag-web3-creator-broadcast"]
+      },
+      {
+        title: "Project Signal",
+        caption: "A strong project rail that keeps selected work visible inside a high-contrast motion system.",
+        meta: "projects",
+        size: "square"
+      },
+      {
+        title: "Inquiry Close",
+        caption: "A closing section where contact and collaboration stay clear without flattening the drama.",
         meta: "close",
         size: "tall"
       }

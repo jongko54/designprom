@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&amp;family=Manrope:wght@200..800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "primary-fixed": "#5f5e5e",
+                    "on-tertiary": "#e4e2dd",
+                    "surface-dim": "#dadad8",
+                    "on-error-container": "#410002",
+                    "surface-bright": "#faf9f7",
+                    "tertiary-fixed-dim": "#474743",
+                    "on-surface": "#1a1c1b",
+                    "secondary-fixed": "#c8c6c5",
+                    "on-secondary-fixed": "#1b1c1c",
+                    "on-secondary-container": "#1b1c1c",
+                    "on-primary-fixed-variant": "#e5e2e1",
+                    "primary-fixed-dim": "#474646",
+                    "secondary-fixed-dim": "#acabaa",
+                    "outline": "#777777",
+                    "surface-tint": "#5f5e5e",
+                    "outline-variant": "#c6c6c6",
+                    "on-primary-fixed": "#ffffff",
+                    "on-secondary-fixed-variant": "#3b3b3b",
+                    "surface-container-low": "#f4f3f1",
+                    "error-container": "#ffdad6",
+                    "error": "#ba1a1a",
+                    "on-background": "#1a1c1b",
+                    "secondary-container": "#d6d4d3",
+                    "tertiary-fixed": "#5f5e5b",
+                    "tertiary-container": "#757571",
+                    "inverse-primary": "#c8c6c5",
+                    "inverse-surface": "#2f3130",
+                    "inverse-on-surface": "#f1f1ef",
+                    "surface-container-highest": "#e3e2e0",
+                    "primary": "#000000",
+                    "primary-container": "#3c3b3b",
+                    "surface-container-high": "#e9e8e6",
+                    "on-tertiary-container": "#ffffff",
+                    "on-error": "#ffffff",
+                    "surface-variant": "#e3e2e0",
+                    "surface-container": "#efeeec",
+                    "on-secondary": "#ffffff",
+                    "on-tertiary-fixed": "#ffffff",
+                    "on-primary-container": "#ffffff",
+                    "on-primary": "#e5e2e1",
+                    "tertiary": "#3b3c38",
+                    "surface": "#faf9f7",
+                    "surface-container-lowest": "#ffffff",
+                    "background": "#faf9f7",
+                    "secondary": "#5f5e5e",
+                    "on-surface-variant": "#474747",
+                    "on-tertiary-fixed-variant": "#e4e2dd"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0px",
+                    "lg": "0px",
+                    "xl": "0px",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Newsreader"],
+                    "body": ["Manrope"],
+                    "label": ["Manrope"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+            display: inline-block;
+            vertical-align: middle;
+        }
+        .font-newsreader { font-family: 'Newsreader', serif; }
+        .font-manrope { font-family: 'Manrope', sans-serif; }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body selection:bg-primary selection:text-on-primary">
+<!-- TopAppBar -->
+<header class="bg-[#faf9f7]/80 dark:bg-[#1A1A1A]/80 backdrop-blur-xl fixed top-0 w-full z-50 flex justify-between items-center px-12 py-8 w-full">
+<div class="text-2xl font-newsreader font-bold tracking-tight text-black dark:text-white uppercase">THE LITERARY GALLERY</div>
+<nav class="hidden md:flex items-center space-x-12">
+<a class="font-newsreader tracking-tighter italic text-black dark:text-white border-b border-black/10 dark:border-white/10 hover:text-black dark:hover:text-white transition-colors duration-300" href="#">ARCHIVE</a>
+<a class="font-newsreader tracking-tighter italic text-black/50 dark:text-white/40 hover:text-black dark:hover:text-white transition-colors duration-300" href="#">CHAPTERS</a>
+<a class="font-newsreader tracking-tighter italic text-black/50 dark:text-white/40 hover:text-black dark:hover:text-white transition-colors duration-300" href="#">AUTHOR</a>
+<a class="font-newsreader tracking-tighter italic text-black/50 dark:text-white/40 hover:text-black dark:hover:text-white transition-colors duration-300" href="#">PRE-ORDER</a>
+</nav>
+<button class="md:hidden">
+<span class="material-symbols-outlined text-primary">menu</span>
+</button>
+</header>
+<!-- SideNavBar (Desktop Only) -->
+<aside class="bg-[#efeeec] dark:bg-[#252525] fixed left-0 top-0 h-full z-40 hidden lg:flex flex-col p-10 w-64 border-r-0">
+<div class="mb-20">
+<div class="font-newsreader text-xl text-black dark:text-white uppercase font-bold">VOLUME I</div>
+<div class="font-manrope uppercase tracking-[0.1em] text-[10px] text-black/40 dark:text-white/30 mt-1">EST. 2024</div>
+</div>
+<nav class="flex flex-col space-y-8 flex-grow">
+<a class="flex items-center space-x-4 text-black dark:text-white font-bold font-manrope uppercase tracking-[0.1em] text-xs hover:translate-x-1 transition-transform duration-500" href="#">
+<span class="material-symbols-outlined" data-icon="book_2">book_2</span>
+<span>The Work</span>
+</a>
+<a class="flex items-center space-x-4 text-black/40 dark:text-white/30 font-manrope uppercase tracking-[0.1em] text-xs hover:translate-x-1 transition-transform duration-500" href="#">
+<span class="material-symbols-outlined" data-icon="history_edu">history_edu</span>
+<span>Chronicle</span>
+</a>
+<a class="flex items-center space-x-4 text-black/40 dark:text-white/30 font-manrope uppercase tracking-[0.1em] text-xs hover:translate-x-1 transition-transform duration-500" href="#">
+<span class="material-symbols-outlined" data-icon="menu_book">menu_book</span>
+<span>Inscriptions</span>
+</a>
+<a class="flex items-center space-x-4 text-black/40 dark:text-white/30 font-manrope uppercase tracking-[0.1em] text-xs hover:translate-x-1 transition-transform duration-500" href="#">
+<span class="material-symbols-outlined" data-icon="shopping_bag">shopping_bag</span>
+<span>Acquire</span>
+</a>
+</nav>
+</aside>
+<main class="lg:pl-64">
+<!-- Cover Stage -->
+<section class="min-h-screen flex flex-col justify-center items-center px-8 relative overflow-hidden bg-surface">
+<div class="max-w-6xl w-full grid grid-cols-1 lg:grid-cols-12 gap-12 items-center py-32">
+<div class="lg:col-span-7 flex flex-col items-start z-10">
+<span class="font-manrope text-xs tracking-[0.3em] uppercase mb-6 text-primary/40">AVAILABLE AUTUMN 2024</span>
+<h1 class="font-newsreader text-[5rem] lg:text-[9rem] leading-[0.9] tracking-tighter mb-12 italic font-extrabold">
+                        The Silent <br/> Archivist
+                    </h1>
+<p class="font-manrope text-lg text-on-surface-variant max-w-md leading-relaxed mb-12">
+                        A cinematic exploration into the memories we choose to curate and the shadows we allow to fade. A monument to the printed word.
+                    </p>
+<div class="flex items-center space-x-8">
+<button class="bg-primary text-on-primary px-12 py-5 font-manrope text-xs tracking-widest uppercase hover:bg-primary-fixed transition-colors duration-300">
+                            Secure Volume I
+                        </button>
+<span class="font-newsreader italic text-xl">First Edition • $75</span>
+</div>
+</div>
+<div class="lg:col-span-5 relative aspect-[3/4] shadow-2xl">
+<img alt="Book cover" class="w-full h-full object-cover" data-alt="Minimalist book cover design with cream textured paper, black elegant serif typography, and a single abstract dark ink wash" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCFs-bxrNu_lNr-CI3Wvag5ZmLQ7g5wHqmkx5sYIsH04FTj4L1Kvaaq8A9-9E7hGvclixjcneIAMIJFEWCmjEgRSfjMfcj9QFoLZdxdjFQS-8luE-zNGJo9cWl_CvUtaHEEd3T5paGlbCBBjtiZY8TtX4s63D49k3u6Oxl9X9WMecqqxboszQ2g0KneRTxQJbSfbLUqZH-76KeQ_2kkuT025_PBF-eA56KVFJJijYwo2jNXwoA7FkrF6tgq1_CHp_Cj6uAJ9g17fek"/>
+<div class="absolute inset-0 border border-white/10 pointer-events-none"></div>
+</div>
+</div>
+<!-- Decorative Background Element -->
+<div class="absolute -bottom-24 -right-24 w-96 h-96 bg-surface-container-high rounded-full blur-3xl opacity-50 -z-10"></div>
+</section>
+<!-- Chapter Excerpt Band 01 -->
+<section class="bg-surface-container-lowest py-48 px-8 lg:px-24">
+<div class="max-w-4xl mx-auto text-center">
+<span class="font-manrope text-[10px] tracking-[0.4em] uppercase text-primary/30 mb-12 block">CHAPTER ONE: THE INK'S BURDEN</span>
+<blockquote class="font-newsreader text-4xl lg:text-6xl leading-tight tracking-tight italic text-on-surface">
+                    "Every library is a graveyard of intentions, where the most profound truths are often found in the margins of the forgotten."
+                </blockquote>
+</div>
+</section>
+<!-- Author Notes -->
+<section class="bg-surface py-48 px-8 lg:px-24">
+<div class="max-w-7xl mx-auto flex flex-col lg:flex-row items-center lg:items-start gap-24">
+<div class="w-full lg:w-1/2 aspect-square bg-surface-variant overflow-hidden relative">
+<img alt="Author Portrait" class="w-full h-full object-cover grayscale" data-alt="Moody black and white close-up portrait of a thoughtful author in a dark turtleneck, soft natural window light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCmRx4V7IFmz4Fq4JTZCHLobR1OTV53nqFKChH1IMsOpQBxoxeo6ySfbsI60JO3Ly2R-2IynV7BWcZPI7OjLRZ0xjJ-zhMHwCIKNbF8WY7lZWsgBBQbyDIwn-1O4bzflcgQOAluptga5Wel9kNEAtVUxUw3cZgr-6pcIkCQxINy0TgtAL67AoodnuZp5n-ReaGmOd0uui0nbgoGyIl6OGMc628qh0kwwPo4ALBqiGOdmrfeTKLcnTeX-tgm0lxXFwJj4xIxA5Wye_Y"/>
+<div class="absolute inset-0 bg-primary/5"></div>
+</div>
+<div class="w-full lg:w-1/2 pt-12">
+<h2 class="font-newsreader text-5xl mb-8 tracking-tighter">A Note from the Curator</h2>
+<div class="space-y-6 font-manrope text-on-surface-variant leading-loose text-lg">
+<p>
+                            Writing <i>The Silent Archivist</i> was not an act of creation, but one of excavation. I spent three years wandering through the dusty corridors of the Great Northern Library, listening to the silence between the shelves.
+                        </p>
+<p>
+                            This book is designed for those who still find solace in the weight of a physical page. It is an artifact as much as it is a narrative.
+                        </p>
+</div>
+<div class="mt-16 border-t border-outline-variant/20 pt-8">
+<p class="font-newsreader italic text-2xl">— Julian Vane</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Chapter Excerpt Band 02 -->
+<section class="bg-surface-container py-48 px-8 lg:px-24">
+<div class="max-w-5xl mx-auto flex flex-col md:flex-row gap-16 items-center">
+<div class="md:w-1/3">
+<div class="w-full aspect-[4/5] bg-surface-container-high relative">
+<img alt="Library atmosphere" class="w-full h-full object-cover opacity-80" data-alt="Dreamy shot of old library shelves with sunbeams filtering through dust motes and tall narrow windows" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA757XfI-PWwX0M0_YEvKcpjD8fcv1E2pErnTiZOlmb8XzP7pP6WZp-HoUPsa7SXvV6JhGS8JfgO9fFKSSEqkbNffXIfvAcsVME2xckbcSkLyTDt9K6k4rFHQynVKzLfd1s0DUgan8QMvDxzX-kIcz91W-HVBhAUDtDfPh58VTA758JuSfWxzkajSdwqFGM2gd8gU-f1nJXr-3Tct7BPBPi_QPbV_9hoHgbdKbHCH8qb5xscBUzvZc_vQkYvIQpkjj9727iMOUOW2I"/>
+</div>
+</div>
+<div class="md:w-2/3">
+<span class="font-manrope text-[10px] tracking-[0.4em] uppercase text-primary/30 mb-8 block">CHAPTER FOUR: THE VELLUM CODE</span>
+<blockquote class="font-newsreader text-3xl lg:text-5xl leading-snug tracking-tight text-on-surface mb-8">
+                        "We do not read books; we inhabit them, leaving microscopic traces of ourselves in every sentence we underline."
+                    </blockquote>
+</div>
+</div>
+</section>
+<!-- Pre-order Cues -->
+<section class="bg-surface py-48 px-8 lg:px-24 border-t border-outline-variant/10">
+<div class="max-w-2xl mx-auto text-center">
+<h3 class="font-newsreader text-4xl mb-12">The Collector's Suite</h3>
+<div class="grid grid-cols-1 gap-8">
+<div class="p-12 bg-surface-container-lowest border border-outline-variant/10 text-left">
+<div class="flex justify-between items-start mb-4">
+<h4 class="font-manrope font-bold uppercase tracking-widest text-xs">The Manuscript Edition</h4>
+<span class="font-newsreader italic">$120</span>
+</div>
+<p class="font-manrope text-sm text-on-surface-variant mb-8 leading-relaxed">
+                            Hand-numbered, cloth-bound with gold foil stamping. Includes a signed lithograph and the "Archive Notes" companion pamphlet.
+                        </p>
+<button class="w-full py-4 border border-primary text-primary font-manrope text-[10px] tracking-[0.2em] uppercase hover:bg-primary hover:text-on-primary transition-all duration-300">
+                            Reserve Manuscript
+                        </button>
+</div>
+<div class="p-12 bg-surface-container-lowest border border-outline-variant/10 text-left">
+<div class="flex justify-between items-start mb-4">
+<h4 class="font-manrope font-bold uppercase tracking-widest text-xs">Standard Folio</h4>
+<span class="font-newsreader italic">$45</span>
+</div>
+<p class="font-manrope text-sm text-on-surface-variant mb-8 leading-relaxed">
+                            High-quality offset print on acid-free bone paper. Hardcover with dust jacket.
+                        </p>
+<button class="w-full py-4 border border-primary text-primary font-manrope text-[10px] tracking-[0.2em] uppercase hover:bg-primary hover:text-on-primary transition-all duration-300">
+                            Reserve Folio
+                        </button>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-[#faf9f7] dark:bg-[#1A1A1A] w-full flex flex-col items-center py-24 px-8 space-y-12">
+<nav class="flex space-x-12">
+<a class="font-manrope text-[10px] tracking-widest uppercase text-black dark:text-white underline underline-offset-4 hover:opacity-100 transition-opacity" href="#">PRIVACY</a>
+<a class="font-manrope text-[10px] tracking-widest uppercase text-black dark:text-white opacity-50 hover:opacity-100 transition-opacity" href="#">COLLECTOR'S EDITION</a>
+<a class="font-manrope text-[10px] tracking-widest uppercase text-black dark:text-white opacity-50 hover:opacity-100 transition-opacity" href="#">CONTACT</a>
+</nav>
+<p class="font-manrope text-[10px] tracking-widest uppercase text-black dark:text-white opacity-40">
+                © 2024 THE MODERN ARCHIVIST. ALL RIGHTS RESERVED.
+            </p>
+<div class="pt-8">
+<span class="material-symbols-outlined text-primary/20 text-4xl">ink_pen</span>
+</div>
+</footer>
+</main>
+<!-- Bottom Nav for Mobile -->
+<div class="md:hidden fixed bottom-0 left-0 w-full bg-surface-container backdrop-blur-lg z-50 px-6 py-4 flex justify-between items-center border-t border-outline-variant/10">
+<a class="flex flex-col items-center space-y-1 text-primary" href="#">
+<span class="material-symbols-outlined" data-icon="book_2" style="font-variation-settings: 'FILL' 1;">book_2</span>
+<span class="text-[8px] font-manrope font-bold uppercase tracking-tighter">The Work</span>
+</a>
+<a class="flex flex-col items-center space-y-1 text-primary/40" href="#">
+<span class="material-symbols-outlined" data-icon="history_edu">history_edu</span>
+<span class="text-[8px] font-manrope uppercase tracking-tighter">Chronicle</span>
+</a>
+<a class="flex flex-col items-center space-y-1 text-primary/40" href="#">
+<span class="material-symbols-outlined" data-icon="shopping_bag">shopping_bag</span>
+<span class="text-[8px] font-manrope uppercase tracking-tighter">Acquire</span>
+</a>
+</div>
+</body></html>

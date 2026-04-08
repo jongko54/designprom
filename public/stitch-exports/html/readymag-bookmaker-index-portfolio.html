@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&amp;family=Manrope:wght@200..800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-error-container": "#410002",
+                    "on-primary-container": "#ffffff",
+                    "tertiary-fixed-dim": "#464747",
+                    "on-secondary-fixed-variant": "#3b3b3b",
+                    "surface-container-lowest": "#ffffff",
+                    "on-primary-fixed-variant": "#e5e2e1",
+                    "surface-container": "#efeeea",
+                    "surface-bright": "#faf9f5",
+                    "secondary-fixed": "#c8c6c6",
+                    "on-secondary-container": "#1b1c1c",
+                    "surface-tint": "#5f5e5e",
+                    "on-secondary-fixed": "#1b1c1c",
+                    "on-tertiary-fixed-variant": "#e3e2e2",
+                    "primary-fixed": "#5f5e5e",
+                    "on-background": "#1b1c1a",
+                    "error-container": "#ffdad6",
+                    "on-secondary": "#ffffff",
+                    "background": "#faf9f5",
+                    "secondary-fixed-dim": "#acabab",
+                    "on-error": "#ffffff",
+                    "surface": "#faf9f5",
+                    "on-primary": "#e5e2e1",
+                    "error": "#ba1a1a",
+                    "inverse-primary": "#c8c6c5",
+                    "surface-container-highest": "#e3e2df",
+                    "tertiary-fixed": "#5e5e5e",
+                    "on-surface-variant": "#474747",
+                    "inverse-on-surface": "#f2f1ed",
+                    "surface-variant": "#e3e2df",
+                    "outline": "#777777",
+                    "surface-container-high": "#e9e8e4",
+                    "on-primary-fixed": "#ffffff",
+                    "primary": "#000000",
+                    "surface-dim": "#dbdad6",
+                    "on-tertiary": "#e3e2e2",
+                    "on-tertiary-container": "#ffffff",
+                    "primary-container": "#3c3b3b",
+                    "inverse-surface": "#2f312e",
+                    "on-surface": "#1b1c1a",
+                    "surface-container-low": "#f4f4f0",
+                    "tertiary-container": "#747474",
+                    "on-tertiary-fixed": "#ffffff",
+                    "outline-variant": "#c6c6c6",
+                    "tertiary": "#3b3b3c",
+                    "primary-fixed-dim": "#474746",
+                    "secondary-container": "#d6d4d3",
+                    "secondary": "#5f5e5e"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0px",
+                    "lg": "0px",
+                    "xl": "0px",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Newsreader", "serif"],
+                    "body": ["Newsreader", "serif"],
+                    "label": ["Manrope", "sans-serif"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body { background-color: #faf9f5; }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24; }
+        ::-webkit-scrollbar { width: 4px; }
+        ::-webkit-scrollbar-track { background: #faf9f5; }
+        ::-webkit-scrollbar-thumb { background: #e3e2df; }
+    </style>
+</head>
+<body class="font-body text-on-background selection:bg-surface-container-highest">
+<!-- TopNavBar -->
+<header class="bg-[#faf9f5] dark:bg-[#1A1A1A] sticky top-0 z-50">
+<div class="flex justify-between items-center px-12 py-8 w-full max-w-screen-2xl mx-auto">
+<div class="text-xl font-bold tracking-tight text-[#000000] dark:text-[#faf9f5] font-headline italic">
+                The Curated Archive
+            </div>
+<nav class="hidden md:flex items-center space-x-12">
+<a class="font-serif italic text-lg text-[#000000] dark:text-[#faf9f5] border-b border-[#000000] dark:border-[#faf9f5] pb-1 cursor-pointer transition-opacity active:opacity-70" href="#">Index</a>
+<a class="font-serif italic text-lg text-[#5f5e5e] dark:text-[#a1a1a1] hover:text-[#000000] dark:hover:text-[#faf9f5] transition-colors duration-300 cursor-pointer transition-opacity active:opacity-70" href="#">Information</a>
+<a class="font-serif italic text-lg text-[#5f5e5e] dark:text-[#a1a1a1] hover:text-[#000000] dark:hover:text-[#faf9f5] transition-colors duration-300 cursor-pointer transition-opacity active:opacity-70" href="#">Contact</a>
+</nav>
+</div>
+<!-- Separation Logic -->
+<div class="bg-[#f4f4f0] dark:bg-[#2a2a2a] h-[1px] w-full"></div>
+</header>
+<!-- SideNavBar (Navigation Index) -->
+<aside class="fixed left-0 top-1/2 -translate-y-1/2 h-auto w-16 hidden lg:flex flex-col items-center space-y-6 py-12 z-40">
+<div class="mb-4">
+<span class="font-serif italic text-primary Newsreader transform -rotate-90 block whitespace-nowrap mb-8 text-xs tracking-widest uppercase">Monographs</span>
+</div>
+<div class="flex flex-col items-center space-y-6">
+<a class="text-[#000000] dark:text-[#faf9f5] font-bold scale-110 font-sans text-[11px] tracking-[0.05em] uppercase ease-in-out duration-300 hover:translate-x-1" href="#proj-01">01</a>
+<a class="text-[#5f5e5e] dark:text-[#a1a1a1] font-sans text-[11px] tracking-[0.05em] uppercase hover:text-[#000000] dark:hover:text-[#faf9f5] transition-transform duration-300 ease-in-out hover:translate-x-1" href="#proj-02">02</a>
+<a class="text-[#5f5e5e] dark:text-[#a1a1a1] font-sans text-[11px] tracking-[0.05em] uppercase hover:text-[#000000] dark:hover:text-[#faf9f5] transition-transform duration-300 ease-in-out hover:translate-x-1" href="#proj-03">03</a>
+<a class="text-[#5f5e5e] dark:text-[#a1a1a1] font-sans text-[11px] tracking-[0.05em] uppercase hover:text-[#000000] dark:hover:text-[#faf9f5] transition-transform duration-300 ease-in-out hover:translate-x-1" href="#proj-04">04</a>
+<a class="text-[#5f5e5e] dark:text-[#a1a1a1] font-sans text-[11px] tracking-[0.05em] uppercase hover:text-[#000000] dark:hover:text-[#faf9f5] transition-transform duration-300 ease-in-out hover:translate-x-1" href="#proj-05">05</a>
+</div>
+</aside>
+<main class="max-w-screen-xl mx-auto px-12 pt-16 pb-32">
+<!-- Hero Branding / Introduction -->
+<section class="mb-32 max-w-3xl">
+<h1 class="text-6xl md:text-8xl font-headline italic tracking-tighter leading-none mb-12">
+                A repository of tactile literature.
+            </h1>
+<div class="bg-surface-container-low p-8 md:p-12 border-l-4 border-primary">
+<p class="text-xl font-body leading-relaxed text-secondary italic">
+                    The Curated Archive is a studio practice dedicated to the physical architecture of the book. We believe the medium is not just a vessel for text, but a spatial experience defined by grain, weight, and the silent rhythm of the page.
+                </p>
+</div>
+</section>
+<!-- Vertical Project Feed -->
+<div class="space-y-48">
+<!-- Project 01 -->
+<article class="grid grid-cols-1 md:grid-cols-12 gap-12 items-start" id="proj-01">
+<div class="md:col-span-8 group overflow-hidden">
+<img alt="Book Cover Design" class="w-full grayscale hover:grayscale-0 transition-all duration-700 object-cover aspect-[4/5]" data-alt="Minimalist book cover featuring high-contrast black typography on heavy-textured off-white paper, architectural and scholarly aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDgHBLwB6zENehORBb8jLj8s5kU9jvjqHPv0f8b4oUp3_l6fooHAEavr_ysgc8hR1kCoO24lGUSwJHgJwjJlfEY1tL-cNccb3BaMPAPiu8N8OXWXqZLEuuIeNdkULUa5C7aD_mgZ2Pr0xoWj5fEZsmsE-fucSJU5seiqQhhi7w00davxBWjK8cskcrFY1eb2YwBp5bqel63JwgqAkVR7hPLI7VfaDX0HlKPPr-DpNvshsNXdwmgZM3RabLqwgtzki_A93gVwVkxgzk"/>
+</div>
+<div class="md:col-span-4 sticky top-32 space-y-6">
+<div>
+<span class="font-label text-[11px] tracking-[0.1em] uppercase text-secondary">Monograph 01</span>
+<h2 class="text-4xl font-headline italic mt-2 leading-tight">The Brutalist Poetics</h2>
+</div>
+<div class="space-y-4 border-t border-surface-container pt-6">
+<div class="flex justify-between items-baseline">
+<span class="font-label text-[10px] tracking-[0.05em] uppercase text-secondary">Client</span>
+<span class="font-body text-sm italic">Metropolis Press</span>
+</div>
+<div class="flex justify-between items-baseline">
+<span class="font-label text-[10px] tracking-[0.05em] uppercase text-secondary">Year</span>
+<span class="font-body text-sm italic">2023</span>
+</div>
+<div class="flex justify-between items-baseline">
+<span class="font-label text-[10px] tracking-[0.05em] uppercase text-secondary">Format</span>
+<span class="font-body text-sm italic">Casebound, 240pp</span>
+</div>
+</div>
+<p class="text-sm font-body leading-relaxed text-on-surface-variant">
+                        An exploration of architectural theory through sparse typesetting and raw, uncoated substrates. The design emphasizes the structural grid as an echo of the subject matter.
+                    </p>
+</div>
+</article>
+<!-- Project 02 -->
+<article class="grid grid-cols-1 md:grid-cols-12 gap-12 items-start" id="proj-02">
+<div class="md:col-span-4 order-2 md:order-1 sticky top-32 space-y-6 text-right">
+<div>
+<span class="font-label text-[11px] tracking-[0.1em] uppercase text-secondary">Monograph 02</span>
+<h2 class="text-4xl font-headline italic mt-2 leading-tight">Ephemeral Vellum</h2>
+</div>
+<div class="space-y-4 border-t border-surface-container pt-6">
+<div class="flex justify-between items-baseline flex-row-reverse">
+<span class="font-label text-[10px] tracking-[0.05em] uppercase text-secondary">Client</span>
+<span class="font-body text-sm italic">Gallery Nuance</span>
+</div>
+<div class="flex justify-between items-baseline flex-row-reverse">
+<span class="font-label text-[10px] tracking-[0.05em] uppercase text-secondary">Year</span>
+<span class="font-body text-sm italic">2024</span>
+</div>
+<div class="flex justify-between items-baseline flex-row-reverse">
+<span class="font-label text-[10px] tracking-[0.05em] uppercase text-secondary">Format</span>
+<span class="font-body text-sm italic">Softcover with French Flaps</span>
+</div>
+</div>
+<p class="text-sm font-body leading-relaxed text-on-surface-variant">
+                        A catalog for a light installation artist. Utilizing translucent paper layers to create a physical depth that mimics the interplay of light and shadow.
+                    </p>
+</div>
+<div class="md:col-span-8 order-1 md:order-2 group overflow-hidden">
+<img alt="Book Interior Spread" class="w-full grayscale hover:grayscale-0 transition-all duration-700 object-cover aspect-[16/10]" data-alt="Editorial book interior spread with minimalist layout, large margins, elegant serif typography and soft atmospheric lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC3ZFXhrECed1OtUmG5qpdaNUWE9hODEpx3RL9q48uQWKCrm7DYgJCFRbBlL8SNMFVeKUml5MUNrUQOIG6OZuOJkYF1-JcRG7vV8DqJj6n-BKJ5C4PzjDMnzyYjx5TaSwv4OGGM_u3oMJReXCu-atbOO6-xYBPdj8ZfupDeNhL8iMrKX-1scD0XPoM37J34ksuYQe9X3lpVBAksqobaIjkS8ajnWoCMfsYitEksGTHVyUvcep04-zTHFdxKjcmdKClsztFeX2TpRIs"/>
+</div>
+</article>
+<!-- Project 03 -->
+<article class="grid grid-cols-1 md:grid-cols-12 gap-12 items-start" id="proj-03">
+<div class="md:col-span-8 group overflow-hidden">
+<img alt="Closed Book on Surface" class="w-full grayscale hover:grayscale-0 transition-all duration-700 object-cover aspect-[4/3]" data-alt="A thick, dark linen-bound book resting on a pale stone surface, dramatic side lighting highlighting the texture of the fabric." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB8TZHdf1QVkrGwPe8woftCOJ2GemUm1KG5_9-poPk3XM_Z1OwYNfwp1zNigNTBQe_oCZpdNFMzlWX-Qb6c_ce7iSGs67nb1bylDD3EX_M8_9Yx4mNUon93NVLjZd-uN2v0gDqzHjHjNCMp3ANh394zkiovCgkA7tEFSgsjvwbXFgeC1Kp_QN5I4rwicou7jbMwxvJxg_GybtP9YzecL0OO7yfmL2tbpR7mGih_WKymzVa5LngwGiFaq_c8C85wwTgTVeAIOBBmzZk"/>
+</div>
+<div class="md:col-span-4 sticky top-32 space-y-6">
+<div>
+<span class="font-label text-[11px] tracking-[0.1em] uppercase text-secondary">Monograph 03</span>
+<h2 class="text-4xl font-headline italic mt-2 leading-tight">Dark Matter: Ink on Ink</h2>
+</div>
+<div class="space-y-4 border-t border-surface-container pt-6">
+<div class="flex justify-between items-baseline">
+<span class="font-label text-[10px] tracking-[0.05em] uppercase text-secondary">Client</span>
+<span class="font-body text-sm italic">Obsidian Press</span>
+</div>
+<div class="flex justify-between items-baseline">
+<span class="font-label text-[10px] tracking-[0.05em] uppercase text-secondary">Year</span>
+<span class="font-body text-sm italic">2022</span>
+</div>
+<div class="flex justify-between items-baseline">
+<span class="font-label text-[10px] tracking-[0.05em] uppercase text-secondary">Format</span>
+<span class="font-body text-sm italic">Linen Wrapped Hardcover</span>
+</div>
+</div>
+<p class="text-sm font-body leading-relaxed text-on-surface-variant">
+                        Exploring the limits of legibility with black foil on charcoal linen. A study in the tactile nature of darkness and the physical presence of the void.
+                    </p>
+</div>
+</article>
+</div>
+<!-- Quiet Biography Section -->
+<section class="mt-64 border-t border-surface-container-high pt-24 grid grid-cols-1 md:grid-cols-12 gap-12">
+<div class="md:col-span-4">
+<h3 class="font-label text-[11px] tracking-[0.2em] uppercase text-secondary mb-8">Philosophy</h3>
+<span class="font-headline italic text-4xl">The Designer as Archivist</span>
+</div>
+<div class="md:col-span-8 space-y-8">
+<p class="text-2xl font-body leading-relaxed italic">
+                    I treat each project as a historical document. My role is not to impose a style, but to exhume the inherent logic of the text and manifest it in physical form.
+                </p>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-12 text-sm font-body leading-loose text-on-surface-variant">
+<p>
+                        Our studio operates on the principle of "Vertical Rhythm." Just as a composer uses silence between notes, we use the margins of the page to create a breathing space for the reader. We exclusively use stocks from paper mills with a pedigree of archival permanence, ensuring that the books we produce today are legible a century from now.
+                    </p>
+<p>
+                        In a world of flickering pixels, the book remains our most durable technology. It requires no battery, no connection—only light and intent. Our work is a quiet rebellion against the transient, favoring the weight of the spine and the smell of fresh ink over the convenience of the digital scroll.
+                    </p>
+</div>
+<!-- Colophon Component -->
+<div class="mt-24 pt-12 border-t border-surface-container flex flex-col md:flex-row justify-between items-start md:items-center space-y-4 md:space-y-0">
+<div class="flex space-x-8">
+<div>
+<span class="block font-label text-[9px] tracking-widest uppercase text-tertiary">Typefaces</span>
+<span class="font-body text-xs italic">Newsreader, Manrope</span>
+</div>
+<div>
+<span class="block font-label text-[9px] tracking-widest uppercase text-tertiary">Background</span>
+<span class="font-body text-xs italic">Bone Archive #FAF9F5</span>
+</div>
+</div>
+<div class="text-right">
+<span class="block font-label text-[9px] tracking-widest uppercase text-tertiary">Status</span>
+<span class="font-body text-xs italic">Updated Autumn 2024</span>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-[#faf9f5] dark:bg-[#1A1A1A] border-t border-[#f4f4f0] dark:border-[#2a2a2a]">
+<div class="flex justify-between items-center px-12 py-10 w-full max-w-screen-2xl mx-auto">
+<div class="font-sans text-[10px] tracking-[0.05em] uppercase text-[#5f5e5e] dark:text-[#a1a1a1] Manrope">
+                © 2024 The Curated Archive. All Rights Reserved.
+            </div>
+<div class="flex space-x-8">
+<a class="font-sans text-[10px] tracking-[0.05em] uppercase text-[#5f5e5e] dark:text-[#a1a1a1] hover:text-[#000000] dark:hover:text-[#faf9f5] transition-colors duration-500 underline underline-offset-4" href="#">Colophon</a>
+<a class="font-sans text-[10px] tracking-[0.05em] uppercase text-[#5f5e5e] dark:text-[#a1a1a1] hover:text-[#000000] dark:hover:text-[#faf9f5] transition-colors duration-500" href="#">Accessibility</a>
+<a class="font-sans text-[10px] tracking-[0.05em] uppercase text-[#5f5e5e] dark:text-[#a1a1a1] hover:text-[#000000] dark:hover:text-[#faf9f5] transition-colors duration-500" href="#">Instagram</a>
+</div>
+</div>
+</footer>
+</body></html>

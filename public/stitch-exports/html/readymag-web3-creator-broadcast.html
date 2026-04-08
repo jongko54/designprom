@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Manrope:wght@300;400;500;600;700&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-container": "#1f1f1f",
+                    "surface-dim": "#131313",
+                    "secondary-fixed": "#e2e2e2",
+                    "on-primary-fixed": "#002022",
+                    "surface": "#131313",
+                    "on-primary-container": "#006970",
+                    "primary-container": "#00f0ff",
+                    "surface-container-highest": "#353535",
+                    "inverse-on-surface": "#303030",
+                    "outline": "#849495",
+                    "on-secondary-container": "#b4b5b5",
+                    "primary": "#dbfcff",
+                    "surface-bright": "#393939",
+                    "error-container": "#93000a",
+                    "secondary-container": "#454747",
+                    "primary-fixed": "#7df4ff",
+                    "outline-variant": "#3b494b",
+                    "on-tertiary-container": "#715d00",
+                    "on-primary": "#00363a",
+                    "on-error": "#690005",
+                    "on-tertiary": "#3b2f00",
+                    "surface-tint": "#00dbe9",
+                    "background": "#131313",
+                    "surface-container-high": "#2a2a2a",
+                    "on-tertiary-fixed": "#231b00",
+                    "secondary-fixed-dim": "#c6c6c7",
+                    "on-secondary-fixed": "#1a1c1c",
+                    "on-primary-fixed-variant": "#004f54",
+                    "on-tertiary-fixed-variant": "#554500",
+                    "surface-container-low": "#1b1b1b",
+                    "surface-container-lowest": "#0e0e0e",
+                    "on-background": "#e2e2e2",
+                    "inverse-primary": "#006970",
+                    "tertiary-fixed": "#ffe179",
+                    "error": "#ffb4ab",
+                    "surface-variant": "#353535",
+                    "tertiary": "#fff5de",
+                    "inverse-surface": "#e2e2e2",
+                    "tertiary-container": "#fed639",
+                    "on-error-container": "#ffdad6",
+                    "on-surface-variant": "#b9cacb",
+                    "on-secondary": "#2f3131",
+                    "on-surface": "#e2e2e2",
+                    "primary-fixed-dim": "#00dbe9",
+                    "on-secondary-fixed-variant": "#454747",
+                    "secondary": "#c6c6c7",
+                    "tertiary-fixed-dim": "#eac324"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "fontFamily": {
+                    "headline": ["Space Grotesk"],
+                    "body": ["Manrope"],
+                    "label": ["Inter"]
+            }
+          },
+        }
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+      .text-shift-hover:hover {
+        transform: translateX(4px);
+        transition: transform 0.2s ease-in-out;
+      }
+      .kinetic-text-overlap {
+        text-shadow: 0 0 40px rgba(0, 240, 255, 0.2);
+      }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body selection:bg-primary-container selection:text-on-primary-container">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-[#131313]/60 backdrop-blur-xl transition-all duration-200">
+<div class="flex justify-between items-center w-full px-8 py-6 max-w-[1920px] mx-auto">
+<div class="text-2xl font-bold tracking-tighter text-[#dbfcff] font-['Space_Grotesk']">
+                VOID_STUDIO
+            </div>
+<div class="hidden md:flex items-center gap-12">
+<a class="font-['Space_Grotesk'] uppercase tracking-tighter text-[#00f0ff] border-b-2 border-[#00f0ff] pb-1" href="#">WORK</a>
+<a class="font-['Space_Grotesk'] uppercase tracking-tighter text-[#dbfcff]/60 hover:text-[#dbfcff] transition-colors hover:translate-x-0.5 transition-transform duration-200" href="#">ABOUT</a>
+<a class="font-['Space_Grotesk'] uppercase tracking-tighter text-[#dbfcff]/60 hover:text-[#dbfcff] transition-colors hover:translate-x-0.5 transition-transform duration-200" href="#">SERVICES</a>
+</div>
+<button class="bg-primary-fixed text-on-primary-fixed px-6 py-2 rounded-none font-['Space_Grotesk'] font-bold tracking-tighter hover:translate-x-0.5 transition-transform duration-200">
+                START_PROJECT
+            </button>
+</div>
+</nav>
+<main>
+<!-- Hero Section -->
+<section class="min-h-screen flex flex-col justify-center px-8 relative overflow-hidden bg-surface">
+<div class="max-w-[1920px] mx-auto w-full pt-32">
+<div class="label-md font-label text-on-tertiary-container uppercase tracking-widest mb-8 flex items-center gap-4">
+<span class="w-12 h-[1px] bg-outline-variant/30"></span>
+                    DESIGNER &amp; CREATOR
+                </div>
+<h1 class="text-[clamp(4rem,15vw,14rem)] font-headline font-bold leading-[0.85] tracking-tighter uppercase kinetic-text-overlap text-primary">
+                    BEYOND THE<br/>MONOLITH.
+                </h1>
+<div class="mt-12 flex flex-col md:flex-row justify-between items-start md:items-end gap-8">
+<p class="max-w-xl text-xl md:text-2xl font-light text-on-surface-variant leading-relaxed">
+                        Forging digital experiences that transcend the ordinary. High-contrast interfaces designed for the future of artists and innovative brands.
+                    </p>
+<div class="flex flex-col items-end">
+<span class="material-symbols-outlined text-primary-container text-5xl mb-4">south_east</span>
+<span class="font-label text-sm uppercase tracking-widest opacity-40">Scroll to Explore</span>
+</div>
+</div>
+</div>
+<!-- Decorative Void Glow -->
+<div class="absolute -bottom-1/4 -right-1/4 w-[800px] h-[800px] bg-primary-container/5 rounded-full blur-[120px] pointer-events-none"></div>
+</section>
+<!-- Project Grid: Bento Layout -->
+<section class="py-32 px-8 bg-surface">
+<div class="max-w-[1920px] mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-6">
+<!-- Large Project Card -->
+<div class="md:col-span-8 group relative overflow-hidden bg-surface-container-low transition-all duration-500 hover:bg-surface-container-highest cursor-pointer">
+<div class="aspect-[16/9] w-full overflow-hidden">
+<img alt="Dark abstract futuristic architecture" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 opacity-80 group-hover:opacity-100" data-alt="Monolithic dark architectural structure with sharp neon cyan lighting accents against a pitch black sky, cinematic lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBNbNBoFVyFBB_a2UuOIf_PPyqOxJ56DKeen-cZwFCKRIEn7aXElVCsIGcRG5-tT5H3IFtWYnhRe2R9NSXteRmng5JOH_xOe4UIIzYUzXBBl-uvH0X5Kyx4gdHjTrquHoz9DgkfAs2VTVUbTW9fb7aVnNKpRcZoHRn8Dn6GafF1Oxbblaqpt1h-4fUO53jFI7YGNEn_54s5lebIwkSBJPz0bIoAVkBPKBEhE7sLb3IJ4bRrIan6DzjIAvQcDE1DGjau0avhv98cuuY"/>
+</div>
+<div class="p-8 flex justify-between items-end">
+<div>
+<span class="font-label text-xs uppercase tracking-widest text-on-tertiary-container mb-2 block">Visual Identity / 2024</span>
+<h3 class="text-3xl font-headline font-bold text-primary group-hover:translate-x-2 transition-transform">X-SYNTH COLLECTIVE</h3>
+</div>
+<span class="material-symbols-outlined text-primary-container text-4xl opacity-0 group-hover:opacity-100 transition-opacity">arrow_outward</span>
+</div>
+</div>
+<!-- Small Project Card -->
+<div class="md:col-span-4 group relative overflow-hidden bg-surface-container-low transition-all duration-500 hover:bg-surface-container-highest cursor-pointer">
+<div class="aspect-[4/5] w-full overflow-hidden">
+<img alt="Digital neon art" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 opacity-80 group-hover:opacity-100" data-alt="Minimalist digital wireframe sphere floating in dark space with glowing cyan and white pulse lines, technological aesthetic" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDDXRmL3JQ8Snmv_9_uBqkgLQnMQ8zhAb30jVT9S-xoI3gYt65PWYm5HA8hfV1hMBJiQSms4Q8haIXM_bancSsduQ1IniKo3YLCi6boYIleJo5L3dwLGXmil6ypMnNEVJ5YdyfFSwUmWiL4BhL1gzKRNPpwr9xy41UHVmQ_I6hqoRYuoj0hPB5dKV97QKkAqWjVbf5QcHYO6o4zMjf4LvGFMCkfK5sRVVVKxvijHwIFFPVqN1fHqMf6jJKJNLuVODP8JL9OFtDWJ3c"/>
+</div>
+<div class="p-8">
+<span class="font-label text-xs uppercase tracking-widest text-on-tertiary-container mb-2 block">Web Design</span>
+<h3 class="text-2xl font-headline font-bold text-primary group-hover:translate-x-2 transition-transform">GLITCH_GALLERY</h3>
+</div>
+</div>
+<!-- Another Small Project Card -->
+<div class="md:col-span-4 group relative overflow-hidden bg-surface-container-low transition-all duration-500 hover:bg-surface-container-highest cursor-pointer">
+<div class="aspect-[4/5] w-full overflow-hidden">
+<img alt="Tech abstract" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 opacity-80 group-hover:opacity-100" data-alt="Sleek metallic black surface with deep grooves and sharp edges, industrial sci-fi texture with subtle cyan light reflection" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAHlzcMhhU17WvYaMjIzwSbSG8UBLPj2RwGztZtSOYfCxSVdoqY17ukn5HY5MiMLI1c4jhgvt8ujNzOkrG9JmFIeTN6k-1usDrqgwP_N0RSlIv6D5mkYk2MRc6MmLAYixxt9vuW6bDY3CpOT0gKTThHvHGsVeGzdnLipnf1v5K60ympZkf6KTn_vm1H96RP43J1vbo2eUE5XSz3KJ61v_3ayLlmNR6Spjrd1OW78jmPQKQ1E7uDL-O8TD_3oxMuWFO-5iV49YRc3fE"/>
+</div>
+<div class="p-8">
+<span class="font-label text-xs uppercase tracking-widest text-on-tertiary-container mb-2 block">UI/UX Strategy</span>
+<h3 class="text-2xl font-headline font-bold text-primary group-hover:translate-x-2 transition-transform">NEURAL ARCHIVE</h3>
+</div>
+</div>
+<!-- Large Project Card 2 -->
+<div class="md:col-span-8 group relative overflow-hidden bg-surface-container-low transition-all duration-500 hover:bg-surface-container-highest cursor-pointer">
+<div class="aspect-[16/9] w-full overflow-hidden">
+<img alt="Global connectivity" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 opacity-80 group-hover:opacity-100" data-alt="Digital representation of planet earth made of blue light data points and networks on a solid black background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCmWjX1cfnd3eO7Gl-FX2Lo50n3s16wad6-yP5mgetvAO0OXvLnfpLv5kTEyqrefCyaXkRU86sAf6GXTYSxDSGr-G2KzwZh8S4AvEdaDeRVbGWwFHwx4rYZWrRZWmv-a6erb0Q489YdViMB7FamtzHRKaJ3hTLGKSUppZsS__odu_Yu0NJ7XHMdbn4sw3TtRnmS3idQp_ewu8rp_ax8saRNxqSkH9p-6Fb9qxMAKSALm65zu-pYLBdBxjFhLdvAhOH52F6ayhlOQ-8"/>
+</div>
+<div class="p-8 flex justify-between items-end">
+<div>
+<span class="font-label text-xs uppercase tracking-widest text-on-tertiary-container mb-2 block">Brand Launch / 2023</span>
+<h3 class="text-3xl font-headline font-bold text-primary group-hover:translate-x-2 transition-transform">AETHER_NET</h3>
+</div>
+<span class="material-symbols-outlined text-primary-container text-4xl opacity-0 group-hover:opacity-100 transition-opacity">arrow_outward</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Services / Services Section -->
+<section class="py-32 px-8 bg-surface-container-lowest">
+<div class="max-w-[1920px] mx-auto grid grid-cols-1 md:grid-cols-2 gap-16">
+<div>
+<h2 class="text-5xl md:text-7xl font-headline font-bold tracking-tighter text-primary uppercase mb-8">
+                        DIGITAL<br/>EVOLUTION.
+                    </h2>
+<p class="text-on-surface-variant text-xl leading-relaxed max-w-md">
+                        We don't just build websites. We build the architecture of your digital legacy. Every pixel is intentional, every interaction is a statement.
+                    </p>
+</div>
+<div class="space-y-12">
+<div class="border-b border-outline-variant/20 pb-8 hover:bg-surface-container-low transition-colors px-4 -mx-4 group">
+<div class="flex justify-between items-center">
+<span class="font-label text-sm text-primary-container">01</span>
+<span class="material-symbols-outlined group-hover:translate-x-2 transition-transform text-on-surface-variant">arrow_forward</span>
+</div>
+<h4 class="text-3xl font-headline font-bold mt-4">KINETIC BRANDING</h4>
+</div>
+<div class="border-b border-outline-variant/20 pb-8 hover:bg-surface-container-low transition-colors px-4 -mx-4 group">
+<div class="flex justify-between items-center">
+<span class="font-label text-sm text-primary-container">02</span>
+<span class="material-symbols-outlined group-hover:translate-x-2 transition-transform text-on-surface-variant">arrow_forward</span>
+</div>
+<h4 class="text-3xl font-headline font-bold mt-4">IMMERSIVE UI/UX</h4>
+</div>
+<div class="border-b border-outline-variant/20 pb-8 hover:bg-surface-container-low transition-colors px-4 -mx-4 group">
+<div class="flex justify-between items-center">
+<span class="font-label text-sm text-primary-container">03</span>
+<span class="material-symbols-outlined group-hover:translate-x-2 transition-transform text-on-surface-variant">arrow_forward</span>
+</div>
+<h4 class="text-3xl font-headline font-bold mt-4">CREATIVE ARCHITECTURE</h4>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="py-48 px-8 bg-surface text-center overflow-hidden relative">
+<div class="absolute inset-0 opacity-10">
+<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-[30rem] font-headline font-bold text-primary select-none pointer-events-none">VOID</div>
+</div>
+<div class="relative z-10">
+<h2 class="text-6xl md:text-9xl font-headline font-bold tracking-tighter text-primary uppercase mb-12">
+                    READY TO<br/>TRANSCEND?
+                </h2>
+<a class="inline-flex items-center gap-6 group" href="mailto:hello@voidstudio.design">
+<span class="text-2xl md:text-4xl font-headline font-medium border-b-4 border-primary-container pb-2 hover:text-primary-container transition-colors">HELLO@VOIDSTUDIO.DESIGN</span>
+<span class="material-symbols-outlined text-5xl text-primary-container group-hover:translate-x-4 transition-transform">arrow_right_alt</span>
+</a>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full py-16 bg-[#0e0e0e] border-t border-outline-variant/10">
+<div class="flex flex-col md:flex-row justify-between items-center px-12 w-full max-w-[1920px] mx-auto gap-8">
+<div class="text-xl font-bold font-['Space_Grotesk'] text-[#dbfcff]">
+                VOID_STUDIO
+            </div>
+<div class="font-['Manrope'] text-sm tracking-widest text-[#dbfcff]/40">
+                ©2024 VOID_STUDIO. BEYOND THE MONOLITH.
+            </div>
+<div class="flex gap-8">
+<a class="font-['Manrope'] text-sm tracking-widest text-[#dbfcff]/40 hover:text-[#00f0ff] transition-all uppercase" href="#">INSTAGRAM</a>
+<a class="font-['Manrope'] text-sm tracking-widest text-[#dbfcff]/40 hover:text-[#00f0ff] transition-all uppercase" href="#">TWITTER</a>
+<a class="font-['Manrope'] text-sm tracking-widest text-[#dbfcff]/40 hover:text-[#00f0ff] transition-all uppercase" href="#">DRIBBBLE</a>
+<a class="font-['Manrope'] text-sm tracking-widest text-[#dbfcff]/40 hover:text-[#00f0ff] transition-all uppercase" href="#">LINKEDIN</a>
+</div>
+</div>
+</footer>
+</body></html>

@@ -1,0 +1,21 @@
+{
+  "brand": "Readymag / Portfolio",
+  "contentType": "image/png",
+  "fileName": "readymag-bookmaker-index-portfolio.png",
+  "generatedAt": "2026-04-08T08:31:19.219Z",
+  "htmlUrl": "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ7Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpaCiVodG1sX2EzNmUwMTMyMjNiMjRhNzk5MDAxNDRjYjZjZTgwM2JlEgsSBxCCisPc0AkYAZIBIwoKcHJvamVjdF9pZBIVQhM5Nzc4NTM2MzA5MTYyNjQyMzM4&filename=&opi=96797242",
+  "imageUrl": "https://lh3.googleusercontent.com/aida/ADBb0ugMcNYtMsTLV6zbpmdUN6g8pvuJQ6pDkdg_IJuUwCca1VJTkzFjxuR33t1l5YVHk5ipLzbTSe48Ehns6jfdnkG0JTX152Naqp7t7jSid7nmh5Ufnpxl6CK9QtOFBYWNIwuSxVrhEAiUz8wcHc1--vYv5172MiblGzbtFzpe99hpwNUdHZ9-rZeLXl40CWfiuhZpZsGoc_UD8d6N_Dn2eg9s00nIYuw7Szcq4ecLHiW_3R4e2n30hI-avWY",
+  "notes": [
+    "I've designed 'The Monograph'—a book designer's portfolio that prioritizes archival structure and calm, scholarly typography over standard web trends. \n\n**What I've created:**\n1.  **Design System (Archival Monograph):** A high-contrast monochrome foundation with Newsreader serif for elegant headers and Manrope for precise metadata.\n2.  **Portfolio Index:** A clean, vertical repository of work. It uses a numbered side navigation and large, image-led entries that treat each book design as a historical document.\n3.  **Project Detail (The Silent Archive):** A deep dive into a single project, featuring detailed colophons, production specifications, and a quiet narrative on the design rationale.\n\nThe overall layout avoids modern distractions, opting for a quiet atmosphere that allows the tactile quality of the books to take center stage. How does this archival direction feel to you?"
+  ],
+  "prompt": "Design a book designer portfolio with a numbered project index, calm monochrome typography, image-led book entries, quiet biography details, and a restrained archival structure that feels like a monograph rather than a startup site.",
+  "projectId": "9778536309162642338",
+  "screenId": "755923cfd3c84ed7b50b41f592be54aa",
+  "slug": "readymag-bookmaker-index-portfolio",
+  "suggestions": [
+    "Add a 'Process' page showing sketches and grid layouts",
+    "Change the cream background to a pure white for higher contrast",
+    "Make the typography even more minimal"
+  ],
+  "title": "Portfolio Index"
+}

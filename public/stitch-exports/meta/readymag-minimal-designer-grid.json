@@ -1,0 +1,21 @@
+{
+  "brand": "Readymag / Portfolio",
+  "contentType": "image/png",
+  "fileName": "readymag-minimal-designer-grid.png",
+  "generatedAt": "2026-04-08T08:33:03.063Z",
+  "htmlUrl": "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ7Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpaCiVodG1sX2QxOTViNTk2OTIxOTRlMGM4NjdmZmQ3ZDFmM2VhOTA0EgsSBxCCisPc0AkYAZIBIwoKcHJvamVjdF9pZBIVQhM5Nzc4NTM2MzA5MTYyNjQyMzM4&filename=&opi=96797242",
+  "imageUrl": "https://lh3.googleusercontent.com/aida/ADBb0ujW91Eta8BMuHXPYHrYH9zSrePz-PJU1-RVRhiqvkzRjQWiq0LDXfK-mPPhkz9MPOPoVVvC7F_sNcmPnum-kIStEBnwpsxHHeiuszHucIzPFs_UMg2WQ9Zy7bt4bTVP66YJ1Q19_x2s6DzuX5PriyAyfyhr7gt7H6E5JkHGj9gni99Czd9_gNuRbg86vPkd5plqWDsXaLABjYTQORDFhm7KSjoagfB75rFdZ26uWPeC7Zd1dTgkRfQkrjM",
+  "notes": [
+    "I've created a minimal, high-precision portfolio design for you. \n\nKey design choices:\n*   **Aesthetic:** A sophisticated black-and-ivory color palette that emphasizes the content.\n*   **Typography:** Oversized, restrained serif headlines for a contemporary editorial feel, paired with small, utilitarian sans-serif captions for project data.\n*   **Layout:** A crisp, spacious project grid that allows each piece of work to breathe, with no unnecessary interface chrome or decorative elements.\n\nHow does this direction feel for your portfolio?"
+  ],
+  "prompt": "Create a minimal design portfolio with a crisp project grid, oversized but restrained typography, black-and-ivory surfaces, selective captions, and almost no decorative interface chrome. The page should feel precise, contemporary, and easy to browse.",
+  "projectId": "9778536309162642338",
+  "screenId": "86d728b394544006a649b56a495e1da4",
+  "slug": "readymag-minimal-designer-grid",
+  "suggestions": [
+    "Add a project detail page",
+    "Change the ivory to a soft grey",
+    "Make the typography even larger"
+  ],
+  "title": "The Minimalist Gallery - Home"
+}
