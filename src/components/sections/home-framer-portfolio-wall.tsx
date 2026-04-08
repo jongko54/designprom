@@ -1,7 +1,9 @@
 import Link from "next/link";
 
+import { PublishActions } from "@/components/ui/publish-actions";
 import { getArchiveStitchExports } from "@/data/stitch-exports";
 import { promptArchive } from "@/data/site";
+import { buildArchivePublishAssets } from "@/lib/publish-assets";
 
 const showcaseSlugs = [
   "editorial-portfolio-casefile",
@@ -83,31 +85,42 @@ export function HomeFramerPortfolioWall() {
                 const capture = getArchiveStitchExports(entry)[0];
                 const image = capture?.image ?? entry.coverImage;
                 const size = tileSizes[(columnIndex + itemIndex) % tileSizes.length];
+                const publishAssets = buildArchivePublishAssets(entry);
 
                 return (
-                  <Link
-                    className={`framer-portfolio-tile ${size}`}
-                    href={`/archive/${entry.slug}`}
-                    key={entry.slug}
-                  >
-                    <div className="framer-portfolio-image-shell">
-                      <img
-                        alt={image.alt}
-                        className="framer-portfolio-image"
-                        loading="lazy"
-                        src={image.src}
-                        style={capture?.objectPosition ? { objectPosition: capture.objectPosition } : undefined}
-                      />
-                    </div>
-                    <div className="framer-portfolio-tile-copy">
-                      <div className="micro-row">
-                        <span>{entry.portfolioCategory}</span>
-                        <span>{entry.useCase}</span>
+                  <article className={`framer-portfolio-tile ${size}`} key={entry.slug}>
+                    <Link className="framer-portfolio-tile-link" href={`/archive/${entry.slug}`}>
+                      <div className="framer-portfolio-image-shell">
+                        <img
+                          alt={image.alt}
+                          className="framer-portfolio-image"
+                          loading="lazy"
+                          src={image.src}
+                          style={
+                            capture?.objectPosition
+                              ? { objectPosition: capture.objectPosition }
+                              : undefined
+                          }
+                        />
                       </div>
-                      <h2>{entry.title}</h2>
-                      <p>{entry.summary}</p>
-                    </div>
-                  </Link>
+                      <div className="framer-portfolio-tile-copy">
+                        <div className="micro-row">
+                          <span>{entry.portfolioCategory}</span>
+                          <span>{entry.useCase}</span>
+                        </div>
+                        <h2>{entry.title}</h2>
+                        <p>{entry.summary}</p>
+                      </div>
+                    </Link>
+                    <PublishActions
+                      assets={publishAssets}
+                      className="publish-actions compact"
+                      shareText={`${entry.title} / ${entry.useCase}`}
+                      shareTitle={entry.title}
+                      shareUrl={`/archive/${entry.slug}`}
+                      zipName={entry.title}
+                    />
+                  </article>
                 );
               })}
             </div>

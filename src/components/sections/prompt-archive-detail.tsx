@@ -18,6 +18,7 @@ import {
   getStitchExampleOwner,
   promptArchive
 } from "@/data/site";
+import { buildArchivePublishAssets } from "@/lib/publish-assets";
 
 type PromptArchiveDetailProps = {
   entry: PromptArchiveEntry;
@@ -46,55 +47,7 @@ export function PromptArchiveDetail({ entry }: PromptArchiveDetailProps) {
       candidate.categorySlugs.some((slug) => entry.categorySlugs.includes(slug))
     )
     .slice(0, 2);
-  const publishImageAssets = Array.from(
-    new Map(
-      [
-        {
-          filename: `${entry.slug}-cover${entry.coverImage.src.endsWith(".svg") ? ".svg" : ".png"}`,
-          kind: "url" as const,
-          url: entry.coverImage.src
-        },
-        ...entry.outputs
-          .filter((output) => output.image)
-          .map((output, index) => ({
-            filename: `${entry.slug}-output-${index + 1}${output.image?.src.endsWith(".svg") ? ".svg" : ".png"}`,
-            kind: "url" as const,
-            url: output.image!.src
-          })),
-        ...stitchCaptures.map((screen, index) => ({
-          filename: `${entry.slug}-stitch-${index + 1}${screen.image.src.endsWith(".svg") ? ".svg" : ".png"}`,
-          kind: "url" as const,
-          url: screen.image.src
-        }))
-      ].map((asset) => [asset.url, asset])
-    ).values()
-  );
-  const publishAssets = [
-    {
-      content: `${entry.prompt}\n`,
-      filename: "prompt.txt",
-      kind: "text" as const
-    },
-    {
-      content: `${entry.remixPrompt}\n`,
-      filename: "remix-prompt.txt",
-      kind: "text" as const
-    },
-    {
-      filename: "manifest.json",
-      kind: "json" as const,
-      value: {
-        categories: categories.map((category) => category.title),
-        outputFocus: entry.outputFocus,
-        slug: entry.slug,
-        stitchExampleSlugs: entry.stitchExampleSlugs,
-        summary: entry.summary,
-        title: entry.title,
-        useCase: entry.useCase
-      }
-    },
-    ...publishImageAssets
-  ];
+  const publishAssets = buildArchivePublishAssets(entry);
   const faqItems = [
     {
       question: `What should this ${entry.useCase.toLowerCase()} prompt get right first?`,

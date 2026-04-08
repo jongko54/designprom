@@ -9,12 +9,14 @@ import {
 import { siAirbnb, siApple, siFigma, siTiktok } from "simple-icons";
 
 import { CopyButton } from "@/components/ui/copy-button";
+import { PublishActions } from "@/components/ui/publish-actions";
 import {
   PreviewTone,
   dnaStitchExamples,
   featuredDna,
   getCategoryHref
 } from "@/data/site";
+import { buildStitchExamplePublishAssets } from "@/lib/publish-assets";
 
 const brandOrder = [
   "calm-precision-ui",
@@ -162,6 +164,8 @@ export function BrandDnaMotionHero() {
     "--dna-tilt-x": `${scene.tiltX}deg`,
     "--dna-tilt-y": `${scene.tiltY}deg`
   } as CSSProperties;
+  const publishAssets = buildStitchExamplePublishAssets(activeExample);
+  const categoryHref = getCategoryHref(category);
 
   function handleStageMove(event: MouseEvent<HTMLDivElement>) {
     const rect = event.currentTarget.getBoundingClientRect();
@@ -245,6 +249,14 @@ export function BrandDnaMotionHero() {
               Use in Builder
             </Link>
           </div>
+          <PublishActions
+            assets={publishAssets}
+            className="publish-actions compact"
+            shareText={`${activeExample.title} / ${activeExample.useCase}`}
+            shareTitle={activeExample.title}
+            shareUrl={categoryHref}
+            zipName={activeExample.title}
+          />
         </div>
 
         <div

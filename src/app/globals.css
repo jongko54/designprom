@@ -5103,6 +5103,11 @@ select {
   transition: transform 180ms ease, box-shadow 180ms ease;
 }
 
+.framer-portfolio-tile-link {
+  display: grid;
+  gap: 12px;
+}
+
 .framer-portfolio-tile:hover {
   transform: translateY(-4px);
   box-shadow: 0 24px 54px rgba(0, 0, 0, 0.12);
@@ -5631,6 +5636,27 @@ select {
 .publish-actions {
   display: grid;
   gap: 10px;
+}
+
+.publish-actions.compact {
+  gap: 8px;
+}
+
+.publish-actions.compact .card-actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+
+.publish-actions.compact .primary-button,
+.publish-actions.compact .ghost-button {
+  min-height: 38px;
+  padding: 0 12px;
+  font-size: 0.84rem;
+}
+
+.publish-actions.compact .publish-status {
+  font-size: 0.75rem;
 }
 
 .publish-status {

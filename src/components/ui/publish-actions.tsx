@@ -2,27 +2,14 @@
 
 import { useState } from "react";
 
-type PublishAsset =
-  | {
-      content: string;
-      filename: string;
-      kind: "text";
-    }
-  | {
-      filename: string;
-      kind: "json";
-      value: unknown;
-    }
-  | {
-      filename: string;
-      kind: "url";
-      url: string;
-    };
+import type { PublishAsset } from "@/lib/publish-assets";
 
 type PublishActionsProps = {
   assets: PublishAsset[];
+  className?: string;
   shareText?: string;
   shareTitle: string;
+  shareUrl?: string;
   zipName: string;
 };
 
@@ -36,8 +23,10 @@ function slugify(value: string) {
 
 export function PublishActions({
   assets,
+  className,
   shareText,
   shareTitle,
+  shareUrl,
   zipName
 }: PublishActionsProps) {
   const [status, setStatus] = useState("");
@@ -90,20 +79,22 @@ export function PublishActions({
   }
 
   async function handleShare() {
-    const shareUrl = window.location.href;
+    const resolvedShareUrl = shareUrl
+      ? new URL(shareUrl, window.location.origin).toString()
+      : window.location.href;
 
     try {
       if (navigator.share) {
         await navigator.share({
           text: shareText,
           title: shareTitle,
-          url: shareUrl
+          url: resolvedShareUrl
         });
         setStatus("Share sheet opened");
         return;
       }
 
-      await navigator.clipboard.writeText(shareUrl);
+      await navigator.clipboard.writeText(resolvedShareUrl);
       setStatus("Page link copied");
     } catch (error) {
       setStatus(
@@ -113,7 +104,7 @@ export function PublishActions({
   }
 
   return (
-    <div className="publish-actions">
+    <div className={className ? `publish-actions ${className}` : "publish-actions"}>
       <div className="card-actions">
         <button
           className="primary-button button-reset"
