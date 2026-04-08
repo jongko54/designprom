@@ -50,6 +50,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+        <meta
+          content="096d79cdf7bda615229bc7cd80afdf51eaa2b375"
+          name="naver-site-verification"
+        />
         <script
           async
           crossOrigin="anonymous"
