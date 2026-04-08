@@ -27,6 +27,7 @@ type ReferenceSearchResult = {
   id: string;
   query: string;
   snippet: string;
+  source: "fallback" | "search";
   title: string;
   url: string;
 };
@@ -35,6 +36,7 @@ type ReferenceSearchState = {
   error?: string;
   query?: string;
   results: ReferenceSearchResult[];
+  source?: "fallback" | "search";
   status: "idle" | "loading" | "done" | "error";
 };
 
@@ -383,6 +385,7 @@ export function PromptMotionHero({ onApplyPrompt }: PromptMotionHeroProps) {
           error?: string;
           query?: string;
           results?: ReferenceSearchResult[];
+          source?: "fallback" | "search";
         };
 
         if (!referenceResponse.ok) {
@@ -394,6 +397,7 @@ export function PromptMotionHero({ onApplyPrompt }: PromptMotionHeroProps) {
         setReferenceState({
           query: referencePayload.query,
           results: referencePayload.results ?? [],
+          source: referencePayload.source,
           status: "done"
         });
       } catch (error) {
@@ -670,7 +674,9 @@ export function PromptMotionHero({ onApplyPrompt }: PromptMotionHeroProps) {
             <p>
               {referenceState.status === "loading"
                 ? "Searching the web for matching sites and preparing capture previews."
-                : "These are live website references pulled from web search to make the prompt direction more concrete."}
+                : referenceState.source === "fallback"
+                  ? "Live search was unavailable, so these curated reference sites were matched to the submitted prompt."
+                  : "These live website references were matched from web search to make the prompt direction more concrete."}
             </p>
           </div>
           {referenceState.status === "error" ? (
@@ -707,7 +713,9 @@ export function PromptMotionHero({ onApplyPrompt }: PromptMotionHeroProps) {
                     <p>{result.snippet || "Captured from a live website result related to the submitted prompt."}</p>
                   </div>
                   <div className="prompt-reference-actions">
-                    <span>Live reference</span>
+                    <span>
+                      {result.source === "fallback" ? "Curated reference" : "Live reference"}
+                    </span>
                     <a
                       className="ghost-button"
                       href={result.url}

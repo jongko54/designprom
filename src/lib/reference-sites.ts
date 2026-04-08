@@ -9,6 +9,7 @@ export type ReferenceSiteMatch = {
   id: string;
   query: string;
   snippet: string;
+  source: "fallback" | "search";
   title: string;
   url: string;
 };
@@ -68,6 +69,99 @@ const filteredDomains = [
   "facebook.com",
   "instagram.com"
 ];
+
+const curatedReferenceSites = [
+  {
+    snippet: "Portfolio and creative site templates with strong editorial structure and art-direction cues.",
+    tags: ["portfolio", "editorial", "creative", "gallery", "template", "microsite", "brand"],
+    title: "Cargo Templates",
+    url: "https://cargo.site/templates"
+  },
+  {
+    snippet: "Modern landing pages and creative product sites with premium motion and strong section rhythm.",
+    tags: ["landing", "website", "framer", "motion", "saas", "portfolio", "design inspiration"],
+    title: "Framer",
+    url: "https://www.framer.com/"
+  },
+  {
+    snippet: "Curated inspiration for high-end websites, immersive marketing pages, and interactive showcases.",
+    tags: ["inspiration", "interactive", "award", "marketing", "portfolio", "art direction"],
+    title: "Awwwards",
+    url: "https://www.awwwards.com/"
+  },
+  {
+    snippet: "Collections of web design inspiration with strong category coverage for product and portfolio work.",
+    tags: ["inspiration", "landing", "portfolio", "minimal", "editorial", "ecommerce"],
+    title: "SiteInspire",
+    url: "https://www.siteinspire.com/"
+  },
+  {
+    snippet: "Quiet premium product marketing with restrained color, strong device framing, and measured hierarchy.",
+    tags: ["apple", "quiet premium", "product launch", "device", "glass", "minimal", "landing"],
+    title: "Apple",
+    url: "https://www.apple.com/"
+  },
+  {
+    snippet: "Collaborative product tooling with pane layouts, rails, system-heavy interfaces, and dense utility patterns.",
+    tags: ["figma", "dashboard", "tooling", "collaboration", "canvas", "workspace", "ui system"],
+    title: "Figma",
+    url: "https://www.figma.com/"
+  },
+  {
+    snippet: "Warm travel and hospitality patterns with rounded modules, trust cues, and booking-friendly flows.",
+    tags: ["airbnb", "hospitality", "booking", "travel", "warm", "discovery", "landing"],
+    title: "Airbnb",
+    url: "https://www.airbnb.com/"
+  },
+  {
+    snippet: "Enterprise design language with modular proof sections, operational trust, and rigorous grid structure.",
+    tags: ["ibm", "enterprise", "docs", "b2b", "grid", "systematic", "solution"],
+    title: "IBM Design Language",
+    url: "https://www.ibm.com/design/language/"
+  },
+  {
+    snippet: "Creator-first social design language with punchy hooks, overlays, and high-immediacy campaign energy.",
+    tags: ["tiktok", "creator", "campaign", "social", "kinetic type", "motion", "drop"],
+    title: "TikTok",
+    url: "https://www.tiktok.com/"
+  },
+  {
+    snippet: "Google product ecosystem and design guidance with bright signal colors, modular cards, and utility-first UI.",
+    tags: ["google", "product", "ai", "toolkit", "cards", "utility", "lab"],
+    title: "Google",
+    url: "https://about.google/"
+  },
+  {
+    snippet: "Editorial commerce with premium product photography, soft palettes, and high-trust beauty merchandising.",
+    tags: ["k-beauty", "beauty", "editorial commerce", "skincare", "ecommerce", "portfolio"],
+    title: "Soko Glam",
+    url: "https://sokoglam.com/"
+  },
+  {
+    snippet: "Luxury editorial commerce with product rituals, typography-led hierarchy, and premium neutral surfaces.",
+    tags: ["beauty", "luxury", "editorial", "ecommerce", "ritual", "premium"],
+    title: "Aesop",
+    url: "https://www.aesop.com/"
+  },
+  {
+    snippet: "Friendly direct-to-consumer commerce with approachable copy, product-first blocks, and warm utility patterns.",
+    tags: ["ecommerce", "dtc", "friendly", "product", "shop", "landing"],
+    title: "Allbirds",
+    url: "https://www.allbirds.com/"
+  },
+  {
+    snippet: "Fashion-forward product launches with drop energy, campaign pacing, and strong photography-led storytelling.",
+    tags: ["fashion", "streetwear", "campaign", "drop", "portfolio", "lookbook"],
+    title: "Gymshark",
+    url: "https://www.gymshark.com/"
+  },
+  {
+    snippet: "Experimental and immersive storytelling with layered interaction, cinematic depth, and bold scene changes.",
+    tags: ["interactive", "immersive", "3d", "science", "motion", "showcase", "modern art"],
+    title: "Corn Revolution",
+    url: "https://cornrevolution.resn.global/"
+  }
+] as const;
 
 function getReferenceStore() {
   if (!globalThis.__designpromReferenceSiteStore) {
@@ -207,6 +301,16 @@ function rankReferenceResult(
   return domainBoost + matchedWords;
 }
 
+function scorePromptWords(haystack: string, prompt: string) {
+  const promptWords = prompt
+    .toLowerCase()
+    .split(/\s+/)
+    .map((value) => value.trim())
+    .filter((value) => value.length > 2);
+
+  return promptWords.filter((word) => haystack.includes(word)).length;
+}
+
 function parseDuckDuckGoResults(html: string, query: string) {
   const anchorPattern =
     /<a[^>]*class="[^"]*result__a[^"]*"[^>]*href="([^"]+)"[^>]*>([\s\S]*?)<\/a>/g;
@@ -251,35 +355,21 @@ function parseDuckDuckGoResults(html: string, query: string) {
     .slice(0, REFERENCE_RESULT_LIMIT);
 }
 
-export async function searchReferenceSites(prompt: string) {
-  pruneExpiredEntries();
-
-  const query = buildSearchQuery(prompt);
-  const response = await fetch(
-    `https://html.duckduckgo.com/html/?q=${encodeURIComponent(query)}`,
-    {
-      headers: {
-        "User-Agent":
-          "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36"
-      },
-      next: { revalidate: 0 }
-    }
-  );
-
-  if (!response.ok) {
-    throw new Error(`Reference search failed with status ${response.status}.`);
-  }
-
-  const html = await response.text();
-  const parsedResults = parseDuckDuckGoResults(html, query);
+function buildStoredResults(
+  results: Array<Pick<ReferenceSiteMatch, "domain" | "snippet" | "title" | "url">>,
+  query: string,
+  source: ReferenceSiteMatch["source"]
+) {
   const expiresAt = Date.now() + RESULT_TTL_MS;
-  const results = parsedResults.map((result) => {
+
+  return results.map((result) => {
     const id = randomUUID();
     const entry: InternalReferenceSiteMatch = {
       ...result,
       expiresAt,
       id,
-      query
+      query,
+      source
     };
 
     getReferenceStore().set(id, entry);
@@ -289,14 +379,98 @@ export async function searchReferenceSites(prompt: string) {
       id: entry.id,
       query: entry.query,
       snippet: entry.snippet,
+      source: entry.source,
       title: entry.title,
       url: entry.url
     };
   });
+}
+
+function buildFallbackResults(prompt: string, query: string) {
+  const visual = resolvePromptSemanticPreview(prompt);
+
+  return curatedReferenceSites
+    .map((site) => {
+      const domain = domainFromUrl(site.url);
+      const haystack = `${site.title} ${site.snippet} ${site.tags.join(" ")}`.toLowerCase();
+      let score = rankReferenceResult(
+        {
+          domain,
+          snippet: site.snippet,
+          title: site.title,
+          url: site.url
+        },
+        prompt
+      );
+
+      score += scorePromptWords(haystack, prompt) * 2;
+
+      if (haystack.includes(visual.brand.toLowerCase())) {
+        score += 8;
+      }
+
+      if (haystack.includes(visual.pageType.toLowerCase())) {
+        score += 5;
+      }
+
+      if (haystack.includes(visual.tone.toLowerCase())) {
+        score += 4;
+      }
+
+      if (haystack.includes(visual.vibe.toLowerCase())) {
+        score += 4;
+      }
+
+      return {
+        domain,
+        score,
+        snippet: site.snippet,
+        title: site.title,
+        url: site.url
+      };
+    })
+    .sort((left, right) => right.score - left.score)
+    .filter((result, index, array) => array.findIndex((entry) => entry.domain === result.domain) === index)
+    .slice(0, REFERENCE_RESULT_LIMIT)
+    .map(({ score: _score, ...result }) => result);
+}
+
+export async function searchReferenceSites(prompt: string) {
+  pruneExpiredEntries();
+
+  const query = buildSearchQuery(prompt);
+  try {
+    const response = await fetch(
+      `https://html.duckduckgo.com/html/?q=${encodeURIComponent(query)}`,
+      {
+        headers: {
+          "User-Agent":
+            "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36"
+        },
+        next: { revalidate: 0 }
+      }
+    );
+
+    if (response.ok) {
+      const html = await response.text();
+      const parsedResults = parseDuckDuckGoResults(html, query);
+
+      if (parsedResults.length > 0) {
+        return {
+          query,
+          results: buildStoredResults(parsedResults, query, "search"),
+          source: "search" as const
+        };
+      }
+    }
+  } catch {
+    // Fall through to curated matches.
+  }
 
   return {
     query,
-    results
+    results: buildStoredResults(buildFallbackResults(prompt, query), query, "fallback"),
+    source: "fallback" as const
   };
 }
 
