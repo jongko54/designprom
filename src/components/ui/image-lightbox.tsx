@@ -7,8 +7,10 @@ type ImageLightboxProps = {
   alt: string;
   className?: string;
   height?: number;
+  modalClassName?: string;
   src: string;
   style?: CSSProperties;
+  modalStyle?: CSSProperties;
   width?: number;
 };
 
@@ -16,6 +18,8 @@ export function ImageLightbox({
   alt,
   className,
   height,
+  modalClassName,
+  modalStyle,
   src,
   style,
   width
@@ -78,10 +82,10 @@ export function ImageLightbox({
             </button>
             <img
               alt={alt}
-              className="lightbox-image"
+              className={modalClassName ?? "lightbox-image"}
               height={height}
               src={src}
-              style={style}
+              style={modalStyle ?? style}
               width={width}
             />
           </div>
