@@ -3036,13 +3036,13 @@ select {
 .preview-thumbnail-grid {
   display: grid;
   grid-template-columns: repeat(5, minmax(0, 1fr));
-  gap: 14px;
+  gap: 16px 14px;
 }
 
 .preview-thumbnail-card {
   display: grid;
-  gap: 10px;
-  padding: 10px;
+  gap: 8px;
+  padding: 8px;
   background: rgba(255, 255, 255, 0.8);
   box-shadow: inset 0 0 0 1px rgba(16, 16, 16, 0.05);
 }
@@ -3069,7 +3069,7 @@ select {
 }
 
 .preview-thumbnail-stage {
-  aspect-ratio: 4 / 5;
+  aspect-ratio: 16 / 11;
   overflow: hidden;
   background: #ffffff;
   box-shadow: inset 0 0 0 1px rgba(16, 16, 16, 0.06);
@@ -3116,13 +3116,14 @@ select {
 
 .preview-thumbnail-copy {
   align-content: start;
-  padding: 0 2px 2px;
+  gap: 6px;
+  padding: 2px 4px 4px;
 }
 
 .preview-thumbnail-title {
   color: inherit;
   font-family: var(--font-display), sans-serif;
-  font-size: clamp(1rem, 1.5vw, 1.28rem);
+  font-size: clamp(0.96rem, 1.38vw, 1.16rem);
   line-height: 0.98;
   letter-spacing: -0.04em;
   text-decoration: none;
@@ -3135,10 +3136,10 @@ select {
 
 .preview-thumbnail-copy > p {
   margin: 0;
-  line-height: 1.55;
+  line-height: 1.48;
   color: var(--muted);
   display: -webkit-box;
-  -webkit-line-clamp: 3;
+  -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
@@ -4921,7 +4922,7 @@ select {
   }
 
   .preview-thumbnail-stage {
-    aspect-ratio: 4 / 5;
+    aspect-ratio: 16 / 12;
   }
 }
 
