@@ -79,7 +79,7 @@ export function PreviewLibraryBrowser({ items }: PreviewLibraryBrowserProps) {
           <span>Search</span>
           <input
             onChange={(event) => setQuery(event.target.value)}
-            placeholder="Search portfolios, fashion, beauty, ecommerce, art direction..."
+            placeholder="Search portfolios, fashion, beauty, ecommerce, game launches, art direction..."
             type="search"
             value={query}
           />

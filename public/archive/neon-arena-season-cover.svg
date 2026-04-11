@@ -1,0 +1,39 @@
+<svg width="1440" height="960" viewBox="0 0 1440 960" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1440" height="960" fill="#06070B"/>
+  <rect x="60" y="60" width="1320" height="70" fill="#10131C"/>
+  <text x="102" y="106" fill="#D7FFF5" font-size="22" font-family="Arial, sans-serif" letter-spacing="4">NEON ARENA / SEASON LAUNCH BOARD</text>
+  <rect x="60" y="164" width="832" height="736" rx="24" fill="url(#heroGlow)"/>
+  <rect x="924" y="164" width="456" height="188" rx="24" fill="#10131C" stroke="#1FFFD5" stroke-width="2"/>
+  <rect x="924" y="382" width="216" height="246" rx="24" fill="#141924"/>
+  <rect x="1164" y="382" width="216" height="246" rx="24" fill="#B7FF3C"/>
+  <rect x="924" y="658" width="456" height="242" rx="24" fill="#10131C"/>
+  <text x="120" y="308" fill="#F7FAFF" font-size="120" font-weight="700" font-family="Arial, sans-serif">SEASON</text>
+  <text x="120" y="412" fill="#F7FAFF" font-size="120" font-weight="700" font-family="Arial, sans-serif">ZERO</text>
+  <text x="120" y="500" fill="#A8FFE9" font-size="28" font-family="Arial, sans-serif" letter-spacing="4">LIVE PVP / NEW OPERATOR / RANKED REWARDS</text>
+  <rect x="120" y="562" width="258" height="62" rx="31" fill="#B7FF3C"/>
+  <text x="165" y="603" fill="#05070C" font-size="24" font-weight="700" font-family="Arial, sans-serif" letter-spacing="2">PLAY NOW</text>
+  <rect x="120" y="694" width="712" height="2" fill="#1FFFD5"/>
+  <rect x="120" y="734" width="600" height="2" fill="#1FFFD5" fill-opacity="0.62"/>
+  <rect x="120" y="774" width="474" height="2" fill="#1FFFD5" fill-opacity="0.4"/>
+  <text x="960" y="220" fill="#8CFEE7" font-size="18" font-family="Arial, sans-serif" letter-spacing="3">MATCH DAY BOARD</text>
+  <text x="960" y="276" fill="#F7FAFF" font-size="64" font-weight="700" font-family="Arial, sans-serif">12 : 48 : 09</text>
+  <text x="960" y="322" fill="#B7FF3C" font-size="20" font-family="Arial, sans-serif" letter-spacing="3">UNTIL RANK RESET</text>
+  <text x="956" y="430" fill="#D8DEE9" font-size="16" font-family="Arial, sans-serif" letter-spacing="3">OPERATOR</text>
+  <text x="956" y="480" fill="#F7FAFF" font-size="42" font-weight="700" font-family="Arial, sans-serif">NYX-7</text>
+  <text x="956" y="530" fill="#8CFEE7" font-size="18" font-family="Arial, sans-serif" letter-spacing="3">PHASE ASSAULT</text>
+  <text x="1188" y="430" fill="#05070C" font-size="16" font-family="Arial, sans-serif" letter-spacing="3">RANKED</text>
+  <text x="1188" y="492" fill="#05070C" font-size="54" font-weight="700" font-family="Arial, sans-serif">+240</text>
+  <text x="1188" y="536" fill="#05070C" font-size="18" font-family="Arial, sans-serif" letter-spacing="3">BOOSTED XP</text>
+  <text x="960" y="714" fill="#D7FFF5" font-size="18" font-family="Arial, sans-serif" letter-spacing="3">FINALS / DROPS / WATCH REWARDS</text>
+  <rect x="960" y="756" width="382" height="14" rx="7" fill="#1FFFD5"/>
+  <rect x="960" y="790" width="338" height="14" rx="7" fill="#1FFFD5" fill-opacity="0.62"/>
+  <rect x="960" y="824" width="276" height="14" rx="7" fill="#1FFFD5" fill-opacity="0.4"/>
+  <text x="102" y="922" fill="#B7C5D6" font-size="22" font-family="Arial, sans-serif" letter-spacing="2">NEON SCOREBOARD / BLACK PANELS / BROADCAST URGENCY</text>
+  <defs>
+    <linearGradient id="heroGlow" x1="60" y1="164" x2="892" y2="900" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0F1730"/>
+      <stop offset="0.48" stop-color="#12213D"/>
+      <stop offset="1" stop-color="#091119"/>
+    </linearGradient>
+  </defs>
+</svg>

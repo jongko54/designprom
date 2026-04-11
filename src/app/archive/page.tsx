@@ -11,12 +11,13 @@ import { buildFaqSchema, buildMetadata } from "@/lib/seo";
 export const metadata: Metadata = buildMetadata({
   title: "Prompt example archive for AI design and portfolio websites",
   description:
-    "Explore prompt case files for fashion portfolios, K-beauty ecommerce, product launches, art direction archives, and AI website inspiration.",
+    "Explore prompt case files for fashion portfolios, game launches, K-beauty ecommerce, product launches, art direction archives, and AI website inspiration.",
   keywords: [
     "prompt archive",
     "ai website prompts",
     "fashion portfolio prompts",
-    "ecommerce prompt examples"
+    "ecommerce prompt examples",
+    "game launch prompt examples"
   ],
   path: "/archive"
 });
@@ -25,7 +26,7 @@ const archiveFaq = [
   {
     question: "What kinds of prompt examples are in the archive?",
     answer:
-      "The archive includes portfolio prompts, AI product landing pages, fashion case studies, K-beauty ecommerce homepages, creative tech portfolios, and campaign microsite examples."
+      "The archive includes portfolio prompts, AI product landing pages, game launch microsites, fashion case studies, K-beauty ecommerce homepages, creative tech portfolios, and campaign examples."
   },
   {
     question: "How should I use an archive case file?",
@@ -35,7 +36,7 @@ const archiveFaq = [
   {
     question: "Can I search by industry or page type?",
     answer:
-      "Yes. The archive browser lets you search by category, brief, prompt language, and output focus so you can find examples for industries like beauty, fashion, ecommerce, or B2B products."
+      "Yes. The archive browser lets you search by category, brief, prompt language, and output focus so you can find examples for industries like games, beauty, fashion, ecommerce, or B2B products."
   }
 ];
 
@@ -74,7 +75,7 @@ export default function ArchivePage() {
           }
         ]}
         points={[
-          "Search by industry when you need a beauty, fashion, studio, or ecommerce prompt example.",
+          "Search by industry when you need a game, beauty, fashion, studio, or ecommerce prompt example.",
           "Search by page goal when you need a landing page, campaign microsite, portfolio index, or B2B proof page.",
           "Use linked Stitch captures to compare prompt language with real generated layout outputs."
         ]}

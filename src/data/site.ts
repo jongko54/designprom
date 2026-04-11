@@ -3957,6 +3957,126 @@ export const promptArchive: PromptArchiveEntry[] = [
         size: "tall"
       }
     ]
+  },
+  {
+    slug: "neon-arena-season-launch-case",
+    title: "Neon Arena Season Launch",
+    summary:
+      "A Stitch-ready game marketing prompt tuned for PvP urgency, broadcast pacing, and a premium esports launch feel.",
+    brief:
+      "Create a launch microsite for a competitive hero shooter season update with a new operator reveal, ranked rewards, event schedule, and one obvious play-now path.",
+    useCase: "Game season launch",
+    portfolioCategory: "Game Marketing",
+    previewTone: "creator",
+    coverImage: {
+      src: "/archive/neon-arena-season-cover.svg",
+      alt: "Competitive game season launch sample with neon scoreboard layout and operator reveal panel.",
+      width: 1440,
+      height: 960
+    },
+    categorySlugs: [
+      "creator-velocity",
+      "motion-first-canvas",
+      "brutalist-contrast"
+    ],
+    stitchExampleSlugs: [],
+    prompt:
+      "Design a game season launch microsite for a competitive hero shooter with a giant match-day headline, split-screen operator art, scoreboard modules, ranked rewards cards, electric cyan and acid-lime accents over black panels, and one obvious Play Now CTA. Keep the page fast, broadcast-like, and mobile-scannable without collapsing into chaotic gamer UI.",
+    remixPrompt:
+      "Rework the same season launch for an esports finals event. Keep the black-and-neon broadcast system, but increase bracket visibility, make schedule modules larger, and reduce secondary lore copy so the watch or ticket CTA lands faster.",
+    curatorNote:
+      "The strongest version feels like a premium live-event package rather than a generic launcher. Hype works best when the scoreboard logic stays brutally clear.",
+    outputFocus: [
+      "A first screen where the season name, operator art, and primary CTA land at once",
+      "Broadcast-style modules for rewards, schedule, and ranked proof",
+      "Neon accents that create urgency without turning the interface noisy"
+    ],
+    outputs: [
+      {
+        title: "Season Hero",
+        caption: "A first frame where the operator reveal, season title, and play-now path all hit in one scan.",
+        meta: "hero",
+        size: "wide",
+        image: {
+          src: "/archive/neon-arena-season-cover.svg",
+          alt: "Game season launch hero sample with operator art and live scoreboard framing.",
+          width: 1440,
+          height: 960
+        }
+      },
+      {
+        title: "Ranked Reward Stack",
+        caption: "A mid-page board for rewards, challenge cards, and progression proof that still reads like a broadcast package.",
+        meta: "rewards",
+        size: "square"
+      },
+      {
+        title: "Finals CTA Rail",
+        caption: "A lower section where event schedule, watch CTA, and social momentum stay sharp instead of cluttered.",
+        meta: "close",
+        size: "tall"
+      }
+    ]
+  },
+  {
+    slug: "mythic-realm-world-reveal-case",
+    title: "Mythic Realm World Reveal",
+    summary:
+      "A Stitch-ready fantasy RPG prompt built around cinematic worldbuilding, collectible faction modules, and a premium preorder path.",
+    brief:
+      "Build a homepage for a fantasy action RPG reveal where the world map, factions, playable classes, and collector-edition preorder details need to feel epic but still readable.",
+    useCase: "Game world reveal",
+    portfolioCategory: "Game Marketing",
+    previewTone: "spatial",
+    coverImage: {
+      src: "/archive/mythic-realm-world-cover.svg",
+      alt: "Fantasy RPG world reveal sample with glowing citadel, map panel, and collector edition card.",
+      width: 1440,
+      height: 960
+    },
+    categorySlugs: [
+      "immersive-3d",
+      "premium-gradient-atmosphere",
+      "glass-lens-interface"
+    ],
+    stitchExampleSlugs: [],
+    prompt:
+      "Create a fantasy action RPG world-reveal homepage with one colossal key art scene, aurora-like teal-and-gold atmosphere, carved serif headlines, translucent map panels, faction sigils, class cards, and a disciplined preorder strip. The page should feel mythic, explorable, and premium, not like a cluttered MMO portal.",
+    remixPrompt:
+      "Adapt the same reveal page for a darker soulslike tone. Keep the epic world scene and clear preorder strip, but desaturate the palette, tighten the HUD overlays, and make boss silhouettes and difficulty cues more dominant than faction detail.",
+    curatorNote:
+      "Worldbuilding only works when the lore surfaces serve hierarchy. The hero art can be huge, but the map, class, and edition modules still need to resolve in one pass.",
+    outputFocus: [
+      "A hero scene that sells the world instantly without burying the CTA",
+      "Faction, class, and map modules that feel collectible and game-native",
+      "A preorder surface that stays premium instead of ecommerce-heavy"
+    ],
+    outputs: [
+      {
+        title: "World Hero",
+        caption: "A cinematic opener where the landscape, title, and preorder action settle into one premium composition.",
+        meta: "hero",
+        size: "wide",
+        image: {
+          src: "/archive/mythic-realm-world-cover.svg",
+          alt: "Fantasy game reveal hero sample with world map HUD and atmospheric title treatment.",
+          width: 1440,
+          height: 960
+        }
+      },
+      {
+        title: "Faction Atlas",
+        caption: "A middle section where sigils, class cards, and map fragments build the game world without overwhelming the scan path.",
+        meta: "atlas",
+        size: "square"
+      },
+      {
+        title: "Collector Close",
+        caption: "A lower section where editions, preorder proof, and release timing remain luxurious and clear.",
+        meta: "close",
+        size: "tall"
+      }
+    ]
   }
 ];
 

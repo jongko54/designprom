@@ -8,12 +8,13 @@ import { buildMetadata } from "@/lib/seo";
 export const metadata: Metadata = buildMetadata({
   title: "Live preview gallery for AI design prompt examples",
   description:
-    "Browse full-screen previews of fashion, portfolio, beauty, ecommerce, and product website outputs generated from designprom prompt examples.",
+    "Browse full-screen previews of fashion, portfolio, beauty, ecommerce, game, and product website outputs generated from designprom prompt examples.",
   keywords: [
     "website preview gallery",
     "ai design prompt examples",
     "portfolio website previews",
-    "fashion website prompt previews"
+    "fashion website prompt previews",
+    "game website prompt previews"
   ],
   path: "/preview"
 });

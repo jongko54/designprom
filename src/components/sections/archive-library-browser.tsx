@@ -18,6 +18,7 @@ const categoryOrder = [
   "Photography",
   "Architecture",
   "Fashion",
+  "Game Marketing",
   "Art Direction",
   "Typography",
   "Studio",
@@ -114,7 +115,7 @@ export function ArchiveLibraryBrowser({ items }: ArchiveLibraryBrowserProps) {
             aria-label="Search archive"
             className="search-input"
             onChange={(event) => setSearch(event.target.value)}
-            placeholder="Search beauty commerce, k-beauty, ecommerce, studio portfolio, creative tech..."
+            placeholder="Search beauty commerce, game launch, esports, ecommerce, studio portfolio, creative tech..."
             type="search"
             value={search}
           />

@@ -1,0 +1,39 @@
+<svg width="1440" height="960" viewBox="0 0 1440 960" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1440" height="960" fill="#0B1020"/>
+  <rect x="64" y="64" width="1312" height="72" fill="#131A2D"/>
+  <text x="106" y="110" fill="#E8E3D0" font-size="22" font-family="Arial, sans-serif" letter-spacing="4">MYTHIC REALM / WORLD REVEAL BOARD</text>
+  <rect x="64" y="166" width="820" height="730" rx="28" fill="url(#skyGlow)"/>
+  <rect x="914" y="166" width="462" height="252" rx="28" fill="#11182A" stroke="#8DE6D8" stroke-width="2"/>
+  <rect x="914" y="446" width="220" height="450" rx="28" fill="#152038"/>
+  <rect x="1156" y="446" width="220" height="450" rx="28" fill="#11182A"/>
+  <text x="116" y="310" fill="#F7F2E3" font-size="108" font-weight="700" font-family="Georgia, Times New Roman, serif">MYTHIC</text>
+  <text x="116" y="404" fill="#F7F2E3" font-size="108" font-weight="700" font-family="Georgia, Times New Roman, serif">REALM</text>
+  <text x="116" y="488" fill="#9CEFE1" font-size="26" font-family="Arial, sans-serif" letter-spacing="4">WORLD MAP / FACTIONS / CLASSES / PREORDER</text>
+  <rect x="116" y="558" width="300" height="62" rx="31" fill="#E8D39B"/>
+  <text x="166" y="600" fill="#10141F" font-size="24" font-weight="700" font-family="Arial, sans-serif" letter-spacing="2">PREORDER NOW</text>
+  <circle cx="660" cy="356" r="126" fill="#A5FFEC" fill-opacity="0.14"/>
+  <circle cx="714" cy="314" r="70" fill="#E8D39B" fill-opacity="0.18"/>
+  <path d="M532 640C600 548 670 512 742 510C782 510 814 530 850 560V896H532V640Z" fill="#0F1729" fill-opacity="0.88"/>
+  <text x="950" y="226" fill="#8DE6D8" font-size="18" font-family="Arial, sans-serif" letter-spacing="3">WORLD ATLAS</text>
+  <text x="950" y="284" fill="#F7F2E3" font-size="52" font-weight="700" font-family="Georgia, Times New Roman, serif">4 kingdoms</text>
+  <text x="950" y="338" fill="#E8D39B" font-size="20" font-family="Arial, sans-serif" letter-spacing="3">12 faction paths</text>
+  <rect x="950" y="364" width="346" height="12" rx="6" fill="#8DE6D8"/>
+  <rect x="950" y="392" width="276" height="12" rx="6" fill="#8DE6D8" fill-opacity="0.5"/>
+  <text x="950" y="508" fill="#DCE7EF" font-size="16" font-family="Arial, sans-serif" letter-spacing="3">CLASS SET</text>
+  <text x="950" y="560" fill="#F7F2E3" font-size="42" font-weight="700" font-family="Georgia, Times New Roman, serif">Spellblade</text>
+  <text x="950" y="610" fill="#9CEFE1" font-size="18" font-family="Arial, sans-serif" letter-spacing="3">ARCANE / MELEE / MOBILITY</text>
+  <text x="1190" y="508" fill="#DCE7EF" font-size="16" font-family="Arial, sans-serif" letter-spacing="3">EDITION</text>
+  <text x="1190" y="560" fill="#F7F2E3" font-size="42" font-weight="700" font-family="Georgia, Times New Roman, serif">Collector</text>
+  <text x="1190" y="610" fill="#E8D39B" font-size="18" font-family="Arial, sans-serif" letter-spacing="3">ART BOOK / MAP / OST</text>
+  <rect x="950" y="722" width="372" height="14" rx="7" fill="#E8D39B"/>
+  <rect x="950" y="756" width="328" height="14" rx="7" fill="#8DE6D8" fill-opacity="0.72"/>
+  <rect x="950" y="790" width="264" height="14" rx="7" fill="#8DE6D8" fill-opacity="0.4"/>
+  <text x="106" y="922" fill="#B2C0D0" font-size="22" font-family="Arial, sans-serif" letter-spacing="2">CINEMATIC WORLD ART / LORE HUD / PREMIUM PREORDER PATH</text>
+  <defs>
+    <linearGradient id="skyGlow" x1="64" y1="166" x2="884" y2="896" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#1A2647"/>
+      <stop offset="0.4" stop-color="#13203C"/>
+      <stop offset="1" stop-color="#0C1322"/>
+    </linearGradient>
+  </defs>
+</svg>
