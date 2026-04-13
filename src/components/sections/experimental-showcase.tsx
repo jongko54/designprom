@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export function ExperimentalShowcase() {
   return (
     <section className="content-section showcase-shell">
@@ -69,6 +71,15 @@ export function ExperimentalShowcase() {
             <span>FORM</span>
           </div>
         </article>
+      </div>
+      <div className="card-actions showcase-lab-actions">
+        <Link className="primary-button" href="/r3f-motion-lab" prefetch={false}>
+          Open R3F motion lab
+        </Link>
+        <p>
+          Use the live React Three Fiber demo when you need an actual 3D hero instead of
+          a flat mock or prompt-only direction.
+        </p>
       </div>
     </section>
   );

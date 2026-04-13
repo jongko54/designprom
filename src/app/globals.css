@@ -6193,6 +6193,225 @@ select {
   border-color: rgba(34, 82, 255, 0.18);
 }
 
+.showcase-lab-actions {
+  margin-top: 18px;
+  align-items: center;
+}
+
+.showcase-lab-actions p {
+  margin: 0;
+  max-width: 40rem;
+  color: var(--muted);
+}
+
+.r3f-lab-hero {
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 78% 18%, rgba(73, 113, 255, 0.18), transparent 24%),
+    radial-gradient(circle at 18% 78%, rgba(255, 109, 203, 0.12), transparent 22%),
+    linear-gradient(180deg, rgba(14, 18, 34, 0.98), rgba(8, 12, 24, 0.98));
+  color: #eff3ff;
+}
+
+.r3f-lab-hero .eyebrow,
+.r3f-lab-hero .micro-row,
+.r3f-lab-hero .hero-copy,
+.r3f-lab-hero .signal-row span,
+.r3f-lab-stat-grid article span,
+.r3f-lab-hero .ghost-button {
+  color: rgba(227, 234, 255, 0.78);
+}
+
+.r3f-lab-hero .ghost-button {
+  border-color: rgba(152, 170, 255, 0.22);
+  background: rgba(18, 24, 49, 0.66);
+}
+
+.r3f-lab-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(420px, 1.1fr);
+  gap: 24px;
+  align-items: stretch;
+}
+
+.r3f-lab-copy {
+  display: grid;
+  gap: 18px;
+  align-content: start;
+}
+
+.r3f-lab-copy h1 {
+  margin: 0;
+  max-width: 12ch;
+}
+
+.r3f-lab-stat-grid {
+  display: grid;
+  gap: 14px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.r3f-lab-stat-grid article,
+.r3f-scene-card {
+  display: grid;
+  gap: 10px;
+  padding: 18px;
+  border-radius: 28px;
+  border: 1px solid rgba(143, 165, 255, 0.14);
+  background:
+    linear-gradient(180deg, rgba(18, 25, 47, 0.76), rgba(10, 14, 29, 0.86));
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.06),
+    0 28px 90px rgba(2, 6, 16, 0.42);
+}
+
+.r3f-lab-stat-grid article strong {
+  font-family: var(--font-display), sans-serif;
+  font-size: 1.1rem;
+  line-height: 1.05;
+  letter-spacing: -0.03em;
+}
+
+.r3f-scene-card {
+  position: relative;
+}
+
+.r3f-scene-shell {
+  position: relative;
+  overflow: hidden;
+  min-height: 620px;
+  border-radius: 24px;
+  border: 1px solid rgba(126, 243, 255, 0.12);
+  background:
+    radial-gradient(circle at top, rgba(56, 91, 198, 0.18), transparent 36%),
+    linear-gradient(180deg, rgba(8, 12, 26, 0.96), rgba(3, 5, 15, 0.98));
+}
+
+.r3f-scene-shell canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.r3f-scene-overlay {
+  position: absolute;
+  right: 18px;
+  bottom: 18px;
+  z-index: 1;
+  display: grid;
+  gap: 6px;
+  max-width: 260px;
+  padding: 14px 16px;
+  border-radius: 18px;
+  background: rgba(8, 12, 26, 0.74);
+  border: 1px solid rgba(126, 243, 255, 0.16);
+  backdrop-filter: blur(12px);
+}
+
+.r3f-scene-overlay span,
+.r3f-scene-loading span {
+  color: #83f6ff;
+  font-size: 0.74rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.r3f-scene-overlay strong,
+.r3f-scene-loading strong {
+  font-family: var(--font-display), sans-serif;
+  font-size: 1.35rem;
+  line-height: 0.95;
+  letter-spacing: -0.04em;
+}
+
+.r3f-scene-overlay p,
+.r3f-scene-loading p,
+.r3f-step-card p,
+.r3f-prompt-note {
+  margin: 0;
+  color: rgba(227, 234, 255, 0.74);
+}
+
+.r3f-scene-loading {
+  display: grid;
+  gap: 8px;
+  align-content: end;
+  height: 100%;
+  min-height: 620px;
+  padding: 24px;
+  background:
+    radial-gradient(circle at top, rgba(56, 91, 198, 0.18), transparent 36%),
+    linear-gradient(180deg, rgba(8, 12, 26, 0.96), rgba(3, 5, 15, 0.98));
+}
+
+.r3f-workflow-shell,
+.r3f-prompt-shell,
+.r3f-system-shell {
+  background:
+    radial-gradient(circle at 18% 18%, rgba(34, 82, 255, 0.1), transparent 24%),
+    linear-gradient(180deg, rgba(255, 250, 243, 0.92), rgba(255, 242, 226, 0.84));
+}
+
+.r3f-workflow-grid {
+  display: grid;
+  gap: 18px;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.r3f-step-card {
+  align-content: start;
+  min-height: 240px;
+}
+
+.r3f-step-card h3 {
+  margin: 0;
+  font-family: var(--font-display), sans-serif;
+  font-size: 1.4rem;
+  line-height: 0.98;
+  letter-spacing: -0.04em;
+}
+
+.r3f-prompt-grid {
+  align-items: start;
+}
+
+.r3f-prompt-card {
+  align-content: start;
+}
+
+.r3f-prompt-note {
+  color: var(--muted);
+}
+
+.r3f-lab-footer {
+  margin-top: 18px;
+}
+
+@media (max-width: 1180px) {
+  .r3f-lab-grid,
+  .r3f-lab-stat-grid,
+  .r3f-workflow-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 960px) {
+  .r3f-prompt-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .r3f-scene-shell,
+  .r3f-scene-loading {
+    min-height: 440px;
+  }
+
+  .r3f-scene-overlay {
+    left: 16px;
+    right: 16px;
+    max-width: none;
+  }
+}
+
 @media (max-width: 960px) {
   .search-content-grid,
   .faq-grid {
