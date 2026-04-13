@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 
 import { PublishActions } from "@/components/ui/publish-actions";
@@ -23,6 +24,7 @@ const showcaseSlugs = [
 ] as const;
 
 const tileSizes = ["tall", "medium", "short"] as const;
+const showcaseImageSizes = "(max-width: 720px) 100vw, (max-width: 1180px) 50vw, 25vw";
 
 function chunkIntoColumns<T>(items: T[], count: number) {
   return Array.from({ length: count }, (_, columnIndex) =>
@@ -66,10 +68,10 @@ export function HomeFramerPortfolioWall() {
             </article>
           </div>
           <div className="hero-actions">
-            <Link className="primary-button" href="/archive">
+            <Link className="primary-button" href="/archive" prefetch={false}>
               Open archive
             </Link>
-            <Link className="tertiary-link" href="/builder">
+            <Link className="tertiary-link" href="/builder" prefetch={false}>
               Open prompt builder
             </Link>
           </div>
@@ -89,17 +91,23 @@ export function HomeFramerPortfolioWall() {
 
                 return (
                   <article className={`framer-portfolio-tile ${size}`} key={entry.slug}>
-                    <Link className="framer-portfolio-tile-link" href={`/archive/${entry.slug}`}>
+                    <Link
+                      className="framer-portfolio-tile-link"
+                      href={`/archive/${entry.slug}`}
+                      prefetch={false}
+                    >
                       <div className="framer-portfolio-image-shell">
-                        <img
+                        <Image
                           alt={image.alt}
                           className="framer-portfolio-image"
-                          loading="lazy"
+                          fill
+                          quality={70}
+                          sizes={showcaseImageSizes}
                           src={image.src}
                           style={
                             capture?.objectPosition
-                              ? { objectPosition: capture.objectPosition }
-                              : undefined
+                              ? { objectFit: "cover", objectPosition: capture.objectPosition }
+                              : { objectFit: "cover" }
                           }
                         />
                       </div>

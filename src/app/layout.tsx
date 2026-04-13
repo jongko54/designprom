@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Inter, Space_Grotesk } from "next/font/google";
+import Script from "next/script";
 import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 
@@ -58,14 +59,14 @@ export default function RootLayout({
           content="096d79cdf7bda615229bc7cd80afdf51eaa2b375"
           name="naver-site-verification"
         />
-        <script
-          async
-          crossOrigin="anonymous"
-          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3907699207711762"
-        />
       </head>
       <body className={`${display.variable} ${body.variable}`}>
         {children}
+        <Script
+          crossOrigin="anonymous"
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3907699207711762"
+          strategy="lazyOnload"
+        />
         <Analytics />
         <SpeedInsights />
       </body>
