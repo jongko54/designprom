@@ -73,8 +73,8 @@ export function ExperimentalShowcase() {
         </article>
       </div>
       <div className="card-actions showcase-lab-actions">
-        <Link className="primary-button" href="/r3f-motion-lab" prefetch={false}>
-          Open R3F motion lab
+        <Link className="primary-button" href="/analysis" prefetch={false}>
+          Open 3D Preview
         </Link>
         <p>
           Use the live React Three Fiber demo when you need an actual 3D hero instead of

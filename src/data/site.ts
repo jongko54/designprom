@@ -499,7 +499,7 @@ export const navItems = [
   { href: "/", label: "Home" },
   { href: "/dna", label: "Brand DNA" },
   { href: "/preview", label: "Preview" },
-  { href: "/analysis", label: "Template Analysis" },
+  { href: "/analysis", label: "3D Preview" },
   { href: "/builder", label: "Prompt Builder" }
 ] as const;
 

@@ -54,12 +54,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.8
     },
     {
-      url: absoluteUrl("/r3f-motion-lab"),
-      lastModified,
-      changeFrequency: "weekly",
-      priority: 0.78
-    },
-    {
       url: absoluteUrl("/collections"),
       lastModified,
       changeFrequency: "weekly",

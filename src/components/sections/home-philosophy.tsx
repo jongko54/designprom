@@ -7,7 +7,7 @@ export function HomePhilosophy() {
         <div className="eyebrow">What this site does</div>
         <h2>A simple guide for AI website prompts</h2>
         <p>
-          The homepage introduces the system. Brand DNA, Template Analysis, and
+          The homepage introduces the system. Brand DNA, 3D Preview, and
           Prompt Builder do the real work.
         </p>
       </div>
@@ -29,15 +29,15 @@ export function HomePhilosophy() {
         <article className="home-philosophy-card philosophy-styles">
           <div className="micro-row">
             <span>Tab 02</span>
-            <span>Template Analysis</span>
+            <span>3D Preview</span>
           </div>
-          <h3>Real page examples and portfolio template studies</h3>
+          <h3>React Three Fiber previews and material system studies</h3>
           <p>
-            Study company-style sample pages and Cargo-like portfolio templates
-            before you write or remix a prompt.
+            Study glassmorphism, neo brutalism, claymorphism, and liquid glass
+            directions inside an actual 3D preview workflow before you build.
           </p>
           <Link className="primary-button" href="/analysis">
-            Open analysis
+            Open 3D Preview
           </Link>
         </article>
         <article className="home-philosophy-card philosophy-builder">
